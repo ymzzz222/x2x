@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# x2x
 
-## Getting Started
+**随时随地，只要有局域网，就能立刻建立隔空投送环境。**
 
-First, run the development server:
+x2x 是一个基于浏览器的局域网文件/文本直传工具。两台设备打开同一页面、输入 6 位分享码，即可像 AirDrop 一样在局域网内点对点传输——无需安装客户端、无需登录账号、文件不经过服务器中转。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 为什么用 x2x
+
+| 场景 | x2x 能做什么 |
+|------|-------------|
+| 会议室 / 咖啡厅 Wi-Fi | 手机与笔记本互传照片、文档 |
+| 办公室内网 | 跨平台快速分发安装包、设计稿 |
+| 临时热点 | 一台设备开热点，另一台连上即可传 |
+| 无 U 盘 / 无数据线 | 浏览器打开即用，传完即走 |
+
+核心原则：**信令走 HTTP，数据走 WebRTC P2P。** 服务器只负责生成房间、交换连接信息；实际文件/文本流量在设备之间直连，不占用云端带宽。
+
+## 工作原理
+
+```
+发送方                          信令服务 (/api/signaling)              接收方
+  │                                      │                              │
+  │── create → 6 位分享码 ──────────────►│                              │
+  │                                      │◄── join (分享码) ────────────│
+  │◄──────── WebRTC offer/answer/ICE ───►│──────── 转发信令 ───────────►│
+  │                                                                      │
+  │══════════════ WebRTC DataChannel（局域网 P2P） ══════════════════════│
+  │                         文件 / 文本直传                               │
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **WebRTC P2P**：数据通道在局域网内建立，不配置 STUN/TURN，适合同一子网环境。
+- **6 位分享码**：发送方创建房间后获得一次性码，接收方输入即可加入。
+- **房间时效 10 分钟**：超时自动失效，用完即焚。
+- **双模式**：支持多文件拖拽发送，也支持纯文本快传。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 快速开始
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 环境要求
 
-## Learn More
+- Node.js 18+
+- 现代浏览器（推荐桌面 **Chrome** 或 **Edge**）
 
-To learn more about Next.js, take a look at the following resources:
+### 安装与运行
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm install
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+浏览器访问 [http://localhost:3000](http://localhost:3000)。
 
-## Deploy on Vercel
+### 生产部署
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+部署到任意能访问的地址（如 Vercel、内网服务器）。**两台设备须能打开同一站点**，信令 API 才能撮合连接；连接建立后，数据传输在局域网 P2P 完成。
+
+#### 纯局域网部署（推荐）
+
+若希望完全离线、不依赖公网：
+
+1. 在一台局域网内的机器上运行 `npm run build && npm start`（或 Docker / PM2 等方式）。
+2. 其他设备通过内网 IP 访问，例如 `http://192.168.1.100:3000`。
+3. 发送方与接收方均使用该地址，即可在局域网内完成配对与传输。
+
+## 使用步骤
+
+### 发送文件
+
+1. 选择 **发送文件**。
+2. 拖拽或选择要发送的文件（支持多选）。
+3. 点击生成分享码，将 **6 位数字** 告知接收方（可一键复制）。
+4. 等待接收方加入并确认保存位置，传输自动开始。
+
+### 接收文件
+
+1. 选择 **接收文件**。
+2. 输入发送方的 6 位分享码。
+3. 收到文件清单后，确认保存方式：
+   - **Chrome / Edge**：可选择本地文件夹，文件直接写入目录。
+   - **其他浏览器**：传输完成后提供下载链接。
+4. 等待传输完成。
+
+### 发送文本
+
+侧边栏切换到 **文本** 模式，输入内容后同样通过分享码配对，接收方可一键复制。
+
+## 浏览器兼容性
+
+| 能力 | Chrome / Edge | Firefox | Safari |
+|------|---------------|---------|--------|
+| WebRTC 直传 | ✅ | ✅ | ✅ |
+| 写入本地文件夹 | ✅ | ❌ | ❌ |
+| 浏览器下载回退 | ✅ | ✅ | ✅ |
+
+不支持 WebRTC 的浏览器将无法使用，页面会给出提示。
+
+## 技术栈
+
+- [Next.js 16](https://nextjs.org) — App Router + API Routes
+- [React 19](https://react.dev)
+- [Tailwind CSS 4](https://tailwindcss.com)
+- **WebRTC DataChannel** — 点对点数据传输
+- **File System Access API** — 接收端直写文件夹（可选）
+
+## 项目结构
+
+```
+src/
+├── app/
+│   ├── (home)/              # 主界面：发送 / 接收流程
+│   │   ├── _components/     # UI 组件
+│   │   ├── _hooks/          # useHomeTransfer 状态机
+│   │   └── _lib/            # RTC、文件分片、信令客户端
+│   ├── api/signaling/       # 房间与信令 API
+│   └── about/               # 关于页
+└── lib/
+    ├── signaling-store.ts   # 内存房间存储
+    └── transfer-types.ts    # 共享类型定义
+```
+
+## 限制说明
+
+- 每次传输为 **一对一** 会话，一个分享码对应一个接收方。
+- 房间 **10 分钟** 内有效，完成后自动清理。
+- 传输期间请保持双方页面在线；关闭页面会中断连接。
+- 信令服务为内存存储，**服务重启后进行中的房间会丢失**；生产环境多实例部署需替换为 Redis 等共享存储。
+- 跨 NAT / 跨网段场景未配置 TURN 中继，**建议在同一局域网内使用**。
+
+## 相关链接
+
+- [GitHub 仓库](https://github.com/ymzzz222/x2x)
+- [关于 x2x](/about) — 产品简介
+
+## License
+
+Private — see repository for details.
