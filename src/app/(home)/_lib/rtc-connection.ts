@@ -26,6 +26,7 @@ export function cleanupRtc(refs: TransferRefs, actions: TransferActions) {
     refs.controlChannel.current = null;
     refs.dataChannel.current = null;
     refs.connection.current = null;
+    refs.pendingIceCandidates.current = [];
     refs.manifestSent.current = false;
     refs.sending.current = false;
     refs.peerConnected.current = false;
@@ -194,6 +195,17 @@ export function createRtcConnection(
   signaling: ReturnType<typeof createSignaling>,
   channels: ReturnType<typeof attachChannels>,
 ) {
+  async function flushPendingIceCandidates() {
+    const conn = refs.connection.current;
+    if (!conn?.remoteDescription) return;
+
+    while (refs.pendingIceCandidates.current.length > 0) {
+      const candidate = refs.pendingIceCandidates.current.shift();
+      if (!candidate) continue;
+      await conn.addIceCandidate(candidate);
+    }
+  }
+
   async function initPeerConnection() {
     await cleanupFn();
     const connection = new RTCPeerConnection({
@@ -203,6 +215,7 @@ export function createRtcConnection(
       ],
     });
     refs.connection.current = connection;
+    refs.pendingIceCandidates.current = [];
 
     connection.onconnectionstatechange = () => {
       if (connection.connectionState === "connected") {
@@ -236,6 +249,7 @@ export function createRtcConnection(
     const conn = refs.connection.current;
     if (!conn) throw new Error("接收方连接尚未初始化。");
     await conn.setRemoteDescription(payload);
+    await flushPendingIceCandidates();
     const answer = await conn.createAnswer();
     await conn.setLocalDescription(answer);
     await signaling.sendEnvelope({ type: "signal", kind: "answer", payload: answer });
@@ -247,6 +261,7 @@ export function createRtcConnection(
     const conn = refs.connection.current;
     if (!conn) throw new Error("发送方连接尚未初始化。");
     await conn.setRemoteDescription(payload);
+    await flushPendingIceCandidates();
     actions.setPhase("connecting");
     actions.setStatusMessage("对端已回应，正在建立连接。");
   }
@@ -254,6 +269,10 @@ export function createRtcConnection(
   async function handleCandidate(payload: RTCIceCandidateInit) {
     const conn = refs.connection.current;
     if (!conn) return;
+    if (!conn.remoteDescription) {
+      refs.pendingIceCandidates.current.push(payload);
+      return;
+    }
     await conn.addIceCandidate(payload);
   }
 
@@ -297,9 +316,15 @@ export function createRtcConnection(
             cache: "no-store",
           });
           const payload = await parseJsonResponse<PollEventsResponse>(response);
-          cursor = payload.nextCursor;
           actions.setExpiresAt(payload.expiresAt);
-          for (const event of payload.events) await handleSignalingEnvelope(event.envelope);
+          if (payload.events.length === 0) {
+            cursor = payload.nextCursor;
+            continue;
+          }
+          for (const event of payload.events) {
+            await handleSignalingEnvelope(event.envelope);
+            cursor = event.id;
+          }
         } catch (error) {
           if (abortController.signal.aborted) return;
           const msg = error instanceof Error ? error.message : "信令轮询失败。";

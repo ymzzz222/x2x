@@ -25,6 +25,7 @@ export interface TransferRefs {
   receivingChain: React.RefObject<Promise<void>>;
   eventLoopAbort: React.RefObject<AbortController | null>;
   connection: React.RefObject<RTCPeerConnection | null>;
+  pendingIceCandidates: React.RefObject<RTCIceCandidateInit[]>;
   controlChannel: React.RefObject<RTCDataChannel | null>;
   dataChannel: React.RefObject<RTCDataChannel | null>;
 }

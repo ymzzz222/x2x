@@ -99,6 +99,7 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     receivingChain: useRef(Promise.resolve()),
     eventLoopAbort: useRef(null),
     connection: useRef(null),
+    pendingIceCandidates: useRef<RTCIceCandidateInit[]>([]),
     controlChannel: useRef(null),
     dataChannel: useRef(null),
   };
