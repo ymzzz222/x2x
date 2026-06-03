@@ -83,7 +83,14 @@ export function createSignaling(refs: TransferRefs) {
   }
 
   async function sendEnvelope(envelope: SignalingEnvelope) {
-    if (!refs.roomCode.current || !refs.participantId.current) return;
+    if (!refs.roomCode.current || !refs.participantId.current) {
+      logClientWarn("signaling sendEnvelope skipped: missing identifiers", {
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+        envelope: envelope.type === "signal" ? { type: envelope.type, kind: envelope.kind } : envelope,
+      });
+      return;
+    }
     await post<{ ok: true }>({
       action: "send",
       roomCode: refs.roomCode.current,

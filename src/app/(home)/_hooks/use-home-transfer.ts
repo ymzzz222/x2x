@@ -181,6 +181,11 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     await cleanupFn();
     fileTransfer.revokeObjectUrls();
     refs.directoryHandle.current = null;
+    refs.roomCode.current = "";
+    refs.participantId.current = "";
+    refs.manifest.current = null;
+    refs.role.current = null;
+    refs.phase.current = capability.supported ? "idle" : "failed";
     setRole(null);
     setPhase(capability.supported ? "idle" : "failed");
     setSelectedFiles([]);
@@ -246,11 +251,13 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
       const text = senderTextRef.current;
       if (!text.trim()) { setErrorMessage("请先输入要发送的文本。"); return; }
       const m = buildTextManifest(text);
+      refs.manifest.current = m;
       setManifest(m);
       progressMgr.resetProgress(m);
     } else {
       if (!refs.selectedFiles.current.length) { setErrorMessage("请先选择至少一个文件。"); return; }
       const m = buildManifest(refs.selectedFiles.current);
+      refs.manifest.current = m;
       setManifest(m);
       progressMgr.resetProgress(m);
     }
@@ -262,6 +269,8 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     try {
       await rtc.initPeerConnection();
       const session = await signaling.post<RoomSessionPayload>({ action: "create" });
+      refs.roomCode.current = session.roomCode;
+      refs.participantId.current = session.participantId;
       setShareCode(session.roomCode);
       setParticipantId(session.participantId);
       setExpiresAt(session.expiresAt);
@@ -285,6 +294,8 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     try {
       await rtc.initPeerConnection();
       const session = await signaling.post<RoomSessionPayload>({ action: "join", roomCode: shareCodeInput });
+      refs.roomCode.current = session.roomCode;
+      refs.participantId.current = session.participantId;
       setShareCode(session.roomCode);
       setParticipantId(session.participantId);
       setExpiresAt(session.expiresAt);
