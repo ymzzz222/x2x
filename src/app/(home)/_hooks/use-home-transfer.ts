@@ -299,25 +299,47 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     if (!refs.manifest.current) { setErrorMessage("还没有收到发送方的文件清单。"); return; }
 
     try {
+      let nextSaveMode: SaveMode = null;
+
       if (modeRef.current === "file") {
         if (capability.canPickDirectory) {
-          const handle = await window.showDirectoryPicker?.({ mode: "readwrite", id: "x2x-transfer" });
-          if (!handle) return;
-          refs.directoryHandle.current = handle;
-          setSaveMode("directory");
+          let handle: FileSystemDirectoryHandle | null = null;
+          let pickerAborted = false;
+          try {
+            handle = await window.showDirectoryPicker?.({ mode: "readwrite", id: "x2x-transfer" }) ?? null;
+          } catch (error) {
+            const name = error instanceof DOMException ? error.name : "";
+            if (name !== "AbortError") {
+              throw error;
+            }
+            pickerAborted = true;
+          }
+
+          if (handle) {
+            refs.directoryHandle.current = handle;
+            nextSaveMode = "directory";
+          } else if (pickerAborted) {
+            refs.directoryHandle.current = null;
+            nextSaveMode = "browser-download";
+          } else {
+            return;
+          }
         } else {
           refs.directoryHandle.current = null;
-          setSaveMode("browser-download");
+          nextSaveMode = "browser-download";
         }
+
+        setSaveMode(nextSaveMode);
       }
 
+      setErrorMessage(null);
       setReceiverConfirmed(true);
       signaling.sendControlMessage({ type: "receiver-ready" });
       setPhase("transferring");
       setStatusMessage(
         modeRef.current === "text"
           ? "已确认接收，等待发送方推送文本。"
-          : capability.canPickDirectory
+          : nextSaveMode === "directory"
             ? "已确认保存目录，等待发送方推送数据。"
             : "已确认接收，将在完成后提供浏览器下载链接。",
       );

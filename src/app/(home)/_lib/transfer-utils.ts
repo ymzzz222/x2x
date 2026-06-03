@@ -6,8 +6,12 @@ export const MAX_SEND_BUFFER_BYTES = 4 * 1024 * 1024;
 export const BUFFER_LOW_WATERMARK_BYTES = 2 * 1024 * 1024;
 export const DATA_FRAME_HEADER_BYTES = 3;
 export const ICE_DISCONNECT_GRACE_MS = 8_000;
-export const NEGOTIATION_TIMEOUT_MS = 15_000;
+export const NEGOTIATION_TIMEOUT_MS = 25_000;
 const SHOULD_LOG_CLIENT_DEBUG = process.env.NODE_ENV === "production";
+const DEFAULT_STUN_URLS = [
+  "stun:stun.l.google.com:19302",
+  "stun:stun1.l.google.com:19302",
+] as const;
 
 export type DataFrameType = 1 | 2 | 3;
 export type SaveMode = "directory" | "browser-download" | null;
@@ -147,10 +151,21 @@ export function sleep(ms: number) {
   return new Promise<void>((resolve) => setTimeout(resolve, ms));
 }
 
+function splitIceUrls(raw: string | undefined) {
+  return (raw ?? "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
 export function getRtcConfiguration(): RTCConfiguration {
+  const configuredStunUrls = splitIceUrls(process.env.NEXT_PUBLIC_X2X_STUN_URLS);
+  const stunUrls = configuredStunUrls.length > 0 ? configuredStunUrls : [...DEFAULT_STUN_URLS];
+
   return {
-    iceServers: [],
+    iceServers: [{ urls: stunUrls }],
     iceTransportPolicy: "all",
+    iceCandidatePoolSize: 2,
   };
 }
 

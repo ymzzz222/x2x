@@ -182,14 +182,14 @@ export function createFileTransfer(
         });
       }
 
+      actions.setPhase("completed");
+      actions.setStatusMessage("文件已全部发送完成。");
       signaling.sendControlMessage({ type: "transfer-complete" });
-      await signaling.post<{ ok: true }>({
+      void signaling.post<{ ok: true }>({
         action: "complete",
         roomCode: refs.roomCode.current,
         participantId: refs.participantId.current,
-      });
-      actions.setPhase("completed");
-      actions.setStatusMessage("文件已全部发送完成。");
+      }).catch(() => {});
     } catch (error) {
       const msg = error instanceof Error ? error.message : "文件发送失败。";
       try { signaling.sendControlMessage({ type: "transfer-error", message: msg }); } catch { /* ignore */ }
@@ -300,14 +300,14 @@ export function createTextTransfer(
 
       channel.send(encodeDataFrame(3, 0));
 
+      actions.setPhase("completed");
+      actions.setStatusMessage("文本已发送完成。");
       signaling.sendControlMessage({ type: "transfer-complete" });
-      await signaling.post<{ ok: true }>({
+      void signaling.post<{ ok: true }>({
         action: "complete",
         roomCode: refs.roomCode.current,
         participantId: refs.participantId.current,
-      });
-      actions.setPhase("completed");
-      actions.setStatusMessage("文本已发送完成。");
+      }).catch(() => {});
     } catch (error) {
       const msg = error instanceof Error ? error.message : "文本发送失败。";
       try { signaling.sendControlMessage({ type: "transfer-error", message: msg }); } catch { /* ignore */ }

@@ -256,6 +256,10 @@ export function createRtcConnection(
     });
 
     connection.onconnectionstatechange = () => {
+      if (refs.phase.current === "completed" || refs.phase.current === "cancelled") {
+        return;
+      }
+
       if (connection.connectionState === "connected") {
         if (disconnectTimer) {
           clearTimeout(disconnectTimer);
