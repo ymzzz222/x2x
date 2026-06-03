@@ -47,11 +47,11 @@ export function ReceiverFlow({ t }: ReceiverFlowProps) {
     );
   }
 
-  if (t.phase === "connecting") {
+  if (t.phase === "negotiating") {
     return (
       <div className={styles.innerPanel}>
         <p className={styles.panelTitle}>正在建立连接</p>
-        <p className={styles.panelHint}>已加入房间，正在与发送方建立点对点连接...</p>
+        <p className={styles.panelHint}>已加入房间，正在与发送方建立局域网点对点连接...</p>
       </div>
     );
   }

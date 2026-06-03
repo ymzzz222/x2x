@@ -17,7 +17,7 @@ export default function Home() {
   const t = useHomeTransfer(activeTab === "text" ? "text" : "file");
 
   const isIdle = t.phase === "idle";
-  const isTerminal = ["completed", "expired", "cancelled", "failed"].includes(t.phase);
+  const isTerminal = ["completed", "cancelled", "failed"].includes(t.phase);
   const isSender = t.role === "sender";
   const isReceiver = t.role === "receiver";
   const showBack = !isIdle;
@@ -96,7 +96,7 @@ export default function Home() {
             {isTerminal && t.phase !== "completed" && (
               <div className={styles.innerPanel}>
                 <p className={styles.panelTitle}>
-                  {t.phase === "expired" ? "分享码已过期" : t.phase === "cancelled" ? "传输已取消" : "传输失败"}
+                  {t.phase === "cancelled" ? "传输已取消" : "传输失败"}
                 </p>
                 <p className={styles.panelHint}>{t.errorMessage || t.statusMessage}</p>
                 <div className={styles.actionRow}>
@@ -105,7 +105,7 @@ export default function Home() {
               </div>
             )}
 
-            {["waiting-peer", "joining-room", "connecting", "ready", "transferring"].includes(t.phase) && (
+            {["waiting-peer", "joining-room", "negotiating", "ready", "transferring"].includes(t.phase) && (
               <div className="flex justify-end">
                 <button type="button" onClick={t.cancelCurrentSession} className={styles.button.danger}>取消传输</button>
               </div>

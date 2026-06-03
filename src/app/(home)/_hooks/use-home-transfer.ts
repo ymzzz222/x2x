@@ -43,28 +43,13 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
   const [capability, setCapability] = useState(SSR_CAPABILITY);
   const [role, setRole] = useState<RoomRole | null>(null);
   const [phase, setPhase] = useState<RoomPhase>("idle");
-
-  useEffect(() => {
-    const cap = detectCapabilities();
-    setCapability(cap);
-    if (!cap.supported) {
-      setPhase("failed");
-      setErrorMessage(cap.warning);
-      setStatusMessage(cap.warning || "浏览器能力不足。");
-    }
-  }, []);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [manifest, setManifest] = useState<TransferManifest | null>(null);
   const [shareCode, setShareCode] = useState("");
   const [shareCodeInput, setShareCodeInput] = useState("");
   const [participantId, setParticipantId] = useState("");
-  const [expiresAt, setExpiresAt] = useState<number | null>(null);
-  const [statusMessage, setStatusMessage] = useState(
-    capability.supported ? "选择一个角色，开始建立局域网直传。" : capability.warning || "浏览器能力不足。",
-  );
-  const [errorMessage, setErrorMessage] = useState<string | null>(
-    capability.supported ? null : capability.warning,
-  );
+  const [statusMessage, setStatusMessage] = useState("选择一个角色，开始建立局域网直传。");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
   const [peerConnected, setPeerConnected] = useState(false);
   const [progress, setProgress] = useState<TransferProgress>(EMPTY_PROGRESS);
@@ -73,6 +58,18 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
   const [receiverConfirmed, setReceiverConfirmed] = useState(false);
   const [senderText, setSenderText] = useState("");
   const [receivedText, setReceivedText] = useState<string | null>(null);
+
+  useEffect(() => {
+    const cap = detectCapabilities();
+    setCapability(cap);
+    if (!cap.supported) {
+      setPhase("failed");
+      setErrorMessage(cap.warning);
+      setStatusMessage(cap.warning || "浏览器能力不足。");
+    } else {
+      setStatusMessage("选择一个角色，开始建立局域网直传。");
+    }
+  }, []);
 
   const modeRef = useRef(mode);
   modeRef.current = mode;
@@ -97,11 +94,12 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     sending: useRef(false),
     manifestSent: useRef(false),
     receivingChain: useRef(Promise.resolve()),
-    eventLoopAbort: useRef(null),
+    eventSource: useRef(null),
     connection: useRef(null),
-    pendingIceCandidates: useRef<RTCIceCandidateInit[]>([]),
     controlChannel: useRef(null),
     dataChannel: useRef(null),
+    negotiationTimer: useRef(null),
+    negotiationAttempts: useRef(0),
   };
 
   useEffect(() => { refs.roomCode.current = shareCode; }, [shareCode]);
@@ -125,7 +123,6 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     setManifest,
     setReceiverConfirmed,
     setDownloadArtifacts,
-    setExpiresAt,
     setStatusMessage,
     setErrorMessage,
     resetProgress: () => {},
@@ -160,21 +157,7 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
   );
 
   const cleanupFn = useCallback(async () => {
-    refs.eventLoopAbort.current?.abort();
-    refs.eventLoopAbort.current = null;
-    refs.controlChannel.current?.close();
-    refs.dataChannel.current?.close();
-    refs.connection.current?.close();
-    refs.controlChannel.current = null;
-    refs.dataChannel.current = null;
-    refs.connection.current = null;
-    refs.manifestSent.current = false;
-    refs.sending.current = false;
-    refs.peerConnected.current = false;
-    setPeerConnected(false);
-    const sink = refs.currentSink.current;
-    refs.currentSink.current = null;
-    if (sink?.writable) await sink.writable.abort();
+    await cleanupRtc(refs, actions)();
   }, []);
 
   const resetLocalState = useCallback(async () => {
@@ -193,7 +176,6 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     setShareCode("");
     setShareCodeInput("");
     setParticipantId("");
-    setExpiresAt(null);
     setStatusMessage(
       capability.supported ? "选择一个角色，开始建立局域网直传。" : capability.warning || "浏览器能力不足。",
     );
@@ -216,7 +198,7 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
         setStatusMessage(
           nextRole === "sender"
             ? mode === "text" ? "输入要发送的文本，然后生成一次性分享码。" : "选择要发送的文件，然后生成一次性分享码。"
-            : "输入发送方的 6 位分享码，加入同一个房间。",
+            : "输入发送方的 6 位分享码，加入同一个局域网房间。",
         );
       });
     },
@@ -264,7 +246,7 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
 
     setErrorMessage(null);
     setPhase("room-creating");
-    setStatusMessage("正在申请一次性分享码。");
+    setStatusMessage("正在生成一次性分享码。");
 
     try {
       await rtc.initPeerConnection();
@@ -273,10 +255,9 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
       refs.participantId.current = session.participantId;
       setShareCode(session.roomCode);
       setParticipantId(session.participantId);
-      setExpiresAt(session.expiresAt);
       setPhase("waiting-peer");
       setStatusMessage("分享码已生成，等待接收设备输入并加入。");
-      rtc.startEventLoop(session.roomCode, session.participantId);
+      rtc.startEventStream(session.roomCode, session.participantId);
     } catch (error) {
       const msg = error instanceof Error ? error.message : "创建房间失败。";
       await failSession(msg, "failed");
@@ -289,22 +270,20 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
 
     setErrorMessage(null);
     setPhase("joining-room");
-    setStatusMessage("正在加入房间并等待发送方响应。");
+    setStatusMessage("正在加入房间并等待发送方发起连接。");
 
     try {
-      await rtc.initPeerConnection();
       const session = await signaling.post<RoomSessionPayload>({ action: "join", roomCode: shareCodeInput });
       refs.roomCode.current = session.roomCode;
       refs.participantId.current = session.participantId;
       setShareCode(session.roomCode);
       setParticipantId(session.participantId);
-      setExpiresAt(session.expiresAt);
-      setPhase("connecting");
-      setStatusMessage("已加入房间，正在等待发送方发起连接。");
-      rtc.startEventLoop(session.roomCode, session.participantId);
+      setPhase("negotiating");
+      setStatusMessage("已加入房间，正在等待发送方发起局域网连接。");
+      rtc.startEventStream(session.roomCode, session.participantId);
     } catch (error) {
       const msg = error instanceof Error ? error.message : "加入房间失败。";
-      await failSession(msg, msg.includes("过期") ? "expired" : "failed");
+      await failSession(msg, "failed");
     }
   }, [failSession, rtc, shareCodeInput, signaling]);
 
@@ -346,7 +325,9 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
       await navigator.clipboard.writeText(shareCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
-    } catch { setCopied(false); }
+    } catch {
+      setCopied(false);
+    }
   }, [shareCode]);
 
   const cancelCurrentSession = useCallback(async () => {
@@ -375,7 +356,6 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     manifest,
     shareCode,
     shareCodeInput,
-    expiresAt,
     statusMessage,
     errorMessage,
     copied,

@@ -46,11 +46,10 @@ export const phaseLabels = {
   "room-creating": "创建房间",
   "waiting-peer": "等待加入",
   "joining-room": "加入房间",
-  connecting: "建立连接",
+  negotiating: "建立连接",
   ready: "准备完成",
   transferring: "正在传输",
   completed: "已完成",
-  expired: "已过期",
   cancelled: "已取消",
   failed: "已失败",
 } as const;
@@ -59,7 +58,7 @@ export const statusItems = [
   {
     key: "wifi",
     label: "传输方式",
-    value: "WebRTC P2P",
+    value: "LAN WebRTC",
     icon: WarningIcon,
   },
   {

@@ -6,15 +6,14 @@ export type RoomPhase =
   | "room-creating"
   | "waiting-peer"
   | "joining-room"
-  | "connecting"
+  | "negotiating"
   | "ready"
   | "transferring"
   | "completed"
-  | "expired"
   | "cancelled"
   | "failed";
 
-export type SignalingSignalKind = "offer" | "answer" | "ice";
+export type SignalingSignalKind = "offer" | "answer";
 
 export type SignalingEnvelope =
   | { type: "peer-joined" }
@@ -23,7 +22,7 @@ export type SignalingEnvelope =
   | {
       type: "signal";
       kind: SignalingSignalKind;
-      payload: RTCSessionDescriptionInit | RTCIceCandidateInit;
+      payload: RTCSessionDescriptionInit;
     };
 
 export interface ManifestFileItem {
@@ -65,16 +64,4 @@ export interface TransferProgress {
 export interface RoomSessionPayload {
   roomCode: string;
   participantId: string;
-  expiresAt: number;
-}
-
-export interface SignalingEvent {
-  id: number;
-  envelope: SignalingEnvelope;
-}
-
-export interface PollEventsResponse {
-  events: SignalingEvent[];
-  nextCursor: number;
-  expiresAt: number;
 }

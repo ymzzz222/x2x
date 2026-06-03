@@ -73,15 +73,15 @@ export function SenderTextInput({ t }: SenderTextInputProps) {
     );
   }
 
-  if (t.phase === "connecting" || t.phase === "ready") {
+  if (t.phase === "negotiating" || t.phase === "ready") {
     return (
       <div className={styles.innerPanel}>
         <p className={styles.panelTitle}>
-          {t.phase === "connecting" ? "正在建立连接" : "等待接收方确认"}
+          {t.phase === "negotiating" ? "正在建立连接" : "等待接收方确认"}
         </p>
         <p className={styles.panelHint}>
-          {t.phase === "connecting"
-            ? "正在与接收方建立点对点连接..."
+          {t.phase === "negotiating"
+            ? "正在与接收方建立局域网点对点连接..."
             : "接收方已连接，等待其确认后自动开始传输。"}
         </p>
       </div>

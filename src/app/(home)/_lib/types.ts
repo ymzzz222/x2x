@@ -23,11 +23,12 @@ export interface TransferRefs {
   sending: React.RefObject<boolean>;
   manifestSent: React.RefObject<boolean>;
   receivingChain: React.RefObject<Promise<void>>;
-  eventLoopAbort: React.RefObject<AbortController | null>;
+  eventSource: React.RefObject<EventSource | null>;
   connection: React.RefObject<RTCPeerConnection | null>;
-  pendingIceCandidates: React.RefObject<RTCIceCandidateInit[]>;
   controlChannel: React.RefObject<RTCDataChannel | null>;
   dataChannel: React.RefObject<RTCDataChannel | null>;
+  negotiationTimer: React.RefObject<ReturnType<typeof setTimeout> | null>;
+  negotiationAttempts: React.RefObject<number>;
 }
 
 export interface TransferActions {
@@ -36,7 +37,6 @@ export interface TransferActions {
   setManifest: (m: TransferManifest | null) => void;
   setReceiverConfirmed: (v: boolean) => void;
   setDownloadArtifacts: React.Dispatch<React.SetStateAction<DownloadArtifact[]>>;
-  setExpiresAt: (v: number | null) => void;
   setStatusMessage: (msg: string) => void;
   setErrorMessage: (msg: string | null) => void;
   resetProgress: (manifest?: TransferManifest | null) => void;
@@ -53,7 +53,6 @@ export interface HomeTransferState {
   manifest: TransferManifest | null;
   shareCode: string;
   shareCodeInput: string;
-  expiresAt: number | null;
   statusMessage: string;
   errorMessage: string | null;
   copied: boolean;
