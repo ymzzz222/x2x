@@ -12,6 +12,12 @@ interface ParticipantRecord {
   role: RoomRole;
 }
 
+interface RoomEvent {
+  id: number;
+  target: EventTarget;
+  envelope: SignalingEnvelope;
+}
+
 interface RoomRecord {
   code: string;
   createdAt: number;
@@ -20,7 +26,9 @@ interface RoomRecord {
   status: RoomStatus;
   sender: ParticipantRecord;
   receiver: ParticipantRecord | null;
-  streams: Map<string, (envelope: SignalingEnvelope) => void>;
+  nextEventId: number;
+  events: RoomEvent[];
+  streams: Map<string, (event: RoomEvent) => void>;
 }
 
 interface SignalingStore {
@@ -45,6 +53,14 @@ function now() {
   return Date.now();
 }
 
+function createRoomId() {
+  if (typeof globalThis.crypto?.randomUUID === "function") {
+    return globalThis.crypto.randomUUID();
+  }
+
+  return `room-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 function randomCode() {
   return String(Math.floor(100000 + Math.random() * 900000));
 }
@@ -57,10 +73,12 @@ function createRoomRecord(code: string, currentTime = now()): RoomRecord {
     closedAt: null,
     status: "active",
     sender: {
-      id: crypto.randomUUID(),
+      id: createRoomId(),
       role: "sender",
     },
     receiver: null,
+    nextEventId: 1,
+    events: [],
     streams: new Map(),
   };
 }
@@ -77,7 +95,21 @@ function findParticipant(room: RoomRecord, participantId: string): ParticipantRe
   return null;
 }
 
+function createEvent(room: RoomRecord, target: EventTarget, envelope: SignalingEnvelope) {
+  const event = {
+    id: room.nextEventId,
+    target,
+    envelope,
+  } satisfies RoomEvent;
+
+  room.nextEventId += 1;
+  room.events.push(event);
+  return event;
+}
+
 function publish(room: RoomRecord, target: EventTarget, envelope: SignalingEnvelope) {
+  const event = createEvent(room, target, envelope);
+
   for (const [participantId, stream] of room.streams.entries()) {
     const participant = findParticipant(room, participantId);
     if (!participant) {
@@ -86,9 +118,22 @@ function publish(room: RoomRecord, target: EventTarget, envelope: SignalingEnvel
     }
 
     if (target === "both" || participant.role === target) {
-      stream(envelope);
+      stream(event);
     }
   }
+}
+
+function getVisibleEvents(room: RoomRecord, participantId: string, lastEventId: number) {
+  const participant = findParticipant(room, participantId);
+  if (!participant) {
+    throw new Error("PARTICIPANT_NOT_FOUND");
+  }
+
+  return room.events.filter(
+    (event) =>
+      event.id > lastEventId &&
+      (event.target === "both" || event.target === participant.role),
+  );
 }
 
 function pruneRooms(currentTime = now()) {
@@ -103,6 +148,7 @@ function pruneRooms(currentTime = now()) {
 
     const closedAt = room.closedAt ?? room.expiresAt;
     if (currentTime - closedAt > CLOSED_ROOM_RETENTION_MS) {
+      room.events = [];
       room.streams.clear();
       store.rooms.delete(code);
     }
@@ -186,7 +232,7 @@ export async function joinRoom(code: string) {
   }
 
   room.receiver = {
-    id: crypto.randomUUID(),
+    id: createRoomId(),
     role: "receiver",
   };
 
@@ -231,15 +277,25 @@ export async function completeRoom(code: string, participantId: string) {
 export async function subscribeToRoom(
   code: string,
   participantId: string,
-  onEnvelope: (envelope: SignalingEnvelope) => void,
+  lastEventId: number,
+  onEvent: (event: RoomEvent) => void,
 ) {
   const { room } = ensureParticipant(code, participantId);
 
-  if (room.status === "expired") {
-    onEnvelope({ type: "room-expired" });
+  const pendingEvents = getVisibleEvents(room, participantId, lastEventId);
+  for (const event of pendingEvents) {
+    onEvent(event);
   }
 
-  room.streams.set(participantId, onEnvelope);
+  if (room.status === "expired") {
+    onEvent({
+      id: room.nextEventId,
+      target: "both",
+      envelope: { type: "room-expired" },
+    });
+  }
+
+  room.streams.set(participantId, onEvent);
 
   return () => {
     const nextRoom = getStore().rooms.get(code);

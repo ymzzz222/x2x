@@ -449,12 +449,11 @@ export function createRtcConnection(
       if (refs.phase.current === "completed" || refs.phase.current === "cancelled") {
         return;
       }
-
-      if (refs.peerConnected.current || refs.phase.current === "transferring") {
-        return;
-      }
-
-      void actions.failSession("配对通道已断开，请重新生成分享码再试。", "failed");
+      logClientError("signaling stream:error", {
+        roomCode,
+        participantId,
+        readyState: source.readyState,
+      });
     };
   }
 

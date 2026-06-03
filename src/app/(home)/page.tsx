@@ -36,8 +36,8 @@ export default function Home() {
           />
 
           <div className={styles.centeredContent}>
-            {t.capability.warning && (
-              <div className={styles.capabilityCallout}>{t.capability.warning}</div>
+            {t.mode === "file" && t.capability.notice && (
+              <div className={styles.capabilityCallout}>{t.capability.notice}</div>
             )}
 
             {t.errorMessage && !isTerminal && (

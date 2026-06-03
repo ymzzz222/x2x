@@ -15,7 +15,8 @@ export type SaveMode = "directory" | "browser-download" | null;
 export interface CapabilityState {
   supported: boolean;
   canPickDirectory: boolean;
-  warning: string | null;
+  blockingMessage: string | null;
+  notice: string | null;
 }
 
 export interface DownloadArtifact {
@@ -43,12 +44,20 @@ export const EMPTY_PROGRESS = {
   etaSeconds: null,
 } as const;
 
+export function createLocalId() {
+  if (typeof globalThis.crypto?.randomUUID === "function") {
+    return globalThis.crypto.randomUUID();
+  }
+
+  return `x2x-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 export function buildManifest(files: File[]): TransferManifest {
   return {
     createdAt: Date.now(),
     totalBytes: files.reduce((sum, file) => sum + file.size, 0),
     files: files.map((file) => ({
-      id: crypto.randomUUID(),
+      id: createLocalId(),
       name: file.name,
       size: file.size,
       type: file.type,
@@ -74,7 +83,7 @@ export function mergeFiles(existing: File[], incoming: File[]) {
 
 export function detectCapabilities(): CapabilityState {
   if (typeof window === "undefined") {
-    return { supported: false, canPickDirectory: false, warning: null };
+    return { supported: false, canPickDirectory: false, blockingMessage: null, notice: null };
   }
 
   const supported =
@@ -86,11 +95,12 @@ export function detectCapabilities(): CapabilityState {
   return {
     supported,
     canPickDirectory,
-    warning: supported
-      ? canPickDirectory
-        ? null
-        : "当前浏览器不支持直接写入文件夹，将退回浏览器下载。建议双方使用桌面 Chrome 或 Edge。"
+    blockingMessage: supported
+      ? null
       : "当前浏览器不支持所需的局域网点对点能力，请使用桌面 Chrome 或 Edge。",
+    notice: supported && !canPickDirectory
+      ? "当前浏览器不能直接写入文件夹，接收文件时会改为浏览器下载。"
+      : null,
   };
 }
 

@@ -12,6 +12,7 @@ import type {
 import {
   EMPTY_PROGRESS,
   buildManifest,
+  createLocalId,
   detectCapabilities,
   mergeFiles,
   type CapabilityState,
@@ -27,14 +28,19 @@ import {
 } from "../_lib/rtc-connection";
 import { createProgressManager, createFileTransfer, createTextTransfer } from "../_lib/file-transfer";
 
-const SSR_CAPABILITY: CapabilityState = { supported: false, canPickDirectory: false, warning: null };
+const SSR_CAPABILITY: CapabilityState = {
+  supported: false,
+  canPickDirectory: false,
+  blockingMessage: null,
+  notice: null,
+};
 
 function buildTextManifest(text: string): TransferManifest {
   const encoded = new TextEncoder().encode(text);
   return {
     createdAt: Date.now(),
     totalBytes: encoded.byteLength,
-    files: [{ id: crypto.randomUUID(), name: "text.txt", size: encoded.byteLength, type: "text/plain" }],
+    files: [{ id: createLocalId(), name: "text.txt", size: encoded.byteLength, type: "text/plain" }],
     mode: "text",
   };
 }
@@ -64,8 +70,8 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     setCapability(cap);
     if (!cap.supported) {
       setPhase("failed");
-      setErrorMessage(cap.warning);
-      setStatusMessage(cap.warning || "浏览器能力不足。");
+      setErrorMessage(cap.blockingMessage);
+      setStatusMessage(cap.blockingMessage || "浏览器能力不足。");
     } else {
       setStatusMessage("选择一个角色，开始建立局域网直传。");
     }
@@ -177,9 +183,11 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     setShareCodeInput("");
     setParticipantId("");
     setStatusMessage(
-      capability.supported ? "选择一个角色，开始建立局域网直传。" : capability.warning || "浏览器能力不足。",
+      capability.supported
+        ? "选择一个角色，开始建立局域网直传。"
+        : capability.blockingMessage || "浏览器能力不足。",
     );
-    setErrorMessage(capability.supported ? null : capability.warning);
+    setErrorMessage(capability.supported ? null : capability.blockingMessage);
     setCopied(false);
     setDownloadArtifacts([]);
     setSaveMode(null);
@@ -187,7 +195,7 @@ export function useHomeTransfer(mode: "file" | "text" = "file"): HomeTransferSta
     setSenderText("");
     setReceivedText(null);
     progressMgr.resetProgress();
-  }, [capability.supported, capability.warning, cleanupFn, fileTransfer, progressMgr]);
+  }, [capability.blockingMessage, capability.supported, cleanupFn, fileTransfer, progressMgr]);
 
   const selectRole = useCallback(
     (nextRole: RoomRole) => {

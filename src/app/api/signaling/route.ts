@@ -51,6 +51,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const roomCode = searchParams.get("roomCode")?.trim();
   const participantId = searchParams.get("participantId")?.trim();
+  const lastEventId = Number(request.headers.get("last-event-id") ?? "0") || 0;
 
   if (!roomCode || !participantId) {
     return errorResponse("缺少房间信息。", 400);
@@ -61,11 +62,13 @@ export async function GET(request: Request) {
       const encoder = new TextEncoder();
       let closed = false;
 
-      const push = (envelope: SignalingEnvelope) => {
+      const push = (event: { id: number; envelope: SignalingEnvelope }) => {
         if (closed) {
           return;
         }
-        controller.enqueue(encoder.encode(`data: ${JSON.stringify(envelope)}\n\n`));
+        controller.enqueue(
+          encoder.encode(`id: ${event.id}\ndata: ${JSON.stringify(event.envelope)}\n\n`),
+        );
       };
 
       controller.enqueue(encoder.encode(": connected\n\n"));
@@ -73,7 +76,7 @@ export async function GET(request: Request) {
       let unsubscribe: (() => void) | null = null;
 
       try {
-        unsubscribe = await subscribeToRoom(roomCode, participantId, push);
+        unsubscribe = await subscribeToRoom(roomCode, participantId, lastEventId, push);
       } catch (error) {
         const message = error instanceof Error ? error.message : "UNKNOWN_ERROR";
         const statusMessage =
