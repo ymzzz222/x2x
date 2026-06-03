@@ -13,6 +13,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 const POLL_TIMEOUT_MS = 25_000;
+const SHOULD_LOG_SERVER_DEBUG = process.env.NODE_ENV === "production";
 
 function jsonResponse(body: unknown, status = 200) {
   return NextResponse.json(body, {
@@ -25,6 +26,24 @@ function jsonResponse(body: unknown, status = 200) {
 
 function errorResponse(message: string, status = 400) {
   return jsonResponse({ message }, status);
+}
+
+function logServerDebug(message: string, detail?: unknown) {
+  if (!SHOULD_LOG_SERVER_DEBUG) return;
+  if (typeof detail === "undefined") {
+    console.info("[x2x/api]", message);
+    return;
+  }
+  console.info("[x2x/api]", message, detail);
+}
+
+function logServerError(message: string, detail?: unknown) {
+  if (!SHOULD_LOG_SERVER_DEBUG) return;
+  if (typeof detail === "undefined") {
+    console.error("[x2x/api]", message);
+    return;
+  }
+  console.error("[x2x/api]", message, detail);
 }
 
 function normalizeEnvelope(input: unknown): SignalingEnvelope | null {
@@ -71,14 +90,32 @@ export async function GET(request: Request) {
   );
 
   if (!roomCode || !participantId) {
+    logServerError("GET missing room info", { roomCode, participantId, cursor, timeoutMs });
     return errorResponse("缺少房间信息。", 400);
   }
 
   try {
     const payload = await pollEvents(roomCode, participantId, cursor, timeoutMs);
+    if (payload.events.length > 0) {
+      logServerDebug("GET poll events", {
+        roomCode,
+        participantId,
+        cursor,
+        nextCursor: payload.nextCursor,
+        eventCount: payload.events.length,
+        eventIds: payload.events.map((event) => event.id),
+      });
+    }
     return jsonResponse(payload);
   } catch (error) {
     const message = error instanceof Error ? error.message : "UNKNOWN_ERROR";
+    logServerError("GET poll failed", {
+      roomCode,
+      participantId,
+      cursor,
+      timeoutMs,
+      message,
+    });
 
     if (message === "ROOM_EXPIRED") {
       return errorResponse("分享码已过期。", 410);
@@ -98,6 +135,7 @@ export async function POST(request: Request) {
   try {
     body = (await request.json()) as Record<string, unknown>;
   } catch {
+    logServerError("POST invalid JSON body");
     return errorResponse("请求体不是有效 JSON。", 400);
   }
 
@@ -106,14 +144,21 @@ export async function POST(request: Request) {
   try {
     switch (action) {
       case "create":
-        return jsonResponse(createRoom(), 201);
+        {
+          const session = await createRoom();
+          logServerDebug("POST create ok", session);
+          return jsonResponse(session, 201);
+        }
       case "join": {
         const roomCode = typeof body.roomCode === "string" ? body.roomCode.trim() : "";
         if (!/^\d{6}$/.test(roomCode)) {
+          logServerError("POST join invalid roomCode", { roomCode });
           return errorResponse("请输入 6 位分享码。", 400);
         }
 
-        return jsonResponse(joinRoom(roomCode));
+        const session = await joinRoom(roomCode);
+        logServerDebug("POST join ok", session);
+        return jsonResponse(session);
       }
       case "send": {
         const roomCode = typeof body.roomCode === "string" ? body.roomCode.trim() : "";
@@ -121,10 +166,17 @@ export async function POST(request: Request) {
         const envelope = normalizeEnvelope(body.envelope);
 
         if (!roomCode || !participantId || !envelope) {
+          logServerError("POST send incomplete payload", { roomCode, participantId, hasEnvelope: Boolean(envelope) });
           return errorResponse("信令消息不完整。", 400);
         }
 
-        sendEnvelope(roomCode, participantId, envelope);
+        await sendEnvelope(roomCode, participantId, envelope);
+        logServerDebug("POST send ok", {
+          roomCode,
+          participantId,
+          envelopeType: envelope.type,
+          kind: envelope.type === "signal" ? envelope.kind : undefined,
+        });
         return jsonResponse({ ok: true });
       }
       case "cancel": {
@@ -133,10 +185,12 @@ export async function POST(request: Request) {
         const reason = typeof body.reason === "string" ? body.reason.trim() : undefined;
 
         if (!roomCode || !participantId) {
+          logServerError("POST cancel missing identifiers", { roomCode, participantId });
           return errorResponse("取消房间时缺少标识。", 400);
         }
 
-        cancelRoom(roomCode, participantId, reason);
+        await cancelRoom(roomCode, participantId, reason);
+        logServerDebug("POST cancel ok", { roomCode, participantId, reason });
         return jsonResponse({ ok: true });
       }
       case "complete": {
@@ -144,17 +198,21 @@ export async function POST(request: Request) {
         const participantId = typeof body.participantId === "string" ? body.participantId.trim() : "";
 
         if (!roomCode || !participantId) {
+          logServerError("POST complete missing identifiers", { roomCode, participantId });
           return errorResponse("完成房间时缺少标识。", 400);
         }
 
-        completeRoom(roomCode, participantId);
+        await completeRoom(roomCode, participantId);
+        logServerDebug("POST complete ok", { roomCode, participantId });
         return jsonResponse({ ok: true });
       }
       default:
+        logServerError("POST unsupported action", { action });
         return errorResponse("不支持的信令动作。", 400);
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : "UNKNOWN_ERROR";
+    logServerError("POST action failed", { action, message, body });
 
     if (message === "ROOM_NOT_FOUND") {
       return errorResponse("分享码不存在。", 404);

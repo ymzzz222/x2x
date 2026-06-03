@@ -6,6 +6,7 @@ export const MAX_SEND_BUFFER_BYTES = 4 * 1024 * 1024;
 export const BUFFER_LOW_WATERMARK_BYTES = 2 * 1024 * 1024;
 export const DATA_FRAME_HEADER_BYTES = 3;
 export const POLL_TIMEOUT_MS = 25_000;
+const SHOULD_LOG_CLIENT_DEBUG = process.env.NODE_ENV === "production";
 
 export type DataFrameType = 1 | 2 | 3;
 export type SaveMode = "directory" | "browser-download" | null;
@@ -133,4 +134,31 @@ export async function parseJsonResponse<T>(response: Response) {
 
 export function sleep(ms: number) {
   return new Promise<void>((resolve) => setTimeout(resolve, ms));
+}
+
+export function logClientDebug(message: string, detail?: unknown) {
+  if (typeof window === "undefined" || !SHOULD_LOG_CLIENT_DEBUG) return;
+  if (typeof detail === "undefined") {
+    console.info("[x2x]", message);
+    return;
+  }
+  console.info("[x2x]", message, detail);
+}
+
+export function logClientWarn(message: string, detail?: unknown) {
+  if (typeof window === "undefined" || !SHOULD_LOG_CLIENT_DEBUG) return;
+  if (typeof detail === "undefined") {
+    console.warn("[x2x]", message);
+    return;
+  }
+  console.warn("[x2x]", message, detail);
+}
+
+export function logClientError(message: string, detail?: unknown) {
+  if (typeof window === "undefined" || !SHOULD_LOG_CLIENT_DEBUG) return;
+  if (typeof detail === "undefined") {
+    console.error("[x2x]", message);
+    return;
+  }
+  console.error("[x2x]", message, detail);
 }

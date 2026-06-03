@@ -10,8 +10,10 @@ import {
   SIGNALING_ENDPOINT,
   decodeControlMessage,
   encodeControlMessage,
+  logClientDebug,
+  logClientError,
+  logClientWarn,
   normalizeArrayBuffer,
-  parseJsonResponse,
   sleep,
 } from "./transfer-utils";
 import type { TransferActions, TransferRefs } from "./types";
@@ -40,12 +42,44 @@ export function cleanupRtc(refs: TransferRefs, actions: TransferActions) {
 
 export function createSignaling(refs: TransferRefs) {
   async function post<T>(payload: Record<string, unknown>) {
+    logClientDebug("signaling POST:start", {
+      action: payload.action,
+      roomCode: payload.roomCode,
+      participantId: payload.participantId,
+    });
     const response = await fetch(SIGNALING_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-    return parseJsonResponse<T>(response);
+    const raw = await response.text();
+    let data: (T & { message?: string }) | null = null;
+    try {
+      data = JSON.parse(raw) as T & { message?: string };
+    } catch {
+      logClientError("signaling POST:invalid-json", {
+        action: payload.action,
+        status: response.status,
+        body: raw,
+      });
+      throw new Error("信令服务返回了无效响应。");
+    }
+
+    if (!response.ok) {
+      logClientError("signaling POST:error", {
+        action: payload.action,
+        status: response.status,
+        data,
+      });
+      throw new Error(data.message || "请求失败。");
+    }
+
+    logClientDebug("signaling POST:ok", {
+      action: payload.action,
+      status: response.status,
+      data,
+    });
+    return data;
   }
 
   async function sendEnvelope(envelope: SignalingEnvelope) {
@@ -195,6 +229,30 @@ export function createRtcConnection(
   signaling: ReturnType<typeof createSignaling>,
   channels: ReturnType<typeof attachChannels>,
 ) {
+  function summarizeEnvelope(envelope: SignalingEnvelope) {
+    if (envelope.type !== "signal") {
+      return { type: envelope.type };
+    }
+
+    const payload = envelope.payload as RTCSessionDescriptionInit | RTCIceCandidateInit;
+    if (envelope.kind === "ice") {
+      return {
+        type: envelope.type,
+        kind: envelope.kind,
+        candidate: "candidate" in payload ? payload.candidate : undefined,
+        sdpMid: "sdpMid" in payload ? payload.sdpMid : undefined,
+        sdpMLineIndex: "sdpMLineIndex" in payload ? payload.sdpMLineIndex : undefined,
+      };
+    }
+
+    return {
+      type: envelope.type,
+      kind: envelope.kind,
+      sdpType: "type" in payload ? payload.type : undefined,
+      sdpLength: "sdp" in payload && typeof payload.sdp === "string" ? payload.sdp.length : undefined,
+    };
+  }
+
   async function flushPendingIceCandidates() {
     const conn = refs.connection.current;
     if (!conn?.remoteDescription) return;
@@ -202,6 +260,11 @@ export function createRtcConnection(
     while (refs.pendingIceCandidates.current.length > 0) {
       const candidate = refs.pendingIceCandidates.current.shift();
       if (!candidate) continue;
+      logClientDebug("rtc flush pending ICE", {
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+        remaining: refs.pendingIceCandidates.current.length,
+      });
       await conn.addIceCandidate(candidate);
     }
   }
@@ -216,8 +279,18 @@ export function createRtcConnection(
     });
     refs.connection.current = connection;
     refs.pendingIceCandidates.current = [];
+    logClientDebug("rtc initPeerConnection", {
+      roomCode: refs.roomCode.current,
+      participantId: refs.participantId.current,
+      role: refs.role.current,
+    });
 
     connection.onconnectionstatechange = () => {
+      logClientDebug("rtc connectionState", {
+        state: connection.connectionState,
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+      });
       if (connection.connectionState === "connected") {
         refs.peerConnected.current = true;
         actions.setPeerConnected(true);
@@ -229,8 +302,31 @@ export function createRtcConnection(
       }
     };
 
+    connection.oniceconnectionstatechange = () => {
+      logClientDebug("rtc iceConnectionState", {
+        state: connection.iceConnectionState,
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+      });
+    };
+
+    connection.onicegatheringstatechange = () => {
+      logClientDebug("rtc iceGatheringState", {
+        state: connection.iceGatheringState,
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+      });
+    };
+
     connection.onicecandidate = (event) => {
       if (!event.candidate) return;
+      logClientDebug("rtc local ICE candidate", {
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+        candidate: event.candidate.candidate,
+        sdpMid: event.candidate.sdpMid,
+        sdpMLineIndex: event.candidate.sdpMLineIndex,
+      });
       void signaling.sendEnvelope({ type: "signal", kind: "ice", payload: event.candidate.toJSON() });
     };
 
@@ -248,6 +344,12 @@ export function createRtcConnection(
   async function handleOffer(payload: RTCSessionDescriptionInit) {
     const conn = refs.connection.current;
     if (!conn) throw new Error("接收方连接尚未初始化。");
+    logClientDebug("rtc handle offer", {
+      roomCode: refs.roomCode.current,
+      participantId: refs.participantId.current,
+      sdpLength: payload.sdp?.length,
+      type: payload.type,
+    });
     await conn.setRemoteDescription(payload);
     await flushPendingIceCandidates();
     const answer = await conn.createAnswer();
@@ -260,6 +362,12 @@ export function createRtcConnection(
   async function handleAnswer(payload: RTCSessionDescriptionInit) {
     const conn = refs.connection.current;
     if (!conn) throw new Error("发送方连接尚未初始化。");
+    logClientDebug("rtc handle answer", {
+      roomCode: refs.roomCode.current,
+      participantId: refs.participantId.current,
+      sdpLength: payload.sdp?.length,
+      type: payload.type,
+    });
     await conn.setRemoteDescription(payload);
     await flushPendingIceCandidates();
     actions.setPhase("connecting");
@@ -271,8 +379,20 @@ export function createRtcConnection(
     if (!conn) return;
     if (!conn.remoteDescription) {
       refs.pendingIceCandidates.current.push(payload);
+      logClientWarn("rtc queue ICE before remoteDescription", {
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+        pendingCount: refs.pendingIceCandidates.current.length,
+      });
       return;
     }
+    logClientDebug("rtc handle ICE", {
+      roomCode: refs.roomCode.current,
+      participantId: refs.participantId.current,
+      candidate: payload.candidate,
+      sdpMid: payload.sdpMid,
+      sdpMLineIndex: payload.sdpMLineIndex,
+    });
     await conn.addIceCandidate(payload);
   }
 
@@ -281,12 +401,23 @@ export function createRtcConnection(
     if (!conn) throw new Error("发送方连接尚未初始化。");
     const offer = await conn.createOffer();
     await conn.setLocalDescription(offer);
+    logClientDebug("rtc start offer", {
+      roomCode: refs.roomCode.current,
+      participantId: refs.participantId.current,
+      sdpLength: offer.sdp?.length,
+      type: offer.type,
+    });
     await signaling.sendEnvelope({ type: "signal", kind: "offer", payload: offer });
     actions.setPhase("connecting");
     actions.setStatusMessage("接收设备已加入房间，正在建立连接。");
   }
 
   async function handleSignalingEnvelope(envelope: SignalingEnvelope) {
+    logClientDebug("signaling event", {
+      roomCode: refs.roomCode.current,
+      participantId: refs.participantId.current,
+      envelope: summarizeEnvelope(envelope),
+    });
     if (envelope.type === "peer-joined") { await startOffer(); return; }
     if (envelope.type === "room-expired") { await actions.failSession("分享码已过期，请重新生成后再试。", "expired"); return; }
     if (envelope.type === "room-cancelled") { await actions.failSession(envelope.reason || "对端取消了本次传输。", "cancelled"); return; }
@@ -315,7 +446,42 @@ export function createRtcConnection(
             signal: abortController.signal,
             cache: "no-store",
           });
-          const payload = await parseJsonResponse<PollEventsResponse>(response);
+          const raw = await response.text();
+          let payload: PollEventsResponse & { message?: string };
+          try {
+            payload = JSON.parse(raw) as PollEventsResponse & { message?: string };
+          } catch {
+            logClientError("signaling poll:invalid-json", {
+              roomCode,
+              participantId: nextParticipantId,
+              cursor,
+              status: response.status,
+              body: raw,
+            });
+            throw new Error("信令服务返回了无效响应。");
+          }
+
+          if (!response.ok) {
+            logClientError("signaling poll:error", {
+              roomCode,
+              participantId: nextParticipantId,
+              cursor,
+              status: response.status,
+              data: payload,
+            });
+            throw new Error(payload.message || "请求失败。");
+          }
+
+          if (payload.events.length > 0) {
+            logClientDebug("signaling poll:events", {
+              roomCode,
+              participantId: nextParticipantId,
+              cursor,
+              nextCursor: payload.nextCursor,
+              eventCount: payload.events.length,
+              eventIds: payload.events.map((event) => event.id),
+            });
+          }
           actions.setExpiresAt(payload.expiresAt);
           if (payload.events.length === 0) {
             cursor = payload.nextCursor;
@@ -328,6 +494,12 @@ export function createRtcConnection(
         } catch (error) {
           if (abortController.signal.aborted) return;
           const msg = error instanceof Error ? error.message : "信令轮询失败。";
+          logClientWarn("signaling poll:retry", {
+            roomCode,
+            participantId: nextParticipantId,
+            cursor,
+            message: msg,
+          });
           if (msg.includes("过期")) { await actions.failSession(msg, "expired"); return; }
           if (msg.includes("不存在") || msg.includes("结束")) { await actions.failSession(msg, "failed"); return; }
           await sleep(750);
