@@ -6,7 +6,12 @@ export const MAX_SEND_BUFFER_BYTES = 4 * 1024 * 1024;
 export const BUFFER_LOW_WATERMARK_BYTES = 2 * 1024 * 1024;
 export const DATA_FRAME_HEADER_BYTES = 3;
 export const POLL_TIMEOUT_MS = 25_000;
+export const ICE_DISCONNECT_GRACE_MS = 8_000;
 const SHOULD_LOG_CLIENT_DEBUG = process.env.NODE_ENV === "production";
+const DEFAULT_STUN_URLS = [
+  "stun:stun.l.google.com:19302",
+  "stun:stun1.l.google.com:19302",
+] as const;
 
 export type DataFrameType = 1 | 2 | 3;
 export type SaveMode = "directory" | "browser-download" | null;
@@ -134,6 +139,108 @@ export async function parseJsonResponse<T>(response: Response) {
 
 export function sleep(ms: number) {
   return new Promise<void>((resolve) => setTimeout(resolve, ms));
+}
+
+function splitIceUrls(raw: string | undefined) {
+  return (raw ?? "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function normalizeIceServer(input: unknown): RTCIceServer | null {
+  if (!input || typeof input !== "object") return null;
+
+  const server = input as Record<string, unknown>;
+  const urls =
+    typeof server.urls === "string"
+      ? server.urls.trim()
+      : Array.isArray(server.urls)
+        ? server.urls.filter((item): item is string => typeof item === "string" && item.trim().length > 0)
+        : null;
+
+  if (!urls || (Array.isArray(urls) && urls.length === 0)) {
+    return null;
+  }
+
+  return {
+    urls,
+    username: typeof server.username === "string" ? server.username : undefined,
+    credential: typeof server.credential === "string" ? server.credential : undefined,
+  };
+}
+
+function parseConfiguredIceServers() {
+  const json = process.env.NEXT_PUBLIC_X2X_ICE_SERVERS?.trim();
+  if (json) {
+    try {
+      const parsed = JSON.parse(json) as unknown;
+      const list = Array.isArray(parsed)
+        ? parsed
+        : parsed && typeof parsed === "object" && Array.isArray((parsed as { iceServers?: unknown }).iceServers)
+          ? (parsed as { iceServers: unknown[] }).iceServers
+          : [];
+      const servers = list
+        .map(normalizeIceServer)
+        .filter((server): server is RTCIceServer => Boolean(server));
+      if (servers.length > 0) {
+        return servers;
+      }
+    } catch {
+      logClientWarn("rtc invalid NEXT_PUBLIC_X2X_ICE_SERVERS");
+    }
+  }
+
+  const stunUrls = splitIceUrls(process.env.NEXT_PUBLIC_X2X_STUN_URLS) || [];
+  const turnUrls = splitIceUrls(process.env.NEXT_PUBLIC_X2X_TURN_URLS);
+  const servers: RTCIceServer[] = [];
+
+  servers.push({
+    urls: stunUrls.length > 0 ? stunUrls : [...DEFAULT_STUN_URLS],
+  });
+
+  if (turnUrls.length > 0) {
+    servers.push({
+      urls: turnUrls,
+      username: process.env.NEXT_PUBLIC_X2X_TURN_USERNAME?.trim() || undefined,
+      credential: process.env.NEXT_PUBLIC_X2X_TURN_CREDENTIAL?.trim() || undefined,
+    });
+  }
+
+  return servers;
+}
+
+function isRelayUrl(url: string) {
+  return url.startsWith("turn:") || url.startsWith("turns:");
+}
+
+export function getRtcConfiguration(): RTCConfiguration {
+  const iceServers = parseConfiguredIceServers();
+  const hasRelay = iceServers.some((server) => {
+    const urls = Array.isArray(server.urls) ? server.urls : [server.urls];
+    return urls.some(isRelayUrl);
+  });
+
+  return {
+    iceServers,
+    iceTransportPolicy: hasRelay && process.env.NEXT_PUBLIC_X2X_FORCE_RELAY === "1" ? "relay" : "all",
+  };
+}
+
+export function summarizeRtcConfiguration(configuration: RTCConfiguration) {
+  const iceServers = configuration.iceServers ?? [];
+
+  return {
+    iceTransportPolicy: configuration.iceTransportPolicy ?? "all",
+    iceServerCount: iceServers.length,
+    iceServers: iceServers.map((server) => {
+      const urls = Array.isArray(server.urls) ? server.urls : [server.urls];
+      return {
+        urls: urls.map((url) => (isRelayUrl(url) ? url.split("?")[0] : url)),
+        hasCredential: Boolean(server.credential),
+      };
+    }),
+  };
 }
 
 export function logClientDebug(message: string, detail?: unknown) {

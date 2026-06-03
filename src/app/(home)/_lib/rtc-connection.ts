@@ -5,16 +5,19 @@ import type {
 } from "@/lib/transfer-types";
 import {
   BUFFER_LOW_WATERMARK_BYTES,
+  ICE_DISCONNECT_GRACE_MS,
   MAX_SEND_BUFFER_BYTES,
   POLL_TIMEOUT_MS,
   SIGNALING_ENDPOINT,
   decodeControlMessage,
   encodeControlMessage,
+  getRtcConfiguration,
   logClientDebug,
   logClientError,
   logClientWarn,
   normalizeArrayBuffer,
   sleep,
+  summarizeRtcConfiguration,
 } from "./transfer-utils";
 import type { TransferActions, TransferRefs } from "./types";
 
@@ -278,18 +281,16 @@ export function createRtcConnection(
 
   async function initPeerConnection() {
     await cleanupFn();
-    const connection = new RTCPeerConnection({
-      iceServers: [
-        { urls: "stun:stun.l.google.com:19302" },
-        { urls: "stun:stun1.l.google.com:19302" },
-      ],
-    });
+    const rtcConfiguration = getRtcConfiguration();
+    const connection = new RTCPeerConnection(rtcConfiguration);
+    let disconnectTimer: ReturnType<typeof setTimeout> | null = null;
     refs.connection.current = connection;
     refs.pendingIceCandidates.current = [];
     logClientDebug("rtc initPeerConnection", {
       roomCode: refs.roomCode.current,
       participantId: refs.participantId.current,
       role: refs.role.current,
+      rtcConfiguration: summarizeRtcConfiguration(rtcConfiguration),
     });
 
     connection.onconnectionstatechange = () => {
@@ -299,12 +300,31 @@ export function createRtcConnection(
         participantId: refs.participantId.current,
       });
       if (connection.connectionState === "connected") {
+        if (disconnectTimer) {
+          clearTimeout(disconnectTimer);
+          disconnectTimer = null;
+        }
         refs.peerConnected.current = true;
         actions.setPeerConnected(true);
         if (refs.phase.current === "connecting") actions.setPhase("ready");
         return;
       }
-      if (connection.connectionState === "failed" || connection.connectionState === "disconnected") {
+      if (connection.connectionState === "disconnected") {
+        if (disconnectTimer) return;
+        disconnectTimer = setTimeout(() => {
+          disconnectTimer = null;
+          if (refs.connection.current !== connection) return;
+          if (connection.connectionState === "disconnected") {
+            void actions.failSession("点对点连接已断开，请重新建立房间。", "failed");
+          }
+        }, ICE_DISCONNECT_GRACE_MS);
+        return;
+      }
+      if (disconnectTimer) {
+        clearTimeout(disconnectTimer);
+        disconnectTimer = null;
+      }
+      if (connection.connectionState === "failed") {
         void actions.failSession("点对点连接已断开，请重新建立房间。", "failed");
       }
     };
@@ -335,6 +355,18 @@ export function createRtcConnection(
         sdpMLineIndex: event.candidate.sdpMLineIndex,
       });
       void signaling.sendEnvelope({ type: "signal", kind: "ice", payload: event.candidate.toJSON() });
+    };
+
+    connection.onicecandidateerror = (event) => {
+      logClientWarn("rtc iceCandidateError", {
+        roomCode: refs.roomCode.current,
+        participantId: refs.participantId.current,
+        address: event.address,
+        port: event.port,
+        url: event.url,
+        errorCode: event.errorCode,
+        errorText: event.errorText,
+      });
     };
 
     if (refs.role.current === "sender") {
