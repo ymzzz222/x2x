@@ -202,9 +202,9 @@ export default function Grainient({
   centerX = 0,
   centerY = 0,
   zoom = 0.9,
-  color1 = "#FF9FFC",
-  color2 = "#5227FF",
-  color3 = "#B497CF",
+  color1 = "#686868",
+  color2 = "#303030",
+  color3 = "#515151",
 }: GrainientProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
 

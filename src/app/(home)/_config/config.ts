@@ -32,9 +32,6 @@ export const roleItems = [
 ] as const;
 
 export const grainientConfig = {
-  color1: "#f4b7ff",
-  color2: "#6047ff",
-  color3: "#9d88da",
   timeSpeed: 0.16,
   grainAnimated: true,
   grainAmount: 0.06,
@@ -70,7 +67,7 @@ export const statusItems = [
 ] as const;
 
 export const styles = {
-  main: "relative min-h-screen overflow-hidden bg-[#09070d] text-white",
+  main: "relative min-h-screen overflow-hidden bg-neutral-950 text-white scheme-dark",
   section: "relative z-10 flex min-h-screen px-4 pt-16 pb-6 md:pt-5 md:px-6 md:py-7",
   container: "mx-auto flex w-full max-w-[1180px] gap-4",
 
@@ -95,7 +92,7 @@ export const styles = {
   activeDot:
     "pointer-events-none absolute -right-px top-1/2 h-[7px] w-[7px] -translate-y-1/2 translate-x-[2px] rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]",
   tooltip:
-    "pointer-events-none absolute left-full top-1/2 z-50 ml-3 -translate-y-1/2 whitespace-nowrap rounded-lg border border-white/10 bg-[#1a1720]/95 px-3 py-1.5 text-xs font-medium text-white/80 opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100 translate-x-[-4px]",
+    "pointer-events-none absolute left-full top-1/2 z-50 ml-3 -translate-y-1/2 whitespace-nowrap rounded-lg border border-white/10 bg-neutral-900/95 px-3 py-1.5 text-xs font-medium text-white/80 opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100 translate-x-[-4px]",
   aboutWrap: "pb-3",
   aboutLink:
     "flex h-[44px] w-[44px] items-center justify-center rounded-[14px] border border-transparent text-white/35 transition-all duration-300 ease-out hover:scale-105 hover:border-white/[0.1] hover:bg-white/[0.06] hover:text-white/65",
@@ -108,7 +105,7 @@ export const styles = {
   centeredContent: "flex min-w-0 flex-1 flex-col justify-center gap-4",
   panel:
     "rounded-[28px] border border-white/10 bg-white/[0.04] shadow-[0_24px_80px_rgba(0,0,0,0.35)] backdrop-blur-sm",
-  hero: "grid gap-5 rounded-[32px] border border-white/10 bg-[#120f19]/80 px-6 py-7 sm:px-8 sm:py-8 lg:grid-cols-[1.3fr_0.7fr]",
+  hero: "grid gap-5 rounded-[32px] border border-white/10 bg-neutral-950/80 px-6 py-7 sm:px-8 sm:py-8 lg:grid-cols-[1.3fr_0.7fr]",
   eyebrow: "text-[11px] font-semibold uppercase tracking-[0.35em] text-white/42",
   title: "max-w-[12ch] text-3xl font-semibold tracking-tight text-white sm:text-4xl",
   lead: "max-w-[58ch] text-sm leading-7 text-white/66 sm:text-[15px]",
@@ -176,7 +173,7 @@ export const styles = {
   },
 
   statusGrid: "grid gap-4 lg:grid-cols-[0.85fr_1.15fr]",
-  statusPanel: "rounded-[28px] border border-white/10 bg-[#100d16]/88 px-5 py-5",
+  statusPanel: "rounded-[28px] border border-white/10 bg-neutral-950/88 px-5 py-5",
   statusTop: "flex items-start justify-between gap-4",
   statusLabel: "text-xs uppercase tracking-[0.24em] text-white/36",
   statusValue: "mt-2 text-2xl font-semibold text-white",

@@ -12,7 +12,7 @@ import {
 } from "../_lib/fs";
 
 const linkClass =
-  "text-blue-400 underline decoration-blue-400/40 underline-offset-2 transition hover:text-blue-300";
+  "text-white/80 underline decoration-white/40 underline-offset-2 transition hover:text-white";
 
 interface Props {
   section: Section;

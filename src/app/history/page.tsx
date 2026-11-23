@@ -54,7 +54,7 @@ export default function HistoryIndex() {
                   {vol.contentHref && (
                     <Link
                       href={vol.contentHref}
-                      className="shrink-0 rounded-md bg-blue-500/20 px-3 py-1.5 text-sm text-blue-300 transition hover:bg-blue-500/30 hover:text-blue-200"
+                      className="shrink-0 rounded-md bg-white/15 px-3 py-1.5 text-sm text-white/85 transition hover:bg-white/20 hover:text-white"
                     >
                       正文
                     </Link>

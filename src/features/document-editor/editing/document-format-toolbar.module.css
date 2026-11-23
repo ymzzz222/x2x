@@ -1,0 +1,138 @@
+.formatControls { min-inline-size: 0; }
+
+.formatToolbar, .formatGroup, .formatPanel form, .formatPanel label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .125rem;
+}
+
+.formatToolbar { gap: .25rem; }
+
+.formatToolbar button, .formatPanel :is(button, select, input) {
+  min-block-size: 1.9rem;
+  min-inline-size: 1.9rem;
+  border: 1px solid transparent;
+  border-radius: .38rem;
+  font-size: .85rem;
+}
+
+.formatToolbar button {
+  display: inline-grid;
+  place-items: center;
+  padding-inline: .25rem;
+}
+
+.formatToolbar button[aria-disabled="true"], .formatPanel button:disabled {
+  opacity: .46;
+}
+
+.formatToolbar button[aria-pressed="true"], .formatToolbar button[aria-expanded="true"] {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--focus) 14%, var(--background));
+  border-color: var(--focus);
+}
+
+.formatToolbar button:focus-visible, .formatPanel :focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.formatSeparator {
+  block-size: 1.15rem;
+  border-inline-start: 1px solid var(--line);
+  margin-inline: .12rem;
+}
+
+.typeIcon, .markIcon, .colorIcon, .indentIcon {
+  font-size: .94rem;
+  line-height: 1;
+}
+
+.typeIcon { font-weight: 650; }
+
+.typeIcon::after {
+  content: "";
+  display: inline-block;
+  margin-inline-start: .25em;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  inline-size: .26em;
+  block-size: .26em;
+  vertical-align: .2em;
+  transform: rotate(45deg);
+}
+
+.markIcon[data-mark="bold"] { font-weight: 800; }
+.markIcon[data-mark="italic"] { font-style: italic; font-family: Georgia, serif; }
+.markIcon[data-mark="underline"] { text-decoration: underline; text-underline-offset: .14em; }
+.markIcon[data-mark="strike"] { text-decoration: line-through; }
+.markIcon[data-mark="code"] { font-family: monospace; font-size: .82rem; }
+.colorIcon { border-block-end: 2px solid currentColor; }
+.indentIcon { font-size: 1.1rem; }
+
+.alignIcon {
+  inline-size: .9rem;
+  block-size: .65rem;
+  display: grid;
+  border-block: 1px solid currentColor;
+  align-items: center;
+}
+
+.alignIcon::before {
+  content: "";
+  inline-size: 68%;
+  border-block-start: 1px solid currentColor;
+}
+
+.alignIcon[data-align="center"] { justify-items: center; }
+.alignIcon[data-align="right"] { justify-items: end; }
+
+.linkIcon {
+  display: flex;
+  align-items: center;
+  transform: rotate(-38deg);
+}
+
+.linkIcon::before, .linkIcon::after {
+  content: "";
+  inline-size: .55rem;
+  block-size: .35rem;
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+}
+
+.linkIcon::after { margin-inline-start: -.15rem; }
+
+.formatPanel:not([hidden]) {
+  margin-block-start: .45rem;
+  padding-block-start: .45rem;
+  border-block-start: 1px solid var(--line);
+  font-size: .8rem;
+}
+
+.formatPanel :is(form, label, .formatGroup) { gap: .4rem; }
+.formatPanel :is(button, select, input) {
+  border-color: var(--line);
+  padding: .25rem .45rem;
+}
+.formatPanel input { inline-size: min(46vw, 15rem); }
+
+@media (hover: hover) {
+  .formatToolbar button[aria-disabled="false"]:hover, .formatPanel button:not(:disabled):hover {
+    background: color-mix(in srgb, var(--focus) 10%, var(--background));
+  }
+}
+
+@media (max-width: 30rem) {
+  .formatSeparator { opacity: 0; }
+}
+
+@media (pointer: coarse) {
+  .formatToolbar button, .formatPanel :is(button, select, input) { min-block-size: 2.5rem; }
+  .formatToolbar button { min-inline-size: 2.25rem; }
+}
+
+@media (forced-colors: active) {
+  .formatToolbar button[aria-pressed="true"], .formatToolbar button[aria-expanded="true"] { border-color: Highlight; }
+}

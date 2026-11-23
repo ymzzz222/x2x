@@ -1,0 +1,169 @@
+.handles {
+  color: var(--muted);
+  opacity: 0;
+}
+
+:global([data-block-index]:hover) .handles,
+.handles:focus-within,
+.handles[data-open] {
+  opacity: 1;
+}
+
+.handles button {
+  display: grid;
+  place-items: center;
+  inline-size: 1.625rem;
+  block-size: 1.625rem;
+  border-radius: .5rem;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.handles [data-block-handle="block"] {
+  cursor: grab;
+  touch-action: none;
+}
+
+.popup {
+  position: fixed;
+  z-index: 16;
+  inline-size: min(14rem, calc(100vw - 1rem));
+  max-block-size: min(27rem, 65dvh);
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  padding: .45rem;
+  box-shadow: 0 10px 30px #00000026, 0 2px 5px #0001;
+}
+
+.commands {
+  display: grid;
+  gap: .35rem;
+  font-size: .82rem;
+}
+
+.typeCommands > button, .blockActions > button, .listSettings, .listSettings :is(label, form) {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.commands :is(button, select, input) {
+  min-block-size: 1.9rem;
+  padding: .22rem .45rem;
+  border-radius: .4rem;
+}
+
+.commands button { text-align: start; }
+.commands button:disabled { opacity: .4; }
+
+.blockActions, .listSettings {
+  border-block-start: 1px solid var(--line);
+  padding-block-start: .35rem;
+}
+
+.blockActions {
+  display: grid;
+  gap: .125rem;
+}
+
+.listSettings { flex-wrap: wrap; }
+
+.quickTypes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .25rem;
+}
+
+.quickTypes button {
+  display: grid;
+  place-items: center;
+  min-inline-size: 0;
+  min-block-size: 2.25rem;
+  border-radius: .55rem;
+  background: var(--canvas);
+}
+
+.quickTypes .commandLabel { display: none; }
+
+.typeCommands {
+  display: grid;
+  gap: .125rem;
+}
+
+.typeCommands > button { min-block-size: 2rem; }
+
+.commands [data-block-icon] { flex: none; }
+
+.commands .branchButton {
+  justify-content: space-between;
+}
+
+.branchButton span { color: var(--muted); }
+
+.submenu {
+  z-index: 17;
+  inline-size: min(11rem, calc(100vw - 1rem));
+}
+
+.editSelection {
+  min-block-size: 2rem;
+  padding-inline: .65rem;
+  border-radius: .35rem;
+  font-size: .85rem;
+}
+
+.editSelection:hover { background: var(--canvas); }
+
+.typeCommands p {
+  padding: .4rem;
+}
+
+.commands :is(input, select) { border: 1px solid var(--line); }
+.commands input { inline-size: 5rem; }
+
+.handles button:is([aria-expanded="true"], [data-selected]),
+.commands button:is([data-command-current], [aria-pressed="true"], [aria-expanded="true"]) {
+  background: color-mix(in srgb, var(--focus) 12%, var(--background));
+  color: color-mix(in srgb, var(--focus) 78%, var(--foreground));
+}
+
+.popup :focus-visible, .handles :focus-visible { outline: 2px solid var(--focus); outline-offset: -1px; }
+
+.floating {
+  z-index: 15;
+  inline-size: max-content;
+  max-inline-size: calc(100vw - 1rem);
+  border-radius: .65rem;
+  padding: .26rem;
+}
+
+.dropLine {
+  position: fixed;
+  z-index: 18;
+  pointer-events: none;
+  block-size: 2px;
+  border-block-start: 2px solid var(--focus);
+}
+
+@media (hover: hover) {
+  .handles button:hover, .commands button:not(:disabled):hover {
+    background: color-mix(in srgb, var(--foreground) 7%, var(--background));
+  }
+
+  .handles button:is([aria-expanded="true"], [data-selected]):hover,
+  .commands button:is([data-command-current], [aria-pressed="true"], [aria-expanded="true"]):hover {
+    background: color-mix(in srgb, var(--focus) 16%, var(--background));
+  }
+}
+
+@media (hover: none) {
+  .handles { opacity: 1; }
+}
+
+@media (pointer: coarse) {
+  .commands :is(button, select, input), .typeCommands > button { min-block-size: 2.5rem; }
+}

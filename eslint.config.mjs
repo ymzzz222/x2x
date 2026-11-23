@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Historical research utilities are kept with their original evidence.
+    "docs/editor/**/*.{cjs,mjs}",
   ]),
 ]);
 

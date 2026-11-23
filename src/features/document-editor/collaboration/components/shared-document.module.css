@@ -1,0 +1,211 @@
+.workspace {
+  min-height: 100dvh;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  padding: .8rem max(1rem, calc((100vw - 46rem) / 2));
+  border-block-end: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  font-size: .9rem;
+}
+
+.page {
+  margin-inline: auto;
+  inline-size: min(100% - 2rem, 46rem);
+  padding-block: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.page h1, .dialog h2 { font-size: 1.3rem; font-weight: 650; }
+
+.form, .section {
+  display: grid;
+  gap: .65rem;
+}
+
+.form label {
+  display: grid;
+  gap: .2rem;
+  font-size: .87rem;
+}
+
+.form :is(button, input, select), .workspace button, .dialog :is(button, input, select) {
+  padding: .35rem .55rem;
+  min-block-size: 2.25rem;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: .4rem;
+}
+
+.form :is(input, select) {
+  max-inline-size: 24rem;
+  background: var(--background);
+}
+
+.form > button { justify-self: start; }
+
+button.primary {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: transparent;
+}
+
+.actions, .account, .documents li, .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.documents li {
+  justify-content: space-between;
+  padding-block: .55rem;
+  border-block-end: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+}
+
+.saveStatus { font-size: .8rem; }
+
+.avatars { display: flex; align-items: center; }
+
+.avatars > * + * {
+  margin-inline-start: -.5rem;
+  box-shadow: 0 0 0 2px var(--background);
+}
+
+.avatar, .avatarMore {
+  display: grid;
+  place-items: center;
+  inline-size: var(--header-control-size);
+  block-size: var(--header-control-size);
+  border-radius: 50%;
+  background: var(--background);
+}
+
+.avatar { outline: 2px solid var(--avatar-color, transparent); outline-offset: -2px; }
+.avatar img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.avatarMore { background: var(--canvas); font-size: .75rem; }
+
+button.primary[data-document-share]:enabled:hover { background: var(--primary-hover); }
+
+.dialog {
+  margin: auto;
+  inline-size: min(35rem, calc(100% - 2rem));
+  max-block-size: calc(100dvh - 2rem);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 1rem;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 1.25rem 4rem #00000044;
+}
+
+.dialog[open] { display: grid; gap: 1rem; }
+
+.dialog > header { padding-block-end: .6rem; border-block-end: 1px solid color-mix(in srgb, currentColor 12%, transparent); }
+.dialog :is(input, select, textarea) { max-inline-size: 100%; background: var(--background); color: inherit; }
+.dialog :is(button, input, select, textarea) { border-radius: .6rem; }
+.dialog button:not(.primary):enabled:hover { background: color-mix(in srgb, currentColor 8%, transparent); }
+.dialog a { text-decoration: underline; text-underline-offset: .2em; }
+
+.dialog::backdrop {
+  background: #00000073;
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
+
+.dialog.accountDialog {
+  inline-size: min(25rem, calc(100% - 2rem));
+  gap: 1.15rem;
+}
+
+.accountDialog .form { gap: .9rem; }
+
+.accountDialog .form input {
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 2.625rem;
+  padding-inline: .75rem;
+}
+
+.accountDialog .actions { display: grid; gap: .3rem; }
+.accountDialog .actions button { min-block-size: 2.625rem; }
+.accountDialog .actions button[type="button"] { border-color: transparent; }
+.accountDialog .form > [role="status"] { font-size: .875rem; }
+.accountDialog .form > [role="status"]:empty { position: absolute; }
+
+.section + .section {
+  border-block-start: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  padding-block-start: .65rem;
+}
+
+.row > :first-child { flex: 1 1 auto; overflow-wrap: anywhere; }
+.dialog button:disabled, .workspace button:disabled { opacity: .5; }
+.dialog button:focus-visible, .workspace :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+.form textarea {
+  inline-size: 100%;
+  padding: .4rem;
+  border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  border-radius: .4rem;
+}
+
+.comment { display: grid; gap: .35rem; }
+.comment p { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.meeting { display: flex; flex-wrap: wrap; align-items: center; position: relative; font-size: .8rem; }
+.meetingPanel {
+  position: absolute;
+  inset: calc(100% + .5rem) 0 auto auto;
+  z-index: 14;
+  width: min(22rem, calc(100vw - 2rem));
+  max-height: 45dvh;
+  overflow: auto;
+  padding: .7rem;
+  border: 1px solid var(--line);
+  border-radius: .85rem;
+  background: var(--background);
+  box-shadow: 0 6px 22px #0002;
+}
+
+.meetingPanel > header { margin-block-end: .45rem; }
+.meetingPanel h2 { font-weight: 650; }
+
+.cursorLayer {
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+
+.cursor {
+  position: absolute;
+  inline-size: 2px;
+  background: var(--collaborator-color);
+}
+
+.cursor::after {
+  content: attr(data-collaborator-name);
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 100%;
+  max-inline-size: 12rem;
+  padding: .125rem .375rem;
+  border-radius: 3px 3px 3px 0;
+  background: var(--collaborator-color);
+  color: white;
+  font-size: .6875rem;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media print {
+  .cursorLayer { display: none; }
+}

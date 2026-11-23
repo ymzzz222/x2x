@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light dark;
+  accent-color: CanvasText;
   --background: #ffffff;
   --foreground: #171717;
+  --focus: var(--foreground);
+  --primary-hover: color-mix(in oklab, var(--foreground) 85%, var(--background));
 }
 
 @theme inline {
@@ -17,6 +21,18 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --background: Canvas;
+    --foreground: CanvasText;
+  }
+}
+
+@layer base {
+  :where(:focus-visible) { outline: 2px solid CanvasText; outline-offset: 2px; }
+  ::selection { background: CanvasText; color: Canvas; }
 }
 
 body {

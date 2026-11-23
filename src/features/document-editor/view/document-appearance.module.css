@@ -1,0 +1,55 @@
+.title {
+  overflow-wrap: anywhere;
+}
+
+.controls {
+  font-size: .85rem;
+}
+
+.controls summary {
+  padding: .4rem .6rem;
+  border: 1px solid var(--line);
+  border-radius: .4rem;
+  cursor: pointer;
+}
+
+.fields {
+  position: absolute;
+  z-index: 12;
+  inset-inline-end: var(--header-padding);
+  margin-block-start: .4rem;
+  display: grid;
+  gap: .5rem;
+  inline-size: min(16rem, calc(100vw - 2rem));
+  padding: .75rem;
+  border: 1px solid var(--line);
+  border-radius: .55rem;
+  background: var(--background);
+  box-shadow: 0 8px 24px #0002;
+}
+
+.fields label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.fields :is(select, input[type="text"]) {
+  min-inline-size: 0;
+  max-inline-size: 62%;
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  padding: .25rem;
+}
+
+.cover {
+  min-block-size: clamp(3rem, 12vh, 7rem);
+  border-radius: .55rem;
+  margin: .45rem var(--header-padding) 0;
+  background: linear-gradient(120deg, #9abed7, #e4f2f5);
+}
+
+.cover[data-cover="2"] { background: linear-gradient(120deg, #8aab91, #e3efd5); }
+.cover[data-cover="3"] { background: linear-gradient(120deg, #d9875d, #f7ded0); }
+.cover[data-cover="4"] { background: linear-gradient(120deg, #6d6ba7, #ded9f4); }

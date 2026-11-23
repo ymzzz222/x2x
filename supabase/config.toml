@@ -1,0 +1,45 @@
+project_id = "x2x-editor"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 17
+
+[db.seed]
+enabled = false
+
+[realtime]
+enabled = true
+
+[studio]
+enabled = false
+
+[storage]
+enabled = false
+
+[analytics]
+enabled = false
+
+[edge_runtime]
+enabled = false
+
+[local_smtp]
+enabled = true
+port = 54324
+
+[auth]
+enabled = true
+site_url = "http://localhost:3103"
+additional_redirect_urls = ["http://localhost:3103/**", "http://127.0.0.1:3103/**"]
+enable_signup = true
+minimum_password_length = 8
+
+[auth.email]
+enable_signup = true
+enable_confirmations = false

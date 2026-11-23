@@ -1,0 +1,54 @@
+.documentList {
+  --line: color-mix(in srgb, var(--foreground) 14%, var(--background));
+  inline-size: min(100%, 48rem);
+  margin-inline: auto;
+  padding: clamp(1rem, 4vw, 2.5rem);
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.listHeader, .listRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+}
+
+.listHeader { margin-block-end: 1rem; }
+
+.listHeader h1 {
+  font-size: clamp(1.375rem, 1.2rem + 1vw, 2rem);
+  font-weight: 680;
+}
+
+.listActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1rem;
+}
+
+.sampleList { border: 1px solid var(--line); border-radius: .65rem; }
+.listRow { padding: .45rem 1rem; }
+.listRow span { overflow-wrap: anywhere; }
+.listRow + .listRow { border-block-start: 1px solid var(--line); }
+
+.listLink {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.5rem;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  outline-offset: 3px;
+}
+
+.newLink {
+  padding-inline: .9rem;
+  border-radius: .5rem;
+  background: var(--foreground);
+  color: var(--background);
+  text-decoration: none;
+}
+
+.newLink:disabled { opacity: .55; }

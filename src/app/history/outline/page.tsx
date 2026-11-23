@@ -3,7 +3,7 @@ import { Markdown } from "@/app/history/_components/md";
 import { getVolumes, readMd } from "@/app/history/_lib/fs";
 
 const linkClass =
-  "text-blue-400 underline decoration-blue-400/40 underline-offset-2 transition hover:text-blue-300";
+  "text-white/80 underline decoration-white/40 underline-offset-2 transition hover:text-white";
 
 export default function OutlinePage() {
   const content = readMd("outline", ["大纲"]);

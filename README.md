@@ -58,6 +58,22 @@ npm start
 
 部署到任意能访问的地址（如 Vercel、内网服务器）。**两台设备须能打开同一站点**，信令 API 才能撮合连接；连接建立后，数据传输在局域网 P2P 完成。
 
+#### 公开剧本库
+
+公开部署使用独立的 Supabase 项目。访客进入 `/editor` 时自动建立独立会话，并以共用的 `admin` 文档身份访问公开剧本。
+
+1. 在公开项目应用 `supabase/migrations/`，启用 Supabase 匿名登录，创建一个邮箱已验证的专用 Auth 用户 `admin`。
+2. 用该用户的 Auth UUID 在公开项目的 SQL 编辑器配置文档身份。
+
+   ```sql
+   insert into x2x_private.public_document_settings (admin_user_id)
+   values ('<admin 的 Auth UUID>');
+   ```
+
+3. 将站点的 Supabase URL、公钥和服务端密钥指向该公开项目，设置服务端环境变量 `X2X_PUBLIC_DOCUMENTS=true`，然后部署。私有部署使用 `X2X_PUBLIC_DOCUMENTS=false` 和自己的 Supabase 项目。
+
+停用公开访问时关闭应用开关和 Supabase 匿名登录，并移除公开项目的 `public_document_settings` 配置行。这样会拒绝访客的文档 API 请求和新的协作频道订阅。
+
 #### 纯局域网部署（推荐）
 
 若希望完全离线、不依赖公网：

@@ -1,0 +1,61 @@
+.presentation {
+  position: fixed;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: none;
+  max-block-size: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.presentation[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.presentation:modal, .presentation::backdrop {
+  overscroll-behavior: contain;
+}
+
+.presentation::backdrop {
+  background: var(--canvas);
+  overflow: hidden;
+}
+
+.toolbar, .pager {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.toolbar {
+  padding: .5rem clamp(.625rem, 2vw, 1.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.toolbar .exit {
+  margin-inline-start: auto;
+}
+
+.toolbar button {
+  min-height: 2.5rem;
+}
+
+.viewport {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.viewport[data-layout="pages"] {
+  overflow-y: hidden;
+}
+
+.viewport .paper {
+  padding-block: 0;
+  padding-inline: clamp(1rem, 5vw, 3rem);
+}

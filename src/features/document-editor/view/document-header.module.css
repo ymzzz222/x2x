@@ -1,0 +1,161 @@
+.heading {
+  align-items: center;
+  gap: .2rem .5rem;
+}
+
+.heading > [role="status"] { flex-basis: 100%; }
+
+.iconButton {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  inline-size: 2.25rem;
+  min-block-size: 2.25rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: .7rem;
+  color: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.iconButton:hover, .iconButton[aria-expanded="true"] {
+  background: color-mix(in srgb, currentColor 8%, transparent);
+  border-color: color-mix(in srgb, currentColor 9%, transparent);
+}
+
+.iconButton:focus-visible, .actionPanel :focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.title {
+  position: relative;
+  flex: 1 1 0;
+  min-inline-size: 0;
+  max-inline-size: 38rem;
+  overflow-wrap: anywhere;
+}
+
+.title input {
+  display: block;
+  inline-size: 100%;
+  min-block-size: var(--header-control-size);
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.title input:not(:focus) { text-overflow: ellipsis; }
+
+.titleError {
+  position: absolute;
+  z-index: 1;
+  inset: 100% 0 auto;
+  background: var(--background);
+  font-size: .78rem;
+  font-weight: 400;
+}
+
+.sharedHeader { --header-control-size: 2.25rem; }
+
+.sharedHeader .sharedRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+@media (width > 46rem) {
+  .sharedHeader .sharedRow:has(> .headerAvatars) {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+}
+
+.sharedRow > .heading { grid-area: 1 / 1; align-items: center; }
+
+.sharedHeader .controls {
+  grid-area: 1 / 2;
+  min-inline-size: 0;
+  justify-content: flex-end;
+}
+
+.headerAvatars { grid-area: 1 / -2; }
+.sharedRow > [role="status"] { grid-column: 1 / -1; }
+
+@media (max-width: 46rem) {
+  .sharedHeader .controls { grid-area: 2 / 1 / auto / -1; }
+}
+
+.sharedHeader .controls :is(button, select, [data-document-action-link]) {
+  min-block-size: var(--header-control-size);
+  border-radius: .65rem;
+  font-size: .8125rem;
+  line-height: 1.25;
+}
+
+.sharedHeader .controls > [data-document-mode] > button {
+  min-block-size: calc(var(--header-control-size) - .25rem - 2px);
+}
+
+.controls button.iconButton { padding: 0; border-radius: .7rem; }
+
+.actionPanel {
+  position: fixed;
+  z-index: 16;
+  inset: var(--actions-top, 3rem) max(.5rem, var(--actions-right, .5rem)) auto auto;
+  inline-size: min(15rem, calc(100vw - max(.5rem, var(--actions-right, .5rem)) - .5rem));
+  max-block-size: min(32rem, calc(100dvh - var(--actions-top, 3rem) - .5rem));
+  margin: 0;
+  padding: .35rem;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border: 1px solid var(--line);
+  border-radius: .8rem;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 .65rem 2rem #0002;
+}
+
+.actionPanel:popover-open { display: grid; gap: .12rem; }
+
+@supports not selector(:popover-open) {
+  .actionPanel:not([data-open="true"]) { display: none; }
+}
+
+@supports (position-area: block-end) {
+  .actionPanel:popover-open {
+    inset: auto;
+    position-area: block-end span-inline-start;
+    position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+    max-block-size: min(32rem, 80dvh);
+    margin-block: .375rem;
+  }
+}
+
+.actionItem > :is(button, a, div) {
+  display: flex;
+  align-items: center;
+  inline-size: 100%;
+  padding: .3rem .65rem;
+  text-align: start;
+}
+
+.actionItem > :is(a, button:not(:disabled)):hover { background: var(--canvas); }
+.actionItem > div { justify-content: space-between; }
+
+.dialogHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .65rem;
+  overflow-wrap: anywhere;
+}
+
+.dialogHeading button.iconButton { padding: 0; border-color: transparent; border-radius: .7rem; }
+
+@media (pointer: coarse) {
+  .sharedHeader { --header-control-size: 2.5rem; }
+  .iconButton { inline-size: 2.5rem; min-block-size: 2.5rem; }
+}

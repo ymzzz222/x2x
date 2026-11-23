@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,6 +16,8 @@ export const metadata: Metadata = {
   title: "X2X",
   description: "X2X is a file transfer tool that allows you to transfer files between two devices on the same network.",
 };
+
+export const viewport: Viewport = { colorScheme: "light dark" };
 
 export default function RootLayout({
   children,

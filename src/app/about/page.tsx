@@ -3,13 +3,8 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#130f1b] px-6 py-20 text-white">
-      <Grainient
-        color1="#a6c8ff"
-        color2="#3b5bff"
-        color3="#9bb8d8"
-        grainAnimated
-      />
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-neutral-950 px-6 py-20 text-white scheme-dark">
+      <Grainient grainAnimated />
       <div className="absolute inset-0 bg-black/15" />
       <section className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center gap-6 text-center">
         <p className="text-sm font-medium uppercase tracking-[0.4em] text-white/70">
