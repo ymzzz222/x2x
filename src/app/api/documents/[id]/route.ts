@@ -1,10 +1,12 @@
-import { randomBytes } from "node:crypto";
+import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import * as Y from "yjs";
+import { documentPlainText } from "@/features/document-editor/model/document-clipboard";
 import { DocumentSession } from "@/features/document-editor/model/document-session";
 import { documentSchema } from "@/features/document-editor/model/document-editor-schema";
 import { getSelectedText } from "@/features/document-editor/model/document-model";
+import { getDocumentOutline } from "@/features/document-editor/model/document-outline";
 import { locateComment, type CommentAnchor } from "@/features/document-editor/collaboration/model/comment-anchor";
-import { decodeUpdate, encodeUpdate, maximumUpdateBytes, type DocumentCursor, type DocumentRead } from "@/features/document-editor/collaboration/model/protocol";
+import { decodeUpdate, encodeUpdate, maximumUpdateBytes, sharedSchemaVersion, type DocumentCursor, type DocumentRead } from "@/features/document-editor/collaboration/model/protocol";
 import { permissions, type ProtectionPolicy } from "@/features/document-editor/collaboration/model/protection";
 import { boundedInteger, checkedEmail, documentId, documentResponse, documentRpc, DocumentRequestError, readDocumentJson } from "@/features/document-editor/collaboration/server/request";
 
@@ -19,6 +21,25 @@ function readPosition(value: string | null, fallback: -1 | 0) {
   if (value === null) return fallback;
   if (!/^(?:-1|0|[1-9]\d{0,9})$/.test(value)) throw new DocumentRequestError(400, "INVALID_INTEGER");
   return boundedInteger(Number(value), fallback);
+}
+
+function presenceProof(id: string, accessVersion: number, actor: string, session: string) {
+  const secret = process.env.SUPABASE_SECRET_KEY;
+  if (!secret) throw new DocumentRequestError(503, "SUPABASE_NOT_CONFIGURED");
+  const binding = actor + "." + session;
+  const signature = createHmac("sha256", secret)
+    .update("x2x-presence:" + id + ":" + accessVersion + ":" + binding).digest("base64url");
+  return binding + "." + signature;
+}
+
+function verifiedPresenceSessions(id: string, accessVersion: number, proofs: unknown) {
+  if (!Array.isArray(proofs) || proofs.length > 256) throw new DocumentRequestError(400, "INVALID_PRESENCE");
+  return [...new Set(proofs)].flatMap((proof) => {
+    if (typeof proof !== "string" || !/^[0-9a-f-]{36}\.[0-9a-f-]{36}\.[A-Za-z0-9_-]{43}$/.test(proof)) return [];
+    const [actor, session] = proof.split(".");
+    const expected = presenceProof(id, accessVersion, actor, session);
+    return timingSafeEqual(Buffer.from(proof), Buffer.from(expected)) ? [{ actor, session }] : [];
+  });
 }
 
 export function GET(request: Request, route: Route) {
@@ -54,11 +75,14 @@ export function GET(request: Request, route: Route) {
       ]);
       return { ...settings, workspace };
     }
+    const presenceSession = query.get("presenceSession");
+    const session = presenceSession === null ? undefined : documentId(presenceSession);
     const [document, policy] = await Promise.all([
       openDocument(context, id, readPosition(query.get("generation"), 0), readPosition(query.get("after"), -1)),
       documentRpc<ProtectionPolicy>(context, "x2x_read_policy", { p_document: id }),
     ]);
-    return { ...document, policy };
+    return { ...document, policy, presenceProof: document.realtimeReady && session
+      ? presenceProof(id, document.accessVersion, context.visitor, session) : undefined };
   }, 200, !query.has("view") && (!query.has("generation") || query.get("generation") === "0") ? "document.open" : undefined);
 }
 
@@ -85,6 +109,7 @@ function password(value: unknown) {
 async function committedSnapshot(context: Context, id: string, minimumUpdates: number, needsEdit = true) {
   let page = await openDocument(context, id, 0, -1);
   if (needsEdit && page.role === "view") throw new DocumentRequestError(403, "WRITE_DENIED");
+  if (page.schema !== sharedSchemaVersion) throw new DocumentRequestError(409, "DOCUMENT_SCHEMA_UNSUPPORTED");
   const generation = page.generation;
   const head = page.head;
   if (!page.snapshot) throw new DocumentRequestError(409, "DOCUMENT_BUSY");
@@ -99,6 +124,7 @@ async function committedSnapshot(context: Context, id: string, minimumUpdates: n
       const cursor = page.updates.at(-1)?.seq ?? page.cursor;
       if (cursor >= head) break;
       page = await openDocument(context, id, generation, cursor);
+      if (page.schema !== sharedSchemaVersion) throw new DocumentRequestError(409, "DOCUMENT_SCHEMA_UNSUPPORTED");
       if (page.generation !== generation || page.snapshot || !page.updates.length) {
         throw new DocumentRequestError(409, "DOCUMENT_BUSY");
       }
@@ -217,7 +243,10 @@ async function exportDocument(context: Context, id: string, body: Record<string,
     return { id: await documentRpc(context, "x2x_create_document", { p_title: title, p_snapshot: snapshot.p_snapshot, p_workspace: null }) };
   }
   const session = DocumentSession.fromUpdates([decodeUpdate(snapshot.p_snapshot)]);
-  try { return { text: session.getBlocks().map((block) => block.text).join("\\n") }; }
+  try {
+    const blocks = session.getBlocks();
+    return { text: documentPlainText(blocks, getDocumentOutline(blocks).sections) };
+  }
   finally { session.destroy(); }
 }
 
@@ -271,6 +300,18 @@ export function POST(request: Request, route: Route) {
           body.cursorSession === undefined ? args : {
             ...args, p_cursor_session: documentId(body.cursorSession), p_cursor: readCursor(body.cursor),
           });
+      case "presence-roster": {
+        const accessVersion = boundedInteger(body.accessVersion, 1);
+        return documentRpc({ ...context, actor: context.visitor }, "x2x_document_presence_roster", {
+          ...args, p_access_version: accessVersion,
+          p_sessions: verifiedPresenceSessions(id, accessVersion, body.proofs),
+        });
+      }
+      case "cursor":
+        return documentRpc({ ...context, actor: context.visitor }, "x2x_publish_document_cursor", {
+          ...args, p_access_version: boundedInteger(body.accessVersion, 1),
+          p_session: documentId(body.session), p_cursor: readCursor(body.cursor),
+        });
       case "member":
         if (![null, "view", "edit", "manage"].includes(body.role as string | null)) throw new DocumentRequestError(400, "INVALID_ROLE");
         await documentRpc(context, "x2x_set_member", { ...args, p_email: checkedEmail(body.email), p_role: body.role });

@@ -6,9 +6,11 @@ import { useEffect, useMemo, useRef, useState, type CSSProperties, type FormEven
 import type { SupabaseClient, User } from "@supabase/supabase-js";
 import EditorLab from "../../editor-lab";
 import { DocumentSession } from "../../model/document-session";
+import { projectCompatibleBlocks } from "../../model/document-projection";
 import { documentErrorMessage, documentRequest, readDocument, SharedDocumentError } from "../client/client";
+import { DocumentChannel } from "../client/document-channel";
 import { DocumentOutbox } from "../client/outbox";
-import { canEditDocument, collaboratorColor, decodeUpdate, sharedSchemaVersion, type OnlineCollaborator } from "../model/protocol";
+import { canEditDocument, collaboratorColor, decodeUpdate, sharedSchemaVersion, type DocumentRead, type OnlineCollaborator } from "../model/protocol";
 import { outboxScope, SharedDocumentSync, type DocumentConnection } from "../client/sync";
 import { DocumentSharing } from "./document-sharing";
 import { allows } from "../model/protection";
@@ -31,7 +33,7 @@ const statusLabels = {
   "local-error": "本机保存失败",
 };
 
-type CurrentDocument = { session: DocumentSession; connection: DocumentConnection };
+type CurrentDocument = { session: DocumentSession; connection: DocumentConnection; storageUnavailable?: true };
 
 function DocumentAvatars({ user, peers }: { user: User; peers: readonly OnlineCollaborator[] }) {
   const online = peers.length >= 2;
@@ -79,11 +81,64 @@ export function SharedDocumentEditor({ client, user, id }: { client: SupabaseCli
 
   useEffect(() => {
     const abort = new AbortController();
+    const cursorSession = crypto.randomUUID();
     let disposed = false;
     const timeout = window.setTimeout(() => abort.abort(), 30_000);
-    const outbox = new DocumentOutbox();
+    let accessTimer: number | undefined;
+    let readOnlyChannel: DocumentChannel | undefined;
+    let outbox: DocumentOutbox | undefined;
     let session: DocumentSession | undefined;
     let sync: SharedDocumentSync | undefined;
+
+    function reload() {
+      setCurrent(null);
+      setAttempt((previous) => previous + 1);
+    }
+
+    function watchReadOnly(meta: DocumentRead) {
+      let running = false;
+      let queued = false;
+      let delay = 1_000;
+      async function revalidate() {
+        if (abort.signal.aborted) return;
+        if (running) { queued = true; return; }
+        running = true;
+        window.clearTimeout(accessTimer);
+        try {
+          const next = await readDocument(client, id, meta.generation, meta.cursor, abort.signal, actor);
+          if (abort.signal.aborted) return;
+          if (next.generation !== meta.generation || next.schema !== meta.schema || next.head !== meta.head ||
+              next.accessVersion !== meta.accessVersion || next.role !== meta.role || next.title !== meta.title) {
+            readOnlyChannel?.stop();
+            readOnlyChannel = undefined;
+            reload();
+          } else {
+            delay = 1_000;
+            readOnlyChannel?.update(next);
+          }
+        } catch (error) {
+          if (abort.signal.aborted) return;
+          if (error instanceof SharedDocumentError && [401, 403, 404].includes(error.status)) {
+            readOnlyChannel?.stop();
+            readOnlyChannel = undefined;
+            setCurrent(null);
+            setCanRequestAccess(error.code === "ACCESS_DENIED");
+            setMessage("文档访问权限已撤回");
+          } else if (navigator.onLine && document.visibilityState === "visible") {
+            accessTimer = window.setTimeout(() => void revalidate(), delay);
+            delay = Math.min(delay * 2, 8_000);
+          }
+        } finally {
+          running = false;
+          if (queued) {
+            queued = false;
+            if (readOnlyChannel) void revalidate();
+          }
+        }
+      }
+      readOnlyChannel = new DocumentChannel({ client, refresh: () => void revalidate() });
+      readOnlyChannel.start(meta);
+    }
 
     async function load() {
       try {
@@ -93,8 +148,9 @@ export function SharedDocumentEditor({ client, user, id }: { client: SupabaseCli
           if (abort.signal.aborted) return;
           window.history.replaceState(window.history.state, "", window.location.pathname + window.location.search);
         }
-        let meta = await readDocument(client, id, 0, -1, abort.signal, actor);
-        if (meta.schema !== sharedSchemaVersion) throw new Error("Unsupported document schema");
+        let meta = await readDocument(client, id, 0, -1, abort.signal, actor, cursorSession);
+        const schema = meta.schema;
+        if (schema < sharedSchemaVersion) throw new SharedDocumentError(409, "DOCUMENT_SCHEMA_UNSUPPORTED");
         if (!meta.snapshot) throw new Error("Missing document snapshot");
         const updates = [decodeUpdate(meta.snapshot)];
         const generation = meta.generation;
@@ -106,26 +162,45 @@ export function SharedDocumentEditor({ client, user, id }: { client: SupabaseCli
             meta = { ...meta, cursor, snapshot: null, updates: [] };
             break;
           }
-          meta = await readDocument(client, id, generation, cursor, abort.signal, actor);
-          if (meta.generation !== generation || meta.snapshot || meta.schema !== sharedSchemaVersion) {
+          meta = await readDocument(client, id, generation, cursor, abort.signal, actor, cursorSession);
+          if (meta.generation !== generation || meta.snapshot || meta.schema !== schema) {
             throw new SharedDocumentError(409, "DOCUMENT_VERSION_CHANGED");
           }
           const next = meta.updates[0];
           if (!next || meta.cursor !== cursor || next.seq !== cursor + 1) throw new SharedDocumentError(409, "DOCUMENT_BUSY");
         }
-        const waiting = await outbox.read(outboxScope(actor, id));
+        if (disposed) return;
+        if (abort.signal.aborted) throw new Error("Document load timed out");
+        if (schema > sharedSchemaVersion) {
+          const blocks = projectCompatibleBlocks(updates);
+          if (!blocks.length) throw new SharedDocumentError(409, "DOCUMENT_SCHEMA_UNSUPPORTED");
+          session = new DocumentSession(blocks);
+          setRequiresPassword(false);
+          setCurrent({ session, connection: { meta, status: "saved", peers: [], accessLost: false, previousEdits: false } });
+          watchReadOnly(meta);
+          return;
+        }
+        outbox = new DocumentOutbox();
+        const waiting = await outbox.read(outboxScope(actor, id)).catch(() => undefined);
         if (disposed) return;
         if (abort.signal.aborted) throw new Error("Document load timed out");
         session = DocumentSession.fromUpdates(updates);
+        if (!waiting) {
+          setRequiresPassword(false);
+          setCurrent({ session, storageUnavailable: true,
+            connection: { meta, status: "local-error", peers: [], accessLost: false, previousEdits: false } });
+          watchReadOnly(meta);
+          return;
+        }
         if (canEditDocument(meta.role)) session.applySharedUpdates(waiting.filter((entry) =>
           entry.generation === meta.generation && entry.schema === meta.schema).map((entry) => entry.data));
         setRequiresPassword(false);
         setCurrent({ session, connection: { meta, status: "saving", peers: [], accessLost: false, previousEdits: false } });
         sync = new SharedDocumentSync({
-          client, actor, meta, session, outbox,
+          client, actor, meta, session, outbox, cursorSession,
           isComposing: () => Boolean(document.querySelector('[data-composing="true"]')),
           report: (connection) => setCurrent((current) => current && { ...current, connection }),
-          reload: () => { setCurrent(null); setAttempt((previous) => previous + 1); },
+          reload,
         });
         syncRef.current = sync;
         sync.start();
@@ -142,10 +217,12 @@ export function SharedDocumentEditor({ client, user, id }: { client: SupabaseCli
     return () => {
       disposed = true;
       window.clearTimeout(timeout);
+      window.clearTimeout(accessTimer);
       abort.abort();
+      readOnlyChannel?.stop();
       if (syncRef.current === sync) syncRef.current = null;
       if (sync) { sync.stop(); sync.closeOutbox(); }
-      else outbox.close();
+      else outbox?.close();
       session?.destroy();
     };
   }, [client, actor, id, password, attempt]);
@@ -186,6 +263,16 @@ export function SharedDocumentEditor({ client, user, id }: { client: SupabaseCli
     </main>;
   }
   const { connection, session } = current;
+  if (connection.meta.schema > sharedSchemaVersion || current.storageUnavailable) {
+    const { meta } = connection;
+    return <EditorLab key={id + ":" + meta.generation + ":" + meta.schema} mode="window" size={500000} shared={{
+      session, title: meta.title, role: "view", id,
+      copyAllowed: allows(meta.policy, "copy"), printAllowed: allows(meta.policy, "print"),
+      watermark: meta.policy?.watermark ? (user.is_anonymous ? "admin" : user.email) : undefined,
+      controls: <span role="status" className={styles.saveStatus}>{current.storageUnavailable
+        ? "本地存储不可用，已只读打开云端文档" : "文档采用较新结构，已以只读方式打开"}</span>,
+    }} />;
+  }
   return <EditorLab key={id + ":" + connection.meta.generation} mode="window" size={500000} shared={{
     session, title: connection.meta.title, role: connection.meta.role, id, rename,
     collaborators,

@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { copyClipboard } from "./editor-clipboard";
 import { createDocument } from "../../../src/features/document-editor/model/document-model";
 
 const origin = process.env.EDITOR_TEST_URL ?? "http://127.0.0.1:3100";
@@ -18,14 +19,6 @@ function pageWidth(page: Page) {
   return page.getByRole("combobox", { name: "页宽" });
 }
 
-async function copySelection(page: Page) {
-  return body(page).evaluate((element) => {
-    const data = new DataTransfer();
-    element.dispatchEvent(new ClipboardEvent("copy", { clipboardData: data, bubbles: true, cancelable: true }));
-    return data.getData("text/plain");
-  });
-}
-
 test("reading mode preserves edits, blocks document mutations and keeps copying and finding available", async ({ page }) => {
   await page.goto(origin + "/editor?size=500000");
   const reader = body(page);
@@ -38,6 +31,7 @@ test("reading mode preserves edits, blocks document mutations and keeps copying 
   await expect(first.locator(".tiptap")).toBeFocused();
   await page.keyboard.insertText(marker);
   await expect(first.locator(".tiptap")).toHaveText(marker + original);
+  await expect(reader.locator("[data-editor-active]")).toHaveAttribute("data-composing", "false");
 
   await modeButton(page, "阅读").press("Enter");
   await expect(modeButton(page, "阅读")).toHaveAttribute("aria-pressed", "true");
@@ -55,7 +49,7 @@ test("reading mode preserves edits, blocks document mutations and keeps copying 
   await page.keyboard.press("ControlOrMeta+z");
   await expect(reader.locator("[contenteditable=true]")).toHaveCount(0);
   await expect(page.locator("main[data-block-count]")).toHaveAttribute("data-block-count", String(sample.length));
-  expect(await copySelection(page) === marker + sample.map((block) => block.text).join("\n")).toBe(true);
+  expect((await copyClipboard(reader)).text === marker + sample.map((block) => block.text).join("\n")).toBe(true);
 
   await page.keyboard.press("ControlOrMeta+f");
   const find = page.getByRole("dialog", { name: "查找", exact: true });

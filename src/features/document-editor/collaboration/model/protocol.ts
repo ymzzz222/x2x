@@ -3,6 +3,13 @@ import type { ProtectionPolicy } from "./protection";
 
 export type DocumentCursor = { blockId: string; encoded: string; generation: number };
 export type OnlineCollaborator = { id: string; name: string; cursor?: DocumentCursor | null };
+export type DocumentCursorUpdate = {
+  id: string;
+  session: string;
+  cursor: DocumentCursor | null;
+  revision: number | null;
+};
+export type DocumentPresenceEntry = DocumentCursorUpdate & { name: string };
 
 const collaboratorColors = ["#1d4ed8", "#6d28d9", "#047857", "#a21caf", "#9a3412", "#be123c"];
 
@@ -34,6 +41,8 @@ export type DocumentRead = DocumentSummary & {
   head: number;
   cursor: number;
   accessVersion: number;
+  realtimeReady?: true;
+  presenceProof?: string;
   snapshot: string | null;
   policy?: ProtectionPolicy;
   updates: CommittedUpdate[];

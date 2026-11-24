@@ -38,7 +38,8 @@ export const DocumentOutlinePanel = memo(function DocumentOutlinePanel({ roots, 
   function renderSections(sections: DocumentSection[]) {
     return sections.map((section) => {
       const folded = collapsed.has(section.id);
-      const title = section.text || "未命名标题";
+      const prefix = section.numbering ? section.numbering.label + " " : "";
+      const title = prefix + (section.text || "未命名标题");
       const target = id + "-link-" + section.id;
       const childrenId = id + "-children-" + section.id;
       const hash = "#" + section.id;

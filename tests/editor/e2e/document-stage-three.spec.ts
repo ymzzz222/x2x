@@ -1,6 +1,12 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
+import { pasteClipboard } from "./editor-clipboard";
 
 const origin = process.env.EDITOR_TEST_URL ?? "http://127.0.0.1:3100";
+const paragraphSelector = 'div[data-block-type="paragraph"]';
+const orderedListSelector = 'div[data-block-type="ordered-list"]';
+const bulletListSelector = 'div[data-block-type="bullet-list"]';
+const listItemSelector = 'div[data-block-type="list-item"]';
+const quoteSelector = 'div[data-block-type="quote"]';
 const file = origin + "/editor?size=500000";
 test.use({ channel: "chrome", viewport: { width: 1440, height: 900 } });
 
@@ -9,6 +15,7 @@ function block(page: Page, index: number) { return view(page).locator('[data-blo
 function handle(page: Page, index: number) { return block(page, index).getByRole("button", { name: "第 " + (index + 1) + " 块操作" }); }
 
 async function insertAfter(page: Page, index: number, name: string) {
+  await expect(view(page).locator('[data-composing="true"]')).toHaveCount(0);
   await handle(page, index).click({ force: true });
   await page.getByRole("button", { name: "在下方添加" }).click();
   await page.getByRole("group", { name: "在下方添加", exact: true }).getByRole("button", { name, exact: true }).click();
@@ -19,11 +26,7 @@ async function seed(page: Page, html: string) {
   await page.goto(file);
   await expect(block(page, 0)).toBeInViewport();
   await view(page).press("ControlOrMeta+a");
-  await view(page).evaluate((element, html) => {
-    const data = new DataTransfer();
-    data.setData("text/html", html);
-    element.dispatchEvent(new ClipboardEvent("paste", { clipboardData: data, bubbles: true, cancelable: true }));
-  }, html);
+  await pasteClipboard(view(page), { html });
 }
 
 async function caret(target: Locator, offset = 0) {
@@ -49,8 +52,10 @@ for (const [kind, empty] of [["paragraph", "<p></p>"], ["quote", "<blockquote><p
     await seed(page, "<p>Intro</p>" + empty + "<p>Next paragraph</p>");
     const row = block(page, 1);
     const preview = row.locator("[data-block-text]");
-    const nextOffset = () => row.evaluate((element) =>
-      element.nextElementSibling!.getBoundingClientRect().top - element.getBoundingClientRect().top);
+    const nextOffset = async () => {
+      const [current, next] = await Promise.all([row.boundingBox(), block(page, 2).boundingBox()]);
+      return next!.y - current!.y;
+    };
 
     await expect(preview).toBeVisible();
     const emptyOffset = await nextOffset();
@@ -74,7 +79,7 @@ for (const [kind, empty] of [["paragraph", "<p></p>"], ["quote", "<blockquote><p
     await expect(editor).toBeFocused();
     await expect.poll(nextOffset).toBe(softBreakOffset);
     await page.keyboard.insertText("在第二行");
-    await expect.poll(() => editor.locator("p").evaluate((paragraph) =>
+    await expect.poll(() => editor.locator(paragraphSelector).evaluate((paragraph) =>
       paragraph.querySelector("br")?.nextSibling?.textContent)).toBe("在第二行");
     if (kind === "paragraph") await expect(handle(page, 1).locator('[data-block-icon="paragraph"]')).toBeVisible();
   });
@@ -101,89 +106,88 @@ test("the add button inserts in the same paragraph when it contains only whitesp
 test("slash filtering, ordered list keyboard nesting and numbering share one history", async ({ page }) => {
   await seed(page, "<p></p><p>Tail</p>");
   const editor = await activate(page, 0);
-  await page.keyboard.insertText("/ordered");
+  await page.keyboard.type("/ordered");
   await expect(page.getByRole("button", { name: "有序列表", exact: true })).toBeVisible();
   await page.keyboard.press("Enter");
-  await expect(editor.locator("ol > li")).toHaveCount(1);
+  await expect(editor.locator(`${orderedListSelector} > ${listItemSelector}`)).toHaveCount(1);
   await expect(block(page, 0).getByRole("button")).toHaveCount(1);
   await expect(handle(page, 0).locator('[data-block-icon="orderedList"]')).toHaveCount(1);
-  await page.keyboard.insertText("Alpha");
+  await page.keyboard.type("Alpha");
   await page.keyboard.press("Enter");
-  await expect(editor.locator("ol > li")).toHaveCount(2);
-  await page.keyboard.insertText("Beta");
-  await caret(editor.locator("ol > li").nth(1).locator("p"));
+  await expect(editor.locator(`${orderedListSelector} > ${listItemSelector}`)).toHaveCount(2);
+  await page.keyboard.type("Beta");
+  await caret(editor.locator(`${orderedListSelector} > ${listItemSelector}`).nth(1).locator(paragraphSelector));
   await page.keyboard.press("Tab");
-  await expect(editor.locator("ol ol li")).toHaveText("Beta");
+  await expect(editor.locator(`${orderedListSelector} ${orderedListSelector} ${listItemSelector}`)).toHaveText("Beta");
   await page.keyboard.press("ControlOrMeta+z");
-  await expect(editor.locator("ol li").nth(1)).toHaveText("Beta");
-  await expect(editor.locator("ol ol")).toHaveCount(0);
+  await expect(editor.locator(`${orderedListSelector} ${listItemSelector}`).nth(1)).toHaveText("Beta");
+  await expect(editor.locator(`${orderedListSelector} ${orderedListSelector}`)).toHaveCount(0);
   await page.keyboard.press("ControlOrMeta+Shift+z");
-  await expect(editor.locator("ol ol li")).toHaveText("Beta");
+  await expect(editor.locator(`${orderedListSelector} ${orderedListSelector} ${listItemSelector}`)).toHaveText("Beta");
+  await expect(editor).toBeFocused();
 
-  await caret(editor.locator("ol ol p"));
+  await caret(editor.locator(`${orderedListSelector} ${orderedListSelector} ${paragraphSelector}`));
   await page.keyboard.press("Shift+ArrowRight");
+  await expect.poll(() => page.evaluate(() => document.getSelection()?.toString())).toBe("B");
   await page.getByRole("toolbar", { name: "选区工具栏" }).getByRole("button", { name: "块类型", exact: true }).click();
   await page.getByRole("button", { name: "无序列表", exact: true }).click();
-  await expect(editor.locator("ol ul li")).toHaveText("Beta");
-  await expect.poll(() => page.evaluate(() => document.getSelection()?.anchorNode?.parentElement?.closest("p")?.textContent)).toBe("Beta");
+  await expect(editor.locator(`${orderedListSelector} ${bulletListSelector} ${listItemSelector}`)).toHaveText("Beta");
+  await expect.poll(() => page.evaluate(() => document.getSelection()?.anchorNode?.parentElement?.closest('.ym-block-paragraph')?.textContent)).toBe("Beta");
 
-  await editor.locator("ol > li > p").first().click();
-  await expect.poll(() => page.evaluate(() => document.getSelection()?.anchorNode?.parentElement?.closest("p")?.textContent)).toBe("Alpha");
+  await editor.locator(`${orderedListSelector} > ${listItemSelector} > ${paragraphSelector}`).first().click();
+  await expect.poll(() => page.evaluate(() => document.getSelection()?.anchorNode?.parentElement?.closest('.ym-block-paragraph')?.textContent)).toBe("Alpha");
   await handle(page, 0).click({ force: true });
   await page.getByRole("spinbutton", { name: "起始编号" }).fill("8");
   await page.getByRole("button", { name: "应用编号" }).click();
-  await expect(block(page, 0).locator("ol").first()).toHaveAttribute("start", "8");
+  await expect(block(page, 0).locator(orderedListSelector).first()).toHaveAttribute("data-list-start", "8");
   await handle(page, 0).click({ force: true });
   await page.getByRole("combobox", { name: "标记" }).selectOption("i");
-  await expect(block(page, 0).locator("ol").first()).toHaveCSS("list-style-type", "lower-roman");
+  await expect(block(page, 0).locator(orderedListSelector).first()).toHaveCSS("--ym-number-style", "lower-roman");
 
   await page.getByRole("button", { name: "阅读", exact: true }).click();
-  await expect(block(page, 0).locator("ol ul li")).toHaveText("Beta");
-  await expect(block(page, 0).locator("ol").first()).toHaveAttribute("start", "8");
+  await expect(block(page, 0).locator(`${orderedListSelector} ${bulletListSelector} ${listItemSelector}`)).toHaveText("Beta");
+  await expect(block(page, 0).locator(orderedListSelector).first()).toHaveAttribute("data-list-start", "8");
 });
 
 test("continuation numbers follow their ordered group after a move and restart on demand", async ({ page }) => {
   await seed(page, '<ol start="8"><li><p>East</p></li></ol><ol><li><p>West</p></li></ol><p>Tail</p>');
   await handle(page, 1).click({ force: true });
   await page.getByRole("button", { name: "续编", exact: true }).click();
-  await expect(block(page, 1).locator("ol")).toHaveAttribute("start", "9");
+  await expect(block(page, 1).locator(orderedListSelector)).toHaveAttribute("data-list-start", "9");
 
   await handle(page, 1).click({ force: true });
   await page.getByRole("button", { name: "上移", exact: true }).click();
-  await expect(block(page, 0).locator("ol")).toHaveText("West");
-  await expect(block(page, 0).locator("ol")).toHaveJSProperty("start", 1);
+  await expect(block(page, 0).locator(orderedListSelector)).toHaveText("West");
+  await expect(block(page, 0).locator(orderedListSelector)).toHaveAttribute("data-list-start", "1");
   await view(page).press("ControlOrMeta+z");
-  await expect(block(page, 1).locator("ol")).toHaveAttribute("start", "9");
+  await expect(block(page, 1).locator(orderedListSelector)).toHaveAttribute("data-list-start", "9");
 
   await handle(page, 1).click({ force: true });
   await page.getByRole("button", { name: "重新开始", exact: true }).click();
-  await expect(block(page, 1).locator("ol")).toHaveJSProperty("start", 1);
-  await expect(block(page, 0).locator("ol")).toHaveAttribute("start", "8");
+  await expect(block(page, 1).locator(orderedListSelector)).toHaveAttribute("data-list-start", "1");
+  await expect(block(page, 0).locator(orderedListSelector)).toHaveAttribute("data-list-start", "8");
 });
 
 test("supplementary paragraphs stay inside the item and Enter on an empty item exits the list", async ({ page }) => {
   await seed(page, "<ol><li><p>Parent</p></li><li><p></p></li></ol><p>Tail</p>");
   const editor = await activate(page, 0);
-  await caret(editor.locator("li").first().locator("p"), 6);
+  await caret(editor.locator(listItemSelector).first().locator(paragraphSelector), 6);
   await page.keyboard.press("ControlOrMeta+Enter");
-  const parent = editor.locator("li").first();
-  await expect(parent.locator("p")).toHaveCount(2);
+  const parent = editor.locator(listItemSelector).first();
+  await expect(parent.locator(paragraphSelector)).toHaveCount(2);
   await page.keyboard.insertText("Details");
-  await expect(parent.locator("p")).toHaveText(["Parent", "Details"]);
-  await parent.locator("p").last().evaluate((element) => {
-    const data = new DataTransfer();
-    data.setData("text/plain", " inside");
-    element.dispatchEvent(new ClipboardEvent("paste", { clipboardData: data, bubbles: true, cancelable: true }));
-  });
-  await expect(parent.locator("p").last()).toHaveText("Details inside");
+  await expect(parent.locator(paragraphSelector)).toHaveText(["Parent", "Details"]);
+  await expect(view(page).locator("[data-editor-active]")).toHaveAttribute("data-composing", "false");
+  await pasteClipboard(parent.locator(paragraphSelector).last(), { text: " inside" });
+  await expect(parent.locator(paragraphSelector).last()).toHaveText("Details inside");
   await page.keyboard.press("ControlOrMeta+z");
-  await expect(parent.locator("p").last()).toHaveText("Details");
-  await caret(editor.locator("li").nth(1).locator("p"));
+  await expect(parent.locator(paragraphSelector).last()).toHaveText("Details");
+  await caret(editor.locator(listItemSelector).nth(1).locator(paragraphSelector));
   await page.keyboard.press("Enter");
-  await expect(block(page, 0).locator("ol > li")).toHaveCount(1);
+  await expect(block(page, 0).locator(`${orderedListSelector} > ${listItemSelector}`)).toHaveCount(1);
   await expect(block(page, 1).locator(".tiptap")).toBeFocused();
   await page.keyboard.insertText("Outside");
-  await expect(block(page, 1).locator(".tiptap p")).toHaveText("Outside");
+  await expect(block(page, 1).locator(`.tiptap ${paragraphSelector}`)).toHaveText("Outside");
   await expect(block(page, 2)).toContainText("Tail");
 });
 
@@ -197,9 +201,9 @@ test("block insertion, heading conversion, Markdown, and column and callout stru
   await insertAfter(page, 1, "两栏");
   await expect(block(page, 2).locator("[data-column]")).toHaveCount(2);
   const columns = block(page, 2).locator(".tiptap [data-column]");
-  await caret(columns.nth(0).locator("p"));
+  await caret(columns.nth(0).locator(paragraphSelector));
   await page.keyboard.insertText("左栏");
-  await caret(columns.nth(1).locator("p"));
+  await caret(columns.nth(1).locator(paragraphSelector));
   await page.keyboard.insertText("右栏");
 
   await insertAfter(page, 2, "高亮块");
@@ -208,16 +212,16 @@ test("block insertion, heading conversion, Markdown, and column and callout stru
   await expect(block(page, 4).locator(".tiptap")).toBeFocused();
   await page.keyboard.insertText(">");
   await page.keyboard.press("Space");
-  await expect(block(page, 4).locator(".tiptap blockquote")).toBeVisible();
+  await expect(block(page, 4).locator(`.tiptap ${quoteSelector}`)).toBeVisible();
   await expect(block(page, 4).locator(".tiptap")).toBeFocused();
   await page.keyboard.insertText("引用文字");
-  await expect(block(page, 4).locator("blockquote")).toHaveText("引用文字");
+  await expect(block(page, 4).locator(quoteSelector)).toHaveText("引用文字");
   await insertAfter(page, 4, "分割线");
   await expect(block(page, 5).locator("hr")).toBeVisible();
 
   await page.getByRole("button", { name: "阅读", exact: true }).click();
   await expect(block(page, 2).locator("[data-column]")).toHaveText(["左栏", "右栏"]);
-  await expect(block(page, 4).locator("blockquote")).toHaveText("引用文字");
+  await expect(block(page, 4).locator(quoteSelector)).toHaveText("引用文字");
   await expect(view(page).getByRole("button", { name: /块操作/ })).toHaveCount(0);
 });
 
@@ -243,6 +247,9 @@ test("the block menu and drag move a collapsed section as a unit and undo restor
   await expect(page.getByRole("group", { name: "内容块命令" })).toHaveCount(0);
   await block(page, 2).getByRole("button", { name: "Chapter 章节" }).click();
   await expect(block(page, 3).getByText("Hidden", { exact: true })).toBeVisible();
+  await view(page).press("ControlOrMeta+z");
+  await expect(block(page, 2)).toHaveAttribute("id", chapter!);
+  await expect(view(page).getByText("Hidden", { exact: true })).toHaveCount(0);
   await view(page).press("ControlOrMeta+z");
   await expect(block(page, 0)).toHaveAttribute("id", chapter!);
 });
@@ -294,7 +301,7 @@ test("floating selection formats and whole-block cut and copy use the normal cli
   const editor = await activate(page, 0);
   const floating = page.getByRole("toolbar", { name: "选区工具栏" });
   await expect(page.getByRole("toolbar")).toHaveCount(0);
-  const text = await editor.locator("p").evaluate((paragraph) => {
+  const text = await editor.locator(paragraphSelector).evaluate((paragraph) => {
     const range = document.createRange();
     range.selectNodeContents(paragraph);
     const { left, right, top, bottom } = range.getBoundingClientRect();
@@ -333,7 +340,7 @@ test("floating selection formats and whole-block cut and copy use the normal cli
 test("opening another block menu preserves the live caret, and converts only its source block", async ({ page }) => {
   await seed(page, "<p>Alpha</p><p>Beta</p><p>Gamma</p>");
   const beta = await activate(page, 1);
-  await caret(beta.locator("p"), 2);
+  await caret(beta.locator(paragraphSelector), 2);
   await block(page, 0).hover();
   await handle(page, 0).click();
   const commands = page.getByRole("group", { name: "内容块命令" });
@@ -362,7 +369,7 @@ test("opening another block menu preserves the live caret, and converts only its
 test("selection tools and block handles are exclusive, hover submenus preserve the range on return", async ({ page }) => {
   await seed(page, "<p>Alpha</p><p>Beta</p><p>Gamma</p>");
   const editor = await activate(page, 0);
-  await caret(editor.locator("p"));
+  await caret(editor.locator(paragraphSelector));
   for (let index = 0; index < 5; index++) await page.keyboard.press("Shift+ArrowRight");
   const bubble = page.getByRole("toolbar", { name: "选区工具栏" });
   const type = bubble.getByRole("button", { name: "块类型" });
@@ -398,7 +405,7 @@ test("selection tools and block handles are exclusive, hover submenus preserve t
 test("empty-line add and slash have distinct insertion and history paths", async ({ page }) => {
   await page.goto(file);
   const first = await activate(page, 0);
-  const paragraph = first.locator("p");
+  const paragraph = first.locator(paragraphSelector);
   await caret(paragraph, (await paragraph.textContent())!.length);
   await page.keyboard.press("Enter");
   const row = block(page, 1);
@@ -441,6 +448,25 @@ test("empty-line add and slash have distinct insertion and history paths", async
   await page.keyboard.press("ControlOrMeta+Shift+z");
   await expect(row).toHaveText("/标题");
   await expect(slash).toBeHidden();
+});
+
+test("Escape closes the only blank block's add menu and keeps the original focus", async ({ page }) => {
+  await page.goto(origin + "/editor?new=1");
+  const row = block(page, 0);
+  const add = row.getByRole("button", { name: "在第 1 块插入" });
+  const commands = page.getByRole("group", { name: "内容块命令" });
+  const editor = row.locator(".tiptap");
+  await row.hover();
+  for (const focus of [page.locator("body"), editor]) {
+    if (focus === editor) await row.click();
+    await expect(focus).toBeFocused();
+    await add.click();
+    await expect(commands).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(commands).toBeHidden();
+    await expect(focus).toBeFocused();
+  }
+  await expect(row).toHaveText("");
 });
 
 test("reading selection offers edit without exposing mutating commands", async ({ page }) => {

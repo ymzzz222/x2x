@@ -60,8 +60,9 @@ test("a lost create response can be recovered after reload without creating a se
   await page.getByRole("link", { name: "返回文档列表" }).click();
   const details = page.getByRole("link", { name: "无标题文档详情" });
   await expect(details).toHaveCount(1);
-  const documentUrl = `**/api/documents/${writes[0].id}?generation=0&after=-1`;
-  await page.route(documentUrl, async (route) => {
+  const documentPath = `/api/documents/${writes[0].id}`;
+  await page.route((url) => url.pathname === documentPath &&
+    url.searchParams.get("generation") === "0" && url.searchParams.get("after") === "-1", async (route) => {
     await route.fulfill({ status: 503, json: { error: "DATABASE_UNAVAILABLE" } });
   }, { times: 1 });
   await details.click();

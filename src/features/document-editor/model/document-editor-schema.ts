@@ -6,10 +6,20 @@ import { inlineColor } from "./document-format";
 import { DocumentBulletStyle, DocumentCallout, DocumentColumn, DocumentColumns } from "./document-structure-schema";
 import { visibleText } from "./document-structure";
 import { firstLineIndentWidth, readParagraphAlignment } from "./document-paragraph";
-import { headingLevels, headingPresentation, type DocumentBlock, type HeadingLevel } from "./document-model";
+import { headingLevels, headingPresentation, readHeadingNumberStart, type DocumentBlock, type HeadingLevel } from "./document-model";
 
 // Tiptap's heading commands can store higher levels once their HTML representation is defined.
 const DocumentHeading = Heading.extend({
+  addAttributes() {
+    return {
+      ...this.parent?.(),
+      numberStart: {
+        default: null,
+        parseHTML: (element) => readHeadingNumberStart(element.getAttribute("data-heading-number-start")) ?? null,
+        renderHTML: ({ numberStart }) => numberStart === null ? {} : { "data-heading-number-start": numberStart },
+      },
+    };
+  },
   parseHTML() {
     return [
       ...headingLevels.map((level) => ({ tag: `[data-heading-level="${level}"]`, attrs: { level } })),
@@ -93,7 +103,7 @@ export function documentSchema() {
 export function sampleContent(block: DocumentBlock) {
   const schema = documentSchema();
   const text = block.text ? schema.text(block.text) : undefined;
-  const attributes = block.kind === "heading" ? { ...block.layout, level: block.level ?? 1 } : block.layout;
+  const attributes = block.kind === "heading" ? { ...block.layout, level: block.level ?? 1, numberStart: block.numberStart ?? null } : block.layout;
   const node = schema.node(block.kind, attributes, text);
   return schema.topNodeType.create(null, node);
 }

@@ -71,6 +71,27 @@
 .colorIcon { border-block-end: 2px solid currentColor; }
 .indentIcon { font-size: 1.1rem; }
 
+.hintedControl { position: relative; display: inline-flex; }
+
+.formatHint {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 100%;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+  padding: .3rem .5rem;
+  border-radius: .35rem;
+  background: var(--foreground);
+  color: var(--background);
+  white-space: nowrap;
+  font-size: .75rem;
+  visibility: hidden;
+}
+
+.formatHint > span { display: block; }
+
+.hintedControl:hover .formatHint, .hintedControl:focus-within .formatHint { visibility: visible; }
+
 .alignIcon {
   inline-size: .9rem;
   block-size: .65rem;

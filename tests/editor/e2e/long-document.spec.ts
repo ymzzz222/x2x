@@ -1,11 +1,12 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
+import { copyClipboard } from "./editor-clipboard";
 import { createDocument } from "../../../src/features/document-editor/model/document-model";
 
 const origin = process.env.EDITOR_TEST_URL ?? "http://127.0.0.1:3100";
 const sampleSize = 500_000;
 const viewportSelector = "[data-scroll-viewport]";
 const blockSelector = "[data-block-index]";
-const fullBlockSelector = "[data-full-document] .tiptap > :is(p, [data-heading-level])";
+const fullBlockSelector = '[data-full-document] .tiptap > :is([data-block-type="paragraph"], [data-heading-level])';
 
 // Run the local prototype first. Test data and peer edits are confined to each page.
 test.use({ channel: "chrome", viewport: { width: 1280, height: 800 } });
@@ -53,12 +54,7 @@ async function scrollToEdge(page: Page, edge: "first" | "last", lastIndex: numbe
 }
 
 async function copyDocumentSelection(scroller: Locator) {
-  return scroller.evaluate((element) => {
-    const data = new DataTransfer();
-    const event = new ClipboardEvent("copy", { clipboardData: data, bubbles: true, cancelable: true });
-    element.dispatchEvent(event);
-    return data.getData("text/plain");
-  });
+  return (await copyClipboard(scroller)).text;
 }
 
 test("unmounts offscreen nodes and preserves the paragraph anchor on resize", async ({ page }) => {
@@ -167,6 +163,7 @@ test("mirrors body folding into the outline while outline disclosure stays local
   await expect(link(3)).toHaveCount(0);
   await bodyToggle(1).press("Enter");
   await expect(bodyToggle(1)).toHaveAttribute("aria-expanded", "true");
+  await expect(bodyToggle(1)).toBeFocused();
   await expect(outlineToggle(2)).toHaveAttribute("aria-expanded", "false");
   await expect(link(3)).toHaveCount(0);
   await link(2).click();
@@ -193,7 +190,8 @@ test("copies a stable chapter link and reopens it from a narrow viewport", async
   await expect(page.getByRole("status")).toHaveText("已复制块链接");
   expect(new URL(await page.evaluate(() => navigator.clipboard.readText())).hash).toBe("#block-1");
   await firstEditor.press("Enter");
-  await expect(page.locator("#inserted-1 .tiptap")).toBeFocused();
+  await expect(page.locator("#inserted-1")).toHaveText("");
+  await expect(page.locator("#block-1 .tiptap")).toBeFocused();
   await outline.getByRole("link", { name: title, exact: true }).click();
   await expect(target).toBeInViewport();
   await expect(target).toHaveAttribute("data-block-index", "648");
@@ -276,6 +274,7 @@ test("joins the previous paragraph from the start and restores both paragraphs o
   await expect(mergedEditor).toHaveText(joined);
   await page.keyboard.insertText("〔接缝〕");
   await expect(mergedEditor).toHaveText(previous + "〔接缝〕" + current);
+  await expect(page.locator("[data-editor-active]")).toHaveAttribute("data-composing", "false");
 
   await page.keyboard.press("ControlOrMeta+z");
   await expect(mergedEditor).toHaveText(joined);
@@ -305,10 +304,12 @@ test("moves the caret across paragraphs and keeps editing history when focus mov
   await expect(firstEditor).toBeFocused();
   await page.keyboard.insertText("〔第一段〕");
   await expect(firstEditor).toHaveText(first + "〔第一段〕");
+  await expect(viewport(page).locator("[data-editor-active]")).toHaveAttribute("data-composing", "false");
   await page.keyboard.press("ArrowRight");
   await expect(secondEditor).toBeFocused();
   await page.keyboard.insertText("〔第二段〕");
   await expect(secondEditor).toHaveText("〔第二段〕" + second);
+  await expect(viewport(page).locator("[data-editor-active]")).toHaveAttribute("data-composing", "false");
   await page.keyboard.press("ControlOrMeta+z");
   await expect(secondEditor).toHaveText(second);
   await page.keyboard.press("ControlOrMeta+z");

@@ -1,4 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
+import { copyClipboard } from "./editor-clipboard";
 import { createDocument } from "../../../src/features/document-editor/model/document-model";
 
 const origin = process.env.EDITOR_TEST_URL ?? "http://127.0.0.1:3100";
@@ -34,11 +35,7 @@ async function expectFullText(page: Page, expected: string) {
   const viewport = body(page);
   await viewport.focus();
   await page.keyboard.press("ControlOrMeta+a");
-  const value = await viewport.evaluate((node) => {
-    const data = new DataTransfer();
-    node.dispatchEvent(new ClipboardEvent("copy", { clipboardData: data, bubbles: true, cancelable: true }));
-    return data.getData("text/plain");
-  });
+  const { text: value } = await copyClipboard(viewport);
   expect(value === expected).toBe(true);
 }
 

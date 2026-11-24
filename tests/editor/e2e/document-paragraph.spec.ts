@@ -1,4 +1,5 @@
-import { expect, test, type Locator, type Page } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+import { copyClipboard, pasteClipboard } from "./editor-clipboard";
 
 const origin = process.env.EDITOR_TEST_URL ?? "http://127.0.0.1:3100";
 const file = origin + "/editor?size=500000";
@@ -21,14 +22,6 @@ function preview(page: Page, index: number) {
   return body(page).locator("#block-" + index + " [data-block-text]");
 }
 
-async function paste(target: Locator, html: string) {
-  await target.evaluate((element, html) => {
-    const data = new DataTransfer();
-    data.setData("text/html", html);
-    element.dispatchEvent(new ClipboardEvent("paste", { bubbles: true, cancelable: true, clipboardData: data }));
-  }, html);
-}
-
 test("the selected paragraph supports alignment and the caret keeps the indentation shortcut", async ({ page }) => {
   await page.goto(file);
   const view = body(page);
@@ -40,7 +33,7 @@ test("the selected paragraph supports alignment and the caret keeps the indentat
   await preview(page, 1).click({ position: firstCharacter });
 
   const editor = view.locator("#block-1 .tiptap");
-  const paragraph = editor.locator("p");
+  const paragraph = editor.locator('div[data-block-type="paragraph"]');
   await expect(editor).toBeFocused();
   await expect(buttons).toHaveCount(0);
   await editor.press("Shift+ArrowRight");
@@ -105,14 +98,44 @@ test("one alignment transaction reaches unmounted paragraphs and excludes the un
   await expect(preview(page, 85)).toHaveCSS("text-align", "start");
 });
 
+test("the quote shortcut wraps formatted text and heading conversion stays inside the quote", async ({ page }) => {
+  await page.goto(origin + "/editor?new=1");
+  const row = page.locator("#block-1");
+  const editor = row.locator(".tiptap");
+  await row.click();
+  await expect(editor).toBeFocused();
+  await page.keyboard.press("ControlOrMeta+b");
+  await page.keyboard.insertText("引用样本");
+  await page.keyboard.press("Shift+Enter");
+  await page.keyboard.insertText("续行");
+
+  const quote = editor.locator('[data-block-type="quote"]');
+  await page.keyboard.press("ControlOrMeta+Shift+Period");
+  await expect(quote.locator("strong").first()).toContainText("引用样本");
+  await expect(quote.locator("br")).toHaveCount(1);
+  await page.keyboard.press("ControlOrMeta+Alt+1");
+  await expect(quote.locator('[data-heading-level="1"]').locator("strong").first()).toContainText("引用样本");
+  await expect(quote.locator("br")).toHaveCount(1);
+  await page.keyboard.press("ControlOrMeta+z");
+  await expect(quote.locator('[data-block-type="paragraph"]')).toContainText("续行");
+  await page.keyboard.press("ControlOrMeta+z");
+  await expect(quote).toHaveCount(0);
+  await expect(editor).toContainText("续行");
+  await page.keyboard.press("ControlOrMeta+Shift+z");
+  await page.keyboard.press("ControlOrMeta+Shift+z");
+  await expect(quote.locator('[data-heading-level="1"]')).toContainText("续行");
+});
+
 test("HTML block paste and copy retain supported layout and keep indentation out of headings", async ({ page }) => {
   await page.goto(file);
   const view = body(page);
   await expect(preview(page, 1)).toBeInViewport();
   await view.press("ControlOrMeta+a");
-  await paste(view, '<p style="text-align:right;text-indent:2em"><strong>正文</strong></p><h2 style="text-align:center">标题</h2>');
+  await pasteClipboard(view, { html: '<p style="text-align:right;text-indent:2em"><strong>正文</strong></p><h2 style="text-align:center">标题</h2>' });
   const headingEditor = view.locator('[data-block-index="1"] .tiptap');
-  await expect(headingEditor.locator("h3")).toHaveCSS("text-align", "center");
+  const heading = headingEditor.getByRole("heading", { level: 3 });
+  await expect(heading).toHaveJSProperty("tagName", "DIV");
+  await expect(heading).toHaveCSS("text-align", "center");
   await headingEditor.press("Shift+ArrowLeft");
   await expect(layout(page).getByRole("button", { name: "首行缩进" })).toBeDisabled();
   await expect(preview(page, 1).locator("strong")).toHaveText("正文");
@@ -120,14 +143,13 @@ test("HTML block paste and copy retain supported layout and keep indentation out
   await expect(preview(page, 1)).toHaveCSS("text-indent", "32px");
 
   await view.press("ControlOrMeta+a");
-  const html = await view.evaluate((element) => {
-    const data = new DataTransfer();
-    element.dispatchEvent(new ClipboardEvent("copy", { bubbles: true, cancelable: true, clipboardData: data }));
+  const clipboard = await copyClipboard(view);
+  const html = await page.evaluate((html) => {
     const result = document.createElement("template");
-    result.innerHTML = data.getData("text/html");
+    result.innerHTML = html;
     const paragraph = result.content.querySelector("p");
     const heading = result.content.querySelector("h3");
     return [paragraph?.style.textAlign, paragraph?.style.textIndent, heading?.style.textAlign];
-  });
+  }, clipboard.html);
   expect(html).toEqual(["right", "2em", "center"]);
 });

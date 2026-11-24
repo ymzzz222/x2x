@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { useId, type ReactNode } from "react";
-import { sampleSizes, type DocumentSelection, type SampleSize } from "../model/document-model";
+import { useId, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import type { Virtualizer } from "@tanstack/react-virtual";
+import { documentTextCounts, sampleSizes, type DocumentBlock, type DocumentSelection, type SampleSize } from "../model/document-model";
 import styles from "../editor.module.css";
 import { DocumentAction } from "./document-header";
+import headerStyles from "./document-header.module.css";
 
 import type { DocumentRole, OnlineCollaborator } from "../collaboration/model/protocol";
 import type { DocumentSession } from "../model/document-session";
@@ -40,30 +42,110 @@ const pageModes = [
   { value: "read", label: "阅读" },
 ] as const;
 
-export function PreviewSettings({ count, mounted, showInfo, children }: {
-  count: number;
-  mounted: number;
-  showInfo: boolean;
-  children: ReactNode;
+function DocumentTextMetrics({ blocks }: { blocks: readonly DocumentBlock[] }) {
+  const counts = useMemo(() => documentTextCounts(blocks), [blocks]);
+  return <p className={styles.metrics}>总字数 {counts.words.toLocaleString("zh-CN")} · 总字符数 {counts.characters.toLocaleString("zh-CN")}</p>;
+}
+
+export function DocumentInfoAction({ blocks }: { blocks: readonly DocumentBlock[] }) {
+  const id = useId();
+  const trigger = useRef<HTMLButtonElement>(null);
+  const panel = useRef<HTMLElement>(null);
+  const [open, setOpen] = useState(false);
+
+  useLayoutEffect(() => {
+    const button = trigger.current;
+    const bubble = panel.current;
+    if (!open || !button || !bubble) return;
+    const native = typeof bubble.showPopover === "function";
+    const anchored = native && CSS.supports("position-area: inline-end");
+    if (anchored) return;
+
+    function place() {
+      const anchor = button!.getBoundingClientRect();
+      const width = bubble!.offsetWidth;
+      const height = bubble!.offsetHeight;
+      const { clientWidth, clientHeight } = document.documentElement;
+      const gap = 6;
+      const edge = 8;
+      const right = anchor.right + gap;
+      const left = anchor.left - width - gap;
+      const beside = right + width <= clientWidth - edge ? right : left >= edge ? left : null;
+      const below = anchor.bottom + gap;
+      const top = beside !== null ? anchor.top : below + height <= clientHeight - edge ? below : anchor.top - height - gap;
+      bubble!.style.setProperty("--document-info-left", Math.max(edge, Math.min(beside ?? anchor.right - width, clientWidth - width - edge)) + "px");
+      bubble!.style.setProperty("--document-info-top", Math.max(edge, Math.min(top, clientHeight - height - edge)) + "px");
+    }
+
+    function dismissOutside(event: Event) {
+      if (event.target instanceof Node && !button!.contains(event.target) && !bubble!.contains(event.target)) setOpen(false);
+    }
+
+    place();
+    window.addEventListener("resize", place);
+    document.addEventListener("scroll", place, true);
+    if (!native) {
+      document.addEventListener("pointerdown", dismissOutside);
+      document.addEventListener("focusin", dismissOutside);
+    }
+    return () => {
+      window.removeEventListener("resize", place);
+      document.removeEventListener("scroll", place, true);
+      if (!native) {
+        document.removeEventListener("pointerdown", dismissOutside);
+        document.removeEventListener("focusin", dismissOutside);
+      }
+    };
+  }, [open]);
+
+  return <DocumentAction>
+    <button type="button" ref={trigger} className={headerStyles.documentInfoTrigger}
+      popoverTarget={id} aria-controls={id} aria-expanded={open}
+      onClick={() => {
+        if (typeof panel.current?.showPopover !== "function") setOpen(!open);
+      }}
+      onKeyDown={(event) => {
+        if (event.key !== "Escape" || !open || typeof panel.current?.showPopover === "function") return;
+        event.preventDefault();
+        event.stopPropagation();
+        setOpen(false);
+      }}>
+      文档信息<span aria-hidden="true">›</span>
+    </button>
+    <section id={id} ref={panel} popover="auto" aria-label="文档信息" className={headerStyles.documentInfoPanel}
+      data-open={open} onToggle={(event) => setOpen(event.newState === "open")}>
+      {open && <DocumentTextMetrics blocks={blocks} />}
+    </section>
+  </DocumentAction>;
+}
+
+function PreviewSettings({ blocks, mounted, showInfo = true, children }: {
+  blocks: readonly DocumentBlock[];
+  mounted?: number;
+  showInfo?: boolean;
+  children?: ReactNode;
 }) {
+  const [open, setOpen] = useState(false);
   return (
-    <details className={styles.previewSettings} onKeyDown={(event) => {
+    <details className={styles.previewSettings} onToggle={(event) => setOpen(event.currentTarget.open)} onKeyDown={(event) => {
       if (event.key !== "Escape" || !event.currentTarget.open) return;
+      event.preventDefault();
       event.stopPropagation();
       event.currentTarget.open = false;
       event.currentTarget.querySelector("summary")?.focus();
     }}>
       <summary onMouseDown={(event) => event.preventDefault()}>预览设置</summary>
       <div className={styles.previewSettingsPanel}>
-        {showInfo && <p className={styles.metrics}>{count.toLocaleString("zh-CN")} 段 · 挂载 {mounted} 段</p>}
+        {showInfo && mounted !== undefined && <p className={styles.metrics}>{blocks.length.toLocaleString("zh-CN")} 段 · 挂载 {mounted} 段</p>}
+        {open && showInfo && <DocumentTextMetrics blocks={blocks} />}
         {children}
       </div>
     </details>
   );
 }
 
-export function EditorPreviewControls({ count, mounted, showInfo, size, mode, onJump, simulate, canSimulate }: {
-  count: number;
+export function EditorPreviewControls({ blocks, mounted, showInfo, size, mode, onJump, simulate, canSimulate }: {
+  blocks: readonly DocumentBlock[];
   mounted: number;
   showInfo: boolean;
   size?: SampleSize;
@@ -72,9 +154,9 @@ export function EditorPreviewControls({ count, mounted, showInfo, size, mode, on
   simulate?: () => void;
   canSimulate: boolean;
 }) {
-  return <PreviewSettings count={count} mounted={mounted} showInfo={showInfo}>
+  return <PreviewSettings blocks={blocks} mounted={mounted} showInfo={showInfo}>
     {size && <SampleControls size={size} mode={mode} />}
-    <DocumentJump count={count} onJump={onJump} />
+    <DocumentJump count={blocks.length} onJump={onJump} />
     {simulate && <button type="button" onMouseDown={(event) => event.preventDefault()} onClick={simulate} disabled={!canSimulate}>
       模拟协作者编辑
     </button>}
@@ -174,6 +256,8 @@ export function writePaperWidth(size: SampleSize | string, width: PaperWidth) {
 }
 
 
+export type ViewportAnchor = { blockId: string; withinRow?: number; remeasure?: boolean; keepMounted?: boolean };
+
 export function getViewportAnchor(viewport: HTMLElement | null) {
   if (!viewport) return null;
   const { top, bottom } = viewport.getBoundingClientRect();
@@ -187,7 +271,26 @@ export function getViewportAnchor(viewport: HTMLElement | null) {
   return null;
 }
 
-export function remeasureViewportRows(
+export function getFocusedFoldAnchor(viewport: HTMLElement | null, blockId: string): ViewportAnchor | null {
+  const button = document.activeElement;
+  if (!viewport || !button?.hasAttribute("data-document-fold") || !viewport.contains(button)) return null;
+  const row = button.closest<HTMLElement>("[data-block-index]");
+  if (row?.id !== blockId) return null;
+  return { blockId, withinRow: viewport.getBoundingClientRect().top - row.getBoundingClientRect().top, keepMounted: true };
+}
+
+export function restoreViewportAnchor(anchor: ViewportAnchor, row: number | undefined, viewport: HTMLElement | null,
+  virtualizer: Pick<Virtualizer<HTMLDivElement, Element>, "resizeItem" | "getOffsetForIndex" | "scrollToOffset">) {
+  if (anchor.remeasure) remeasureViewportRows(viewport, virtualizer.resizeItem);
+  if (row === undefined || !anchor.withinRow) return false;
+  const offset = virtualizer.getOffsetForIndex(row, "start");
+  if (!offset) return false;
+  const height = document.getElementById(anchor.blockId)?.getBoundingClientRect().height ?? Infinity;
+  virtualizer.scrollToOffset(Math.max(0, offset[0] + Math.min(anchor.withinRow, Math.max(0, height - 1))));
+  return true;
+}
+
+function remeasureViewportRows(
   viewport: HTMLElement | null,
   resize: (index: number, height: number) => void,
 ) {

@@ -8,6 +8,12 @@ export type SampleSize = (typeof sampleSizes)[number];
 export const headingLevels = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
 export type HeadingLevel = (typeof headingLevels)[number];
 
+export function readHeadingNumberStart(value: unknown) {
+  if (typeof value !== "number" && (typeof value !== "string" || !/^\d+$/.test(value))) return;
+  const start = Number(value);
+  return Number.isSafeInteger(start) && start >= 0 && start <= 9_999_999 ? start : undefined;
+}
+
 export function headingPresentation(level: HeadingLevel) {
   const depth = level + 1;
   const attributes = { "data-heading-level": level };
@@ -20,17 +26,44 @@ export type DocumentBlock = {
   text: string;
   kind: "paragraph" | "heading";
   level?: HeadingLevel;
+  numberStart?: number;
+  quoteGroup?: string;
+  parentId?: string | null;
   inline?: readonly InlineRun[];
   layout?: ParagraphLayout | null;
   structure?: PMNode;
 };
 
+type TextCounts = { words: number; characters: number };
+const blockTextCounts = new WeakMap<DocumentBlock, TextCounts>();
+let wordSegmenter: Intl.Segmenter | undefined;
+
+export function documentTextCounts(blocks: readonly DocumentBlock[]): TextCounts {
+  const segmenter = wordSegmenter ??= new Intl.Segmenter("zh-CN", { granularity: "word" });
+  let words = 0;
+  let characters = 0;
+  for (const block of blocks) {
+    let counts = blockTextCounts.get(block);
+    if (!counts) {
+      let blockWords = 0;
+      for (const { segment, isWordLike } of segmenter.segment(block.text)) {
+        if (isWordLike || /[\p{Extended_Pictographic}\p{Regional_Indicator}\u20E3]/u.test(segment)) blockWords++;
+      }
+      counts = { words: blockWords, characters: block.text.replace(/\s/g, "").length };
+      blockTextCounts.set(block, counts);
+    }
+    words += counts.words;
+    characters += counts.characters;
+  }
+  return { words, characters };
+}
+
 export function isBlankParagraph(block: DocumentBlock) {
-  return block.kind === "paragraph" && !block.structure && !block.text.trim();
+  return block.kind === "paragraph" && !block.structure && !block.quoteGroup && !block.text.trim();
 }
 
 export type DocumentPosition = { blockId: string; offset: number };
-export type DocumentSelection = { anchor: DocumentPosition; focus: DocumentPosition };
+export type DocumentSelection = { anchor: DocumentPosition; focus: DocumentPosition; wholeBlocks?: boolean };
 
 type SelectionRange = {
   startIndex: number;
@@ -142,6 +175,7 @@ export function selectDocument(blocks: readonly DocumentBlock[]): DocumentSelect
   return {
     anchor: { blockId: first?.id ?? "", offset: 0 },
     focus: { blockId: last?.id ?? "", offset: last?.text.length ?? 0 },
+    wholeBlocks: true,
   };
 }
 

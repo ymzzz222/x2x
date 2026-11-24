@@ -23,10 +23,30 @@
   }
 }
 
+:root select:not([multiple]):is(:not([size]), [size="1"]) {
+  appearance: none;
+  padding-inline-end: 2rem;
+  background-image:
+    linear-gradient(45deg, transparent 38%, currentColor 42% 58%, transparent 62%),
+    linear-gradient(135deg, transparent 38%, currentColor 42% 58%, transparent 62%);
+  background-position: right 1rem center, right .75rem center;
+  background-repeat: no-repeat;
+  background-size: .3rem .3rem;
+}
+
+:root select:not([multiple]):is(:not([size]), [size="1"]):dir(rtl) {
+  background-position: left .75rem center, left 1rem center;
+}
+
 @media (forced-colors: active) {
   :root {
     --background: Canvas;
     --foreground: CanvasText;
+  }
+
+  :root select:not([multiple]):is(:not([size]), [size="1"]) {
+    appearance: auto;
+    background-image: none;
   }
 }
 

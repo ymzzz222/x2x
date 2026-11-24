@@ -2,17 +2,19 @@ import { prosemirrorToYXmlFragment, ySyncPluginKey, yXmlFragmentToProseMirrorRoo
 import { Fragment, type Node } from "@tiptap/pm/model";
 import { Transform } from "@tiptap/pm/transform";
 import * as Y from "yjs";
-import { planRangeEdit, type RangeEdit } from "./document-clipboard";
+import { applyClipboardRelations, planRangeEdit, type RangeEdit } from "./document-clipboard";
 import { documentSchema, positionAtOffset, sampleContent } from "./document-editor-schema";
 import type { FormatMark, MarkValue } from "./document-format";
+import { DocumentHistory, type DocumentLocation as Location } from "./document-history";
 import { getSelectionRange, type DocumentBlock, type DocumentMatch, type DocumentPosition, type DocumentSelection } from "./document-model";
 import { currentAlignment, selectedParagraphs, type ParagraphCommand, type ParagraphLayout } from "./document-paragraph";
-import { projectBlock, readBlock, replaceInlineText, type TextSpan } from "./document-projection";
-import { changeListType, convertBlock, isList, listSettings, listTransaction, listWindows, listWindowSize, visibleText, type BlockKind, type ListCommand, type ListKey } from "./document-structure";
+import { documentParents, headingNumbers, projectBlock, quoteGroups, readBlock, refreshOrderedListStarts, replaceInlineText, withHeadingNumber, writeBlockContent, writeInitialBlock, type TextSpan } from "./document-projection";
+import { getDocumentHierarchy, indentationParent, mergedDescendantParents, preserveHeadingHierarchy } from "./document-outline";
+import { convertMixedHierarchy } from "./document-mixed-conversion";
+import { changeListType, convertBlocks, convertNestedText, isList, listSettings, listTransaction, listWindows, listWindowSize, visibleText, type BlockKind, type ListCommand, type ListKey } from "./document-structure";
 
 type ParagraphElement = Y.XmlElement<ParagraphLayout>;
 type BlockKey = Pick<DocumentBlock, "id" | "kind" | "level">;
-type Location = { position: DocumentPosition; editing: boolean; selection?: DocumentSelection; restoreActiveSelection?: boolean };
 
 const structuralEdit = Symbol("Edit document structure");
 const incomingUpdate = Symbol("Apply shared document update");
@@ -21,34 +23,16 @@ export function getParagraphFragment(doc: Y.Doc, id: string) {
   return doc.getMap<Y.XmlFragment>("paragraphs").get(id);
 }
 
-function writeBlock(fragment: Y.XmlFragment, block: DocumentBlock) {
-  const element = new Y.XmlElement(block.kind);
-  if (block.kind === "heading") {
-    // The XML type supports numeric attributes, but the default declaration only lists strings.
-    (element as unknown as Y.XmlElement<{ level: number }>).setAttribute("level", block.level ?? 1);
-  }
-  if (block.layout?.textAlign) element.setAttribute("textAlign", block.layout.textAlign);
-  if (block.layout?.firstLineIndent && block.kind === "paragraph") {
-    (element as ParagraphElement).setAttribute("firstLineIndent", true);
-  }
-  if (block.text) {
-    const text = new Y.XmlText();
-    element.insert(0, [text]);
-    text.insert(0, block.text);
-  }
-  fragment.delete(0, fragment.length);
-  fragment.insert(0, [element]);
-}
-
 export class DocumentSession {
   private listeners = new Set<() => void>();
   private doc = new Y.Doc();
   private order = this.doc.getArray<BlockKey>("order");
   private paragraphs = this.doc.getMap<Y.XmlFragment>("paragraphs");
+  private headingNumbers = headingNumbers(this.doc);
+  private quoteGroups = quoteGroups(this.doc);
+  private parents = documentParents(this.doc);
   private fragmentIds = new WeakMap<object, string>();
-  private manager?: Y.UndoManager;
-  private location?: Location;
-  private pendingCaret?: Map<unknown, unknown>;
+  private history?: DocumentHistory;
   private inserted = 0;
   constructor(private blocks: DocumentBlock[], private shared = false) {}
   static fromUpdates(updates: readonly Uint8Array[]) {
@@ -92,31 +76,21 @@ export class DocumentSession {
   };
 
   prepare() {
-    if (this.manager) return;
+    if (this.history) return;
     this.doc.transact(() => {
       this.order.insert(0, this.blocks.map(({ id, kind, level }) => level ? { id, kind, level } : { id, kind }));
       for (const block of this.blocks) {
         const fragment = new Y.XmlFragment();
         this.paragraphs.set(block.id, fragment);
         this.fragmentIds.set(fragment, block.id);
-        if (block.structure) prosemirrorToYXmlFragment(block.structure, fragment);
-        else writeBlock(fragment, block);
+        writeInitialBlock(fragment, block);
+        if (block.quoteGroup) this.quoteGroups.set(block.id, block.quoteGroup);
+        if (block.parentId !== undefined) this.parents.set(block.id, block.parentId);
       }
     });
-    const manager = new Y.UndoManager([this.order, this.paragraphs], {
+    this.history = new DocumentHistory(new Y.UndoManager([this.order, this.paragraphs, this.headingNumbers, this.quoteGroups, this.parents], {
       trackedOrigins: new Set([ySyncPluginKey, structuralEdit]),
-    });
-    this.manager = manager;
-    manager.on("stack-item-added", ({ stackItem, origin }) => {
-      if (origin === structuralEdit || origin === ySyncPluginKey) {
-        stackItem.meta.set("before", this.location);
-        stackItem.meta.set("after", this.location);
-        if (origin === ySyncPluginKey) this.pendingCaret = stackItem.meta;
-      }
-    });
-    manager.on("stack-item-updated", ({ stackItem, origin }) => {
-      if (origin === ySyncPluginKey) this.pendingCaret = stackItem.meta;
-    });
+    }), ySyncPluginKey);
     this.doc.on("afterTransaction", this.updateBlocks);
   }
 
@@ -125,19 +99,22 @@ export class DocumentSession {
   }
 
   setLocation(location: Location) {
-    this.location = location;
-    this.pendingCaret?.set("after", location);
-    this.pendingCaret = undefined;
+    this.history?.setLocation(location);
   }
 
   endTyping() {
-    this.manager?.stopCapturing();
-    this.pendingCaret = undefined;
+    this.history?.endTyping();
+  }
+
+  fold(id: string, folded: boolean) {
+    this.prepare();
+    this.history!.fold(id, folded);
   }
 
   contentFor = (block: DocumentBlock) => {
     const fragment = this.fragmentFor(block.id);
-    return block.structure ?? (fragment ? yXmlFragmentToProseMirrorRootNode(fragment, documentSchema()) : sampleContent(block));
+    const content = block.structure ?? (fragment ? yXmlFragmentToProseMirrorRootNode(fragment, documentSchema()) : sampleContent(block));
+    return block.numberStart === undefined ? content : withHeadingNumber(content, block.numberStart);
   };
 
   replaceRange(range: DocumentSelection, operation: RangeEdit, { editing, clipboard }: { editing: boolean; clipboard?: boolean }) {
@@ -146,6 +123,15 @@ export class DocumentSession {
     const { startIndex, endIndex, startOffset, endOffset } = bounds;
     const first = this.blocks[startIndex];
     const last = this.blocks[endIndex];
+    if (operation === "split" && first === last && startOffset === 0 && endOffset === 0 &&
+      !first.structure && (first.kind === "paragraph" || first.text.length > 0)) {
+      const location = { position: range.focus, editing: true };
+      this.splice(startIndex, 0, [{
+        id: this.nextBlockId(), node: documentSchema().nodes.paragraph.create(), quoteGroup: first.quoteGroup,
+        parentId: first.parentId,
+      }], location, location);
+      return location;
+    }
     const firstContent = this.contentFor(first);
     const lastContent = first === last ? firstContent : this.contentFor(last);
     const { nodes, caret, offset } = planRangeEdit(firstContent, lastContent, startOffset, endOffset, operation);
@@ -156,83 +142,174 @@ export class DocumentSession {
     const before = {
       position: editing ? range.focus : start,
       editing,
-      selection: clipboard && selected ? range : undefined,
+      selection: selected && (clipboard || typeof operation !== "string") ? range : undefined,
     };
     const after = { position: destination, editing: editing || operation !== "delete" || clipboard === true };
-    this.splice(startIndex, endIndex - startIndex + 1, replacement, before, after);
+    const relations = typeof operation === "object" ? operation.relations : undefined;
+    const pasted = relations ? applyClipboardRelations(replacement, caret - relations.length + 1, relations, () => this.nextBlockId()) : replacement;
+    const parents = operation === "delete" && startIndex < endIndex && endOffset === 0
+      ? mergedDescendantParents(this.blocks, startIndex, endIndex, destination.blockId) : undefined;
+    this.splice(startIndex, endIndex - startIndex + 1, pasted, before, after, parents);
     return after;
   }
 
-  private splice(index: number, count: number, replacement: { id: string; node: Node }[], before: Location, after: Location) {
+  private splice(index: number, count: number, replacement: { id: string; node: Node; quoteGroup?: string | null; parentId?: string | null }[],
+    before: Location, after: Location, parentChanges?: ReadonlyMap<string, string | null>, historyGroup?: string) {
     this.prepare();
     const schema = documentSchema();
     const order: BlockKey[] = replacement.map(({ id, node }) => node.type === schema.nodes.heading
       ? { id, kind: "heading", level: node.attrs.level }
       : { id, kind: "paragraph" });
     const previous = this.blocks[index];
+    const following = count > 0 && replacement.length > 0 &&
+      this.blocks[index + count - 1]?.structure?.firstChild?.type.name === "orderedList" &&
+      replacement.at(-1)?.node.type.name !== "orderedList" ? this.blocks[index + count]?.id : undefined;
     const structureChanged = count !== 1 || replacement.length !== 1 ||
       previous.kind !== order[0].kind || previous.level !== order[0].level;
     this.edit(before, after, () => {
       const kept = new Set(replacement.map(({ id }) => id));
       for (const block of this.blocks.slice(index, index + count)) {
-        if (!kept.has(block.id)) this.paragraphs.delete(block.id);
+        if (kept.has(block.id)) continue;
+        this.paragraphs.delete(block.id);
+        if (this.headingNumbers.has(block.id)) this.headingNumbers.delete(block.id);
+        if (this.quoteGroups.has(block.id)) this.quoteGroups.delete(block.id);
+        if (this.parents.has(block.id)) this.parents.delete(block.id);
       }
-      for (const { id, node } of replacement) {
+      for (const { id, node, quoteGroup, parentId } of replacement) {
         let fragment = this.paragraphs.get(id);
         if (!fragment) {
           fragment = new Y.XmlFragment();
           this.paragraphs.set(id, fragment);
           this.fragmentIds.set(fragment, id);
+          const group = quoteGroup === undefined && count ? previous?.quoteGroup : quoteGroup;
+          if (group) this.quoteGroups.set(id, group);
+          const parent = parentId === undefined && count ? previous?.parentId : parentId;
+          if (parent !== undefined) this.parents.set(id, parent);
+        } else {
+          if (parentId !== undefined && this.parents.get(id) !== parentId) this.parents.set(id, parentId);
+          if (quoteGroup === null) this.quoteGroups.delete(id);
+          else if (quoteGroup && this.quoteGroups.get(id) !== quoteGroup) this.quoteGroups.set(id, quoteGroup);
         }
-        prosemirrorToYXmlFragment(schema.topNodeType.create(null, node), fragment);
+        writeBlockContent(id, fragment, schema.topNodeType.create(null, node));
       }
+      if (parentChanges) for (const [id, parent] of parentChanges) this.parents.set(id, parent);
       if (structureChanged) {
         this.order.delete(index, count);
         this.order.insert(index, order);
       }
-      if (replacement.some(({ node }) => isList(node)) || previous?.structure || count > 1) this.refreshOrderedLists();
-    });
+      if (replacement.some(({ node }) => isList(node)) || previous?.structure || count > 1) this.refreshOrderedLists(following);
+    }, historyGroup);
   }
 
-  editBlockType(range: DocumentSelection, target: BlockKind, { insertAt, stripPrefix = 0 }: {
+  editBlockType(range: DocumentSelection, target: BlockKind, { insertAt, stripPrefix = 0, toggleSameType = false, head, folded, headingShortcut }: {
     insertAt?: number;
     stripPrefix?: number;
-  } = {}) {
+    toggleSameType?: boolean;
+    head?: number;
+    folded?: ReadonlySet<string>;
+    headingShortcut?: boolean;
+  } = {}): Location | undefined {
     const bounds = getSelectionRange(this.blocks, range);
     if (!bounds) return;
-    const { startIndex, endIndex, endOffset } = bounds;
-    const schema = documentSchema();
-    const before = { position: range.focus, editing: range.anchor.blockId === range.focus.blockId, selection: range, restoreActiveSelection: true };
-    const last = endIndex > startIndex && !endOffset ? endIndex - 1 : endIndex;
+    const { startIndex, endIndex, startOffset, endOffset } = bounds;
+    const before: Location = { position: range.focus, editing: range.anchor.blockId === range.focus.blockId, selection: range, restoreActiveSelection: true };
+    const last = endIndex > startIndex && !endOffset && !range.wholeBlocks ? endIndex - 1 : endIndex;
     const index = insertAt ?? startIndex;
     const affected = insertAt === undefined ? this.blocks.slice(index, last + 1) : [];
-    const blank = schema.topNodeType.createAndFill()!;
-    let preceding = this.blocks[index - 1]?.structure?.lastChild;
-    const replacement: { id: string; node: Node }[] = [];
-    let changed = !affected.length;
-
-    for (const block of affected.length ? affected : [null]) {
-      const doc = block ? this.contentFor(block) : blank;
-      const resume = target.type === "orderedList" && target.start === undefined && doc.firstChild?.type.name !== "orderedList"
-        ? { ...target, resumeNumbering: true, start: preceding?.type.name === "orderedList" ? Number(preceding.attrs.start) + preceding.childCount : 1 }
-        : target;
-      const nodes = convertBlock(doc, resume, stripPrefix);
-      if (nodes.length !== doc.childCount || nodes.some((node, i) => !node.eq(doc.child(i)))) changed = true;
-      nodes.forEach((node, i) => replacement.push({ id: i === 0 && block ? block.id : this.nextBlockId(), node }));
-      preceding = nodes.at(-1) ?? undefined;
+    const preserveRange = insertAt === undefined && !before.editing && target.type !== "horizontalRule";
+    const wholeRows = affected.length > 0 && startOffset === 0 &&
+      (endIndex > last || endOffset >= affected.at(-1)!.text.length) &&
+      (startIndex !== endIndex || startOffset !== endOffset);
+    const mixed = convertMixedHierarchy(affected, target, {
+      content: this.contentFor, nextId: () => this.nextBlockId(), startOffset,
+      endOffset: endIndex > last ? affected.at(-1)?.text.length ?? 0 : endOffset, wholeRows, toggleSameType,
+    });
+    const selectedText = toggleSameType && head !== undefined && startIndex === endIndex && startOffset !== endOffset
+      && affected.length === 1 && !affected[0].structure;
+    if (!mixed && affected.length === 1 && affected[0].structure && head !== undefined) {
+      const block = affected[0];
+      const content = this.contentFor(block);
+      const nested = convertNestedText(content, head, target, stripPrefix, toggleSameType);
+      if (nested && !nested.eq(content)) {
+        const after = { position: { blockId: block.id, offset: Math.max(0, range.focus.offset - stripPrefix) }, editing: true };
+        this.prepare();
+        this.edit(before, after, () => {
+          writeBlockContent(block.id, this.paragraphs.get(block.id)!, nested);
+          this.refreshOrderedLists();
+        });
+        return after;
+      }
     }
+    if (!mixed && target.type === "blockquote" && (affected.length > 1 || selectedText || (toggleSameType && affected[0]?.quoteGroup))) {
+      const group = affected[0].quoteGroup;
+      const unwrap = toggleSameType && group && affected.every((block) => block.quoteGroup === group);
+      const ids = affected.filter((block) => folded?.has(block.id)).map((block) => block.id);
+      const after: Location = { ...before, selection: preserveRange || selectedText ? range : undefined,
+        foldChange: ids.length && !unwrap ? { ids, folded: true } : undefined };
+      if (after.foldChange) before.foldChange = { ids, folded: false };
+      this.prepare();
+      this.edit(before, after, () => {
+        const next = unwrap ? undefined : this.nextBlockId();
+        for (const block of affected) {
+          if (next) this.quoteGroups.set(block.id, next);
+          else this.quoteGroups.delete(block.id);
+        }
+      });
+      return after;
+    }
+    const { replacement, changed, focusOffset, mapPosition, splitRows } = mixed ?? convertBlocks(affected, target, {
+      content: this.contentFor, blank: documentSchema().topNodeType.createAndFill()!, nextId: () => this.nextBlockId(),
+      preceding: this.blocks[index - 1]?.structure?.lastChild ?? undefined,
+      single: before.editing && affected.length === 1, wholeRows, toggleSameType, stripPrefix, head, focusOffset: range.focus.offset,
+    });
     if (!changed) return;
     const destination = replacement.find(({ id }) => id === range.focus.blockId) ?? replacement.at(-1)!;
     const fromRule = target.type === "horizontalRule";
     const chosen = fromRule ? replacement.at(-1)! : destination;
-    const offset = fromRule || insertAt !== undefined || stripPrefix ? 0 : Math.min(range.focus.offset, visibleText(chosen.node).length);
-    const after = { position: { blockId: chosen.id, offset }, editing: true };
-    this.splice(index, affected.length, replacement, before, after);
+    const offset = fromRule || insertAt !== undefined || stripPrefix ? 0 : Math.min(focusOffset, visibleText(chosen.node).length);
+    const after: Location = preserveRange || (startOffset !== endOffset && splitRows && !fromRule)
+      ? { ...before, editing: false, position: mapPosition(range.focus),
+        selection: { ...range, anchor: mapPosition(range.anchor), focus: mapPosition(range.focus) } }
+      : { position: { blockId: chosen.id, offset }, editing: true };
+    if (folded?.size) {
+      const keptHeadings = new Set(replacement.filter(({ node }) => node.type.name === "heading").map(({ id }) => id));
+      const opened = affected.filter(({ id }) => folded.has(id) && !keptHeadings.has(id)).map(({ id }) => id);
+      if (opened.length) before.foldChange = after.foldChange = { ids: opened, folded: false };
+    }
+    const next = replacement[0]?.node;
+    const parentChanges = affected.length === 1 && replacement.length === 1
+      ? preserveHeadingHierarchy(this.blocks, index, next.type.name === "heading" ? next.attrs.level : undefined)
+      : undefined;
+    const historyGroup = headingShortcut && preserveRange && target.type === "heading" && !splitRows && !after.foldChange &&
+      replacement.every(({ node }) => node.type.name === "heading")
+      ? JSON.stringify(range) : undefined;
+    this.splice(index, affected.length, replacement, before, after, parentChanges, historyGroup);
     return after;
   }
 
   private nextBlockId() {
     return "inserted-" + (this.shared ? crypto.randomUUID() : ++this.inserted);
+  }
+
+  indentBlock(position: DocumentPosition, lift: boolean, headingParentOnly = false, selection?: DocumentSelection) {
+    const parent = indentationParent(this.blocks, position.blockId, lift, headingParentOnly);
+    if (parent === undefined) return false;
+    this.prepare();
+    const location = { position, editing: true, selection, restoreActiveSelection: Boolean(selection) };
+    this.edit(location, location, () => this.parents.set(position.blockId, parent));
+    return true;
+  }
+
+  applyMarkdown(position: DocumentPosition, head: number, target: BlockKind) {
+    const block = this.blocks.find(({ id }) => id === position.blockId);
+    const fragment = this.paragraphs.get(position.blockId);
+    if (!block || !fragment) return;
+    const content = this.contentFor(block);
+    const literal = new Transform(content).insert(head, content.type.schema.text(" ")).doc;
+    this.doc.transact(() => prosemirrorToYXmlFragment(literal, fragment), ySyncPluginKey);
+    const focus = { blockId: position.blockId, offset: position.offset + 1 };
+    this.setLocation({ position: focus, editing: true });
+    return this.editBlockType({ anchor: focus, focus }, target, { stripPrefix: focus.offset });
   }
 
   listEdit(position: DocumentPosition, key: ListKey, anchor: number, head: number) {
@@ -294,20 +371,8 @@ export class DocumentSession {
     return true;
   }
 
-  private refreshOrderedLists() {
-    let next = 1;
-    for (const { id } of this.order.toArray()) {
-      const root = this.paragraphs.get(id)?.get(0);
-      if (!(root instanceof Y.XmlElement) || root.nodeName !== "orderedList") {
-        next = 1;
-        continue;
-      }
-      const list = root as Y.XmlElement<{ start: number; numberMode: string }>;
-      const continuing = list.getAttribute("numberMode") === "continue";
-      const start = Number(list.getAttribute("start")) || 1;
-      if (continuing && start !== next) list.setAttribute("start", next);
-      next = (continuing ? next : start) + list.length;
-    }
+  private refreshOrderedLists(following?: string) {
+    refreshOrderedListStarts(this.order.toArray(), this.paragraphs, following);
   }
 
   setListOptions(position: DocumentPosition, command: ListCommand, nativeHead?: number) {
@@ -316,7 +381,10 @@ export class DocumentSession {
     if (!block?.structure) return false;
     const doc = block.structure;
     const head = nativeHead ?? positionAtOffset(doc, position.offset);
-    const next = listSettings(doc, head, command, this.blocks[index - 1]?.structure?.lastChild ?? undefined);
+    const previous = "start" in command && command.start === "continue"
+      ? this.blocks.slice(0, index).findLast((candidate) => candidate.structure?.lastChild?.type.name === "orderedList")
+      : undefined;
+    const next = listSettings(doc, head, command, previous?.structure?.lastChild ?? undefined);
     if (next.eq(doc)) return false;
     this.prepare();
     const location = { position, editing: true };
@@ -343,10 +411,15 @@ export class DocumentSession {
       (from <= beforeIndex && beforeIndex <= to)) return;
     this.prepare();
     const moved = this.order.slice(from, to);
+    const destination = beforeIndex > to ? beforeIndex - moved.length : beforeIndex;
+    const remaining = this.blocks.slice(0, from).concat(this.blocks.slice(to));
+    const reordered = remaining.slice(0, destination).concat(this.blocks.slice(from, to), remaining.slice(destination));
+    const { parentChanges } = getDocumentHierarchy(reordered, getDocumentHierarchy(this.blocks).branches);
     const location = { position: { blockId: moved[0].id, offset: 0 }, editing: false };
     this.edit(location, location, () => {
       this.order.delete(from, to - from);
-      this.order.insert(beforeIndex > to ? beforeIndex - moved.length : beforeIndex, moved);
+      this.order.insert(destination, moved);
+      for (const [id, parent] of parentChanges) this.parents.set(id, parent);
       this.refreshOrderedLists();
     });
     return location;
@@ -380,7 +453,7 @@ export class DocumentSession {
     this.prepare();
     const location = { position: selection.focus, selection, editing, restoreActiveSelection: true };
     this.edit(location, location, () => {
-      for (const { id, content } of updates) prosemirrorToYXmlFragment(content, this.paragraphs.get(id)!);
+      for (const { id, content } of updates) writeBlockContent(id, this.paragraphs.get(id)!, content);
     });
     return true;
   }
@@ -440,44 +513,34 @@ export class DocumentSession {
     return count;
   }
 
-  private edit(before: Location, after: Location, apply: () => void) {
-    this.endTyping();
-    this.setLocation(before);
-    const historyLength = this.manager?.undoStack.length ?? 0;
-    this.doc.transact(apply, structuralEdit);
-    if (this.manager && this.manager.undoStack.length > historyLength) {
-      const meta = this.manager.undoStack.at(-1)!.meta;
-      meta.set("before", before);
-      meta.set("after", after);
-    }
-    this.endTyping();
+  private edit(before: Location, after: Location, apply: () => void, group?: string) {
+    this.history!.edit(before, after, () => this.doc.transact(apply, structuralEdit), group);
   }
 
   undo(redo: boolean) {
-    this.endTyping();
-    const manager = this.manager;
-    if (!manager) return;
-    const entry = redo ? manager.redo() : manager.undo();
-    if (!entry) return;
-    const inverse = (redo ? manager.undoStack : manager.redoStack).at(-1);
-    inverse?.meta.set("before", entry.meta.get("before"));
-    inverse?.meta.set("after", entry.meta.get("after"));
-    return entry.meta.get(redo ? "after" : "before") as Location | undefined;
+    return this.history?.undo(redo);
   }
 
   destroy() {
     this.doc.off("afterTransaction", this.updateBlocks);
-    this.manager?.destroy();
+    this.history?.destroy();
     this.doc.destroy();
   }
 
   private updateBlocks = (transaction: Y.Transaction) => {
     const changed = new Set<string>();
+    let structureChanged = transaction.changed.has(this.order);
+    for (const [type, keys] of transaction.changed) {
+      if (Object.is(type, this.paragraphs)) structureChanged = true;
+      if (Object.is(type, this.headingNumbers) || Object.is(type, this.quoteGroups) || Object.is(type, this.parents)) {
+        for (const id of keys) if (id !== null) changed.add(id);
+      }
+    }
     for (const fragment of transaction.changedParentTypes.keys()) {
       const id = this.fragmentIds.get(fragment);
       if (id) changed.add(id);
     }
-    if (transaction.changed.has(this.order) || [...transaction.changed.keys()].some((type) => Object.is(type, this.paragraphs))) {
+    if (structureChanged) {
       const previous = new Map(this.blocks.map((block) => [block.id, block]));
       this.blocks = this.order.toArray().map((key) => {
         const fragment = this.paragraphs.get(key.id)!;

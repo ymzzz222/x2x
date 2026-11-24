@@ -43,6 +43,7 @@ type Drag = {
   active: boolean;
   frame: number;
   focus?: DocumentPosition;
+  sampled?: { x: number; y: number; scrollTop: number };
 };
 
 export function useDocumentSelection(
@@ -63,6 +64,10 @@ export function useDocumentSelection(
     if (scroll && distance) {
       viewport.scrollTop += Math.sign(distance) * Math.min(36, Math.ceil(Math.abs(distance) / 3));
     }
+    const scrollTop = viewport.scrollTop;
+    if (scroll) dragging.frame = requestAnimationFrame(() => update(dragging));
+    const sampled = dragging.sampled;
+    if (sampled?.x === x && sampled.y === y && sampled.scrollTop === scrollTop) return;
 
     const rowY = Math.max(rect.top + 1, Math.min(y, rect.bottom - 1));
     const column = viewport.querySelector("[data-block-index]")?.getBoundingClientRect();
@@ -70,6 +75,7 @@ export function useDocumentSelection(
       const rowX = Math.max(column.left + 1, Math.min(x, column.right - 1));
       const row = document.elementFromPoint(rowX, rowY)?.closest<HTMLElement>("[data-block-index]");
       if (row && viewport.contains(row)) {
+        dragging.sampled = { x, y, scrollTop };
         const focus = positionFromPoint(row, rowX, rowY);
         if (focus.blockId !== dragging.focus?.blockId || focus.offset !== dragging.focus.offset) {
           dragging.focus = focus;
@@ -77,7 +83,6 @@ export function useDocumentSelection(
         }
       }
     }
-    dragging.frame = requestAnimationFrame(() => update(dragging));
   }
 
   return {
@@ -148,11 +153,12 @@ export function useDocumentSelection(
     const current = drag.current;
     if (!current || current.pointerId !== event.pointerId) return;
     cancelAnimationFrame(current.frame);
-    if (current.active && event.type === "pointerup") {
+    // Reuse the rendered endpoint when release did not move the pointer.
+    if (current.active && event.type === "pointerup" &&
+        (current.sampled?.x !== event.clientX || current.sampled.y !== event.clientY)) {
       current.x = event.clientX;
       current.y = event.clientY;
       update(current, false);
-      cancelAnimationFrame(current.frame);
     }
     drag.current = null;
     if (current.viewport.hasPointerCapture(event.pointerId)) current.viewport.releasePointerCapture(event.pointerId);

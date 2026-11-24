@@ -73,7 +73,7 @@ export function DocumentAction({ children }: { children: ReactNode }) {
   if (!actions) return children;
   if (!actions.panel) return null;
   return createPortal(<div className={headerStyles.actionItem} onClickCapture={(event) => {
-    if (event.target instanceof Element && event.target.closest("button:not(:disabled), a[href]")) actions.close();
+    if (event.target instanceof Element && event.target.closest("button:not(:disabled):not([popovertarget]), a[href]")) actions.close();
   }}>{children}</div>, actions.panel);
 }
 

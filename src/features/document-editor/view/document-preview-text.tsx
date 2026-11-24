@@ -1,10 +1,11 @@
 import type { Node } from "@tiptap/pm/model";
 import { Fragment, useLayoutEffect, useRef, type ReactNode } from "react";
 import type { InlineMarks } from "../model/document-format";
-import { headingPresentation, type DocumentBlock, type DocumentMatch } from "../model/document-model";
+import type { DocumentBlock, DocumentMatch } from "../model/document-model";
 import { offsetAt } from "../model/document-editor-schema";
-import { bulletStyle, visibleText } from "../model/document-structure";
+import { defaultOrderedListType, isList, visibleText } from "../model/document-structure";
 import { paragraphLayout, paragraphStyle } from "../model/document-paragraph";
+import { blockDOM, listCounterStyle } from "./document-block-dom";
 
 function formatText(mark: InlineMarks, text: string): ReactNode {
   let result: ReactNode = text;
@@ -25,7 +26,6 @@ export function PreviewText({ block, selection, matches, current }: {
   matches?: readonly DocumentMatch[];
   current?: DocumentMatch;
 }) {
-  const { tag: Element, attributes } = block.kind === "heading" ? headingPresentation(block.level ?? 1) : { tag: "p" as const };
   const currentMark = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
@@ -93,23 +93,25 @@ export function PreviewText({ block, selection, matches, current }: {
     return <>{decorated(from, to)}{from < to && block.text[to - 1] === "\n" && <br aria-hidden="true" />}</>;
   }
 
-  function renderStructure(root: Node, node: Node, start: number): ReactNode {
+  function renderStructure(root: Node, node: Node, start: number, listDepth = 0): ReactNode {
     const name = node.type.name;
     if (node.isTextblock) {
-      const { tag: Element, attributes } = name === "heading"
-        ? headingPresentation(node.attrs.level) : { tag: name === "codeBlock" ? "pre" as const : "p" as const };
+      const Element = name === "codeBlock" ? "pre" : "div";
       const from = offsetAt(root, start + 1);
       const to = from + visibleText(node).length;
-      return <Element key={start} data-block-text="" data-text-offset={from} {...attributes}
+      return <Element key={start} data-block-text="" data-text-offset={from} {...blockDOM(name, node.attrs)}
         style={paragraphStyle(paragraphLayout(node.attrs))}>{renderPreview(from, to)}</Element>;
     }
 
     const children: ReactNode[] = [];
-    node.forEach((child, offset) => children.push(renderStructure(root, child, start + 1 + offset)));
-    if (name === "orderedList") return <ol key={start} start={node.attrs.start} type={node.attrs.type ?? undefined} data-list-type={node.attrs.type ?? undefined}>{children}</ol>;
-    if (name === "bulletList") return <ul key={start} style={{ listStyleType: bulletStyle(node.attrs.marker) ?? undefined }}>{children}</ul>;
-    if (name === "listItem") return <li key={start}>{children}</li>;
-    if (name === "blockquote") return <blockquote key={start}>{children}</blockquote>;
+    const depth = listDepth + Number(isList(node));
+    node.forEach((child, offset) => children.push(renderStructure(root, child, start + 1 + offset, depth)));
+    if (name === "orderedList") return <div key={start} {...blockDOM(name, node.attrs)}
+      data-list-depth-style={node.attrs.type ? undefined : defaultOrderedListType(listDepth)}
+      style={listCounterStyle(node.attrs.start)}>{children}</div>;
+    if (name === "bulletList" || name === "listItem" || name === "blockquote") {
+      return <div key={start} {...blockDOM(name, node.attrs)}>{children}</div>;
+    }
     if (name === "callout") return <aside key={start} data-callout="">{children}</aside>;
     if (name === "columns") return <div key={start} data-columns="">{children}</div>;
     if (name === "column") return <div key={start} data-column="">{children}</div>;
@@ -118,5 +120,6 @@ export function PreviewText({ block, selection, matches, current }: {
   }
 
   if (block.structure) return renderStructure(block.structure, block.structure, -1);
-  return <Element data-block-text="" style={style} {...attributes}>{renderPreview(0, block.text.length)}</Element>;
+  return <div data-block-text="" style={style}
+    {...blockDOM(block.kind, { level: block.level })}>{renderPreview(0, block.text.length)}</div>;
 }

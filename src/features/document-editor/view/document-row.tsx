@@ -4,7 +4,7 @@ import type { ActiveBlockHandle } from "../editing/active-block-editor";
 import { BlockHandles } from "../editing/document-block-tools";
 import type { useDocumentBlocks } from "../editing/use-document-blocks";
 import type { DocumentBlock, DocumentMatch } from "../model/document-model";
-import type { DocumentSection } from "../model/document-outline";
+import type { DocumentBranch, DocumentSection } from "../model/document-outline";
 import type { DocumentSession } from "../model/document-session";
 import { resolveDocumentPosition } from "../collaboration/model/comment-anchor";
 import { collaboratorColor, type OnlineCollaborator } from "../collaboration/model/protocol";
@@ -21,6 +21,7 @@ type RowProps = {
   onClick: (event: MouseEvent<HTMLDivElement>) => void;
   measure: (element: HTMLDivElement | null) => void;
   section?: DocumentSection;
+  branch?: DocumentBranch;
   collapsed: boolean;
   onToggle: (section: DocumentSection) => void;
   selection: [number, number] | null;
@@ -33,27 +34,39 @@ type RowProps = {
   children?: ReactNode;
 };
 
-export function DocumentRow({ item, block, documentIndex, tools, editable, onClick, measure, section, collapsed, onToggle,
+export function DocumentRow({ item, block, documentIndex, tools, editable, onClick, measure, section, branch, collapsed, onToggle,
   selection, matches, currentMatch, showEmptyHint, session, peers, activeEditor, children }: RowProps) {
   const cursors = useMemo(() => peers?.filter((peer) => peer.cursor?.blockId === block.id), [block.id, peers]);
   const fold = section && section.end > section.index + 1 ? section : undefined;
   const showHandles = editable && !tools.textSelected;
+  const number = section?.numbering?.label;
+  const content = children || <div className={styles.preview}>
+    {showEmptyHint && <span className={styles.emptyParagraphHint} aria-hidden="true">输入正文…</span>}
+    <PreviewText block={block} selection={selection} matches={matches} current={currentMatch} />
+  </div>;
   return <div id={block.id} data-index={item.index} data-block-index={documentIndex}
+    data-block-parent={branch?.explicitParent ?? undefined}
     data-row-heading={block.kind === "heading" ? block.level ?? 1 : undefined}
     data-block-selected={tools.selected(documentIndex) || undefined}
     ref={measure}
     onMouseDown={(event) => { if (event.shiftKey && !(event.target as Element).closest(".tiptap")) event.preventDefault(); }}
-    onClick={onClick} className={styles.row} style={{ transform: "translateY(" + item.start + "px)" }}>
+    onClick={onClick} className={number ? `${styles.row} ${styles.numberedHeading}` : styles.row}
+    style={{ transform: "translateY(" + item.start + "px)", insetInlineStart: branch?.indent ? branch.indent * 20 : undefined }}>
     {(showHandles || fold) && <div className={styles.rowControls}>
       {showHandles && <BlockHandles tools={tools} block={block} index={documentIndex} />}
       {fold && <button type="button" className={styles.fold + " " + styles.rowFold}
+        data-document-fold=""
         aria-label={(fold.text || "未命名标题") + " 章节"} aria-expanded={!collapsed}
         onClick={(event) => { event.stopPropagation(); onToggle(fold); }} />}
     </div>}
-    {children || <div className={styles.preview}>
-      {showEmptyHint && <span className={styles.emptyParagraphHint} aria-hidden="true">输入正文…</span>}
-      <PreviewText block={block} selection={selection} matches={matches} current={currentMatch} />
-    </div>}
+    {number && (editable ? <button type="button" className={styles.headingNumber} contentEditable={false} data-heading-number={number}
+        aria-label={"标题编号 " + number} aria-expanded={tools.panel?.id === block.id && tools.panel.mode === "heading-number"}
+        onMouseDown={(event) => event.preventDefault()}
+        onClick={(event) => {
+          event.stopPropagation();
+          tools.open(block.id, "heading-number", event.currentTarget, event.detail === 0 ? "keyboard" : "pointer");
+        }}>{number}</button> : <span className={styles.headingNumber} data-heading-number={number}>{number}</span>)}
+    {content}
     {cursors?.length ? <CollaboratorCursors block={block} session={session} peers={cursors} activeEditor={activeEditor} /> : null}
   </div>;
 }

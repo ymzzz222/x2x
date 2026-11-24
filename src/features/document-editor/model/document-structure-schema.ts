@@ -35,9 +35,12 @@ export const DocumentBulletStyle = Extension.create({
       attributes: {
         numberMode: {
           default: null,
-          parseHTML: (element) => element.getAttribute("data-number-mode") === "continue" ? "continue" : null,
+          parseHTML: (element) => {
+            const mode = element.getAttribute("data-number-mode");
+            return mode === "continue" || mode === "continue-across" ? mode : null;
+          },
           renderHTML: ({ numberMode, type }) => ({
-            ...(numberMode === "continue" ? { "data-number-mode": "continue" } : {}),
+            ...(numberMode === "continue" || numberMode === "continue-across" ? { "data-number-mode": numberMode } : {}),
             ...(type ? { "data-list-type": type } : {}),
           }),
         },

@@ -103,18 +103,22 @@ const backgroundColors = [
 
 const markIcons = { bold: "B", italic: "I", underline: "U", strike: "S", code: "‹/›" };
 
-export function DocumentFormatToolbar({ format, blockType }: {
+export function DocumentFormatToolbar({ format, blockType, indent }: {
   format: ReturnType<typeof useDocumentFormatting>;
   blockType: {
     expanded: boolean;
     open: (target: HTMLButtonElement, keyboard: boolean) => void;
     preview?: (target: HTMLButtonElement, previous: EventTarget | null) => void;
   };
+  indent: { available: boolean; apply: () => void };
 }) {
   const panelId = useId();
+  const indentReason = useId();
+  const boldHint = useId();
   const [active, setActive] = useState("blockType");
   const [nativeNavigation, setNativeNavigation] = useState(false);
   const { selection, marks, paragraph, panel } = format;
+  const mac = typeof navigator !== "undefined" && /Mac|iPhone|iPad/.test(navigator.userAgent);
 
   function navigate(event: KeyboardEvent<HTMLDivElement>) {
     if (panel && event.key === "Escape") {
@@ -174,15 +178,31 @@ export function DocumentFormatToolbar({ format, blockType }: {
             aria-label="首行缩进" title="首行缩进" onClick={() => paragraph.canIndent && format.applyParagraph({ firstLineIndent: !paragraph.indented })}>
             <span aria-hidden="true" className={styles.indentIcon}>⇥</span>
           </button>
+          <span className={styles.hintedControl}>
+            <button type="button" {...button("indentBlock", indent.available)} aria-label="增加缩进"
+              aria-describedby={indent.available ? undefined : indentReason} onClick={indent.apply}>
+              <span aria-hidden="true" className={styles.indentIcon}>↳</span>
+            </button>
+            {!indent.available && <span id={indentReason} role="tooltip" className={styles.formatHint}>无法缩进当前内容块</span>}
+          </span>
         </div>
         <span role="separator" aria-orientation="vertical" className={styles.formatSeparator} />
         <div role="group" aria-label="行内样式" className={styles.formatGroup}>
-          {toggles.map(({ name, label }) => (
-            <button key={name} type="button" {...button(name)} aria-pressed={Boolean(marks[name])}
-              aria-label={label} title={label} onClick={() => format.toggle(name)}>
+          {toggles.map(({ name, label }) => {
+            const bold = name === "bold";
+            const control = <button key={name} type="button" {...button(name)} aria-pressed={Boolean(marks[name])}
+              aria-label={label} title={bold ? undefined : label} aria-describedby={bold ? boldHint : undefined}
+              aria-keyshortcuts={bold ? (mac ? "Meta+B" : "Control+B") : undefined} onClick={() => format.toggle(name)}>
               <span aria-hidden="true" className={styles.markIcon} data-mark={name}>{markIcons[name]}</span>
-            </button>
-          ))}
+            </button>;
+            return bold ? <span key={name} className={styles.hintedControl}>
+              {control}
+              <span id={boldHint} role="tooltip" className={styles.formatHint}>
+                <span><span aria-hidden="true">粗体 </span>{mac ? "⌘ + B" : "Ctrl + B"}</span>
+                <span>Markdown：**文字**</span>
+              </span>
+            </span> : control;
+          })}
         </div>
         <span role="separator" aria-orientation="vertical" className={styles.formatSeparator} />
         <div role="group" aria-label="链接与配色" className={styles.formatGroup}>

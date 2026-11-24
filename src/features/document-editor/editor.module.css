@@ -248,7 +248,7 @@
   font-size: .75rem;
 }
 
-.outline button:hover, .rowFold:hover {
+.outline button:hover, .rowFold:hover, button.headingNumber:hover {
   background: color-mix(in srgb, var(--foreground) 8%, var(--background));
 }
 
@@ -272,9 +272,24 @@
   background: var(--canvas);
 }
 
-.viewport:focus-visible, .controls :focus-visible, .outline :focus-visible, .rowFold:focus-visible {
+.controls :focus-visible, .outline :focus-visible, .rowFold:focus-visible, button.headingNumber:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: -2px;
+}
+
+.viewport:focus-visible { outline: none; }
+
+.viewport:focus-visible::before {
+  content: "";
+  position: sticky;
+  inset-block-start: .5rem;
+  display: block;
+  inline-size: 0;
+  block-size: 1rem;
+  margin-block-end: -1rem;
+  margin-inline-start: .5rem;
+  border-inline-start: 3px solid var(--focus);
+  pointer-events: none;
 }
 
 .paper {
@@ -307,6 +322,13 @@
   position: relative;
 }
 
+.quoteWindow, .branchWindow { display: contents; }
+
+.quoteWindow .row {
+  border-inline-start: .2rem solid var(--line);
+  padding-inline-start: .8rem;
+}
+
 .row {
   --row-before: var(--heading-before, .25rem);
   --row-after: var(--heading-after, .25rem);
@@ -320,6 +342,26 @@
 .preview {
   cursor: text;
   white-space: pre-wrap;
+}
+
+.numberedHeading {
+  display: flex;
+  align-items: baseline;
+  column-gap: .375rem;
+}
+
+.numberedHeading > :is(.preview, [data-editor-active]) {
+  flex: 1;
+  min-inline-size: 0;
+}
+
+.headingNumber {
+  flex: none;
+  font-size: var(--heading-size);
+  line-height: var(--heading-leading);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
 }
 
 .emptyParagraphHint { color: var(--muted); }
@@ -367,7 +409,7 @@
   outline-offset: .25rem;
 }
 
-.paper [data-full-document] :global(.tiptap) > :is(p, [data-heading-level]) {
+.paper [data-full-document] :global(.tiptap) > :is([data-block-type="paragraph"], [data-heading-level]) {
   padding-block: var(--heading-before, .25rem) var(--heading-after, .25rem);
 }
 
@@ -417,6 +459,28 @@
   pointer-events: none;
 }
 
+.printDocument { display: none; }
+
+@page x2x-document { margin: 15mm; }
+
 @media print {
   .lab[data-print="disabled"] { display: none; }
+  .lab[data-print="allowed"] { display: block; height: auto; }
+  .lab[data-print="allowed"] > :not(.printDocument, .watermark) { display: none; }
+  .paper.printDocument {
+    display: block;
+    page: x2x-document;
+    inline-size: auto;
+    min-block-size: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .printDocument > h1 {
+    margin-block: 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 680;
+  }
+  .printDocument :is(h1, [data-row-heading]) { break-after: avoid-page; }
+  .printDocument > div, .printDocument > blockquote > div { min-block-size: 1lh; }
+  .printDocument blockquote { margin-inline: 0; }
 }

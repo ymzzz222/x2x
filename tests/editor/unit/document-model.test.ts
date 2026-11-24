@@ -1,9 +1,14 @@
 import { documentSchema } from "../../../src/features/document-editor/model/document-editor-schema";
-import { listWindows, visibleText } from "../../../src/features/document-editor/model/document-structure";
+import { getSchema } from "@tiptap/core";
+import StarterKit from "@tiptap/starter-kit";
+import { prosemirrorToYXmlFragment } from "@tiptap/y-tiptap";
+import { listWindows, visibleText, type BlockKind } from "../../../src/features/document-editor/model/document-structure";
 import { getDocumentOutline, projectDocumentRows, revealDocumentRow } from "../../../src/features/document-editor/model/document-outline";
 import { describe, expect, it } from "vitest";
 import * as Y from "yjs";
 import { DocumentSession } from "../../../src/features/document-editor/model/document-session";
+import { DocumentHistory } from "../../../src/features/document-editor/model/document-history";
+import { projectCompatibleBlocks } from "../../../src/features/document-editor/model/document-projection";
 import {
   createDocument,
   deleteSelectedText,
@@ -23,6 +28,110 @@ const blocks: DocumentBlock[] = [
   { id: "block-4", text: "结尾段", kind: "paragraph" },
 ];
 
+describe("local fold history", () => {
+  it("remains private and preserves chronology when a remote change invalidates the newest content undo", () => {
+    const document = new Y.Doc();
+    const peer = new Y.Doc();
+    const content = document.getMap<string>("content");
+    const origin = Symbol("Author edit");
+    const history = new DocumentHistory(new Y.UndoManager(content, { trackedOrigins: new Set([origin]) }), origin);
+    const location = { position: { blockId: "chapter", offset: 0 }, editing: true };
+    const local = (key: string) => history.edit(location, location, () => document.transact(() => content.set(key, "Author"), origin));
+    try {
+      local("stable");
+      const before = Y.encodeStateVector(document);
+      history.fold("chapter", true);
+      expect(Y.encodeStateVector(document)).toEqual(before);
+      local("removed");
+      Y.applyUpdate(peer, Y.encodeStateAsUpdate(document));
+      const revision = Y.encodeStateVector(peer);
+      peer.getMap("content").delete("removed");
+      Y.applyUpdate(document, Y.encodeStateAsUpdate(peer, revision));
+
+      expect(history.undo(false)?.foldChange).toEqual({ ids: ["chapter"], folded: false });
+      expect(content.toJSON()).toEqual({ stable: "Author" });
+      expect(history.undo(false)?.position).toEqual(location.position);
+      expect(content.toJSON()).toEqual({});
+      expect(history.undo(true)?.position).toEqual(location.position);
+      expect(history.undo(true)?.foldChange).toEqual({ ids: ["chapter"], folded: true });
+      expect(content.toJSON()).toEqual({ stable: "Author" });
+    } finally {
+      history.destroy();
+      document.destroy();
+      peer.destroy();
+    }
+  });
+});
+
+describe("grouped structural history", () => {
+  it("uses the original selection for undo and the latest selection for redo without joining an unrelated edit", () => {
+    const document = new Y.Doc();
+    const content = document.getMap<string>("content");
+    const origin = Symbol("Structure");
+    const history = new DocumentHistory(new Y.UndoManager(content, { trackedOrigins: new Set([origin]) }), null);
+    const location = (offset: number) => ({ position: { blockId: "a", offset }, editing: false });
+    const apply = (key: string, value: string) => () => document.transact(() => content.set(key, value), origin);
+    try {
+      history.edit(location(0), location(1), apply("heading", "H1"), "same-selection");
+      history.edit(location(1), location(2), apply("heading", "H9"), "same-selection");
+      history.edit(location(3), location(4), apply("other", "text"));
+
+      expect(history.undo(false)).toEqual(location(3));
+      expect(content.toJSON()).toEqual({ heading: "H9" });
+      expect(history.undo(false)).toEqual(location(0));
+      expect(content.toJSON()).toEqual({});
+      expect(history.undo(true)).toEqual(location(2));
+      expect(content.toJSON()).toEqual({ heading: "H9" });
+    } finally {
+      history.destroy();
+      document.destroy();
+    }
+  });
+});
+
+describe("single block type toggles", () => {
+  const targets: BlockKind[] = [
+    { type: "heading", level: 1 },
+    { type: "heading", level: 9 },
+    { type: "orderedList" },
+    { type: "bulletList" },
+    { type: "blockquote" },
+  ];
+
+  it.each(targets)("toggles $type while keeping authored content and its anchor", (target) => {
+    const session = new DocumentSession(blocks);
+    const position = { blockId: "block-3", offset: blocks[2].text.length };
+    const selection = { anchor: position, focus: position };
+    try {
+      session.prepare();
+      const paragraph = session.fragmentFor(position.blockId)!.get(0) as Y.XmlElement;
+      (paragraph.get(0) as Y.XmlText).format(0, 1, { bold: {} });
+      const original = session.getBlocks();
+      session.editBlockType(selection, target);
+      const source = session.getBlocks();
+      expect(source).not.toEqual(original);
+
+      expect(session.editBlockType(selection, target, { toggleSameType: true })).toMatchObject({ position });
+      const converted = session.getBlocks();
+      if (target.type === "heading") {
+        const content = converted.map((block) => {
+          const copy = { ...block };
+          delete copy.parentId;
+          return copy;
+        });
+        expect(content).toEqual(original);
+        expect(getDocumentOutline(converted).branches.get("block-4")?.parentId).toBe(position.blockId);
+      } else expect(converted).toEqual(original);
+      expect(session.undo(false)).toMatchObject({ selection });
+      expect(session.getBlocks()).toEqual(source);
+      expect(session.undo(true)).toMatchObject({ position });
+      expect(session.getBlocks()).toEqual(converted);
+    } finally {
+      session.destroy();
+    }
+  });
+});
+
 describe("long document fixture", () => {
   it.each([100000, 300000, 500000] as const)(
     "generates %i Unicode code points with addressable, varied blocks",
@@ -39,6 +148,52 @@ describe("long document fixture", () => {
       expect(createDocument(size)).toEqual(document);
     },
   );
+});
+
+describe("shared heading numbers", () => {
+  it("preserves numbering through legacy text writes and detaches it from a replaced heading", () => {
+    const session = new DocumentSession([{ id: "chapter", kind: "heading", level: 1, text: "原文" }]);
+    const legacy = new Y.Doc();
+    const schema = getSchema([StarterKit.configure({ trailingNode: false })]);
+    const position = { blockId: "chapter", offset: 2 };
+    const range = { anchor: position, focus: position };
+    const verifySnapshot = (text: string, start: number | undefined) => {
+      const reader = DocumentSession.fromUpdates([Y.encodeStateAsUpdate(legacy)]);
+      try {
+        expect(reader.getBlocks()[0]).toMatchObject({ id: "chapter", text, kind: "heading" });
+        expect(reader.getBlocks()[0].numberStart).toBe(start);
+      } finally {
+        reader.destroy();
+      }
+    };
+
+    try {
+      session.prepare();
+      const original = session.fragmentFor("chapter")!.get(0);
+      session.editBlockType(range, { type: "orderedList" });
+      expect(session.getBlocks()[0].numberStart).toBe(0);
+      expect(session.fragmentFor("chapter")!.get(0)).toBe(original);
+      session.undo(false);
+      expect(session.getBlocks()[0].numberStart).toBeUndefined();
+      session.undo(true);
+      expect(session.getBlocks()[0].numberStart).toBe(0);
+
+      Y.applyUpdate(legacy, session.encodeSnapshot());
+      const fragment = legacy.getMap<Y.XmlFragment>("paragraphs").get("chapter")!;
+      const legacyWrite = (kind: "paragraph" | "heading", text: string) => {
+        const content = schema.nodes[kind].create({ level: 1 }, schema.text(text));
+        prosemirrorToYXmlFragment(schema.topNodeType.create(null, content), fragment);
+      };
+      legacyWrite("heading", "旧端修改");
+      verifySnapshot("旧端修改", 0);
+      legacyWrite("paragraph", "改成正文");
+      legacyWrite("heading", "新建标题");
+      verifySnapshot("新建标题", undefined);
+    } finally {
+      legacy.destroy();
+      session.destroy();
+    }
+  });
 });
 
 describe("document selection", () => {
@@ -264,6 +419,29 @@ describe("document find and replace", () => {
 
 
 describe("structured blocks", () => {
+  it("preserves readable blocks and identifies unsupported nodes in newer snapshots and updates", () => {
+    const source = new DocumentSession([{ id: "heading", kind: "heading", level: 2, text: "已支持的章节" }]);
+    const snapshot = source.encodeSnapshot();
+    source.destroy();
+    const newer = new Y.Doc();
+    try {
+      Y.applyUpdate(newer, snapshot);
+      const before = Y.encodeStateVector(newer);
+      const fragment = new Y.XmlFragment();
+      newer.getMap<Y.XmlFragment>("paragraphs").set("future", fragment);
+      fragment.insert(0, [new Y.XmlElement("futureBlock")]);
+      newer.getArray("order").push([{ id: "future", kind: "futureBlock" }]);
+
+      const projected = projectCompatibleBlocks([snapshot, Y.encodeStateAsUpdate(newer, before)]);
+      expect(projected).toMatchObject([
+        { id: "heading", kind: "heading", level: 2, text: "已支持的章节" },
+        { id: "future", kind: "paragraph", text: "此内容需要新版编辑器查看" },
+      ]);
+    } finally {
+      newer.destroy();
+    }
+  });
+
   it("bounds pasted lists without losing item text or breaking later starting numbers", () => {
     const schema = documentSchema();
     const items = Array.from({ length: 70 }, (_, index) => schema.nodes.listItem.create(null,

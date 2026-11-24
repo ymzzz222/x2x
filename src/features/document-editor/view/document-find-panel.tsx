@@ -217,11 +217,12 @@ export function DocumentFindPanel({ find, editable }: { find: ReturnType<typeof 
         if (key !== "ArrowLeft" && key !== "ArrowRight" && key !== "Home" && key !== "End") return;
         event.preventDefault();
         const next = key === "Home" ? "find" : key === "End" ? "replace" : mode === "find" ? "replace" : "find";
+        selectMode(next);
         currentTarget.querySelector<HTMLButtonElement>(`[data-find-tab="${next}"]`)?.focus();
       }}>
         {tabs.map((tab) => <button key={tab.mode} type="button" role="tab" id={`${id}-${tab.mode}-tab`}
           data-find-tab={tab.mode} aria-selected={mode === tab.mode} tabIndex={mode === tab.mode ? 0 : -1}
-          onFocus={() => selectMode(tab.mode)} onClick={() => selectMode(tab.mode)}>{tab.label}</button>)}
+          onClick={() => selectMode(tab.mode)}>{tab.label}</button>)}
       </div> : <h2>查找</h2>}
       <button type="button" className={headerStyles.iconButton} aria-label="关闭" title="关闭" onClick={find.closePanel}>
         <DocumentIcon name="close" />

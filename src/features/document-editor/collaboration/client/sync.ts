@@ -1,9 +1,10 @@
-import type { RealtimeChannel, SupabaseClient } from "@supabase/supabase-js";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import * as Y from "yjs";
 import type { DocumentSession } from "../../model/document-session";
 import type { DocumentPosition } from "../../model/document-model";
 import { documentRequest, readDocument, SharedDocumentError } from "./client";
 import { DocumentOutbox } from "./outbox";
+import { DocumentChannel } from "./document-channel";
 import { DocumentPresence } from "./document-presence";
 import { canEditDocument, decodeUpdate, encodeUpdate, maximumUpdateBytes, sharedSchemaVersion, type DocumentRead, type OfflineBatch, type OnlineCollaborator } from "../model/protocol";
 
@@ -22,6 +23,7 @@ type Options = {
   session: DocumentSession;
   meta: DocumentRead;
   outbox: DocumentOutbox;
+  cursorSession: string;
   isComposing: () => boolean;
   report: (connection: DocumentConnection) => void;
   reload: () => void;
@@ -32,15 +34,15 @@ export const outboxScope = (actor: string, id: string) => actor + ":" + id;
 export class SharedDocumentSync {
   private abort = new AbortController();
   private current: DocumentConnection;
-  private channel?: RealtimeChannel;
-  private channelAccess?: number;
+  private channel: DocumentChannel;
   private draft?: OfflineBatch;
   private durable = Promise.resolve();
   private unpersisted = new Map<string, OfflineBatch>();
   private localError = false;
   private syncTimer?: number;
   private pulseTimer?: number;
-  private interval?: number;
+  private retryTimer?: number;
+  private retryDelay = 1_000;
   private unsubscribe?: () => void;
   private running = false;
   private queued = false;
@@ -48,33 +50,33 @@ export class SharedDocumentSync {
   private compactedAt = 0;
 
   constructor(private options: Options) {
-    const { client, actor, meta, session } = options;
+    const { client, actor, meta, session, cursorSession } = options;
     this.current = { meta, status: "saving", peers: [], accessLost: false, previousEdits: false };
-    this.presence = new DocumentPresence({ client, actor, documentId: meta.id, generation: meta.generation, session,
-      report: (peers) => this.publish({ peers }) });
+    this.presence = new DocumentPresence({ client, actor, documentId: meta.id, generation: meta.generation, session, cursorSession,
+      report: (peers) => this.publish({ peers }), revalidate: () => this.schedule(0) });
+    this.channel = new DocumentChannel({ client, refresh: () => this.schedule(0), presence: {
+      sync: this.presence.sync, cursor: this.presence.receiveCursor,
+      connected: this.presence.connected, disconnected: this.presence.disconnected,
+    } });
   }
 
   start() {
     this.presence.start();
     this.unsubscribe = this.options.session.onLocalUpdate(this.record);
-    this.interval = window.setInterval(() => { if (document.visibilityState === "visible") this.schedule(0); }, 5000);
-    window.addEventListener("online", this.wake);
+    this.channel.start(this.current.meta);
     window.addEventListener("offline", this.offline);
-    document.addEventListener("visibilitychange", this.wake);
     this.schedule(0);
   }
 
   stop() {
     this.abort.abort();
+    this.channel.stop();
     this.presence.stop();
     this.unsubscribe?.();
     window.clearTimeout(this.syncTimer);
     window.clearTimeout(this.pulseTimer);
-    window.clearInterval(this.interval);
-    window.removeEventListener("online", this.wake);
+    window.clearTimeout(this.retryTimer);
     window.removeEventListener("offline", this.offline);
-    document.removeEventListener("visibilitychange", this.wake);
-    if (this.channel) void this.options.client.removeChannel(this.channel);
   }
 
   setCursor(position: DocumentPosition | null) {
@@ -103,16 +105,22 @@ export class SharedDocumentSync {
 
   private readonly pendingDraft = () => this.draft;
 
-  private readonly wake = () => {
-    if (document.visibilityState === "visible") this.schedule(0);
-  };
-
   private readonly offline = () => this.publish({ status: this.localError ? "local-error" : "offline" });
 
   private schedule(delay: number) {
     if (this.abort.signal.aborted || this.current.accessLost) return;
     window.clearTimeout(this.syncTimer);
     this.syncTimer = window.setTimeout(() => { void this.run(); }, delay);
+  }
+
+  private retry() {
+    this.publish({ status: navigator.onLine ? "retry" : "offline" });
+    if (this.abort.signal.aborted || !navigator.onLine || this.retryTimer !== undefined) return;
+    this.retryTimer = window.setTimeout(() => {
+      this.retryTimer = undefined;
+      this.schedule(0);
+    }, this.retryDelay);
+    this.retryDelay = Math.min(this.retryDelay * 2, 8_000);
   }
 
   private readonly record = (update: Uint8Array) => {
@@ -144,26 +152,18 @@ export class SharedDocumentSync {
     }
   }
 
-  private subscribe(meta: DocumentRead) {
-    if (this.channelAccess === meta.accessVersion) return;
-    if (this.channel) void this.options.client.removeChannel(this.channel);
-    this.channelAccess = meta.accessVersion;
-    this.channel = this.options.client.channel("x2x-doc:" + meta.id + ":" + meta.accessVersion, { config: { private: true } })
-      .on("broadcast", { event: "saved" }, () => this.schedule(0))
-      .subscribe((state) => { if (state === "SUBSCRIBED") this.schedule(0); });
-  }
-
   private async pull() {
-    const { client, session, isComposing } = this.options;
+    const { client, actor, cursorSession, session, isComposing } = this.options;
     const previous = this.current.meta;
-    const incoming = await readDocument(client, previous.id, previous.generation, previous.cursor, this.abort.signal);
+    const incoming = await readDocument(client, previous.id, previous.generation, previous.cursor, this.abort.signal, actor, cursorSession);
     if (this.abort.signal.aborted) return false;
     if (incoming.generation !== previous.generation || incoming.schema !== sharedSchemaVersion) {
       this.stop();
       this.options.reload();
       return false;
     }
-    this.subscribe(incoming);
+    if (!canEditDocument(incoming.role)) this.presence.setCursor(null);
+    this.channel.update(incoming);
     // A pull already in flight can return the title from before a local rename.
     if (this.current.meta !== previous) incoming.title = this.current.meta.title;
     if (isComposing() && (incoming.snapshot || incoming.updates.length)) {
@@ -210,31 +210,34 @@ export class SharedDocumentSync {
           this.publish({ status: "saving", previousEdits });
           await documentRequest(client, "/" + meta.id, {
             action: "save", batch: batch.id, data: encodeUpdate(batch.data), generation: batch.generation, schema: batch.schema,
-          }, this.abort.signal);
+          }, this.abort.signal, { actor });
           await outbox.confirm(batch.id);
         }
         this.publish({ status: this.pendingDraft() ? "saving" : "saved", previousEdits });
       }
       if (canEditDocument(meta.role) && meta.head >= this.compactedAt + 64) {
         this.compactedAt = meta.head;
-        void documentRequest(client, "/" + meta.id, { action: "compact" }, this.abort.signal).catch(() => {});
+        void documentRequest(client, "/" + meta.id, { action: "compact" }, this.abort.signal, { actor }).catch(() => {});
       }
+      window.clearTimeout(this.retryTimer);
+      this.retryTimer = undefined;
+      this.retryDelay = 1_000;
     } catch (error) {
-      if (error instanceof SharedDocumentError && (error.status === 403 || error.status === 401)) {
+      if (error instanceof SharedDocumentError && [401, 403, 404].includes(error.status)) {
         try {
           await this.pull();
           this.publish({ status: "blocked" });
         } catch (check) {
-          if (check instanceof SharedDocumentError && (check.status === 403 || check.status === 401)) {
+          if (check instanceof SharedDocumentError && [401, 403, 404].includes(check.status)) {
             this.publish({ status: "blocked", accessLost: true, peers: [] });
             this.stop();
-          } else this.publish({ status: "retry" });
+          } else this.retry();
         }
       } else if (error instanceof SharedDocumentError && error.code === "DOCUMENT_VERSION_CHANGED") {
         this.stop();
         this.options.reload();
       } else {
-        this.publish({ status: navigator.onLine ? "retry" : "offline" });
+        this.retry();
       }
     } finally {
       this.running = false;

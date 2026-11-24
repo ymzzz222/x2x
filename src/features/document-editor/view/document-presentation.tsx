@@ -2,8 +2,10 @@
 
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { useCallback, useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type KeyboardEvent, type ReactNode } from "react";
+import { flushSync } from "react-dom";
 import { PreviewText } from "./document-preview-text";
 import type { DocumentBlock, SampleSize } from "../model/document-model";
+import type { DocumentSection } from "../model/document-outline";
 import { getViewportAnchor } from "./document-view-controls";
 import { DocumentAction, DocumentIcon } from "./document-header";
 import headerStyles from "./document-header.module.css";
@@ -18,6 +20,46 @@ const modes = [
 
 type Mode = (typeof modes)[number]["value"];
 type Bookmark = { blockId: string; withinRow: number; mode: Mode };
+
+export function DocumentPrintView({ title, blocks, sections }: {
+  title: string;
+  blocks: readonly DocumentBlock[];
+  sections: ReadonlyMap<string, DocumentSection>;
+}) {
+  const [printing, setPrinting] = useState(false);
+  useEffect(() => {
+    const prepare = () => flushSync(() => setPrinting(true));
+    const finish = () => setPrinting(false);
+    window.addEventListener("beforeprint", prepare);
+    window.addEventListener("afterprint", finish);
+    return () => {
+      window.removeEventListener("beforeprint", prepare);
+      window.removeEventListener("afterprint", finish);
+    };
+  }, []);
+  if (!printing) return null;
+
+  const rows: ReactNode[] = [];
+  for (let index = 0; index < blocks.length;) {
+    const first = blocks[index];
+    const group = first.quoteGroup;
+    const content: ReactNode[] = [];
+    do {
+      const block = blocks[index++];
+      const number = sections.get(block.id)?.numbering?.label;
+      content.push(<div key={block.id} data-row-heading={block.level} className={number ? styles.numberedHeading : undefined}>
+        {number && <span className={styles.headingNumber}>{number}</span>}
+        <div className={styles.preview}><PreviewText block={block} selection={null} /></div>
+      </div>);
+    } while (group && blocks[index]?.quoteGroup === group);
+    if (group) rows.push(<blockquote key={first.id} data-block-type="quote">{content}</blockquote>);
+    else rows.push(content[0]);
+  }
+  return <article className={styles.printDocument + " " + styles.paper + " " + structureStyles.content}>
+    <h1>{title}</h1>
+    {rows}
+  </article>;
+}
 
 function readBookmark(key: string): Bookmark | null {
   try {
@@ -44,6 +86,7 @@ export function DocumentPresentation({ blocks, size, documentKey, isComposing, c
   const dialog = useRef<HTMLDialogElement>(null);
   const viewport = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);
+  const opening = useRef(false);
   const fullscreen = useRef(false);
   const [launch, setLaunch] = useState<{ bookmark: Bookmark | null } | null>(null);
   const [mode, setMode] = useState<Mode>("continuous");
@@ -73,21 +116,33 @@ export function DocumentPresentation({ blocks, size, documentKey, isComposing, c
     }
   }
 
-  function open(bookmark: Bookmark | null) {
+  async function open(bookmark: Bookmark | null, trigger: HTMLButtonElement) {
     const element = dialog.current;
-    if (!element || element.open || isComposing()) return;
+    if (!element || element.open || opening.current || isComposing()) return;
+    const focusTarget = trigger.getClientRects().length ? trigger : document.activeElement;
+    const root = document.documentElement;
+    let enteredFullscreen = false;
+    if (document.fullscreenEnabled && root.requestFullscreen && !document.fullscreenElement) {
+      opening.current = true;
+      try {
+        await root.requestFullscreen();
+        enteredFullscreen = document.fullscreenElement === root;
+      } catch {
+        // The dialog can fill the browser viewport if fullscreen is denied.
+      } finally {
+        opening.current = false;
+      }
+    }
+    if (!element.isConnected) {
+      if (enteredFullscreen) void document.exitFullscreen().catch(() => {});
+      return;
+    }
+    fullscreen.current = enteredFullscreen;
     setMode(bookmark?.mode ?? "continuous");
     setLaunch({ bookmark });
-    const root = document.documentElement;
-    if (document.fullscreenEnabled && root.requestFullscreen && !document.fullscreenElement) {
-      void root.requestFullscreen().then(() => {
-        if (document.fullscreenElement !== root) return;
-        if (element.open) fullscreen.current = true;
-        else void document.exitFullscreen().catch(() => {});
-      }).catch(() => {
-        // The dialog can fill the browser viewport if fullscreen is denied.
-      });
-    }
+    // Let the native dialog remember the visible invoker even when a click did not focus it.
+    if (focusTarget instanceof HTMLElement && focusTarget.isConnected) focusTarget.focus({ preventScroll: true });
+    // Fullscreen occupies the top layer too, so open the dialog after fullscreen settles.
     element.showModal();
   }
 
@@ -176,7 +231,14 @@ export function DocumentPresentation({ blocks, size, documentKey, isComposing, c
   function handleKeys(event: KeyboardEvent<HTMLDialogElement>) {
     // The editor's global shortcuts belong to the underlying document view.
     event.stopPropagation();
-    if (mode !== "pages" || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    const element = viewport.current;
+    if (element && event.target === element && (event.key === "Home" || event.key === "End")) {
+      event.preventDefault();
+      element.scrollTop = event.key === "Home" ? 0 : element.scrollHeight;
+      return;
+    }
+    if (mode !== "pages") return;
     if (event.key === "ArrowLeft" || event.key === "PageUp") {
       event.preventDefault();
       turn(-1);
@@ -188,8 +250,8 @@ export function DocumentPresentation({ blocks, size, documentKey, isComposing, c
 
   return (
     <>
-      <DocumentAction><button type="button" aria-haspopup="dialog" onClick={() => open(null)}>演示</button></DocumentAction>
-      {saved && <DocumentAction><button type="button" aria-haspopup="dialog" onClick={() => open(saved)}>继续上次演示</button></DocumentAction>}
+      <DocumentAction><button type="button" aria-haspopup="dialog" onClick={(event) => void open(null, event.currentTarget)}>演示</button></DocumentAction>
+      {saved && <DocumentAction><button type="button" aria-haspopup="dialog" onClick={(event) => void open(saved, event.currentTarget)}>继续上次演示</button></DocumentAction>}
       <dialog ref={dialog} aria-label="文档演示" className={presentationStyles.presentation}
         onCancel={save} onClose={finish} onKeyDown={handleKeys}>
         {launch && (

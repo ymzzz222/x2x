@@ -144,6 +144,45 @@
 
 .actionItem > :is(a, button:not(:disabled)):hover { background: var(--canvas); }
 .actionItem > div { justify-content: space-between; }
+.documentInfoTrigger { justify-content: space-between; }
+
+.documentInfoPanel {
+  position: fixed;
+  inset: var(--document-info-top, auto) auto auto var(--document-info-left, auto);
+  inline-size: min(13rem, calc(100dvw - 1rem));
+  max-block-size: calc(100dvh - 1rem);
+  margin: 0;
+  padding: .7rem .8rem;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: .8rem;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 .65rem 2rem #0002;
+}
+
+@supports not selector(:popover-open) {
+  .documentInfoPanel:not([data-open="true"]) { display: none; }
+}
+
+@supports (position-area: inline-end) {
+  .documentInfoPanel:popover-open {
+    inset: auto;
+    margin-inline: .75rem;
+    position-area: inline-end span-block-end;
+    position-try-fallbacks: flip-inline, --document-info-below, --document-info-above;
+  }
+
+  @position-try --document-info-below {
+    position-area: block-end span-inline-start;
+    margin: .5rem 0 0;
+  }
+
+  @position-try --document-info-above {
+    position-area: block-start span-inline-start;
+    margin: 0 0 .5rem;
+  }
+}
 
 .dialogHeading {
   display: flex;

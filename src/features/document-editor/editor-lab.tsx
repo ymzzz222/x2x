@@ -27,16 +27,18 @@ import {
 } from "./model/document-model";
 import { DocumentAppearanceControls, DocumentAppearanceTitle, DocumentCover, useDocumentAppearance } from "./view/document-appearance";
 import { DocumentBlockTools, FloatingSelectionTools } from "./editing/document-block-tools";
-import { documentKey } from "./editing/document-key";
-import { readClipboard, writeClipboard } from "./model/document-clipboard";
+import { documentKey, useNativeHistory } from "./editing/document-key";
+import { readClipboard, writeClipboard, type RangeEdit } from "./model/document-clipboard";
+import type { FoldChange } from "./model/document-history";
 import { useDocumentFormatting } from "./editing/document-format-toolbar";
 import { DocumentFindPanel, useDocumentFind } from "./view/document-find-panel";
 import { getDocumentOutline, projectDocumentRows, revealDocumentRow, toggleOutlineFold, updateBodyFolds, type DocumentFolds, type DocumentSection } from "./model/document-outline";
 import { copyAnchor, DocumentOutlinePanel, readFoldPreference, writeFoldPreference } from "./view/document-outline-panel";
 import { DocumentRow } from "./view/document-row";
-import { DocumentPresentation } from "./view/document-presentation";
+import { DocumentWindow } from "./view/document-window";
+import { DocumentPresentation, DocumentPrintView } from "./view/document-presentation";
 import { DocumentSession } from "./model/document-session";
-import { DocumentViewControls, EditorPreviewControls, getViewportAnchor, readPaperWidth, remeasureViewportRows, writePaperWidth, type DocumentView, type SharedEditorSettings } from "./view/document-view-controls";
+import { DocumentInfoAction, DocumentViewControls, EditorPreviewControls, getFocusedFoldAnchor, getViewportAnchor, readPaperWidth, restoreViewportAnchor, writePaperWidth, type DocumentView, type SharedEditorSettings, type ViewportAnchor } from "./view/document-view-controls";
 import { DocumentAction, DocumentActions, DocumentEditorHeader } from "./view/document-header";
 import structureStyles from "./view/document-structure.module.css";
 import styles from "./editor.module.css";
@@ -59,6 +61,7 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
     ? createDocument(size) : [{ id: "block-1", text: "", kind: "paragraph" }]));
   const blocks = useSyncExternalStore(session.subscribe, session.getBlocks, session.getBlocks);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [composing, setComposing] = useState(false);
   const [selection, setSelection] = useState<DocumentSelection | null>(null);
   const [status, setStatus] = useState("");
   const [preference, setView] = useState<DocumentView>({ mode: "edit", width: "default" });
@@ -70,10 +73,22 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
   const [folds, setFolds] = useState<DocumentFolds>(() => ({ body: new Set(), outline: new Set() }));
   const collapsed = folds.body;
   const toggleOutline = useCallback((id: string) => setFolds((current) => toggleOutlineFold(current, id)), []);
+  const applyFoldChange = useCallback(({ ids, folded }: FoldChange) => {
+    const update = (sections: Set<string>) => {
+      for (const id of ids) {
+        if (folded) sections.add(id);
+        else sections.delete(id);
+      }
+      return sections;
+    };
+    update(storedFolds.current);
+    if (foldKey) writeFoldPreference(foldKey, storedFolds.current);
+    setFolds((current) => updateBodyFolds(current, update(new Set(current.body))));
+  }, [foldKey]);
   const viewport = useRef<HTMLDivElement>(null);
   const activeEditor = useRef<ActiveBlockHandle>(null);
   const initialFocus = useRef<{ offset: number; scrollIntoView: boolean; columnX?: number }>({ offset: 0, scrollIntoView: false });
-  const pendingJump = useRef<{ blockId: string; withinRow?: number; remeasure?: boolean } | null>(null);
+  const pendingJump = useRef<ViewportAnchor | null>(null);
   const windowed = mode === "window";
   const editable = windowed && view.mode === "edit";
   const linkBlockId = activeId ?? selection?.focus.blockId;
@@ -106,11 +121,11 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
     overscan: 5,
     rangeExtractor: (range) => {
       const indexes = defaultRangeExtractor(range);
-      if (activeRow !== undefined && !indexes.includes(activeRow)) {
-        indexes.push(activeRow);
-        indexes.sort((first, second) => first - second);
-      }
-      return indexes;
+      const anchor = pendingJump.current;
+      const focused = anchor?.keepMounted ? blockIndexes.get(anchor.blockId) : undefined;
+      const focusedRow = focused === undefined ? undefined : rows.positions.get(focused);
+      for (const row of [activeRow, focusedRow]) if (row !== undefined && !indexes.includes(row)) indexes.push(row);
+      return indexes.sort((first, second) => first - second);
     },
   });
   const visible = virtualizer.getVirtualItems();
@@ -163,17 +178,8 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
     pendingJump.current = null;
     const index = blockIndexes.get(target.blockId);
     if (index === undefined) return;
-    if (target.remeasure) remeasureViewportRows(viewport.current, virtualizer.resizeItem);
     const row = rows.positions.get(index);
-    if (row !== undefined && target.withinRow) {
-      const offset = virtualizer.getOffsetForIndex(row, "start");
-      if (offset) {
-        const height = document.getElementById(target.blockId)?.getBoundingClientRect().height ?? Infinity;
-        virtualizer.scrollToOffset(offset[0] + Math.min(target.withinRow, Math.max(0, height - 1)));
-        return;
-      }
-    }
-    jumpTo(index);
+    if (!restoreViewportAnchor(target, row, viewport.current, virtualizer)) jumpTo(index);
   }, [blockIndexes, jumpTo, rows, view, virtualizer]);
 
   const isComposing = useCallback(() => Boolean(viewport.current?.querySelector('[data-composing="true"]')), []);
@@ -199,25 +205,19 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
       setActiveId(null);
       setSelection(null);
     }
+    const focused = getFocusedFoldAnchor(viewport.current, section.id);
     const firstRow = virtualizer.range?.startIndex ?? 0;
     const readingIndex = rows.indexes[firstRow];
-    if (readingIndex > section.index) {
+    if (focused) pendingJump.current = focused;
+    else if (readingIndex > section.index) {
       const row = virtualizer.getVirtualItems().find((item) => item.index === firstRow);
       pendingJump.current = !opening && isInside(readingIndex)
         ? { blockId: section.id }
         : { blockId: blocks[readingIndex].id, withinRow: row && (virtualizer.scrollOffset ?? 0) - row.start };
     }
-    const next = new Set(collapsed);
-    if (opening) {
-      next.delete(section.id);
-      storedFolds.current.delete(section.id);
-    } else {
-      next.add(section.id);
-      storedFolds.current.add(section.id);
-    }
-    if (foldKey) writeFoldPreference(foldKey, storedFolds.current);
-    setFolds((current) => updateBodyFolds(current, next));
-  }, [activeIndex, blocks, collapsed, foldKey, isComposing, rows, session, virtualizer]);
+    if (editable) session.fold(section.id, !opening);
+    applyFoldChange({ ids: [section.id], folded: !opening });
+  }, [activeIndex, applyFoldChange, blocks, collapsed, editable, isComposing, rows, session, virtualizer]);
 
   const attachEditor = useCallback((editor: ActiveBlockHandle | null) => {
     activeEditor.current = editor;
@@ -281,9 +281,9 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
       return changed;
     }, restoreFormatSelection, activeSelection);
   const blockTools = useDocumentBlocks({
-    blocks, session, outline: outline.sections, folded: collapsed, viewport, activeId, selection, editable, isComposing,
+    blocks, session, outline: outline.sections, branches: outline.branches, folded: collapsed, viewport, activeId, selection, editable, composing, isComposing,
     readCaret: () => activeEditor.current?.selection() ?? null,
-    select: selectRange, activate, status: setStatus,
+    select: selectRange, restoreSelection: restoreFormatSelection, activate, applyFoldChange, status: setStatus,
     focusBlock(position) {
       selectRange({ anchor: position, focus: position });
       pendingJump.current = { blockId: position.blockId };
@@ -306,21 +306,22 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
     }
   }
 
-  function replaceRange(range: DocumentSelection, split = false) {
-    const result = session.replaceRange(range, split ? "split" : "delete", { editing: Boolean(activeId) });
+  function replaceRange(range: DocumentSelection, operation: RangeEdit) {
+    const result = session.replaceRange(range, operation, { editing: Boolean(activeId) });
     if (!result) return;
     if (result.editing) activate(result.position, true);
     else {
       pendingJump.current = { blockId: result.position.blockId };
       setSelection(null);
     }
-    setStatus(split ? "" : activeId ? "已合并段落" : "已删除选区");
+    setStatus(operation === "delete" ? activeId ? "已合并段落" : "已删除选区" : "");
   }
 
   function changeHistory(redo: boolean) {
     blockTools.closeForHistory();
     const location = session.undo(redo);
     if (!location) return;
+    if (location.foldChange) applyFoldChange(location.foldChange);
     if (location.selection) {
       if (location.restoreActiveSelection) restoreFormatSelection(location.selection);
       else selectRange(location.selection);
@@ -335,6 +336,8 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
     }
     setStatus(redo ? "已重做" : "已撤销");
   }
+
+  useNativeHistory(viewport, windowed, editable, isComposing, changeHistory);
 
   function handleKeys(event: KeyboardEvent<HTMLDivElement>) {
     documentKey(event, {
@@ -362,7 +365,7 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
     const paste = event.type === "paste";
     const current = session.getBlocks();
     const operation = paste ? readClipboard(event.clipboardData) : "delete";
-    if (!paste && !writeClipboard(event.clipboardData, current, range, session.contentFor)) return;
+    if (!paste && !writeClipboard(event.clipboardData, current, range, session.contentFor, outline.sections)) return;
     event.preventDefault();
     event.stopPropagation();
     if (copy) {
@@ -400,21 +403,23 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
   const HeaderActions = shared ? DocumentActions : Fragment;
   return (
     <main className={styles.lab} lang="zh-CN" data-block-count={blocks.length} data-sample-size={size}
-      data-print={shared?.printAllowed === false ? "disabled" : undefined} onCopyCapture={(event) => {
+      data-print={shared && (shared.printAllowed === false ? "disabled" : "allowed")} onCopyCapture={(event) => {
         if (shared?.copyAllowed === false && (event.target as Element).closest("[data-scroll-viewport], [data-presentation-viewport]")) event.preventDefault();
       }}>
       {shared?.watermark && <div aria-hidden="true" className={styles.watermark}>{shared.watermark}</div>}
+      {shared && shared.printAllowed !== false && <DocumentPrintView title={shared.title} blocks={blocks} sections={outline.sections} />}
       <DocumentEditorHeader status={windowed ? status : undefined}
         shared={shared && { title: shared.title, rename: canEdit ? shared.rename : undefined, avatars: shared.avatars }}
         title={!shared && <DocumentAppearanceTitle value={appearance.appearance} />}
         cover={!shared && <DocumentCover value={appearance.appearance} />}
-        preview={!shared && <EditorPreviewControls count={blocks.length} mounted={windowed ? visible.length : blocks.length}
+        preview={!shared && <EditorPreviewControls blocks={blocks} mounted={windowed ? visible.length : blocks.length}
           showInfo={appearance.appearance.showInfo} size={size} mode={mode} onJump={jumpTo}
           simulate={editable ? () => activeEditor.current?.simulatePeerEdit() : undefined} canSimulate={Boolean(activeId)} />}>
         {windowed && (
           <HeaderActions>
             {shared?.controls}
             {shared?.documentActions}
+            {shared && <DocumentInfoAction blocks={blocks} />}
             {shared?.discussion?.(selection, (range) => {
               const index = blockIndexes.get(range.focus.blockId);
               if (index !== undefined) jumpTo(index);
@@ -451,32 +456,33 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
           }}>
           <div className={styles.paper + " " + structureStyles.content} data-page-width={view.width}>
             {windowed ? (
-              <div className={styles.window} style={{ height: virtualizer.getTotalSize() }}>
-                {visible.map((item) => {
+              <DocumentWindow blocks={blocks} branches={outline.branches} height={virtualizer.getTotalSize()} rows={visible.map((item) => {
                   const documentIndex = rows.indexes[item.index];
                   const block = blocks[documentIndex];
                   const active = editable && block.id === activeId ? activeFragment : undefined;
-                  return (
-                    <DocumentRow key={item.key} item={item} block={block} documentIndex={documentIndex} tools={blockTools}
+                  return { block, content: (
+                    <DocumentRow item={item} block={block} documentIndex={documentIndex} tools={blockTools}
                       editable={editable} onClick={handleRowClick} measure={virtualizer.measureElement}
-                      section={outline.sections.get(block.id)} collapsed={collapsed.has(block.id)} onToggle={toggleSection}
+                      section={outline.sections.get(block.id)} branch={outline.branches.get(block.id)}
+                      collapsed={collapsed.has(block.id)} onToggle={toggleSection}
                       selection={selectedRowRange(hasSelection ? selectionRange : null, documentIndex, block.text.length)}
                       matches={find.byBlock.get(block.id)}
                       currentMatch={find.activeMatch?.blockId === block.id ? find.activeMatch : undefined}
                       showEmptyHint={editable && !shared && !size && !block.text && !block.structure}
                       session={session} peers={shared?.collaborators} activeEditor={active ? activeEditor : undefined}>
                       {active && <ActiveBlockEditor key={block.id} ref={attachEditor} blockId={block.id} fragment={active}
-                        onBlur={() => shared?.onCursor?.(null)} onCursor={(anchor, offset, composing) => {
+                        composing={composing} onCompositionChange={setComposing}
+                        onBlur={() => shared?.onCursor?.(null)} onCursor={(anchor, offset, composing, slash) => {
                           const position = { blockId: block.id, offset };
+                          blockTools.observeSlash(block.id, slash);
                           session.setLocation({ position, editing: true });
                           if (!composing) shared?.onCursor?.(position);
                           setSelection((current) => anchor === offset && current?.anchor.offset === current?.focus.offset
                             ? current : { anchor: { blockId: block.id, offset: anchor }, focus: position });
                         }} />}
                     </DocumentRow>
-                  );
-                })}
-              </div>
+                  ) };
+                })} />
             ) : (
               <EditorBaseline blocks={blocks} />
             )}

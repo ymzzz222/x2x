@@ -1,15 +1,16 @@
 import { useCallback, useEffect, useRef, useState, type ClipboardEvent, type KeyboardEvent, type PointerEvent, type RefObject } from "react";
-import type { ActiveBlockHandle } from "./active-block-editor";
+import type { ActiveBlockHandle, SlashInput } from "./active-block-editor";
 import { writeWholeBlocks } from "../model/document-clipboard";
+import type { FoldChange } from "../model/document-history";
 import { getSelectionRange, headingLevels, isBlankParagraph, type DocumentBlock, type DocumentPosition, type DocumentSelection, type HeadingLevel } from "../model/document-model";
-import type { DocumentSection } from "../model/document-outline";
+import { indentationParent, type DocumentBranch, type DocumentSection } from "../model/document-outline";
 import type { DocumentSession } from "../model/document-session";
 import { blockTypes, enclosingList, isList, markdownBlock, type BlockKind, type ListCommand, type ListKey } from "../model/document-structure";
 
 type Entry = "pointer" | "keyboard" | "preview";
 type Anchor = {
   id: string;
-  mode: "block" | "insert" | "type";
+  mode: "block" | "insert" | "type" | "heading-number";
   target: HTMLElement;
   entry: Entry;
   caret?: NonNullable<ReturnType<ActiveBlockHandle["selection"]>>;
@@ -22,16 +23,20 @@ type Options = {
   blocks: readonly DocumentBlock[];
   session: DocumentSession;
   outline: ReadonlyMap<string, DocumentSection>;
+  branches: ReadonlyMap<string, DocumentBranch>;
   folded: ReadonlySet<string>;
   viewport: RefObject<HTMLDivElement | null>;
   activeId: string | null;
   readCaret: ActiveBlockHandle["selection"];
   selection: DocumentSelection | null;
   editable: boolean;
+  composing: boolean;
   isComposing: () => boolean;
   select: (selection: DocumentSelection) => void;
+  restoreSelection: (selection: DocumentSelection) => void;
   activate: (position: DocumentPosition, scroll?: boolean) => void;
   focusBlock: (position: DocumentPosition) => void;
+  applyFoldChange: (change: FoldChange) => void;
   status: (message: string) => void;
 };
 
@@ -40,10 +45,12 @@ function position(id: string, offset = 0) {
 }
 
 export function useDocumentBlocks(options: Options) {
-  const { blocks, session, outline, folded, viewport, activeId, readCaret, selection, editable, isComposing, select, activate, focusBlock, status } = options;
+  const { blocks, session, outline, branches, folded, viewport, activeId, readCaret, selection, editable, composing, isComposing,
+    select, restoreSelection, activate, focusBlock, applyFoldChange, status } = options;
   const [panel, setPanel] = useState<Anchor | null>(null);
   const [blockSelection, setBlockSelection] = useState<{ first: string; last: string } | null>(null);
   const [dismissedSlash, setDismissedSlash] = useState("");
+  const [slashInput, setSlashInput] = useState<(SlashInput & { blockId: string }) | null>(null);
   const [historyPausedSlash, setHistoryPausedSlash] = useState(false);
   const [dismissedSelection, setDismissedSelection] = useState<DocumentSelection | null>(null);
   const [highlighted, setHighlighted] = useState({ token: "", index: 0 });
@@ -52,18 +59,20 @@ export function useDocumentBlocks(options: Options) {
   const swallowClick = useRef(false);
 
   const current = blocks.find((block) => block.id === activeId);
-  const query = editable && current?.kind === "paragraph" && !current.structure ? /^\/([^\n/]{0,35})$/.exec(current.text) : null;
-  const token = query ? activeId + ":" + query[1] : "";
-  const slash = !!query && token !== dismissedSlash && !panel && !historyPausedSlash && !isComposing();
+  const input = editable && slashInput?.blockId === activeId ? slashInput : null;
+  const token = input ? activeId + ":" + input.from + ":" + input.query : "";
+  const slash = !!input && token !== dismissedSlash && !panel && !historyPausedSlash && !composing;
   const entries = slash ? blockTypes.filter(({ label, search, kind }) => (kind.level ?? 0) <= 3 &&
-    (label + " " + search).toLowerCase().includes(query[1].trim().toLowerCase())) : [];
+    (kind.type !== "blockquote" || (!input.insideQuote && !current?.quoteGroup)) &&
+    (!current?.structure || ["paragraph", "heading", "orderedList", "bulletList", "blockquote"].includes(kind.type)) &&
+    (label + " " + search).toLowerCase().includes(input.query.trim().toLowerCase())) : [];
   const textSelected = Boolean(!blockSelection && selection &&
     (selection.anchor.blockId !== selection.focus.blockId || selection.anchor.offset !== selection.focus.offset));
   const selectionDismissed = Boolean(selection && dismissedSelection && (["anchor", "focus"] as const).every((end) =>
     selection[end].blockId === dismissedSelection[end].blockId && selection[end].offset === dismissedSelection[end].offset));
   const showFloating = textSelected && !selectionDismissed && !slash;
   const highlight = highlighted.token === token ? highlighted.index : 0;
-  const activePanel = editable ? panel : null;
+  const activePanel = editable && (panel?.mode !== "heading-number" || outline.get(panel.id)?.numbering) ? panel : null;
 
   function blockBounds(id: string): Bounds | undefined {
     const start = blocks.findIndex((entry) => entry.id === id);
@@ -83,7 +92,7 @@ export function useDocumentBlocks(options: Options) {
   }
 
   function rangeOf({ start, end }: Bounds) {
-    return { anchor: position(blocks[start].id), focus: position(blocks[end - 1].id, blocks[end - 1].text.length) };
+    return { anchor: position(blocks[start].id), focus: position(blocks[end - 1].id, blocks[end - 1].text.length), wholeBlocks: true };
   }
 
   function selectBlock(id: string, extend: boolean) {
@@ -107,6 +116,13 @@ export function useDocumentBlocks(options: Options) {
     setDismissedSlash("");
   }
 
+  function observeSlash(id: string, next: SlashInput | null) {
+    setSlashInput((previous) => next ? previous?.blockId === id && previous.from === next.from &&
+      previous.to === next.to && previous.query === next.query && previous.insideQuote === next.insideQuote &&
+      previous.offset === next.offset ? previous : { blockId: id, ...next }
+      : previous?.blockId === id ? null : previous);
+  }
+
   function closeForHistory() {
     reset();
     setHistoryPausedSlash(true);
@@ -126,14 +142,14 @@ export function useDocumentBlocks(options: Options) {
 
   function dismissFloating() { setDismissedSelection(selection); }
 
-  function applyType(kind: BlockKind, source = activePanel, insertBelow = false) {
+  function applyType(kind: BlockKind, source = activePanel, insertBelow = false, headingShortcut = false) {
     if (!editable || isComposing()) return;
     const id = slash ? activeId : source?.id ?? selection?.focus.blockId ?? activeId;
     if (!id) return;
     const index = blocks.findIndex((block) => block.id === id);
     if (index < 0) return;
     const caret = source?.caret ?? (activeId === id ? readCaret() ?? undefined : undefined);
-    const location = position(id, slash ? 0 : caret?.focus);
+    const location = position(id, slash ? input.offset : caret?.focus);
     const selected = selection && getSelectionRange(blocks, selection);
     const range = !slash && (!source || source.mode === "type") && selected ? selection! : { anchor: location, focus: location };
     const inserting = insertBelow || source?.mode === "insert";
@@ -146,10 +162,16 @@ export function useDocumentBlocks(options: Options) {
     }
     const result = session.editBlockType(range, kind, {
       insertAt: insertBelow || (inserting && !blank) ? blockBounds(id)?.end : undefined,
-      stripPrefix: slash ? current?.text.length : undefined,
+      stripPrefix: slash ? input.to - input.from : undefined,
+      toggleSameType: !slash && !inserting && (!source || source.mode === "type"),
+      head: slash ? input.to : caret?.headPos,
+      folded,
+      headingShortcut,
     });
     reset();
-    if (result) activate(result.position, true);
+    if (result?.foldChange) applyFoldChange(result.foldChange);
+    if (result?.selection) restoreSelection(result.selection);
+    else if (result) activate(result.position, true);
     else if (source?.entry === "keyboard") source.target.focus({ preventScroll: true });
   }
 
@@ -162,17 +184,40 @@ export function useDocumentBlocks(options: Options) {
     }
   }
 
+  function branchAt(index: number) {
+    const block = blocks[index];
+    return block ? branches.get(block.id) : undefined;
+  }
+
+  function moveBounds(target: Bounds) {
+    let end = target.end;
+    for (let index = target.start; index < target.end; index++) end = Math.max(end, branchAt(index)?.end ?? end);
+    return { start: target.start, end };
+  }
+
+  function siblingAt(index: number, parentId: string | null) {
+    let branch = branchAt(index);
+    while (branch?.parentId && branch.parentId !== parentId) branch = branches.get(branch.parentId);
+    return branch?.parentId === parentId ? branch : undefined;
+  }
+
+  function moveNeighbors(target: Bounds) {
+    const { start, end } = moveBounds(target);
+    const parent = branchAt(start)?.parentId ?? null;
+    const previous = siblingAt(start - 1, parent);
+    const next = branchAt(end);
+    return { up: previous?.end === start ? previous.index : undefined, down: next?.parentId === parent ? next.end : undefined };
+  }
+
   function move(target: Bounds, index: number) {
-    const source = outline.get(blocks[target.start].id);
-    if (source && target.end >= source.end) {
-      for (const section of outline.values()) {
-        if (section.level <= source.level && section.index < index && index < section.end) {
-          index = index > target.end ? section.end : section.index;
-          break;
-        }
-      }
-    }
-    const result = session.moveBlocks(target.start, target.end, index);
+    const { start, end } = moveBounds(target);
+    if (index >= start && index <= end) return;
+    const parentId = branchAt(start)?.parentId ?? null;
+    const parentEnd = parentId ? branches.get(parentId)?.end : blocks.length;
+    const sibling = siblingAt(index, parentId);
+    const destination = index === parentEnd ? index : sibling && (index > end && sibling.index !== index ? sibling.end : sibling.index);
+    if (destination === undefined) return;
+    const result = session.moveBlocks(start, end, destination);
     if (!result) return;
     reset();
     focusBlock(result.position);
@@ -183,7 +228,7 @@ export function useDocumentBlocks(options: Options) {
     const target = bounds(id);
     if (!target) return;
     const data = new DataTransfer();
-    writeWholeBlocks(data, blocks.slice(target.start, target.end), session.contentFor);
+    writeWholeBlocks(data, blocks.slice(target.start, target.end), session.contentFor, outline);
     try {
       if (navigator.clipboard.write && typeof ClipboardItem !== "undefined") {
         const plain = new Blob([data.getData("text/plain")], { type: "text/plain" });
@@ -206,7 +251,7 @@ export function useDocumentBlocks(options: Options) {
     if (!target) return false;
     event.preventDefault();
     event.stopPropagation();
-    writeWholeBlocks(event.clipboardData, blocks.slice(target.start, target.end), session.contentFor);
+    writeWholeBlocks(event.clipboardData, blocks.slice(target.start, target.end), session.contentFor, outline);
     if (event.type === "cut" && editable) remove(target);
     else status("已复制内容块");
     return true;
@@ -220,9 +265,15 @@ export function useDocumentBlocks(options: Options) {
     }
   }
 
+  function updateHeadingNumber(numberStart: number) {
+    if (activePanel?.mode !== "heading-number") return;
+    const section = outline.get(activePanel.id);
+    if (section?.numbering) applyType({ type: "heading", level: section.level, numberStart }, activePanel);
+  }
+
   function keydown(event: KeyboardEvent) {
     if (isComposing()) return false;
-    const blockEntry = activePanel?.entry === "pointer" && activePanel.mode !== "type" ? activePanel.mode : null;
+    const blockEntry = activePanel?.entry === "pointer" && (activePanel.mode === "block" || activePanel.mode === "insert") ? activePanel.mode : null;
     if (event.key === "Escape") {
       if (blockEntry) return false;
       if (slash) setDismissedSlash(token);
@@ -252,11 +303,15 @@ export function useDocumentBlocks(options: Options) {
       const level = Number(event.code.at(-1));
       if (!selection && !activeId) return false;
       applyType(level && headingLevels.includes(level as HeadingLevel) ? { type: "heading", level: level as HeadingLevel } : { type: "paragraph" },
-        activePanel);
+        activePanel, false, true);
       return true;
     }
     if (modifier && event.shiftKey && (event.code === "Digit7" || event.code === "Digit8") && (selection || activeId)) {
       applyType({ type: event.code === "Digit7" ? "orderedList" : "bulletList" }, activePanel);
+      return true;
+    }
+    if (modifier && event.shiftKey && !event.altKey && event.code === "Period" && (selection || activeId)) {
+      applyType({ type: "blockquote" }, activePanel);
       return true;
     }
     if (modifier && key === "Enter" && caret && activeId && current?.structure) {
@@ -275,7 +330,7 @@ export function useDocumentBlocks(options: Options) {
       const prefix = current.text.slice(0, caret.focus);
       const kind = markdownBlock(prefix);
       if (kind) {
-        const result = session.editBlockType({ anchor: position(activeId), focus: position(activeId) }, kind, { stripPrefix: prefix.length });
+        const result = session.applyMarkdown(position(activeId, caret.focus), caret.headPos, kind);
         if (result) { reset(); activate(result.position, true); return true; }
       }
     }
@@ -283,6 +338,10 @@ export function useDocumentBlocks(options: Options) {
       const result = session.listEdit(position(activeId, caret.focus), (event.shiftKey ? "Shift+Tab" : key) as ListKey, caret.anchorPos, caret.headPos);
       if (result) { activate(result.position, true); return true; }
     }
+    const list = current?.structure?.firstChild;
+    if (key === "Tab" && current && !caret.anchor && !caret.focus &&
+      (list ? isList(list) : current.kind === "heading" || Boolean(current.layout?.firstLineIndent) !== event.shiftKey) &&
+      session.indentBlock(position(activeId), event.shiftKey, Boolean(list))) return true;
     return false;
   }
 
@@ -352,7 +411,8 @@ export function useDocumentBlocks(options: Options) {
         ? active.y - rectangle.top - 24 : Math.max(0, active.y - rectangle.bottom + 24);
       if (delta) scroll.scrollTop += Math.sign(delta) * Math.min(42, Math.ceil(Math.abs(delta) / 3));
       active.drop = readDrop(active.y);
-      const source = bounds(active.id);
+      const selected = bounds(active.id);
+      const source = selected ? moveBounds(selected) : undefined;
       const drop = active.drop;
       setDrop(drop && source && (drop.index < source.start || drop.index > source.end) ? drop : null);
       active.frame = requestAnimationFrame(frame);
@@ -377,16 +437,26 @@ export function useDocumentBlocks(options: Options) {
 
   const chosen = blockSelection && selection ? bounds(blockSelection.first) : undefined;
   const source = activePanel && blocks.find((block) => block.id === activePanel.id);
+  const numbering = activePanel?.mode === "heading-number" ? outline.get(activePanel.id)?.numbering : undefined;
   const currentType = source && activePanel?.mode !== "insert" &&
     (activePanel?.mode !== "type" || selection?.anchor.blockId === selection?.focus.blockId)
     ? { type: source.structure?.firstChild?.type.name ?? source.kind, level: source.level } : null;
 
+  const selectedBlock = textSelected && selection?.anchor.blockId === selection?.focus.blockId
+    ? blocks.find(({ id }) => id === selection?.focus.blockId) : undefined;
+  const canIndent = Boolean(editable && selectedBlock && !selectedBlock.structure &&
+    indentationParent(blocks, selectedBlock.id, false) !== undefined);
+
   return {
     selected: (index: number) => chosen && index >= chosen.start && index < chosen.end,
     panel: activePanel, slash, entries, highlight, activeId, drop, keydown, clipboard, reset, open, applyType, bounds, copy,
-    textSelected, showFloating, dismissFloating, closePanel, closeForHistory, startInput, selectBlock,
-    currentType,
-    remove, move, updateList, pointerDown, pointerMove, pointerEnd, consumeDragClick, current,
+    textSelected, showFloating, dismissFloating, closePanel, closeForHistory, startInput, observeSlash, selectBlock,
+    currentType, canIndent,
+    indent: (range: DocumentSelection) => {
+      if (canIndent && !isComposing() && session.indentBlock(range.focus, false, false, range)) restoreSelection(range);
+    },
+    headingNumber: numbering && { ...numbering, start: source?.numberStart ?? 0 }, updateHeadingNumber,
+    remove, move, moveNeighbors, updateList, pointerDown, pointerMove, pointerEnd, consumeDragClick, current,
     listed: (id: string) => {
       const doc = blocks.find((block) => block.id === id)?.structure;
       const node = doc && enclosingList(doc, activePanel?.caret?.headPos ?? 0)?.list;

@@ -1,6 +1,6 @@
 import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties, type KeyboardEvent, type MouseEvent, type ReactNode, type RefObject } from "react";
 import { DocumentFormatToolbar, useDocumentFormatting } from "./document-format-toolbar";
-import { isBlankParagraph, type DocumentBlock, type DocumentSelection } from "../model/document-model";
+import { isBlankParagraph, readHeadingNumberStart, type DocumentBlock, type DocumentSelection } from "../model/document-model";
 import { blockTypes, type ListCommand } from "../model/document-structure";
 import type { useDocumentBlocks } from "./use-document-blocks";
 import styles from "./document-block-tools.module.css";
@@ -181,9 +181,10 @@ export function DocumentBlockTools({ tools, viewport, count, onCopyLink, copyAll
   const [number, setNumber] = useState("1");
   const listId = useId();
   const menu = useRef<HTMLDivElement>(null);
-  const { panel, activeId, closePanel } = tools;
+  const { panel, activeId, closePanel, headingNumber } = tools;
   const branch = branchState?.parent === panel ? branchState : null;
   const target = panel && tools.bounds(panel.id);
+  const neighbors = target ? tools.moveNeighbors(target) : undefined;
   const listKind = panel && tools.listed(panel.id);
   const rowId = panel?.id ?? activeId;
   const commands = tools.slash ? tools.entries : commonTypes;
@@ -198,6 +199,13 @@ export function DocumentBlockTools({ tools, viewport, count, onCopyLink, copyAll
       const target = event.target;
       if (target instanceof Element && !target.closest("[data-editor-overlay], ." + styles.handles) && !trigger.contains(target)) closePanel();
     }
+    function dismissOnEscape(event: globalThis.KeyboardEvent) {
+      if (event.key !== "Escape" || event.defaultPrevented || event.isComposing || event.keyCode === 229) return;
+      const target = event.target;
+      if (target !== document.body && !(target instanceof Node && viewport.current?.contains(target))) return;
+      event.preventDefault();
+      closePanel();
+    }
     function track(event: globalThis.PointerEvent) {
       window.clearTimeout(closePreview);
       const target = event.target;
@@ -207,12 +215,16 @@ export function DocumentBlockTools({ tools, viewport, count, onCopyLink, copyAll
     }
     document.addEventListener("pointerdown", dismiss);
     if (panel.entry === "preview") document.addEventListener("pointermove", track);
+    if (panel.entry === "pointer" && (panel.mode === "heading-number" || (count === 1 && panel.mode === "insert"))) {
+      document.addEventListener("keydown", dismissOnEscape, true);
+    }
     return () => {
       window.clearTimeout(closePreview);
       document.removeEventListener("pointerdown", dismiss);
       document.removeEventListener("pointermove", track);
+      document.removeEventListener("keydown", dismissOnEscape, true);
     };
-  }, [panel, closePanel]);
+  }, [panel, count, closePanel, viewport]);
 
   useLayoutEffect(() => {
     if (tools.slash) menu.current?.querySelector("[data-command-current]")?.scrollIntoView({ block: "nearest" });
@@ -261,7 +273,7 @@ export function DocumentBlockTools({ tools, viewport, count, onCopyLink, copyAll
       {rowId && (panel || tools.slash) && <AnchoredTools viewport={viewport}
         anchor={() => document.getElementById(rowId)?.getBoundingClientRect() ?? null}
         trigger={panel?.target} focusSelector={panel?.entry === "keyboard" ? firstCommand : undefined} layer="commands"
-        label={tools.slash ? "斜杠命令" : "内容块命令"}>
+        label={headingNumber ? "标题编号" : tools.slash ? "斜杠命令" : "内容块命令"}>
         <div ref={menu} className={styles.commands} id={listId} onMouseDown={preservePointerFocus}
           onKeyDown={(event) => {
             if (event.key === "Tab" && panel?.entry === "keyboard") { close(); return; }
@@ -271,7 +283,22 @@ export function DocumentBlockTools({ tools, viewport, count, onCopyLink, copyAll
             const target = (event.target as Element).closest("button");
             if (branch && target && target !== branch.trigger) setBranch(null);
           }}>
-          {panel?.mode === "block" ? (
+          {headingNumber ? (
+            <div className={styles.listSettings}>
+              <button type="button" disabled={!headingNumber.hasPrevious || headingNumber.start === 0}
+                onClick={() => tools.updateHeadingNumber(0)}>继续标题编号</button>
+              <button type="button" disabled={headingNumber.start === 1 || (!headingNumber.hasPrevious && headingNumber.start === 0)}
+                onClick={() => tools.updateHeadingNumber(1)}>重新开始编号</button>
+              <form key={panel?.id} onSubmit={(event) => {
+                event.preventDefault();
+                const start = readHeadingNumberStart(new FormData(event.currentTarget).get("number"));
+                if (start) tools.updateHeadingNumber(start);
+              }}>
+                <label>设置编号的值<input name="number" type="number" min="1" max="9999999" required defaultValue={headingNumber.value} /></label>
+                <button type="submit">应用编号</button>
+              </form>
+            </div>
+          ) : panel?.mode === "block" ? (
             <>
               <div role="group" aria-label="常用块类型" className={styles.quickTypes}>
                 {quickTypes.map((entry) => typeButton(entry))}
@@ -285,8 +312,8 @@ export function DocumentBlockTools({ tools, viewport, count, onCopyLink, copyAll
                 <button type="button" disabled={!copyAllowed} onClick={() => { void tools.copy(panel.id, true); }}>剪切块</button>
                 <button type="button" disabled={!copyAllowed} onClick={() => { void tools.copy(panel.id, false); }}>复制块</button>
                 <button type="button" onClick={() => tools.remove(target)}>删除块</button>
-                <button type="button" disabled={target.start === 0} onClick={() => tools.move(target, target.start - 1)}>上移</button>
-                <button type="button" disabled={target.end >= count} onClick={() => tools.move(target, target.end + 1)}>下移</button>
+                <button type="button" disabled={neighbors?.up === undefined} onClick={() => neighbors?.up !== undefined && tools.move(target, neighbors.up)}>上移</button>
+                <button type="button" disabled={neighbors?.down === undefined} onClick={() => neighbors?.down !== undefined && tools.move(target, neighbors.down)}>下移</button>
                 <button type="button" onClick={() => { onCopyLink(panel.id); close(); }}>复制块链接</button>
                 {branchButton("insert", "在下方添加")}
               </div>}
@@ -396,7 +423,7 @@ export function FloatingSelectionTools({ selection, viewport, format, tools, res
       restoreSelection(selection);
     }}>
       {onEdit ? <button type="button" className={styles.editSelection} onMouseDown={preservePointerFocus} onClick={onEdit}>编辑</button> :
-        <DocumentFormatToolbar format={format} blockType={{
+        <DocumentFormatToolbar format={format} indent={{ available: tools.canIndent, apply: () => tools.indent(selection) }} blockType={{
           expanded: typeOpen,
           open: (target, keyboard) => tools.open(selection.focus.blockId, "type", target, keyboard ? "keyboard" : "pointer"),
           preview: (target, previous) => {

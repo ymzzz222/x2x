@@ -61,8 +61,11 @@ export async function createDocumentRequest(client: SupabaseClient, actor: strin
   return result;
 }
 
-export function readDocument(client: SupabaseClient, id: string, generation: number, after: number, signal?: AbortSignal, actor?: string) {
-  return documentRequest<DocumentRead>(client, "/" + id + "?generation=" + generation + "&after=" + after,
+export function readDocument(client: SupabaseClient, id: string, generation: number, after: number,
+  signal?: AbortSignal, actor?: string, presenceSession?: string) {
+  const query = new URLSearchParams({ generation: String(generation), after: String(after) });
+  if (presenceSession) query.set("presenceSession", presenceSession);
+  return documentRequest<DocumentRead>(client, "/" + id + "?" + query,
     undefined, signal, actor ? { actor } : undefined);
 }
 
@@ -76,6 +79,7 @@ export const errorMessages: Record<string, string> = {
   LINK_DISABLED: "此分享链接已停用",
   LINK_PASSWORD_REQUIRED: "请输入正确的分享密码",
   DOCUMENT_VERSION_CHANGED: "文档版本已更新，旧版本的待提交修改已保留在本机",
+  DOCUMENT_SCHEMA_UNSUPPORTED: "此文档需要新版编辑器查看",
   SUGGESTION_OUTDATED: "原文字或版本发生了变化，当前修订无法应用",
   SUGGESTION_CLOSED: "此修订已处理",
   DOCUMENT_ACTION_DENIED: "当前权限不允许此操作",
