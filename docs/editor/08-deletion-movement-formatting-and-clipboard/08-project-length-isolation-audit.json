@@ -1,0 +1,74 @@
+{
+  "time": "2026-10-21T08:03:24.066Z",
+  "scope": "Actual configured DocLengthLimit filter with real project schema/default document and ProseMirror transactions; not clipboard UI, other plugin integration or server enforcement",
+  "maxChars": 460000,
+  "hashes": {
+    "limitSource": "36760012e55d06b6b20c788570670559e1aac5a3e4ca162f69f5d1f8dce1f4ef",
+    "registryBundle": "01a351d869ce8d11a1abd11dcc9b81590a3e3f14ecaf10fc94a1981798607941"
+  },
+  "cases": [
+    {
+      "name": "ASCII exact limit",
+      "passed": true,
+      "detail": {
+        "utf16": 460000,
+        "codePoints": 460000,
+        "rejectionPreservedDoc": true
+      }
+    },
+    {
+      "name": "CJK exact limit",
+      "passed": true,
+      "detail": {
+        "utf16": 460000,
+        "codePoints": 460000,
+        "rejectionPreservedDoc": true
+      }
+    },
+    {
+      "name": "astral emoji counts as two UTF-16 units",
+      "passed": true,
+      "detail": {
+        "utf16": 460000,
+        "codePoints": 230000,
+        "rejectionPreservedDoc": true
+      }
+    },
+    {
+      "name": "combining sequence counts as two UTF-16 units",
+      "passed": true,
+      "detail": {
+        "utf16": 460000,
+        "codePoints": 460000,
+        "rejectionPreservedDoc": true
+      }
+    },
+    {
+      "name": "bulk over-limit edit is atomic",
+      "passed": true,
+      "detail": {
+        "utf16": 460001,
+        "unchanged": true
+      }
+    },
+    {
+      "name": "title text contributes to document total",
+      "passed": true,
+      "detail": {
+        "titleUnits": 1,
+        "attemptedBodyUnits": 460000,
+        "unchanged": true
+      }
+    },
+    {
+      "name": "already oversized data allows reducing edit",
+      "passed": true,
+      "detail": {
+        "existingUnits": 460002,
+        "reducedUnits": 460001,
+        "furtherGrowthRejected": true
+      }
+    }
+  ],
+  "failures": []
+}

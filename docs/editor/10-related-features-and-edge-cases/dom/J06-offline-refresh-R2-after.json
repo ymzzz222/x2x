@@ -1,0 +1,31 @@
+{
+  "caseId": "J06-offline-reconnect-R2-offline-refresh",
+  "url": "chrome-error://chromewebdata/",
+  "title": "research-fixture.example",
+  "ready": "complete",
+  "online": false,
+  "roots": 0,
+  "error": "<div class=\"error-code\"><!--?lit$458807591$-->ERR_INTERNET_DISCONNECTED</div>",
+  "timeOrigin": 1793003959604.5,
+  "navigation": [
+    {
+      "type": "back_forward",
+      "duration": 297.2000000476837
+    }
+  ],
+  "before": {
+    "timeOrigin": 1793003757950.4,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "online": false,
+    "at": "2026-10-26T08:39:18.416Z"
+  },
+  "confirmation": "Actual native reload and explicitly approved warning confirmation both sent with fresh guards",
+  "_snapshotDictionary": {},
+  "_snapshotEncoding": {
+    "scheme": "body-title-snapshotRef-v1",
+    "normalizedCanonicalSha256": "73050a3292dded49acbb70e01693c3008e6cc4b628670382fde2ea6205a8e619",
+    "rawCanonicalSha256": "73050a3292dded49acbb70e01693c3008e6cc4b628670382fde2ea6205a8e619",
+    "roundtripVerified": true
+  },
+  "_normalization": "DOM class/id/data identifiers feishu -> maiya; URL and text unchanged"
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-27",
+  "scope": "Static reconstruction of prior RFC6902/$dom and $obj evidence; not functional replay",
+  "stageStats": {
+    "01-baseline-and-dom": {
+      "files": 20,
+      "rawOrAuxiliaryJson": 4,
+      "patchFiles": 16,
+      "patchRuns": 64,
+      "patchOperations": 1380
+    },
+    "02-creation-and-editing": {
+      "files": 485,
+      "patchFiles": 485,
+      "patchRuns": 571,
+      "patchOperations": 17164
+    },
+    "03-single-block-conversion": {
+      "files": 222,
+      "patchFiles": 216,
+      "patchRuns": 439,
+      "patchOperations": 15324,
+      "rawOrAuxiliaryJson": 6
+    },
+    "04-multi-block-conversion": {
+      "files": 285,
+      "objectHashFiles": 285
+    },
+    "05-nesting-and-combinations": {
+      "files": 151,
+      "objectHashFiles": 151
+    },
+    "06-numbering-folding-and-outline": {
+      "files": 362,
+      "rawOrAuxiliaryJson": 362
+    }
+  },
+  "failures": [],
+  "limits": [
+    "S01-S03 patch applicability and object references checked; these files do not provide an original canonical hash, so this does not prove pre-dedup equality",
+    "S04-S05 expanded run hashes compare original stored canonical digest; semantic paired eligibility and observability are separate",
+    "Unencoded S06 raw/auxiliary JSON are parsed and byte-hashed in source manifest; not a patch decoder result",
+    "No old sources changed; original failures, unknown conditions and nonzero monitoring limits remain in original records"
+  ],
+  "checks": {
+    "patchFiles": 717,
+    "patchRuns": 1074,
+    "patchOperations": 33868,
+    "objectHashFiles": 436,
+    "reconstructionFailures": 0,
+    "newFunctionalRuns": 0
+  },
+  "methods": [
+    "RFC6902 add/remove/replace with strict object and array paths; time set before each patch",
+    "Local $dom and cross-file baseline pointers recursively resolved with cycle checks",
+    "S04/S05 sole $obj references expanded recursively; sorted UTF-8 Python default separators used for stored digest"
+  ]
+}

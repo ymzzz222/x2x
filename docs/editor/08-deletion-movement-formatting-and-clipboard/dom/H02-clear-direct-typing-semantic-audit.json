@@ -1,0 +1,32 @@
+{
+  "scope": "Actual serialized title/body DOM determines membership; native AX text matching does not",
+  "R1MetadataLimitation": "historyAudit.bodyFreshObservedInNativeAX is only an AX-label regex result and does NOT establish body membership; preserved as original collector metadata",
+  "runs": [
+    {
+      "source": "H02-clear-direct-typing-R1.json",
+      "sourceFileSha256": "7d8038ac12ca9785dc68fb8532e428e871d4eeee5e163db33b468f092d465850",
+      "id": "H02-clear-direct-typing-R1",
+      "FreshObservedIn": "page title",
+      "bodyBlockCountAtFresh": 0,
+      "FreshStateSamples": 13,
+      "titleRestoredEmpty": true,
+      "mixedBodyRestored": true,
+      "historyKind": "typing-and-deletion-separate",
+      "errors": [],
+      "overflow": {}
+    },
+    {
+      "source": "H02-clear-direct-typing-R2.json",
+      "sourceFileSha256": "c10562b989a3bd7654a9b435796b12d4af094d18a65f89de5b12bf008a59d733",
+      "id": "H02-clear-direct-typing-R2",
+      "FreshObservedIn": "page title",
+      "bodyBlockCountAtFresh": 0,
+      "FreshStateSamples": 13,
+      "titleRestoredEmpty": true,
+      "mixedBodyRestored": true,
+      "historyKind": "typing-and-deletion-separate",
+      "errors": [],
+      "overflow": {}
+    }
+  ]
+}

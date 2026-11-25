@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-27",
+  "scope": "Static research integrity checks; not product acceptance",
+  "counts": {
+    "checks": 23,
+    "passed": 23,
+    "failed": 0
+  },
+  "functionalStatus": {
+    "projectIdentity": "four actual isolated primary failures",
+    "naturalClipboardRefusal": "not observed",
+    "totalDocumentCapacity": "not established",
+    "cleanup": "pending independent confirmation"
+  },
+  "limits": [
+    "Static audit success is not functional acceptance.",
+    "Expected primary failures must remain visible after passing the evidence checks.",
+    "The controlled Clipboard API probe is separate from the product error handler.",
+    "Renderer failures are not document-capacity rejection thresholds.",
+    "Virtualized DOM samples and selected word counts do not prove whole-document identity.",
+    "A reload timeOrigin and clipboard digest do not prove the save protocol against races.",
+    "Current source fingerprints describe this run; other build configurations remain untested.",
+    "Final cleanup must be checked after the final content operation."
+  ],
+  "pendingActions": [
+    "Finish clearing the body and title.",
+    "Read back saved empty state in Chrome and Quark.",
+    "Remove remaining temporary research state and restore user-selected tabs."
+  ],
+  "checks": [
+    {"id":"original-stage-evidence-unchanged","passed":true,"details":{"files":2727,"changed":[]}},
+    {"id":"single-paste-case-count","passed":true,"details":[[3000,1],["3000-accepted",2],["3001-rejected",1],["3001-rejected",2]]},
+    {"id":"3000-accepted-1","passed":true,"details":{"appliedCopies":[2,4],"baselineCopies":[3,5]}},
+    {"id":"3000-accepted-2","passed":true,"details":{"appliedCopies":[6,8],"baselineCopies":[7,9]}},
+    {"id":"3001-rejected-1","passed":true,"details":{"appliedCopies":[11],"baselineCopies":[10,12]}},
+    {"id":"3001-rejected-2","passed":true,"details":{"appliedCopies":[14],"baselineCopies":[13,15]}},
+    {"id":"permission-restored-after-real-reload","passed":true,"details":{"answer":"允许临时屏蔽，测完恢复默认","questionItemId":"[\"request_user_input_async\",\"call_598f79ac319b4183a699ebc0a13ca93f\",0]","origin":"https://research-fixture.example","originalUIValue":"询问（默认）","originalAPI":{"read":"prompt","write":"granted"},"currentUIValue":"询问（默认）","restorationConfirmed":true,"restorationUIConfirmed":true,"restoredAPI":{"read":"prompt","write":"granted"},"postReloadVerification":{"p":"permission-restored-after-reload","origin":1793085744946.2,"read":"prompt","write":"granted","monitorPresent":false}}},
+    {"id":"platform-read-denied-two-real-activations","passed":true,"details":[{"round":1,"trusted":true,"at":130835.60000014305,"writeFocus":true,"activation":true,"write":"succeeded","readFocus":true,"read":"NotAllowedError","readMessage":"Failed to execute 'readText' on 'Clipboard': Read permission denied."},{"round":2,"trusted":true,"at":173640.80000019073,"writeFocus":true,"activation":true,"write":"succeeded","readFocus":true,"read":"NotAllowedError","readMessage":"Failed to execute 'readText' on 'Clipboard': Read permission denied."}]},
+    {"id":"native-control-terminal-LF-not-hidden","passed":true,"details":["Controlled platform read denial only; this is not a natural refusal or a demonstrated Feishu read-failure handler.","Clipboard writes succeeded under the blocked-read site setting.","Two native-paste controls inserted the marker but omitted the terminal LF; strict payload-hash assertions remain failed.","Both controls restored the Guard-plus-empty-paragraph baseline and replayed their actual applied text.","The computer-use kernel timed out during the previous export; no content action was repeated during recovery."]},
+    {"id":"project-primary-failures-preserved","passed":true,"details":{"cases":16,"primaryPassed":12,"primaryFailed":4,"historyApplicable":12,"historyPassed":12}},
+    {"id":"project-history-distinct-from-primary","passed":true,"details":{"cases":16,"primaryPassed":12,"primaryFailed":4,"historyApplicable":12,"historyPassed":12}},
+    {"id":"unexercised-AI-stub-not-called","passed":true,"details":[]},
+    {"id":"current-project-source-matches-recorded-run","passed":true,"details":{"files":51,"changed":[]}},
+    {"id":"export-digest-browser-before-refresh.json","passed":true,"details":"2fb0e4a6a48ea2c9613dd5bb46d51a4037e2873f49bb4a7fa8686235a8176dd9"},
+    {"id":"export-digest-browser-block-screening.json","passed":true,"details":"a45596bd44b9fe7e970dcd1e8c598922647556e9b20f82786cdfe50ba7004f2a"},
+    {"id":"export-digest-browser-cumulative-incidents.json","passed":true,"details":"5f3e71fd22fad8319ae679e8f124115cb1e74e6e80447fb8465a72aa0e44b018"},
+    {"id":"export-digest-browser-permission-blocked-recovered.json","passed":true,"details":"b9cb8a75812df37f466a9069de41e49c31da7dd5f49b1a5e7d6c4824e21821ba"},
+    {"id":"export-digest-browser-refresh-1.json","passed":true,"details":"42f9bf348936ff5254ff22d8ca87d2e92f138f8966368410a29585e1d79ac3d8"},
+    {"id":"export-digest-browser-refresh-2.json","passed":true,"details":"9629e35a97c50e4345b2ed9eddcec5f7e295bf7b2759c4dcde510ac1a0b8ff7e"},
+    {"id":"export-digest-browser-single-paste-boundary.json","passed":true,"details":"0af56c7d2fce6802810d35647d96677c91c0320eeff24e03725ff6c77a9b2f28"},
+    {"id":"fulltext-reloaded-browser-refresh-1.json","passed":true,"details":{"n":500010,"lines":10,"start":"S08R001|xxxx","end":"xxxxxxxxxxxY","sha":"23426e989f496deb5fad01c53ccbf401f621b81ca923a1f306b5a33bdbfeae96","types":["docx/record","text/html","text/plain"],"at":245282.60000014305,"trust":true,"prevented":true,"html":{"units":1013124,"sha":"1a65f02aec2521cae165a960d82ba1140891e7a8f3b2ba1354ff2aeeeff8a902","head":"<meta charset=\"utf-8\"><div data-page-id=\"HWqedGGcOo7LXSxpY0ncFEnAned\" data-lark-html-role=\"root\" data-docx-has-block-data=\"false\"><div class=\"ace-line ace-line ","paragraphs":0,"dataTypeCounts":{},"blockTypeCount":0}}},
+    {"id":"fulltext-reloaded-browser-refresh-2.json","passed":true,"details":{"n":500010,"lines":10,"start":"S08R001|xxxx","end":"xxxxxxxxxxxY","sha":"23426e989f496deb5fad01c53ccbf401f621b81ca923a1f306b5a33bdbfeae96","types":["docx/record","text/html","text/plain"],"at":18495.299999952316,"trust":true,"prevented":true,"html":{"units":1013124,"sha":"7f62758e69002004e48f51c910ceb05f1eae62e3695c11b950cf2f9b3bea2ac5","head":"<meta charset=\"utf-8\"><div data-page-id=\"HWqedGGcOo7LXSxpY0ncFEnAned\" data-lark-html-role=\"root\" data-docx-has-block-data=\"false\"><div class=\"ace-line ace-line ","paragraphs":0,"dataTypeCounts":{},"blockTypeCount":0}}},
+    {"id":"new-text-file-size-band","passed":true,"details":[]}
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 18,
+  "scope": "DevTools simulated offline edit/Undo/Redo and eventual online reload recovery; physical disconnection not claimed",
+  "offlineReloadCoverage": "R1 final warning actor uncertain; R2 full native warning confirmation recorded. Controlled offline refresh is single only, not an effective pair.",
+  "anomalies": [
+    "R2 one captured Error: Network Error, preserved; not a clean error-free pass",
+    "Chrome disconnected error document reports back_forward even after controlled R2 reload; cannot attribute actor from this navigation type",
+    "Initial automatic review rejected pending-data-loss confirmation; sir explicitly approved two afterward"
+  ],
+  "files": [
+    {
+      "file": "dom/J06-offline-reconnect-R1-operation.json",
+      "sha256": "d5549dd38a84c101f6b193bc3034adf39225c6154d3ea4034119099f0a01ff89"
+    },
+    {
+      "file": "dom/J06-offline-refresh-R1-after.json",
+      "sha256": "5db116080ad9788953cef44cc04952521915587f9fd593363151e247dfe4bd0d"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R1-online-reload.json",
+      "sha256": "8d2e6f7b3b9ac71fb3daf122dd558e0ce103953562848372f7959ea802a08417"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R2-operation.json",
+      "sha256": "5d63b5002b7a910e783ae36d8ddb3fffd839dd0b955356bd446aae98adee15f5"
+    },
+    {
+      "file": "dom/J06-offline-refresh-R2-after.json",
+      "sha256": "cef499c40124a6d82cd1886c661e0c5495184193bd593b7795778d7ba9e7951a"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R2-online-reload.json",
+      "sha256": "fc1feae6168c0cacf3681f8617d789fdbcf64d99cb9da38690e49f230835a267"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R2-Quark-independent.json",
+      "sha256": "242fadb6ec26b52640e1248939dc3026318213534be0c73fdbfc6ac967663f7e"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J06-offline-reconnect-R1-operation canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-refresh-R1-after canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R1-online-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact offline edit history",
+      "passed": true
+    },
+    {
+      "name": "R1 every offline phase navigator false",
+      "passed": true
+    },
+    {
+      "name": "R1 trustworthy E paste and history keys",
+      "passed": true
+    },
+    {
+      "name": "R1 no event mutation UI overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 actual disconnected page only",
+      "passed": true
+    },
+    {
+      "name": "R1 online reload recovers exact pending edit",
+      "passed": true
+    },
+    {
+      "name": "R1 recorded errors explicit",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R2-operation canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-refresh-R2-after canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R2-online-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact offline edit history",
+      "passed": true
+    },
+    {
+      "name": "R2 every offline phase navigator false",
+      "passed": true
+    },
+    {
+      "name": "R2 trustworthy E paste and history keys",
+      "passed": true
+    },
+    {
+      "name": "R2 no event mutation UI overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 actual disconnected page only",
+      "passed": true
+    },
+    {
+      "name": "R2 online reload recovers exact pending edit",
+      "passed": true
+    },
+    {
+      "name": "R2 recorded errors explicit",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R2-Quark-independent canonical hash",
+      "passed": true
+    },
+    {
+      "name": "paired Chrome final semantic hashes",
+      "passed": true
+    },
+    {
+      "name": "R2 actual auxiliary reload exact independent hash",
+      "passed": true
+    },
+    {
+      "name": "R2 native warning and explicit data loss approval",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

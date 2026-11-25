@@ -1,0 +1,104 @@
+{
+  "status": "observed",
+  "source": "Chrome DevTools DOM query",
+  "sourceUrl": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "observedAt": "2026-10-12T18:27:14.689+08:00",
+  "normalization": "DOM identifier feishu -> maiya; document text and source URL unchanged",
+  "viewport": { "width": 1453, "height": 992, "devicePixelRatio": 1, "devtoolsDock": "right" },
+  "root": {
+    "ref": "n1",
+    "tag": "DIV",
+    "attrs": {
+      "class": "page-block root-block",
+      "data-slate-editor": "true",
+      "contenteditable": "true",
+      "spellcheck": "false",
+      "data-content-editable-root": "true"
+    }
+  },
+  "sharedStyle": {
+    "fontFamily": "LarkHackSafariFont, LarkEmojiFont, LarkChineseQuote, -apple-system, \"system-ui\", \"Helvetica Neue\", Tahoma, \"PingFang SC\", \"Microsoft Yahei\", Arial, \"Hiragino Sans GB\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+    "color": "rgb(31, 35, 41)",
+    "whiteSpace": "break-spaces"
+  },
+  "zones": [
+    {
+      "role": "pageTitle",
+      "parents": [
+        { "ref": "n7", "tag": "DIV", "attrs": { "class": "page-block-header page-block-header__custom_icon" } },
+        { "ref": "n6", "tag": "H1", "attrs": { "class": "page-block-content left flash-block-content page-block-title-empty" } }
+      ],
+      "node": {
+        "ref": "n2",
+        "tag": "DIV",
+        "attrs": {
+          "class": "zone-container text-editor",
+          "data-zone-id": "1",
+          "data-zone-container": "*",
+          "data-slate-editor": "true",
+          "contenteditable": "true",
+          "data-placeholder": "请输入标题"
+        },
+        "children": [{
+          "ref": "n3", "tag": "DIV", "attrs": { "class": "ace-line", "data-node": "true" },
+          "children": [{
+            "ref": "n4", "tag": "SPAN", "attrs": { "data-string": "true", "data-enter": "true", "data-leaf": "true" },
+            "children": [{ "ref": "n5", "text": "\u200b" }]
+          }]
+        }]
+      },
+      "style": { "fontSize": "34px", "fontWeight": "500", "lineHeight": "55.25px" }
+    },
+    {
+      "role": "bodyText",
+      "parents": [
+        { "ref": "n13", "tag": "DIV", "attrs": { "class": "text-block-wrapper" } },
+        { "ref": "n12", "tag": "DIV", "attrs": { "class": "text-block" } }
+      ],
+      "node": {
+        "ref": "n8",
+        "tag": "DIV",
+        "attrs": {
+          "class": "zone-container text-editor",
+          "data-zone-id": "2",
+          "data-zone-container": "*",
+          "data-slate-editor": "true",
+          "contenteditable": "true"
+        },
+        "children": [{
+          "ref": "n9", "tag": "DIV", "attrs": { "class": "ace-line", "data-node": "true" },
+          "children": [{
+            "ref": "n10", "tag": "SPAN", "attrs": { "data-string": "true", "data-enter": "true", "data-leaf": "true" },
+            "children": [{ "ref": "n11", "text": "\u200b" }]
+          }]
+        }]
+      },
+      "style": { "fontSize": "16px", "fontWeight": "400", "lineHeight": "26px" }
+    }
+  ],
+  "focus": "n1",
+  "selection": { "anchor": "n5", "anchorOffset": 1, "focus": "n5", "focusOffset": 1, "collapsed": true, "type": "Caret" },
+  "saveLabel": "已经保存到云端",
+  "monitorChecks": [
+    {
+      "label": "quiet-R1",
+      "observedOn": "2026-10-12",
+      "source": "Chrome DevTools expression result of monitor.end()",
+      "result": { "changes": 0, "events": 0, "errors": 0, "overflow": 0 },
+      "status": "observed-once",
+      "limits": ["Full start and end snapshots were not exported", "No focus, scroll or content editing equivalence is established"]
+    }
+  ],
+  "resumeCheck": {
+    "observedOn": "2026-10-13",
+    "source": "Chrome DevTools live expression preview and native AX state",
+    "monitorTypePreview": "undefined",
+    "querySubmitted": false,
+    "windowMode": "not-fullscreen",
+    "inputCleared": true,
+    "blocker": "Control interface could not locate the visible input window; AX focus remained in the document",
+    "error": "windowNotFoundAtPosition",
+    "formalEditingSampleStarted": false
+  },
+  "limits": ["Node refs are valid only in the original monitor session", "Runtime zone IDs are observations, not fixed implementation values", "No nonempty block mutation has been verified yet", "A live preview is not a submitted command; current monitor could not be reinstalled"]
+}

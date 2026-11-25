@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-27",
+  "scope": "Nonzero numeric monitoring limit discovery across current source JSON",
+  "totals": {
+    "sourceJson": 2678,
+    "filesWithNonzeroLimit": 22
+  },
+  "stageCounts": {
+    "02-creation-and-editing": 22
+  },
+  "classification": {
+    "functionalPassCount": false,
+    "completeMonitoringClaim": false,
+    "sourceMetadataPreserved": true,
+    "allPairedCasesRequalified": false
+  },
+  "reviewedSpecialCase": {
+    "source": "../02-creation-and-editing/02-composition-editing.md",
+    "lines": "61-84",
+    "case": "REQ-S02-B08-006",
+    "mutationArrayLimit": 3000,
+    "exportOverflow": 800,
+    "auditOverflowR1R2": [
+      492,
+      520
+    ],
+    "alternativeChannel": "independent compositionTimeline27/23, each overflow0; events/globalKeys/steps and peer snapshots",
+    "scope": "Cannot recover full raw mutation sequence; R2 lacks peer intermediate 3你 snapshot"
+  },
+  "limits": [
+    "Other nonzero-limit files require case-specific channel and paired eligibility review",
+    "Raw zero-limit counters do not prove all relevant surfaces were observed",
+    "Auxiliary schema-frequency keys containing the word overflow are not metric fields",
+    "Omission/dedup noise metadata is not classified as dropped evidence without semantic inspection"
+  ],
+  "records": [
+    {"path": "../02-creation-and-editing/dom/text-b05-add-below-text-r1.json", "nonzeroLimits": [{"field": "$.overflow", "value": 42}, {"field": "$.runs[0].auditOverflow", "value": 151}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-add-below-text-r2.json", "nonzeroLimits": [{"field": "$.overflow", "value": 42}, {"field": "$.runs[0].auditOverflow", "value": 205}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-block-menu-cancel-controlled-r3.json", "nonzeroLimits": [{"field": "$.runs[0].auditOverflow", "value": 15}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-block-menu-cancel-controlled-r5.json", "nonzeroLimits": [{"field": "$.runs[0].auditOverflow", "value": 36}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-block-menu-cancel-controlled-r6.json", "nonzeroLimits": [{"field": "$.runs[0].auditOverflow", "value": 52}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-block-menu-controlled-r7.json", "nonzeroLimits": [{"field": "$.overflow", "value": 42}, {"field": "$.runs[0].auditOverflow", "value": 75}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-block-menu-controlled-r8.json", "nonzeroLimits": [{"field": "$.overflow", "value": 42}, {"field": "$.runs[0].auditOverflow", "value": 99}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-quote-shortcut-duration-r1.json", "nonzeroLimits": [{"field": "$.overflow", "value": 49}, {"field": "$.runs[0].auditOverflow", "value": 211}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-quote-shortcut-unblocked-r1.json", "nonzeroLimits": [{"field": "$.overflow", "value": 322}, {"field": "$.runs[0].auditOverflow", "value": 340}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b05-quote-shortcut-unblocked-r2.json", "nonzeroLimits": [{"field": "$.overflow", "value": 322}, {"field": "$.runs[0].auditOverflow", "value": 371}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b07-independent-primary-r1.json", "nonzeroLimits": [{"field": "$.overflow", "value": 331}, {"field": "$.runs[0].auditOverflow", "value": 388}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b07-independent-primary-r2.json", "nonzeroLimits": [{"field": "$.overflow", "value": 372}, {"field": "$.runs[0].auditOverflow", "value": 398}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b08-remote-composition-controlled-r1.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 492}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-b08-remote-composition-controlled-r2.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 520}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-independent-persistence-fixture.json", "nonzeroLimits": [{"field": "$.overflow", "value": 242}, {"field": "$.runs[0].auditOverflow", "value": 304}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-remote-composition-empty.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 420}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-remote-controlled-r2.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 492}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-remote-ime-calibration-r2.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 457}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-remote-ime-calibration.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 432}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-remote-ime-empty-recovery.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 463}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-s02-final-restoration.json", "nonzeroLimits": [{"field": "$.overflow", "value": 800}, {"field": "$.runs[0].auditOverflow", "value": 520}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"},
+    {"path": "../02-creation-and-editing/dom/text-setup-shortcut-conflict-restoration.json", "nonzeroLimits": [{"field": "$.overflow", "value": 331}, {"field": "$.runs[0].auditOverflow", "value": 375}], "qualification": "Inspect case-specific alternative channels; nonzero cumulative limit is not automatically functional failure or complete mutation evidence"}
+  ]
+}

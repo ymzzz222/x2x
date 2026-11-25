@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-26",
+  "scope": "S10 startup checkpoint, J01 one fixed-condition pair only; no J01-J24 overall or production acceptance",
+  "validPair": {
+    "case": "J01-empty-no-match",
+    "rounds": [
+      "R1",
+      "R3"
+    ],
+    "condition": "First opening after document load with empty visible fields and empty body/title"
+  },
+  "newFixedConditionPairs": 1,
+  "stageDOMJSONFiles": 10,
+  "excludedWindows": [
+    "J01-startup-find-focus-probe",
+    "J01-empty-no-match-R2-paste-no-insertion"
+  ],
+  "singleObservation": "J01-reopen-retained-fields-observation",
+  "files": [
+    {
+      "file": "dom/J01-empty-no-match-R1.json",
+      "sha256": "5ea928487fdd173310d8a0f45cf0c35da5d7861ed159230865806ec8aa5fd701"
+    },
+    {
+      "file": "dom/J01-empty-no-match-R3.json",
+      "sha256": "2439f5ec13304e29d6d60353e80685892e680c1596e6936cbd7f53a91124e7b1"
+    },
+    {
+      "file": "dom/J01-empty-no-match-R2-paste-no-insertion.json",
+      "sha256": "4d81e059782a72bb4c0c306f108c5ee8eed7bdd4f375b2cc006f0cc37060c014"
+    },
+    {
+      "file": "dom/J01-startup-find-focus-probe.json",
+      "sha256": "4dc7e5421c862248465895017429814e171ff184bd1aa5f61903c1c111cfdb18"
+    },
+    {
+      "file": "dom/J01-reopen-retained-fields-observation.json",
+      "sha256": "90f237e13ddd48b38a0d565ca43ec8494076db1715fe9a6ec38ea9dd3c23f06b"
+    },
+    {
+      "file": "dom/J00-startup-observer-stopped.json",
+      "sha256": "35d680276e51dd7e880bec2aa86c4e27432e42ffae5f508290c9f488785e3c28"
+    },
+    {
+      "file": "dom/J00-startup-final-empty-reload.json",
+      "sha256": "a27a8739f35ec37b036ad0d3405cbaeda0c3c80f37ed365d8c492c76bdcbf58a"
+    },
+    {
+      "file": "dom/J00-before-fresh-repeat-empty-reload.json",
+      "sha256": "5e0b912aebef88acb86eef4414cc35928f10e079ba28210664e6d843c6e047e8"
+    },
+    {
+      "file": "dom/J00-startup-interface-restored.json",
+      "sha256": "663ef58f0c054e79f5b0564ce35c9280d0bbd73b9cfa846b0540f455cbcb27c9"
+    },
+    {
+      "file": "dom/J00-initial-empty-baseline.json",
+      "sha256": "0572c00c5267bb8506480a2abe7f3f19658be5ac47a33d5d4a3166a5a67ac9e1"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J01-empty-no-match-R1 canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact five body/title checkpoints",
+      "passed": true
+    },
+    {
+      "name": "R1 body empty title protected and roots connected",
+      "passed": true
+    },
+    {
+      "name": "R1 four matching panel phases",
+      "passed": true
+    },
+    {
+      "name": "R1 exact live field values",
+      "passed": true
+    },
+    {
+      "name": "R1 named actions all actually disabled",
+      "passed": true
+    },
+    {
+      "name": "R1 real zero result caption DOM",
+      "passed": true
+    },
+    {
+      "name": "R1 panel actually closed",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted paste to intended INPUT payloads",
+      "passed": true
+    },
+    {
+      "name": "R1 actual input insertion events not only paste",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted Escape in INPUT",
+      "passed": true
+    },
+    {
+      "name": "R1 capture bounded without recorded errors",
+      "passed": true
+    },
+    {
+      "name": "J01-empty-no-match-R3 canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "R3 exact five body/title checkpoints",
+      "passed": true
+    },
+    {
+      "name": "R3 body empty title protected and roots connected",
+      "passed": true
+    },
+    {
+      "name": "R3 four matching panel phases",
+      "passed": true
+    },
+    {
+      "name": "R3 exact live field values",
+      "passed": true
+    },
+    {
+      "name": "R3 named actions all actually disabled",
+      "passed": true
+    },
+    {
+      "name": "R3 real zero result caption DOM",
+      "passed": true
+    },
+    {
+      "name": "R3 panel actually closed",
+      "passed": true
+    },
+    {
+      "name": "R3 trusted paste to intended INPUT payloads",
+      "passed": true
+    },
+    {
+      "name": "R3 actual input insertion events not only paste",
+      "passed": true
+    },
+    {
+      "name": "R3 trusted Escape in INPUT",
+      "passed": true
+    },
+    {
+      "name": "R3 capture bounded without recorded errors",
+      "passed": true
+    },
+    {
+      "name": "R1 R3 exact paired visible panel semantics",
+      "passed": true
+    },
+    {
+      "name": "J01-empty-no-match-R2-paste-no-insertion canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "R2 no insertion discrepancy preserved excluded",
+      "passed": true
+    },
+    {
+      "name": "J01-startup-find-focus-probe canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "Focus probe stopped before paste and excluded",
+      "passed": true
+    },
+    {
+      "name": "J01-reopen-retained-fields-observation canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "Single reopen retained fields and hidden tab preserved",
+      "passed": true
+    },
+    {
+      "name": "J00-startup-observer-stopped canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "Monitor stopped after empty state and closed panel",
+      "passed": true
+    },
+    {
+      "name": "J00-startup-final-empty-reload canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "J00-before-fresh-repeat-empty-reload canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "Actual final reload empty loaded DOM and no old monitor",
+      "passed": true
+    },
+    {
+      "name": "Final title actually empty",
+      "passed": true
+    },
+    {
+      "name": "Final variables and UI restored without foreground Raise or body edit",
+      "passed": true
+    },
+    {
+      "name": "J00-initial-empty-baseline canonical snapshot hash",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md file line budget",
+      "passed": true
+    },
+    {
+      "name": "../ym-research-task.md file line budget",
+      "passed": true
+    },
+    {
+      "name": "All research local targets resolve",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "brokenLocalLinks": [],
+  "unverified": [
+    "Nonempty search and conversion/format interaction",
+    "Actual replace/current/all operations and full history",
+    "Reopen paste no insertion cause",
+    "S09 handoff: permission transition with known history, AI lock and genuine history beforeinput",
+    "Other J01-J24 scenarios and project isolated acceptance"
+  ],
+  "businessCodeChanged": false,
+  "projectRuntimeTestsExecuted": false,
+  "foregroundRaise": false,
+  "bodyEditsSent": false
+}

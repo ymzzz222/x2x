@@ -1,0 +1,12 @@
+{
+  "kind": "tool-access-rejection",
+  "date": "2026-10-19",
+  "source": "mcp__cua_repl.js automatic approval review",
+  "attemptedAction": "cua.getApp('/Applications/Quark.app')",
+  "userReportedCurrentURL": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "urlIndependentlyRead": false,
+  "outcome": "Rejected before Quark state was returned; not independent-read evidence",
+  "reason": "sir，读取 Quark 会重试此前因当前 URL 被平台禁止而终止的访问，属于未获明确授权的电脑访问控制绕过；仅确认 URL 不足以授权绕过该限制。",
+  "restriction": "Do not bypass this rejection through a workaround or indirect execution.",
+  "remaining": "Quark independent reading and necessary remote edits were not executed. Chrome research-page access had succeeded separately."
+}

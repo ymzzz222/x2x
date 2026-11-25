@@ -1,0 +1,67 @@
+{
+  "kind": "environment-baseline",
+  "normalization": "DOM identifiers feishu -> maiya; source URL unchanged",
+  "monitorSource": "(() => {\nif(window.__s06) return 'existing monitor';\nconst root=document.querySelector('.page-block.root-block');\nconst body=root.querySelector('.page-block-children');\nlet next=0, seq=0; const ids=new WeakMap();\nconst ref=n=>{if(!n)return null;if(!ids.has(n))ids.set(n,'n'+(++next));return ids.get(n)};\nconst attrs=e=>Object.fromEntries([...e.attributes].filter(a=>/^(class|style|contenteditable|role|aria-|data-(block|type|list|level|indent|fold|num|start|record|parent|index|zone))/.test(a.name)).map(a=>[a.name,a.value]));\nconst node=n=>n.nodeType===3?{ref:ref(n),text:n.data}:n.nodeType===1?{ref:ref(n),tag:n.tagName,attrs:attrs(n),children:[...n.childNodes].map(node)}:{ref:ref(n),type:n.nodeType};\nconst point=(n,o)=>n?{ref:ref(n),offset:o,text:n.nodeType===3?n.data:undefined,tag:n.nodeType===1?n.tagName:undefined}:null;\nconst selection=()=>{const s=getSelection();return s?{anchor:point(s.anchorNode,s.anchorOffset),focus:point(s.focusNode,s.focusOffset),type:s.type,text:s.toString()}:null};\nlet lastSelection=selection();const onSelection=()=>{const s=getSelection();if(s&&root.contains(s.anchorNode))lastSelection=selection()};document.addEventListener('selectionchange',onSelection);\nconst records=[]; const record=rs=>{for(const r of rs){records.push({seq:++seq,type:r.type,target:ref(r.target),attribute:r.attributeName,old:r.oldValue,value:r.type==='attributes'?r.target.getAttribute(r.attributeName):r.type==='characterData'?r.target.data:undefined,added:r.type==='childList'?[...r.addedNodes].map(node):undefined,removed:r.type==='childList'?[...r.removedNodes].map(node):undefined,previous:r.type==='childList'?ref(r.previousSibling):undefined,next:r.type==='childList'?ref(r.nextSibling):undefined})}};\nconst ob=new MutationObserver(record);ob.observe(root,{subtree:true,childList:true,characterData:true,characterDataOldValue:true,attributes:true,attributeOldValue:true});\nwindow.__s06={root,body,records,ref,node,selection:()=>lastSelection,flush:()=>record(ob.takeRecords()),snapshot:label=>{record(ob.takeRecords());return {label,time:new Date().toISOString(),url:location.href,rootConnected:root.isConnected,body:node(body),selection:lastSelection,active:{tag:document.activeElement.tagName,cls:document.activeElement.className},seq}},stop:()=>{record(ob.takeRecords());ob.disconnect();document.removeEventListener('selectionchange',onSelection);delete window.__s06}};\nreturn JSON.stringify({ready:true,root:ref(root),body:ref(body),children:body.children.length,time:new Date().toISOString(),viewport:[innerWidth,innerHeight],dpr:devicePixelRatio});\n})()",
+  "state": {
+    "label": "F00-empty",
+    "time": "2026-10-19T02:50:33.795Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "ref": "n3",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block-children",
+        "contenteditable": "false"
+      },
+      "children": [
+        {
+          "ref": "n4",
+          "tag": "DIV",
+          "attrs": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "children": [
+            {
+              "ref": "n5",
+              "tag": "DIV",
+              "attrs": {
+                "class": "render-unit-wrapper"
+              },
+              "children": []
+            },
+            {
+              "ref": "n6",
+              "tag": "DIV",
+              "attrs": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "selection": {
+      "anchor": {
+        "ref": "n1",
+        "offset": 0,
+        "tag": "DIV"
+      },
+      "focus": {
+        "ref": "n1",
+        "offset": 0,
+        "tag": "DIV"
+      },
+      "type": "Caret",
+      "text": ""
+    },
+    "active": {
+      "tag": "BODY",
+      "cls": "layout-column ccm-scope wiki"
+    },
+    "seq": 0
+  }
+}

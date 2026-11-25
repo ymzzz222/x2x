@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-27",
+  "target": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "label": "browser-cumulative-incidents",
+  "scope": "Actual native browser input and public DOM/clipboard observation; not service protocol acceptance",
+  "exportSha256": "5f3e71fd22fad8319ae679e8f124115cb1e74e6e80447fb8465a72aa0e44b018",
+  "result": "Total document capacity not established; renderer crash and two mismatched native paste attempts; rapid 100-line typeText did not preserve intended segmentation",
+  "screenshotFiles": [
+    "browser-cumulative-crash.png",
+    "browser-cumulative-type100.png"
+  ],
+  "browser": {
+    "origin": 1793087909029.7,
+    "scope": "cumulative incident excerpt; all paste events and last 30 events; earlier typing events omitted explicitly",
+    "totalEvents": 2652,
+    "eventCounts": {
+      "keydown": 717,
+      "keyup": 717,
+      "paste": 1,
+      "global-paste": 1,
+      "beforeinput": 608,
+      "input": 608
+    },
+    "events": [
+    {"seq":11,"t":"paste","k":null,"it":null,"trust":true,"at":116987.20000004768,"target":"r3","cls":" author-7622865454574423258","meta":false,"ctrl":false,"shift":false,"clip":{"types":["text/plain","text/html"],"plain":8,"html":663},"prevented":true},
+    {"t":"global-paste","at":116987.79999995232,"trust":true,"tag":"SPAN","n":8,"types":["text/plain","text/html"]},
+    {"seq":2622,"t":"keydown","k":"9","it":null,"trust":true,"at":250350.90000009537,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2623,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250355.10000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2624,"t":"input","k":null,"it":"insertText","trust":true,"at":250370.70000004768,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2625,"t":"keyup","k":"9","it":null,"trust":true,"at":250381.10000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2626,"t":"keydown","k":"Enter","it":null,"trust":true,"at":250384.10000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2627,"t":"keyup","k":"Enter","it":null,"trust":true,"at":250406.79999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2628,"t":"keydown","k":"B","it":null,"trust":true,"at":250409.79999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":true,"prevented":false},
+    {"seq":2629,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250413.90000009537,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2630,"t":"input","k":null,"it":"insertText","trust":true,"at":250432.90000009537,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2631,"t":"keyup","k":"B","it":null,"trust":true,"at":250443.90000009537,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":true,"prevented":false},
+    {"seq":2632,"t":"keydown","k":"1","it":null,"trust":true,"at":250446.5,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2633,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250451.29999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2634,"t":"input","k":null,"it":"insertText","trust":true,"at":250467.79999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2635,"t":"keyup","k":"1","it":null,"trust":true,"at":250477.40000009537,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2636,"t":"keydown","k":"2","it":null,"trust":true,"at":250480.20000004768,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2637,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250484.70000004768,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2638,"t":"input","k":null,"it":"insertText","trust":true,"at":250499.20000004768,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2639,"t":"keyup","k":"2","it":null,"trust":true,"at":250509.20000004768,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2640,"t":"keydown","k":"1","it":null,"trust":true,"at":250512.29999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2641,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250516.10000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2642,"t":"input","k":null,"it":"insertText","trust":true,"at":250532,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2643,"t":"keyup","k":"1","it":null,"trust":true,"at":250541.90000009537,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2644,"t":"keydown","k":"0","it":null,"trust":true,"at":250545,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2645,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250548.10000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2646,"t":"input","k":null,"it":"insertText","trust":true,"at":250564.20000004768,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2647,"t":"keyup","k":"0","it":null,"trust":true,"at":250574.60000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2648,"t":"keydown","k":"0","it":null,"trust":true,"at":250576.79999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2649,"t":"beforeinput","k":null,"it":"insertText","trust":true,"at":250580.29999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2650,"t":"input","k":null,"it":"insertText","trust":true,"at":250596.29999995232,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false},
+    {"seq":2651,"t":"keyup","k":"0","it":null,"trust":true,"at":250606.60000014305,"target":"r1","cls":"page-block root-block","meta":false,"ctrl":false,"shift":false,"prevented":false}
+  ],
+    "snapshots": [
+    {"name":"before-final-cleanup","origin":1793087909029.7,"scope":"rendered text blocks; bounded first/middle/last samples, not full document completeness","at":374227,"rendered":51,"userUnits":708,"userSha":"3391cdba25678e1b361bcd0c293a5880182e53da9070b25215d0e603122ee5eb","title":"​","events":2652,"overflow":0,"mutations":{"records":62351,"childList":36179,"characterData":629,"attributes":25543},"samples":[{"i":0,"id":"11984","ref":"r4","n":6,"sha":"98fb4ed673645e4d31b99e6c7d207113a46fd5f4ba4475b5ec8e55bfbaca965a","start":"B11983","end":"B11983"},{"i":1,"id":"11985","ref":"r5","n":6,"sha":"ca19624b821043db14a74f429fcd43b0b7f5b882dc9d57661ccfae4eda2d8ddf","start":"B11984","end":"B11984"},{"i":2,"id":"11986","ref":"r6","n":6,"sha":"b3a0cfaa9fad79b9f78ed3a815879849e9499e555caf1c4c5c2a7f716f13c261","start":"B11985","end":"B11985"},{"i":25,"id":"12010","ref":"r7","n":6,"sha":"41dff22bd3663031b633fd68a6066693bebe1a83f1837b548b5c7daf8a374723","start":"B12008","end":"B12008"},{"i":48,"id":"12090","ref":"r8","n":0,"sha":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","start":"","end":""},{"i":49,"id":"12089","ref":"r9","n":0,"sha":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","start":"","end":""},{"i":50,"id":"12088","ref":"r10","n":0,"sha":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855","start":"","end":""}]}
+  ],
+    "copies": [
+
+  ],
+    "overflow": 0,
+    "mutations": {
+      "records": 62351,
+      "childList": 36179,
+      "characterData": 629,
+      "attributes": 25543
+    }
+  }
+}

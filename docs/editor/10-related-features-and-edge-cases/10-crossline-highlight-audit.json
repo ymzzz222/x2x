@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 20,
+  "scope": "Physical uppercase key entry with prefix snapshot then separate final character; concatenated words do not match across soft line or block; active single-match overlay",
+  "excluded": [
+    "Native paste no insertion probe",
+    "Fast native typeText full query versus stale C highlights and Enter navigation probe",
+    "Initial custom block selection focus probe before any fixture paste"
+  ],
+  "limits": [
+    "No literal newline query inserted into single-line input",
+    "Fast text channel mismatch not attributed to product versus automation",
+    "No claim all find/replace rich formatting cases covered"
+  ],
+  "files": [
+    {
+      "file": "dom/J01-soft-crossblock-physical-R1.json",
+      "sha256": "b39661afc637bd1ad8964ba1ad4f2b19bdc072fcad7042ebca9883764b9d4bc7"
+    },
+    {
+      "file": "dom/J01-soft-crossblock-physical-R2.json",
+      "sha256": "40ad54a7d182effbc81a56a15551859f028b4cb76f42822c96dba6bf7477a258"
+    }
+  ],
+  "checks": [
+    {
+      "name": "R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 unchanged two text blocks exact identities",
+      "passed": true
+    },
+    {
+      "name": "R1 exact queries and counts",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted physical query input without composition",
+      "passed": true
+    },
+    {
+      "name": "R1 actual active highlight style",
+      "passed": true
+    },
+    {
+      "name": "R1 close removes panel and highlight",
+      "passed": true
+    },
+    {
+      "name": "R1 no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 unchanged two text blocks exact identities",
+      "passed": true
+    },
+    {
+      "name": "R2 exact queries and counts",
+      "passed": true
+    },
+    {
+      "name": "R2 trusted physical query input without composition",
+      "passed": true
+    },
+    {
+      "name": "R2 actual active highlight style",
+      "passed": true
+    },
+    {
+      "name": "R2 close removes panel and highlight",
+      "passed": true
+    },
+    {
+      "name": "R2 no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "paired queries and count trajectory",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

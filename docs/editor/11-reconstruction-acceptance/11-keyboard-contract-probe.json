@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-27",
+  "scope": "Actual WordEditKeyboard extension configuration and exported callback with real ProseMirror state; no TipTap Editor/browser/provider",
+  "source": {
+    "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+    "sha256": "9f4cafe89ef8edd476ebe7232cd0e494d88c6fb9e700a7a2a5f9e4451964383a"
+  },
+  "sourceMethodOccurrences": [
+    765,
+    830
+  ],
+  "actualExtensionClassUsed": true,
+  "actualProjectModuleEvaluated": true,
+  "imports": {
+    "real": [
+      "@tiptap/core Extension",
+      "@tiptap/pm/model Schema/Fragment",
+      "@tiptap/pm/state Plugin/TextSelection/EditorState"
+    ],
+    "stubbedUnused": [
+      "public helpers",
+      "index shouldSwallowEmptyBodyDelete",
+      "keyDelete helpers",
+      "list helpers"
+    ],
+    "stubCalls": []
+  },
+  "fixture": {
+    "schema": "Document shell subset, header TITLE and three body paragraphs; real PM doc.check passed",
+    "originalParagraph": "Beta",
+    "originalCaretOffset": 2,
+    "beforeSelection": {
+      "type": "text",
+      "anchor": 23,
+      "head": 23
+    },
+    "bodyRange": {
+      "from": 13,
+      "to": 33
+    }
+  },
+  "selectionCase": {
+    "callback": "Mod-a",
+    "returned": true,
+    "afterSelection": {
+      "type": "text",
+      "anchor": 13,
+      "head": 33
+    },
+    "selectedBodyText": "Alpha\nBeta\nGamma",
+    "documentUnchanged": true,
+    "focusCalls": 1,
+    "assertions": {
+      "bodyOnlySelection": true,
+      "titleExcluded": true,
+      "firstSelectCurrentParagraphAsFeishu": false
+    }
+  },
+  "registrationCase": {
+    "ownConfigKeys": [
+      "name",
+      "priority",
+      "addOptions",
+      "addStorage",
+      "addProseMirrorPlugins",
+      "addKeyboardShortcuts"
+    ],
+    "hasOwnAddCommands": false,
+    "effectiveShortcutKeys": [
+      "/",
+      "Escape",
+      "Enter",
+      "Mod-Enter",
+      "Mod-s",
+      "Mod-a",
+      "Mod-A",
+      "Ctrl-a",
+      "Ctrl-A",
+      "Backspace",
+      "Delete",
+      "Tab",
+      "Shift-Tab"
+    ],
+    "shadowedHelperNames": [
+      "insertMySectionAfterCurrentTopHeading",
+      "toggleListTree",
+      "toggleHeadingCollapse"
+    ],
+    "helpersInEffectiveShortcutMap": [],
+    "assertions": {
+      "ownCommandRegistrationPresent": false
+    },
+    "modEnterWithMissingCommandError": {
+      "name": "TypeError",
+      "message": "this.editor.commands.insertMySectionAfterCurrentTopHeading is not a function"
+    }
+  },
+  "classifications": {
+    "selection": "DR-S11-004: confirmed isolated callback difference; alignment or explicit product decision required",
+    "registration": "SR06: duplicate configuration key overwrites helper definitions; own command registration absent; actual editor integration still unexecuted"
+  },
+  "limits": [
+    "The editor facade only implements state/view.dispatch/view.focus; no real Editor command manager was constructed",
+    "The fixture is a documented shell subset and does not test character sections, revision mode or headless modules",
+    "No DOM, system keys, browser, collaboration, API, source repair or broad test suite",
+    "A TypeError from a facade without commands is not by itself a production reproduction; source registration/call-chain evidence is separately required"
+  ],
+  "businessCodeChanged": false,
+  "observedWarnings": [
+    "ExperimentalWarning: VM Modules is an experimental feature and might change at any time",
+    "TextSelection endpoint not pointing into a node with inline content (myPageChildren)"
+  ],
+  "warningMeaning": "The actual callback creates TextSelection at structural body boundaries; PM emitted the recorded warning but produced the selection. This is not erased or treated as a stable real-UI cursor guarantee."
+}

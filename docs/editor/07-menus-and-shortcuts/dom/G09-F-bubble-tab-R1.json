@@ -1,0 +1,2237 @@
+{
+  "case": "G09-F-bubble-tab-R1",
+  "session": "S07-F-native",
+  "normalization": "DOM identifiers feishu -> maiya; text and source URL unchanged",
+  "before": {
+    "label": "G09-F-bubble-tab-R1:source",
+    "time": "2026-10-20T01:28:18.738Z",
+    "mono": 58444196,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+    },
+    "selection": {
+      "type": "Range",
+      "a": {
+        "r": "f10",
+        "offset": 0,
+        "text": "Alpha"
+      },
+      "f": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "text": "Alpha",
+      "ranges": [
+        {
+          "start": {
+            "r": "f10",
+            "offset": 0,
+            "text": "Alpha"
+          },
+          "end": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "collapsed": false
+        }
+      ]
+    },
+    "focus": {
+      "r": "f41",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block root-block",
+        "contenteditable": "true",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+      }
+    },
+    "ui": [
+      {
+        "r": "f46",
+        "tag": "DIV",
+        "a": {
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar text-toolbar menu-align-vertical docx-hide-doubao-extension-inject",
+          "style": "outline: transparent;"
+        },
+        "rect": {
+          "x": 12,
+          "y": 189.25,
+          "w": 593.125,
+          "h": 42
+        },
+        "text": "问问豆包",
+        "controls": [
+          {
+            "r": "f48",
+            "tag": "DIV",
+            "a": {
+              "class": "doubao-work-menu-item panel-menu-item"
+            },
+            "text": "问问豆包",
+            "rect": {
+              "x": 21,
+              "y": 198.25,
+              "w": 87.125,
+              "h": 24
+            }
+          },
+          {
+            "r": "f144",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DoubaoworkOutlined"
+            },
+            "rect": {
+              "x": 25,
+              "y": 202.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f56",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 125.125,
+              "y": 198.25,
+              "w": 44,
+              "h": 24
+            }
+          },
+          {
+            "r": "f145",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TextOutlined"
+            },
+            "rect": {
+              "x": 128.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f146",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DownBoldOutlined"
+            },
+            "rect": {
+              "x": 152.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f65",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 186.125,
+              "y": 198.25,
+              "w": 44,
+              "h": 24
+            }
+          },
+          {
+            "r": "f147",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TypographyOutlined"
+            },
+            "rect": {
+              "x": 189.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f148",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DownBoldOutlined"
+            },
+            "rect": {
+              "x": 213.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f74",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 247.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f149",
+            "tag": "svg",
+            "a": {
+              "data-icon": "BoldOutlined"
+            },
+            "rect": {
+              "x": 250.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f80",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 279.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f150",
+            "tag": "svg",
+            "a": {
+              "data-icon": "HorizontalLineOutlined"
+            },
+            "rect": {
+              "x": 282.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f86",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 311.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f151",
+            "tag": "svg",
+            "a": {
+              "data-icon": "ItalicOutlined"
+            },
+            "rect": {
+              "x": 314.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f92",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 343.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f152",
+            "tag": "svg",
+            "a": {
+              "data-icon": "UnderlineOutlined"
+            },
+            "rect": {
+              "x": 346.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f98",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 375.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f153",
+            "tag": "svg",
+            "a": {
+              "data-icon": "GlobalLinkOutlined"
+            },
+            "rect": {
+              "x": 378.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f104",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 407.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f154",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CodeOutlined"
+            },
+            "rect": {
+              "x": 410.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f110",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item hot-area-unique panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 439.125,
+              "y": 198.25,
+              "w": 44,
+              "h": 24
+            }
+          },
+          {
+            "r": "f155",
+            "tag": "svg",
+            "a": {
+              "data-icon": "FontcolorOutlined"
+            },
+            "rect": {
+              "x": 444.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f156",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DownBoldOutlined"
+            },
+            "rect": {
+              "x": 466.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f119",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 508.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f157",
+            "tag": "svg",
+            "a": {
+              "data-icon": "ToolbarMoreOutlined"
+            },
+            "rect": {
+              "x": 511.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f125",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 540.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f158",
+            "tag": "svg",
+            "a": {
+              "data-icon": "SharewordsOutlined"
+            },
+            "rect": {
+              "x": 543.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f131",
+            "tag": "DIV",
+            "a": {
+              "class": "comment-item panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 572.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f159",
+            "tag": "svg",
+            "a": {
+              "data-icon": "AddCommentOutlined"
+            },
+            "rect": {
+              "x": 575.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          }
+        ]
+      }
+    ],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 17,
+    "eventCount": 7,
+    "instanceId": "S07-F-1792459652680",
+    "hasFocus": true,
+    "currentRootSame": true,
+    "fields": [
+      {
+        "r": "f40",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "readonly": "",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+        },
+        "value": " ",
+        "selectionStart": 0,
+        "selectionEnd": 0
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgba(0, 0, 0, 0) solid 0px",
+      "boxShadow": "none"
+    },
+    "menuFocus": [
+      {
+        "r": "f46",
+        "a": {
+          "tabindex": "0",
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar text-toolbar menu-align-vertical docx-hide-doubao-extension-inject",
+          "style": "outline: transparent;"
+        },
+        "tabIndex": 0,
+        "controls": [
+          {
+            "r": "f48",
+            "a": {
+              "class": "doubao-work-menu-item panel-menu-item",
+              "data-name": "ask-doubao"
+            },
+            "tabIndex": -1,
+            "text": "问问豆包",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f56",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "text turninto submenu"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f65",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "text align"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f74",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Bold"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f80",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Strikethrough"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f86",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Italic"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f92",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Underline"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f98",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "text toolbar link"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f104",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "inlinecode"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f110",
+            "a": {
+              "class": "panel-submenu-item hot-area-unique panel-menu-item",
+              "data-name": "highlight submenu"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f119",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "more"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f125",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "shareTextLink"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f131",
+            "a": {
+              "class": "comment-item panel-menu-item",
+              "data-name": "comment"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "label": "G09-F-bubble-tab-R1:end",
+    "time": "2026-10-20T01:28:18.797Z",
+    "mono": 58444255.20000005,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+    },
+    "selection": {
+      "type": "Range",
+      "a": {
+        "r": "f10",
+        "offset": 0,
+        "text": "Alpha"
+      },
+      "f": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "text": "Alpha",
+      "ranges": [
+        {
+          "start": {
+            "r": "f10",
+            "offset": 0,
+            "text": "Alpha"
+          },
+          "end": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "collapsed": false
+        }
+      ]
+    },
+    "focus": {
+      "r": "f41",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block root-block",
+        "contenteditable": "true",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+      }
+    },
+    "ui": [
+      {
+        "r": "f46",
+        "tag": "DIV",
+        "a": {
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar text-toolbar menu-align-vertical docx-hide-doubao-extension-inject",
+          "style": "outline: transparent;"
+        },
+        "rect": {
+          "x": 12,
+          "y": 189.25,
+          "w": 593.125,
+          "h": 42
+        },
+        "text": "问问豆包",
+        "controls": [
+          {
+            "r": "f48",
+            "tag": "DIV",
+            "a": {
+              "class": "doubao-work-menu-item panel-menu-item"
+            },
+            "text": "问问豆包",
+            "rect": {
+              "x": 21,
+              "y": 198.25,
+              "w": 87.125,
+              "h": 24
+            }
+          },
+          {
+            "r": "f144",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DoubaoworkOutlined"
+            },
+            "rect": {
+              "x": 25,
+              "y": 202.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f56",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 125.125,
+              "y": 198.25,
+              "w": 44,
+              "h": 24
+            }
+          },
+          {
+            "r": "f145",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TextOutlined"
+            },
+            "rect": {
+              "x": 128.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f146",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DownBoldOutlined"
+            },
+            "rect": {
+              "x": 152.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f65",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 186.125,
+              "y": 198.25,
+              "w": 44,
+              "h": 24
+            }
+          },
+          {
+            "r": "f147",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TypographyOutlined"
+            },
+            "rect": {
+              "x": 189.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f148",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DownBoldOutlined"
+            },
+            "rect": {
+              "x": 213.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f74",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 247.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f149",
+            "tag": "svg",
+            "a": {
+              "data-icon": "BoldOutlined"
+            },
+            "rect": {
+              "x": 250.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f80",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 279.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f150",
+            "tag": "svg",
+            "a": {
+              "data-icon": "HorizontalLineOutlined"
+            },
+            "rect": {
+              "x": 282.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f86",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 311.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f151",
+            "tag": "svg",
+            "a": {
+              "data-icon": "ItalicOutlined"
+            },
+            "rect": {
+              "x": 314.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f92",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 343.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f152",
+            "tag": "svg",
+            "a": {
+              "data-icon": "UnderlineOutlined"
+            },
+            "rect": {
+              "x": 346.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f98",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 375.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f153",
+            "tag": "svg",
+            "a": {
+              "data-icon": "GlobalLinkOutlined"
+            },
+            "rect": {
+              "x": 378.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f104",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 407.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f154",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CodeOutlined"
+            },
+            "rect": {
+              "x": 410.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f110",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item hot-area-unique panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 439.125,
+              "y": 198.25,
+              "w": 44,
+              "h": 24
+            }
+          },
+          {
+            "r": "f155",
+            "tag": "svg",
+            "a": {
+              "data-icon": "FontcolorOutlined"
+            },
+            "rect": {
+              "x": 444.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f156",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DownBoldOutlined"
+            },
+            "rect": {
+              "x": 466.125,
+              "y": 203.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f119",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 508.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f157",
+            "tag": "svg",
+            "a": {
+              "data-icon": "ToolbarMoreOutlined"
+            },
+            "rect": {
+              "x": 511.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f125",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 540.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f158",
+            "tag": "svg",
+            "a": {
+              "data-icon": "SharewordsOutlined"
+            },
+            "rect": {
+              "x": 543.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f131",
+            "tag": "DIV",
+            "a": {
+              "class": "comment-item panel-menu-item"
+            },
+            "text": "",
+            "rect": {
+              "x": 572.125,
+              "y": 198.25,
+              "w": 24,
+              "h": 24
+            }
+          },
+          {
+            "r": "f159",
+            "tag": "svg",
+            "a": {
+              "data-icon": "AddCommentOutlined"
+            },
+            "rect": {
+              "x": 575.125,
+              "y": 201.25,
+              "w": 18,
+              "h": 18
+            }
+          }
+        ]
+      }
+    ],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 17,
+    "eventCount": 7,
+    "instanceId": "S07-F-1792459652680",
+    "hasFocus": true,
+    "currentRootSame": true,
+    "fields": [
+      {
+        "r": "f40",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "readonly": "",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+        },
+        "value": " ",
+        "selectionStart": 0,
+        "selectionEnd": 0
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgba(0, 0, 0, 0) solid 0px",
+      "boxShadow": "none"
+    },
+    "menuFocus": [
+      {
+        "r": "f46",
+        "a": {
+          "tabindex": "0",
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar text-toolbar menu-align-vertical docx-hide-doubao-extension-inject",
+          "style": "outline: transparent;"
+        },
+        "tabIndex": 0,
+        "controls": [
+          {
+            "r": "f48",
+            "a": {
+              "class": "doubao-work-menu-item panel-menu-item",
+              "data-name": "ask-doubao"
+            },
+            "tabIndex": -1,
+            "text": "问问豆包",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f56",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "text turninto submenu"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f65",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "text align"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f74",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Bold"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f80",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Strikethrough"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f86",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Italic"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f92",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "Underline"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f98",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "text toolbar link"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f104",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "inlinecode"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f110",
+            "a": {
+              "class": "panel-submenu-item hot-area-unique panel-menu-item",
+              "data-name": "highlight submenu"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f119",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "more"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f125",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "shareTextLink"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f131",
+            "a": {
+              "class": "comment-item panel-menu-item",
+              "data-name": "comment"
+            },
+            "tabIndex": -1,
+            "text": "",
+            "outline": "rgb(43, 47, 54) none 3px"
+          }
+        ]
+      }
+    ]
+  },
+  "states": [],
+  "events": [],
+  "mutations": [],
+  "limits": [
+    "Attribute new values are delivery-time reads; order is DOM observation order, not an internal transaction contract.",
+    "SVG paths excluded; semantic icon attributes retained in UI controls."
+  ],
+  "instanceId": "S07-F-1792459652680",
+  "steps": [],
+  "windowEvents": [],
+  "inputIsolation": {
+    "isolated": false,
+    "pid": 36809,
+    "initialFront": "com.quark.desktop",
+    "finalFront": "com.quark.desktop"
+  },
+  "driver": "JXA CoreGraphics real mouse and keyboard; Apple events only for read-only DOM and observer bookkeeping",
+  "journal": [
+    {
+      "operation": "G09-F-bubble-tab-R1-1",
+      "action": {
+        "kind": "key",
+        "code": 48
+      },
+      "before": {
+        "label": "before-1",
+        "time": "2026-10-20T01:28:18.767Z",
+        "mono": 58444225.30000007,
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "rootConnected": true,
+        "body": {
+          "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+        },
+        "selection": {
+          "type": "Range",
+          "a": {
+            "r": "f10",
+            "offset": 0,
+            "text": "Alpha"
+          },
+          "f": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "text": "Alpha",
+          "ranges": [
+            {
+              "start": {
+                "r": "f10",
+                "offset": 0,
+                "text": "Alpha"
+              },
+              "end": {
+                "r": "f10",
+                "offset": 5,
+                "text": "Alpha"
+              },
+              "collapsed": false
+            }
+          ]
+        },
+        "focus": {
+          "r": "f41",
+          "tag": "DIV",
+          "a": {
+            "class": "page-block root-block",
+            "contenteditable": "true",
+            "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+          }
+        },
+        "ui": [
+          {
+            "r": "f46",
+            "tag": "DIV",
+            "a": {
+              "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar text-toolbar menu-align-vertical docx-hide-doubao-extension-inject",
+              "style": "outline: transparent;"
+            },
+            "rect": {
+              "x": 12,
+              "y": 189.25,
+              "w": 593.125,
+              "h": 42
+            },
+            "text": "问问豆包",
+            "controls": [
+              {
+                "r": "f48",
+                "tag": "DIV",
+                "a": {
+                  "class": "doubao-work-menu-item panel-menu-item"
+                },
+                "text": "问问豆包",
+                "rect": {
+                  "x": 21,
+                  "y": 198.25,
+                  "w": 87.125,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f144",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "DoubaoworkOutlined"
+                },
+                "rect": {
+                  "x": 25,
+                  "y": 202.25,
+                  "w": 16,
+                  "h": 16
+                }
+              },
+              {
+                "r": "f56",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-submenu-item no-click-action panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 125.125,
+                  "y": 198.25,
+                  "w": 44,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f145",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "TextOutlined"
+                },
+                "rect": {
+                  "x": 128.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f146",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "DownBoldOutlined"
+                },
+                "rect": {
+                  "x": 152.125,
+                  "y": 203.25,
+                  "w": 14,
+                  "h": 14
+                }
+              },
+              {
+                "r": "f65",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-submenu-item no-click-action panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 186.125,
+                  "y": 198.25,
+                  "w": 44,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f147",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "TypographyOutlined"
+                },
+                "rect": {
+                  "x": 189.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f148",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "DownBoldOutlined"
+                },
+                "rect": {
+                  "x": 213.125,
+                  "y": 203.25,
+                  "w": 14,
+                  "h": 14
+                }
+              },
+              {
+                "r": "f74",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 247.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f149",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "BoldOutlined"
+                },
+                "rect": {
+                  "x": 250.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f80",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 279.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f150",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "HorizontalLineOutlined"
+                },
+                "rect": {
+                  "x": 282.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f86",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 311.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f151",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "ItalicOutlined"
+                },
+                "rect": {
+                  "x": 314.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f92",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 343.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f152",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "UnderlineOutlined"
+                },
+                "rect": {
+                  "x": 346.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f98",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 375.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f153",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "GlobalLinkOutlined"
+                },
+                "rect": {
+                  "x": 378.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f104",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 407.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f154",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "CodeOutlined"
+                },
+                "rect": {
+                  "x": 410.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f110",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-submenu-item hot-area-unique panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 439.125,
+                  "y": 198.25,
+                  "w": 44,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f155",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "FontcolorOutlined"
+                },
+                "rect": {
+                  "x": 444.125,
+                  "y": 203.25,
+                  "w": 14,
+                  "h": 14
+                }
+              },
+              {
+                "r": "f156",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "DownBoldOutlined"
+                },
+                "rect": {
+                  "x": 466.125,
+                  "y": 203.25,
+                  "w": 14,
+                  "h": 14
+                }
+              },
+              {
+                "r": "f119",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-submenu-item no-click-action panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 508.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f157",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "ToolbarMoreOutlined"
+                },
+                "rect": {
+                  "x": 511.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f125",
+                "tag": "DIV",
+                "a": {
+                  "class": "panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 540.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f158",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "SharewordsOutlined"
+                },
+                "rect": {
+                  "x": 543.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              },
+              {
+                "r": "f131",
+                "tag": "DIV",
+                "a": {
+                  "class": "comment-item panel-menu-item"
+                },
+                "text": "",
+                "rect": {
+                  "x": 572.125,
+                  "y": 198.25,
+                  "w": 24,
+                  "h": 24
+                }
+              },
+              {
+                "r": "f159",
+                "tag": "svg",
+                "a": {
+                  "data-icon": "AddCommentOutlined"
+                },
+                "rect": {
+                  "x": 575.125,
+                  "y": 201.25,
+                  "w": 18,
+                  "h": 18
+                }
+              }
+            ]
+          }
+        ],
+        "viewport": [
+          1152,
+          907
+        ],
+        "dpr": 1,
+        "seq": 17,
+        "eventCount": 7,
+        "instanceId": "S07-F-1792459652680",
+        "hasFocus": true,
+        "currentRootSame": true,
+        "fields": [
+          {
+            "r": "f40",
+            "a": {
+              "class": "docx-selection-hidden-textarea",
+              "readonly": "",
+              "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+            },
+            "value": " ",
+            "selectionStart": 0,
+            "selectionEnd": 0
+          }
+        ],
+        "focusStyle": {
+          "outline": "rgba(0, 0, 0, 0) solid 0px",
+          "boxShadow": "none"
+        },
+        "menuFocus": [
+          {
+            "r": "f46",
+            "a": {
+              "tabindex": "0",
+              "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar text-toolbar menu-align-vertical docx-hide-doubao-extension-inject",
+              "style": "outline: transparent;"
+            },
+            "tabIndex": 0,
+            "controls": [
+              {
+                "r": "f48",
+                "a": {
+                  "class": "doubao-work-menu-item panel-menu-item",
+                  "data-name": "ask-doubao"
+                },
+                "tabIndex": -1,
+                "text": "问问豆包",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f56",
+                "a": {
+                  "class": "panel-submenu-item no-click-action panel-menu-item",
+                  "data-name": "text turninto submenu"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f65",
+                "a": {
+                  "class": "panel-submenu-item no-click-action panel-menu-item",
+                  "data-name": "text align"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f74",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "Bold"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f80",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "Strikethrough"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f86",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "Italic"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f92",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "Underline"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f98",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "text toolbar link"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f104",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "inlinecode"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f110",
+                "a": {
+                  "class": "panel-submenu-item hot-area-unique panel-menu-item",
+                  "data-name": "highlight submenu"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f119",
+                "a": {
+                  "class": "panel-submenu-item no-click-action panel-menu-item",
+                  "data-name": "more"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f125",
+                "a": {
+                  "class": "panel-menu-item",
+                  "data-name": "shareTextLink"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              },
+              {
+                "r": "f131",
+                "a": {
+                  "class": "comment-item panel-menu-item",
+                  "data-name": "comment"
+                },
+                "tabIndex": -1,
+                "text": "",
+                "outline": "rgb(43, 47, 54) none 3px"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "failure": "Error: Frontmost app changed; no input sent",
+  "_snapshotDictionary": {
+    "body-a47e4760e8e74f89b98ee0b1": {
+      "r": "f1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "f2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "f3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "f4",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused",
+                    "data-block-type": "text",
+                    "data-block-id": "51",
+                    "data-record-id": "IB9GdaCevoLU4KxrNHkcaleLnBd"
+                  },
+                  "c": [
+                    {
+                      "r": "f5",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f6",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f7",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f8",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f9",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f10",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f11",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f12",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f13",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "52",
+                    "data-record-id": "RUqcdofXToZt5qx0iijc0RQhnog"
+                  },
+                  "c": [
+                    {
+                      "r": "f14",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f15",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f16",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f17",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f18",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f19",
+                                          "text": "Beta"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f20",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f22",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "53",
+                    "data-record-id": "GX26d5y7zothIyxDMBZcd2aRnwb"
+                  },
+                  "c": [
+                    {
+                      "r": "f23",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f24",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f25",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f26",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f27",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f28",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f29",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f30",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f31",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "54",
+                    "data-record-id": "LpU0dtiiZoIqdGxzJ5McAUhtnFS"
+                  },
+                  "c": [
+                    {
+                      "r": "f32",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f33",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f34",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f35",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f36",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f37",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "f38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "version": 1,
+    "description": "Only repeated full body trees replaced with same-file snapshotRef; refs, order, attributes and text preserved.",
+    "originalCanonicalSha256": "f2c3406f62b3c0cae2cbc58bb15334d43b74d42d91432ca2ae51597912de197f",
+    "losslessRoundTripChecked": true
+  }
+}

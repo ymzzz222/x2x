@@ -1,0 +1,161 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 21,
+  "scope": "120 text paragraphs, virtualized first/last windows, full find, wrap navigation, all replace, single Undo/Redo and exact full text exports",
+  "bounds": {
+    "logicalParagraphs": 120,
+    "domSampledRanges": [
+      "ROW001–ROW036",
+      "ROW091–ROW120"
+    ],
+    "middleDomNotDirectlySampled": "ROW037–ROW090",
+    "mutationBudget": 20000
+  },
+  "limits": [
+    "Functional fixed-scale sample only; no p95 memory or upper-limit performance claim",
+    "Only text paragraphs in this workflow; no inference for all rich blocks",
+    "R1 summary truncation, blank readonly marker and resumable export timeout retained in metadata; no body edit repeated"
+  ],
+  "files": [
+    {
+      "file": "dom/J08-long-find-replace-history-R1.json",
+      "sha256": "0099e029e4311be8a2cf68dd5d2f1a918b89b0f31bbfc71b2e10a6862116b331"
+    },
+    {
+      "file": "dom/J08-R1-undo-alpha-download.json",
+      "sha256": "7d04ff4212026b3e0994fc57e212f693b7c8b4ee331bfce0960fafe4577ad482"
+    },
+    {
+      "file": "dom/J08-R1-redo-beta-download.json",
+      "sha256": "f3c07adc69220edbb5f14035a6362207cad05c1caf98583301266d5ab9dc7051"
+    },
+    {
+      "file": "dom/J08-long-find-replace-history-R2.json",
+      "sha256": "35cdfbcf2bcbe2e949b6b6151e582236393278f75bf687b4f4400a657c5a02fb"
+    },
+    {
+      "file": "dom/J08-R2-undo-alpha-download.json",
+      "sha256": "3154c83fc460924f15d15242c672e020a18c714b711e88c558629f8249ab9d9c"
+    },
+    {
+      "file": "dom/J08-R2-redo-beta-download.json",
+      "sha256": "445bfedf2beba412751c42ab19e965864bdba0b517371a79bc75b0de275233fd"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J08-long-find-replace-history-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact phase trajectory",
+      "passed": true
+    },
+    {
+      "name": "R1 exact rendered virtualization counts",
+      "passed": true
+    },
+    {
+      "name": "R1 all rendered text exactly belongs to full fixture",
+      "passed": true
+    },
+    {
+      "name": "R1 connected roots empty title and no overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 logical record identities stable when rendered",
+      "passed": true
+    },
+    {
+      "name": "R1 exact find and navigation counts",
+      "passed": true
+    },
+    {
+      "name": "R1 exact final query replacement values",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted single Undo Redo Undo body history",
+      "passed": true
+    },
+    {
+      "name": "R1 real default export settings DOM",
+      "passed": true
+    },
+    {
+      "name": "R1undo-alpha actual full download exact 120 paragraphs",
+      "passed": true
+    },
+    {
+      "name": "R1redo-beta actual full download exact 120 paragraphs",
+      "passed": true
+    },
+    {
+      "name": "J08-long-find-replace-history-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact phase trajectory",
+      "passed": true
+    },
+    {
+      "name": "R2 exact rendered virtualization counts",
+      "passed": true
+    },
+    {
+      "name": "R2 all rendered text exactly belongs to full fixture",
+      "passed": true
+    },
+    {
+      "name": "R2 connected roots empty title and no overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 logical record identities stable when rendered",
+      "passed": true
+    },
+    {
+      "name": "R2 exact find and navigation counts",
+      "passed": true
+    },
+    {
+      "name": "R2 exact final query replacement values",
+      "passed": true
+    },
+    {
+      "name": "R2 trusted single Undo Redo Undo body history",
+      "passed": true
+    },
+    {
+      "name": "R2 real default export settings DOM",
+      "passed": true
+    },
+    {
+      "name": "R2undo-alpha actual full download exact 120 paragraphs",
+      "passed": true
+    },
+    {
+      "name": "R2redo-beta actual full download exact 120 paragraphs",
+      "passed": true
+    },
+    {
+      "name": "distinct observer sessions",
+      "passed": true
+    },
+    {
+      "name": "paired full rendered semantic paths",
+      "passed": true
+    },
+    {
+      "name": "four actual distinct completed download files",
+      "passed": true
+    },
+    {
+      "name": "paired complete ALPHA and BETA export hashes",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,225 @@
+{
+  "kind": "environment-and-failed-export-recovery",
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "normalization": "DOM identifiers feishu -> maiya; source URL unchanged; failed expression retained by prefix and length rather than duplicate source",
+  "installation": {
+    "time": "2026-10-19T08:56:02.468Z",
+    "body": "n1",
+    "blocks": 0,
+    "viewport": [
+      1152,
+      963
+    ],
+    "dpr": 1
+  },
+  "baseline": {
+    "time": "2026-10-19T08:56:20.813Z",
+    "body": {
+      "snapshotRef": "body-b896eddee5bfa6cef964af39"
+    },
+    "selection": {
+      "anchor": [
+        "n5",
+        1,
+        "​"
+      ],
+      "focus": [
+        "n5",
+        1,
+        "​"
+      ],
+      "type": "Caret"
+    },
+    "active": {
+      "r": "n6",
+      "tag": "DIV",
+      "cls": "page-block root-block"
+    },
+    "seq": 0,
+    "events": 0
+  },
+  "failure": {
+    "action": "A console expression was pasted into the editable test body and Return inserted a second block; tool observation also reported ScreenCaptureKit error -3811. No automatic success inferred.",
+    "beforeUndo1": {
+      "time": "2026-10-19T09:08:57.947Z",
+      "blocks": [
+        {
+          "r": "n115",
+          "id": "5",
+          "type": "text",
+          "length": 641,
+          "prefix": "/console.clear();{const short=s=>({"
+        },
+        {
+          "r": "n666",
+          "id": "14",
+          "type": "text",
+          "length": 1,
+          "prefix": "​"
+        }
+      ],
+      "seq": 268,
+      "events": 147
+    },
+    "afterUndo1": {
+      "time": "2026-10-19T09:08:57.996Z",
+      "remainingBlocks": [
+        "n115"
+      ],
+      "textLength": 641,
+      "seq": 273,
+      "events": 152
+    },
+    "beforeUndo2": {
+      "time": "2026-10-19T09:09:06.241Z",
+      "remainingBlocks": [
+        "n115"
+      ],
+      "textLength": 641,
+      "seq": 273,
+      "events": 155
+    },
+    "afterUndo2": {
+      "time": "2026-10-19T09:09:06.268Z",
+      "remainingBlocks": [
+        "n115"
+      ],
+      "text": "/​",
+      "seq": 276,
+      "events": 156
+    },
+    "status": "recovered; excluded from feature passing runs"
+  },
+  "recoveredRead": {
+    "time": "2026-10-19T09:11:55.670Z",
+    "blocks": [
+      {
+        "r": "n115",
+        "type": "text",
+        "id": "5",
+        "text": "/​"
+      }
+    ],
+    "selection": {
+      "anchor": [
+        "n665",
+        1,
+        "/"
+      ],
+      "focus": [
+        "n665",
+        1,
+        "/"
+      ],
+      "type": "Caret"
+    },
+    "active": {
+      "r": "n6",
+      "tag": "DIV",
+      "cls": "page-block root-block"
+    },
+    "menus": [],
+    "seq": 278,
+    "events": 158,
+    "menuWindows": 13
+  },
+  "limits": [
+    "This file does not prove cross-session persistence.",
+    "Startup slash observations with different construction are not counted as equivalent repeats."
+  ],
+  "cleanup": {
+    "beforeStop": {
+      "time": "2026-10-19T09:13:59.505Z",
+      "blocks": [
+        {
+          "r": "n115",
+          "id": "5",
+          "type": "text",
+          "text": "​"
+        }
+      ],
+      "menus": 0,
+      "seq": 287
+    },
+    "stopped": {
+      "bodyObserver": true,
+      "menuObserver": true,
+      "inputSelectionAndFocusListeners": true,
+      "keyStateListener": true,
+      "historyListener": true,
+      "observerExists": false
+    },
+    "actualReload": {
+      "input": "Cmd+R",
+      "afterRead": {
+        "time": "2026-10-19T09:15:00.846Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "observerExists": false,
+        "blocks": [
+          {
+            "id": "2",
+            "type": "text",
+            "text": "​"
+          }
+        ],
+        "title": [
+          {
+            "text": "​"
+          }
+        ],
+        "menus": 0
+      }
+    },
+    "consoleClosed": true,
+    "limits": [
+      "Reload has one empty text block; initial baseline had zero rendered blocks. The exact rendered structure was not restored to zero.",
+      "Block ID and DOM identity must not be equated across reload.",
+      "This cleanup read is not an independent-session persistence verification of a functional test case."
+    ]
+  },
+  "_snapshotDictionary": {
+    "body-b896eddee5bfa6cef964af39": {
+      "r": "n1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children",
+        "contenteditable": "false"
+      },
+      "c": [
+        {
+          "r": "n2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "n3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": []
+            },
+            {
+              "r": "n4",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "version": 1,
+    "description": "Only repeated full body trees replaced with same-file snapshotRef; refs, order, attributes and text preserved.",
+    "originalCanonicalSha256": "7492b57c81c3103384badd0739818259e9b1c00879377dbf6b56c87a642340e8",
+    "losslessRoundTripChecked": true
+  }
+}

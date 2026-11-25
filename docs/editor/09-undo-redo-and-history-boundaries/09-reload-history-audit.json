@@ -1,0 +1,80 @@
+{
+  "scope": "Only saved local reload history pairs, not remote or version restore",
+  "files": [
+    {
+      "path": "docs/editor/09-undo-redo-and-history-boundaries/dom/I06-reload-local-history-R1-before.json",
+      "sha256": "324c19bd11122d020cdd80bc73a238b9999e3f51bb86838cba5751abf9cf24bb"
+    },
+    {
+      "path": "docs/editor/09-undo-redo-and-history-boundaries/dom/I06-reload-local-history-R1-after.json",
+      "sha256": "a9aa9c8ae817695d0f92c51a79ca5ac858df4e3cf5737525bbebe14f32dd8ab2"
+    },
+    {
+      "path": "docs/editor/09-undo-redo-and-history-boundaries/dom/I06-reload-local-history-R2-before.json",
+      "sha256": "426d7ccb2e9f248d022b6f2147cb8156d064830ce5e49709585a80ed404ca56d"
+    },
+    {
+      "path": "docs/editor/09-undo-redo-and-history-boundaries/dom/I06-reload-local-history-R2-after.json",
+      "sha256": "da69f0088ab45da8656cdff1eb131eb809e142e36458385de52243599f073697"
+    }
+  ],
+  "checks": [
+    {
+      "name": "R1 before exact history content",
+      "passed": true
+    },
+    {
+      "name": "R1 before no capture errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 before trusted keys",
+      "passed": true
+    },
+    {
+      "name": "R1 after exact history content",
+      "passed": true
+    },
+    {
+      "name": "R1 after no capture errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 after trusted keys",
+      "passed": true
+    },
+    {
+      "name": "R1 actual context changes",
+      "passed": true
+    },
+    {
+      "name": "R2 before exact history content",
+      "passed": true
+    },
+    {
+      "name": "R2 before no capture errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 before trusted keys",
+      "passed": true
+    },
+    {
+      "name": "R2 after exact history content",
+      "passed": true
+    },
+    {
+      "name": "R2 after no capture errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 after trusted keys",
+      "passed": true
+    },
+    {
+      "name": "R2 actual context changes",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,246 @@
+{
+  "time": "2026-10-22T12:24:51.596Z",
+  "scope": "Feishu native Unicode paste and exact histories at fixed Gamma:5; rendered rows may be virtualized; no whole-document or project acceptance inferred",
+  "cases": [
+    {
+      "name": "H07-full-CJK-block-100000-R1.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-CJK-block-100000-R2.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-CJK-block-100000-pair",
+      "passed": true,
+      "assertions": [
+        "same actual input normalized output and restored semantics both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-emoji-block-UTF16-100000-R1.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-emoji-block-UTF16-100000-R2.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-emoji-block-UTF16-100000-pair",
+      "passed": true,
+      "assertions": [
+        "same actual input normalized output and restored semantics both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-combining-block-UTF16-100000-R1.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-combining-block-UTF16-100000-R2.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-combining-block-UTF16-100000-pair",
+      "passed": true,
+      "assertions": [
+        "same actual input normalized output and restored semantics both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-combining-NFC-block-100000-R1.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-combining-NFC-block-100000-R2.json",
+      "passed": true,
+      "assertions": [
+        "fixed Gamma:5 source and trusted native paste shortcut",
+        "exact original Unicode clipboard payload retained",
+        "exact accepted Unicode result and redo, including normalization",
+        "Undo and final Undo restore full original semantic document",
+        "original outer block IDs restored despite offscreen rendering",
+        "empty title tree unchanged",
+        "exact trusted Undo Redo Undo",
+        "no rejection feedback runtime errors or overflow"
+      ]
+    },
+    {
+      "name": "H07-full-combining-NFC-block-100000-pair",
+      "passed": true,
+      "assertions": [
+        "same actual input normalized output and restored semantics both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-CJK-block-100001-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact trusted rejected Unicode clipboard payload",
+        "rejection and first Undo leave full source unchanged; Redo restores marker",
+        "second Undo removes only prior known marker",
+        "actual block length rejection alert captured",
+        "title and all outer block identities unchanged",
+        "exact trusted first Undo marker Undo marker Redo",
+        "no runtime error or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-CJK-block-100001-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact trusted rejected Unicode clipboard payload",
+        "rejection and first Undo leave full source unchanged; Redo restores marker",
+        "second Undo removes only prior known marker",
+        "actual block length rejection alert captured",
+        "title and all outer block identities unchanged",
+        "exact trusted first Undo marker Undo marker Redo",
+        "no runtime error or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-CJK-block-100001-pair",
+      "passed": true,
+      "assertions": [
+        "same rejected input source and output both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-emoji-block-UTF16-100001-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact trusted rejected Unicode clipboard payload",
+        "rejection and first Undo leave full source unchanged; Redo restores marker",
+        "second Undo removes only prior known marker",
+        "actual block length rejection alert captured",
+        "title and all outer block identities unchanged",
+        "exact trusted first Undo marker Undo marker Redo",
+        "no runtime error or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-emoji-block-UTF16-100001-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact trusted rejected Unicode clipboard payload",
+        "rejection and first Undo leave full source unchanged; Redo restores marker",
+        "second Undo removes only prior known marker",
+        "actual block length rejection alert captured",
+        "title and all outer block identities unchanged",
+        "exact trusted first Undo marker Undo marker Redo",
+        "no runtime error or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-emoji-block-UTF16-100001-pair",
+      "passed": true,
+      "assertions": [
+        "same rejected input source and output both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-combining-NFC-block-100001-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact trusted rejected Unicode clipboard payload",
+        "rejection and first Undo leave full source unchanged; Redo restores marker",
+        "second Undo removes only prior known marker",
+        "actual block length rejection alert captured",
+        "title and all outer block identities unchanged",
+        "exact trusted first Undo marker Undo marker Redo",
+        "no runtime error or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-combining-NFC-block-100001-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact trusted rejected Unicode clipboard payload",
+        "rejection and first Undo leave full source unchanged; Redo restores marker",
+        "second Undo removes only prior known marker",
+        "actual block length rejection alert captured",
+        "title and all outer block identities unchanged",
+        "exact trusted first Undo marker Undo marker Redo",
+        "no runtime error or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-combining-NFC-block-100001-pair",
+      "passed": true,
+      "assertions": [
+        "same rejected input source and output both rounds"
+      ]
+    }
+  ],
+  "failures": []
+}

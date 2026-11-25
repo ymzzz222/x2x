@@ -1,0 +1,1793 @@
+{
+  "case": "F07-hidden-numbering-paste-folded-R1",
+  "source": "Chrome native UI and read-only DevTools observer",
+  "normalization": "DOM identifiers feishu -> maiya; source URLs and user text unchanged",
+  "eventWindow": "keys and external events since previous export",
+  "action": "Native focused input Cmd+A, paste 9, confirm; children stay hidden",
+  "toolNote": "Number edit executed before native menu export failure; rebound Chrome and captured existing target without replay.",
+  "session": "S06D-P2-1792391792635",
+  "state": {
+    "label": "F07-hidden-numbering-paste-folded-R1",
+    "time": "2026-10-19T06:52:34.831Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "ref": "d3",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block-children"
+      },
+      "children": [
+        {
+          "ref": "d15",
+          "tag": "DIV",
+          "attrs": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "children": [
+            {
+              "ref": "d16",
+              "tag": "DIV",
+              "attrs": {
+                "class": "render-unit-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "d179",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-heading1-block focused",
+                    "data-block-type": "heading1",
+                    "data-block-id": "11",
+                    "data-record-id": "NwYddHWz1oBwLHxAW1zcLuAXnod"
+                  },
+                  "children": [
+                    {
+                      "ref": "d611",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "heading-block"
+                      },
+                      "children": [
+                        {
+                          "ref": "d612",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "heading heading-h1 heading-block-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "d613",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "d614",
+                                  "text": "9."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "d615",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "heading-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "d616",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                    "data-zone-id": "11",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "d617",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "d618",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "d619",
+                                              "text": "AAA"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "d620",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "d621",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "d622",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "fold-wrapper fold-folded fold-show can-fold fold-block-id-11",
+                        "contenteditable": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "d623",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "fold-wrapper fold-folded fold-show can-fold fold-block-id-11 fold-show fold-handler-wrapper"
+                          },
+                          "children": [
+                            {
+                              "ref": "d624",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "fold-handler"
+                              },
+                              "children": [
+                                {
+                                  "ref": "d625",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "d626",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "d627",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "d32",
+                  "tag": "DIV",
+                  "attrs": {
+                    "data-parent-id": "1",
+                    "class": "bear-virtual-renderUnit-placeholder",
+                    "style": "height: 0px; margin-top: 0px; margin-bottom: 0px; display: none;"
+                  },
+                  "children": [
+                    {
+                      "ref": "d33",
+                      "tag": "SPAN",
+                      "attrs": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "d64",
+              "tag": "DIV",
+              "attrs": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "selection": {
+      "anchor": {
+        "ref": "d619",
+        "offset": 3,
+        "text": "AAA"
+      },
+      "focus": {
+        "ref": "d619",
+        "offset": 3,
+        "text": "AAA"
+      },
+      "type": "Caret",
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "ref": "d619",
+            "offset": 3,
+            "text": "AAA"
+          },
+          "end": {
+            "ref": "d619",
+            "offset": 3,
+            "text": "AAA"
+          }
+        }
+      ],
+      "direction": "none"
+    },
+    "currentSelection": {
+      "anchor": {
+        "ref": "d1",
+        "offset": 41,
+        "tag": "BODY"
+      },
+      "focus": {
+        "ref": "d1",
+        "offset": 41,
+        "tag": "BODY"
+      },
+      "type": "Caret",
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "ref": "d1",
+            "offset": 41,
+            "tag": "BODY"
+          },
+          "end": {
+            "ref": "d1",
+            "offset": 41,
+            "tag": "BODY"
+          }
+        }
+      ],
+      "direction": "none"
+    },
+    "seq": 705,
+    "active": {
+      "tag": "BODY",
+      "cls": "layout-column ccm-scope wiki"
+    },
+    "inputFocus": {
+      "ref": "d1",
+      "tag": "BODY",
+      "cls": "layout-column ccm-scope wiki"
+    },
+    "related": {
+      "outline": {
+        "ref": "d441",
+        "tag": "UL",
+        "attrs": {
+          "class": "catalogue__list show-full",
+          "style": "padding-bottom: 50px; cursor: pointer;"
+        },
+        "children": [
+          {
+            "ref": "d444",
+            "tag": "LI",
+            "attrs": {
+              "class": "fixed-size-list-placeholder",
+              "style": "height: 0px; min-width: 60.9844px;"
+            },
+            "children": []
+          },
+          {
+            "ref": "d437",
+            "tag": "LI",
+            "attrs": {
+              "class": "catalogue__list-item indent-level-1 heading-1 contextmenu-without-copyperm active collapsible",
+              "style": "height: 30px; padding-bottom: 8px;"
+            },
+            "children": [
+              {
+                "ref": "d445",
+                "tag": "A",
+                "attrs": {
+                  "class": "container catalogue__item-title"
+                },
+                "children": [
+                  {
+                    "ref": "d446",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "catalogue__item-collapse collapsed"
+                    },
+                    "children": [
+                      {
+                        "ref": "d447",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d448",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "d449",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "text"
+                    },
+                    "children": [
+                      {
+                        "ref": "d450",
+                        "text": "9. AAA"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d465",
+            "tag": "LI",
+            "attrs": {
+              "class": "fixed-size-list-placeholder",
+              "style": "height: 0px; min-width: 60.9844px;"
+            },
+            "children": []
+          }
+        ]
+      },
+      "blocks": [
+        {
+          "ref": "d179",
+          "id": "11",
+          "record": "NwYddHWz1oBwLHxAW1zcLuAXnod",
+          "type": "heading1",
+          "text": "AAA​",
+          "rect": {
+            "x": 300.5,
+            "y": 235.25,
+            "width": 787.5,
+            "height": 36.390625,
+            "top": 235.25,
+            "right": 1088,
+            "bottom": 271.640625,
+            "left": 300.5
+          },
+          "display": "block",
+          "marker": {
+            "ref": "d613",
+            "text": "9.",
+            "rect": {
+              "x": 302.5,
+              "y": 244.4375,
+              "width": 25.6875,
+              "height": 20,
+              "top": 244.4375,
+              "right": 328.1875,
+              "bottom": 264.4375,
+              "left": 302.5
+            },
+            "style": {
+              "display": "flex",
+              "visibility": "visible",
+              "fontSize": "26px",
+              "fontFamily": "\"Helvetica Neue\", Consolas",
+              "fontWeight": "500",
+              "lineHeight": "36.4px",
+              "width": "25.6875px",
+              "minWidth": "0px",
+              "paddingLeft": "2px",
+              "paddingRight": "2px",
+              "marginLeft": "0px",
+              "marginRight": "6px",
+              "textAlign": "center",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          },
+          "zone": {
+            "ref": "d616",
+            "rect": {
+              "x": 322.1875,
+              "y": 235.25,
+              "width": 763.8125,
+              "height": 36.390625,
+              "top": 235.25,
+              "right": 1086,
+              "bottom": 271.640625,
+              "left": 322.1875
+            },
+            "textRect": {
+              "x": 334.1875,
+              "y": 235.25,
+              "width": 751.8125,
+              "height": 36.390625,
+              "top": 235.25,
+              "right": 1086,
+              "bottom": 271.640625,
+              "left": 334.1875
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "fontSize": "26px",
+              "fontFamily": "LarkHackSafariFont, LarkEmojiFont, LarkChineseQuote, -apple-system, \"system-ui\", \"Helvetica Neue\", Tahoma, \"PingFang SC\", \"Microsoft Yahei\", Arial, \"Hiragino Sans GB\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "fontWeight": "500",
+              "lineHeight": "36.4px",
+              "width": "763.812px",
+              "minWidth": "auto",
+              "paddingLeft": "12px",
+              "paddingRight": "0px",
+              "marginLeft": "-12px",
+              "marginRight": "0px",
+              "textAlign": "start",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          }
+        }
+      ],
+      "anchors": [
+        {
+          "ref": "d445",
+          "href": "#NwYddHWz1oBwLHxAW1zcLuAXnod",
+          "text": "9. AAA",
+          "container": "catalogue__list-item indent-level-1 heading-1 contextmenu-without-copyperm active collapsible"
+        }
+      ],
+      "scroll": [
+        {
+          "ref": "d83",
+          "class": "bear-web-x-container catalogue-opened docx-in-wiki width-transition keyboard-mode",
+          "top": 0,
+          "height": 899
+        }
+      ]
+    },
+    "find": {
+      "dom": null,
+      "inputs": []
+    }
+  },
+  "records": [
+    {
+      "seq": 698,
+      "type": "attributes",
+      "target": "d625",
+      "attribute": "class",
+      "old": "svg-wrapper",
+      "value": "svg-wrapper ud__tooltip-open",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 699,
+      "type": "attributes",
+      "target": "d613",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order hover button",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 700,
+      "type": "attributes",
+      "target": "d179",
+      "attribute": "class",
+      "old": "block docx-heading1-block focused",
+      "value": "block docx-heading1-block focused",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 701,
+      "type": "attributes",
+      "target": "d625",
+      "attribute": "class",
+      "old": "svg-wrapper ud__tooltip-open",
+      "value": "svg-wrapper",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 702,
+      "type": "characterData",
+      "target": "d614",
+      "attribute": null,
+      "old": "1.",
+      "value": "9.",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 703,
+      "type": "attributes",
+      "target": "d179",
+      "attribute": "class",
+      "old": "block docx-heading1-block focused",
+      "value": "block docx-heading1-block focused",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 704,
+      "type": "attributes",
+      "target": "d613",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order hover button",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 705,
+      "type": "attributes",
+      "target": "d179",
+      "attribute": "class",
+      "old": "block docx-heading1-block focused",
+      "value": "block docx-heading1-block focused",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    }
+  ],
+  "keys": [],
+  "external": [
+    {
+      "kind": "related-mutations",
+      "time": 1792392666925,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792392666960,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792392667229,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "external-menu",
+      "time": 1792392668854,
+      "change": "added",
+      "dom": {
+        "ref": "d700",
+        "tag": "UL",
+        "attrs": {
+          "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical heading-modify-menu ud-scrollbar",
+          "id": "HEADING-MODIFY-MENU",
+          "role": "menu"
+        },
+        "children": [
+          {
+            "ref": "d701",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "d702",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "d703",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d704",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d705",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d706",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d707",
+                    "text": "继续标题编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d708",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "d709",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "d710",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d711",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d712",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d713",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d714",
+                    "text": "重新开始编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d715",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "false"
+            },
+            "children": [
+              {
+                "ref": "d716",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap"
+                },
+                "children": [
+                  {
+                    "ref": "d717",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d718",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d719",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d720",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d721",
+                    "text": "设置编号的值"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "external-menu",
+      "time": 1792392668854,
+      "change": "added",
+      "dom": {
+        "ref": "d700",
+        "tag": "UL",
+        "attrs": {
+          "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical heading-modify-menu ud-scrollbar",
+          "id": "HEADING-MODIFY-MENU",
+          "role": "menu"
+        },
+        "children": [
+          {
+            "ref": "d701",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "d702",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "d703",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d704",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d705",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d706",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d707",
+                    "text": "继续标题编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d708",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "d709",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "d710",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d711",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d712",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d713",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d714",
+                    "text": "重新开始编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d715",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "false"
+            },
+            "children": [
+              {
+                "ref": "d716",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap"
+                },
+                "children": [
+                  {
+                    "ref": "d717",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d718",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d719",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d720",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d721",
+                    "text": "设置编号的值"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "external-menu",
+      "time": 1792392669845,
+      "change": "removed",
+      "dom": {
+        "ref": "d700",
+        "tag": "UL",
+        "attrs": {
+          "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical heading-modify-menu ud-scrollbar",
+          "id": "HEADING-MODIFY-MENU",
+          "role": "menu"
+        },
+        "children": [
+          {
+            "ref": "d701",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "d702",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "d703",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d704",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d705",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d706",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d707",
+                    "text": "继续标题编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d708",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "d709",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "d710",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d711",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d712",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d713",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d714",
+                    "text": "重新开始编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "d715",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-active heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "false"
+            },
+            "children": [
+              {
+                "ref": "d716",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap"
+                },
+                "children": [
+                  {
+                    "ref": "d717",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "d718",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "d719",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "d720",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "d721",
+                    "text": "设置编号的值"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792392672226,
+      "records": [
+        {
+          "type": "characterData",
+          "target": "d450",
+          "attribute": null,
+          "old": "1. AAA",
+          "value": "9. AAA",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792392739461,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792392739741,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792392740022,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d438",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d439",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "d442",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    }
+  ]
+}

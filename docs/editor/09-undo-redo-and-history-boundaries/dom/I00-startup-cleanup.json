@@ -1,0 +1,2778 @@
+{
+  "session": "S09-1792737386872",
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "timeOrigin": 1792737354012.1,
+  "operation": {
+    "id": "I00-startup-cleanup",
+    "startedAt": "2026-10-23T06:52:56.806Z",
+    "phase": "redo-cleared",
+    "samples": [
+      {
+        "phase": "before",
+        "time": 1022762.8000000715,
+        "rootsConnected": true,
+        "body": {
+          "snapshotRef": "tree1"
+        },
+        "title": {
+          "snapshotRef": "tree2"
+        },
+        "rows": [
+          {
+            "r": "r15",
+            "id": "2",
+            "type": "text",
+            "parent": -1,
+            "text": "Alpha​",
+            "attrs": {
+              "class": "block docx-text-block focused",
+              "data-block-type": "text",
+              "data-block-id": "2",
+              "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+            },
+            "align": "start",
+            "runs": [
+              {
+                "r": "r23",
+                "text": "Alpha",
+                "weight": "400",
+                "fontStyle": "normal",
+                "decoration": "none",
+                "color": "rgb(31, 35, 41)",
+                "background": "rgba(0, 0, 0, 0)",
+                "href": null
+              },
+              {
+                "r": "r21",
+                "text": "​",
+                "weight": "400",
+                "fontStyle": "normal",
+                "decoration": "none",
+                "color": "rgb(31, 35, 41)",
+                "background": "rgba(0, 0, 0, 0)",
+                "href": null
+              }
+            ]
+          }
+        ],
+        "active": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        },
+        "ui": [],
+        "saveText": [
+          "已经保存到云端",
+          "已经保存到云端"
+        ]
+      },
+      {
+        "phase": "cleared",
+        "time": 1039906.1000000238,
+        "rootsConnected": true,
+        "body": {
+          "snapshotRef": "tree3"
+        },
+        "title": {
+          "snapshotRef": "tree2"
+        },
+        "rows": [],
+        "active": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "ui": [],
+        "saveText": [
+          "已经保存到云端",
+          "已经保存到云端"
+        ]
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1046004.8000000715,
+        "rootsConnected": true,
+        "body": {
+          "snapshotRef": "tree4"
+        },
+        "title": {
+          "snapshotRef": "tree2"
+        },
+        "rows": [
+          {
+            "r": "r49",
+            "id": "4",
+            "type": "text",
+            "parent": -1,
+            "text": "Alpha​",
+            "attrs": {
+              "class": "block docx-text-block",
+              "data-block-type": "text",
+              "data-block-id": "4",
+              "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+            },
+            "align": "start",
+            "runs": [
+              {
+                "r": "r55",
+                "text": "Alpha",
+                "weight": "400",
+                "fontStyle": "normal",
+                "decoration": "none",
+                "color": "rgb(31, 35, 41)",
+                "background": "rgba(0, 0, 0, 0)",
+                "href": null
+              },
+              {
+                "r": "r57",
+                "text": "​",
+                "weight": "400",
+                "fontStyle": "normal",
+                "decoration": "none",
+                "color": "rgb(31, 35, 41)",
+                "background": "rgba(0, 0, 0, 0)",
+                "href": null
+              }
+            ]
+          }
+        ],
+        "active": {
+          "r": "r48",
+          "tag": "TEXTAREA",
+          "cls": "docx-selection-hidden-textarea",
+          "text": " ",
+          "block": null
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        },
+        "ui": [],
+        "saveText": [
+          "已经保存到云端",
+          "已经保存到云端"
+        ]
+      },
+      {
+        "phase": "redo-cleared",
+        "time": 1050914.5,
+        "rootsConnected": true,
+        "body": {
+          "snapshotRef": "tree3"
+        },
+        "title": {
+          "snapshotRef": "tree2"
+        },
+        "rows": [],
+        "active": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "ui": [],
+        "saveText": [
+          "已经保存到云端",
+          "已经保存到云端"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "phase": "before",
+        "time": 1024003.8999999762,
+        "type": "pointerdown",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 1,
+        "x": 530,
+        "y": 247,
+        "target": {
+          "r": "r19",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        }
+      },
+      {
+        "phase": "before",
+        "time": 1024004.1000000238,
+        "type": "mousedown",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 1,
+        "x": 530,
+        "y": 247,
+        "target": {
+          "r": "r19",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        }
+      },
+      {
+        "phase": "before",
+        "time": 1024049.8999999762,
+        "type": "pointerup",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 0,
+        "x": 530,
+        "y": 247,
+        "target": {
+          "r": "r19",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        }
+      },
+      {
+        "phase": "before",
+        "time": 1024049.8999999762,
+        "type": "mouseup",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 0,
+        "x": 530,
+        "y": 247,
+        "target": {
+          "r": "r19",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        }
+      },
+      {
+        "phase": "before",
+        "time": 1024523,
+        "type": "keydown",
+        "trusted": true,
+        "key": "a",
+        "code": "KeyA",
+        "meta": true,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "before",
+        "time": 1024542.7000000477,
+        "type": "keyup",
+        "trusted": true,
+        "key": "a",
+        "code": "KeyA",
+        "meta": true,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "Alpha",
+          "collapsed": false,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 0
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "before",
+        "time": 1024554.3999999762,
+        "type": "selectionchange",
+        "trusted": true,
+        "target": {
+          "r": "r12",
+          "tag": "#document",
+          "block": null
+        },
+        "selection": {
+          "text": "Alpha",
+          "collapsed": false,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 0
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        }
+      },
+      {
+        "phase": "before",
+        "time": 1024981.3999999762,
+        "type": "keydown",
+        "trusted": true,
+        "key": "a",
+        "code": "KeyA",
+        "meta": true,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "Alpha",
+          "collapsed": false,
+          "anchor": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 0
+          },
+          "focus": {
+            "r": "r23",
+            "tag": "#text",
+            "cls": " author-7622865454574423258",
+            "text": "Alpha",
+            "block": {
+              "r": "r15",
+              "id": "2",
+              "type": "text"
+            },
+            "offset": 5
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "before",
+        "time": 1024989.8999999762,
+        "type": "keyup",
+        "trusted": true,
+        "key": "a",
+        "code": "KeyA",
+        "meta": true,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r48",
+          "tag": "TEXTAREA",
+          "cls": "docx-selection-hidden-textarea",
+          "text": " ",
+          "block": null
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "before",
+        "time": 1024991.5,
+        "type": "selectionchange",
+        "trusted": true,
+        "target": {
+          "r": "r48",
+          "tag": "TEXTAREA",
+          "cls": "docx-selection-hidden-textarea",
+          "text": " ",
+          "block": null
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        }
+      },
+      {
+        "phase": "before",
+        "time": 1035291.8999999762,
+        "type": "keydown",
+        "trusted": true,
+        "key": "Backspace",
+        "code": "Backspace",
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r48",
+          "tag": "TEXTAREA",
+          "cls": "docx-selection-hidden-textarea",
+          "text": " ",
+          "block": null
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "before",
+        "time": 1035414.8000000715,
+        "type": "keyup",
+        "trusted": true,
+        "key": "Backspace",
+        "code": "Backspace",
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "before",
+        "time": 1035428.1000000238,
+        "type": "selectionchange",
+        "trusted": true,
+        "target": {
+          "r": "r12",
+          "tag": "#document",
+          "block": null
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "cleared",
+        "time": 1041020.3999999762,
+        "type": "pointerdown",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 1,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "cleared",
+        "time": 1041031.3000000715,
+        "type": "mousedown",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 1,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "cleared",
+        "time": 1041064.6000000238,
+        "type": "pointerup",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 0,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "cleared",
+        "time": 1041064.7000000477,
+        "type": "mouseup",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 0,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "cleared",
+        "time": 1042001.8000000715,
+        "type": "keydown",
+        "trusted": true,
+        "key": "z",
+        "code": "KeyZ",
+        "meta": true,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "cleared",
+        "time": 1042313.7000000477,
+        "type": "keyup",
+        "trusted": true,
+        "key": "z",
+        "code": "KeyZ",
+        "meta": true,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "cleared",
+        "time": 1042338,
+        "type": "selectionchange",
+        "trusted": true,
+        "target": {
+          "r": "r48",
+          "tag": "TEXTAREA",
+          "cls": "docx-selection-hidden-textarea",
+          "text": " ",
+          "block": null
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        }
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047092.3999999762,
+        "type": "pointerdown",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 1,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        }
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047094,
+        "type": "mousedown",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 1,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": " ",
+          "collapsed": true,
+          "anchor": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          },
+          "focus": {
+            "r": "r34",
+            "tag": "BODY",
+            "cls": "layout-column ccm-scope wiki",
+            "text": "飞书云文档搜索主页云盘我的空间和共享空间搬到云盘了知识库智能纪要置顶文档在重庆麦芽传媒有限公司玩转云文档置顶知识库新建或置顶知识库我的文档库豆豆豆豆知识问答未命名文档剧本重构B1-first-character-recheck-20261012未命名文档L4-敏感最近修改: 昨天 20:19分享编辑header-v2重庆麦芽传媒有限公司合岳(重庆)未命名文档重庆麦芽传媒有限公司合岳(重庆)未命名文",
+            "block": null,
+            "offset": 29
+          }
+        }
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047104.2000000477,
+        "type": "selectionchange",
+        "trusted": true,
+        "target": {
+          "r": "r12",
+          "tag": "#document",
+          "block": null
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047150.7000000477,
+        "type": "pointerup",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 0,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047150.8000000715,
+        "type": "mouseup",
+        "trusted": true,
+        "meta": false,
+        "shift": false,
+        "alt": false,
+        "ctrl": false,
+        "buttons": 0,
+        "x": 530,
+        "y": 140,
+        "target": {
+          "r": "r7",
+          "tag": "DIV",
+          "cls": "ace-line",
+          "text": "​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        }
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047677.7000000477,
+        "type": "keydown",
+        "trusted": true,
+        "key": "Z",
+        "code": "KeyZ",
+        "meta": true,
+        "shift": true,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047716.5,
+        "type": "keyup",
+        "trusted": true,
+        "key": "Z",
+        "code": "KeyZ",
+        "meta": true,
+        "shift": true,
+        "alt": false,
+        "ctrl": false,
+        "target": {
+          "r": "r10",
+          "tag": "DIV",
+          "cls": "page-block root-block",
+          "text": "添加图标添加封面​合岳今天修改",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "selection": {
+          "text": "",
+          "collapsed": true,
+          "anchor": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          },
+          "focus": {
+            "r": "r9",
+            "tag": "#text",
+            "cls": "",
+            "text": "​",
+            "block": {
+              "r": "r11",
+              "id": "1",
+              "type": "page"
+            },
+            "offset": 1
+          }
+        },
+        "isComposing": false,
+        "repeat": false
+      }
+    ],
+    "mutations": [
+      {
+        "phase": "before",
+        "time": 1024560.3999999762,
+        "type": "attributes",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": "class",
+        "old": "block docx-text-block focused",
+        "valueAtDelivery": "block docx-text-block focused",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1024560.3999999762,
+        "type": "attributes",
+        "target": {
+          "r": "r18",
+          "tag": "DIV",
+          "cls": "zone-container text-editor non-empty text-editor-focused",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": "class",
+        "old": "zone-container text-editor non-empty text-editor-focused",
+        "valueAtDelivery": "zone-container text-editor non-empty text-editor-focused",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1024989.3000000715,
+        "type": "childList",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused selected",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [
+          {
+            "r": "r47",
+            "tag": "DIV",
+            "a": {
+              "contenteditable": "false",
+              "style": "position: absolute; inset: 0px; border-radius: 6px; pointer-events: none;",
+              "class": "selected-mask"
+            },
+            "c": []
+          }
+        ],
+        "removed": [],
+        "previous": "r16",
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1024989.3999999762,
+        "type": "attributes",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused selected",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": "class",
+        "old": "block docx-text-block focused",
+        "valueAtDelivery": "block docx-text-block focused selected",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1024989.3999999762,
+        "type": "attributes",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused selected",
+          "text": "Alpha​",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": "class",
+        "old": "block docx-text-block focused selected",
+        "valueAtDelivery": "block docx-text-block focused selected",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.2000000477,
+        "type": "childList",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused",
+          "text": "",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r47",
+            "tag": "DIV",
+            "a": {
+              "contenteditable": "false",
+              "style": "position: absolute; inset: 0px; border-radius: 6px; pointer-events: none;",
+              "class": "selected-mask"
+            },
+            "c": []
+          }
+        ],
+        "previous": "r16",
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.3000000715,
+        "type": "attributes",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused",
+          "text": "",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": "class",
+        "old": "block docx-text-block focused selected",
+        "valueAtDelivery": "block docx-text-block focused",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.3000000715,
+        "type": "attributes",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused",
+          "text": "",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": "class",
+        "old": "block docx-text-block focused",
+        "valueAtDelivery": "block docx-text-block focused",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.3000000715,
+        "type": "attributes",
+        "target": {
+          "r": "r1",
+          "tag": "DIV",
+          "cls": "page-block-children",
+          "text": "",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": "contenteditable",
+        "old": null,
+        "valueAtDelivery": "false",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.3000000715,
+        "type": "childList",
+        "target": {
+          "r": "r22",
+          "tag": "SPAN",
+          "cls": " author-7622865454574423258",
+          "text": "",
+          "block": null
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r23",
+            "text": "Alpha"
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.3000000715,
+        "type": "childList",
+        "target": {
+          "r": "r20",
+          "tag": "SPAN",
+          "cls": "",
+          "text": "",
+          "block": null
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r21",
+            "text": "​"
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035398.3000000715,
+        "type": "childList",
+        "target": {
+          "r": "r15",
+          "tag": "DIV",
+          "cls": "block docx-text-block focused",
+          "text": "",
+          "block": {
+            "r": "r15",
+            "id": "2",
+            "type": "text"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r16",
+            "tag": "DIV",
+            "a": {
+              "class": "text-block-wrapper"
+            },
+            "c": [
+              {
+                "r": "r17",
+                "tag": "DIV",
+                "a": {
+                  "class": "text-block"
+                },
+                "c": [
+                  {
+                    "r": "r18",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "zone-container text-editor non-empty text-editor-focused",
+                      "data-zone-id": "2",
+                      "data-zone-container": "*",
+                      "data-slate-editor": "true",
+                      "contenteditable": "true"
+                    },
+                    "c": [
+                      {
+                        "r": "r19",
+                        "tag": "DIV",
+                        "a": {
+                          "class": "ace-line",
+                          "data-node": "true"
+                        },
+                        "c": [
+                          {
+                            "r": "r22",
+                            "tag": "SPAN",
+                            "a": {
+                              "data-string": "true",
+                              "class": " author-7622865454574423258",
+                              "data-leaf": "true"
+                            },
+                            "c": []
+                          },
+                          {
+                            "r": "r20",
+                            "tag": "SPAN",
+                            "a": {
+                              "data-string": "true",
+                              "data-enter": "true",
+                              "data-leaf": "true"
+                            },
+                            "c": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "before",
+        "time": 1035404.3999999762,
+        "type": "childList",
+        "target": {
+          "r": "r3",
+          "tag": "DIV",
+          "cls": "render-unit-wrapper",
+          "text": "",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r15",
+            "tag": "DIV",
+            "a": {
+              "class": "block docx-text-block focused",
+              "data-block-type": "text",
+              "data-block-id": "2",
+              "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+            },
+            "c": []
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "cleared",
+        "time": 1042241.8999999762,
+        "type": "childList",
+        "target": {
+          "r": "r3",
+          "tag": "DIV",
+          "cls": "render-unit-wrapper",
+          "text": "",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [
+          {
+            "r": "r13",
+            "tag": "DIV",
+            "a": {
+              "data-parent-id": "1",
+              "class": "bear-virtual-renderUnit-placeholder",
+              "style": "height: 26px; margin-top: 0px; margin-bottom: 0px;"
+            },
+            "c": [
+              {
+                "r": "r14",
+                "tag": "SPAN",
+                "a": {},
+                "c": []
+              }
+            ]
+          }
+        ],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "cleared",
+        "time": 1042242,
+        "type": "attributes",
+        "target": {
+          "r": "r1",
+          "tag": "DIV",
+          "cls": "page-block-children",
+          "text": "",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": "contenteditable",
+        "old": "false",
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "cleared",
+        "time": 1042305,
+        "type": "childList",
+        "target": {
+          "r": "r3",
+          "tag": "DIV",
+          "cls": "render-unit-wrapper",
+          "text": "Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r13",
+            "tag": "DIV",
+            "a": {
+              "data-parent-id": "1",
+              "class": "bear-virtual-renderUnit-placeholder",
+              "style": "height: 26px; margin-top: 0px; margin-bottom: 0px;"
+            },
+            "c": [
+              {
+                "r": "r14",
+                "tag": "SPAN",
+                "a": {},
+                "c": []
+              }
+            ]
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "cleared",
+        "time": 1042305,
+        "type": "childList",
+        "target": {
+          "r": "r3",
+          "tag": "DIV",
+          "cls": "render-unit-wrapper",
+          "text": "Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [
+          {
+            "r": "r49",
+            "tag": "DIV",
+            "a": {
+              "class": "block docx-text-block",
+              "data-block-type": "text",
+              "data-block-id": "4",
+              "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+            },
+            "c": [
+              {
+                "r": "r50",
+                "tag": "DIV",
+                "a": {
+                  "class": "text-block-wrapper"
+                },
+                "c": [
+                  {
+                    "r": "r51",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "text-block"
+                    },
+                    "c": [
+                      {
+                        "r": "r52",
+                        "tag": "DIV",
+                        "a": {
+                          "class": "zone-container text-editor non-empty",
+                          "data-zone-id": "4",
+                          "data-zone-container": "*",
+                          "data-slate-editor": "true",
+                          "contenteditable": "true"
+                        },
+                        "c": [
+                          {
+                            "r": "r53",
+                            "tag": "DIV",
+                            "a": {
+                              "class": "ace-line",
+                              "data-node": "true"
+                            },
+                            "c": [
+                              {
+                                "r": "r54",
+                                "tag": "SPAN",
+                                "a": {
+                                  "data-string": "true",
+                                  "class": " author-7622865454574423258",
+                                  "data-leaf": "true"
+                                },
+                                "c": [
+                                  {
+                                    "r": "r55",
+                                    "text": "Alpha"
+                                  }
+                                ]
+                              },
+                              {
+                                "r": "r56",
+                                "tag": "SPAN",
+                                "a": {
+                                  "data-string": "true",
+                                  "data-enter": "true",
+                                  "data-leaf": "true"
+                                },
+                                "c": [
+                                  {
+                                    "r": "r57",
+                                    "text": "​"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047704.1000000238,
+        "type": "attributes",
+        "target": {
+          "r": "r1",
+          "tag": "DIV",
+          "cls": "page-block-children",
+          "text": "Alpha​",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": "contenteditable",
+        "old": null,
+        "valueAtDelivery": "false",
+        "added": [],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047707.2000000477,
+        "type": "childList",
+        "target": {
+          "r": "r3",
+          "tag": "DIV",
+          "cls": "render-unit-wrapper",
+          "text": "",
+          "block": {
+            "r": "r11",
+            "id": "1",
+            "type": "page"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r49",
+            "tag": "DIV",
+            "a": {
+              "class": "block docx-text-block",
+              "data-block-type": "text",
+              "data-block-id": "4",
+              "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+            },
+            "c": []
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047707.2000000477,
+        "type": "childList",
+        "target": {
+          "r": "r54",
+          "tag": "SPAN",
+          "cls": " author-7622865454574423258",
+          "text": "",
+          "block": null
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r55",
+            "text": "Alpha"
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047707.2000000477,
+        "type": "childList",
+        "target": {
+          "r": "r56",
+          "tag": "SPAN",
+          "cls": "",
+          "text": "",
+          "block": null
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r57",
+            "text": "​"
+          }
+        ],
+        "previous": null,
+        "next": null
+      },
+      {
+        "phase": "undo-restored-Alpha",
+        "time": 1047707.2000000477,
+        "type": "childList",
+        "target": {
+          "r": "r49",
+          "tag": "DIV",
+          "cls": "block docx-text-block",
+          "text": "",
+          "block": {
+            "r": "r49",
+            "id": "4",
+            "type": "text"
+          }
+        },
+        "name": null,
+        "old": null,
+        "valueAtDelivery": null,
+        "added": [],
+        "removed": [
+          {
+            "r": "r50",
+            "tag": "DIV",
+            "a": {
+              "class": "text-block-wrapper"
+            },
+            "c": [
+              {
+                "r": "r51",
+                "tag": "DIV",
+                "a": {
+                  "class": "text-block"
+                },
+                "c": [
+                  {
+                    "r": "r52",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "zone-container text-editor non-empty",
+                      "data-zone-id": "4",
+                      "data-zone-container": "*",
+                      "data-slate-editor": "true",
+                      "contenteditable": "true"
+                    },
+                    "c": [
+                      {
+                        "r": "r53",
+                        "tag": "DIV",
+                        "a": {
+                          "class": "ace-line",
+                          "data-node": "true"
+                        },
+                        "c": [
+                          {
+                            "r": "r54",
+                            "tag": "SPAN",
+                            "a": {
+                              "data-string": "true",
+                              "class": " author-7622865454574423258",
+                              "data-leaf": "true"
+                            },
+                            "c": []
+                          },
+                          {
+                            "r": "r56",
+                            "tag": "SPAN",
+                            "a": {
+                              "data-string": "true",
+                              "data-enter": "true",
+                              "data-leaf": "true"
+                            },
+                            "c": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "previous": null,
+        "next": null
+      }
+    ],
+    "uiMutations": [
+      {
+        "phase": "before",
+        "time": 1024541.7000000477,
+        "type": "childList",
+        "target": {
+          "r": "r45",
+          "tag": "DIV",
+          "cls": "",
+          "text": "连续按下 ⌘ + A 以选中全文不再提醒",
+          "block": null
+        },
+        "name": null,
+        "old": null,
+        "ui": [
+          {
+            "r": "r46",
+            "cls": "ud__notice ud__notice-info ud__notice-showIcon ud__notice-has-action ud__notice--outlined ud__toast",
+            "text": "连续按下 ⌘ + A 以选中全文不再提醒"
+          }
+        ]
+      },
+      {
+        "phase": "before",
+        "time": 1029849.5,
+        "type": "childList",
+        "target": {
+          "r": "r45",
+          "tag": "DIV",
+          "cls": "",
+          "text": "",
+          "block": null
+        },
+        "name": null,
+        "old": null,
+        "ui": []
+      }
+    ],
+    "uiLimitReached": false,
+    "errors": [],
+    "eventLimitReached": false,
+    "mutationLimitReached": false,
+    "endedAt": "2026-10-23T06:53:26.827Z"
+  },
+  "scope": "Startup checkpoint cleanup, not completion of S09",
+  "_snapshotDictionary": {
+    "tree1": {
+      "r": "r1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "r2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "r3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "r15",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused",
+                    "data-block-type": "text",
+                    "data-block-id": "2",
+                    "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+                  },
+                  "c": [
+                    {
+                      "r": "r16",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "r17",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "r18",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "data-zone-id": "2",
+                                "data-zone-container": "*",
+                                "data-slate-editor": "true",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "r19",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line",
+                                    "data-node": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "r22",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "data-string": "true",
+                                        "class": " author-7622865454574423258",
+                                        "data-leaf": "true"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "r23",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "r20",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "data-string": "true",
+                                        "data-enter": "true",
+                                        "data-leaf": "true"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "r21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "r4",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "tree2": {
+      "r": "r5",
+      "tag": "H1",
+      "a": {
+        "class": "page-block-content left flash-block-content page-block-title-empty",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625; line-height: 1.625;"
+      },
+      "c": [
+        {
+          "r": "r6",
+          "tag": "DIV",
+          "a": {
+            "class": "zone-container text-editor",
+            "data-zone-id": "1",
+            "data-zone-container": "*",
+            "data-slate-editor": "true",
+            "contenteditable": "true",
+            "data-placeholder": "请输入标题"
+          },
+          "c": [
+            {
+              "r": "r7",
+              "tag": "DIV",
+              "a": {
+                "class": "ace-line",
+                "data-node": "true"
+              },
+              "c": [
+                {
+                  "r": "r8",
+                  "tag": "SPAN",
+                  "a": {
+                    "data-string": "true",
+                    "data-enter": "true",
+                    "data-leaf": "true"
+                  },
+                  "c": [
+                    {
+                      "r": "r9",
+                      "text": "​"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tree3": {
+      "r": "r1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children",
+        "contenteditable": "false"
+      },
+      "c": [
+        {
+          "r": "r2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "r3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": []
+            },
+            {
+              "r": "r4",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "tree4": {
+      "r": "r1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "r2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "r3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "r49",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "4",
+                    "data-record-id": "I0njdKVS4oxWfRxIVUUcXsfonRf"
+                  },
+                  "c": [
+                    {
+                      "r": "r50",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "r51",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "r52",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "4",
+                                "data-zone-container": "*",
+                                "data-slate-editor": "true",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "r53",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line",
+                                    "data-node": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "r54",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "data-string": "true",
+                                        "class": " author-7622865454574423258",
+                                        "data-leaf": "true"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "r55",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "r56",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "data-string": "true",
+                                        "data-enter": "true",
+                                        "data-leaf": "true"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "r57",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "r4",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "scheme": "body-title-snapshotRef-v1",
+    "normalizedCanonicalSha256": "dbb664940ac12b94320f59dcfdfe4f2419d1258e73590c67aa8d5ef98e5cef1e",
+    "rawCanonicalSha256": "dbb664940ac12b94320f59dcfdfe4f2419d1258e73590c67aa8d5ef98e5cef1e",
+    "roundtripVerified": true
+  },
+  "_normalization": "DOM class/id/data identifiers feishu -> maiya; URL and text unchanged"
+}

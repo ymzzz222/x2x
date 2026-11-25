@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 2,
+  "totalS10Pairs": 8,
+  "scope": "Revision heading conversion/rejection and partial deletion/acceptance history only",
+  "files": [
+    {
+      "file": "dom/J03-revision-convert-heading-R1.json",
+      "sha256": "9440e28739b194224fc41818494af4fcb8eff3fbe3fe5c76b720c8ba95199f05"
+    },
+    {
+      "file": "dom/J03-revision-convert-heading-R2.json",
+      "sha256": "b5c4322c0108e9815ed443798451754cc3a5a57aaa262c4542781251294f3e52"
+    },
+    {
+      "file": "dom/J03-revision-delete-R1.json",
+      "sha256": "05e9b1033b484e9fcdfd8923277c1b9b07d38e1b516bf46361939cfeed549e8c"
+    },
+    {
+      "file": "dom/J03-revision-delete-R2.json",
+      "sha256": "67c05ab881a0d0657d66b3128d41119dae501204d6bca6845024cf458bf788a1"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J03-revision-convert-heading-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2 trusted initiating key",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,2216 @@
+{
+  "case": "G09-F-bubble-tab-R4",
+  "session": "S07-F-native",
+  "normalization": "DOM identifiers feishu -> maiya; text and source URL unchanged",
+  "before": {
+    "label": "G09-F-bubble-tab-R4:source",
+    "time": "2026-10-20T01:30:07.199Z",
+    "mono": 58552655.899999976,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+    },
+    "selection": {
+      "type": "Range",
+      "a": {
+        "r": "f10",
+        "offset": 0,
+        "text": "Alpha"
+      },
+      "f": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "text": "Alpha",
+      "ranges": [
+        {
+          "start": {
+            "r": "f10",
+            "offset": 0,
+            "text": "Alpha"
+          },
+          "end": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "collapsed": false
+        }
+      ]
+    },
+    "focus": {
+      "r": "f41",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block root-block",
+        "contenteditable": "true",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+      }
+    },
+    "ui": [],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 26,
+    "eventCount": 21,
+    "instanceId": "S07-F-1792459652680",
+    "hasFocus": true,
+    "currentRootSame": true,
+    "fields": [
+      {
+        "r": "f40",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "readonly": "",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+        },
+        "value": " ",
+        "selectionStart": 0,
+        "selectionEnd": 0
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgba(0, 0, 0, 0) solid 0px",
+      "boxShadow": "none"
+    },
+    "menuFocus": []
+  },
+  "after": {
+    "label": "G09-F-bubble-tab-R4:end",
+    "time": "2026-10-20T01:30:34.649Z",
+    "mono": 58580106.20000005,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-a60f1876f78d31febc621901"
+    },
+    "selection": {
+      "type": "Range",
+      "a": {
+        "r": "f39",
+        "offset": 40
+      },
+      "f": {
+        "r": "f39",
+        "offset": 40
+      },
+      "text": " ",
+      "ranges": [
+        {
+          "start": {
+            "r": "f39",
+            "offset": 40
+          },
+          "end": {
+            "r": "f39",
+            "offset": 40
+          },
+          "collapsed": true
+        }
+      ]
+    },
+    "focus": {
+      "r": "f40",
+      "tag": "TEXTAREA",
+      "a": {
+        "class": "docx-selection-hidden-textarea",
+        "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+      }
+    },
+    "ui": [],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 33,
+    "eventCount": 30,
+    "instanceId": "S07-F-1792459652680",
+    "hasFocus": true,
+    "currentRootSame": true,
+    "fields": [
+      {
+        "r": "f40",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "readonly": "",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+          "data-current-root-block-id": "50"
+        },
+        "value": " ",
+        "selectionStart": 0,
+        "selectionEnd": 1
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgb(0, 95, 204) auto 1px",
+      "boxShadow": "none"
+    },
+    "menuFocus": []
+  },
+  "states": [
+    {
+      "label": "G09-F-bubble-tab-R4:before:keydown:Tab",
+      "time": "2026-10-20T01:30:19.742Z",
+      "mono": 58565199.5,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 26,
+      "eventCount": 22,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 0
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:stable:keyup",
+      "time": "2026-10-20T01:30:19.901Z",
+      "mono": 58565358.100000024,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-c0f80ad041373c18fdbac1e4"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 28,
+      "eventCount": 23,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 0
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:before:keydown:Tab",
+      "time": "2026-10-20T01:30:20.300Z",
+      "mono": 58565756.70000005,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-c0f80ad041373c18fdbac1e4"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 28,
+      "eventCount": 24,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 0
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:stable:keyup",
+      "time": "2026-10-20T01:30:20.429Z",
+      "mono": 58565885.600000024,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 30,
+      "eventCount": 25,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 0
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:stable:mutation",
+      "time": "2026-10-20T01:30:20.686Z",
+      "mono": 58566142.899999976,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 30,
+      "eventCount": 25,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 0
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:before:keydown:Escape",
+      "time": "2026-10-20T01:30:20.929Z",
+      "mono": 58566386.100000024,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-a47e4760e8e74f89b98ee0b1"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 30,
+      "eventCount": 26,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 0
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:stable:keyup",
+      "time": "2026-10-20T01:30:21.060Z",
+      "mono": 58566517.30000007,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-a60f1876f78d31febc621901"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f39",
+          "offset": 40
+        },
+        "f": {
+          "r": "f39",
+          "offset": 40
+        },
+        "text": " ",
+        "ranges": [
+          {
+            "start": {
+              "r": "f39",
+              "offset": 40
+            },
+            "end": {
+              "r": "f39",
+              "offset": 40
+            },
+            "collapsed": true
+          }
+        ]
+      },
+      "focus": {
+        "r": "f40",
+        "tag": "TEXTAREA",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 33,
+      "eventCount": 30,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+            "data-current-root-block-id": "50"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 1
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgb(0, 95, 204) auto 1px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    },
+    {
+      "label": "G09-F-bubble-tab-R4:stable:mutation",
+      "time": "2026-10-20T01:30:21.382Z",
+      "mono": 58566839.5,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-a60f1876f78d31febc621901"
+      },
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f39",
+          "offset": 40
+        },
+        "f": {
+          "r": "f39",
+          "offset": 40
+        },
+        "text": " ",
+        "ranges": [
+          {
+            "start": {
+              "r": "f39",
+              "offset": 40
+            },
+            "end": {
+              "r": "f39",
+              "offset": 40
+            },
+            "collapsed": true
+          }
+        ]
+      },
+      "focus": {
+        "r": "f40",
+        "tag": "TEXTAREA",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;"
+        }
+      },
+      "ui": [],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 33,
+      "eventCount": 30,
+      "instanceId": "S07-F-1792459652680",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+            "data-current-root-block-id": "50"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 1
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgb(0, 95, 204) auto 1px",
+        "boxShadow": "none"
+      },
+      "menuFocus": []
+    }
+  ],
+  "events": [
+    {
+      "i": 22,
+      "time": "2026-10-20T01:30:19.742Z",
+      "mono": 58565199.20000005,
+      "type": "keydown",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "i": 23,
+      "time": "2026-10-20T01:30:19.779Z",
+      "mono": 58565236.20000005,
+      "type": "keyup",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "i": 24,
+      "time": "2026-10-20T01:30:20.300Z",
+      "mono": 58565756.70000005,
+      "type": "keydown",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": true,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "i": 25,
+      "time": "2026-10-20T01:30:20.306Z",
+      "mono": 58565762.899999976,
+      "type": "keyup",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": true,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "i": 26,
+      "time": "2026-10-20T01:30:20.929Z",
+      "mono": 58566386.100000024,
+      "type": "keydown",
+      "trusted": true,
+      "target": "f41",
+      "key": "Escape",
+      "code": "Escape",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "i": 27,
+      "time": "2026-10-20T01:30:20.931Z",
+      "mono": 58566388,
+      "type": "focusout",
+      "trusted": true,
+      "target": "f41",
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f10",
+          "offset": 0,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "Alpha",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 0,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": false
+          }
+        ]
+      }
+    },
+    {
+      "i": 28,
+      "time": "2026-10-20T01:30:20.932Z",
+      "mono": 58566389.20000005,
+      "type": "focusin",
+      "trusted": true,
+      "target": "f40",
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f39",
+          "offset": 40
+        },
+        "f": {
+          "r": "f39",
+          "offset": 40
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f39",
+              "offset": 40
+            },
+            "end": {
+              "r": "f39",
+              "offset": 40
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 29,
+      "time": "2026-10-20T01:30:20.938Z",
+      "mono": 58566394.600000024,
+      "type": "keyup",
+      "trusted": true,
+      "target": "f40",
+      "key": "Escape",
+      "code": "Escape",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f39",
+          "offset": 40
+        },
+        "f": {
+          "r": "f39",
+          "offset": 40
+        },
+        "text": " ",
+        "ranges": [
+          {
+            "start": {
+              "r": "f39",
+              "offset": 40
+            },
+            "end": {
+              "r": "f39",
+              "offset": 40
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 30,
+      "time": "2026-10-20T01:30:20.949Z",
+      "mono": 58566405.600000024,
+      "type": "selectionchange",
+      "trusted": true,
+      "target": "f40",
+      "selection": {
+        "type": "Range",
+        "a": {
+          "r": "f39",
+          "offset": 40
+        },
+        "f": {
+          "r": "f39",
+          "offset": 40
+        },
+        "text": " ",
+        "ranges": [
+          {
+            "start": {
+              "r": "f39",
+              "offset": 40
+            },
+            "end": {
+              "r": "f39",
+              "offset": 40
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "seq": 27,
+      "mono": 58565230.30000007,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f6",
+      "attr": "class",
+      "old": "text-block",
+      "value": "text-block text-indent"
+    },
+    {
+      "seq": 28,
+      "mono": 58565230.399999976,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f4",
+      "attr": "class",
+      "old": "block docx-text-block focused",
+      "value": "block docx-text-block focused"
+    },
+    {
+      "seq": 29,
+      "mono": 58565762.30000007,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f6",
+      "attr": "class",
+      "old": "text-block text-indent",
+      "value": "text-block"
+    },
+    {
+      "seq": 30,
+      "mono": 58565762.30000007,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f4",
+      "attr": "class",
+      "old": "block docx-text-block focused",
+      "value": "block docx-text-block focused"
+    },
+    {
+      "seq": 31,
+      "mono": 58566393.80000007,
+      "scope": "body",
+      "type": "childList",
+      "target": "f4",
+      "attr": null,
+      "old": null,
+      "add": [
+        {
+          "r": "f160",
+          "tag": "DIV",
+          "a": {
+            "contenteditable": "false",
+            "style": "position: absolute; inset: 0px; border-radius: 6px; pointer-events: none;",
+            "class": "selected-mask"
+          },
+          "c": []
+        }
+      ],
+      "remove": [],
+      "previous": "f5",
+      "next": null
+    },
+    {
+      "seq": 32,
+      "mono": 58566393.899999976,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f4",
+      "attr": "class",
+      "old": "block docx-text-block focused",
+      "value": "block docx-text-block focused selected"
+    },
+    {
+      "seq": 33,
+      "mono": 58566393.899999976,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f4",
+      "attr": "class",
+      "old": "block docx-text-block focused selected",
+      "value": "block docx-text-block focused selected"
+    }
+  ],
+  "limits": [
+    "Attribute new values are delivery-time reads; order is DOM observation order, not an internal transaction contract.",
+    "SVG paths excluded; semantic icon attributes retained in UI controls."
+  ],
+  "instanceId": "S07-F-1792459652680",
+  "steps": [],
+  "windowEvents": [
+    {
+      "type": "blur",
+      "mono": 58566387.600000024,
+      "trusted": true,
+      "hidden": false,
+      "focus": true
+    },
+    {
+      "type": "focus",
+      "mono": 58566389,
+      "trusted": true,
+      "hidden": false,
+      "focus": true
+    }
+  ],
+  "nativeActions": [
+    "Tab",
+    "Shift+Tab",
+    "Escape"
+  ],
+  "driver": "CUA native Chrome window raised before keys",
+  "_snapshotDictionary": {
+    "body-a47e4760e8e74f89b98ee0b1": {
+      "r": "f1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "f2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "f3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "f4",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused",
+                    "data-block-type": "text",
+                    "data-block-id": "51",
+                    "data-record-id": "IB9GdaCevoLU4KxrNHkcaleLnBd"
+                  },
+                  "c": [
+                    {
+                      "r": "f5",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f6",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f7",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f8",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f9",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f10",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f11",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f12",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f13",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "52",
+                    "data-record-id": "RUqcdofXToZt5qx0iijc0RQhnog"
+                  },
+                  "c": [
+                    {
+                      "r": "f14",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f15",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f16",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f17",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f18",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f19",
+                                          "text": "Beta"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f20",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f22",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "53",
+                    "data-record-id": "GX26d5y7zothIyxDMBZcd2aRnwb"
+                  },
+                  "c": [
+                    {
+                      "r": "f23",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f24",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f25",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f26",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f27",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f28",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f29",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f30",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f31",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "54",
+                    "data-record-id": "LpU0dtiiZoIqdGxzJ5McAUhtnFS"
+                  },
+                  "c": [
+                    {
+                      "r": "f32",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f33",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f34",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f35",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f36",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f37",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "f38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "body-a60f1876f78d31febc621901": {
+      "r": "f1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "f2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "f3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "f4",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused selected",
+                    "data-block-type": "text",
+                    "data-block-id": "51",
+                    "data-record-id": "IB9GdaCevoLU4KxrNHkcaleLnBd"
+                  },
+                  "c": [
+                    {
+                      "r": "f5",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f6",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f7",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f8",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f9",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f10",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f11",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f12",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "f160",
+                      "tag": "DIV",
+                      "a": {
+                        "contenteditable": "false",
+                        "style": "position: absolute; inset: 0px; border-radius: 6px; pointer-events: none;",
+                        "class": "selected-mask"
+                      },
+                      "c": []
+                    }
+                  ]
+                },
+                {
+                  "r": "f13",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "52",
+                    "data-record-id": "RUqcdofXToZt5qx0iijc0RQhnog"
+                  },
+                  "c": [
+                    {
+                      "r": "f14",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f15",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f16",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f17",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f18",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f19",
+                                          "text": "Beta"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f20",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f22",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "53",
+                    "data-record-id": "GX26d5y7zothIyxDMBZcd2aRnwb"
+                  },
+                  "c": [
+                    {
+                      "r": "f23",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f24",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f25",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f26",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f27",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f28",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f29",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f30",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f31",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "54",
+                    "data-record-id": "LpU0dtiiZoIqdGxzJ5McAUhtnFS"
+                  },
+                  "c": [
+                    {
+                      "r": "f32",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f33",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f34",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f35",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f36",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f37",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "f38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "body-c0f80ad041373c18fdbac1e4": {
+      "r": "f1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "f2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "f3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "f4",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused",
+                    "data-block-type": "text",
+                    "data-block-id": "51",
+                    "data-record-id": "IB9GdaCevoLU4KxrNHkcaleLnBd"
+                  },
+                  "c": [
+                    {
+                      "r": "f5",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f6",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block text-indent"
+                          },
+                          "c": [
+                            {
+                              "r": "f7",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f8",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f9",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f10",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f11",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f12",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f13",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "52",
+                    "data-record-id": "RUqcdofXToZt5qx0iijc0RQhnog"
+                  },
+                  "c": [
+                    {
+                      "r": "f14",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f15",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f16",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f17",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f18",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f19",
+                                          "text": "Beta"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f20",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f22",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "53",
+                    "data-record-id": "GX26d5y7zothIyxDMBZcd2aRnwb"
+                  },
+                  "c": [
+                    {
+                      "r": "f23",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f24",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f25",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f26",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f27",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f28",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f29",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f30",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f31",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "54",
+                    "data-record-id": "LpU0dtiiZoIqdGxzJ5McAUhtnFS"
+                  },
+                  "c": [
+                    {
+                      "r": "f32",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f33",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f34",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f35",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f36",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f37",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "f38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "version": 1,
+    "description": "Only repeated full body trees replaced with same-file snapshotRef; refs, order, attributes and text preserved.",
+    "originalCanonicalSha256": "c428209ba9142d3f1e05b310fb0652e1c72303c1b89a4ac868e7a82597bf1d11",
+    "losslessRoundTripChecked": true
+  }
+}

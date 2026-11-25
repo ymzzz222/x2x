@@ -1,0 +1,107 @@
+{
+  "time": "2026-10-21T08:03:24.114Z",
+  "scope": "Unchanged useEditorChrome paste capture handler bound through its actual watcher, with mocked Vue lifecycle/DOM event and no system clipboard; not full readonly/editor/browser integration",
+  "hashes": {
+    "source": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c",
+    "config": "c695e79d06e9afd04d89113e71e0fc09483abee91401f2f5b6081e3e7641bdf8"
+  },
+  "observedLimits": [
+    "HTML-only payload with empty text/plain bypasses this gate; no equivalent per-paste HTML text bound was asserted"
+  ],
+  "cases": [
+    {
+      "name": "declared paste constant remains 100000",
+      "passed": true,
+      "detail": 100000
+    },
+    {
+      "name": "ASCII exact limit accepted",
+      "passed": true,
+      "detail": {
+        "utf16": 100000,
+        "codePoints": 100000,
+        "rejected": false
+      }
+    },
+    {
+      "name": "ASCII one over limit rejected before default paste",
+      "passed": true,
+      "detail": {
+        "utf16": 100001,
+        "codePoints": 100001,
+        "rejected": true
+      }
+    },
+    {
+      "name": "CJK exact and over limit",
+      "passed": true,
+      "detail": [
+        {
+          "utf16": 100000,
+          "codePoints": 100000,
+          "rejected": false
+        },
+        {
+          "utf16": 100001,
+          "codePoints": 100001,
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "name": "astral characters use UTF-16 units",
+      "passed": true,
+      "detail": [
+        {
+          "utf16": 100000,
+          "codePoints": 50000,
+          "rejected": false
+        },
+        {
+          "utf16": 100001,
+          "codePoints": 50001,
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "name": "combining characters use UTF-16 units",
+      "passed": true,
+      "detail": [
+        {
+          "utf16": 100000,
+          "codePoints": 100000,
+          "rejected": false
+        },
+        {
+          "utf16": 100001,
+          "codePoints": 100001,
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "name": "HTML-only input is deferred to parsing and document gate",
+      "passed": true,
+      "detail": {
+        "utf16": 0,
+        "codePoints": 0,
+        "rejected": false
+      }
+    },
+    {
+      "name": "absent clipboardData does not throw or show a warning",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "rebinding and unregister remove old listeners",
+      "passed": true,
+      "detail": {
+        "old": 0,
+        "next": 0
+      }
+    }
+  ],
+  "failures": []
+}

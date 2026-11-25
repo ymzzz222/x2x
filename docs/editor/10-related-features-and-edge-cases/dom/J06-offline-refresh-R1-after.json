@@ -1,0 +1,31 @@
+{
+  "caseId": "J06-offline-reconnect-R1-offline-refresh",
+  "url": "chrome-error://chromewebdata/",
+  "title": "research-fixture.example",
+  "ready": "complete",
+  "online": false,
+  "roots": 0,
+  "error": "<div class=\"error-code\"><!--?lit$501924737$-->ERR_INTERNET_DISCONNECTED</div>",
+  "timeOrigin": 1793003636268,
+  "navigation": [
+    {
+      "type": "back_forward",
+      "duration": 48
+    }
+  ],
+  "before": {
+    "timeOrigin": 1793002875641.4,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "online": false,
+    "at": "2026-10-26T08:31:12.468Z"
+  },
+  "incident": "After explicit approval, final native warning guard found navigation already advanced. Confirmation actor not independently attributable; no duplicate refresh confirmation sent.",
+  "_snapshotDictionary": {},
+  "_snapshotEncoding": {
+    "scheme": "body-title-snapshotRef-v1",
+    "normalizedCanonicalSha256": "49a6967153a20fe73c037dabd2eecb6a20054e208932329e4afacbefe8c0355b",
+    "rawCanonicalSha256": "49a6967153a20fe73c037dabd2eecb6a20054e208932329e4afacbefe8c0355b",
+    "roundtripVerified": true
+  },
+  "_normalization": "DOM class/id/data identifiers feishu -> maiya; URL and text unchanged"
+}

@@ -1,0 +1,144 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 19,
+  "scope": "Same-account separate-browser local L versus remote R insertions and history isolation; sequential synchronized edits, not simultaneous conflict",
+  "limits": [
+    "No remote deletion/conversion conflict or permissions tested",
+    "No cross-account author/permission inference",
+    "Quark only authorized necessary remote changes and independent reads"
+  ],
+  "files": [
+    {
+      "file": "dom/J05-local-remote-history-R1-Chrome.json",
+      "sha256": "443217689fbec38849e752f1490ab3fdfa1765d4040e9d2219164852a4442f20"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R1-Quark.json",
+      "sha256": "276fe693650fbe686117548e7a6b5b4f83dc4121d0cf5d483156ef83aa15b29c"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R2-Chrome.json",
+      "sha256": "43fc26ee92e8b025148ba698aa63f10e50e7ace9a8eac260221702752271ab3c"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R2-Quark.json",
+      "sha256": "b53bacf9dccd7a12ba0c8ffcf03a42a21f4ba367060161feacc1361065436e7a"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J05-local-remote-history-R1-Chrome canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Chrome exact local remote trajectory",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Chrome original block IDs objects title protected",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Chrome exact own trusted paste",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Chrome exact own trusted history keys",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Chrome no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark exact local remote trajectory",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark original block IDs objects title protected",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark exact own trusted paste",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark exact own trusted history keys",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 both sessions same record identities",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome exact local remote trajectory",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome original block IDs objects title protected",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome exact own trusted paste",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome exact own trusted history keys",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark exact local remote trajectory",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark original block IDs objects title protected",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark exact own trusted paste",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark exact own trusted history keys",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 both sessions same record identities",
+      "passed": true
+    },
+    {
+      "name": "Chrome paired full semantic paths",
+      "passed": true
+    },
+    {
+      "name": "Quark paired full semantic paths",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

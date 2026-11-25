@@ -1,0 +1,140 @@
+{
+  "readback": {
+    "caseId": "S08-final-empty-Chrome",
+    "browser": "Chrome",
+    "time": "2026-10-21T04:30:50.630Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "timeOrigin": 1792557043637.1,
+    "navigation": [
+      {
+        "type": "reload",
+        "start": 0,
+        "duration": 4571.299999952316
+      }
+    ],
+    "beforeNavigation": {
+      "timeOrigin": 1792556561027.8,
+      "hash": "b2c824e3a243f733fc30b557ccca815b11b61f54591394ed0581204a18b42595"
+    },
+    "viewport": {
+      "width": 1398,
+      "height": 963,
+      "dpr": 1
+    },
+    "observerPresent": false,
+    "semantic": {
+      "title": "",
+      "rows": []
+    },
+    "hash": "b2c824e3a243f733fc30b557ccca815b11b61f54591394ed0581204a18b42595",
+    "rows": [],
+    "title": {
+      "snapshotRef": "tree1"
+    },
+    "body": {
+      "snapshotRef": "tree2"
+    }
+  },
+  "runtime": {
+    "remainingMonitors": [],
+    "cleanupReadbacksPresent": false,
+    "visibleTextToolbar": 0
+  },
+  "scope": "Post-reload empty DOM. Readback/export variables are one-time snapshots, not active monitors.",
+  "_snapshotDictionary": {
+    "tree1": {
+      "r": "r1",
+      "tag": "H1",
+      "a": {
+        "class": "page-block-content left flash-block-content page-block-title-empty",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625; line-height: 1.625;"
+      },
+      "c": [
+        {
+          "r": "r2",
+          "tag": "DIV",
+          "a": {
+            "class": "zone-container text-editor",
+            "data-zone-id": "1",
+            "data-zone-container": "*",
+            "data-slate-editor": "true",
+            "contenteditable": "true",
+            "data-placeholder": "请输入标题"
+          },
+          "c": [
+            {
+              "r": "r3",
+              "tag": "DIV",
+              "a": {
+                "class": "ace-line",
+                "data-node": "true",
+                "dir": "auto"
+              },
+              "c": [
+                {
+                  "r": "r4",
+                  "tag": "SPAN",
+                  "a": {
+                    "data-string": "true",
+                    "data-enter": "true",
+                    "data-leaf": "true"
+                  },
+                  "c": [
+                    {
+                      "r": "r5",
+                      "text": "​"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tree2": {
+      "r": "r6",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children",
+        "contenteditable": "false"
+      },
+      "c": [
+        {
+          "r": "r7",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "r8",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": []
+            },
+            {
+              "r": "r9",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "scheme": "body-title-snapshotRef-v1",
+    "normalizedCanonicalSha256": "9cf502d1a923fa18935339b8e9b62920c02fa0ef80a5aa31cbd256b8ba232cd8",
+    "rawCanonicalSha256": "9cf502d1a923fa18935339b8e9b62920c02fa0ef80a5aa31cbd256b8ba232cd8",
+    "roundtripVerified": true
+  },
+  "_normalization": "DOM class/id/data identifiers feishu -> maiya; URL and text unchanged"
+}

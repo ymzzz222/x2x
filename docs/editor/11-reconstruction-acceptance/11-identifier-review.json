@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-27",
+  "scope": "Focused DOM identifier audit of closed S01–S10 JSON; no source mutation",
+  "filesParsed": 2678,
+  "rules": [
+    "Only explicit class/cls/id/data-* fields, mutation old/valueAtDelivery with matching attribute name, and quoted attributes within html/innerHTML/outerHTML fields",
+    "Case-insensitive feishu match in attribute name or value",
+    "URLs and user text are not renamed; private clipboard payload and business protocol are not considered trusted merely from this scan",
+    "Repeated copies of the same attribute/value within one file are counted once; original full JSON pointer retained",
+    "Raw closed source dictionaries are recursively inspected as stored; this does not claim a general parser for every opaque payload or embedded script"
+  ],
+  "candidateCount": 1,
+  "candidates": [
+    {
+      "source": "../09-undo-redo-and-history-boundaries/dom/I05-lock-and-history-entry-inspection.json",
+      "jsonPointer": "/operation/inspection/0/menus/0/html",
+      "attribute": "data-icon",
+      "observedValue": "FeishuclipOutlined",
+      "kind": "quoted HTML attribute",
+      "classification": "naming overlay candidate; preserve original evidence and exclude URL/user text transformations"
+    }
+  ],
+  "replicaMappings": [
+    {
+      "source": "../09-undo-redo-and-history-boundaries/dom/I05-lock-and-history-entry-inspection.json",
+      "jsonPointer": "/operation/inspection/0/menus/0/html",
+      "attribute": "data-icon",
+      "from": "FeishuclipOutlined",
+      "to": "maiyaclipOutlined",
+      "decision": "Apply only to replica DOM identifier; preserve original evidence/payload/URL/user text",
+      "status": "mapping verified, business implementation not changed"
+    }
+  ],
+  "sourceFilesChanged": false,
+  "limits": [
+    "No arbitrary source HTML rewrite",
+    "No claim that every opaque/private payload or dynamic selector is normalized",
+    "Project output and read/write selectors still require DR-S11-001 implementation and runtime validation"
+  ],
+  "sourceManifestSha256": "56d3c330fb6622ed18ff4e2131423a6095271d8de5a0afb093ac91796faed201",
+  "checks": {
+    "allStageJsonParsed": true,
+    "oneKnownCandidatePreserved": true,
+    "oneReplicaMappingBound": true,
+    "sourcePayloadMutationAttempted": false,
+    "businessCodeMutationAttempted": false
+  },
+  "scanExecutionNotes": [
+    "An initial scanner attempt stopped on a non-string mutation name before producing a report",
+    "The corrected scan type-checks field names and completed all 2678 files",
+    "The failed scanner attempt is a tool/audit implementation error, not a product or evidence failure",
+    "No source was modified to make the scanner pass"
+  ],
+  "replicaApplicationConstraints": [
+    "Map the exact DOM role/icon value and its readers together in a later implementation",
+    "Do not globally replace Feishu names in URLs, user text or private clipboard protocols",
+    "This report is a naming overlay; closed source hashes remain authoritative"
+  ]
+}

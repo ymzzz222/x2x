@@ -1,0 +1,225 @@
+{
+  "session": "S01-1791855309196",
+  "normalization": "feishu -> maiya DOM identifiers only",
+  "baseline": {
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "time": "2026-10-13T01:35:09.191Z",
+    "root": {
+      "ref": "n1",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block root-block",
+        "data-slate-editor": "true",
+        "contenteditable": "true",
+        "spellcheck": "false",
+        "data-content-editable-root": "true"
+      }
+    },
+    "connected": true,
+    "zones": [
+      {
+        "node": {
+          "ref": "n2",
+          "tag": "DIV",
+          "attrs": {
+            "class": "zone-container text-editor",
+            "data-zone-id": "1",
+            "data-zone-container": "*",
+            "data-slate-editor": "true",
+            "contenteditable": "true",
+            "data-placeholder": "请输入标题"
+          },
+          "children": [
+            {
+              "ref": "n3",
+              "tag": "DIV",
+              "attrs": {
+                "class": "ace-line",
+                "data-node": "true"
+              },
+              "children": [
+                {
+                  "ref": "n4",
+                  "tag": "SPAN",
+                  "attrs": {
+                    "data-string": "true",
+                    "data-enter": "true",
+                    "data-leaf": "true"
+                  },
+                  "children": [
+                    {
+                      "ref": "n5",
+                      "text": "​"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "parents": [
+          {
+            "ref": "n6",
+            "tag": "H1",
+            "attrs": {
+              "class": "page-block-content left flash-block-content page-block-title-empty"
+            }
+          },
+          {
+            "ref": "n7",
+            "tag": "DIV",
+            "attrs": {
+              "class": "page-block-header page-block-header__custom_icon"
+            }
+          }
+        ],
+        "rect": {
+          "x": 193.5,
+          "y": 112,
+          "width": 820,
+          "height": 55.25,
+          "top": 112,
+          "right": 1013.5,
+          "bottom": 167.25,
+          "left": 193.5
+        },
+        "style": {
+          "fontSize": "34px",
+          "fontWeight": "500",
+          "lineHeight": "55.25px",
+          "whiteSpace": "break-spaces",
+          "color": "rgb(31, 35, 41)"
+        }
+      },
+      {
+        "node": {
+          "ref": "n8",
+          "tag": "DIV",
+          "attrs": {
+            "class": "zone-container text-editor text-editor-focused",
+            "data-zone-id": "2",
+            "data-zone-container": "*",
+            "data-slate-editor": "true",
+            "contenteditable": "true"
+          },
+          "children": [
+            {
+              "ref": "n9",
+              "tag": "DIV",
+              "attrs": {
+                "class": "ace-line",
+                "data-node": "true"
+              },
+              "children": [
+                {
+                  "ref": "n10",
+                  "tag": "SPAN",
+                  "attrs": {
+                    "data-string": "true",
+                    "data-enter": "true",
+                    "data-leaf": "true"
+                  },
+                  "children": [
+                    {
+                      "ref": "n11",
+                      "text": "​"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "parents": [
+          {
+            "ref": "n12",
+            "tag": "DIV",
+            "attrs": {
+              "class": "text-block"
+            }
+          },
+          {
+            "ref": "n13",
+            "tag": "DIV",
+            "attrs": {
+              "class": "text-block-wrapper"
+            }
+          }
+        ],
+        "rect": {
+          "x": 181.5,
+          "y": 235.25,
+          "width": 832,
+          "height": 26,
+          "top": 235.25,
+          "right": 1013.5,
+          "bottom": 261.25,
+          "left": 181.5
+        },
+        "style": {
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "26px",
+          "whiteSpace": "break-spaces",
+          "color": "rgb(31, 35, 41)"
+        }
+      }
+    ],
+    "focus": {
+      "ref": "n1",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block root-block",
+        "data-slate-editor": "true",
+        "contenteditable": "true",
+        "spellcheck": "false",
+        "data-content-editable-root": "true"
+      }
+    },
+    "selection": {
+      "anchor": "n11",
+      "anchorOffset": 1,
+      "focus": "n11",
+      "focusOffset": 1,
+      "collapsed": true,
+      "type": "Caret"
+    },
+    "saveLabels": [
+      "最近修改: 13 分钟前分享编辑",
+      "最近修改: 昨天 18:19"
+    ],
+    "viewport": [
+      1207,
+      963,
+      1
+    ],
+    "outer": [
+      1674,
+      1050
+    ],
+    "popup": [
+      {
+        "node": {
+          "ref": "n14",
+          "tag": "DIV",
+          "attrs": {
+            "class": "docx-popup-container"
+          }
+        },
+        "text": "",
+        "rect": {
+          "x": 0,
+          "y": 64,
+          "width": 1207,
+          "height": 0,
+          "top": 64,
+          "right": 1207,
+          "bottom": 64,
+          "left": 0
+        }
+      }
+    ]
+  },
+  "runs": [],
+  "overflow": 0
+}

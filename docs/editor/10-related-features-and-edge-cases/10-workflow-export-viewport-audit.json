@@ -1,0 +1,393 @@
+{
+  "date": "2026-10-27",
+  "newEffectivePairs": 4,
+  "totalS10EffectivePairs": 25,
+  "pairs": [
+    "representative mixed target workflow, history, save/reload and continuation",
+    "mixed Word export with repeated renderer discrepancy",
+    "mixed PDF export",
+    "400x876 Desktop-UA responsive panel reachability, overflow and close"
+  ],
+  "scope": "Observed representative cases; repeated anomalous outcomes are recorded, not accepted as project behavior",
+  "excluded": [
+    "R1 incidental H3 conversion and its recovery are retained outside common intended workflow phases",
+    "Mobile UA narrow probe not paired with Desktop UA",
+    "Native DevTools splitter drags did not resize viewport",
+    "Word renderer discrepancy is not a Microsoft Word runtime result"
+  ],
+  "limits": [
+    "No complete J24 Unicode/emoji/AI/module/permission chain",
+    "No Word/PDF import roundtrip",
+    "No native OS narrow-window resize result",
+    "J01-J24 global acceptance remains pending"
+  ],
+  "files": [
+    {
+      "file": "dom/J24-workflow-R1-before-reload.json",
+      "sha256": "5e88d2b89de856806ca2935823cb99b5508297ce4d6bb9543aedbf2847e39ca0"
+    },
+    {
+      "file": "dom/J24-R1-after-reload-continue.json",
+      "sha256": "858c5c34fa5a7dcd7f0f98b7a7bad01f3e9f5e59fadbcd41adea59bbe0aca721"
+    },
+    {
+      "file": "dom/J24-R1-reload.json",
+      "sha256": "8c29c6b13699402e6b4a8dcdb463fbf8fde933c86d3a9981c1e5a6716db44548"
+    },
+    {
+      "file": "dom/J08-desktop-400-panel-R1.json",
+      "sha256": "c395da4a03978fa119ac176e12acd08312d6d5fada63884c1f0ef3a81c32780a"
+    },
+    {
+      "file": "dom/J09-mixed-word-R1-settings.json",
+      "sha256": "ec020a4e8914243b158ab0726769d7621015736bfddbb59d68ce5991fa938cdd"
+    },
+    {
+      "file": "dom/J09-mixed-word-R1-download.json",
+      "sha256": "7c94399951e0d805b8f853ce73be91863eae3689e352a01f28d23521e55e5418"
+    },
+    {
+      "file": "dom/J09-mixed-pdf-R1-settings.json",
+      "sha256": "42603ebe6563e6b57b8fb20057021fe2a0e4f5003d00c52aa40355b1fa8d51a5"
+    },
+    {
+      "file": "dom/J09-mixed-pdf-R1-download.json",
+      "sha256": "ebe8ccdf7d265c8c96bee9c80545d79d127a356819761316d6be25724d50a6f5"
+    },
+    {
+      "file": "dom/J24-workflow-R2-before-reload.json",
+      "sha256": "cee2311727ce4f5ff9d2f8d3faeda880c3fff8f14d74827900b5d98a10707609"
+    },
+    {
+      "file": "dom/J24-R2-after-reload-continue.json",
+      "sha256": "857388cc124db55d5be3400e24e9fc79f5a7a1e52629967c0d8481e0d4e3f650"
+    },
+    {
+      "file": "dom/J24-R2-reload.json",
+      "sha256": "cb0337da9a2644b10bb59d10f061d0122666fcd98e7b218b738e373a12a9a43c"
+    },
+    {
+      "file": "dom/J08-desktop-400-panel-R2.json",
+      "sha256": "fcaefcf904054f61c04e89358f0d1d4aa77a2081993088d8e6f5efdac004d6e2"
+    },
+    {
+      "file": "dom/J09-mixed-word-R2-settings.json",
+      "sha256": "3b4d67177771d7b32d6081e92e43929af2c31d2c912ff88f784e594ec5dcff97"
+    },
+    {
+      "file": "dom/J09-mixed-word-R2-download.json",
+      "sha256": "e6536101e95c5938769db06bbf2dc025e7fe9070d44ede3db58fac28da6c7c80"
+    },
+    {
+      "file": "dom/J09-mixed-pdf-R2-settings.json",
+      "sha256": "25602deb7d475b028f3ccf61dc094d0871a2076ca01eab3a3642226a3a15e2dd"
+    },
+    {
+      "file": "dom/J09-mixed-pdf-R2-download.json",
+      "sha256": "2320a899a67036d6a6d4575fb44cf6ba57b1f1d8831bc09b190748337074ffc1"
+    },
+    {
+      "file": "dom/J08-desktop-viewport-restored.json",
+      "sha256": "0aefcf18e9662c049f18588e4b41f8f2fc4d5673ca369aa7262faf4e34522b93"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J24-workflow-R1-before-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 common intended phases each once",
+      "passed": true
+    },
+    {
+      "name": "R1 connected empty title no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 starts from loaded zero body blocks",
+      "passed": true
+    },
+    {
+      "name": "R1 creation undo leaves two empty text blocks",
+      "passed": true
+    },
+    {
+      "name": "R1 creation redo exact semantic",
+      "passed": true
+    },
+    {
+      "name": "R1 target fixture structures and nesting",
+      "passed": true
+    },
+    {
+      "name": "R1 H9 conversion undo redo",
+      "passed": true
+    },
+    {
+      "name": "R1 all seven replacements precise",
+      "passed": true
+    },
+    {
+      "name": "R1 replace undo redo restore exact",
+      "passed": true
+    },
+    {
+      "name": "R1 logical record ids stable after creation redo",
+      "passed": true
+    },
+    {
+      "name": "R1 case-insensitive seven matches and actual input",
+      "passed": true
+    },
+    {
+      "name": "R1 real trusted HTML paste fixture",
+      "passed": true
+    },
+    {
+      "name": "J24-R1-after-reload-continue canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 continuation no errors overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 continuation exact phases",
+      "passed": true
+    },
+    {
+      "name": "R1 continuation only H9 appended E",
+      "passed": true
+    },
+    {
+      "name": "R1 continuation Undo Redo Undo exact",
+      "passed": true
+    },
+    {
+      "name": "J24-R1-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 actual reload with observer absent",
+      "passed": true
+    },
+    {
+      "name": "J08-desktop-400-panel-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 narrow connected unchanged body and title",
+      "passed": true
+    },
+    {
+      "name": "R1 narrow exact open close phases",
+      "passed": true
+    },
+    {
+      "name": "R1 fixed 400x876 desktop UA no touch",
+      "passed": true
+    },
+    {
+      "name": "R1 narrow exact left overflow",
+      "passed": true
+    },
+    {
+      "name": "J09-mixed-word-R1-settings canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1word only body actual radio selection",
+      "passed": true
+    },
+    {
+      "name": "R1word same source semantic state",
+      "passed": true
+    },
+    {
+      "name": "R1word actual new completed artifact hash",
+      "passed": true
+    },
+    {
+      "name": "J09-mixed-pdf-R1-settings canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1pdf only body actual radio selection",
+      "passed": true
+    },
+    {
+      "name": "R1pdf same source semantic state",
+      "passed": true
+    },
+    {
+      "name": "R1pdf actual new completed artifact hash",
+      "passed": true
+    },
+    {
+      "name": "J24-workflow-R2-before-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 common intended phases each once",
+      "passed": true
+    },
+    {
+      "name": "R2 connected empty title no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 starts from loaded zero body blocks",
+      "passed": true
+    },
+    {
+      "name": "R2 creation undo leaves two empty text blocks",
+      "passed": true
+    },
+    {
+      "name": "R2 creation redo exact semantic",
+      "passed": true
+    },
+    {
+      "name": "R2 target fixture structures and nesting",
+      "passed": true
+    },
+    {
+      "name": "R2 H9 conversion undo redo",
+      "passed": true
+    },
+    {
+      "name": "R2 all seven replacements precise",
+      "passed": true
+    },
+    {
+      "name": "R2 replace undo redo restore exact",
+      "passed": true
+    },
+    {
+      "name": "R2 logical record ids stable after creation redo",
+      "passed": true
+    },
+    {
+      "name": "R2 case-insensitive seven matches and actual input",
+      "passed": true
+    },
+    {
+      "name": "R2 real trusted HTML paste fixture",
+      "passed": true
+    },
+    {
+      "name": "J24-R2-after-reload-continue canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 continuation no errors overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 continuation exact phases",
+      "passed": true
+    },
+    {
+      "name": "R2 continuation only H9 appended E",
+      "passed": true
+    },
+    {
+      "name": "R2 continuation Undo Redo Undo exact",
+      "passed": true
+    },
+    {
+      "name": "J24-R2-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 actual reload with observer absent",
+      "passed": true
+    },
+    {
+      "name": "J08-desktop-400-panel-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 narrow connected unchanged body and title",
+      "passed": true
+    },
+    {
+      "name": "R2 narrow exact open close phases",
+      "passed": true
+    },
+    {
+      "name": "R2 fixed 400x876 desktop UA no touch",
+      "passed": true
+    },
+    {
+      "name": "R2 narrow exact left overflow",
+      "passed": true
+    },
+    {
+      "name": "J09-mixed-word-R2-settings canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2word only body actual radio selection",
+      "passed": true
+    },
+    {
+      "name": "R2word same source semantic state",
+      "passed": true
+    },
+    {
+      "name": "R2word actual new completed artifact hash",
+      "passed": true
+    },
+    {
+      "name": "J09-mixed-pdf-R2-settings canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2pdf only body actual radio selection",
+      "passed": true
+    },
+    {
+      "name": "R2pdf same source semantic state",
+      "passed": true
+    },
+    {
+      "name": "R2pdf actual new completed artifact hash",
+      "passed": true
+    },
+    {
+      "name": "intended representative workflow paired semantic path",
+      "passed": true
+    },
+    {
+      "name": "paired after-reload continuation semantic path",
+      "passed": true
+    },
+    {
+      "name": "distinct reload origins same semantic hash",
+      "passed": true
+    },
+    {
+      "name": "narrow distinct sessions same panel geometry",
+      "passed": true
+    },
+    {
+      "name": "J08-desktop-viewport-restored canonical hash",
+      "passed": true
+    },
+    {
+      "name": "original viewport desktop UA restored",
+      "passed": true
+    },
+    {
+      "name": "paired exported Word semantics and PDF semantics",
+      "passed": true
+    },
+    {
+      "name": "both export rounds visually inspected",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

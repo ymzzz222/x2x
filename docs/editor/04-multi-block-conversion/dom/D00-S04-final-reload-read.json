@@ -1,0 +1,57 @@
+{
+  "session": "S04-final-1792126588022",
+  "sourceUrl": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "normalization": "feishu -> maiya DOM identifiers only; source URL and user text unchanged",
+  "overflow": 0,
+  "reconstruction": "Expand each sole $obj reference recursively through objects. No events or snapshots omitted.",
+  "sha256": "ab3166506297be1ce47163cbd2dc45ed6635fd8d5f9a0f6b54826ec402b9abb9",
+  "run": {"$obj": "o4"},
+  "objects": {
+    "o1": {
+  "r": "final-block-0",
+  "tag": "DIV",
+  "c": "block docx-page-block isEmpty",
+  "bid": "1",
+  "type": "page",
+  "rid": "HWqedGGcOo7LXSxpY0ncFEnAned"
+},
+    "o2": {
+  "r": "final-zone-0",
+  "b": {
+    "$obj": "o1"
+  },
+  "text": "​",
+  "html": "<div class=\"ace-line\" data-node=\"true\" dir=\"auto\"><span data-string=\"true\" data-enter=\"true\" data-leaf=\"true\">​</span></div>",
+  "style": [
+    "34px",
+    "500",
+    "55.25px",
+    "start"
+  ],
+  "rect": [
+    193.5,
+    112,
+    820,
+    55.25
+  ]
+},
+    "o3": {
+  "date": "2026-10-16T04:56:28.018Z",
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "ready": true,
+  "observerPresent": false,
+  "connected": true,
+  "viewport": [
+    1207,
+    963,
+    1
+  ],
+  "z": [
+    {
+      "$obj": "o2"
+    }
+  ]
+},
+    "o4": {"name":"D00-S04-final-reload-read","date":"2026-10-16T04:56:28.018Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","before":{"$obj":"o3"},"after":{"$obj":"o3"},"observation":"Read-only after true Chrome reload; no observer installed, no load-time mutations claimed","actions":[],"mut":[]}
+  }
+}

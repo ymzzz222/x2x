@@ -1,0 +1,59 @@
+{
+  "session": "S02-1791872350062",
+  "normalization": "feishu -> maiya DOM identifiers only",
+  "overflow": 0,
+  "reconstruction": "Expand $dom recursively through domObjects. Set time then apply RFC 6902 baselinePatch/beforePatch.",
+  "baseline": {"connected":true,"focus":{"$dom":"d19"},"outer":[1674,1050],"popup":[{"node":{"$dom":"d32"},"rect":{"bottom":64,"height":0,"left":0,"right":1207,"top":64,"width":1207,"x":0,"y":64},"text":""}],"root":{"$dom":"d19"},"saveLabels":["最近修改: 3 分钟前分享编辑","已经保存到云端"],"selection":{"anchor":"n11","anchorOffset":1,"collapsed":true,"focus":"n11","focusOffset":1,"type":"Caret"},"time":"2026-10-13T06:19:10.059Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1207,963,1],"zones":[{"node":{"$dom":"d23"},"parents":[{"$dom":"d24"},{"$dom":"d25"}],"rect":{"bottom":167.25,"height":55.25,"left":193.5,"right":1013.5,"top":112,"width":820,"x":193.5,"y":112},"style":{"color":"rgb(31, 35, 41)","fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","whiteSpace":"break-spaces"}},{"node":{"$dom":"d29"},"parents":[{"$dom":"d30"},{"$dom":"d31"}],"rect":{"bottom":261.25,"height":26,"left":181.5,"right":1013.5,"top":235.25,"width":832,"x":181.5,"y":235.25},"style":{"color":"rgb(31, 35, 41)","fontSize":"16px","fontWeight":"400","lineHeight":"26px","whiteSpace":"break-spaces"}}]},
+  "domObjects": {
+    "d1": {"attrs":{"class":"first-line-empty","id":"placeholder-wrapper-cR9UDN6m"},"ref":"n15","tag":"DIV"},
+    "d2": {"attrs":{},"ref":"n16","tag":"DIV"},
+    "d3": {"ref":"n101","text":"​"},
+    "d4": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d3"}],"ref":"n100","tag":"SPAN"},
+    "d5": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d4"}],"ref":"n97","tag":"DIV"},
+    "d6": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"2"},"children":[{"$dom":"d5"}],"ref":"n96","tag":"DIV"},
+    "d7": {"attrs":{"class":"text-block"},"children":[{"$dom":"d6"}],"ref":"n95","tag":"DIV"},
+    "d8": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d7"}],"ref":"n94","tag":"DIV"},
+    "d9": {"attrs":{"class":"block docx-text-block focused isEmpty","data-block-id":"2","data-block-type":"text","data-record-id":"SxVbdbvFZoj6LPxFMrncHDBgndf"},"children":[{"$dom":"d8"}],"ref":"n17","tag":"DIV"},
+    "d10": {"attrs":{"class":"render-unit-wrapper"},"ref":"n18","tag":"DIV"},
+    "d11": {"attrs":{"class":"block docx-page-block isEmpty","data-block-id":"1","data-block-type":"page","data-record-id":"HWqedGGcOo7LXSxpY0ncFEnAned"},"ref":"n19","tag":"DIV"},
+    "d12": {"codePoints":[8203],"enter":true,"ref":"n4","text":"​"},
+    "d13": {"codePoints":[8203],"enter":true,"ref":"n100","text":"​"},
+    "d14": {"attrs":{"class":"bear-web-x-container docx-in-wiki width-transition","style":"overflow-anchor: none;"},"ref":"n20","tag":"DIV"},
+    "d15": {"ref":"n24","text":"输入“/”快速插入内容"},
+    "d16": {"attrs":{"class":"docx-empty-placeholder"},"children":[{"$dom":"d15"}],"ref":"n23","tag":"SPAN"},
+    "d17": {"attrs":{},"children":[{"$dom":"d16"}],"ref":"n22","tag":"SPAN"},
+    "d18": {"attrs":{"class":"first-line-placeholder"},"children":[{"$dom":"d17"}],"ref":"n21","tag":"DIV"},
+    "d19": {"attrs":{"class":"page-block root-block","contenteditable":"true","data-content-editable-root":"true","data-slate-editor":"true","spellcheck":"false","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"},"ref":"n1","tag":"DIV"},
+    "d20": {"ref":"n5","text":"​"},
+    "d21": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d20"}],"ref":"n4","tag":"SPAN"},
+    "d22": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d21"}],"ref":"n3","tag":"DIV"},
+    "d23": {"attrs":{"class":"zone-container text-editor","contenteditable":"true","data-placeholder":"请输入标题","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"1"},"children":[{"$dom":"d22"}],"ref":"n2","tag":"DIV"},
+    "d24": {"attrs":{"class":"page-block-content left flash-block-content page-block-title-empty","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625; line-height: 1.625;"},"ref":"n6","tag":"H1"},
+    "d25": {"attrs":{"class":"page-block-header page-block-header__custom_icon"},"ref":"n7","tag":"DIV"},
+    "d26": {"ref":"n11","text":"​"},
+    "d27": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d26"}],"ref":"n10","tag":"SPAN"},
+    "d28": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d27"}],"ref":"n9","tag":"DIV"},
+    "d29": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"2"},"children":[{"$dom":"d28"}],"ref":"n8","tag":"DIV"},
+    "d30": {"attrs":{"class":"text-block"},"ref":"n12","tag":"DIV"},
+    "d31": {"attrs":{"class":"text-block-wrapper"},"ref":"n13","tag":"DIV"},
+    "d32": {"attrs":{"class":"docx-popup-container"},"ref":"n14","tag":"DIV"}
+  },
+  "runs": [
+    {
+      "label": "B05-empty-context-menu-R1",
+      "before": {"baselinePatch":[{"op":"replace","path":"/zones/1/node/ref","value":"n96"},{"op":"replace","path":"/zones/1/node/children/0/ref","value":"n97"},{"op":"replace","path":"/zones/1/node/children/0/children/0/ref","value":"n100"},{"op":"replace","path":"/zones/1/node/children/0/children/0/children/0/ref","value":"n101"},{"op":"replace","path":"/zones/1/parents/0/ref","value":"n95"},{"op":"replace","path":"/zones/1/parents/1/ref","value":"n94"},{"op":"replace","path":"/selection/anchor","value":"n101"},{"op":"replace","path":"/selection/focus","value":"n101"},{"op":"add","path":"/documentFocused","value":false},{"op":"add","path":"/ranges","value":[{"collapsed":true,"endOffset":1,"startOffset":1,"text":""}]},{"op":"add","path":"/visibleLabels","value":["已经保存到云端"]},{"op":"add","path":"/scroll","value":[0,0]},{"op":"add","path":"/overlay","value":[]},{"op":"add","path":"/networkOnline","value":true},{"op":"add","path":"/statusLabels","value":["已经保存到云端"]},{"op":"add","path":"/rootParents","value":[{"$dom":"d1"},{"$dom":"d2"}]},{"op":"add","path":"/blocks","value":[{"node":{"$dom":"d9"},"parent":{"$dom":"d10"},"parentBlock":"n19","parentBlockNode":{"$dom":"d11"}}]},{"op":"add","path":"/selectionContext","value":{"anchorBlock":"n17","anchorZone":"n96","focusBlock":"n17","focusZone":"n96"}},{"op":"add","path":"/lines","value":[{"lines":[{"leaves":[{"$dom":"d12"}],"line":"n3"}],"zone":"n2"},{"lines":[{"leaves":[{"$dom":"d13"}],"line":"n97"}],"zone":"n96"}]},{"op":"add","path":"/internalScroll","value":[{"clientHeight":899,"node":{"$dom":"d14"},"scrollHeight":963,"scrollLeft":0,"scrollTop":0}]},{"op":"add","path":"/compositionActive","value":false},{"op":"add","path":"/placeholders","value":[{"display":"block","node":{"$dom":"d18"},"parent":{"$dom":"d1"},"rect":{"bottom":261.25,"height":26,"left":195.5,"right":1015.5,"top":235.25,"width":820,"x":195.5,"y":235.25},"visibility":"visible"}]}],"time":"2026-10-13T06:56:17.777Z"},
+      "after": {"beforePatch":[],"time":"2026-10-13T06:58:15.294Z"},
+      "changes": [
+      ],
+      "events": [
+      ],
+      "errors": [],
+      "auditEvents": [
+      ],
+      "console": [],
+      "auditOverflow": 0,
+      "globalKeys": [
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-27",
+  "source": "Explicit user reply in this chat",
+  "questionItemId": "[\"request_user_input_async\",\"call_53a3e9a716d349869aa2f8d2833318d2\",0]",
+  "question": "sir，S11 研究验收包现已可审阅：436 张复核卡、逐卡项目入口、30 项条件裁定、4 项对齐差异、7 项问题和 28 组通过的资料静态检查均已落盘。总清单第 9 节及你先前“暂无标准，保持待收口”的要求，禁止把缺少标准和真实专项证据记成最终规范完成。是否接受“S11 研究包交付完成，最终需求继续待收口、项目发布仍阻断”作为本次结束范围？这不会关闭标题丢后代、批注身份或命令注册问题，也不批准其他差异。",
+  "answer": "接受研究包交付完成，最终需求仍待收口（推荐）",
+  "researchDeliveryAccepted": true,
+  "stageResearchComplete": true,
+  "finalRequirementsFrozen": false,
+  "projectProductionAcceptancePassed": false,
+  "businessCodeChangeAuthorized": false,
+  "acceptedScope": [
+    "S11 research package delivery is complete within the explicitly accepted limits.",
+    "K01–K08 checkmarks record accepted research delivery and disclosed limitations.",
+    "Final requirements remain open; missing standards and project service evidence are not waived.",
+    "No additional product difference or production release is approved."
+  ],
+  "acceptedCounts": {
+    "reviewCards": 436,
+    "requirementCards": 389,
+    "observationCards": 13,
+    "supplementalCards": 34,
+    "perCardProjectMappings": 436,
+    "capabilityGroups": 19,
+    "conditionalDecisions": 30,
+    "alignmentDifferences": 4,
+    "sourceIssuesOrConditionalRisks": 7,
+    "preCloseStaticCheckGroups": 28,
+    "preCloseStaticCheckPasses": 28,
+    "preCloseStaticCheckFailures": 0
+  },
+  "retainedFindings": [
+    "BG01: prior isolated paste chain restored foreign annotation identity; not closed or rerun in S11.",
+    "BG08 / SR05: actual heading-to-text builder lost descendant content in two isolated cases.",
+    "SR06: duplicate shortcut methods overwrite configuration; own addCommands registration absent.",
+    "SR07: same-level heading menu path differs in static comparison; full Editor path not executed.",
+    "DR-S11-001 through DR-S11-004 remain alignment work; no new exception approved."
+  ],
+  "retainedUnverifiedAreas": [
+    "Supported browsers, Word/PDF readers and assistive technology versions.",
+    "Performance, visual tolerance and lifecycle thresholds.",
+    "Real permission changes, AI locks and retained history.",
+    "Save protocol races, cross-session isolation and independent service readback.",
+    "Migration, data/protocol rollback and complete project workflows."
+  ],
+  "executionBoundary": {
+    "businessCodeChanged": false,
+    "newBrowserOrServiceTestsExecuted": false,
+    "fullEditorRuntimeExecuted": false,
+    "actualBuilderIsolatedCases": 3,
+    "actualBuilderIsolatedPassed": 1,
+    "actualBuilderIsolatedFailed": 2,
+    "keyboardConfigurationIsolatedProbeExecuted": true,
+    "staticChecksDoNotGrantFunctionalPass": true
+  },
+  "versionPolicy": "The following hashes capture the package immediately before this closeout status update; later status-only edits intentionally change document hashes. They are historical references, not current-version equality assertions.",
+  "acceptedPreCloseVersions": [
+    {
+      "path": "README.md",
+      "sha256": "2f3ba0c46acb2951b7491e8a8d786c06d66fc33e3e90625974ee2ff6c4e4b8d9",
+      "bytes": 10981
+    },
+    {
+      "path": "11-stage-handoff.md",
+      "sha256": "272683369f3e59e56e47a8ad61f3d07853f4386f89b23cd30ea88e97bd21d801",
+      "bytes": 5857
+    },
+    {
+      "path": "11-acceptance-contracts.md",
+      "sha256": "ee5fbd6b130492dda0a9f962b9a0b7781c13dc9bd29a471857940d186c63cf57",
+      "bytes": 17020
+    },
+    {
+      "path": "11-state-and-service-contracts.md",
+      "sha256": "cac0a185e9424d89c41db24288393656b810f1c37032e1294a357630c4cf7ff0",
+      "bytes": 13199
+    },
+    {
+      "path": "11-conflicts-and-release-gates.md",
+      "sha256": "016a7ad91c94ebd6812c186dc42a79b8fe0cd8102c59b781efddd613927bc45c",
+      "bytes": 16911
+    },
+    {
+      "path": "11-project-contract-comparison.md",
+      "sha256": "16bf3c7eebff8cc923f9ca055c1ef6a59a4967bb8ea7efcc310622e364073a7e",
+      "bytes": 16719
+    },
+    {
+      "path": "11-semantic-review.json",
+      "sha256": "a80a12df6b5ef3ec93ca976cb82590927744b269c86023c745c1beb1e188b943",
+      "bytes": 682440
+    },
+    {
+      "path": "11-project-case-map.json",
+      "sha256": "241163f83ff7891e121462a56dd93289142ce658fcc014ec269268dad0f48e01",
+      "bytes": 359345
+    },
+    {
+      "path": "11-capability-map.json",
+      "sha256": "e71f89990d426a46a165a47bcd456ad7d279c766f9efcb79590e67238a5af2a9",
+      "bytes": 23217
+    },
+    {
+      "path": "11-review-progress-audit.json",
+      "sha256": "23aee9c8a9aaa1dd35d9123603d15ec247f098cba5caee048eced530fbac2955",
+      "bytes": 6926
+    },
+    {
+      "path": "11-heading-text-isolated-probe.json",
+      "sha256": "495bba672aaf5c0dd78f91380a02ad745a05132cd919208336d8ccb083d2d283",
+      "bytes": 5950
+    },
+    {
+      "path": "11-keyboard-contract-probe.json",
+      "sha256": "95db359de72e125584630b815bc5d92f66e639a2cd5add5599c5121df1405f9b",
+      "bytes": 3729
+    },
+    {
+      "path": "11-source-manifest.json.gz",
+      "sha256": "56d3c330fb6622ed18ff4e2131423a6095271d8de5a0afb093ac91796faed201",
+      "bytes": 148742
+    },
+    {
+      "path": "../ym-research-task.md",
+      "sha256": "f237d695a5b08f7f0068737e54fab0e105187bbceba34f71646bfff643ced13a",
+      "bytes": 70955
+    }
+  ],
+  "closeoutDocuments": [
+    "README.md",
+    "11-stage-handoff.md",
+    "11-final-delivery-audit.json",
+    "../ym-research-task.md"
+  ],
+  "scopeConstraints": [
+    "Final requirements remain 待收口 under total checklist section 9.",
+    "Project release remains blocked by BG01–BG08 as applicable.",
+    "Source findings are not silently repaired by this delivery acceptance.",
+    "Earlier S01–S10 source bytes remain unchanged."
+  ]
+}

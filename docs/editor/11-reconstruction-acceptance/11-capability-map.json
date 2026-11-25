@@ -1,0 +1,451 @@
+{
+  "date": "2026-10-27",
+  "scope": "All rows from master project capability table; mapping only, not runtime verification",
+  "entries": [
+    {
+      "entry": "斜杠",
+      "boundary": "块首转换与块尾输入字符分开；消费前缀、取消、历史分别验收",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "加号",
+      "boundary": "空块创建与非空下方添加分别验收，不能把T菜单当独立加号",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "块菜单",
+      "boundary": "悬停目标与正文光标不同块时，按真实目标范围",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "选区气泡",
+      "boundary": "30个异类方向与6个同类默认来源；混合/跨块另用S04",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "页面工具栏",
+      "boundary": "现场为文档操作；没有证据不另造正文类型入口",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "快捷键",
+      "boundary": "可信键码、输入法组合、浏览器/正文/INPUT接收者各自验证",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "输入规则",
+      "boundary": "真实前缀键入与粘贴解析分开；触发字符历史按条件",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    },
+    {
+      "entry": "粘贴",
+      "boundary": "文本/HTML/私有载荷、普通/纯文本入口及目标上下文分开",
+      "source": "../03-single-block-conversion/03-reachability-and-properties.md"
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension": "内容",
+      "source": "../02-creation-and-editing/02-unicode-editing.md",
+      "boundary": "空/空格/文字/格式/链接/中文/表情/组合字符/软行/多段"
+    },
+    {
+      "dimension": "光标",
+      "source": "../02-creation-and-editing/02-navigation-editing.md",
+      "boundary": "首中尾、编号旁与页标题边界分别定位"
+    },
+    {
+      "dimension": "选区",
+      "source": "../04-multi-block-conversion/04-selection-boundaries.md",
+      "boundary": "文字Range与隐藏textarea整块选择、正反向、终点偏移0"
+    },
+    {
+      "dimension": "结构",
+      "source": "../05-nesting-and-combinations/05-verification-matrix.md",
+      "boundary": "真实父子与大纲归属、跨引用、空块/软行"
+    },
+    {
+      "dimension": "属性",
+      "source": "../06-numbering-folding-and-outline/06-verification-matrix.md",
+      "boundary": "编号/折叠/对齐/缩进/起点及批注修订"
+    },
+    {
+      "dimension": "时序",
+      "source": "../09-undo-redo-and-history-boundaries/09-history-contracts.md",
+      "boundary": "快速、采样/重选、输入法、保存中与新分支；无精确合并阈值"
+    },
+    {
+      "dimension": "环境",
+      "source": "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md",
+      "boundary": "真实权限、AI、协议、缓存/上限/迁移继续项目专项"
+    }
+  ],
+  "anomalies": [
+    {
+      "category": "错误",
+      "source": "../10-related-features-and-edge-cases/10-related-features-and-edge-cases.md",
+      "contract": "离线R2的Network Error与采样脚本SyntaxError分开，保留原窗口",
+      "limit": "全错误分类、服务端故障与用户恢复矩阵未完成"
+    },
+    {
+      "category": "警告",
+      "source": "../10-related-features-and-edge-cases/10-related-features-and-edge-cases.md",
+      "contract": "原生离线刷新警告的受控R2与来源不明R1分开",
+      "limit": "自然权限/AI锁拒绝与其他确认窗口未完成"
+    },
+    {
+      "category": "焦点丢失",
+      "source": "../08-deletion-movement-formatting-and-clipboard/08-deletion-movement-formatting-and-clipboard.md",
+      "contract": "清空/结构选择后正文续写与标题保护，沿用已批准项目目标",
+      "limit": "全输入源/失焦/重连组合未完成"
+    },
+    {
+      "category": "重复块",
+      "source": "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md",
+      "contract": "额外空段与重复正文分开，Undo不变量及范围断言保留",
+      "limit": "重复请求、晚响应和迁移重放未验证"
+    },
+    {
+      "category": "残留菜单",
+      "source": "../07-menus-and-shortcuts/07-verification-matrix.md",
+      "contract": "取消和互斥后的菜单/焦点状态回到具体有效窗口",
+      "limit": "全入口与会话生命周期组合未完成"
+    },
+    {
+      "category": "编号漂移",
+      "source": "../06-numbering-folding-and-outline/06-verification-matrix.md",
+      "contract": "标记、起点、续号与后代范围分开；F04异常窗口不抹去",
+      "limit": "任意深度、导入与并发编号全组合未验证"
+    },
+    {
+      "category": "部分成功",
+      "source": "../08-deletion-movement-formatting-and-clipboard/08-selection-deletion.md",
+      "contract": "输入无变化、删除合并和部分作用范围必须比较前后缀",
+      "limit": "所有失败前修改及事务原子性不能由DOM推定"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "CAP01",
+      "name": "文本、H1 至 H9、无序、有序、引用",
+      "projectSourceFromMaster": "`editor/utils/constants.js`、`editor/extensions/blocks.js`",
+      "mapping": "S02/S03",
+      "contracts": [
+        "../02-creation-and-editing/02-verification-matrix.md",
+        "../03-single-block-conversion/03-reachability-and-properties.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/blocks.js","src/views/aiScriptCore/wordEdit/editor/components/common/convertIndex.js","src/views/aiScriptCore/wordEdit/editor/components/common/convertSelectDoc.js","src/views/aiScriptCore/wordEdit/editor/components/common/convertHeading.js","src/views/aiScriptCore/wordEdit/editor/components/common/convertText.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "SR05",
+        "SR07"
+      ]
+    },
+    {
+      "id": "CAP02",
+      "name": "页标题、正文壳、空文档默认块、占位符、块身份",
+      "projectSourceFromMaster": "`editor/extensions/page.js`、`editor/extensions/index.js`",
+      "mapping": "S01/S02/S08/S10",
+      "contracts": [
+        "../01-baseline-and-dom/01-verification-matrix.md",
+        "../08-deletion-movement-formatting-and-clipboard/08-selection-deletion.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/page.js","src/views/aiScriptCore/wordEdit/editor/extensions/index.js","src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "DR-S11-001"
+      ]
+    },
+    {
+      "id": "CAP03",
+      "name": "标题编号、编号与文字区域、层级编号同步",
+      "projectSourceFromMaster": "`editor/extensions/blocks.js`、`editor/utils/extensions.js`",
+      "mapping": "S03/S06",
+      "contracts": [
+        "../03-single-block-conversion/03-reachability-and-properties.md",
+        "../06-numbering-folding-and-outline/06-verification-matrix.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/blocks.js","src/views/aiScriptCore/wordEdit/editor/utils/extensions.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": []
+    },
+    {
+      "id": "CAP04",
+      "name": "标题折叠、展开、目录导航",
+      "projectSourceFromMaster": "`editor/extensions/headingFold.js`、`shell/catalogue/`",
+      "mapping": "S05/S06",
+      "contracts": [
+        "../05-nesting-and-combinations/05-headings-and-ranges.md",
+        "../06-numbering-folding-and-outline/06-verification-matrix.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/headingFold.js","src/views/aiScriptCore/wordEdit/shell/catalogue/composables/useCatalogue.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "DR-S11-002"
+      ]
+    },
+    {
+      "id": "CAP05",
+      "name": "列表嵌套、合并、续编号、重新开始、标记形态",
+      "projectSourceFromMaster": "`editor/extensions/list.js`、`editor/extensions/index.js`",
+      "mapping": "S05/S06",
+      "contracts": [
+        "../05-nesting-and-combinations/05-verification-matrix.md",
+        "../06-numbering-folding-and-outline/06-verification-matrix.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/list.js","src/views/aiScriptCore/wordEdit/editor/components/common/public.js","src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "DR-S11-003",
+        "SR06"
+      ]
+    },
+    {
+      "id": "CAP06",
+      "name": "Enter、软换行、Tab、反缩进、删除、全选、保存快捷键",
+      "projectSourceFromMaster": "`editor/extensions/keyboard.js`、`editor/extensions/keyDelete.js`",
+      "mapping": "S02/S07/S08/S09",
+      "contracts": [
+        "../02-creation-and-editing/02-verification-matrix.md",
+        "../09-undo-redo-and-history-boundaries/09-history-contracts.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js","src/views/aiScriptCore/wordEdit/editor/extensions/keyDelete.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "DR-S11-004",
+        "SR06"
+      ]
+    },
+    {
+      "id": "CAP07",
+      "name": "块手柄、加号、斜杠菜单、块菜单、选区气泡",
+      "projectSourceFromMaster": "`editor/components/Drag/`、`editor/components/Bubble/`",
+      "mapping": "S02/S03/S07/S08",
+      "contracts": [
+        "../03-single-block-conversion/03-reachability-and-properties.md",
+        "../07-menus-and-shortcuts/07-verification-matrix.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/components/Drag/menuActions.js","src/views/aiScriptCore/wordEdit/editor/components/Bubble/useToolbar.js","src/views/aiScriptCore/wordEdit/editor/components/Bubble/nodeType.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": []
+    },
+    {
+      "id": "CAP08",
+      "name": "全选、跨块选区、保留选区高亮、光标恢复",
+      "projectSourceFromMaster": "`editor/utils/selection.js`、`editor/utils/extensions.js`、`editor/components/Bubble/useSelect.js`",
+      "mapping": "S02/S04/S08",
+      "contracts": [
+        "../04-multi-block-conversion/04-selection-boundaries.md",
+        "../08-deletion-movement-formatting-and-clipboard/08-selection-deletion.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/utils/selection.js","src/views/aiScriptCore/wordEdit/editor/components/common/convertContext.js","src/views/aiScriptCore/wordEdit/editor/utils/extensions.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "DR-S11-004"
+      ]
+    },
+    {
+      "id": "CAP09",
+      "name": "加粗、斜体、删除线、下划线、链接、颜色、背景色",
+      "projectSourceFromMaster": "`editor/extensions/index.js`、`editor/components/Bubble/`",
+      "mapping": "S03/S07/S08",
+      "contracts": [
+        "../03-single-block-conversion/03-format-preservation.md",
+        "../08-deletion-movement-formatting-and-clipboard/08-formatting-contracts.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/index.js","src/views/aiScriptCore/wordEdit/editor/components/Bubble/useToolbar.js","src/views/aiScriptCore/wordEdit/editor/utils/constants.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": []
+    },
+    {
+      "id": "CAP10",
+      "name": "左中右对齐、文本与列表缩进",
+      "projectSourceFromMaster": "`editor/extensions/index.js`、`editor/extensions/blocks.js`、`editor/components/Drag/menuActions.js`",
+      "mapping": "S03/S05/S08",
+      "contracts": [
+        "../05-nesting-and-combinations/05-headings-and-ranges.md",
+        "../08-deletion-movement-formatting-and-clipboard/08-formatting-contracts.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/blocks.js","src/views/aiScriptCore/wordEdit/editor/extensions/list.js","src/views/aiScriptCore/wordEdit/editor/extensions/index.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": []
+    },
+    {
+      "id": "CAP11",
+      "name": "复制、剪切、粘贴、外部格式清理",
+      "projectSourceFromMaster": "`editor/components/common/clipboard.js`、`editor/utils/externalCopy.js`、`editor/utils/externalPaste.js`、`editor/extensions/copy.js`、`editor/extensions/pasteResetParagraph.js`",
+      "mapping": "S02/S08",
+      "contracts": [
+        "../02-creation-and-editing/02-unicode-editing.md",
+        "../08-deletion-movement-formatting-and-clipboard/08-clipboard-contracts.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/components/common/clipboard.js","src/views/aiScriptCore/wordEdit/editor/utils/externalPaste.js","src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "BG01",
+        "SR04"
+      ]
+    },
+    {
+      "id": "CAP12",
+      "name": "查找、上一项下一项、替换、全部替换",
+      "projectSourceFromMaster": "`editor/composables/useFindReplace.js`、`editor/utils/extensions.js`",
+      "mapping": "S06/S10",
+      "contracts": [
+        "../06-numbering-folding-and-outline/06-verification-matrix.md",
+        "../10-related-features-and-edge-cases/10-related-features-and-edge-cases.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/composables/useFindReplace.js","src/views/aiScriptCore/wordEdit/editor/utils/extensions.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "SR02"
+      ]
+    },
+    {
+      "id": "CAP13",
+      "name": "自动保存、手动保存、字数与粘贴限制",
+      "projectSourceFromMaster": "`editor/composables/useAutoSave.js`、`editor/composables/useEditorChrome.js`、`editor/utils/config.js`",
+      "mapping": "S08/S10",
+      "contracts": [
+        "../08-deletion-movement-formatting-and-clipboard/08-full-verification-matrix.md",
+        "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/composables/useAutoSave.js","src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js","src/views/aiScriptCore/wordEdit/editor/utils/config.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "SR01"
+      ]
+    },
+    {
+      "id": "CAP14",
+      "name": "协同、连接状态、远程光标、本地撤销隔离",
+      "projectSourceFromMaster": "`editor/composables/useCollaboration.js`、`editor/extensions/collaboration.js`",
+      "mapping": "S06/S09/S10",
+      "contracts": [
+        "../09-undo-redo-and-history-boundaries/09-history-contracts.md",
+        "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/extensions/collaboration.js","src/views/aiScriptCore/wordEdit/editor/composables/useCollaboration.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "BG02",
+        "BG03"
+      ]
+    },
+    {
+      "id": "CAP15",
+      "name": "批注、修订与编辑模式",
+      "projectSourceFromMaster": "`editor/composables/useCommentInteraction.js`、`wordEdit/extensions/annotation/`、`wordEdit/comment/`",
+      "mapping": "S03/S10",
+      "contracts": [
+        "../03-single-block-conversion/03-format-preservation.md",
+        "../10-related-features-and-edge-cases/10-related-features-and-edge-cases.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/extensions/annotation/index.js","src/views/aiScriptCore/wordEdit/extensions/annotation/schema.js","src/views/aiScriptCore/wordEdit/editor/components/Bubble/useToolbar.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "BG01"
+      ]
+    },
+    {
+      "id": "CAP16",
+      "name": "AI 选区交互、预览、采纳替换、生成时只读锁",
+      "projectSourceFromMaster": "`editor/composables/useAiInteraction.js`、`wordEdit/ai/`、`editor/index.vue`",
+      "mapping": "J07/J11专项",
+      "contracts": [
+        "../09-undo-redo-and-history-boundaries/09-remaining-acceptance-map.json",
+        "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/index.vue","src/views/aiScriptCore/wordEdit/editor/composables/useAiInteraction.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "BG02"
+      ]
+    },
+    {
+      "id": "CAP17",
+      "name": "历史版本展示、比较、恢复与会话重建",
+      "projectSourceFromMaster": "`editor/utils/history.js`、`editor/utils/version.js`、`wordEdit/historyVersion/`、`editor/index.vue`",
+      "mapping": "S09/J10专项",
+      "contracts": [
+        "../09-undo-redo-and-history-boundaries/09-history-contracts.md",
+        "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/index.vue","src/views/aiScriptCore/wordEdit/editor/composables/useCollaboration.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "SR03"
+      ]
+    },
+    {
+      "id": "CAP18",
+      "name": "导入导出、正文与嵌入编辑器、模块切换",
+      "projectSourceFromMaster": "`wordEdit/index/`、`wordEdit/modules/`、`editor/index.vue`",
+      "mapping": "J09/J12/J19/J23专项",
+      "contracts": [
+        "../10-related-features-and-edge-cases/10-related-features-and-edge-cases.md",
+        "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/index/composables/usePageChrome.js","src/views/aiScriptCore/wordEdit/utils/exportDocument.js","src/views/aiScriptCore/wordEdit/editor/utils/version.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "BG04",
+        "BG05"
+      ]
+    },
+    {
+      "id": "CAP19",
+      "name": "权限、只读分享、文档切换、窄屏与滚动定位",
+      "projectSourceFromMaster": "`editor/index.vue`、`editor/composables/useEditorChrome.js`、`wordEdit/index/`",
+      "mapping": "S07/J07/J08/J12/J22专项",
+      "contracts": [
+        "../07-menus-and-shortcuts/07-verification-matrix.md",
+        "../10-related-features-and-edge-cases/10-acceptance-and-gaps.md"
+      ],
+      "projectRuntimeStatus": "not tested in S11",
+      "currentSourcePaths": ["src/views/aiScriptCore/wordEdit/editor/index.vue","src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js"],
+      "currentComparisonDocument": "11-project-contract-comparison.md",
+      "sourceMappingMeaning": "Reviewed dependency family; does not prove every field or user interaction equivalent",
+      "relatedIssues": [
+        "BG02",
+        "BG06"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "time": "2026-10-22T12:24:51.602Z",
+  "scope": "S08 reopened verification; only listed assertions, not full stage acceptance",
+  "cases": [
+    {
+      "name": "H03-full-structural-multiblock-drag-R1.json",
+      "passed": true,
+      "assertions": [
+        "two actual structural selections before drag",
+        "original order and both restores",
+        "two blocks moved together and redo",
+        "one SVG press and release with trusted held movements",
+        "exact trusted Undo Redo Undo",
+        "all outer block IDs and DOM references preserved",
+        "content parent and inline styles restored",
+        "title tree unchanged",
+        "mutation evidence with no errors or overflow"
+      ]
+    },
+    {
+      "name": "H03-full-structural-multiblock-drag-R2.json",
+      "passed": true,
+      "assertions": [
+        "two actual structural selections before drag",
+        "original order and both restores",
+        "two blocks moved together and redo",
+        "one SVG press and release with trusted held movements",
+        "exact trusted Undo Redo Undo",
+        "all outer block IDs and DOM references preserved",
+        "content parent and inline styles restored",
+        "title tree unchanged",
+        "mutation evidence with no errors or overflow"
+      ]
+    },
+    {
+      "name": "structural-multiblock-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output in both rounds"
+      ]
+    },
+    {
+      "name": "H03-full-self-drop-R1.json",
+      "passed": true,
+      "assertions": [
+        "single actual structural selection",
+        "unchanged drop and redo sentinel restores source",
+        "first Undo removes known prior sentinel directly",
+        "one SVG gesture with held trusted moves",
+        "exact sentinel Undo Redo",
+        "all block identities unchanged",
+        "title tree unchanged",
+        "no errors or overflow"
+      ]
+    },
+    {
+      "name": "H03-full-self-drop-R2.json",
+      "passed": true,
+      "assertions": [
+        "single actual structural selection",
+        "unchanged drop and redo sentinel restores source",
+        "first Undo removes known prior sentinel directly",
+        "one SVG gesture with held trusted moves",
+        "exact sentinel Undo Redo",
+        "all block identities unchanged",
+        "title tree unchanged",
+        "no errors or overflow"
+      ]
+    },
+    {
+      "name": "H08-full-single-block-escape-R2.json",
+      "passed": true,
+      "assertions": [
+        "one trusted target press-release interval",
+        "one Escape press and release while mouse held",
+        "held movement before Escape",
+        "prelude did not change content tree or style",
+        "original semantic order and both restores",
+        "Escape did not cancel actual move and redo",
+        "exact trusted move Undo Redo Undo",
+        "all original outer block identities and text preserved",
+        "title unchanged and no errors or overflow"
+      ]
+    },
+    {
+      "name": "H08-full-single-block-escape-R4.json",
+      "passed": true,
+      "assertions": [
+        "one trusted target press-release interval",
+        "one Escape press and release while mouse held",
+        "held movement before Escape",
+        "prelude did not change content tree or style",
+        "original semantic order and both restores",
+        "Escape did not cancel actual move and redo",
+        "exact trusted move Undo Redo Undo",
+        "all original outer block identities and text preserved",
+        "title unchanged and no errors or overflow"
+      ]
+    },
+    {
+      "name": "single-Escape-target-gesture-pair",
+      "passed": true,
+      "assertions": [
+        "same target source and output with disclosed R2 class-only prelude"
+      ]
+    },
+    {
+      "name": "H04-full-clear-format-shortcut-R1.json",
+      "passed": true,
+      "assertions": [
+        "three actual source formats",
+        "candidate has no effect and prior formatting redoes",
+        "first Undo removes actual prior format group",
+        "exact trusted candidate shortcut and history",
+        "selected text and protected title",
+        "no errors or overflow"
+      ]
+    },
+    {
+      "name": "H04-full-clear-format-shortcut-R2.json",
+      "passed": true,
+      "assertions": [
+        "three actual source formats",
+        "candidate has no effect and prior formatting redoes",
+        "first Undo removes actual prior format group",
+        "exact trusted candidate shortcut and history",
+        "selected text and protected title",
+        "no errors or overflow"
+      ]
+    },
+    {
+      "name": "H03-full-expanded-parent-move-R1.json",
+      "passed": true,
+      "assertions": [
+        "one actual DragOutlined gesture with full parent-child source and output",
+        "source nesting and both restores",
+        "parent and child move together and redo",
+        "all outer block objects and IDs remain",
+        "content style and parent structure restore",
+        "exact trusted Undo Redo Undo",
+        "protected title and bounded observation without errors"
+      ]
+    },
+    {
+      "name": "H03-full-expanded-parent-move-R2.json",
+      "passed": true,
+      "assertions": [
+        "one actual DragOutlined gesture with full parent-child source and output",
+        "source nesting and both restores",
+        "parent and child move together and redo",
+        "all outer block objects and IDs remain",
+        "content style and parent structure restore",
+        "exact trusted Undo Redo Undo",
+        "protected title and bounded observation without errors"
+      ]
+    },
+    {
+      "name": "expanded-parent-move-pair",
+      "passed": true,
+      "assertions": [
+        "same source and output in both rounds"
+      ]
+    },
+    {
+      "name": "H08-full-folded-parent-escape-R1.json",
+      "passed": true,
+      "assertions": [
+        "one trusted held target gesture and one Escape",
+        "direct target source and output snapshots",
+        "actual move despite Escape and exact history",
+        "parent remains folded in all main samples",
+        "visible block objects and unplanned empty baseline retained",
+        "three trusted history keys after target action",
+        "protected title and no errors or overflow"
+      ]
+    },
+    {
+      "name": "H08-full-folded-parent-escape-R2.json",
+      "passed": true,
+      "assertions": [
+        "one trusted held target gesture and one Escape",
+        "direct target source and output snapshots",
+        "actual move despite Escape and exact history",
+        "parent remains folded in all main samples",
+        "visible block objects and unplanned empty baseline retained",
+        "three trusted history keys after target action",
+        "protected title and no errors or overflow"
+      ]
+    },
+    {
+      "name": "folded-parent-single-Escape-pair",
+      "passed": true,
+      "assertions": [
+        "same direct target source and output despite disclosed R1 prelude"
+      ]
+    },
+    {
+      "name": "folded-parent-hidden-child-readback",
+      "passed": true,
+      "assertions": [
+        "hidden child reappears on real arrow click",
+        "original child identity text and parent restored",
+        "child DOM remounted while parent object retained",
+        "bounded actual readback"
+      ]
+    },
+    {
+      "name": "S08-full-mixed-Chrome-R1.json",
+      "passed": true,
+      "assertions": [
+        "same saved mixed semantic hash five blocks and empty title",
+        "real reload navigation and time origin",
+        "old base observer absent",
+        "Chrome supplement and gesture observers absent"
+      ]
+    },
+    {
+      "name": "S08-full-mixed-Chrome-R2.json",
+      "passed": true,
+      "assertions": [
+        "same saved mixed semantic hash five blocks and empty title",
+        "real reload navigation and time origin",
+        "old base observer absent",
+        "Chrome supplement and gesture observers absent"
+      ]
+    },
+    {
+      "name": "S08-full-mixed-Quark-R1.json",
+      "passed": true,
+      "assertions": [
+        "same saved mixed semantic hash five blocks and empty title",
+        "real reload navigation and time origin",
+        "old base observer absent",
+        "Chrome supplement and gesture observers absent"
+      ]
+    },
+    {
+      "name": "S08-full-mixed-Quark-R2.json",
+      "passed": true,
+      "assertions": [
+        "same saved mixed semantic hash five blocks and empty title",
+        "real reload navigation and time origin",
+        "old base observer absent",
+        "Chrome supplement and gesture observers absent"
+      ]
+    },
+    {
+      "name": "mixed-four-reloads-independent",
+      "passed": true,
+      "assertions": [
+        "four distinct real navigation origins",
+        "all body styles structure text and title semantics agree"
+      ]
+    },
+    {
+      "name": "H03-full-outside-navigation-clean-R1.json",
+      "passed": true,
+      "assertions": [
+        "one actual trusted drag released inside left navigation outside body",
+        "trusted held mouse movement",
+        "drop unchanged and Redo restores complete source",
+        "first Undo directly removes known prior marker",
+        "exact trusted sentinel Undo Redo",
+        "title and outer identities retained through all phases",
+        "no errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H03-full-outside-navigation-clean-R2.json",
+      "passed": true,
+      "assertions": [
+        "one actual trusted drag released inside left navigation outside body",
+        "trusted held mouse movement",
+        "drop unchanged and Redo restores complete source",
+        "first Undo directly removes known prior marker",
+        "exact trusted sentinel Undo Redo",
+        "title and outer identities retained through all phases",
+        "no errors or capture overflow"
+      ]
+    },
+    {
+      "name": "outside-navigation-drop-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic source output in both rounds"
+      ]
+    }
+  ],
+  "failures": []
+}

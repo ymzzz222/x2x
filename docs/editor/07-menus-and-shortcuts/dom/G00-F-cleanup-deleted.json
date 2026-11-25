@@ -1,0 +1,141 @@
+{
+  "label": "cleanup-deleted",
+  "time": "2026-10-20T02:19:29.519Z",
+  "mono": 2474897.8000000715,
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "rootConnected": true,
+  "body": {
+    "snapshotRef": "body-31ce8592a1a6070c5cea384b"
+  },
+  "selection": {
+    "type": "Caret",
+    "a": {
+      "r": "f223",
+      "offset": 1,
+      "text": "​"
+    },
+    "f": {
+      "r": "f223",
+      "offset": 1,
+      "text": "​"
+    },
+    "text": "",
+    "ranges": [
+      {
+        "start": {
+          "r": "f223",
+          "offset": 1,
+          "text": "​"
+        },
+        "end": {
+          "r": "f223",
+          "offset": 1,
+          "text": "​"
+        },
+        "collapsed": true
+      }
+    ]
+  },
+  "focus": {
+    "r": "f41",
+    "tag": "DIV",
+    "a": {
+      "class": "page-block root-block",
+      "contenteditable": "true",
+      "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+    }
+  },
+  "ui": [],
+  "viewport": [
+    1152,
+    907
+  ],
+  "dpr": 1,
+  "seq": 477,
+  "eventCount": 365,
+  "instanceId": "S07-F-1792460469655",
+  "hasFocus": true,
+  "currentRootSame": true,
+  "fields": [
+    {
+      "r": "f3425",
+      "a": {
+        "class": "gpf-biz-bottom-template__input__input",
+        "placeholder": "输入关键词搜索模板"
+      },
+      "value": "",
+      "selectionStart": 0,
+      "selectionEnd": 0
+    },
+    {
+      "r": "f40",
+      "a": {
+        "class": "docx-selection-hidden-textarea",
+        "readonly": "",
+        "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+        "data-current-root-block-id": "1"
+      },
+      "value": " ",
+      "selectionStart": 0,
+      "selectionEnd": 1
+    }
+  ],
+  "focusStyle": {
+    "outline": "rgba(0, 0, 0, 0) solid 0px",
+    "boxShadow": "none"
+  },
+  "menuFocus": [],
+  "frameFocus": [
+    {
+      "frame": "f425",
+      "connected": true,
+      "activeTag": "BODY",
+      "activeAttrs": {}
+    }
+  ],
+  "_snapshotDictionary": {
+    "body-31ce8592a1a6070c5cea384b": {
+      "r": "f1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children",
+        "contenteditable": "false"
+      },
+      "c": [
+        {
+          "r": "f2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "f3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": []
+            },
+            {
+              "r": "f38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "version": 1,
+    "description": "Only repeated full body trees replaced with same-file snapshotRef; refs, order, attributes and text preserved.",
+    "originalCanonicalSha256": "67f6488feca1bbfb46c86549bf1d084afafb0e1565214d82e88cab507a8fbd76",
+    "losslessRoundTripChecked": true
+  }
+}

@@ -1,0 +1,2337 @@
+{
+  "case": "F00-final-Quark-cleared",
+  "source": "Quark native UI and read-only DevTools observer",
+  "normalization": "DOM identifiers feishu -> maiya; source URLs and user text unchanged",
+  "eventWindow": "keys and external events since previous export",
+  "action": "Independent remote read after Chrome final cleanup; no edits",
+  "session": "S06-q2_-1792395840173",
+  "state": {
+    "label": "F00-final-Quark-cleared",
+    "time": "2026-10-19T08:32:04.275Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "ref": "q2_3",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block-children",
+        "contenteditable": "false"
+      },
+      "children": [
+        {
+          "ref": "q2_13",
+          "tag": "DIV",
+          "attrs": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "children": [
+            {
+              "ref": "q2_14",
+              "tag": "DIV",
+              "attrs": {
+                "class": "render-unit-wrapper"
+              },
+              "children": []
+            },
+            {
+              "ref": "q2_57",
+              "tag": "DIV",
+              "attrs": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "selection": {
+      "anchor": {
+        "ref": "q2_1",
+        "offset": 32,
+        "tag": "BODY"
+      },
+      "focus": {
+        "ref": "q2_1",
+        "offset": 32,
+        "tag": "BODY"
+      },
+      "type": "Range",
+      "text": " ",
+      "ranges": [
+        {
+          "start": {
+            "ref": "q2_1",
+            "offset": 32,
+            "tag": "BODY"
+          },
+          "end": {
+            "ref": "q2_1",
+            "offset": 32,
+            "tag": "BODY"
+          }
+        }
+      ],
+      "direction": "none"
+    },
+    "currentSelection": {
+      "anchor": {
+        "ref": "q2_1",
+        "offset": 32,
+        "tag": "BODY"
+      },
+      "focus": {
+        "ref": "q2_1",
+        "offset": 32,
+        "tag": "BODY"
+      },
+      "type": "Range",
+      "text": " ",
+      "ranges": [
+        {
+          "start": {
+            "ref": "q2_1",
+            "offset": 32,
+            "tag": "BODY"
+          },
+          "end": {
+            "ref": "q2_1",
+            "offset": 32,
+            "tag": "BODY"
+          }
+        }
+      ],
+      "direction": "none"
+    },
+    "seq": 776,
+    "active": {
+      "tag": "TEXTAREA",
+      "cls": "docx-selection-hidden-textarea"
+    },
+    "inputFocus": {
+      "ref": "q2_58",
+      "tag": "TEXTAREA",
+      "cls": "docx-selection-hidden-textarea",
+      "value": " ",
+      "start": 0,
+      "end": 1
+    },
+    "related": {
+      "outline": null,
+      "blocks": [],
+      "anchors": [],
+      "scroll": [
+        {
+          "ref": "q2_76",
+          "class": "bear-web-x-container docx-in-wiki width-transition",
+          "top": 0,
+          "height": 867
+        }
+      ]
+    },
+    "find": {
+      "dom": null,
+      "inputs": []
+    }
+  },
+  "records": [
+    {
+      "seq": 733,
+      "type": "attributes",
+      "target": "q2_35",
+      "attribute": "class",
+      "old": "fold-wrapper fold-show can-fold fold-block-id-3 fold-show fold-handler-wrapper",
+      "value": "fold-wrapper can-fold fold-block-id-3 fold-handler-wrapper",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 734,
+      "type": "attributes",
+      "target": "q2_34",
+      "attribute": "class",
+      "old": "fold-wrapper fold-show can-fold fold-block-id-3",
+      "value": "fold-wrapper can-fold fold-block-id-3",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 735,
+      "type": "attributes",
+      "target": "q2_35",
+      "attribute": "class",
+      "old": "fold-wrapper can-fold fold-block-id-3 fold-handler-wrapper",
+      "value": "fold-wrapper fold-show can-fold fold-block-id-3 fold-show fold-handler-wrapper",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 736,
+      "type": "attributes",
+      "target": "q2_34",
+      "attribute": "class",
+      "old": "fold-wrapper can-fold fold-block-id-3",
+      "value": "fold-wrapper fold-show can-fold fold-block-id-3",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 737,
+      "type": "attributes",
+      "target": "q2_35",
+      "attribute": "class",
+      "old": "fold-wrapper fold-show can-fold fold-block-id-3 fold-show fold-handler-wrapper",
+      "value": "fold-wrapper can-fold fold-block-id-3 fold-handler-wrapper",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 738,
+      "type": "attributes",
+      "target": "q2_34",
+      "attribute": "class",
+      "old": "fold-wrapper fold-show can-fold fold-block-id-3",
+      "value": "fold-wrapper can-fold fold-block-id-3",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 739,
+      "type": "childList",
+      "target": "q2_4",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [
+        {
+          "ref": "q2_309",
+          "tag": "SPAN",
+          "attrs": {
+            "class": "sync-cursor-view-wrap",
+            "contenteditable": "false"
+          },
+          "children": [
+            {
+              "ref": "q2_310",
+              "tag": "DIV",
+              "attrs": {
+                "style": "position: absolute; inset: 0px; opacity: 1;"
+              },
+              "children": [
+                {
+                  "ref": "q2_311",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "sync-selection-container is-text-selection"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_312",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "sc-bGaWHc fHoPRO"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_313",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sc-gXRoDt iAvKeU",
+                            "style": "background-color: rgba(50, 166, 69, 0.2); left: 26px; top: 0px; height: 26px; width: 31.4062px;"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "q2_314",
+              "tag": "DIV",
+              "attrs": {
+                "style": "position: absolute; inset: 0px; opacity: 1;"
+              },
+              "children": [
+                {
+                  "ref": "q2_315",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "sync-cursor-container is-text-selection"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_316",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "sync-cursor-wrap",
+                        "contenteditable": "false",
+                        "style": "opacity: 1; top: 0px; left: 57px;"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_317",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-caret",
+                            "style": "height: 52px; background-color: rgb(50, 166, 69);"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "q2_318",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-dot",
+                            "style": "background-color: rgb(50, 166, 69);"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "q2_319",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-name",
+                            "style": "background-color: rgb(50, 166, 69);"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_320",
+                              "text": "合岳(重庆)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": [],
+      "previous": "q2_15",
+      "next": null
+    },
+    {
+      "seq": 740,
+      "type": "childList",
+      "target": "q2_312",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [
+        {
+          "ref": "q2_313",
+          "tag": "DIV",
+          "attrs": {
+            "class": "sc-gXRoDt iAvKeU",
+            "style": "background-color: rgba(50, 166, 69, 0.2); left: 26px; top: 0px; height: 26px; width: 31.4062px;"
+          },
+          "children": []
+        }
+      ],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 741,
+      "type": "attributes",
+      "target": "q2_317",
+      "attribute": "style",
+      "old": "height: 0px; background-color: rgb(50, 166, 69);",
+      "value": "height: 52px; background-color: rgb(50, 166, 69);",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 742,
+      "type": "attributes",
+      "target": "q2_316",
+      "attribute": "style",
+      "old": "opacity: 1;",
+      "value": "opacity: 1; top: 0px; left: 57px;",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 743,
+      "type": "attributes",
+      "target": "q2_316",
+      "attribute": "style",
+      "old": "opacity: 1; top: 0px;",
+      "value": "opacity: 1; top: 0px; left: 57px;",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 744,
+      "type": "attributes",
+      "target": "q2_316",
+      "attribute": "class",
+      "old": "sync-cursor-wrap",
+      "value": "sync-cursor-wrap active",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 745,
+      "type": "childList",
+      "target": "q2_4",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_309",
+          "tag": "SPAN",
+          "attrs": {
+            "class": "sync-cursor-view-wrap",
+            "contenteditable": "false"
+          },
+          "children": [
+            {
+              "ref": "q2_310",
+              "tag": "DIV",
+              "attrs": {
+                "style": "position: absolute; inset: 0px; opacity: 1;"
+              },
+              "children": [
+                {
+                  "ref": "q2_311",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "sync-selection-container is-text-selection"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_312",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "sc-bGaWHc fHoPRO"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_313",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sc-gXRoDt iAvKeU",
+                            "style": "background-color: rgba(50, 166, 69, 0.2); left: 26px; top: 0px; height: 26px; width: 31.4062px;"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "q2_314",
+              "tag": "DIV",
+              "attrs": {
+                "style": "position: absolute; inset: 0px; opacity: 1;"
+              },
+              "children": [
+                {
+                  "ref": "q2_315",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "sync-cursor-container is-text-selection"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_316",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "sync-cursor-wrap active",
+                        "contenteditable": "false",
+                        "style": "opacity: 1; top: 0px; left: 57px;"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_317",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-caret",
+                            "style": "height: 52px; background-color: rgb(50, 166, 69);"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "q2_318",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-dot",
+                            "style": "background-color: rgb(50, 166, 69);"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "q2_319",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-name",
+                            "style": "background-color: rgb(50, 166, 69);"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_320",
+                              "text": "合岳(重庆)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": "q2_15",
+      "next": null
+    },
+    {
+      "seq": 746,
+      "type": "childList",
+      "target": "q2_321",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [
+        {
+          "ref": "q2_322",
+          "tag": "SPAN",
+          "attrs": {
+            "class": "sync-cursor-view-wrap",
+            "contenteditable": "false"
+          },
+          "children": [
+            {
+              "ref": "q2_323",
+              "tag": "DIV",
+              "attrs": {
+                "style": "position: absolute; inset: 0px; opacity: 1;"
+              },
+              "children": [
+                {
+                  "ref": "q2_324",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "sync-selection-container is-text-selection"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_325",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "sc-bGaWHc fHoPRO"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_326",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sc-gXRoDt iAvKeU",
+                            "style": "background-color: rgba(50, 166, 69, 0.2); left: 0px; top: 48px; height: 55px; width: 0px;"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "q2_327",
+              "tag": "DIV",
+              "attrs": {
+                "style": "position: absolute; inset: 0px; opacity: 1;"
+              },
+              "children": [
+                {
+                  "ref": "q2_328",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "sync-cursor-container is-text-selection"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_329",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "sync-cursor-wrap",
+                        "contenteditable": "false",
+                        "style": "opacity: 1; top: 48px; left: 0px;"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_330",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-caret",
+                            "style": "height: 110px; background-color: rgb(50, 166, 69);"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "q2_331",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-dot",
+                            "style": "background-color: rgb(50, 166, 69);"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "q2_332",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "sync-cursor-name",
+                            "style": "background-color: rgb(50, 166, 69);"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_333",
+                              "text": "合岳(重庆)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": [],
+      "previous": "q2_334",
+      "next": null
+    },
+    {
+      "seq": 747,
+      "type": "childList",
+      "target": "q2_325",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [
+        {
+          "ref": "q2_326",
+          "tag": "DIV",
+          "attrs": {
+            "class": "sc-gXRoDt iAvKeU",
+            "style": "background-color: rgba(50, 166, 69, 0.2); left: 0px; top: 48px; height: 55px; width: 0px;"
+          },
+          "children": []
+        }
+      ],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 748,
+      "type": "attributes",
+      "target": "q2_330",
+      "attribute": "style",
+      "old": "height: 0px; background-color: rgb(50, 166, 69);",
+      "value": "height: 110px; background-color: rgb(50, 166, 69);",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 749,
+      "type": "attributes",
+      "target": "q2_329",
+      "attribute": "style",
+      "old": "opacity: 1;",
+      "value": "opacity: 1; top: 48px; left: 0px;",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 750,
+      "type": "attributes",
+      "target": "q2_329",
+      "attribute": "style",
+      "old": "opacity: 1; top: 48px;",
+      "value": "opacity: 1; top: 48px; left: 0px;",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 751,
+      "type": "attributes",
+      "target": "q2_329",
+      "attribute": "class",
+      "old": "sync-cursor-wrap",
+      "value": "sync-cursor-wrap active",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 752,
+      "type": "attributes",
+      "target": "q2_3",
+      "attribute": "contenteditable",
+      "old": null,
+      "value": "false",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 753,
+      "type": "childList",
+      "target": "q2_47",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_48",
+          "text": "TAIL"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 754,
+      "type": "childList",
+      "target": "q2_49",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_50",
+          "text": "​"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 755,
+      "type": "childList",
+      "target": "q2_10",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_42",
+          "tag": "DIV",
+          "attrs": {
+            "class": "heading-block"
+          },
+          "children": [
+            {
+              "ref": "q2_43",
+              "tag": "DIV",
+              "attrs": {
+                "class": "heading heading-h1 heading-block-align-"
+              },
+              "children": [
+                {
+                  "ref": "q2_11",
+                  "tag": "BUTTON",
+                  "attrs": {
+                    "contenteditable": "false",
+                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_44",
+                      "text": "2."
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_45",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "heading-content"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_12",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "zone-container text-editor non-empty",
+                        "data-zone-id": "6",
+                        "data-zone-container": "*",
+                        "contenteditable": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_46",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ace-line"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_47",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "author-7622865454574423258"
+                              },
+                              "children": []
+                            },
+                            {
+                              "ref": "q2_49",
+                              "tag": "SPAN",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": "q2_51"
+    },
+    {
+      "seq": 756,
+      "type": "childList",
+      "target": "q2_10",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_51",
+          "tag": "DIV",
+          "attrs": {
+            "class": "fold-wrapper can-fold fold-block-id-6",
+            "contenteditable": "false"
+          },
+          "children": [
+            {
+              "ref": "q2_52",
+              "tag": "DIV",
+              "attrs": {
+                "class": "fold-wrapper can-fold fold-block-id-6 fold-handler-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "q2_53",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "fold-handler"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_54",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "svg-wrapper"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_55",
+                          "tag": "svg",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "ref": "q2_56",
+                              "tag": "path",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 757,
+      "type": "childList",
+      "target": "q2_107",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_108",
+          "text": "DDD"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 758,
+      "type": "childList",
+      "target": "q2_109",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_110",
+          "text": "​"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 759,
+      "type": "childList",
+      "target": "q2_98",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_99",
+          "tag": "DIV",
+          "attrs": {
+            "class": "list-wrapper ordered-list"
+          },
+          "children": [
+            {
+              "ref": "q2_100",
+              "tag": "DIV",
+              "attrs": {
+                "class": "list list-align-"
+              },
+              "children": [
+                {
+                  "ref": "q2_101",
+                  "tag": "BUTTON",
+                  "attrs": {
+                    "contenteditable": "false",
+                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_102",
+                      "text": "2"
+                    },
+                    {
+                      "ref": "q2_103",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_104",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "list-content"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_105",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "zone-container text-editor non-empty",
+                        "data-zone-id": "5",
+                        "data-zone-container": "*",
+                        "contenteditable": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_106",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ace-line"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_107",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "author-7622865454574423258"
+                              },
+                              "children": []
+                            },
+                            {
+                              "ref": "q2_109",
+                              "tag": "SPAN",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 760,
+      "type": "childList",
+      "target": "q2_88",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_89",
+          "text": "CCC"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 761,
+      "type": "childList",
+      "target": "q2_90",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_91",
+          "text": "​"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 762,
+      "type": "childList",
+      "target": "q2_80",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_81",
+          "tag": "DIV",
+          "attrs": {
+            "class": "heading-block"
+          },
+          "children": [
+            {
+              "ref": "q2_82",
+              "tag": "DIV",
+              "attrs": {
+                "class": "heading heading-h9 heading-block-align-"
+              },
+              "children": [
+                {
+                  "ref": "q2_83",
+                  "tag": "BUTTON",
+                  "attrs": {
+                    "contenteditable": "false",
+                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_84",
+                      "text": "1.1"
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_85",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "heading-content"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_86",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "zone-container text-editor non-empty",
+                        "data-zone-id": "4",
+                        "data-zone-container": "*",
+                        "contenteditable": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_87",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ace-line"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_88",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "author-7622865454574423258"
+                              },
+                              "children": []
+                            },
+                            {
+                              "ref": "q2_90",
+                              "tag": "SPAN",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": "q2_92"
+    },
+    {
+      "seq": 763,
+      "type": "childList",
+      "target": "q2_80",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_92",
+          "tag": "DIV",
+          "attrs": {
+            "class": "fold-wrapper can-fold fold-block-id-4",
+            "contenteditable": "false"
+          },
+          "children": [
+            {
+              "ref": "q2_93",
+              "tag": "DIV",
+              "attrs": {
+                "class": "fold-wrapper can-fold fold-block-id-4 fold-handler-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "q2_94",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "fold-handler"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_95",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "svg-wrapper"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_96",
+                          "tag": "svg",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "ref": "q2_97",
+                              "tag": "path",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 764,
+      "type": "childList",
+      "target": "q2_30",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_31",
+          "text": "BBB"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 765,
+      "type": "childList",
+      "target": "q2_32",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_33",
+          "text": "​"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 766,
+      "type": "childList",
+      "target": "q2_7",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_25",
+          "tag": "DIV",
+          "attrs": {
+            "class": "heading-block"
+          },
+          "children": [
+            {
+              "ref": "q2_26",
+              "tag": "DIV",
+              "attrs": {
+                "class": "heading heading-h1 heading-block-align-"
+              },
+              "children": [
+                {
+                  "ref": "q2_8",
+                  "tag": "BUTTON",
+                  "attrs": {
+                    "contenteditable": "false",
+                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_27",
+                      "text": "1."
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_28",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "heading-content"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_9",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "zone-container text-editor non-empty",
+                        "data-zone-id": "3",
+                        "data-zone-container": "*",
+                        "contenteditable": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_29",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ace-line"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_30",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": " author-7622865454574423258"
+                              },
+                              "children": []
+                            },
+                            {
+                              "ref": "q2_32",
+                              "tag": "SPAN",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": "q2_34"
+    },
+    {
+      "seq": 767,
+      "type": "childList",
+      "target": "q2_7",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_34",
+          "tag": "DIV",
+          "attrs": {
+            "class": "fold-wrapper can-fold fold-block-id-3",
+            "contenteditable": "false"
+          },
+          "children": [
+            {
+              "ref": "q2_35",
+              "tag": "DIV",
+              "attrs": {
+                "class": "fold-wrapper can-fold fold-block-id-3 fold-handler-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "q2_36",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "fold-handler"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_37",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "svg-wrapper"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_38",
+                          "tag": "svg",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "ref": "q2_39",
+                              "tag": "path",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 768,
+      "type": "childList",
+      "target": "q2_21",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_22",
+          "text": "AAA"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 769,
+      "type": "childList",
+      "target": "q2_23",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_24",
+          "text": "​"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 770,
+      "type": "childList",
+      "target": "q2_4",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_15",
+          "tag": "DIV",
+          "attrs": {
+            "class": "list-wrapper ordered-list"
+          },
+          "children": [
+            {
+              "ref": "q2_16",
+              "tag": "DIV",
+              "attrs": {
+                "class": "list list-align-"
+              },
+              "children": [
+                {
+                  "ref": "q2_5",
+                  "tag": "BUTTON",
+                  "attrs": {
+                    "contenteditable": "false",
+                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_17",
+                      "text": "1"
+                    },
+                    {
+                      "ref": "q2_18",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_19",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "list-content"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_6",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "zone-container text-editor non-empty",
+                        "data-zone-id": "2",
+                        "data-zone-container": "*",
+                        "contenteditable": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_20",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ace-line"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_21",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": " author-7622865454574423258"
+                              },
+                              "children": []
+                            },
+                            {
+                              "ref": "q2_23",
+                              "tag": "SPAN",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 771,
+      "type": "childList",
+      "target": "q2_14",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_4",
+          "tag": "DIV",
+          "attrs": {
+            "class": "block docx-ordered-block",
+            "data-block-type": "ordered",
+            "data-block-id": "2",
+            "data-record-id": "VbfKdYmBZob7dnxFLO6cVKnenLD"
+          },
+          "children": []
+        }
+      ],
+      "previous": null,
+      "next": "q2_7"
+    },
+    {
+      "seq": 772,
+      "type": "childList",
+      "target": "q2_14",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_7",
+          "tag": "DIV",
+          "attrs": {
+            "class": "block docx-heading1-block",
+            "data-block-type": "heading1",
+            "data-block-id": "3",
+            "data-record-id": "SRHudozDqo4A7PxHczFcmDhRnPe"
+          },
+          "children": []
+        }
+      ],
+      "previous": null,
+      "next": "q2_80"
+    },
+    {
+      "seq": 773,
+      "type": "childList",
+      "target": "q2_14",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_80",
+          "tag": "DIV",
+          "attrs": {
+            "class": "block docx-heading9-block",
+            "data-block-type": "heading9",
+            "data-block-id": "4",
+            "data-record-id": "WFkfdNJCNoUh7oxZy8zcl1wWn5f"
+          },
+          "children": []
+        }
+      ],
+      "previous": null,
+      "next": "q2_98"
+    },
+    {
+      "seq": 774,
+      "type": "childList",
+      "target": "q2_14",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_98",
+          "tag": "DIV",
+          "attrs": {
+            "class": "block docx-ordered-block",
+            "data-block-type": "ordered",
+            "data-block-id": "5",
+            "data-record-id": "JERgd83mYocldwxdwjKcxVJpn8d"
+          },
+          "children": []
+        }
+      ],
+      "previous": null,
+      "next": "q2_10"
+    },
+    {
+      "seq": 775,
+      "type": "childList",
+      "target": "q2_14",
+      "attribute": null,
+      "old": null,
+      "value": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "q2_10",
+          "tag": "DIV",
+          "attrs": {
+            "class": "block docx-heading1-block",
+            "data-block-type": "heading1",
+            "data-block-id": "6",
+            "data-record-id": "QZIqd20RYoAEJ1xyLrVc0Xa2n3c"
+          },
+          "children": []
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 776,
+      "type": "attributes",
+      "target": "q2_329",
+      "attribute": "class",
+      "old": "sync-cursor-wrap active",
+      "value": "sync-cursor-wrap",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    }
+  ],
+  "keys": [],
+  "external": [
+    {
+      "kind": "related-mutations",
+      "time": 1792398471569,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792398636142,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792398636183,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792398636451,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792398667739,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792398689811,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792398690218,
+      "records": [
+        {
+          "type": "childList",
+          "target": "q2_77",
+          "attribute": null,
+          "old": null,
+          "value": null,
+          "added": [],
+          "removed": [
+            {
+              "ref": "q2_335",
+              "tag": "DIV",
+              "attrs": {
+                "class": "ps__thumb-x",
+                "style": "left: 0px; width: 0px;"
+              },
+              "children": []
+            }
+          ],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "childList",
+          "target": "q2_78",
+          "attribute": null,
+          "old": null,
+          "value": null,
+          "added": [],
+          "removed": [
+            {
+              "ref": "q2_336",
+              "tag": "DIV",
+              "attrs": {
+                "class": "ps__thumb-y",
+                "style": "top: 0px; height: 0px;"
+              },
+              "children": []
+            }
+          ],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "childList",
+          "target": "q2_79",
+          "attribute": null,
+          "old": null,
+          "value": null,
+          "added": [],
+          "removed": [
+            {
+              "ref": "q2_77",
+              "tag": "DIV",
+              "attrs": {
+                "class": "ps__rail-x",
+                "style": "left: 0px; bottom: 0px;"
+              },
+              "children": []
+            }
+          ],
+          "previous": "q2_59",
+          "next": "q2_78"
+        },
+        {
+          "type": "childList",
+          "target": "q2_79",
+          "attribute": null,
+          "old": null,
+          "value": null,
+          "added": [],
+          "removed": [
+            {
+              "ref": "q2_78",
+              "tag": "DIV",
+              "attrs": {
+                "class": "ps__rail-y",
+                "style": "top: 0px; right: 0px;"
+              },
+              "children": []
+            }
+          ],
+          "previous": "q2_59",
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    }
+  ]
+}

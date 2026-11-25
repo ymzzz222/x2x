@@ -1,0 +1,363 @@
+{
+  "case": "S03-C07-nested-heading9-persistence",
+  "status": "two matching actual conversion/history/Chrome reload/Quark reload-read cycles",
+  "normalization": "DOM identifiers feishu to maiya; real URLs and text unchanged",
+  "identityScope": "No cross-reload object or page-local ID identity assertion",
+  "coverage": "Conversion/history mutations are in conversionEvidence. Reload navigation used native UI; unload/load mutation stream is not captured. Equality asserts source block types, text, styles, parent relation and caret; no cross-load geometric identity or server protocol assertion. Quark restored to project tab after each read.",
+  "runs": [
+    {
+      "cycle": 1,
+      "sourceSession": "S03-1792057595841",
+      "conversionEvidence": "./C07-persist-nested-heading9-cycle1.json",
+      "savedCheckpoint": "2026-10-15T10:15:08.326Z",
+      "chromeReload": {
+        "time": "2026-10-15T10:15:39.286Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "ordered",
+            "id": "2",
+            "class": "block docx-ordered-block",
+            "parentType": "page"
+          },
+          {
+            "type": "heading9",
+            "id": "3",
+            "class": "block docx-heading9-block",
+            "parentType": "ordered"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "2",
+            "text": "111​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "2",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "222​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "lineHeight": "22.4px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      },
+      "peerReload": {
+        "time": "2026-10-15T10:17:26.596Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "ordered",
+            "id": "2",
+            "class": "block docx-ordered-block",
+            "parentType": "page"
+          },
+          {
+            "type": "heading9",
+            "id": "3",
+            "class": "block docx-heading9-block",
+            "parentType": "ordered"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "2",
+            "text": "111​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "2",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "222​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "lineHeight": "22.4px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 2 分钟前分享编辑",
+          "最近修改: 2 分钟前"
+        ]
+      }
+    },
+    {
+      "cycle": 2,
+      "sourceSession": "S03-1792059494008",
+      "conversionEvidence": "./C07-persist-nested-heading9-cycle2.json",
+      "savedCheckpoint": "2026-10-15T10:19:13.436Z",
+      "chromeReload": {
+        "time": "2026-10-15T10:19:30.514Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "ordered",
+            "id": "2",
+            "class": "block docx-ordered-block",
+            "parentType": "page"
+          },
+          {
+            "type": "heading9",
+            "id": "3",
+            "class": "block docx-heading9-block",
+            "parentType": "ordered"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "2",
+            "text": "111​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "2",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "222​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "lineHeight": "22.4px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      },
+      "peerReload": {
+        "time": "2026-10-15T10:20:00.475Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "ordered",
+            "id": "2",
+            "class": "block docx-ordered-block",
+            "parentType": "page"
+          },
+          {
+            "type": "heading9",
+            "id": "3",
+            "class": "block docx-heading9-block",
+            "parentType": "ordered"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "2",
+            "text": "111​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "2",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "222​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "lineHeight": "22.4px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      }
+    }
+  ],
+  "cleanupRead": {
+    "cleanupEvidence": "./C00-progress-checkpoint-cleanup.json",
+    "coverage": "Actual native select/delete cleanup, save confirmed before stopping observer; reload read contains empty title zone and no body blocks. Not a conversion persistence case.",
+    "state": {
+      "time": "2026-10-15T10:22:36.172Z",
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "ready": true,
+      "observerPresent": false,
+      "blocks": [],
+      "zones": [
+        {
+          "id": "1",
+          "text": "​",
+          "attrs": {
+            "class": "zone-container text-editor",
+            "data-zone-id": "1",
+            "data-zone-container": "*",
+            "contenteditable": "true"
+          },
+          "style": {
+            "fontSize": "34px",
+            "fontWeight": "500",
+            "lineHeight": "55.25px",
+            "textAlign": "start",
+            "paddingLeft": "0px"
+          }
+        }
+      ],
+      "save": [
+        "最近修改: 刚刚分享编辑",
+        "最近修改: 刚刚"
+      ]
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "time": "2026-10-22T11:24:49.764Z",
+  "scope": "Rebundle current project source without executing code or changing files; same inert node-view stubs as previous isolation",
+  "currentBundleSha256": "01a351d869ce8d11a1abd11dcc9b81590a3e3f14ecaf10fc94a1981798607941",
+  "priorBundleSha256": "01a351d869ce8d11a1abd11dcc9b81590a3e3f14ecaf10fc94a1981798607941",
+  "identical": true,
+  "sourceInputs": [
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/collaboration.js",
+      "sha256": "213fe910b30e954981e3f6fd595b25364692f582204360f19ced891318eb3044"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/layer.js",
+      "sha256": "85f7b480fa0987e265ac45834e0b74867f35852193146e18e8f2f450c8aca488"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/carrier.js",
+      "sha256": "0e7a9f89d4c32114eb6e409a7ba1a6477a55f3ac5672324823374f4543877fa0"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/id.js",
+      "sha256": "2b86af7e7fe3b44aaedf12aa5d885cc46b27d7fb67630692611ed815b00b1c8f"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/classes.js",
+      "sha256": "c545722be0cfde907db482da807add622ac397ad693a328a720c90665b06d17e"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/dispatch.js",
+      "sha256": "6bc62cc531f58682b6ab4816b528fcbb8191cb8e9a05e35573994a5b9dda98d0"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/highlight.js",
+      "sha256": "c684c97485a8084b27266c22e12bfcd8a25905d983c5e25b711c6bb0515c6f65"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/position.js",
+      "sha256": "5a7863167ab563f188304fc86568f5fe952dc52493b290e3a64a7702a46edb3e"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/indexer.js",
+      "sha256": "1731ccbbfdd2993e821a2ff3b9a2acda23d44a2c44bedd47bdcfb6914f14f5bf"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/core/transform.js",
+      "sha256": "a679509454c98a588112d104ab043e38f3432c0b9a8ccf031801faeeeb1ec4d4"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/comment/index.js",
+      "sha256": "218aeb2eb50e456cd59a404aac67e0a4487b019cb8a2325cfb741efeb8384f71"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/schema.js",
+      "sha256": "d2f6ffb2a28154622bdecb76103d71c5d3f7608d6bb7438e68d613b7ca6e93f9"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/protocol.js",
+      "sha256": "6374ca2dd33aaea943f9b590efe4554020fa1f1aedd9fc3c2c10386cff0844e1"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/model.js",
+      "sha256": "c55a031309c168d00d84310beb5e59e2fae473080fd94022f2a308f1708e3a42"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/transaction.js",
+      "sha256": "231fad47a16c066df8da6129dda7e6ae92e595c63dd11a2a092e1ea6a9852dec"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/paragraph-sync-plugin.js",
+      "sha256": "f721c7fb56cc769fc751af4232a2ebfbddb56b7849ee467840b58a66f1d240e4"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/copy.js",
+      "sha256": "a24c2ac39e6eda1680d574a08a8a9f7da81ceca32ca6dff84866c0c1afe44a87"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/externalCopy.js",
+      "sha256": "713bb59417c0bb2cc20189c20bea0c78720243fcf2571eefc495b71dd3744692"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/constants.js",
+      "sha256": "c06d10fb514add83339c91feeb8d50806e90037ca001a4a2d1ac1470d3ece7b6"
+    },
+    {
+      "path": "src/utils/userStorage.js",
+      "sha256": "e1b4bd742f0629f54060e0f771ad32b3ea721790cda3834e38a5d627c861be18"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/extensions.js",
+      "sha256": "618947d00b1f72c011b6a970887c7f6b92e52710674cbba73e89d50818eacfb9"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/index.js",
+      "sha256": "cbcea93826b892ef1ad6a5121bc0691bb97157fef77d912db89e0c8148872d9a"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/context.js",
+      "sha256": "aede427c25d6582430916f252f204511c6b5eaeceef60397a18ec507601b4bfc"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/list.js",
+      "sha256": "f9769d125ba422bdde441e712abbad925f5f3a65de431fadb93d7f4a3f398d59"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/public.js",
+      "sha256": "bcf701a16ae36380856995a4f0468dee8d8a97747e9868f37edbb106e722582d"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/clipboard.js",
+      "sha256": "76b4d89c2cf261adb388848d8ecdf24c208bca174dac255aada5ce074761e628"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/debug.js",
+      "sha256": "a209f5ba6959b16ef2d064db361d8d5fb96a9247adeef81aa3fbf60ad5dfb6be"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/settle.js",
+      "sha256": "39f557087770f4d83d14dafd45cf2762554803459143ba1b0d710581ebb47ce6"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/native-input.js",
+      "sha256": "89eb23b5e5641969e90c7e9bb2d6c666cb86209d4e48010405df61faa3f3fd23"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/highlight.js",
+      "sha256": "19272c8c75902fc9d98bba4e0e110ba3cd9dde44335f1a5ab3265262daffe2fe"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/commands.js",
+      "sha256": "5749a903b10c45ac0520bdf93e36b588271cf587b2df2f96e562f8ffa58cbeb3"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/behavior.js",
+      "sha256": "44f986e84c5378d4ef723069a28c259308cf8e499f4701b476a080c5d7976323"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/revision/index.js",
+      "sha256": "1e8d1ab5f08ad46d4962362cc3b58965d791e56509d9090205962acc3e886185"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/index.js",
+      "sha256": "b7569246c6a1596684396abf8af03e7c85ca312a19b5c2e8d4214be65d77510a"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/docLengthLimit.js",
+      "sha256": "36760012e55d06b6b20c788570670559e1aac5a3e4ca162f69f5d1f8dce1f4ef"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/page.js",
+      "sha256": "f42c6e0cb0c19c77436eaf5ff98c0bf0371dcb5bb2d6c30116c4da7c9b016026"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/blocks.js",
+      "sha256": "e3f67ac9668150c72b540651dd0a790ac942733e33056fc8a9060823ae6b4607"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/characterCard.js",
+      "sha256": "450a2be8a6ff593fd5dbf2f37c2c7dffac0a8581ef68848e9aad788ad3d43dba"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/characterSection.js",
+      "sha256": "9f9e7c58bce17f6761da574576901219202da0beafca5b42399e214cf1728b7f"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/outlineMeta.js",
+      "sha256": "8252e2f4be641cffcef7bec61a1b9fa7ab225a81ea29ae547db9fed52be313b0"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyDelete.js",
+      "sha256": "98fde590cd61889d17d1ebedbaa42b181c7600b78f8790ce7b33221b06b96782"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+      "sha256": "9f4cafe89ef8edd476ebe7232cd0e494d88c6fb9e700a7a2a5f9e4451964383a"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/headingFold.js",
+      "sha256": "b548ce0eed59b09aa9ddf83bd0b969b199c99558b7cf9d31014b255f1caa7f87"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/pasteResetParagraph.js",
+      "sha256": "7efbfa2b4367ed91206e16da723de4976c9c42a8454f9f94ebb27a0f9b12c41a"
+    },
+    {
+      "path": "src/sub-app/env.js",
+      "sha256": "1e9e43ff4b16a2a12cbb6150e607977b680da788abd5fdcede56057d165010e0"
+    },
+    {
+      "path": "src/sub-app/config.js",
+      "sha256": "6676f5f69bcc4371a0f5a9940291310d94c8f54d95095b7ed628637e02d35ccd"
+    },
+    {
+      "path": "src/sub-app/index.js",
+      "sha256": "c8976bd3ec6a04e84e39b62230719941649eb1a13f823d1e03ad6d0f4a223dbd"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/config.js",
+      "sha256": "c695e79d06e9afd04d89113e71e0fc09483abee91401f2f5b6081e3e7641bdf8"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/index.js",
+      "sha256": "8f218cbe4dd3f63b7c905df103ede653c677ba4742968b7143d59ff603965fdf"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/externalPaste.js",
+      "sha256": "c9aa773d4ffd186bcdc4aad0f3670cad063661dd1e467b4294dff66ed7748381"
+    }
+  ],
+  "stubbedNodeViews": [
+    "/Users/mac/Desktop/my/code/my-translation-web/src/views/aiScriptCore/wordEdit/editor/components/CharacterSectionView.vue",
+    "/Users/mac/Desktop/my/code/my-translation-web/src/views/aiScriptCore/wordEdit/editor/components/OutlineMetaView.vue"
+  ],
+  "warnings": [
+    {
+      "id": "duplicate-object-key",
+      "text": "Duplicate key \"addKeyboardShortcuts\" in object literal",
+      "file": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+      "line": 830
+    }
+  ],
+  "directSourceChecks": [
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/clipboard.js",
+      "expected": "76b4d89c2cf261adb388848d8ecdf24c208bca174dac255aada5ce074761e628",
+      "current": "76b4d89c2cf261adb388848d8ecdf24c208bca174dac255aada5ce074761e628",
+      "unchanged": true
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/Drag/menuActions.js",
+      "expected": "b14f116046bd18e4842fcff19da1fe0a0745295705d3d4952111bd8e5dc5c536",
+      "current": "b14f116046bd18e4842fcff19da1fe0a0745295705d3d4952111bd8e5dc5c536",
+      "unchanged": true
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js",
+      "expected": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c",
+      "current": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c",
+      "unchanged": true
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/config.js",
+      "expected": "c695e79d06e9afd04d89113e71e0fc09483abee91401f2f5b6081e3e7641bdf8",
+      "current": "c695e79d06e9afd04d89113e71e0fc09483abee91401f2f5b6081e3e7641bdf8",
+      "unchanged": true
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/externalPaste.js",
+      "expected": "c9aa773d4ffd186bcdc4aad0f3670cad063661dd1e467b4294dff66ed7748381",
+      "current": "c9aa773d4ffd186bcdc4aad0f3670cad063661dd1e467b4294dff66ed7748381",
+      "unchanged": true
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/docLengthLimit.js",
+      "expected": "36760012e55d06b6b20c788570670559e1aac5a3e4ca162f69f5d1f8dce1f4ef",
+      "current": "36760012e55d06b6b20c788570670559e1aac5a3e4ca162f69f5d1f8dce1f4ef",
+      "unchanged": true
+    }
+  ],
+  "allComparedSourcesUnchanged": true
+}

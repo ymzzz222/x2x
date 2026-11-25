@@ -1,0 +1,682 @@
+{
+  "time": "2026-10-22T12:24:51.591Z",
+  "scope": "Only named reopened S08 boundary cases, not whole-stage or project acceptance",
+  "cases": [
+    {
+      "name": "H01-full-empty-bullet-delete-next-text-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-empty-bullet-delete-next-text-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-empty-bullet-delete-next-text-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H01-full-empty-ordered-delete-next-text-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-empty-ordered-delete-next-text-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-empty-ordered-delete-next-text-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-backspace-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "actual target uses structural selection carrier"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-backspace-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "actual target uses structural selection carrier"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-backspace-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-delete-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "actual target uses structural selection carrier"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-delete-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "actual target uses structural selection carrier"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-delete-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-start-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-start-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-start-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-tail-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-tail-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-tail-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-reverse-range-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload",
+        "actual reversed Beta 4 to 2 range before native paste shortcut"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-reverse-range-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload",
+        "actual reversed Beta 4 to 2 range before native paste shortcut"
+      ]
+    },
+    {
+      "name": "H06-full-ordered-reverse-range-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-text-start-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-text-start-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-text-start-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-start-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-start-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-start-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-middle-range-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload",
+        "actual Beta 1 to 3 range before native paste"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-middle-range-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload",
+        "actual Beta 1 to 3 range before native paste"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-middle-range-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-tail-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-tail-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-bullet-tail-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-plain-H1-start-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-plain-H1-start-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-plain-H1-start-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-H1-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-H1-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-H1-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-plain-H9-start-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-plain-H9-start-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-plain-H9-start-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-H9-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-H9-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-H9-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H06-full-quote-start-multiline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-quote-start-multiline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow",
+        "exact native plain clipboard payload"
+      ]
+    },
+    {
+      "name": "H06-full-quote-start-multiline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H01-full-quote-end-delete-next-text-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-quote-end-delete-next-text-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-quote-end-delete-next-text-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-ordered-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-ordered-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-ordered-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-bullet-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-bullet-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact text type parent and ordering",
+        "Undo Redo Undo restores all content styles and structure",
+        "title unchanged",
+        "one actual trusted target input",
+        "exact trusted Undo Redo Undo",
+        "unaffected first and last block identities preserved",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H01-full-text-delete-next-bullet-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic input and output both rounds"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-input-R1.json",
+      "passed": true,
+      "assertions": [
+        "ordinary input leaves partial structural content unchanged",
+        "first Undo directly removes known prior marker",
+        "one trusted KeyY on actual structural carrier",
+        "title unchanged no errors or overflow"
+      ]
+    },
+    {
+      "name": "H02-full-partial-structural-input-R2.json",
+      "passed": true,
+      "assertions": [
+        "ordinary input leaves partial structural content unchanged",
+        "first Undo directly removes known prior marker",
+        "one trusted KeyY on actual structural carrier",
+        "title unchanged no errors or overflow"
+      ]
+    }
+  ],
+  "failures": []
+}

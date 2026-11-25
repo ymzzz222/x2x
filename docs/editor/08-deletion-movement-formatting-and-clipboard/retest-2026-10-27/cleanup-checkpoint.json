@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-27",
+  "status": "Cleanup incomplete; no final empty-document claim",
+  "target": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "confirmed": {
+    "clipboardPermissionUI": "询问（默认）",
+    "clipboardReadAPI": "prompt",
+    "clipboardWriteAPI": "granted",
+    "permissionRestoredAfterRealReload": true,
+    "businessSourceChanged": false,
+    "originalResearchEvidenceChanged": false,
+    "lastQuarkIndependentReadWasEmpty": false,
+    "quarkOriginalSelectedTabRestored": true,
+    "quarkContentEdited": false,
+    "chromeConsoleClosed": true
+  },
+  "events": [
+    {
+      "step": "cumulative-native-paste",
+      "result": "Two expected plain payloads were replaced by existing clipboard content",
+      "restoration": "Known unexpected payloads undone; image block count verified zero"
+    },
+    {
+      "step": "renderer-recovery",
+      "result": "Chrome crash code 5; real reload showed B12000 and selected count 12000",
+      "limit": "No full-text hash or total-capacity pass"
+    },
+    {
+      "step": "native-typeText-100-lines",
+      "result": "Partly merged paragraph text and Failed to get block view messages",
+      "limit": "Not accepted as valid intended fixture"
+    },
+    {
+      "step": "second-renderer-failure",
+      "result": "Code 5 again; restarted for cleanup and closed DevTools"
+    },
+    {
+      "step": "whole-document-cleanup",
+      "result": "Page temporarily unresponsive; recovered with content still present"
+    },
+    {
+      "step": "bounded-cleanup",
+      "result": "First visible remaining marker progressed B00113 to B00793 to B01191",
+      "limit": "Not a final empty state; title also acquired a research marker"
+    },
+    {
+      "step": "independent-quark-read",
+      "result": "Same exact research URL and B00113 observed before later batch cleanup",
+      "restoredTab": "夸克网盘"
+    },
+    {
+      "step": "user-chrome-tab-switch",
+      "result": "Current selected tab became local 剧本 · 跳跃视界; URL guard stopped edits",
+      "resumeCondition": "Research tab temporarily exclusive; restore local script tab afterward"
+    }
+  ],
+  "pending": [
+    "Finish clearing remaining research body and title",
+    "Confirm saved empty result through independent reloads in both browsers",
+    "Verify no remaining research variables or console",
+    "Restore latest user-selected Chrome script tab",
+    "Retain actual product failures and unavailable capacity/refusal limits"
+  ]
+}

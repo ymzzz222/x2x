@@ -1,0 +1,1203 @@
+{
+  "case": "F01-middle-text-undo-R4",
+  "source": "Chrome native UI and read-only DevTools observer",
+  "normalization": "DOM identifiers feishu -> maiya; source URLs and user text unchanged",
+  "eventWindow": "keys and external events since previous export",
+  "action": "Cmd+Z restores four-block source 1/2/3 plus same trailing empty.",
+  "state": {
+    "label": "F01-middle-text-undo-R4",
+    "time": "2026-10-19T03:10:47.708Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "ref": "n3",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block-children"
+      },
+      "children": [
+        {
+          "ref": "n4",
+          "tag": "DIV",
+          "attrs": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "children": [
+            {
+              "ref": "n5",
+              "tag": "DIV",
+              "attrs": {
+                "class": "render-unit-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "n17",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block",
+                    "data-block-type": "ordered",
+                    "data-block-id": "5",
+                    "data-record-id": "WQ5BdlXzQofLLexEiryclkhEnHe"
+                  },
+                  "children": [
+                    {
+                      "ref": "n59",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "n60",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "n61",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n62",
+                                  "text": "1"
+                                },
+                                {
+                                  "ref": "n63",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n64",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n65",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "5",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n66",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n67",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n68",
+                                              "text": "AAA"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n69",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n70",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n26",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block focused",
+                    "data-block-type": "ordered",
+                    "data-block-id": "4",
+                    "data-record-id": "KKfxd7xAzon3jPxkD3dcHaLbnWb"
+                  },
+                  "children": [
+                    {
+                      "ref": "n529",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "n530",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "n531",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n532",
+                                  "text": "2"
+                                },
+                                {
+                                  "ref": "n533",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n534",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n535",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                    "data-zone-id": "4",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n536",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n537",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n538",
+                                              "text": "BBB"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n539",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n540",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n35",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block",
+                    "data-block-type": "ordered",
+                    "data-block-id": "3",
+                    "data-record-id": "X7E8dwY7foPUwQxilOIcomyUnfh"
+                  },
+                  "children": [
+                    {
+                      "ref": "n44",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "n45",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "n46",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n47",
+                                  "text": "3"
+                                },
+                                {
+                                  "ref": "n48",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n49",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n50",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "3",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n51",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n52",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n53",
+                                              "text": "CCC"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n54",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n55",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n125",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "7",
+                    "data-record-id": "VcN9db4tWo0VCFxZUxqcTitdnSg"
+                  },
+                  "children": [
+                    {
+                      "ref": "n126",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "text-block-wrapper"
+                      },
+                      "children": [
+                        {
+                          "ref": "n127",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "text-block"
+                          },
+                          "children": [
+                            {
+                              "ref": "n128",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "zone-container text-editor",
+                                "data-zone-id": "7",
+                                "data-zone-container": "*",
+                                "contenteditable": "true"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n129",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "ace-line"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n130",
+                                      "tag": "SPAN",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n131",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "n6",
+              "tag": "DIV",
+              "attrs": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "selection": {
+      "anchor": {
+        "ref": "n538",
+        "offset": 3,
+        "text": "BBB"
+      },
+      "focus": {
+        "ref": "n538",
+        "offset": 3,
+        "text": "BBB"
+      },
+      "type": "Caret",
+      "text": ""
+    },
+    "active": {
+      "tag": "DIV",
+      "cls": "page-block root-block"
+    },
+    "seq": 551
+  },
+  "records": [
+    {
+      "seq": 534,
+      "type": "attributes",
+      "target": "n46",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button ud__tooltip-open"
+    },
+    {
+      "seq": 535,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "class",
+      "old": "block docx-text-block focused",
+      "value": "block docx-ordered-block"
+    },
+    {
+      "seq": 536,
+      "type": "attributes",
+      "target": "n523",
+      "attribute": "class",
+      "old": "zone-container text-editor non-empty text-editor-focused",
+      "value": "zone-container text-editor non-empty"
+    },
+    {
+      "seq": 537,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "class",
+      "old": "block docx-text-block",
+      "value": "block docx-ordered-block"
+    },
+    {
+      "seq": 538,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "data-block-type",
+      "old": "text",
+      "value": "ordered"
+    },
+    {
+      "seq": 539,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "data-block-id",
+      "old": "4",
+      "value": "4"
+    },
+    {
+      "seq": 540,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "data-record-id",
+      "old": "KKfxd7xAzon3jPxkD3dcHaLbnWb",
+      "value": "KKfxd7xAzon3jPxkD3dcHaLbnWb"
+    },
+    {
+      "seq": 541,
+      "type": "childList",
+      "target": "n525",
+      "attribute": null,
+      "old": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "n526",
+          "text": "BBB"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 542,
+      "type": "childList",
+      "target": "n527",
+      "attribute": null,
+      "old": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "n528",
+          "text": "​"
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 543,
+      "type": "childList",
+      "target": "n26",
+      "attribute": null,
+      "old": null,
+      "added": [],
+      "removed": [
+        {
+          "ref": "n521",
+          "tag": "DIV",
+          "attrs": {
+            "class": "text-block-wrapper"
+          },
+          "children": [
+            {
+              "ref": "n522",
+              "tag": "DIV",
+              "attrs": {
+                "class": "text-block"
+              },
+              "children": [
+                {
+                  "ref": "n523",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "zone-container text-editor non-empty",
+                    "data-zone-id": "4",
+                    "data-zone-container": "*",
+                    "contenteditable": "true"
+                  },
+                  "children": [
+                    {
+                      "ref": "n524",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "ace-line"
+                      },
+                      "children": [
+                        {
+                          "ref": "n525",
+                          "tag": "SPAN",
+                          "attrs": {
+                            "class": " author-7622865454574423258"
+                          },
+                          "children": []
+                        },
+                        {
+                          "ref": "n527",
+                          "tag": "SPAN",
+                          "attrs": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 544,
+      "type": "childList",
+      "target": "n26",
+      "attribute": null,
+      "old": null,
+      "added": [
+        {
+          "ref": "n529",
+          "tag": "DIV",
+          "attrs": {
+            "class": "list-wrapper ordered-list"
+          },
+          "children": [
+            {
+              "ref": "n530",
+              "tag": "DIV",
+              "attrs": {
+                "class": "list list-align-undefined"
+              },
+              "children": [
+                {
+                  "ref": "n531",
+                  "tag": "BUTTON",
+                  "attrs": {
+                    "contenteditable": "false",
+                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                  },
+                  "children": [
+                    {
+                      "ref": "n532",
+                      "text": "2"
+                    },
+                    {
+                      "ref": "n533",
+                      "text": "."
+                    }
+                  ]
+                },
+                {
+                  "ref": "n534",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "list-content"
+                  },
+                  "children": [
+                    {
+                      "ref": "n535",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "zone-container text-editor non-empty",
+                        "data-zone-id": "4",
+                        "data-zone-container": "*",
+                        "contenteditable": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "n536",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ace-line"
+                          },
+                          "children": [
+                            {
+                              "ref": "n537",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": " author-7622865454574423258"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n538",
+                                  "text": "BBB"
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n539",
+                              "tag": "SPAN",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "ref": "n540",
+                                  "text": "​"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 545,
+      "type": "childList",
+      "target": "n535",
+      "attribute": null,
+      "old": null,
+      "added": [
+        {
+          "ref": "n536",
+          "tag": "DIV",
+          "attrs": {
+            "class": "ace-line"
+          },
+          "children": [
+            {
+              "ref": "n537",
+              "tag": "SPAN",
+              "attrs": {
+                "class": " author-7622865454574423258"
+              },
+              "children": [
+                {
+                  "ref": "n538",
+                  "text": "BBB"
+                }
+              ]
+            },
+            {
+              "ref": "n539",
+              "tag": "SPAN",
+              "attrs": {},
+              "children": [
+                {
+                  "ref": "n540",
+                  "text": "​"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 546,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "class",
+      "old": "block docx-ordered-block",
+      "value": "block docx-ordered-block"
+    },
+    {
+      "seq": 547,
+      "type": "characterData",
+      "target": "n47",
+      "attribute": null,
+      "old": "2",
+      "value": "3"
+    },
+    {
+      "seq": 548,
+      "type": "attributes",
+      "target": "n35",
+      "attribute": "class",
+      "old": "block docx-ordered-block",
+      "value": "block docx-ordered-block"
+    },
+    {
+      "seq": 549,
+      "type": "attributes",
+      "target": "n26",
+      "attribute": "class",
+      "old": "block docx-ordered-block",
+      "value": "block docx-ordered-block focused"
+    },
+    {
+      "seq": 550,
+      "type": "attributes",
+      "target": "n535",
+      "attribute": "class",
+      "old": "zone-container text-editor non-empty",
+      "value": "zone-container text-editor non-empty text-editor-focused"
+    },
+    {
+      "seq": 551,
+      "type": "attributes",
+      "target": "n46",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button ud__tooltip-open",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+    }
+  ],
+  "keys": [
+    {
+      "time": "2026-10-19T03:10:44.141Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "before": {
+        "label": "before-key",
+        "time": "2026-10-19T03:10:44.141Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "rootConnected": true,
+        "body": {
+          "ref": "n3",
+          "tag": "DIV",
+          "attrs": {
+            "class": "page-block-children"
+          },
+          "children": [
+            {
+              "ref": "n4",
+              "tag": "DIV",
+              "attrs": {
+                "class": "root-render-unit-container",
+                "style": "position: relative;"
+              },
+              "children": [
+                {
+                  "ref": "n5",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "render-unit-wrapper"
+                  },
+                  "children": [
+                    {
+                      "ref": "n17",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "block docx-ordered-block",
+                        "data-block-type": "ordered",
+                        "data-block-id": "5",
+                        "data-record-id": "WQ5BdlXzQofLLexEiryclkhEnHe"
+                      },
+                      "children": [
+                        {
+                          "ref": "n59",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list-wrapper ordered-list"
+                          },
+                          "children": [
+                            {
+                              "ref": "n60",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list list-align-undefined"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n61",
+                                  "tag": "BUTTON",
+                                  "attrs": {
+                                    "contenteditable": "false",
+                                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n62",
+                                      "text": "1"
+                                    },
+                                    {
+                                      "ref": "n63",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "ref": "n64",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "list-content"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n65",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "zone-container text-editor non-empty",
+                                        "data-zone-id": "5",
+                                        "data-zone-container": "*",
+                                        "contenteditable": "true"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n66",
+                                          "tag": "DIV",
+                                          "attrs": {
+                                            "class": "ace-line"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n67",
+                                              "tag": "SPAN",
+                                              "attrs": {
+                                                "class": " author-7622865454574423258"
+                                              },
+                                              "children": [
+                                                {
+                                                  "ref": "n68",
+                                                  "text": "AAA"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "ref": "n69",
+                                              "tag": "SPAN",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "ref": "n70",
+                                                  "text": "​"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n26",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "block docx-text-block focused",
+                        "data-block-type": "text",
+                        "data-block-id": "4",
+                        "data-record-id": "KKfxd7xAzon3jPxkD3dcHaLbnWb"
+                      },
+                      "children": [
+                        {
+                          "ref": "n521",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "text-block-wrapper"
+                          },
+                          "children": [
+                            {
+                              "ref": "n522",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "text-block"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n523",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                    "data-zone-id": "4",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n524",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n525",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n526",
+                                              "text": "BBB"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n527",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n528",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n35",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "block docx-ordered-block",
+                        "data-block-type": "ordered",
+                        "data-block-id": "3",
+                        "data-record-id": "X7E8dwY7foPUwQxilOIcomyUnfh"
+                      },
+                      "children": [
+                        {
+                          "ref": "n44",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list-wrapper ordered-list"
+                          },
+                          "children": [
+                            {
+                              "ref": "n45",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list list-align-undefined"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n46",
+                                  "tag": "BUTTON",
+                                  "attrs": {
+                                    "contenteditable": "false",
+                                    "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button ud__tooltip-open"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n47",
+                                      "text": "2"
+                                    },
+                                    {
+                                      "ref": "n48",
+                                      "text": "."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "ref": "n49",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "list-content"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n50",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "zone-container text-editor non-empty",
+                                        "data-zone-id": "3",
+                                        "data-zone-container": "*",
+                                        "contenteditable": "true"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n51",
+                                          "tag": "DIV",
+                                          "attrs": {
+                                            "class": "ace-line"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n52",
+                                              "tag": "SPAN",
+                                              "attrs": {
+                                                "class": " author-7622865454574423258"
+                                              },
+                                              "children": [
+                                                {
+                                                  "ref": "n53",
+                                                  "text": "CCC"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "ref": "n54",
+                                              "tag": "SPAN",
+                                              "attrs": {},
+                                              "children": [
+                                                {
+                                                  "ref": "n55",
+                                                  "text": "​"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n125",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "block docx-text-block isEmpty",
+                        "data-block-type": "text",
+                        "data-block-id": "7",
+                        "data-record-id": "VcN9db4tWo0VCFxZUxqcTitdnSg"
+                      },
+                      "children": [
+                        {
+                          "ref": "n126",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "text-block-wrapper"
+                          },
+                          "children": [
+                            {
+                              "ref": "n127",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "text-block"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n128",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor",
+                                    "data-zone-id": "7",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n129",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n130",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n131",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n6",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "bear-virtual-pre-renderer",
+                    "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        "selection": {
+          "anchor": {
+            "ref": "n526",
+            "offset": 3,
+            "text": "BBB"
+          },
+          "focus": {
+            "ref": "n526",
+            "offset": 3,
+            "text": "BBB"
+          },
+          "type": "Caret",
+          "text": ""
+        },
+        "active": {
+          "tag": "DIV",
+          "cls": "page-block root-block"
+        },
+        "seq": 534
+      }
+    }
+  ],
+  "external": []
+}

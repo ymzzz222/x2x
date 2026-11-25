@@ -1,0 +1,50 @@
+{
+  "session": "S02-peer-native-controlled",
+  "segment": "remote-composition-controlled",
+  "normalization": "feishu -> maiya DOM identifiers only",
+  "overflow": 0,
+  "reconstruction": "Expand $dom recursively through domObjects. Set time then apply RFC 6902 baselinePatch/beforePatch.",
+  "baseline": {"blocks":[{"node":{"$dom":"d22"},"parentType":"page"}],"connected":true,"persistenceFingerprint":[{"lines":[[{"italic":"normal","size":"16px","text":"3","weight":"400"}]],"marker":null,"parent":"page","parentRecord":null,"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","type":"text"}],"reader":"Quark independent browser DOM read","root":{"$dom":"d1"},"time":"2026-10-15T03:31:27.452Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","visibleSaveLabels":[]},
+  "domObjects": {
+    "d1": {"attrs":{"class":"page-block root-block","contenteditable":"true","data-content-editable-root":"true","data-slate-editor":"true","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"},"ref":"q1","tag":"DIV"},
+    "d2": {"ref":"q8","text":"3"},
+    "d3": {"attrs":{"class":" author-7622865454574423258","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d2"}],"ref":"q7","tag":"SPAN"},
+    "d4": {"ref":"q10","text":"​"},
+    "d5": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d4"}],"ref":"q9","tag":"SPAN"},
+    "d6": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d3"},{"$dom":"d5"}],"ref":"q6","tag":"DIV"},
+    "d7": {"attrs":{"class":"zone-container text-editor non-empty text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"10"},"children":[{"$dom":"d6"}],"ref":"q5","tag":"DIV"},
+    "d8": {"attrs":{"class":"text-block"},"children":[{"$dom":"d7"}],"ref":"q4","tag":"DIV"},
+    "d9": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d8"}],"ref":"q3","tag":"DIV"},
+    "d10": {"attrs":{"class":"sc-gXRoDt iAvKeU","style":"background-color: rgba(50, 166, 69, 0.2); left: 12px; top: 0px; height: 26px; width: 0px;"},"children":[],"ref":"q15","tag":"DIV"},
+    "d11": {"attrs":{"class":"sc-bGaWHc fHoPRO"},"children":[{"$dom":"d10"}],"ref":"q14","tag":"DIV"},
+    "d12": {"attrs":{"class":"sync-selection-container is-text-selection"},"children":[{"$dom":"d11"}],"ref":"q13","tag":"DIV"},
+    "d13": {"attrs":{"style":"position: absolute; inset: 0px; opacity: 1;"},"children":[{"$dom":"d12"}],"ref":"q12","tag":"DIV"},
+    "d14": {"attrs":{"class":"sync-cursor-caret","style":"height: 52px; background-color: rgb(50, 166, 69);"},"children":[],"ref":"q19","tag":"DIV"},
+    "d15": {"attrs":{"class":"sync-cursor-dot","style":"background-color: rgb(50, 166, 69);"},"children":[],"ref":"q20","tag":"DIV"},
+    "d16": {"ref":"q22","text":"合岳(重庆)"},
+    "d17": {"attrs":{"class":"sync-cursor-name","style":"background-color: rgb(50, 166, 69);"},"children":[{"$dom":"d16"}],"ref":"q21","tag":"DIV"},
+    "d18": {"attrs":{"class":"sync-cursor-wrap active","contenteditable":"false","style":"opacity: 1; top: 0px; left: 12px;"},"children":[{"$dom":"d14"},{"$dom":"d15"},{"$dom":"d17"}],"ref":"q18","tag":"DIV"},
+    "d19": {"attrs":{"class":"sync-cursor-container is-text-selection"},"children":[{"$dom":"d18"}],"ref":"q17","tag":"DIV"},
+    "d20": {"attrs":{"style":"position: absolute; inset: 0px; opacity: 1;"},"children":[{"$dom":"d19"}],"ref":"q16","tag":"DIV"},
+    "d21": {"attrs":{"class":"sync-cursor-view-wrap","contenteditable":"false"},"children":[{"$dom":"d13"},{"$dom":"d20"}],"ref":"q11","tag":"SPAN"},
+    "d22": {"attrs":{"class":"block docx-text-block focused","data-block-id":"10","data-block-type":"text","data-record-id":"CwC6dPsl3oZYrNxXUKtcLC75nSe"},"children":[{"$dom":"d9"},{"$dom":"d21"}],"ref":"q2","tag":"DIV"}
+  },
+  "runs": [
+    {
+      "label": "B08-remote-composition-controlled-peer-R2",
+      "before": {"baselinePatch":[{"op":"remove","path":"/reader"},{"op":"remove","path":"/connected"},{"op":"remove","path":"/root"},{"op":"remove","path":"/blocks"},{"op":"remove","path":"/persistenceFingerprint"},{"op":"remove","path":"/visibleSaveLabels"},{"op":"add","path":"/captureKind","value":"native control metadata; pre-action peer DOM not independently sampled"}],"time":"2026-10-15T03:30:56.319Z"},
+      "after": {"beforePatch":[{"op":"remove","path":"/captureKind"},{"op":"add","path":"/reader","value":"Quark independent browser DOM read"},{"op":"add","path":"/connected","value":true},{"op":"add","path":"/root","value":{"$dom":"d1"}},{"op":"add","path":"/blocks","value":[{"node":{"$dom":"d22"},"parentType":"page"}]},{"op":"add","path":"/persistenceFingerprint","value":[{"lines":[[{"italic":"normal","size":"16px","text":"3","weight":"400"}]],"marker":null,"parent":"page","parentRecord":null,"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","type":"text"}]},{"op":"add","path":"/visibleSaveLabels","value":[]}],"time":"2026-10-15T03:31:27.452Z"},
+      "changes": [
+      ],
+      "events": [
+        {"body":[{"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","text":"​合岳(重庆)","type":"text"}],"code":"Digit3","focused":true,"isComposing":false,"isTrusted":true,"key":"3","targetClass":"page-block root-block","targetTag":"DIV","time":"2026-10-15T03:30:56.319Z","type":"keydown"},
+        {"body":[{"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","text":"​合岳(重庆)","type":"text"}],"data":"3","focused":true,"inputType":"insertText","isComposing":false,"isTrusted":true,"targetClass":"page-block root-block","targetTag":"DIV","time":"2026-10-15T03:30:56.335Z","type":"beforeinput"},
+        {"body":[{"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","text":"​3合岳(重庆)","type":"text"}],"data":"3","focused":true,"inputType":"insertText","isComposing":false,"isTrusted":true,"targetClass":"page-block root-block","targetTag":"DIV","time":"2026-10-15T03:30:56.338Z","type":"input"}
+      ],
+      "errors": [],
+      "peerSteps": [{"body":[{"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","text":"3​合岳(重庆)","type":"text"}],"key":{"body":[{"record":"CwC6dPsl3oZYrNxXUKtcLC75nSe","text":"​合岳(重庆)","type":"text"}],"code":"Digit3","focused":true,"isComposing":false,"isTrusted":true,"key":"3","targetClass":"page-block root-block","targetTag":"DIV","time":"2026-10-15T03:30:56.319Z","type":"keydown"}}],
+      "peerOverflow": 0,
+      "observationNote": "Peer snapshot sampled after primary local history restoration to remote digit 3; trusted peer input events retain input-time body."
+    }
+  ]
+}

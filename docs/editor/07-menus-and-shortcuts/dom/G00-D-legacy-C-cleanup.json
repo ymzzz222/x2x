@@ -1,0 +1,1324 @@
+{
+  "case": "G00-D-legacy-C-cleanup",
+  "session": "S07-D",
+  "normalization": "DOM identifiers feishu -> maiya; text and source URL unchanged",
+  "before": {
+    "label": "G00-D-legacy-C-cleanup:source",
+    "time": "2026-10-19T10:54:47.161Z",
+    "mono": 6032965.700000048,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-87858a39b6763819a01145c4"
+    },
+    "selection": {
+      "type": "Caret",
+      "a": {
+        "r": "d15614",
+        "offset": 0
+      },
+      "f": {
+        "r": "d15614",
+        "offset": 0
+      },
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "end": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "collapsed": true
+        }
+      ]
+    },
+    "focus": {
+      "r": "d15615",
+      "tag": "INPUT",
+      "a": {}
+    },
+    "ui": [
+      {
+        "r": "d15613",
+        "tag": "DIV",
+        "a": {
+          "class": "edit-link-panel onlyLink edit-link-panel-narrow"
+        },
+        "rect": {
+          "x": 66,
+          "y": 261.25,
+          "w": 434,
+          "h": 82
+        },
+        "text": "确认",
+        "controls": [
+          {
+            "r": "d15615",
+            "tag": "INPUT",
+            "a": {},
+            "text": "",
+            "value": "",
+            "rect": {
+              "x": 91,
+              "y": 286.25,
+              "w": 280,
+              "h": 32
+            }
+          },
+          {
+            "r": "d15617",
+            "tag": "BUTTON",
+            "a": {},
+            "text": "确认",
+            "value": "",
+            "rect": {
+              "x": 395,
+              "y": 286.25,
+              "w": 80,
+              "h": 32
+            }
+          }
+        ]
+      }
+    ],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 4035,
+    "eventCount": 2204,
+    "hasFocus": true,
+    "blocks": [
+      {
+        "r": "d4",
+        "id": "5",
+        "type": "text",
+        "text": "Alpha​",
+        "rect": {
+          "x": 64,
+          "y": 235.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      },
+      {
+        "r": "d13",
+        "id": "4",
+        "type": "text",
+        "text": "Beta​",
+        "rect": {
+          "x": 64,
+          "y": 269.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      },
+      {
+        "r": "d22",
+        "id": "3",
+        "type": "text",
+        "text": "Gamma​",
+        "rect": {
+          "x": 64,
+          "y": 303.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      },
+      {
+        "r": "d31",
+        "id": "7",
+        "type": "text",
+        "text": "​",
+        "rect": {
+          "x": 64,
+          "y": 337.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      }
+    ],
+    "fonts": {
+      "status": "loaded"
+    },
+    "live": [],
+    "scroll": [
+      {
+        "r": "d42",
+        "top": 0,
+        "left": 0
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgb(31, 35, 41) none 3px",
+      "boxShadow": "none"
+    },
+    "menusAccessibility": [],
+    "fields": [
+      {
+        "r": "d5879",
+        "tag": "DIV",
+        "a": {
+          "class": "zone-container editor-kit-container notranslate chrome chrome88",
+          "contenteditable": "true",
+          "style": "padding-left: 0px;"
+        },
+        "placeholder": "输入评论",
+        "text": "​",
+        "rect": {
+          "x": 78,
+          "y": 1130,
+          "w": 541,
+          "h": 22
+        }
+      },
+      {
+        "r": "d15615",
+        "tag": "INPUT",
+        "a": {},
+        "placeholder": "粘贴或输入链接",
+        "value": "",
+        "text": "",
+        "selectionStart": 0,
+        "selectionEnd": 0,
+        "rect": {
+          "x": 91,
+          "y": 286.25,
+          "w": 280,
+          "h": 32
+        }
+      }
+    ],
+    "visualViewport": {
+      "scale": 1,
+      "width": 1152,
+      "height": 907,
+      "left": 0,
+      "top": 0
+    },
+    "saveStatus": [
+      {
+        "r": "d15624",
+        "tag": "SPAN",
+        "a": {
+          "class": "note-title__time"
+        },
+        "text": "已经保存到云端"
+      }
+    ],
+    "blockLines": [
+      {
+        "r": "d4",
+        "id": "5",
+        "lines": [
+          "Alpha​"
+        ]
+      },
+      {
+        "r": "d13",
+        "id": "4",
+        "lines": [
+          "Beta​"
+        ]
+      },
+      {
+        "r": "d22",
+        "id": "3",
+        "lines": [
+          "Gamma​"
+        ]
+      },
+      {
+        "r": "d31",
+        "id": "7",
+        "lines": [
+          "​"
+        ]
+      }
+    ]
+  },
+  "after": {
+    "label": "G00-D-legacy-C-cleanup:end",
+    "time": "2026-10-19T10:54:47.697Z",
+    "mono": 6033501.3000000715,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-87858a39b6763819a01145c4"
+    },
+    "selection": {
+      "type": "Caret",
+      "a": {
+        "r": "d15614",
+        "offset": 0
+      },
+      "f": {
+        "r": "d15614",
+        "offset": 0
+      },
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "end": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "collapsed": true
+        }
+      ]
+    },
+    "focus": {
+      "r": "d15615",
+      "tag": "INPUT",
+      "a": {}
+    },
+    "ui": [
+      {
+        "r": "d15613",
+        "tag": "DIV",
+        "a": {
+          "class": "edit-link-panel onlyLink edit-link-panel-narrow"
+        },
+        "rect": {
+          "x": 66,
+          "y": 261.25,
+          "w": 434,
+          "h": 82
+        },
+        "text": "确认",
+        "controls": [
+          {
+            "r": "d15615",
+            "tag": "INPUT",
+            "a": {},
+            "text": "",
+            "value": "",
+            "rect": {
+              "x": 91,
+              "y": 286.25,
+              "w": 280,
+              "h": 32
+            }
+          },
+          {
+            "r": "d15617",
+            "tag": "BUTTON",
+            "a": {},
+            "text": "确认",
+            "value": "",
+            "rect": {
+              "x": 395,
+              "y": 286.25,
+              "w": 80,
+              "h": 32
+            }
+          }
+        ]
+      }
+    ],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 4035,
+    "eventCount": 2204,
+    "hasFocus": true,
+    "blocks": [
+      {
+        "r": "d4",
+        "id": "5",
+        "type": "text",
+        "text": "Alpha​",
+        "rect": {
+          "x": 64,
+          "y": 235.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      },
+      {
+        "r": "d13",
+        "id": "4",
+        "type": "text",
+        "text": "Beta​",
+        "rect": {
+          "x": 64,
+          "y": 269.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      },
+      {
+        "r": "d22",
+        "id": "3",
+        "type": "text",
+        "text": "Gamma​",
+        "rect": {
+          "x": 64,
+          "y": 303.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      },
+      {
+        "r": "d31",
+        "id": "7",
+        "type": "text",
+        "text": "​",
+        "rect": {
+          "x": 64,
+          "y": 337.25,
+          "w": 624,
+          "h": 26
+        },
+        "parent": "d3"
+      }
+    ],
+    "fonts": {
+      "status": "loaded"
+    },
+    "live": [],
+    "scroll": [
+      {
+        "r": "d42",
+        "top": 0,
+        "left": 0
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgb(31, 35, 41) none 3px",
+      "boxShadow": "none"
+    },
+    "menusAccessibility": [],
+    "fields": [
+      {
+        "r": "d5879",
+        "tag": "DIV",
+        "a": {
+          "class": "zone-container editor-kit-container notranslate chrome chrome88",
+          "contenteditable": "true",
+          "style": "padding-left: 0px;"
+        },
+        "placeholder": "输入评论",
+        "text": "​",
+        "rect": {
+          "x": 78,
+          "y": 1130,
+          "w": 541,
+          "h": 22
+        }
+      },
+      {
+        "r": "d15615",
+        "tag": "INPUT",
+        "a": {},
+        "placeholder": "粘贴或输入链接",
+        "value": "",
+        "text": "",
+        "selectionStart": 0,
+        "selectionEnd": 0,
+        "rect": {
+          "x": 91,
+          "y": 286.25,
+          "w": 280,
+          "h": 32
+        }
+      }
+    ],
+    "visualViewport": {
+      "scale": 1,
+      "width": 1152,
+      "height": 907,
+      "left": 0,
+      "top": 0
+    },
+    "saveStatus": [
+      {
+        "r": "d15624",
+        "tag": "SPAN",
+        "a": {
+          "class": "note-title__time"
+        },
+        "text": "已经保存到云端"
+      }
+    ],
+    "blockLines": [
+      {
+        "r": "d4",
+        "id": "5",
+        "lines": [
+          "Alpha​"
+        ]
+      },
+      {
+        "r": "d13",
+        "id": "4",
+        "lines": [
+          "Beta​"
+        ]
+      },
+      {
+        "r": "d22",
+        "id": "3",
+        "lines": [
+          "Gamma​"
+        ]
+      },
+      {
+        "r": "d31",
+        "id": "7",
+        "lines": [
+          "​"
+        ]
+      }
+    ]
+  },
+  "states": [],
+  "events": [],
+  "mutations": [],
+  "limits": [
+    "Attribute new values are delivery-time reads; order is DOM observation order, not an internal transaction contract.",
+    "SVG paths excluded; semantic icon attributes retained in UI controls."
+  ],
+  "journal": [
+    {
+      "operation": "G00-D-legacy-C-cleanup-1",
+      "action": {
+        "kind": "nativeKey",
+        "stopLegacy": true,
+        "report": "/Users/mac/Desktop/my/code/my-translation-web/docs/editor/07-menus-and-shortcuts/dom/G00-D-legacy-C-cleanup-meta.json"
+      },
+      "before": {
+        "label": "before-1",
+        "time": "2026-10-19T10:54:47.171Z",
+        "mono": 6032975.200000048,
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "rootConnected": true,
+        "body": {
+          "snapshotRef": "body-87858a39b6763819a01145c4"
+        },
+        "selection": {
+          "type": "Caret",
+          "a": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "f": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "text": "",
+          "ranges": [
+            {
+              "start": {
+                "r": "d15614",
+                "offset": 0
+              },
+              "end": {
+                "r": "d15614",
+                "offset": 0
+              },
+              "collapsed": true
+            }
+          ]
+        },
+        "focus": {
+          "r": "d15615",
+          "tag": "INPUT",
+          "a": {}
+        },
+        "ui": [
+          {
+            "r": "d15613",
+            "tag": "DIV",
+            "a": {
+              "class": "edit-link-panel onlyLink edit-link-panel-narrow"
+            },
+            "rect": {
+              "x": 66,
+              "y": 261.25,
+              "w": 434,
+              "h": 82
+            },
+            "text": "确认",
+            "controls": [
+              {
+                "r": "d15615",
+                "tag": "INPUT",
+                "a": {},
+                "text": "",
+                "value": "",
+                "rect": {
+                  "x": 91,
+                  "y": 286.25,
+                  "w": 280,
+                  "h": 32
+                }
+              },
+              {
+                "r": "d15617",
+                "tag": "BUTTON",
+                "a": {},
+                "text": "确认",
+                "value": "",
+                "rect": {
+                  "x": 395,
+                  "y": 286.25,
+                  "w": 80,
+                  "h": 32
+                }
+              }
+            ]
+          }
+        ],
+        "viewport": [
+          1152,
+          907
+        ],
+        "dpr": 1,
+        "seq": 4035,
+        "eventCount": 2204,
+        "hasFocus": true,
+        "blocks": [
+          {
+            "r": "d4",
+            "id": "5",
+            "type": "text",
+            "text": "Alpha​",
+            "rect": {
+              "x": 64,
+              "y": 235.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          },
+          {
+            "r": "d13",
+            "id": "4",
+            "type": "text",
+            "text": "Beta​",
+            "rect": {
+              "x": 64,
+              "y": 269.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          },
+          {
+            "r": "d22",
+            "id": "3",
+            "type": "text",
+            "text": "Gamma​",
+            "rect": {
+              "x": 64,
+              "y": 303.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          },
+          {
+            "r": "d31",
+            "id": "7",
+            "type": "text",
+            "text": "​",
+            "rect": {
+              "x": 64,
+              "y": 337.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          }
+        ],
+        "fonts": {
+          "status": "loaded"
+        },
+        "live": [],
+        "scroll": [
+          {
+            "r": "d42",
+            "top": 0,
+            "left": 0
+          }
+        ],
+        "focusStyle": {
+          "outline": "rgb(31, 35, 41) none 3px",
+          "boxShadow": "none"
+        },
+        "menusAccessibility": [],
+        "fields": [
+          {
+            "r": "d5879",
+            "tag": "DIV",
+            "a": {
+              "class": "zone-container editor-kit-container notranslate chrome chrome88",
+              "contenteditable": "true",
+              "style": "padding-left: 0px;"
+            },
+            "placeholder": "输入评论",
+            "text": "​",
+            "rect": {
+              "x": 78,
+              "y": 1130,
+              "w": 541,
+              "h": 22
+            }
+          },
+          {
+            "r": "d15615",
+            "tag": "INPUT",
+            "a": {},
+            "placeholder": "粘贴或输入链接",
+            "value": "",
+            "text": "",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "rect": {
+              "x": 91,
+              "y": 286.25,
+              "w": 280,
+              "h": 32
+            }
+          }
+        ],
+        "visualViewport": {
+          "scale": 1,
+          "width": 1152,
+          "height": 907,
+          "left": 0,
+          "top": 0
+        },
+        "saveStatus": [
+          {
+            "r": "d15624",
+            "tag": "SPAN",
+            "a": {
+              "class": "note-title__time"
+            },
+            "text": "已经保存到云端"
+          }
+        ],
+        "blockLines": [
+          {
+            "r": "d4",
+            "id": "5",
+            "lines": [
+              "Alpha​"
+            ]
+          },
+          {
+            "r": "d13",
+            "id": "4",
+            "lines": [
+              "Beta​"
+            ]
+          },
+          {
+            "r": "d22",
+            "id": "3",
+            "lines": [
+              "Gamma​"
+            ]
+          },
+          {
+            "r": "d31",
+            "id": "7",
+            "lines": [
+              "​"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "label": "after-1",
+        "time": "2026-10-19T10:54:47.694Z",
+        "mono": 6033497.899999976,
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "rootConnected": true,
+        "body": {
+          "snapshotRef": "body-87858a39b6763819a01145c4"
+        },
+        "selection": {
+          "type": "Caret",
+          "a": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "f": {
+            "r": "d15614",
+            "offset": 0
+          },
+          "text": "",
+          "ranges": [
+            {
+              "start": {
+                "r": "d15614",
+                "offset": 0
+              },
+              "end": {
+                "r": "d15614",
+                "offset": 0
+              },
+              "collapsed": true
+            }
+          ]
+        },
+        "focus": {
+          "r": "d15615",
+          "tag": "INPUT",
+          "a": {}
+        },
+        "ui": [
+          {
+            "r": "d15613",
+            "tag": "DIV",
+            "a": {
+              "class": "edit-link-panel onlyLink edit-link-panel-narrow"
+            },
+            "rect": {
+              "x": 66,
+              "y": 261.25,
+              "w": 434,
+              "h": 82
+            },
+            "text": "确认",
+            "controls": [
+              {
+                "r": "d15615",
+                "tag": "INPUT",
+                "a": {},
+                "text": "",
+                "value": "",
+                "rect": {
+                  "x": 91,
+                  "y": 286.25,
+                  "w": 280,
+                  "h": 32
+                }
+              },
+              {
+                "r": "d15617",
+                "tag": "BUTTON",
+                "a": {},
+                "text": "确认",
+                "value": "",
+                "rect": {
+                  "x": 395,
+                  "y": 286.25,
+                  "w": 80,
+                  "h": 32
+                }
+              }
+            ]
+          }
+        ],
+        "viewport": [
+          1152,
+          907
+        ],
+        "dpr": 1,
+        "seq": 4035,
+        "eventCount": 2204,
+        "hasFocus": true,
+        "blocks": [
+          {
+            "r": "d4",
+            "id": "5",
+            "type": "text",
+            "text": "Alpha​",
+            "rect": {
+              "x": 64,
+              "y": 235.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          },
+          {
+            "r": "d13",
+            "id": "4",
+            "type": "text",
+            "text": "Beta​",
+            "rect": {
+              "x": 64,
+              "y": 269.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          },
+          {
+            "r": "d22",
+            "id": "3",
+            "type": "text",
+            "text": "Gamma​",
+            "rect": {
+              "x": 64,
+              "y": 303.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          },
+          {
+            "r": "d31",
+            "id": "7",
+            "type": "text",
+            "text": "​",
+            "rect": {
+              "x": 64,
+              "y": 337.25,
+              "w": 624,
+              "h": 26
+            },
+            "parent": "d3"
+          }
+        ],
+        "fonts": {
+          "status": "loaded"
+        },
+        "live": [],
+        "scroll": [
+          {
+            "r": "d42",
+            "top": 0,
+            "left": 0
+          }
+        ],
+        "focusStyle": {
+          "outline": "rgb(31, 35, 41) none 3px",
+          "boxShadow": "none"
+        },
+        "menusAccessibility": [],
+        "fields": [
+          {
+            "r": "d5879",
+            "tag": "DIV",
+            "a": {
+              "class": "zone-container editor-kit-container notranslate chrome chrome88",
+              "contenteditable": "true",
+              "style": "padding-left: 0px;"
+            },
+            "placeholder": "输入评论",
+            "text": "​",
+            "rect": {
+              "x": 78,
+              "y": 1130,
+              "w": 541,
+              "h": 22
+            }
+          },
+          {
+            "r": "d15615",
+            "tag": "INPUT",
+            "a": {},
+            "placeholder": "粘贴或输入链接",
+            "value": "",
+            "text": "",
+            "selectionStart": 0,
+            "selectionEnd": 0,
+            "rect": {
+              "x": 91,
+              "y": 286.25,
+              "w": 280,
+              "h": 32
+            }
+          }
+        ],
+        "visualViewport": {
+          "scale": 1,
+          "width": 1152,
+          "height": 907,
+          "left": 0,
+          "top": 0
+        },
+        "saveStatus": [
+          {
+            "r": "d15624",
+            "tag": "SPAN",
+            "a": {
+              "class": "note-title__time"
+            },
+            "text": "已经保存到云端"
+          }
+        ],
+        "blockLines": [
+          {
+            "r": "d4",
+            "id": "5",
+            "lines": [
+              "Alpha​"
+            ]
+          },
+          {
+            "r": "d13",
+            "id": "4",
+            "lines": [
+              "Beta​"
+            ]
+          },
+          {
+            "r": "d22",
+            "id": "3",
+            "lines": [
+              "Gamma​"
+            ]
+          },
+          {
+            "r": "d31",
+            "id": "7",
+            "lines": [
+              "​"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "failure": null,
+  "driver": "Target-scoped CDP trusted browser input; OS pointer and foreground unchanged; browser focus emulation enabled; insertText explicitly distinct from IME",
+  "_snapshotDictionary": {
+    "body-87858a39b6763819a01145c4": {
+      "r": "d1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "d2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "d3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "d4",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused",
+                    "data-block-type": "text",
+                    "data-block-id": "5",
+                    "data-record-id": "IB9GdaCevoLU4KxrNHkcaleLnBd"
+                  },
+                  "c": [
+                    {
+                      "r": "d2879",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "d2880",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "d2881",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "d2882",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "d15608",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " clientside-link-selection link-selection-token-1792407076693 mock-selection author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "d15609",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "d2969",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "d2970",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "d13",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "4",
+                    "data-record-id": "RUqcdofXToZt5qx0iijc0RQhnog"
+                  },
+                  "c": [
+                    {
+                      "r": "d14",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "d15",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "d16",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "d17",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "d12300",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "d12301",
+                                          "text": "Beta"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "d20",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "d21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "d22",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "3",
+                    "data-record-id": "GX26d5y7zothIyxDMBZcd2aRnwb"
+                  },
+                  "c": [
+                    {
+                      "r": "d23",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "d24",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "d25",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "d26",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "d12298",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "d12299",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "d29",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "d30",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "d31",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "7",
+                    "data-record-id": "LpU0dtiiZoIqdGxzJ5McAUhtnFS"
+                  },
+                  "c": [
+                    {
+                      "r": "d5738",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "d5739",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "d5740",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "d5741",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "d5744",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "d5745",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "d38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "version": 1,
+    "description": "Only repeated full body trees replaced with same-file snapshotRef; refs, order, attributes and text preserved.",
+    "originalCanonicalSha256": "ab0ffa3c26b39426c2a85c8b10f5a1e334191945b2f1704f3581d233783e8f3a",
+    "losslessRoundTripChecked": true
+  }
+}

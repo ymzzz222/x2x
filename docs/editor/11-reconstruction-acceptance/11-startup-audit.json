@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-27",
+  "scope": "S11 startup static index verification only; no functional/browser/project tests",
+  "stageResearchComplete": false,
+  "projectProductionAcceptancePassed": false,
+  "counts": {
+    "groups": 21,
+    "passed": 21,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "manifest.integrity",
+      "passed": true,
+      "files": 2727
+    },
+    {
+      "id": "closed.sources.unchanged",
+      "passed": true,
+      "checked": 2727,
+      "changed": []
+    },
+    {
+      "id": "sources.json.parse",
+      "passed": true,
+      "checked": 2678,
+      "parseErrors": []
+    },
+    {
+      "id": "catalog.source.sections",
+      "passed": true,
+      "checked": 402,
+      "stale": []
+    },
+    {
+      "id": "catalog.identity",
+      "passed": true,
+      "records": 402,
+      "duplicateUnqualifiedIdGroups": 6,
+      "duplicatesRetained": true
+    },
+    {
+      "id": "catalog.semantic.status.honest",
+      "passed": true,
+      "semanticReviewComplete": false,
+      "lexicalSignalsNotAcceptance": true
+    },
+    {
+      "id": "conversion.cells",
+      "passed": true,
+      "cells": 169
+    },
+    {
+      "id": "conversion.classifications",
+      "passed": true,
+      "classes": {
+        "observed_same_type": 6,
+        "observed_directed": 30,
+        "authorized_inference_directed": 126,
+        "authorized_inference_same_type": 7
+      }
+    },
+    {
+      "id": "conversion.observed.evidence",
+      "passed": true,
+      "checked": 36,
+      "missingEvidence": []
+    },
+    {
+      "id": "conversion.directed.source.pairs",
+      "passed": true,
+      "rows": 30,
+      "qualification": "Source table assertion only; this audit is not a new functional run"
+    },
+    {
+      "id": "capabilities.master.rows",
+      "passed": true,
+      "checked": 19
+    },
+    {
+      "id": "scope.entries.dimensions.anomalies",
+      "passed": true,
+      "entries": 8,
+      "dimensions": 7,
+      "anomalyCategories": 7
+    },
+    {
+      "id": "source.link.targets",
+      "passed": true,
+      "checked": 4033,
+      "headingAnchorsAndExternalLinksNotChecked": true
+    },
+    {
+      "id": "snapshot.hashes",
+      "passed": true,
+      "normalized": 759,
+      "original": 238,
+      "otherJsonOutsideDecoderScope": 1681
+    },
+    {
+      "id": "snapshot.original.proof.fresh",
+      "passed": true,
+      "checked": 238,
+      "stale": []
+    },
+    {
+      "id": "identifier.overlay",
+      "passed": true,
+      "originalEvidencePreserved": true,
+      "fullSemanticAuditPending": true
+    },
+    {
+      "id": "new.artifacts.json.parse",
+      "passed": true,
+      "newParseErrors": []
+    },
+    {
+      "id": "new.artifacts.local.links",
+      "passed": true,
+      "checked": 358,
+      "missing": []
+    },
+    {
+      "id": "new.artifacts.size",
+      "passed": true,
+      "lineViolations": []
+    },
+    {
+      "id": "master.started.not.complete",
+      "passed": true,
+      "K01": "source mapping ready",
+      "K02ToK08": "open",
+      "lines": 497
+    },
+    {
+      "id": "existing.failure.retained",
+      "passed": true,
+      "releaseBlocker": "S08 foreign annotation identity assertion failure lacks closure evidence; current project runtime not reverified"
+    }
+  ],
+  "failures": [],
+  "openWork": [
+    "K02 all requirement/observation semantic fields",
+    "K03 complete cross-rule review",
+    "K04 current project contract comparison",
+    "K05 old delta reconstruction, monitoring, paired qualification, naming and dedup semantics",
+    "K06 final coverage",
+    "K07 complete states, constraints, service dependencies and frozen tolerances",
+    "K08 final research and release evidence judgments"
+  ],
+  "limits": [
+    "Source targets and section hashes do not prove semantic correctness",
+    "Snapshot hashes prove reconstruction integrity only",
+    "Static check passes do not close retained functional failures or unverified environment work"
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "time": "2026-10-21T07:37:49.555Z",
+  "scope": "Isolated unchanged external normalizer plus actual project core node parse/serialize and installed Link gate. Not the full configured editor, browser clipboard, collaboration, server, or security release acceptance.",
+  "runtime": {
+    "jsdom": "19.0.0",
+    "canvas": "disabled only in test process; optional native canvas binary missing",
+    "scripts": "JSDOM runScripts omitted",
+    "resources": "JSDOM resources omitted",
+    "network": "no resource loading or external service"
+  },
+  "normalizerHash": "c9aa773d4ffd186bcdc4aad0f3670cad063661dd1e467b4294dff66ed7748381",
+  "nodeBundleHash": "2af02a531264498c55abd560dc235da4571c036206a0cdb63b13c32249691e62",
+  "differences": [
+    "Core real project block nodes; isolated block+ root instead of project page shell; stock list/table registration without project presentation attributes",
+    "No UniqueID, comment/revision marks, collaboration, length gate or target insertion transaction",
+    "No actual DOM view or browser permission changes"
+  ],
+  "cases": [
+    {
+      "name": "plain text and strong preserved",
+      "passed": true,
+      "hostile": false,
+      "intermediate": "<p data-my-paragraph=\"\">Hello <strong>safe</strong></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Hello <strong>safe</strong></span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Hello "
+            },
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "bold"
+                }
+              ],
+              "text": "safe"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "script and event attributes",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<p data-my-paragraph=\"\">Text<script>window.__s08Attack=1</script><img src=\"https://s08-isolation.invalid/no-fetch\" onerror=\"window.__s08Attack=1\"></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Text</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Text"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "SVG and iframe",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<p data-my-paragraph=\"\">Safe<svg onload=\"window.__s08Attack=1\"><script>window.__s08Attack=1</script></svg><iframe srcdoc=\"<script>window.__s08Attack=1</script>\"></iframe></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Safe</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Safe"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "javascript link",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<p data-my-paragraph=\"\"><a href=\"javascript:window.__s08Attack=1\">Link</a></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Link</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Link"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "entity-obfuscated javascript link",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<p data-my-paragraph=\"\"><a href=\"javascript:window.__s08Attack=1\">Link</a></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Link</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Link"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "control-obfuscated javascript link",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<p data-my-paragraph=\"\"><a href=\"java\nscript:window.__s08Attack=1\">Link</a></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Link</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Link"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "data HTML link",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<p data-my-paragraph=\"\"><a href=\"data:text/html,unsafe\">Link</a></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Link</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Link"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "safe HTTPS link",
+      "passed": true,
+      "hostile": false,
+      "intermediate": "<p data-my-paragraph=\"\"><a href=\"https://example.com/path\">Link</a></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\"><a target=\"_blank\" rel=\"noopener noreferrer nofollow\" href=\"https://example.com/path\">Link</a></span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "marks": [
+                {
+                  "type": "link",
+                  "attrs": {
+                    "href": "https://example.com/path",
+                    "target": "_blank",
+                    "rel": "noopener noreferrer nofollow",
+                    "class": null,
+                    "title": null
+                  }
+                }
+              ],
+              "text": "Link"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "table normalizer bypass",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<table onclick=\"window.__s08Attack=1\"><tr><td><p><a href=\"javascript:window.__s08Attack=1\">Cell</a></p></td></tr></table>",
+      "output": "<table style=\"min-width: 25px;\"><colgroup><col style=\"min-width: 25px;\"></colgroup><tbody><tr><td colspan=\"1\" rowspan=\"1\"><div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Cell</span></div></div></td></tr></tbody></table>",
+      "json": [
+        {
+          "type": "table",
+          "content": [
+            {
+              "type": "tableRow",
+              "content": [
+                {
+                  "type": "tableCell",
+                  "attrs": {
+                    "colspan": 1,
+                    "rowspan": 1,
+                    "colwidth": null,
+                    "align": null
+                  },
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      },
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Cell"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "internal marker normalizer bypass",
+      "passed": true,
+      "hostile": true,
+      "intermediate": "<div data-my-page-children><div data-my-paragraph onclick=\"window.__s08Attack=1\">Internal</div></div>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Internal</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Internal"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    },
+    {
+      "name": "definition term and value",
+      "passed": true,
+      "hostile": false,
+      "intermediate": "<p data-my-paragraph=\"\"><dt>Term</dt><dd>Definition</dd></p>",
+      "output": "<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\"></span></div></div>Term<div data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">Definition</span></div></div>",
+      "json": [
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          }
+        },
+        {
+          "type": "text",
+          "text": "Term"
+        },
+        {
+          "type": "myParagraphBlock",
+          "attrs": {
+            "indent": 0,
+            "annotationOrigin": "source",
+            "annotationLayers": []
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Definition"
+            }
+          ]
+        }
+      ],
+      "executableInputWasNeverRun": true
+    }
+  ],
+  "failures": []
+}

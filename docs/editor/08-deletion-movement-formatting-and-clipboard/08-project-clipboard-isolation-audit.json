@@ -1,0 +1,78 @@
+{
+  "time": "2026-10-21T06:56:58.166Z",
+  "scope": "Project unit isolation using full unchanged source modules, mocked OS Clipboard APIs and unrelated imports; not live Feishu refusal or browser integration acceptance",
+  "hashes": {
+    "clipboard": "76b4d89c2cf261adb388848d8ecdf24c208bca174dac255aada5ce074761e628",
+    "menu": "b14f116046bd18e4842fcff19da1fe0a0745295705d3d4952111bd8e5dc5c536"
+  },
+  "substitutions": [
+    "OS clipboard and DOM copy event",
+    "Vue lifecycle and computed refs",
+    "menu anchor, payload builder and deletion spy",
+    "unexercised formatting and conversion imports"
+  ],
+  "cases": [
+    {
+      "name": "both write routes denied",
+      "passed": true,
+      "detail": {
+        "asyncCalls": 1,
+        "fallbackCalls": 1,
+        "rejected": true
+      }
+    },
+    {
+      "name": "async denial falls back to event write",
+      "passed": true,
+      "detail": {
+        "asyncCalls": 1,
+        "fallbackCalls": 1,
+        "rejected": false
+      }
+    },
+    {
+      "name": "async success avoids fallback",
+      "passed": true,
+      "detail": {
+        "asyncCalls": 1,
+        "fallbackCalls": 0,
+        "rejected": false
+      }
+    },
+    {
+      "name": "cut original protected until write fails",
+      "passed": true,
+      "detail": {
+        "result": false,
+        "deletionCalls": 0
+      }
+    },
+    {
+      "name": "cut original protected until write succeeds",
+      "passed": true,
+      "detail": {
+        "result": true,
+        "deletionCalls": 1
+      }
+    },
+    {
+      "name": "readonly and AI lock prevent clipboard and deletion",
+      "passed": true,
+      "detail": [
+        false,
+        false
+      ]
+    },
+    {
+      "name": "missing event clipboard data rejects synchronous write",
+      "passed": true,
+      "detail": "no clipboard write"
+    },
+    {
+      "name": "empty payload rejects before any OS route",
+      "passed": true,
+      "detail": "rejected before mocks"
+    }
+  ],
+  "failures": []
+}

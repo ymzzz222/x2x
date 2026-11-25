@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 2,
+  "totalS10Pairs": 12,
+  "scope": "Revision soft break and ordered conversion/rejection history only",
+  "files": [
+    {
+      "file": "dom/J03-revision-soft-break-R1.json",
+      "sha256": "c320f9314db73eb1e131d6e62db38ebcb85f66c98cfbc71ad279087bd5793c27"
+    },
+    {
+      "file": "dom/J03-revision-soft-break-R2.json",
+      "sha256": "e8fac50b04fa5b2f8d350c086c73693561ccdd0722edd659c8f35a8308c3156e"
+    },
+    {
+      "file": "dom/J03-revision-ordered-R1.json",
+      "sha256": "b537ab18c29f5a3bd7fb6bffe2a9cdec8bc96b8ffc2ff35f48acd00c62b52806"
+    },
+    {
+      "file": "dom/J03-revision-ordered-R2.json",
+      "sha256": "f3d0bcca39dbe825c051cb468bf8f5a7acdc052b3329db0a4e589a9a1c2a57ef"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J03-revision-soft-break-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1 actual line trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2 actual line trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1 ordered marker trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2 ordered marker trajectory",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

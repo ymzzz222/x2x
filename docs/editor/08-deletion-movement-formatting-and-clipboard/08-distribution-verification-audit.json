@@ -1,0 +1,153 @@
+{
+  "time": "2026-10-22T12:24:51.598Z",
+  "scope": "Native Feishu soft-line and multiblock distributions, including one observed total above project 460000; not discovery of Feishu global maximum",
+  "cases": [
+    {
+      "name": "H07-full-soft-line-logical-100000-R1.json",
+      "passed": true,
+      "assertions": [
+        "same source four blocks and two actual ace-lines inside Gamma",
+        "exact native payload and actual Soft:4 caret",
+        "title unchanged",
+        "no runtime errors or capture overflow",
+        "exact long text and two soft lines on apply and redo",
+        "exact full original restoration including soft line",
+        "no rejection alert",
+        "exact accepted Undo Redo Undo"
+      ]
+    },
+    {
+      "name": "H07-full-soft-line-logical-100000-R2.json",
+      "passed": true,
+      "assertions": [
+        "same source four blocks and two actual ace-lines inside Gamma",
+        "exact native payload and actual Soft:4 caret",
+        "title unchanged",
+        "no runtime errors or capture overflow",
+        "exact long text and two soft lines on apply and redo",
+        "exact full original restoration including soft line",
+        "no rejection alert",
+        "exact accepted Undo Redo Undo"
+      ]
+    },
+    {
+      "name": "soft-accepted-pair",
+      "passed": true,
+      "assertions": [
+        "same source payload output both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-soft-line-innerText-100001-R1.json",
+      "passed": true,
+      "assertions": [
+        "same source four blocks and two actual ace-lines inside Gamma",
+        "exact native payload and actual Soft:4 caret",
+        "title unchanged",
+        "no runtime errors or capture overflow",
+        "rejection first Undo and marker Redo preserve exact source",
+        "second Undo removes only known prior marker",
+        "actual block limit alert",
+        "exact rejection sentinel history"
+      ]
+    },
+    {
+      "name": "H07-full-soft-line-innerText-100001-R2.json",
+      "passed": true,
+      "assertions": [
+        "same source four blocks and two actual ace-lines inside Gamma",
+        "exact native payload and actual Soft:4 caret",
+        "title unchanged",
+        "no runtime errors or capture overflow",
+        "rejection first Undo and marker Redo preserve exact source",
+        "second Undo removes only known prior marker",
+        "actual block limit alert",
+        "exact rejection sentinel history"
+      ]
+    },
+    {
+      "name": "soft-rejected-pair",
+      "passed": true,
+      "assertions": [
+        "same source payload output both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-multiblock-120000-R1.json",
+      "passed": true,
+      "assertions": [
+        "fixed four block soft-line source",
+        "exact single native multiline clipboard payload",
+        "all inserted paragraphs independently read at exact length and text on apply and redo",
+        "Undo and final Undo restore exact original text types styles parents and soft lines",
+        "all original block IDs restored",
+        "new pasted block IDs are recreated on redo; identity difference retained",
+        "title unchanged and no rejection alert",
+        "exact trusted Undo Redo Undo",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "H07-full-multiblock-120000-R2.json",
+      "passed": true,
+      "assertions": [
+        "fixed four block soft-line source",
+        "exact single native multiline clipboard payload",
+        "all inserted paragraphs independently read at exact length and text on apply and redo",
+        "Undo and final Undo restore exact original text types styles parents and soft lines",
+        "all original block IDs restored",
+        "new pasted block IDs are recreated on redo; identity difference retained",
+        "title unchanged and no rejection alert",
+        "exact trusted Undo Redo Undo",
+        "no runtime errors or capture overflow"
+      ]
+    },
+    {
+      "name": "multiblock-120000-pair",
+      "passed": true,
+      "assertions": [
+        "same payload all distributed text and restored source both rounds"
+      ]
+    },
+    {
+      "name": "H07-full-document-over-460000-R1.json",
+      "passed": true,
+      "assertions": [
+        "fixed four block soft-line source",
+        "exact single native multiline clipboard payload",
+        "all inserted paragraphs independently read at exact length and text on apply and redo",
+        "Undo and final Undo restore exact original text types styles parents and soft lines",
+        "all original block IDs restored",
+        "new pasted block IDs are recreated on redo; identity difference retained",
+        "title unchanged and no rejection alert",
+        "exact trusted Undo Redo Undo",
+        "no runtime errors or capture overflow",
+        "observed logical document text exceeds project 460000 without assigning a Feishu maximum"
+      ]
+    },
+    {
+      "name": "H07-full-document-over-460000-R2.json",
+      "passed": true,
+      "assertions": [
+        "fixed four block soft-line source",
+        "exact single native multiline clipboard payload",
+        "all inserted paragraphs independently read at exact length and text on apply and redo",
+        "Undo and final Undo restore exact original text types styles parents and soft lines",
+        "all original block IDs restored",
+        "new pasted block IDs are recreated on redo; identity difference retained",
+        "title unchanged and no rejection alert",
+        "exact trusted Undo Redo Undo",
+        "no runtime errors or capture overflow",
+        "observed logical document text exceeds project 460000 without assigning a Feishu maximum"
+      ]
+    },
+    {
+      "name": "document-over-460000-pair",
+      "passed": true,
+      "assertions": [
+        "same payload all distributed text and restored source both rounds"
+      ]
+    }
+  ],
+  "failures": []
+}

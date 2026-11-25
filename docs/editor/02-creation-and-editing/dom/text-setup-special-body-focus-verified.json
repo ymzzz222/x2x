@@ -1,0 +1,75 @@
+{
+  "session": "S02-1791940824848",
+  "segment": "special-characters-1791950265361",
+  "normalization": "feishu -> maiya DOM identifiers only",
+  "overflow": 0,
+  "reconstruction": "Expand $dom recursively through domObjects. Set time then apply RFC 6902 baselinePatch/beforePatch.",
+  "baseline": {"blocks":[{"node":{"$dom":"d37"},"parent":{"$dom":"d23"},"parentBlock":"n19","parentBlockNode":{"$dom":"d24"}}],"compositionActive":false,"connected":true,"focus":{"$dom":"d34"},"internalScroll":[{"clientHeight":899,"node":{"$dom":"d39"},"scrollHeight":963,"scrollLeft":0,"scrollTop":0}],"lines":[{"lines":[{"leaves":[{"$dom":"d25"}],"line":"n3"}],"zone":"n2"},{"lines":[{"leaves":[{"$dom":"d38"}],"line":"n1988"}],"zone":"n1987"}],"outer":[1674,1050],"popup":[{"node":{"$dom":"d17"},"rect":{"bottom":64,"height":0,"left":0,"right":1207,"top":64,"width":1207,"x":0,"y":64},"text":""}],"root":{"$dom":"d3"},"rootParents":[{"$dom":"d18"},{"$dom":"d19"}],"saveLabels":["最近修改: 昨天 18:39分享编辑","已经保存到云端"],"selection":{"anchor":"n144","anchorOffset":29,"collapsed":true,"focus":"n144","focusOffset":29,"type":"Range"},"selectionContext":{"anchorBlock":null,"anchorZone":null,"focusBlock":null,"focusZone":null},"time":"2026-10-14T03:57:45.362Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1207,963,1],"zones":[{"node":{"$dom":"d8"},"parents":[{"$dom":"d9"},{"$dom":"d10"}],"rect":{"bottom":167.25,"height":55.25,"left":193.5,"right":1013.5,"top":112,"width":820,"x":193.5,"y":112},"style":{"color":"rgb(31, 35, 41)","fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","whiteSpace":"break-spaces"}},{"node":{"$dom":"d31"},"parents":[{"$dom":"d32"},{"$dom":"d33"}],"rect":{"bottom":261.25,"height":26,"left":181.5,"right":1013.5,"top":235.25,"width":832,"x":181.5,"y":235.25},"style":{"color":"rgb(31, 35, 41)","fontSize":"16px","fontWeight":"400","lineHeight":"26px","whiteSpace":"break-spaces"}}]},
+  "domObjects": {
+    "d1": {"attrs":{"class":"block docx-text-block isEmpty focused","data-block-id":"179","data-block-type":"text","data-record-id":"WwOEdYRtzozYL1xDwQuceXsZnGV"},"ref":"n2020","tag":"DIV"},
+    "d2": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"179"},"ref":"n2023","tag":"DIV"},
+    "d3": {"attrs":{"class":"page-block root-block","contenteditable":"true","data-content-editable-root":"true","data-slate-editor":"true","spellcheck":"false","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"},"ref":"n1","tag":"DIV"},
+    "d4": {"attrs":{},"ref":"n24"},
+    "d5": {"ref":"n5","text":"​"},
+    "d6": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d5"}],"ref":"n4","tag":"SPAN"},
+    "d7": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d6"}],"ref":"n3","tag":"DIV"},
+    "d8": {"attrs":{"class":"zone-container text-editor","contenteditable":"true","data-placeholder":"请输入标题","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"1"},"children":[{"$dom":"d7"}],"ref":"n2","tag":"DIV"},
+    "d9": {"attrs":{"class":"page-block-content left flash-block-content page-block-title-empty","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625; line-height: 1.625;"},"ref":"n6","tag":"H1"},
+    "d10": {"attrs":{"class":"page-block-header page-block-header__custom_icon"},"ref":"n7","tag":"DIV"},
+    "d11": {"ref":"n2026","text":"​"},
+    "d12": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d11"}],"ref":"n2025","tag":"SPAN"},
+    "d13": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d12"}],"ref":"n2024","tag":"DIV"},
+    "d14": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"179"},"children":[{"$dom":"d13"}],"ref":"n2023","tag":"DIV"},
+    "d15": {"attrs":{"class":"text-block"},"ref":"n2022","tag":"DIV"},
+    "d16": {"attrs":{"class":"text-block-wrapper"},"ref":"n2021","tag":"DIV"},
+    "d17": {"attrs":{"class":"docx-popup-container"},"ref":"n14","tag":"DIV"},
+    "d18": {"attrs":{"class":"first-line-empty","id":"placeholder-wrapper-KgIBm3t5"},"ref":"n15","tag":"DIV"},
+    "d19": {"attrs":{},"ref":"n16","tag":"DIV"},
+    "d20": {"attrs":{"class":"text-block"},"children":[{"$dom":"d14"}],"ref":"n2022","tag":"DIV"},
+    "d21": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d20"}],"ref":"n2021","tag":"DIV"},
+    "d22": {"attrs":{"class":"block docx-text-block isEmpty focused","data-block-id":"179","data-block-type":"text","data-record-id":"WwOEdYRtzozYL1xDwQuceXsZnGV"},"children":[{"$dom":"d21"}],"ref":"n2020","tag":"DIV"},
+    "d23": {"attrs":{"class":"render-unit-wrapper"},"ref":"n18","tag":"DIV"},
+    "d24": {"attrs":{"class":"block docx-page-block isEmpty","data-block-id":"1","data-block-type":"page","data-record-id":"HWqedGGcOo7LXSxpY0ncFEnAned"},"ref":"n19","tag":"DIV"},
+    "d25": {"codePoints":[8203],"enter":true,"ref":"n4","text":"​"},
+    "d26": {"codePoints":[8203],"enter":true,"ref":"n2025","text":"​"},
+    "d27": {"attrs":{"class":"bear-web-x-container docx-in-wiki width-transition keyboard-mode","style":"overflow-anchor: none;"},"ref":"n20","tag":"DIV"},
+    "d28": {"ref":"n1990","text":"​"},
+    "d29": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d28"}],"ref":"n1989","tag":"SPAN"},
+    "d30": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d29"}],"ref":"n1988","tag":"DIV"},
+    "d31": {"attrs":{"class":"zone-container text-editor","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"176"},"children":[{"$dom":"d30"}],"ref":"n1987","tag":"DIV"},
+    "d32": {"attrs":{"class":"text-block"},"ref":"n1986","tag":"DIV"},
+    "d33": {"attrs":{"class":"text-block-wrapper"},"ref":"n1985","tag":"DIV"},
+    "d34": {"attrs":{"class":"layout-column ccm-scope wiki","data-abbreviation-enabled":"true","data-smart-correction":"true","id":"zh-CN"},"ref":"n144","tag":"BODY"},
+    "d35": {"attrs":{"class":"text-block"},"children":[{"$dom":"d31"}],"ref":"n1986","tag":"DIV"},
+    "d36": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d35"}],"ref":"n1985","tag":"DIV"},
+    "d37": {"attrs":{"class":"block docx-text-block isEmpty","data-block-id":"176","data-block-type":"text","data-record-id":"SxVbdbvFZoj6LPxFMrncHDBgndf"},"children":[{"$dom":"d36"}],"ref":"n1984","tag":"DIV"},
+    "d38": {"codePoints":[8203],"enter":true,"ref":"n1989","text":"​"},
+    "d39": {"attrs":{"class":"bear-web-x-container docx-in-wiki width-transition","style":"overflow-anchor: none;"},"ref":"n20","tag":"DIV"}
+  },
+  "runs": [
+    {
+      "label": "SETUP-special-body-focus-verified",
+      "before": {"baselinePatch":[{"op":"remove","path":"/rootParents"},{"op":"remove","path":"/blocks"},{"op":"remove","path":"/selectionContext"},{"op":"remove","path":"/lines"},{"op":"remove","path":"/internalScroll"},{"op":"remove","path":"/compositionActive"},{"op":"replace","path":"/zones/1/node/ref","value":"n2023"},{"op":"replace","path":"/zones/1/node/attrs/data-zone-id","value":"179"},{"op":"replace","path":"/zones/1/node/children/0/ref","value":"n2024"},{"op":"replace","path":"/zones/1/node/children/0/children/0/ref","value":"n2025"},{"op":"replace","path":"/zones/1/node/children/0/children/0/children/0/ref","value":"n2026"},{"op":"replace","path":"/zones/1/parents/0/ref","value":"n2022"},{"op":"replace","path":"/zones/1/parents/1/ref","value":"n2021"},{"op":"replace","path":"/focus/ref","value":"n1"},{"op":"replace","path":"/focus/tag","value":"DIV"},{"op":"remove","path":"/focus/attrs/id"},{"op":"remove","path":"/focus/attrs/data-smart-correction"},{"op":"remove","path":"/focus/attrs/data-abbreviation-enabled"},{"op":"replace","path":"/focus/attrs/class","value":"page-block root-block"},{"op":"add","path":"/focus/attrs/data-slate-editor","value":"true"},{"op":"add","path":"/focus/attrs/contenteditable","value":"true"},{"op":"add","path":"/focus/attrs/spellcheck","value":"false"},{"op":"add","path":"/focus/attrs/data-content-editable-root","value":"true"},{"op":"add","path":"/focus/attrs/style","value":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"},{"op":"replace","path":"/selection/anchor","value":"n5"},{"op":"replace","path":"/selection/anchorOffset","value":1},{"op":"replace","path":"/selection/focus","value":"n5"},{"op":"replace","path":"/selection/focusOffset","value":1},{"op":"replace","path":"/selection/type","value":"Caret"}],"time":"2026-10-14T04:04:52.483Z"},
+      "after": {"beforePatch":[{"op":"replace","path":"/zones/1/node/attrs/class","value":"zone-container text-editor text-editor-focused"},{"op":"replace","path":"/selection/anchor","value":"n2026"},{"op":"replace","path":"/selection/focus","value":"n2026"}],"time":"2026-10-14T04:05:14.274Z"},
+      "changes": [
+        {"attribute":"class","batch":2246,"old":"block docx-text-block isEmpty","seq":253,"target":{"$dom":"d1"},"type":"attributes","value":"block docx-text-block isEmpty focused"},
+        {"attribute":"class","batch":2246,"old":"zone-container text-editor","seq":254,"target":{"$dom":"d2"},"type":"attributes","value":"zone-container text-editor text-editor-focused"}
+      ],
+      "events": [
+        {"isTrusted":true,"selection":{"anchor":"n5","anchorOffset":1,"collapsed":true,"focus":"n5","focusOffset":1,"type":"Caret"},"seq":282,"target":{"$dom":"d3"},"type":"focusin"},
+        {"isTrusted":true,"selection":{"anchor":"n2026","anchorOffset":1,"collapsed":true,"focus":"n2026","focusOffset":1,"type":"Caret"},"seq":283,"target":{"$dom":"d4"},"type":"selectionchange"},
+        {"code":"ArrowRight","isComposing":false,"isTrusted":true,"key":"ArrowRight","repeat":false,"selection":{"anchor":"n2026","anchorOffset":1,"collapsed":true,"focus":"n2026","focusOffset":1,"type":"Caret"},"seq":284,"target":{"$dom":"d3"},"type":"keydown"},
+        {"isTrusted":true,"selection":{"anchor":"n2026","anchorOffset":1,"collapsed":true,"focus":"n2026","focusOffset":1,"type":"Caret"},"seq":285,"target":{"$dom":"d3"},"type":"focusout"}
+      ],
+      "errors": [],
+      "globalKeys": [
+        {"altKey":false,"code":"ArrowRight","ctrlKey":false,"documentFocused":true,"isComposing":false,"isTrusted":true,"key":"ArrowRight","metaKey":false,"repeat":false,"selection":{"anchor":"n2026","anchorOffset":1,"collapsed":true,"focus":"n2026","focusOffset":1,"type":"Caret"},"shiftKey":false,"targetClass":"page-block root-block","targetTag":"DIV","time":"2026-10-14T04:05:09.099Z"}
+      ],
+      "steps": [{"key":{"alt":false,"code":"ArrowRight","isTrusted":true,"key":"ArrowRight","meta":false,"shift":false,"time":"2026-10-14T04:05:09.099Z"},"state":{"blocks":[{"node":{"$dom":"d22"},"parent":{"$dom":"d23"},"parentBlock":"n19","parentBlockNode":{"$dom":"d24"}}],"compositionActive":false,"connected":true,"focus":{"$dom":"d3"},"internalScroll":[{"clientHeight":899,"node":{"$dom":"d27"},"scrollHeight":963,"scrollLeft":0,"scrollTop":0}],"lines":[{"lines":[{"leaves":[{"$dom":"d25"}],"line":"n3"}],"zone":"n2"},{"lines":[{"leaves":[{"$dom":"d26"}],"line":"n2024"}],"zone":"n2023"}],"outer":[1674,1050],"popup":[{"node":{"$dom":"d17"},"rect":{"bottom":64,"height":0,"left":300,"right":1674,"top":64,"width":1374,"x":300,"y":64},"text":""}],"root":{"$dom":"d3"},"rootParents":[{"$dom":"d18"},{"$dom":"d19"}],"saveLabels":["最近修改: 昨天 18:39分享编辑","已经保存到云端"],"selection":{"anchor":"n2026","anchorOffset":1,"collapsed":true,"focus":"n2026","focusOffset":1,"type":"Caret"},"selectionContext":{"anchorBlock":"n2020","anchorZone":"n2023","focusBlock":"n2020","focusZone":"n2023"},"time":"2026-10-14T04:05:09.110Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d8"},"parents":[{"$dom":"d9"},{"$dom":"d10"}],"rect":{"bottom":167.25,"height":55.25,"left":577,"right":1397,"top":112,"width":820,"x":577,"y":112},"style":{"color":"rgb(31, 35, 41)","fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","whiteSpace":"break-spaces"}},{"node":{"$dom":"d14"},"parents":[{"$dom":"d15"},{"$dom":"d16"}],"rect":{"bottom":261.25,"height":26,"left":565,"right":1397,"top":235.25,"width":832,"x":565,"y":235.25},"style":{"color":"rgb(31, 35, 41)","fontSize":"16px","fontWeight":"400","lineHeight":"26px","whiteSpace":"break-spaces"}}]}}],
+      "editorAfter": {"blocks":[{"node":{"$dom":"d22"},"parent":{"$dom":"d23"},"parentBlock":"n19","parentBlockNode":{"$dom":"d24"}}],"compositionActive":false,"connected":true,"focus":{"$dom":"d3"},"internalScroll":[{"clientHeight":899,"node":{"$dom":"d27"},"scrollHeight":963,"scrollLeft":0,"scrollTop":0}],"lines":[{"lines":[{"leaves":[{"$dom":"d25"}],"line":"n3"}],"zone":"n2"},{"lines":[{"leaves":[{"$dom":"d26"}],"line":"n2024"}],"zone":"n2023"}],"outer":[1674,1050],"popup":[{"node":{"$dom":"d17"},"rect":{"bottom":64,"height":0,"left":300,"right":1674,"top":64,"width":1374,"x":300,"y":64},"text":""}],"root":{"$dom":"d3"},"rootParents":[{"$dom":"d18"},{"$dom":"d19"}],"saveLabels":["最近修改: 昨天 18:39分享编辑","已经保存到云端"],"selection":{"anchor":"n2026","anchorOffset":1,"collapsed":true,"focus":"n2026","focusOffset":1,"type":"Caret"},"selectionContext":{"anchorBlock":"n2020","anchorZone":"n2023","focusBlock":"n2020","focusZone":"n2023"},"time":"2026-10-14T04:05:09.111Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d8"},"parents":[{"$dom":"d9"},{"$dom":"d10"}],"rect":{"bottom":167.25,"height":55.25,"left":577,"right":1397,"top":112,"width":820,"x":577,"y":112},"style":{"color":"rgb(31, 35, 41)","fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","whiteSpace":"break-spaces"}},{"node":{"$dom":"d14"},"parents":[{"$dom":"d15"},{"$dom":"d16"}],"rect":{"bottom":261.25,"height":26,"left":565,"right":1397,"top":235.25,"width":832,"x":565,"y":235.25},"style":{"color":"rgb(31, 35, 41)","fontSize":"16px","fontWeight":"400","lineHeight":"26px","whiteSpace":"break-spaces"}}]},
+      "pastes": [],
+      "linebreakPastes": [],
+      "specialPastes": []
+    }
+  ]
+}

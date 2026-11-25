@@ -1,0 +1,4903 @@
+{
+  "case": "G09-F-block-focus-tab-R2",
+  "session": "S07-F-native",
+  "instanceId": "S07-F-1792460469655",
+  "normalization": "DOM identifiers feishu -> maiya; text and source URL unchanged",
+  "derivation": {
+    "source": "G09-F-block-tab-R2.json",
+    "sourceExpandedCanonicalSha256": "995fe19d2c8b89f6bf18f1836d6eb5ca958f421f43db6d19fe70a7bd79441b39",
+    "rule": "Window starts at existing capture-phase first-Tab snapshot after native menu preparation. No state synthesized. Raw preparation retained in source.",
+    "sourceStateLabels": [
+      "G09-F-block-tab-R2:before:keydown:Tab",
+      "G09-F-block-tab-R2:before:keydown:Tab",
+      "G09-F-block-tab-R2:before:keydown:Escape"
+    ],
+    "firstKeyEventId": 82,
+    "escapeAfterCaveat": "Final after may follow outside header click; no isolated Escape after snapshot inferred."
+  },
+  "before": {
+    "label": "G09-F-block-tab-R2:before:keydown:Tab",
+    "time": "2026-10-20T01:50:56.443Z",
+    "mono": 761845.8999999762,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-87067feb67944b3526ef8fe9"
+    },
+    "selection": {
+      "type": "Caret",
+      "a": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "f": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "end": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "collapsed": true
+        }
+      ]
+    },
+    "focus": {
+      "r": "f41",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block root-block",
+        "contenteditable": "true",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+      }
+    },
+    "ui": [
+      {
+        "r": "f655",
+        "tag": "DIV",
+        "a": {
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+          "style": "outline: transparent; max-height: 629.75px;"
+        },
+        "rect": {
+          "x": 118,
+          "y": 265.25,
+          "w": 232,
+          "h": 549
+        },
+        "text": "问问豆包\n缩进和对齐\n颜色\n评论\n剪切\n复制\n翻译\n删除\n分享\n转换为子文档\n保存为模板\n复制链接\n在下方添加",
+        "controls": [
+          {
+            "r": "f657",
+            "tag": "DIV",
+            "a": {
+              "class": "doubao-ai-partial-rewriting panel-menu-item"
+            },
+            "text": "问问豆包",
+            "rect": {
+              "x": 127,
+              "y": 274.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f795",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DoubaoworkOutlined"
+            },
+            "rect": {
+              "x": 135,
+              "y": 282.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f796",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TextOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f797",
+            "tag": "svg",
+            "a": {
+              "data-icon": "H1Outlined"
+            },
+            "rect": {
+              "x": 170.390625,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f798",
+            "tag": "svg",
+            "a": {
+              "data-icon": "H2Outlined"
+            },
+            "rect": {
+              "x": 206.78125,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f799",
+            "tag": "svg",
+            "a": {
+              "data-icon": "H3Outlined"
+            },
+            "rect": {
+              "x": 243.171875,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f800",
+            "tag": "svg",
+            "a": {
+              "data-icon": "OrderListOutlined"
+            },
+            "rect": {
+              "x": 279.5625,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f801",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DisorderListOutlined"
+            },
+            "rect": {
+              "x": 315.953125,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f802",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TodoOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f803",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CodeblockOutlined"
+            },
+            "rect": {
+              "x": 170.390625,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f804",
+            "tag": "svg",
+            "a": {
+              "data-icon": "ReferenceOutlined"
+            },
+            "rect": {
+              "x": 206.78125,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f805",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CalloutOutlined"
+            },
+            "rect": {
+              "x": 243.171875,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f806",
+            "tag": "svg",
+            "a": {
+              "data-icon": "LinkRecordOutlined"
+            },
+            "rect": {
+              "x": 279.5625,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f689",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "缩进和对齐",
+            "rect": {
+              "x": 127,
+              "y": 394.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f807",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TypographyOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 401.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f808",
+            "tag": "svg",
+            "a": {
+              "data-icon": "RightSmallCcmOutlined"
+            },
+            "rect": {
+              "x": 321,
+              "y": 402.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f699",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "颜色",
+            "rect": {
+              "x": 127,
+              "y": 426.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f809",
+            "tag": "svg",
+            "a": {
+              "data-icon": "StyleSetOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 433.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f810",
+            "tag": "svg",
+            "a": {
+              "data-icon": "RightSmallCcmOutlined"
+            },
+            "rect": {
+              "x": 321,
+              "y": 434.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f710",
+            "tag": "DIV",
+            "a": {
+              "class": "comment-item panel-menu-item"
+            },
+            "text": "评论",
+            "rect": {
+              "x": 127,
+              "y": 467.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f811",
+            "tag": "svg",
+            "a": {
+              "data-icon": "AddCommentOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 474.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f718",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "剪切",
+            "rect": {
+              "x": 127,
+              "y": 499.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f812",
+            "tag": "svg",
+            "a": {
+              "data-icon": "maiyaclipOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 506.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f726",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "复制",
+            "rect": {
+              "x": 127,
+              "y": 531.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f813",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CopyOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 538.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f734",
+            "tag": "DIV",
+            "a": {
+              "class": "translate-item panel-menu-item"
+            },
+            "text": "翻译",
+            "rect": {
+              "x": 127,
+              "y": 563.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f814",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TranslateOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 570.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f742",
+            "tag": "DIV",
+            "a": {
+              "class": "delete-item panel-menu-item"
+            },
+            "text": "删除",
+            "rect": {
+              "x": 127,
+              "y": 595.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f815",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DeleteTrashOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 602.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f751",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "分享",
+            "rect": {
+              "x": 127,
+              "y": 636.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f816",
+            "tag": "svg",
+            "a": {
+              "data-icon": "SharewordsOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 643.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f759",
+            "tag": "DIV",
+            "a": {
+              "class": "newChildDocWithContent-item panel-menu-item"
+            },
+            "text": "转换为子文档",
+            "rect": {
+              "x": 127,
+              "y": 668.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f817",
+            "tag": "svg",
+            "a": {
+              "class": "menu_ud_icon"
+            },
+            "rect": {
+              "x": 134,
+              "y": 675.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f766",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "保存为模板",
+            "rect": {
+              "x": 127,
+              "y": 700.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f818",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TemplateOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 707.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f774",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "复制链接",
+            "rect": {
+              "x": 127,
+              "y": 732.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f819",
+            "tag": "svg",
+            "a": {
+              "data-icon": "BlocklinkOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 739.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f783",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "在下方添加",
+            "rect": {
+              "x": 127,
+              "y": 773.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f820",
+            "tag": "svg",
+            "a": {
+              "data-icon": "NewJoinMeetingOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 780.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f821",
+            "tag": "svg",
+            "a": {
+              "data-icon": "RightSmallCcmOutlined"
+            },
+            "rect": {
+              "x": 321,
+              "y": 781.25,
+              "w": 16,
+              "h": 16
+            }
+          }
+        ]
+      },
+      {
+        "r": "f644",
+        "tag": "DIV",
+        "a": {
+          "class": "hover-drag-icon-wrapper"
+        },
+        "rect": {
+          "x": 118,
+          "y": 235.25,
+          "w": 42,
+          "h": 26
+        },
+        "text": "",
+        "controls": [
+          {
+            "r": "f648",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TextOutlined"
+            },
+            "rect": {
+              "x": 125,
+              "y": 241.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f649",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DragOutlined"
+            },
+            "rect": {
+              "x": 144,
+              "y": 241.25,
+              "w": 14,
+              "h": 14
+            }
+          }
+        ]
+      }
+    ],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 92,
+    "eventCount": 82,
+    "instanceId": "S07-F-1792460469655",
+    "hasFocus": true,
+    "currentRootSame": true,
+    "fields": [
+      {
+        "r": "f40",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "readonly": "",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+          "data-current-root-block-id": "1"
+        },
+        "value": " ",
+        "selectionStart": 0,
+        "selectionEnd": 1
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgba(0, 0, 0, 0) solid 0px",
+      "boxShadow": "none"
+    },
+    "menuFocus": [
+      {
+        "r": "f655",
+        "a": {
+          "tabindex": "0",
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+          "style": "outline: transparent; max-height: 629.75px;"
+        },
+        "tabIndex": 0,
+        "controls": [
+          {
+            "r": "f657",
+            "a": {
+              "class": "doubao-ai-partial-rewriting panel-menu-item",
+              "data-name": "ask-doubao"
+            },
+            "tabIndex": -1,
+            "text": "问问豆包",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f689",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "AlignList"
+            },
+            "tabIndex": -1,
+            "text": "缩进和对齐",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f699",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "BlockColor"
+            },
+            "tabIndex": -1,
+            "text": "颜色",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f710",
+            "a": {
+              "class": "comment-item panel-menu-item",
+              "data-name": "comment"
+            },
+            "tabIndex": -1,
+            "text": "评论",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f718",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "cut"
+            },
+            "tabIndex": -1,
+            "text": "剪切",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f726",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "copy"
+            },
+            "tabIndex": -1,
+            "text": "复制",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f734",
+            "a": {
+              "class": "translate-item panel-menu-item",
+              "data-name": "translate"
+            },
+            "tabIndex": -1,
+            "text": "翻译",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f742",
+            "a": {
+              "class": "delete-item panel-menu-item",
+              "data-name": "delete"
+            },
+            "tabIndex": -1,
+            "text": "删除",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f751",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "shareTextLink"
+            },
+            "tabIndex": -1,
+            "text": "分享",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f759",
+            "a": {
+              "class": "newChildDocWithContent-item panel-menu-item",
+              "data-name": "newChildDocWithContent"
+            },
+            "tabIndex": -1,
+            "text": "转换为子文档",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f766",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "saveBlockTemplate"
+            },
+            "tabIndex": -1,
+            "text": "保存为模板",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f774",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "copyAnchorLink"
+            },
+            "tabIndex": -1,
+            "text": "复制链接",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f783",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "addInNewLine"
+            },
+            "tabIndex": -1,
+            "text": "在下方添加",
+            "outline": "rgb(43, 47, 54) none 3px"
+          }
+        ]
+      }
+    ],
+    "frameFocus": [
+      {
+        "frame": "f425",
+        "connected": true,
+        "activeTag": "BODY",
+        "activeAttrs": {}
+      }
+    ]
+  },
+  "featureStates": [
+    {
+      "label": "G09-F-block-tab-R2:before:keydown:Tab",
+      "time": "2026-10-20T01:50:56.443Z",
+      "mono": 761845.8999999762,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-87067feb67944b3526ef8fe9"
+      },
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [
+        {
+          "r": "f655",
+          "tag": "DIV",
+          "a": {
+            "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+            "style": "outline: transparent; max-height: 629.75px;"
+          },
+          "rect": {
+            "x": 118,
+            "y": 265.25,
+            "w": 232,
+            "h": 549
+          },
+          "text": "问问豆包\n缩进和对齐\n颜色\n评论\n剪切\n复制\n翻译\n删除\n分享\n转换为子文档\n保存为模板\n复制链接\n在下方添加",
+          "controls": [
+            {
+              "r": "f657",
+              "tag": "DIV",
+              "a": {
+                "class": "doubao-ai-partial-rewriting panel-menu-item"
+              },
+              "text": "问问豆包",
+              "rect": {
+                "x": 127,
+                "y": 274.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f795",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DoubaoworkOutlined"
+              },
+              "rect": {
+                "x": 135,
+                "y": 282.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f796",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TextOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f797",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H1Outlined"
+              },
+              "rect": {
+                "x": 170.390625,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f798",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H2Outlined"
+              },
+              "rect": {
+                "x": 206.78125,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f799",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H3Outlined"
+              },
+              "rect": {
+                "x": 243.171875,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f800",
+              "tag": "svg",
+              "a": {
+                "data-icon": "OrderListOutlined"
+              },
+              "rect": {
+                "x": 279.5625,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f801",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DisorderListOutlined"
+              },
+              "rect": {
+                "x": 315.953125,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f802",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TodoOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f803",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CodeblockOutlined"
+              },
+              "rect": {
+                "x": 170.390625,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f804",
+              "tag": "svg",
+              "a": {
+                "data-icon": "ReferenceOutlined"
+              },
+              "rect": {
+                "x": 206.78125,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f805",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CalloutOutlined"
+              },
+              "rect": {
+                "x": 243.171875,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f806",
+              "tag": "svg",
+              "a": {
+                "data-icon": "LinkRecordOutlined"
+              },
+              "rect": {
+                "x": 279.5625,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f689",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "缩进和对齐",
+              "rect": {
+                "x": 127,
+                "y": 394.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f807",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TypographyOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 401.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f808",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 402.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f699",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "颜色",
+              "rect": {
+                "x": 127,
+                "y": 426.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f809",
+              "tag": "svg",
+              "a": {
+                "data-icon": "StyleSetOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 433.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f810",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 434.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f710",
+              "tag": "DIV",
+              "a": {
+                "class": "comment-item panel-menu-item"
+              },
+              "text": "评论",
+              "rect": {
+                "x": 127,
+                "y": 467.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f811",
+              "tag": "svg",
+              "a": {
+                "data-icon": "AddCommentOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 474.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f718",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "剪切",
+              "rect": {
+                "x": 127,
+                "y": 499.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f812",
+              "tag": "svg",
+              "a": {
+                "data-icon": "maiyaclipOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 506.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f726",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "复制",
+              "rect": {
+                "x": 127,
+                "y": 531.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f813",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CopyOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 538.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f734",
+              "tag": "DIV",
+              "a": {
+                "class": "translate-item panel-menu-item"
+              },
+              "text": "翻译",
+              "rect": {
+                "x": 127,
+                "y": 563.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f814",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TranslateOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 570.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f742",
+              "tag": "DIV",
+              "a": {
+                "class": "delete-item panel-menu-item"
+              },
+              "text": "删除",
+              "rect": {
+                "x": 127,
+                "y": 595.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f815",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DeleteTrashOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 602.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f751",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "分享",
+              "rect": {
+                "x": 127,
+                "y": 636.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f816",
+              "tag": "svg",
+              "a": {
+                "data-icon": "SharewordsOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 643.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f759",
+              "tag": "DIV",
+              "a": {
+                "class": "newChildDocWithContent-item panel-menu-item"
+              },
+              "text": "转换为子文档",
+              "rect": {
+                "x": 127,
+                "y": 668.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f817",
+              "tag": "svg",
+              "a": {
+                "class": "menu_ud_icon"
+              },
+              "rect": {
+                "x": 134,
+                "y": 675.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f766",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "保存为模板",
+              "rect": {
+                "x": 127,
+                "y": 700.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f818",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TemplateOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 707.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f774",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "复制链接",
+              "rect": {
+                "x": 127,
+                "y": 732.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f819",
+              "tag": "svg",
+              "a": {
+                "data-icon": "BlocklinkOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 739.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f783",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "在下方添加",
+              "rect": {
+                "x": 127,
+                "y": 773.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f820",
+              "tag": "svg",
+              "a": {
+                "data-icon": "NewJoinMeetingOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 780.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f821",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 781.25,
+                "w": 16,
+                "h": 16
+              }
+            }
+          ]
+        },
+        {
+          "r": "f644",
+          "tag": "DIV",
+          "a": {
+            "class": "hover-drag-icon-wrapper"
+          },
+          "rect": {
+            "x": 118,
+            "y": 235.25,
+            "w": 42,
+            "h": 26
+          },
+          "text": "",
+          "controls": [
+            {
+              "r": "f648",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TextOutlined"
+              },
+              "rect": {
+                "x": 125,
+                "y": 241.25,
+                "w": 14,
+                "h": 14
+              }
+            },
+            {
+              "r": "f649",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DragOutlined"
+              },
+              "rect": {
+                "x": 144,
+                "y": 241.25,
+                "w": 14,
+                "h": 14
+              }
+            }
+          ]
+        }
+      ],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 92,
+      "eventCount": 82,
+      "instanceId": "S07-F-1792460469655",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+            "data-current-root-block-id": "1"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 1
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": [
+        {
+          "r": "f655",
+          "a": {
+            "tabindex": "0",
+            "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+            "style": "outline: transparent; max-height: 629.75px;"
+          },
+          "tabIndex": 0,
+          "controls": [
+            {
+              "r": "f657",
+              "a": {
+                "class": "doubao-ai-partial-rewriting panel-menu-item",
+                "data-name": "ask-doubao"
+              },
+              "tabIndex": -1,
+              "text": "问问豆包",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f689",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "AlignList"
+              },
+              "tabIndex": -1,
+              "text": "缩进和对齐",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f699",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "BlockColor"
+              },
+              "tabIndex": -1,
+              "text": "颜色",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f710",
+              "a": {
+                "class": "comment-item panel-menu-item",
+                "data-name": "comment"
+              },
+              "tabIndex": -1,
+              "text": "评论",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f718",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "cut"
+              },
+              "tabIndex": -1,
+              "text": "剪切",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f726",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "copy"
+              },
+              "tabIndex": -1,
+              "text": "复制",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f734",
+              "a": {
+                "class": "translate-item panel-menu-item",
+                "data-name": "translate"
+              },
+              "tabIndex": -1,
+              "text": "翻译",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f742",
+              "a": {
+                "class": "delete-item panel-menu-item",
+                "data-name": "delete"
+              },
+              "tabIndex": -1,
+              "text": "删除",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f751",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "shareTextLink"
+              },
+              "tabIndex": -1,
+              "text": "分享",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f759",
+              "a": {
+                "class": "newChildDocWithContent-item panel-menu-item",
+                "data-name": "newChildDocWithContent"
+              },
+              "tabIndex": -1,
+              "text": "转换为子文档",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f766",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "saveBlockTemplate"
+              },
+              "tabIndex": -1,
+              "text": "保存为模板",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f774",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "copyAnchorLink"
+              },
+              "tabIndex": -1,
+              "text": "复制链接",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f783",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "addInNewLine"
+              },
+              "tabIndex": -1,
+              "text": "在下方添加",
+              "outline": "rgb(43, 47, 54) none 3px"
+            }
+          ]
+        }
+      ],
+      "frameFocus": [
+        {
+          "frame": "f425",
+          "connected": true,
+          "activeTag": "BODY",
+          "activeAttrs": {}
+        }
+      ]
+    },
+    {
+      "label": "G09-F-block-tab-R2:before:keydown:Tab",
+      "time": "2026-10-20T01:50:57.477Z",
+      "mono": 762879.8999999762,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-87067feb67944b3526ef8fe9"
+      },
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [
+        {
+          "r": "f655",
+          "tag": "DIV",
+          "a": {
+            "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+            "style": "outline: transparent; max-height: 629.75px;"
+          },
+          "rect": {
+            "x": 118,
+            "y": 265.25,
+            "w": 232,
+            "h": 549
+          },
+          "text": "问问豆包\n缩进和对齐\n颜色\n评论\n剪切\n复制\n翻译\n删除\n分享\n转换为子文档\n保存为模板\n复制链接\n在下方添加",
+          "controls": [
+            {
+              "r": "f657",
+              "tag": "DIV",
+              "a": {
+                "class": "doubao-ai-partial-rewriting panel-menu-item"
+              },
+              "text": "问问豆包",
+              "rect": {
+                "x": 127,
+                "y": 274.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f795",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DoubaoworkOutlined"
+              },
+              "rect": {
+                "x": 135,
+                "y": 282.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f796",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TextOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f797",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H1Outlined"
+              },
+              "rect": {
+                "x": 170.390625,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f798",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H2Outlined"
+              },
+              "rect": {
+                "x": 206.78125,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f799",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H3Outlined"
+              },
+              "rect": {
+                "x": 243.171875,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f800",
+              "tag": "svg",
+              "a": {
+                "data-icon": "OrderListOutlined"
+              },
+              "rect": {
+                "x": 279.5625,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f801",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DisorderListOutlined"
+              },
+              "rect": {
+                "x": 315.953125,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f802",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TodoOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f803",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CodeblockOutlined"
+              },
+              "rect": {
+                "x": 170.390625,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f804",
+              "tag": "svg",
+              "a": {
+                "data-icon": "ReferenceOutlined"
+              },
+              "rect": {
+                "x": 206.78125,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f805",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CalloutOutlined"
+              },
+              "rect": {
+                "x": 243.171875,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f806",
+              "tag": "svg",
+              "a": {
+                "data-icon": "LinkRecordOutlined"
+              },
+              "rect": {
+                "x": 279.5625,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f689",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "缩进和对齐",
+              "rect": {
+                "x": 127,
+                "y": 394.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f807",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TypographyOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 401.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f808",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 402.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f699",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "颜色",
+              "rect": {
+                "x": 127,
+                "y": 426.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f809",
+              "tag": "svg",
+              "a": {
+                "data-icon": "StyleSetOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 433.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f810",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 434.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f710",
+              "tag": "DIV",
+              "a": {
+                "class": "comment-item panel-menu-item"
+              },
+              "text": "评论",
+              "rect": {
+                "x": 127,
+                "y": 467.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f811",
+              "tag": "svg",
+              "a": {
+                "data-icon": "AddCommentOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 474.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f718",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "剪切",
+              "rect": {
+                "x": 127,
+                "y": 499.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f812",
+              "tag": "svg",
+              "a": {
+                "data-icon": "maiyaclipOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 506.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f726",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "复制",
+              "rect": {
+                "x": 127,
+                "y": 531.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f813",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CopyOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 538.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f734",
+              "tag": "DIV",
+              "a": {
+                "class": "translate-item panel-menu-item"
+              },
+              "text": "翻译",
+              "rect": {
+                "x": 127,
+                "y": 563.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f814",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TranslateOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 570.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f742",
+              "tag": "DIV",
+              "a": {
+                "class": "delete-item panel-menu-item"
+              },
+              "text": "删除",
+              "rect": {
+                "x": 127,
+                "y": 595.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f815",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DeleteTrashOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 602.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f751",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "分享",
+              "rect": {
+                "x": 127,
+                "y": 636.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f816",
+              "tag": "svg",
+              "a": {
+                "data-icon": "SharewordsOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 643.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f759",
+              "tag": "DIV",
+              "a": {
+                "class": "newChildDocWithContent-item panel-menu-item"
+              },
+              "text": "转换为子文档",
+              "rect": {
+                "x": 127,
+                "y": 668.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f817",
+              "tag": "svg",
+              "a": {
+                "class": "menu_ud_icon"
+              },
+              "rect": {
+                "x": 134,
+                "y": 675.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f766",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "保存为模板",
+              "rect": {
+                "x": 127,
+                "y": 700.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f818",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TemplateOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 707.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f774",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "复制链接",
+              "rect": {
+                "x": 127,
+                "y": 732.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f819",
+              "tag": "svg",
+              "a": {
+                "data-icon": "BlocklinkOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 739.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f783",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "在下方添加",
+              "rect": {
+                "x": 127,
+                "y": 773.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f820",
+              "tag": "svg",
+              "a": {
+                "data-icon": "NewJoinMeetingOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 780.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f821",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 781.25,
+                "w": 16,
+                "h": 16
+              }
+            }
+          ]
+        },
+        {
+          "r": "f644",
+          "tag": "DIV",
+          "a": {
+            "class": "hover-drag-icon-wrapper"
+          },
+          "rect": {
+            "x": 118,
+            "y": 235.25,
+            "w": 42,
+            "h": 26
+          },
+          "text": "",
+          "controls": [
+            {
+              "r": "f648",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TextOutlined"
+              },
+              "rect": {
+                "x": 125,
+                "y": 241.25,
+                "w": 14,
+                "h": 14
+              }
+            },
+            {
+              "r": "f649",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DragOutlined"
+              },
+              "rect": {
+                "x": 144,
+                "y": 241.25,
+                "w": 14,
+                "h": 14
+              }
+            }
+          ]
+        }
+      ],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 95,
+      "eventCount": 84,
+      "instanceId": "S07-F-1792460469655",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+            "data-current-root-block-id": "1"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 1
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": [
+        {
+          "r": "f655",
+          "a": {
+            "tabindex": "0",
+            "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+            "style": "outline: transparent; max-height: 629.75px;"
+          },
+          "tabIndex": 0,
+          "controls": [
+            {
+              "r": "f657",
+              "a": {
+                "class": "doubao-ai-partial-rewriting panel-menu-item",
+                "data-name": "ask-doubao"
+              },
+              "tabIndex": -1,
+              "text": "问问豆包",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f689",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "AlignList"
+              },
+              "tabIndex": -1,
+              "text": "缩进和对齐",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f699",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "BlockColor"
+              },
+              "tabIndex": -1,
+              "text": "颜色",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f710",
+              "a": {
+                "class": "comment-item panel-menu-item",
+                "data-name": "comment"
+              },
+              "tabIndex": -1,
+              "text": "评论",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f718",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "cut"
+              },
+              "tabIndex": -1,
+              "text": "剪切",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f726",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "copy"
+              },
+              "tabIndex": -1,
+              "text": "复制",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f734",
+              "a": {
+                "class": "translate-item panel-menu-item",
+                "data-name": "translate"
+              },
+              "tabIndex": -1,
+              "text": "翻译",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f742",
+              "a": {
+                "class": "delete-item panel-menu-item",
+                "data-name": "delete"
+              },
+              "tabIndex": -1,
+              "text": "删除",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f751",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "shareTextLink"
+              },
+              "tabIndex": -1,
+              "text": "分享",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f759",
+              "a": {
+                "class": "newChildDocWithContent-item panel-menu-item",
+                "data-name": "newChildDocWithContent"
+              },
+              "tabIndex": -1,
+              "text": "转换为子文档",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f766",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "saveBlockTemplate"
+              },
+              "tabIndex": -1,
+              "text": "保存为模板",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f774",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "copyAnchorLink"
+              },
+              "tabIndex": -1,
+              "text": "复制链接",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f783",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "addInNewLine"
+              },
+              "tabIndex": -1,
+              "text": "在下方添加",
+              "outline": "rgb(43, 47, 54) none 3px"
+            }
+          ]
+        }
+      ],
+      "frameFocus": [
+        {
+          "frame": "f425",
+          "connected": true,
+          "activeTag": "BODY",
+          "activeAttrs": {}
+        }
+      ]
+    },
+    {
+      "label": "G09-F-block-tab-R2:before:keydown:Escape",
+      "time": "2026-10-20T01:50:57.950Z",
+      "mono": 763353.7000000477,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "rootConnected": true,
+      "body": {
+        "snapshotRef": "body-87067feb67944b3526ef8fe9"
+      },
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      },
+      "focus": {
+        "r": "f41",
+        "tag": "DIV",
+        "a": {
+          "class": "page-block root-block",
+          "contenteditable": "true",
+          "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+        }
+      },
+      "ui": [
+        {
+          "r": "f655",
+          "tag": "DIV",
+          "a": {
+            "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+            "style": "outline: transparent; max-height: 629.75px;"
+          },
+          "rect": {
+            "x": 118,
+            "y": 265.25,
+            "w": 232,
+            "h": 549
+          },
+          "text": "问问豆包\n缩进和对齐\n颜色\n评论\n剪切\n复制\n翻译\n删除\n分享\n转换为子文档\n保存为模板\n复制链接\n在下方添加",
+          "controls": [
+            {
+              "r": "f657",
+              "tag": "DIV",
+              "a": {
+                "class": "doubao-ai-partial-rewriting panel-menu-item"
+              },
+              "text": "问问豆包",
+              "rect": {
+                "x": 127,
+                "y": 274.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f795",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DoubaoworkOutlined"
+              },
+              "rect": {
+                "x": 135,
+                "y": 282.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f796",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TextOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f797",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H1Outlined"
+              },
+              "rect": {
+                "x": 170.390625,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f798",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H2Outlined"
+              },
+              "rect": {
+                "x": 206.78125,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f799",
+              "tag": "svg",
+              "a": {
+                "data-icon": "H3Outlined"
+              },
+              "rect": {
+                "x": 243.171875,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f800",
+              "tag": "svg",
+              "a": {
+                "data-icon": "OrderListOutlined"
+              },
+              "rect": {
+                "x": 279.5625,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f801",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DisorderListOutlined"
+              },
+              "rect": {
+                "x": 315.953125,
+                "y": 320.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f802",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TodoOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f803",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CodeblockOutlined"
+              },
+              "rect": {
+                "x": 170.390625,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f804",
+              "tag": "svg",
+              "a": {
+                "data-icon": "ReferenceOutlined"
+              },
+              "rect": {
+                "x": 206.78125,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f805",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CalloutOutlined"
+              },
+              "rect": {
+                "x": 243.171875,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f806",
+              "tag": "svg",
+              "a": {
+                "data-icon": "LinkRecordOutlined"
+              },
+              "rect": {
+                "x": 279.5625,
+                "y": 356.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f689",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "缩进和对齐",
+              "rect": {
+                "x": 127,
+                "y": 394.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f807",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TypographyOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 401.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f808",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 402.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f699",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "颜色",
+              "rect": {
+                "x": 127,
+                "y": 426.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f809",
+              "tag": "svg",
+              "a": {
+                "data-icon": "StyleSetOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 433.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f810",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 434.25,
+                "w": 16,
+                "h": 16
+              }
+            },
+            {
+              "r": "f710",
+              "tag": "DIV",
+              "a": {
+                "class": "comment-item panel-menu-item"
+              },
+              "text": "评论",
+              "rect": {
+                "x": 127,
+                "y": 467.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f811",
+              "tag": "svg",
+              "a": {
+                "data-icon": "AddCommentOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 474.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f718",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "剪切",
+              "rect": {
+                "x": 127,
+                "y": 499.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f812",
+              "tag": "svg",
+              "a": {
+                "data-icon": "maiyaclipOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 506.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f726",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "复制",
+              "rect": {
+                "x": 127,
+                "y": 531.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f813",
+              "tag": "svg",
+              "a": {
+                "data-icon": "CopyOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 538.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f734",
+              "tag": "DIV",
+              "a": {
+                "class": "translate-item panel-menu-item"
+              },
+              "text": "翻译",
+              "rect": {
+                "x": 127,
+                "y": 563.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f814",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TranslateOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 570.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f742",
+              "tag": "DIV",
+              "a": {
+                "class": "delete-item panel-menu-item"
+              },
+              "text": "删除",
+              "rect": {
+                "x": 127,
+                "y": 595.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f815",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DeleteTrashOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 602.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f751",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "分享",
+              "rect": {
+                "x": 127,
+                "y": 636.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f816",
+              "tag": "svg",
+              "a": {
+                "data-icon": "SharewordsOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 643.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f759",
+              "tag": "DIV",
+              "a": {
+                "class": "newChildDocWithContent-item panel-menu-item"
+              },
+              "text": "转换为子文档",
+              "rect": {
+                "x": 127,
+                "y": 668.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f817",
+              "tag": "svg",
+              "a": {
+                "class": "menu_ud_icon"
+              },
+              "rect": {
+                "x": 134,
+                "y": 675.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f766",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "保存为模板",
+              "rect": {
+                "x": 127,
+                "y": 700.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f818",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TemplateOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 707.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f774",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-menu-item"
+              },
+              "text": "复制链接",
+              "rect": {
+                "x": 127,
+                "y": 732.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f819",
+              "tag": "svg",
+              "a": {
+                "data-icon": "BlocklinkOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 739.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f783",
+              "tag": "DIV",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item"
+              },
+              "text": "在下方添加",
+              "rect": {
+                "x": 127,
+                "y": 773.25,
+                "w": 214,
+                "h": 32
+              }
+            },
+            {
+              "r": "f820",
+              "tag": "svg",
+              "a": {
+                "data-icon": "NewJoinMeetingOutlined"
+              },
+              "rect": {
+                "x": 134,
+                "y": 780.25,
+                "w": 18,
+                "h": 18
+              }
+            },
+            {
+              "r": "f821",
+              "tag": "svg",
+              "a": {
+                "data-icon": "RightSmallCcmOutlined"
+              },
+              "rect": {
+                "x": 321,
+                "y": 781.25,
+                "w": 16,
+                "h": 16
+              }
+            }
+          ]
+        },
+        {
+          "r": "f644",
+          "tag": "DIV",
+          "a": {
+            "class": "hover-drag-icon-wrapper"
+          },
+          "rect": {
+            "x": 118,
+            "y": 235.25,
+            "w": 42,
+            "h": 26
+          },
+          "text": "",
+          "controls": [
+            {
+              "r": "f648",
+              "tag": "svg",
+              "a": {
+                "data-icon": "TextOutlined"
+              },
+              "rect": {
+                "x": 125,
+                "y": 241.25,
+                "w": 14,
+                "h": 14
+              }
+            },
+            {
+              "r": "f649",
+              "tag": "svg",
+              "a": {
+                "data-icon": "DragOutlined"
+              },
+              "rect": {
+                "x": 144,
+                "y": 241.25,
+                "w": 14,
+                "h": 14
+              }
+            }
+          ]
+        }
+      ],
+      "viewport": [
+        1152,
+        907
+      ],
+      "dpr": 1,
+      "seq": 95,
+      "eventCount": 86,
+      "instanceId": "S07-F-1792460469655",
+      "hasFocus": true,
+      "currentRootSame": true,
+      "fields": [
+        {
+          "r": "f40",
+          "a": {
+            "class": "docx-selection-hidden-textarea",
+            "readonly": "",
+            "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+            "data-current-root-block-id": "1"
+          },
+          "value": " ",
+          "selectionStart": 0,
+          "selectionEnd": 1
+        }
+      ],
+      "focusStyle": {
+        "outline": "rgba(0, 0, 0, 0) solid 0px",
+        "boxShadow": "none"
+      },
+      "menuFocus": [
+        {
+          "r": "f655",
+          "a": {
+            "tabindex": "0",
+            "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+            "style": "outline: transparent; max-height: 629.75px;"
+          },
+          "tabIndex": 0,
+          "controls": [
+            {
+              "r": "f657",
+              "a": {
+                "class": "doubao-ai-partial-rewriting panel-menu-item",
+                "data-name": "ask-doubao"
+              },
+              "tabIndex": -1,
+              "text": "问问豆包",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f689",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "AlignList"
+              },
+              "tabIndex": -1,
+              "text": "缩进和对齐",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f699",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "BlockColor"
+              },
+              "tabIndex": -1,
+              "text": "颜色",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f710",
+              "a": {
+                "class": "comment-item panel-menu-item",
+                "data-name": "comment"
+              },
+              "tabIndex": -1,
+              "text": "评论",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f718",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "cut"
+              },
+              "tabIndex": -1,
+              "text": "剪切",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f726",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "copy"
+              },
+              "tabIndex": -1,
+              "text": "复制",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f734",
+              "a": {
+                "class": "translate-item panel-menu-item",
+                "data-name": "translate"
+              },
+              "tabIndex": -1,
+              "text": "翻译",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f742",
+              "a": {
+                "class": "delete-item panel-menu-item",
+                "data-name": "delete"
+              },
+              "tabIndex": -1,
+              "text": "删除",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f751",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "shareTextLink"
+              },
+              "tabIndex": -1,
+              "text": "分享",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f759",
+              "a": {
+                "class": "newChildDocWithContent-item panel-menu-item",
+                "data-name": "newChildDocWithContent"
+              },
+              "tabIndex": -1,
+              "text": "转换为子文档",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f766",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "saveBlockTemplate"
+              },
+              "tabIndex": -1,
+              "text": "保存为模板",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f774",
+              "a": {
+                "class": "panel-menu-item",
+                "data-name": "copyAnchorLink"
+              },
+              "tabIndex": -1,
+              "text": "复制链接",
+              "outline": "rgb(43, 47, 54) none 3px"
+            },
+            {
+              "r": "f783",
+              "a": {
+                "class": "panel-submenu-item no-click-action panel-menu-item",
+                "data-name": "addInNewLine"
+              },
+              "tabIndex": -1,
+              "text": "在下方添加",
+              "outline": "rgb(43, 47, 54) none 3px"
+            }
+          ]
+        }
+      ],
+      "frameFocus": [
+        {
+          "frame": "f425",
+          "connected": true,
+          "activeTag": "BODY",
+          "activeAttrs": {}
+        }
+      ]
+    }
+  ],
+  "after": {
+    "label": "G09-F-block-tab-R2:end",
+    "time": "2026-10-20T01:51:12.610Z",
+    "mono": 778013.3999999762,
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "snapshotRef": "body-87067feb67944b3526ef8fe9"
+    },
+    "selection": {
+      "type": "Caret",
+      "a": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "f": {
+        "r": "f10",
+        "offset": 5,
+        "text": "Alpha"
+      },
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "end": {
+            "r": "f10",
+            "offset": 5,
+            "text": "Alpha"
+          },
+          "collapsed": true
+        }
+      ]
+    },
+    "focus": {
+      "r": "f41",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block root-block",
+        "contenteditable": "true",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"
+      }
+    },
+    "ui": [
+      {
+        "r": "f655",
+        "tag": "DIV",
+        "a": {
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+          "style": "outline: transparent; max-height: 629.75px;"
+        },
+        "rect": {
+          "x": 118,
+          "y": 265.25,
+          "w": 232,
+          "h": 549
+        },
+        "text": "问问豆包\n缩进和对齐\n颜色\n评论\n剪切\n复制\n翻译\n删除\n分享\n转换为子文档\n保存为模板\n复制链接\n在下方添加",
+        "controls": [
+          {
+            "r": "f657",
+            "tag": "DIV",
+            "a": {
+              "class": "doubao-ai-partial-rewriting panel-menu-item"
+            },
+            "text": "问问豆包",
+            "rect": {
+              "x": 127,
+              "y": 274.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f795",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DoubaoworkOutlined"
+            },
+            "rect": {
+              "x": 135,
+              "y": 282.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f796",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TextOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f797",
+            "tag": "svg",
+            "a": {
+              "data-icon": "H1Outlined"
+            },
+            "rect": {
+              "x": 170.390625,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f798",
+            "tag": "svg",
+            "a": {
+              "data-icon": "H2Outlined"
+            },
+            "rect": {
+              "x": 206.78125,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f799",
+            "tag": "svg",
+            "a": {
+              "data-icon": "H3Outlined"
+            },
+            "rect": {
+              "x": 243.171875,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f800",
+            "tag": "svg",
+            "a": {
+              "data-icon": "OrderListOutlined"
+            },
+            "rect": {
+              "x": 279.5625,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f801",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DisorderListOutlined"
+            },
+            "rect": {
+              "x": 315.953125,
+              "y": 320.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f802",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TodoOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f803",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CodeblockOutlined"
+            },
+            "rect": {
+              "x": 170.390625,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f804",
+            "tag": "svg",
+            "a": {
+              "data-icon": "ReferenceOutlined"
+            },
+            "rect": {
+              "x": 206.78125,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f805",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CalloutOutlined"
+            },
+            "rect": {
+              "x": 243.171875,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f806",
+            "tag": "svg",
+            "a": {
+              "data-icon": "LinkRecordOutlined"
+            },
+            "rect": {
+              "x": 279.5625,
+              "y": 356.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f689",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "缩进和对齐",
+            "rect": {
+              "x": 127,
+              "y": 394.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f807",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TypographyOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 401.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f808",
+            "tag": "svg",
+            "a": {
+              "data-icon": "RightSmallCcmOutlined"
+            },
+            "rect": {
+              "x": 321,
+              "y": 402.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f699",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "颜色",
+            "rect": {
+              "x": 127,
+              "y": 426.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f809",
+            "tag": "svg",
+            "a": {
+              "data-icon": "StyleSetOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 433.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f810",
+            "tag": "svg",
+            "a": {
+              "data-icon": "RightSmallCcmOutlined"
+            },
+            "rect": {
+              "x": 321,
+              "y": 434.25,
+              "w": 16,
+              "h": 16
+            }
+          },
+          {
+            "r": "f710",
+            "tag": "DIV",
+            "a": {
+              "class": "comment-item panel-menu-item"
+            },
+            "text": "评论",
+            "rect": {
+              "x": 127,
+              "y": 467.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f811",
+            "tag": "svg",
+            "a": {
+              "data-icon": "AddCommentOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 474.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f718",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "剪切",
+            "rect": {
+              "x": 127,
+              "y": 499.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f812",
+            "tag": "svg",
+            "a": {
+              "data-icon": "maiyaclipOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 506.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f726",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "复制",
+            "rect": {
+              "x": 127,
+              "y": 531.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f813",
+            "tag": "svg",
+            "a": {
+              "data-icon": "CopyOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 538.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f734",
+            "tag": "DIV",
+            "a": {
+              "class": "translate-item panel-menu-item"
+            },
+            "text": "翻译",
+            "rect": {
+              "x": 127,
+              "y": 563.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f814",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TranslateOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 570.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f742",
+            "tag": "DIV",
+            "a": {
+              "class": "delete-item panel-menu-item"
+            },
+            "text": "删除",
+            "rect": {
+              "x": 127,
+              "y": 595.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f815",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DeleteTrashOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 602.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f751",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "分享",
+            "rect": {
+              "x": 127,
+              "y": 636.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f816",
+            "tag": "svg",
+            "a": {
+              "data-icon": "SharewordsOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 643.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f759",
+            "tag": "DIV",
+            "a": {
+              "class": "newChildDocWithContent-item panel-menu-item"
+            },
+            "text": "转换为子文档",
+            "rect": {
+              "x": 127,
+              "y": 668.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f817",
+            "tag": "svg",
+            "a": {
+              "class": "menu_ud_icon"
+            },
+            "rect": {
+              "x": 134,
+              "y": 675.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f766",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "保存为模板",
+            "rect": {
+              "x": 127,
+              "y": 700.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f818",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TemplateOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 707.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f774",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-menu-item"
+            },
+            "text": "复制链接",
+            "rect": {
+              "x": 127,
+              "y": 732.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f819",
+            "tag": "svg",
+            "a": {
+              "data-icon": "BlocklinkOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 739.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f783",
+            "tag": "DIV",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item"
+            },
+            "text": "在下方添加",
+            "rect": {
+              "x": 127,
+              "y": 773.25,
+              "w": 214,
+              "h": 32
+            }
+          },
+          {
+            "r": "f820",
+            "tag": "svg",
+            "a": {
+              "data-icon": "NewJoinMeetingOutlined"
+            },
+            "rect": {
+              "x": 134,
+              "y": 780.25,
+              "w": 18,
+              "h": 18
+            }
+          },
+          {
+            "r": "f821",
+            "tag": "svg",
+            "a": {
+              "data-icon": "RightSmallCcmOutlined"
+            },
+            "rect": {
+              "x": 321,
+              "y": 781.25,
+              "w": 16,
+              "h": 16
+            }
+          }
+        ]
+      },
+      {
+        "r": "f644",
+        "tag": "DIV",
+        "a": {
+          "class": "hover-drag-icon-wrapper"
+        },
+        "rect": {
+          "x": 118,
+          "y": 235.25,
+          "w": 42,
+          "h": 26
+        },
+        "text": "",
+        "controls": [
+          {
+            "r": "f648",
+            "tag": "svg",
+            "a": {
+              "data-icon": "TextOutlined"
+            },
+            "rect": {
+              "x": 125,
+              "y": 241.25,
+              "w": 14,
+              "h": 14
+            }
+          },
+          {
+            "r": "f649",
+            "tag": "svg",
+            "a": {
+              "data-icon": "DragOutlined"
+            },
+            "rect": {
+              "x": 144,
+              "y": 241.25,
+              "w": 14,
+              "h": 14
+            }
+          }
+        ]
+      },
+      {
+        "r": "f826",
+        "tag": "DIV",
+        "a": {
+          "class": "hover-drag-icon-wrapper doc-info-icon-content"
+        },
+        "rect": {
+          "x": 0,
+          "y": 907,
+          "w": 26,
+          "h": 26
+        },
+        "text": "",
+        "controls": [
+          {
+            "r": "f828",
+            "tag": "svg",
+            "a": {
+              "class": "menu_ud_icon color-b-500"
+            },
+            "rect": {
+              "x": 5,
+              "y": 912,
+              "w": 16,
+              "h": 16
+            }
+          }
+        ]
+      }
+    ],
+    "viewport": [
+      1152,
+      907
+    ],
+    "dpr": 1,
+    "seq": 97,
+    "eventCount": 87,
+    "instanceId": "S07-F-1792460469655",
+    "hasFocus": true,
+    "currentRootSame": true,
+    "fields": [
+      {
+        "r": "f40",
+        "a": {
+          "class": "docx-selection-hidden-textarea",
+          "readonly": "",
+          "style": "position: fixed; top: 0px; left: -100px; opacity: 0; width: 0px; height: 100vh;",
+          "data-current-root-block-id": "1"
+        },
+        "value": " ",
+        "selectionStart": 0,
+        "selectionEnd": 1
+      }
+    ],
+    "focusStyle": {
+      "outline": "rgba(0, 0, 0, 0) solid 0px",
+      "boxShadow": "none"
+    },
+    "menuFocus": [
+      {
+        "r": "f655",
+        "a": {
+          "tabindex": "0",
+          "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+          "style": "outline: transparent; max-height: 629.75px;"
+        },
+        "tabIndex": 0,
+        "controls": [
+          {
+            "r": "f657",
+            "a": {
+              "class": "doubao-ai-partial-rewriting panel-menu-item",
+              "data-name": "ask-doubao"
+            },
+            "tabIndex": -1,
+            "text": "问问豆包",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f689",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "AlignList"
+            },
+            "tabIndex": -1,
+            "text": "缩进和对齐",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f699",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "BlockColor"
+            },
+            "tabIndex": -1,
+            "text": "颜色",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f710",
+            "a": {
+              "class": "comment-item panel-menu-item",
+              "data-name": "comment"
+            },
+            "tabIndex": -1,
+            "text": "评论",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f718",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "cut"
+            },
+            "tabIndex": -1,
+            "text": "剪切",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f726",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "copy"
+            },
+            "tabIndex": -1,
+            "text": "复制",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f734",
+            "a": {
+              "class": "translate-item panel-menu-item",
+              "data-name": "translate"
+            },
+            "tabIndex": -1,
+            "text": "翻译",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f742",
+            "a": {
+              "class": "delete-item panel-menu-item",
+              "data-name": "delete"
+            },
+            "tabIndex": -1,
+            "text": "删除",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f751",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "shareTextLink"
+            },
+            "tabIndex": -1,
+            "text": "分享",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f759",
+            "a": {
+              "class": "newChildDocWithContent-item panel-menu-item",
+              "data-name": "newChildDocWithContent"
+            },
+            "tabIndex": -1,
+            "text": "转换为子文档",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f766",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "saveBlockTemplate"
+            },
+            "tabIndex": -1,
+            "text": "保存为模板",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f774",
+            "a": {
+              "class": "panel-menu-item",
+              "data-name": "copyAnchorLink"
+            },
+            "tabIndex": -1,
+            "text": "复制链接",
+            "outline": "rgb(43, 47, 54) none 3px"
+          },
+          {
+            "r": "f783",
+            "a": {
+              "class": "panel-submenu-item no-click-action panel-menu-item",
+              "data-name": "addInNewLine"
+            },
+            "tabIndex": -1,
+            "text": "在下方添加",
+            "outline": "rgb(43, 47, 54) none 3px"
+          }
+        ]
+      }
+    ],
+    "frameFocus": [
+      {
+        "frame": "f425",
+        "connected": true,
+        "activeTag": "BODY",
+        "activeAttrs": {}
+      }
+    ]
+  },
+  "events": [
+    {
+      "i": 82,
+      "time": "2026-10-20T01:50:56.443Z",
+      "mono": 761845.8999999762,
+      "type": "keydown",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 83,
+      "time": "2026-10-20T01:50:56.461Z",
+      "mono": 761863.7000000477,
+      "type": "keyup",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 84,
+      "time": "2026-10-20T01:50:57.477Z",
+      "mono": 762879.8999999762,
+      "type": "keydown",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": true,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 85,
+      "time": "2026-10-20T01:50:57.479Z",
+      "mono": 762881.8999999762,
+      "type": "keyup",
+      "trusted": true,
+      "target": "f41",
+      "key": "Tab",
+      "code": "Tab",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": true,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 86,
+      "time": "2026-10-20T01:50:57.950Z",
+      "mono": 763353.6000000238,
+      "type": "keydown",
+      "trusted": true,
+      "target": "f41",
+      "key": "Escape",
+      "code": "Escape",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    },
+    {
+      "i": 87,
+      "time": "2026-10-20T01:50:57.957Z",
+      "mono": 763359.8999999762,
+      "type": "keyup",
+      "trusted": true,
+      "target": "f41",
+      "key": "Escape",
+      "code": "Escape",
+      "meta": false,
+      "ctrl": false,
+      "alt": false,
+      "shift": false,
+      "repeat": false,
+      "composing": false,
+      "selection": {
+        "type": "Caret",
+        "a": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "f": {
+          "r": "f10",
+          "offset": 5,
+          "text": "Alpha"
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "end": {
+              "r": "f10",
+              "offset": 5,
+              "text": "Alpha"
+            },
+            "collapsed": true
+          }
+        ]
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "seq": 93,
+      "mono": 761858.5,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f5",
+      "attr": "class",
+      "old": "text-block-wrapper",
+      "value": "text-block-wrapper animation-indent--right"
+    },
+    {
+      "seq": 94,
+      "mono": 762382.5,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f5",
+      "attr": "class",
+      "old": "text-block-wrapper animation-indent--right",
+      "value": "text-block-wrapper"
+    },
+    {
+      "seq": 95,
+      "mono": 762382.5,
+      "scope": "body",
+      "type": "attributes",
+      "target": "f5",
+      "attr": "class",
+      "old": "text-block-wrapper",
+      "value": "text-block-wrapper"
+    },
+    {
+      "seq": 96,
+      "mono": 763359.6000000238,
+      "scope": "ui",
+      "type": "childList",
+      "target": "f39",
+      "attr": null,
+      "old": null,
+      "add": [
+        {
+          "r": "f822",
+          "tag": "DIV",
+          "a": {
+            "class": "overlay-root"
+          },
+          "c": [
+            {
+              "r": "f823",
+              "tag": "DIV",
+              "a": {
+                "class": "overlay-wrapper"
+              },
+              "c": [
+                {
+                  "r": "f824",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "overlay-container overlay-hidden",
+                    "style": "position: fixed; z-index: 79;"
+                  },
+                  "c": [
+                    {
+                      "r": "f825",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "menu-trigger"
+                      },
+                      "c": [
+                        {
+                          "r": "f826",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "hover-drag-icon-wrapper doc-info-icon-content"
+                          },
+                          "c": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "remove": [],
+      "previous": "f827",
+      "next": null
+    },
+    {
+      "seq": 97,
+      "mono": 763359.6000000238,
+      "scope": "ui",
+      "type": "childList",
+      "target": "f822",
+      "attr": null,
+      "old": null,
+      "add": [
+        {
+          "r": "f823",
+          "tag": "DIV",
+          "a": {
+            "class": "overlay-wrapper"
+          },
+          "c": [
+            {
+              "r": "f824",
+              "tag": "DIV",
+              "a": {
+                "class": "overlay-container overlay-hidden",
+                "style": "position: fixed; z-index: 79;"
+              },
+              "c": [
+                {
+                  "r": "f825",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "menu-trigger"
+                  },
+                  "c": [
+                    {
+                      "r": "f826",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "hover-drag-icon-wrapper doc-info-icon-content"
+                      },
+                      "c": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "remove": [],
+      "previous": null,
+      "next": null
+    }
+  ],
+  "frameEvents": [],
+  "_snapshotDictionary": {
+    "body-87067feb67944b3526ef8fe9": {
+      "r": "f1",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "f2",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "f3",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "f4",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block focused hovered",
+                    "data-block-type": "text",
+                    "data-block-id": "2",
+                    "data-record-id": "IB9GdaCevoLU4KxrNHkcaleLnBd"
+                  },
+                  "c": [
+                    {
+                      "r": "f5",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f6",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f7",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty text-editor-focused",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f8",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f9",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "style": "font-weight:bold;font-style:italic;",
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f10",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f11",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f12",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "f651",
+                      "tag": "DIV",
+                      "a": {
+                        "contenteditable": "false",
+                        "style": "position: absolute; inset: 0px; border-radius: 6px; pointer-events: none; background-color: var(--ccmtoken-doc-block-bg-hover);",
+                        "class": "hovered-mask"
+                      },
+                      "c": []
+                    }
+                  ]
+                },
+                {
+                  "r": "f13",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "3",
+                    "data-record-id": "RUqcdofXToZt5qx0iijc0RQhnog"
+                  },
+                  "c": [
+                    {
+                      "r": "f14",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f15",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f16",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f17",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f18",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f19",
+                                          "text": "Beta"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f20",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f21",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f22",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-type": "text",
+                    "data-block-id": "4",
+                    "data-record-id": "GX26d5y7zothIyxDMBZcd2aRnwb"
+                  },
+                  "c": [
+                    {
+                      "r": "f23",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f24",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f25",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f26",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f27",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "f28",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "f29",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f30",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "f31",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "5",
+                    "data-record-id": "LpU0dtiiZoIqdGxzJ5McAUhtnFS"
+                  },
+                  "c": [
+                    {
+                      "r": "f32",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "f33",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "f34",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "f35",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "f36",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "f37",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "f38",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "version": 1,
+    "description": "Only repeated full body trees replaced with same-file snapshotRef; refs, order, attributes and text preserved.",
+    "originalCanonicalSha256": "fcf689f11d474c75830ac3c0f88a29d9d916478e3918afb1285aebfd2db61f22",
+    "losslessRoundTripChecked": true
+  }
+}

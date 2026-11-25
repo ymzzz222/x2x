@@ -1,0 +1,42 @@
+{
+  "scope": "Current project source reading for S09 acceptance mapping, no project execution or implementation claim",
+  "timeUTC": "2026-10-23T14:44:25.222947+00:00",
+  "sources": [
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js",
+      "sha256": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/collaboration.js",
+      "sha256": "213fe910b30e954981e3f6fd595b25364692f582204360f19ced891318eb3044"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/index.js",
+      "sha256": "8f218cbe4dd3f63b7c905df103ede653c677ba4742968b7143d59ff603965fdf"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/index.vue",
+      "sha256": "ee15a9a88cb3995e53c4cfbd36a4ccba2541818714983ab60b3e77768a64c188"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/history.js",
+      "sha256": "d7d36b44078cc274a8d1557a2a7590a9ea57b25c39bad174547c87ba1c52473a"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/version.js",
+      "sha256": "8a59b89f54cb5c0b5f16b77553e042007573296f2ddb801986c0189507cea13c"
+    }
+  ],
+  "historyEvidenceFilesRehashed": 1334,
+  "historyEvidenceHashMismatches": [],
+  "findings": [
+    "useEditorChrome canCtrlZ starts false and becomes true from both onUpdate and onTransaction; this flag is not proof of a nonempty undo stack",
+    "historyUndo/historyRedo beforeinput capture has a separate canCtrlZ check; command and keyboard gates require separate project acceptance",
+    "collaboration undo/redo checks Yjs undoManager stacks; Mod-z, Mod-y and Shift-Mod-z map to these commands",
+    "when hasCollab, StarterKit undoRedo is disabled and Collaboration binds collabField with protectedNodes",
+    "effective editability combines mode permission, AI locks and generation lock, then setEditable follows it",
+    "history restoration uses stateless restoreSnapshot with versionId/requestId/historyType and separate collaboration readiness checks"
+  ],
+  "projectCodeModified": false,
+  "projectRuntimeTestsExecuted": false
+}

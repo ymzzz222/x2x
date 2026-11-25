@@ -1,0 +1,70 @@
+{
+  "scope": "Fixed Enter/type/ordered workflow only",
+  "runs": [
+    {
+      "file": "I07-enter-type-convert-workflow-R1.json",
+      "sha256": "d3ea3ef7325b0524c59e22c00dc479062f049101f2f65b820e49579b9b267545",
+      "phases": [
+        "before",
+        "enter",
+        "typed-Beta",
+        "ordered-Beta",
+        "undo-convert",
+        "undo-typing",
+        "undo-enter",
+        "redo-enter",
+        "redo-typing",
+        "redo-convert",
+        "restore-convert",
+        "restore-typing",
+        "restore-enter"
+      ]
+    },
+    {
+      "file": "I07-enter-type-convert-workflow-R2.json",
+      "sha256": "7a93b0c05135f0e03bd308b14bd7cb81d5b88549c78f44611cfae07015f6ca26",
+      "phases": [
+        "before",
+        "enter",
+        "typed-Beta",
+        "ordered-Beta",
+        "undo-convert",
+        "undo-typing",
+        "undo-enter",
+        "redo-enter",
+        "redo-typing",
+        "redo-convert",
+        "restore-convert",
+        "restore-typing",
+        "restore-enter"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "R1 all 13 states",
+      "passed": true
+    },
+    {
+      "name": "R1 no overflow or error",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted keys",
+      "passed": true
+    },
+    {
+      "name": "R2 all 13 states",
+      "passed": true
+    },
+    {
+      "name": "R2 no overflow or error",
+      "passed": true
+    },
+    {
+      "name": "R2 trusted keys",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

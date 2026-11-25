@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 4,
+  "scope": "Folded descendant find; no automatic expansion history assertion",
+  "files": [
+    {
+      "file": "dom/J01-folded-descendant-find-R1.json",
+      "sha256": "d4d8c9ef4010739bfdfc1504e84860a0198606b43d1f5c35941891188ff24aeb"
+    },
+    {
+      "file": "dom/J01-folded-descendant-find-R2.json",
+      "sha256": "1e57e97a380e3502d632f2ec22cc7e95945b6dbdf5c48bcf1de272207ee6b036"
+    }
+  ],
+  "checks": [
+    {
+      "name": "R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact phases",
+      "passed": true
+    },
+    {
+      "name": "R1 semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "R1 empty title connected roots",
+      "passed": true
+    },
+    {
+      "name": "R1 surviving Parent Tail identities",
+      "passed": true
+    },
+    {
+      "name": "R1 fold classes trajectory",
+      "passed": true
+    },
+    {
+      "name": "R1 one hidden match",
+      "passed": true
+    },
+    {
+      "name": "R1 final panel closed",
+      "passed": true
+    },
+    {
+      "name": "R1 no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted query input",
+      "passed": true
+    },
+    {
+      "name": "R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact phases",
+      "passed": true
+    },
+    {
+      "name": "R2 semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "R2 empty title connected roots",
+      "passed": true
+    },
+    {
+      "name": "R2 surviving Parent Tail identities",
+      "passed": true
+    },
+    {
+      "name": "R2 fold classes trajectory",
+      "passed": true
+    },
+    {
+      "name": "R2 one hidden match",
+      "passed": true
+    },
+    {
+      "name": "R2 final panel closed",
+      "passed": true
+    },
+    {
+      "name": "R2 no errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 trusted query input",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

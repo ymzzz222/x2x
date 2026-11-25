@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-26",
+  "scope": "Two new fixed-condition pairs only; S10 incomplete",
+  "newPairs": 2,
+  "totalS10Pairs": 3,
+  "files": [
+    {
+      "file": "dom/J01-current-all-history-R1.json",
+      "sha256": "7f64cb0855b2172871866ae8714c693103986d6eb1e33bd21e6611a3a7a03a60"
+    },
+    {
+      "file": "dom/J01-current-all-history-R2.json",
+      "sha256": "60fe957e852854318f9691e233d1e33e35361110ce3392bf68ed59867f997875"
+    },
+    {
+      "file": "dom/J01-heading-default-case-R1.json",
+      "sha256": "73d53d42ed24d76a4fbc13fdea257e8dca5e43767ac018a95a6fff09d9a23d2b"
+    },
+    {
+      "file": "dom/J01-heading-default-case-R2.json",
+      "sha256": "cee89f5e56bac830d3b023e73988c8cb7d004f632f04251dc451323a05cf12a2"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J01-current-all-history-R1 exact canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR1 no recorded error or overflow",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR1 title empty roots and original ID/r preserved",
+      "passed": true
+    },
+    {
+      "name": "R1 exact panel values and count transitions",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR1 exact full semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR1 exact trusted history sequence",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR1 closed panel before document history",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-history-R2 exact canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR2 no recorded error or overflow",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR2 title empty roots and original ID/r preserved",
+      "passed": true
+    },
+    {
+      "name": "R2 exact panel values and count transitions",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR2 exact full semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR2 exact trusted history sequence",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-historyR2 closed panel before document history",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-history paired semantics",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-case-R1 exact canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR1 no recorded error or overflow",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR1 title empty roots and original ID/r preserved",
+      "passed": true
+    },
+    {
+      "name": "R1 exact 3-match navigation cycle",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR1 exact full semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR1 exact trusted history sequence",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR1 closed panel before document history",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-case-R2 exact canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR2 no recorded error or overflow",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR2 title empty roots and original ID/r preserved",
+      "passed": true
+    },
+    {
+      "name": "R2 exact 3-match navigation cycle",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR2 exact full semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR2 exact trusted history sequence",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-caseR2 closed panel before document history",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-case paired semantics",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "samplerIncident": "R1 console summary SyntaxError retained in raw metadata; no body operation repeated; no observer window errors",
+  "businessCodeChanged": false
+}

@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-27",
+  "scope": "S11 initial static inventory; no new browser operations, project runtime or source edits",
+  "stageStats": [
+    {
+      "stage": "01-baseline-and-dom",
+      "markdown": 2,
+      "json": 20,
+      "domJson": 20,
+      "bytes": 709215,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 20
+    },
+    {
+      "stage": "02-creation-and-editing",
+      "markdown": 12,
+      "json": 485,
+      "domJson": 485,
+      "bytes": 26835402,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 485
+    },
+    {
+      "stage": "03-single-block-conversion",
+      "markdown": 4,
+      "json": 222,
+      "domJson": 222,
+      "bytes": 32680632,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 222
+    },
+    {
+      "stage": "04-multi-block-conversion",
+      "markdown": 6,
+      "json": 285,
+      "domJson": 285,
+      "bytes": 42608309,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 285
+    },
+    {
+      "stage": "05-nesting-and-combinations",
+      "markdown": 5,
+      "json": 151,
+      "domJson": 151,
+      "bytes": 37444986,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 151
+    },
+    {
+      "stage": "06-numbering-folding-and-outline",
+      "markdown": 3,
+      "json": 362,
+      "domJson": 360,
+      "bytes": 57192853,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 362
+    },
+    {
+      "stage": "07-menus-and-shortcuts",
+      "markdown": 3,
+      "json": 295,
+      "domJson": 294,
+      "bytes": 139751299,
+      "snapshotNormalizedVerified": 0,
+      "snapshotOriginalVerified": 238,
+      "legacyOrAuxiliaryJson": 57
+    },
+    {
+      "stage": "08-deletion-movement-formatting-and-clipboard",
+      "markdown": 10,
+      "json": 586,
+      "domJson": 571,
+      "bytes": 176518950,
+      "snapshotNormalizedVerified": 560,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 26
+    },
+    {
+      "stage": "09-undo-redo-and-history-boundaries",
+      "markdown": 2,
+      "json": 124,
+      "domJson": 107,
+      "bytes": 10281564,
+      "snapshotNormalizedVerified": 91,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 33
+    },
+    {
+      "stage": "10-related-features-and-edge-cases",
+      "markdown": 2,
+      "json": 148,
+      "domJson": 124,
+      "bytes": 38381862,
+      "snapshotNormalizedVerified": 108,
+      "snapshotOriginalVerified": 0,
+      "legacyOrAuxiliaryJson": 40
+    }
+  ],
+  "totals": {
+    "stages": 10,
+    "markdown": 49,
+    "json": 2678,
+    "requirementHeadings": 389,
+    "expandedRequirementIdOccurrences": 393,
+    "distinctUnqualifiedRequirementIds": 385,
+    "observationHeadings": 13,
+    "duplicateUnqualifiedIdGroups": 6,
+    "localMarkdownLinks": 4033,
+    "normalizedSnapshotHashesVerified": 759,
+    "originalSnapshotHashesVerified": 238,
+    "legacyOrAuxiliaryJson": 1681
+  },
+  "snapshotModes": {
+    "originalCanonicalSha256": 238,
+    "normalizedCanonicalSha256": 759
+  },
+  "parseErrors": [],
+  "missingLinks": [],
+  "normalizationCandidates": [
+    {
+      "path": "../09-undo-redo-and-history-boundaries/dom/I05-lock-and-history-entry-inspection.json",
+      "fields": [
+        "html attributes"
+      ],
+      "classification": "identifier naming candidate; URL/user text excluded; original source retained"
+    }
+  ],
+  "limits": [
+    "Existing RFC6902/$dom/$obj reconstruction and stage-specific semantics not reexecuted in this initial pass; S07 sorted UTF-8 canonicalization and S08 stringRef-v2 are separately expanded, not treated as damaged evidence",
+    "Lexical requirement field signals only identify review candidates; they do not complete K02",
+    "Source metadata/checkpoint failure arrays are retained; a recorded product failure is not an audit parser failure",
+    "Only local link targets checked; heading anchors and external links not newly verified",
+    "Manifest scope is current stage Markdown/JSON, not all historical runtime snapshots or functional pass counts"
+  ],
+  "manifest": {
+    "path": "11-source-manifest.json.gz",
+    "uncompressedSha256": "b478efbfe188fa7fab9db27b5805adaedb9e79efa00de8736dbcff421bc190cf",
+    "fileCount": 2727
+  },
+  "identifierReplicaOverlay": {
+    "source": "../09-undo-redo-and-history-boundaries/dom/I05-lock-and-history-entry-inspection.json",
+    "attribute": "data-icon",
+    "original": "FeishuclipOutlined",
+    "replica": "maiyaclipOutlined",
+    "status": "registered mapping; closed source preserved; full identifier semantics review pending"
+  },
+  "snapshotFailures": [
+
+  ]
+}

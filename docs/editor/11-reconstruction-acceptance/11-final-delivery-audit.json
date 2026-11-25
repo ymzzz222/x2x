@@ -1,0 +1,284 @@
+{
+  "date": "2026-10-27",
+  "scope": "S11 final research delivery static checks and explicit scope acceptance; not functional or production acceptance",
+  "stageResearchComplete": true,
+  "finalRequirementsFrozen": false,
+  "projectProductionAcceptancePassed": false,
+  "counts": {
+    "groups": 31,
+    "passed": 31,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "prior.sources.unchanged",
+      "passed": true,
+      "files": 2727,
+      "sourceChanges": []
+    },
+    {
+      "id": "review.cards.source.digest",
+      "passed": true,
+      "cards": 436,
+      "stale": [],
+      "badBounds": []
+    },
+    {
+      "id": "review.required.fields",
+      "passed": true,
+      "cards": 436,
+      "fieldsPerCard": 8,
+      "missingFields": [],
+      "meaning": "Presence and source binding only; does not automatically validate semantic judgment or runtime"
+    },
+    {
+      "id": "review.evidence.targets",
+      "passed": true,
+      "missingEvidence": []
+    },
+    {
+      "id": "review.identity",
+      "passed": true,
+      "catalogReviewed": 402,
+      "supplementalReviewed": 34
+    },
+    {
+      "id": "review.coverage.honest",
+      "passed": true,
+      "coverage": {
+        "catalogRecords": 402,
+        "reviewedRecords": 402,
+        "pendingRecords": 0,
+        "reviewedRequirementHeadings": 389,
+        "pendingRequirementHeadings": 0,
+        "reviewedObservationHeadings": 13,
+        "pendingObservationHeadings": 0,
+        "supplementalUnnumberedReviewed": 34,
+        "supplementalInventoryExhaustive": false,
+        "reviewedExpandedIdOccurrences": 406
+      }
+    },
+    {
+      "id": "review.no.runtime.pass",
+      "passed": true,
+      "projectRuntimeExecuted": false
+    },
+    {
+      "id": "delta.reconstruction",
+      "passed": true,
+      "patchFiles": 717,
+      "patchRuns": 1074,
+      "objectHashes": 436,
+      "patchEqualityToPreDedupNotProven": true
+    },
+    {
+      "id": "delta.counts",
+      "passed": true,
+      "sums": {
+        "patchFiles": 717,
+        "patchRuns": 1074,
+        "operations": 33868,
+        "objects": 436
+      }
+    },
+    {
+      "id": "monitor.nonzero.limits.preserved",
+      "passed": true,
+      "filesWithNonzeroLimit": 22
+    },
+    {
+      "id": "monitor.composition.alternative.channel",
+      "passed": true,
+      "timeline": [
+        {
+          "round": 1,
+          "exportOverflow": 800,
+          "auditOverflow": 492,
+          "timeline": 27,
+          "timelineOverflow": 0,
+          "globalKeys": 6
+        },
+        {
+          "round": 2,
+          "exportOverflow": 800,
+          "auditOverflow": 520,
+          "timeline": 23,
+          "timelineOverflow": 0,
+          "globalKeys": 6
+        }
+      ],
+      "fullMutationClaim": false
+    },
+    {
+      "id": "project.source.fresh",
+      "passed": true,
+      "sourceFiles": 43,
+      "criticalSections": 15,
+      "sourceStale": [],
+      "sectionStale": []
+    },
+    {
+      "id": "project.comparison.digest",
+      "passed": true
+    },
+    {
+      "id": "project.capability.rows",
+      "passed": true,
+      "capabilities": 19
+    },
+    {
+      "id": "project.risks.and.differences",
+      "passed": true,
+      "alignmentDifferences": 4,
+      "sourceRiskOrConditionalReviewItems": 7,
+      "isolatedBuilderFailureConfirmed": true,
+      "projectUIRuntimeFailureNotClaimed": true
+    },
+    {
+      "id": "isolated.builder.failure.retained",
+      "passed": true,
+      "counts": {
+        "cases": 3,
+        "passed": 1,
+        "failed": 2
+      },
+      "releaseGate": "BG08",
+      "fullEditorRuntimeExecuted": false
+    },
+    {
+      "id": "review.inheritance.resolves",
+      "passed": true,
+      "missing": [],
+      "cycles": [],
+      "meaning": "References resolve; this does not prove that two cases have identical conditions"
+    },
+    {
+      "id": "review.unassigned.sections.visible",
+      "passed": true,
+      "totalSections": 655,
+      "unassignedSections": 239,
+      "stale": [],
+      "uniqueNewRequirementsNotClaimed": true
+    },
+    {
+      "id": "review.source.roles.classified",
+      "passed": true,
+      "classified": 239,
+      "categories": {
+        "scope_method": 57,
+        "shared_contract_context": 4,
+        "failure_context": 37,
+        "summary_index": 86,
+        "historical_checkpoint": 44,
+        "contract_container": 4,
+        "project_contract_reference": 7
+      },
+      "badReferences": [],
+      "functionalPassAutomaticallyGranted": false
+    },
+    {
+      "id": "identifier.overlay.bound",
+      "passed": true,
+      "files": 2678,
+      "candidates": 1,
+      "originalEvidencePreserved": true,
+      "opaquePayloadNormalizationNotClaimed": true
+    },
+    {
+      "id": "conflict.decisions.indexed",
+      "passed": true,
+      "decisions": 30,
+      "unmeasuredCombinationsStillOpen": true
+    },
+    {
+      "id": "final.scope.decision.preserved",
+      "passed": true,
+      "finalRequirementsStatus": "open by explicit user instruction",
+      "productionAcceptancePassed": false
+    },
+    {
+      "id": "project.per.card.map.bound",
+      "passed": true,
+      "cards": 436,
+      "problems": [],
+      "behaviorEquivalenceGranted": false
+    },
+    {
+      "id": "project.capability.sources.bound",
+      "passed": true,
+      "capabilities": 19,
+      "unboundPaths": []
+    },
+    {
+      "id": "isolated.keyboard.findings.retained",
+      "passed": true,
+      "sourceMethods": [
+        765,
+        830
+      ],
+      "bodyOnly": true,
+      "firstSelectParagraphAsPrototype": false,
+      "ownCommandRegistration": false,
+      "pmWarningPreserved": true,
+      "realEditorCommandManagerNotExecuted": true
+    },
+    {
+      "id": "new.artifacts.parse.and.size",
+      "passed": true,
+      "files": 24,
+      "jsonErrors": [],
+      "sizeErrors": []
+    },
+    {
+      "id": "new.artifacts.local.links",
+      "passed": true,
+      "checked": 510,
+      "missing": [],
+      "anchorsAndExternalLinksNotChecked": true
+    },
+    {
+      "id": "master.research.delivery.accepted",
+      "passed": true,
+      "K01ToK08": "accepted research delivery only",
+      "stageResearchComplete": true,
+      "finalRequirementsFrozen": false
+    },
+    {
+      "id": "scope.explicit.acceptance.recorded",
+      "passed": true,
+      "researchDeliveryAccepted": true,
+      "finalRequirementsFrozen": false,
+      "productionAcceptancePassed": false,
+      "businessCodeChangeAuthorized": false
+    },
+    {
+      "id": "scope.preclose.package.bound",
+      "passed": true,
+      "preCloseStaticGroups": 28,
+      "reviewCards": 436,
+      "knownFailuresRetained": true,
+      "preCloseHashesAreHistorical": true
+    },
+    {
+      "id": "project.state.contract.digest",
+      "passed": true,
+      "standardsFrozen": false,
+      "serviceRuntimeExecuted": false
+    }
+  ],
+  "failures": [],
+  "remaining": {
+    "requirementHeadings": 0,
+    "observationHeadings": 0,
+    "unnumberedRules": "239 previously unassigned headings role-classified; unheaded clause inventory not claimed exhaustive",
+    "pairAndMonitoringReview": "402 heading cards qualify pairs and limits; source roles classified without granting runtime passes",
+    "projectServiceAndMigrationRuntime": "not executed",
+    "performanceVisualThresholds": "not frozen"
+  },
+  "limits": [
+    "Field presence is not a substitute for manual semantic judgment",
+    "Recorded past failures and excluded windows remain unchanged",
+    "All numbered headings are field-reviewed and remaining source headings role-classified; core production contracts remain open",
+    "The user accepted research delivery completion while final requirements remain open; support/performance/visual standards are unavailable"
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "date": "2026-10-27",
+  "scope": "Read-only source comparison; isolated actual builder probe reported separately",
+  "businessCodeChanged": false,
+  "projectRuntimeExecuted": false,
+  "capabilityRows": 19,
+  "documentSha256": "16bf3c7eebff8cc923f9ca055c1ef6a59a4967bb8ea7efcc310622e364073a7e",
+  "sourceFiles": [
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/Drag/index.vue",
+      "bytes": 6615,
+      "sha256": "f951a9926283cb4ee992ab98797933d2e1d8981fd3265486647101bf95b3b4c2",
+      "lines": 213
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/Drag/menuActions.js",
+      "bytes": 26790,
+      "sha256": "b14f116046bd18e4842fcff19da1fe0a0745295705d3d4952111bd8e5dc5c536",
+      "lines": 770
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/clipboard.js",
+      "bytes": 7899,
+      "sha256": "76b4d89c2cf261adb388848d8ecdf24c208bca174dac255aada5ce074761e628",
+      "lines": 234
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertSelectDoc.js",
+      "bytes": 2976,
+      "sha256": "5c264518a4511c69d5843b416ffc5be6683c114c196b818f6b1723f4e849f496",
+      "lines": 58
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useAiInteraction.js",
+      "bytes": 8207,
+      "sha256": "e25bf7afb9cde481b01467713fdd11f38ae5cff1d8ec0314aec5502ae9f30d36",
+      "lines": 251
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useAutoSave.js",
+      "bytes": 18981,
+      "sha256": "b4acfc979a95eb8bed2a806648cb65696d31efd0e1efaaae9e9767f90bccbb76",
+      "lines": 501
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useCollaboration.js",
+      "bytes": 31396,
+      "sha256": "53a1d9e04cf29ab9958e201d5055ea24fb73b14976cd77a986956e00fe585572",
+      "lines": 855
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js",
+      "bytes": 9298,
+      "sha256": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c",
+      "lines": 247
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useFindReplace.js",
+      "bytes": 9279,
+      "sha256": "0eccb8b94aa311351343c6508bbe2eb1732f83edb1ab91ae9f5f8d5fedcc56c7",
+      "lines": 295
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/blocks.js",
+      "bytes": 14546,
+      "sha256": "e3f67ac9668150c72b540651dd0a790ac942733e33056fc8a9060823ae6b4607",
+      "lines": 466
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/collaboration.js",
+      "bytes": 20505,
+      "sha256": "213fe910b30e954981e3f6fd595b25364692f582204360f19ced891318eb3044",
+      "lines": 675
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/headingFold.js",
+      "bytes": 7108,
+      "sha256": "b548ce0eed59b09aa9ddf83bd0b969b199c99558b7cf9d31014b255f1caa7f87",
+      "lines": 234
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/index.js",
+      "bytes": 21653,
+      "sha256": "8f218cbe4dd3f63b7c905df103ede653c677ba4742968b7143d59ff603965fdf",
+      "lines": 627
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+      "bytes": 34960,
+      "sha256": "9f4cafe89ef8edd476ebe7232cd0e494d88c6fb9e700a7a2a5f9e4451964383a",
+      "lines": 952
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/list.js",
+      "bytes": 16457,
+      "sha256": "f9769d125ba422bdde441e712abbad925f5f3a65de431fadb93d7f4a3f398d59",
+      "lines": 483
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/page.js",
+      "bytes": 2244,
+      "sha256": "f42c6e0cb0c19c77436eaf5ff98c0bf0371dcb5bb2d6c30116c4da7c9b016026",
+      "lines": 86
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/index.vue",
+      "bytes": 76429,
+      "sha256": "ee15a9a88cb3995e53c4cfbd36a4ccba2541818714983ab60b3e77768a64c188",
+      "lines": 2117
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/config.js",
+      "bytes": 1809,
+      "sha256": "c695e79d06e9afd04d89113e71e0fc09483abee91401f2f5b6081e3e7641bdf8",
+      "lines": 53
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/extensions.js",
+      "bytes": 21119,
+      "sha256": "618947d00b1f72c011b6a970887c7f6b92e52710674cbba73e89d50818eacfb9",
+      "lines": 626
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/externalPaste.js",
+      "bytes": 33869,
+      "sha256": "c9aa773d4ffd186bcdc4aad0f3670cad063661dd1e467b4294dff66ed7748381",
+      "lines": 1119
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/selection.js",
+      "bytes": 1803,
+      "sha256": "d2896c83b4a0fb0d69453b0f1afd7ffb8d188b4cd80439e2c050c8bb33c306ec",
+      "lines": 56
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/version.js",
+      "bytes": 12107,
+      "sha256": "8a59b89f54cb5c0b5f16b77553e042007573296f2ddb801986c0189507cea13c",
+      "lines": 370
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/index.js",
+      "bytes": 2226,
+      "sha256": "b7569246c6a1596684396abf8af03e7c85ca312a19b5c2e8d4214be65d77510a",
+      "lines": 70
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/extensions/annotation/schema.js",
+      "bytes": 5512,
+      "sha256": "d2f6ffb2a28154622bdecb76103d71c5d3f7608d6bb7438e68d613b7ca6e93f9",
+      "lines": 169
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/index/composables/usePageChrome.js",
+      "bytes": 24065,
+      "sha256": "ea2ea184fe60669d333f9f833ce3dc916397ae56bb9ef33f6fee8b2607daeff3",
+      "lines": 635
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/shell/catalogue/composables/useCatalogue.js",
+      "bytes": 10182,
+      "sha256": "c9137bfadbd8eae498bb2278ccd6a1744a9ea0444bd7f8bc1e6fe1278775faf4",
+      "lines": 321
+    },
+    {
+      "path": "src/api/aiScriptwriting/known.js",
+      "bytes": 23666,
+      "sha256": "589b4088a09c594d6e4b40f207427eb2f69939c0ad0ee33a2010973a9af0b779",
+      "lines": 815
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/utils/exportDocument.js",
+      "bytes": 3503,
+      "sha256": "b9d9d594d96cb159113d2dc31f00fa0f0f3f7b208fa01d0c3d9c9943d663bf8c",
+      "lines": 106
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/index.js",
+      "bytes": 17961,
+      "sha256": "cbcea93826b892ef1ad6a5121bc0691bb97157fef77d912db89e0c8148872d9a",
+      "lines": 552
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertHeadingText.js",
+      "bytes": 1754,
+      "sha256": "6f921e3b2d027c4c1ba8a7a91e02ca669ac9f315cb2ab33324632d01db4bc4f2",
+      "lines": 53
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertText.js",
+      "bytes": 13249,
+      "sha256": "a34b3f687ba6062de0abc29d52177b257db413bea16675c17ff442708a81f56a",
+      "lines": 336
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertIndex.js",
+      "sha256": "41372d8485a898018f6e2439bdd7320adc62eab1e2f7c4ef26e6c68271b0a742",
+      "bytes": 1238,
+      "lines": 26
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertContext.js",
+      "sha256": "9b6f35c24defe2ca3715c4c4a6a3205f156eb2470386d0e6cbbfbab10bbf3310",
+      "bytes": 21714,
+      "lines": 621
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertMultiple.js",
+      "sha256": "1d45927325dfd4542076d4faa5932c3a6f8b103048964b537a796eee52c908e8",
+      "bytes": 11022,
+      "lines": 342
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/public.js",
+      "sha256": "bcf701a16ae36380856995a4f0468dee8d8a97747e9868f37edbb106e722582d",
+      "bytes": 48655,
+      "lines": 1512
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertList.js",
+      "sha256": "2a6f4f41b491dbe8f40940964d4fce9c59bce64f0d30b89c7f024b6b860368dc",
+      "bytes": 12265,
+      "lines": 301
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertOrderedList.js",
+      "sha256": "9da1b106c7d3746da0d91637f4363fae0ed1b5a8bea71dce2070acf994bbbf18",
+      "bytes": 13014,
+      "lines": 321
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertHeading.js",
+      "sha256": "41f4589ac6e630afaad91e6ef3c46b0b7a49f5ce6ece64f2f0ba142c4fa15db3",
+      "bytes": 22312,
+      "lines": 639
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyDelete.js",
+      "sha256": "98fde590cd61889d17d1ebedbaa42b181c7600b78f8790ce7b33221b06b96782",
+      "bytes": 57862,
+      "lines": 1626
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/Bubble/nodeType.js",
+      "sha256": "d066132a5c2579d68e7cee3cdb4d469ce66a5ca3118d958fdd6e3fd99ea41046",
+      "bytes": 1050,
+      "lines": 25
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/Bubble/useToolbar.js",
+      "sha256": "a55068b4efab200dc4e177b63000b97afcecb63282148282b0e090dc25faccbe",
+      "bytes": 25723,
+      "lines": 775
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/constants.js",
+      "sha256": "8e4829993b509760d9882080fd1e05154b019693b370d7718dbaf35e342b4e66",
+      "bytes": 2885,
+      "lines": 153
+    },
+    {
+      "path": "node_modules/@tiptap/core/src/ExtensionManager.ts",
+      "sha256": "69875cede22e41ca4df1ed14d60422fb64c3f6c71443bc26ba80c8936cef1f70",
+      "bytes": 15778,
+      "lines": 534
+    }
+  ],
+  "criticalSections": [
+    {
+      "id": "DR-S11-001",
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/page.js",
+      "lineStart": 40,
+      "lineEnd": 68,
+      "sectionSha256": "a99bbc516f50aef2b018dab3e8ec6d9fa4f3926fe4e7102167ae076ade7271d2"
+    },
+    {
+      "id": "DR-S11-002",
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/headingFold.js",
+      "lineStart": 146,
+      "lineEnd": 155,
+      "sectionSha256": "2ab51452b7e5185f6b940c5e6c83de9627649c3ab583146041dff1a04d643078"
+    },
+    {
+      "id": "SR01",
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useAutoSave.js",
+      "lineStart": 110,
+      "lineEnd": 150,
+      "sectionSha256": "3e681e172d961f2c231714d54db1ef5652eabee439ae9a46bef7e7fd9eacd8eb"
+    },
+    {
+      "id": "SR02-callback",
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useFindReplace.js",
+      "lineStart": 164,
+      "lineEnd": 216,
+      "sectionSha256": "404917e61f1b0a7219764010c89952c5611424680414062303092034ef0faeff"
+    },
+    {
+      "id": "SR02-command",
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/extensions.js",
+      "lineStart": 425,
+      "lineEnd": 456,
+      "sectionSha256": "ee84cbff93e74449d12d79257c9a23634922ebf8dd52af520e072cc842ecd484"
+    },
+    {
+      "id": "SR03",
+      "path": "src/views/aiScriptCore/wordEdit/editor/index.vue",
+      "lineStart": 1825,
+      "lineEnd": 1881,
+      "sectionSha256": "6be6b1fbc6608b5aa71948d4f3706c84cfd65ae4b47105ac1ef0b46e7cffe125"
+    },
+    {
+      "id": "SR04",
+      "path": "src/views/aiScriptCore/wordEdit/editor/utils/externalPaste.js",
+      "lineStart": 715,
+      "lineEnd": 735,
+      "sectionSha256": "fc20c2a66f6a5f7d50f2261b04eb6de65951011721bf67c9684d9bf8af0c4e89"
+    },
+    {
+      "id": "DR-S11-003",
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/list.js",
+      "lineStart": 30,
+      "lineEnd": 30,
+      "sectionSha256": "dd61bb43cf8f63f65b880d678db126ac2b067dce132590d158dba4e0eb56bb48"
+    },
+    {
+      "id": "SR05-builder",
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertHeadingText.js",
+      "lineStart": 31,
+      "lineEnd": 52,
+      "sectionSha256": "192ca41a611b278d63200ca892a97dabeb695276a629392b03c5dc35ddeceefd"
+    },
+    {
+      "id": "SR05-caller",
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertText.js",
+      "lineStart": 224,
+      "lineEnd": 239,
+      "sectionSha256": "b801d5c001069d525bab3706cc3a2ebebb260a38a17a5cec7df2e1c0e05b24ef"
+    },
+    {
+      "id": "DR-S11-004",
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+      "lineStart": 505,
+      "lineEnd": 545,
+      "sectionSha256": "dabf485d6ca8facba5b25ad1a6a6b27904f41bd3ff470034a66eeb4a84d2c75f"
+    },
+    {
+      "id": "SR06-overwritten",
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+      "lineStart": 765,
+      "lineEnd": 832,
+      "sectionSha256": "f5300c28021ad031deb9bea90998170ec2732b3b7c22978eb9298e5492d704a6"
+    },
+    {
+      "id": "SR06-caller",
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/keyboard.js",
+      "lineStart": 915,
+      "lineEnd": 915,
+      "sectionSha256": "eb07a198078f4735cda37bf91bf0fb3c3774632cd69f05dcb5f901d7dd07381b"
+    },
+    {
+      "id": "SR06-tiptap-registration",
+      "path": "node_modules/@tiptap/core/src/ExtensionManager.ts",
+      "lineStart": 70,
+      "lineEnd": 94,
+      "sectionSha256": "41212b53b346263dfff907220830afd0b375446506b180aaf64b5abf80a29d88"
+    },
+    {
+      "id": "SR07-heading-menu",
+      "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertHeading.js",
+      "lineStart": 596,
+      "lineEnd": 653,
+      "sectionSha256": "2d3683183b14f99eda75443a900e4da4a2eeb0e51c61e6d65cfd627a04118810"
+    }
+  ],
+  "limits": [
+    "Static corresponding implementation is not proof of semantic parity",
+    "Current code may have caller/framework/server protections not demonstrated by these snippets",
+    "Source hashes bind these conclusions to this workspace state; no git commands used",
+    "No new source failure is labeled a reproduced production incident"
+  ],
+  "stateServiceDocumentSha256": "9e93bd62e8e550d03113c4349d9f15bee1a6dab72ae47797dd9349b18b7a81a7",
+  "projectRuntimeScope": "No project editor/browser/provider/API or broad test suite executed",
+  "isolatedFunctionProbeExecuted": true,
+  "isolatedProbeReport": "11-heading-text-isolated-probe.json",
+  "additionalIsolatedProbeReport": "11-keyboard-contract-probe.json"
+}

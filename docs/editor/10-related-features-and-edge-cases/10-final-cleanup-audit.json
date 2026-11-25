@@ -1,0 +1,249 @@
+{
+  "date": "2026-10-27",
+  "cleanupComplete": true,
+  "functionalPairsAdded": 0,
+  "identityObservation": {
+    "logicalRecordIdsPreserved": true,
+    "numericPageBlockIdsRecreated": true,
+    "mapping": [
+      {
+        "type": "heading1",
+        "recordId": "LtErdkMkqohq7gx4OPZcWEkFnjg",
+        "beforeBlockId": "2",
+        "undoBlockId": "20",
+        "beforeNodeRef": "r4",
+        "undoNodeRef": "r140"
+      },
+      {
+        "type": "heading9",
+        "recordId": "YHf0dq0eOoTW6yxSOnbcvGbFnig",
+        "beforeBlockId": "3",
+        "undoBlockId": "19",
+        "beforeNodeRef": "r20",
+        "undoNodeRef": "r156"
+      },
+      {
+        "type": "text",
+        "recordId": "DRJHdl2hBo8rs2x01G3cNIAYn7g",
+        "beforeBlockId": "4",
+        "undoBlockId": "18",
+        "beforeNodeRef": "r36",
+        "undoNodeRef": "r172"
+      },
+      {
+        "type": "ordered",
+        "recordId": "IUhpd0ZJFoX9Q5xwlS1cPJpyn0z",
+        "beforeBlockId": "5",
+        "undoBlockId": "16",
+        "beforeNodeRef": "r47",
+        "undoNodeRef": "r183"
+      },
+      {
+        "type": "ordered",
+        "recordId": "L151do5Xmo6Da2xt8oHcvvf6nPQ",
+        "beforeBlockId": "6",
+        "undoBlockId": "17",
+        "beforeNodeRef": "r62",
+        "undoNodeRef": "r198"
+      },
+      {
+        "type": "bullet",
+        "recordId": "YtrHdEHmxoRsu7xp5XncKtUhnnf",
+        "beforeBlockId": "7",
+        "undoBlockId": "15",
+        "beforeNodeRef": "r81",
+        "undoNodeRef": "r217"
+      },
+      {
+        "type": "quote_container",
+        "recordId": "BSSmdGV8hoJTzSxBhixcSv7rn4c",
+        "beforeBlockId": "8",
+        "undoBlockId": "13",
+        "beforeNodeRef": "r94",
+        "undoNodeRef": "r230"
+      },
+      {
+        "type": "text",
+        "recordId": "XJUvdORmwoYxQ3xlbV6c5CEunvh",
+        "beforeBlockId": "9",
+        "undoBlockId": "14",
+        "beforeNodeRef": "r101",
+        "undoNodeRef": "r237"
+      },
+      {
+        "type": "text",
+        "recordId": "D9GbdTHPeoNfsKx1limcBOsWn2H",
+        "beforeBlockId": "10",
+        "undoBlockId": "12",
+        "beforeNodeRef": "r113",
+        "undoNodeRef": "r249"
+      }
+    ],
+    "initialAuditAssumption": "Numeric data-block-id preservation was initially asserted and failed; actual restoration keeps logical data-record-id while recreating numeric IDs. No failure evidence deleted."
+  },
+  "readbackHash": "b2c824e3a243f733fc30b557ccca815b11b61f54591394ed0581204a18b42595",
+  "files": [
+    {
+      "file": "dom/J00-final-clear-history.json",
+      "sha256": "1fab445ba44b57e7d450807320d68cdc6239b6e1696e3e8e8b9229594a312d76"
+    },
+    {
+      "file": "dom/J00-final-Chrome-R1.json",
+      "sha256": "db64c94e52c93e709ff2ebf9cb47c0c6b27a1124b21b3c7125685a56227a31c3"
+    },
+    {
+      "file": "dom/J00-final-Chrome-R2.json",
+      "sha256": "28e6ba66abe3814bf3a763bbbb199c8e9ffc6dc9ef326b0d8dcdf7af4c5947fe"
+    },
+    {
+      "file": "dom/J00-final-Quark-R1.json",
+      "sha256": "b7c2b3abbb81d56a210628d85ed928ea8f0a95f44d2040487ac24f53fa1fca6b"
+    },
+    {
+      "file": "dom/J00-final-Quark-R2.json",
+      "sha256": "da85df1cfbba154cd2fe0cf8899740ddfe5475575561246ec5c7d01d72a0811c"
+    },
+    {
+      "file": "dom/J00-final-Chrome-interface.json",
+      "sha256": "a8888d85fe5dfe7c5eb6c3487d4a7baaac759b8cd4974f489420f9c4024e3cc0"
+    },
+    {
+      "file": "dom/J00-final-Quark-interface.json",
+      "sha256": "a0711bb614b8e6933bb5ac97fd998d4117210b4597de689590b49c0a43f4918f"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J00-final-clear-history canonical hash",
+      "passed": true
+    },
+    {
+      "name": "exact final whole-body clear Undo Redo trajectory",
+      "passed": true
+    },
+    {
+      "name": "original 9 blocks restore exact content format nesting and logical record identity",
+      "passed": true
+    },
+    {
+      "name": "numeric page block IDs regenerate after deletion undo",
+      "passed": true
+    },
+    {
+      "name": "both delete and redo zero blocks",
+      "passed": true
+    },
+    {
+      "name": "history roots/title preserved no overflow/errors",
+      "passed": true
+    },
+    {
+      "name": "J00-final-Chrome-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "ChromeR1 actual native reload loaded online roots",
+      "passed": true
+    },
+    {
+      "name": "ChromeR1 zero body empty title no observer",
+      "passed": true
+    },
+    {
+      "name": "ChromeR1 no find panel/highlight",
+      "passed": true
+    },
+    {
+      "name": "ChromeR1 semantic hash recomputes",
+      "passed": true
+    },
+    {
+      "name": "J00-final-Chrome-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "ChromeR2 actual native reload loaded online roots",
+      "passed": true
+    },
+    {
+      "name": "ChromeR2 zero body empty title no observer",
+      "passed": true
+    },
+    {
+      "name": "ChromeR2 no find panel/highlight",
+      "passed": true
+    },
+    {
+      "name": "ChromeR2 semantic hash recomputes",
+      "passed": true
+    },
+    {
+      "name": "J00-final-Quark-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "QuarkR1 actual native reload loaded online roots",
+      "passed": true
+    },
+    {
+      "name": "QuarkR1 zero body empty title no observer",
+      "passed": true
+    },
+    {
+      "name": "QuarkR1 no find panel/highlight",
+      "passed": true
+    },
+    {
+      "name": "QuarkR1 semantic hash recomputes",
+      "passed": true
+    },
+    {
+      "name": "J00-final-Quark-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "QuarkR2 actual native reload loaded online roots",
+      "passed": true
+    },
+    {
+      "name": "QuarkR2 zero body empty title no observer",
+      "passed": true
+    },
+    {
+      "name": "QuarkR2 no find panel/highlight",
+      "passed": true
+    },
+    {
+      "name": "QuarkR2 semantic hash recomputes",
+      "passed": true
+    },
+    {
+      "name": "four distinct real navigation origins",
+      "passed": true
+    },
+    {
+      "name": "four independent readback hashes identical",
+      "passed": true
+    },
+    {
+      "name": "Chrome cache/throttling original settings",
+      "passed": true
+    },
+    {
+      "name": "both study consoles closed and research variables cleared",
+      "passed": true
+    },
+    {
+      "name": "Quark original tab restored",
+      "passed": true
+    },
+    {
+      "name": "failed partial capture explicitly excluded",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "scope": "Empty title/body with actual clear/Undo/Redo; Chrome and Quark each two independent reloads, observer removal, console closure, network preferences restored, original auxiliary tab restored",
+  "incident": "Quark language banner Close preceded actual console Close; partial screenshot capture rejected as proof. Separate native re-selection confirmed study console closed.",
+  "unverified": "Production server protocol and cache isolation not inferred from same-account independent browser reads"
+}

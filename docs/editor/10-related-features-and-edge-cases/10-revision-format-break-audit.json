@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 2,
+  "totalS10Pairs": 10,
+  "scope": "Revision bold and paragraph break/rejection history only",
+  "files": [
+    {
+      "file": "dom/J03-revision-bold-R1.json",
+      "sha256": "ab7ba6acbd8b8596d383d9747335b755fa807e3fa0b1a3f1a499601e6cb520bb"
+    },
+    {
+      "file": "dom/J03-revision-bold-R2.json",
+      "sha256": "7bb1ee7fc0fda927b8c7794ac9a0fcf04e178f52f10b277afd907222e9f744ea"
+    },
+    {
+      "file": "dom/J03-revision-paragraph-break-R1.json",
+      "sha256": "a56c925f52ef8a246c3be1d2e786a7e80f8fe7f48ed5725f230cc0d9617209c2"
+    },
+    {
+      "file": "dom/J03-revision-paragraph-break-R2.json",
+      "sha256": "1381ccfaf78bce8be3d6988bc4c1557afd6f9e31160de3149b675e4ef8085dc0"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J03-revision-bold-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1 exact computed font weights",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2 exact computed font weights",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1 trusted initiating key",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2 trusted initiating key",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

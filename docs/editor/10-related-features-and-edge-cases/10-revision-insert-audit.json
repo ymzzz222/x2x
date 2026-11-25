@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 2,
+  "totalS10Pairs": 6,
+  "scope": "Revision single character insert, accept/reject and independent document history only",
+  "files": [
+    {
+      "file": "dom/J03-revision-insert-reject-R1.json",
+      "sha256": "ae5a613a77e876561e24fb028e40ae61de73c104fa3c6a0ce76c8cf8f782160a"
+    },
+    {
+      "file": "dom/J03-revision-insert-reject-R2.json",
+      "sha256": "f9285e0b7bac3c7bed3d65e4af6fcfa1ba31fe56314554104fb353b9122b84eb"
+    },
+    {
+      "file": "dom/J03-revision-insert-accept-R1.json",
+      "sha256": "d04bc76d8744f3511e1812f94f2794d4259f3a36e08a2956042ff453d83a9a1c"
+    },
+    {
+      "file": "dom/J03-revision-insert-accept-R2.json",
+      "sha256": "9d444a01c203d5f03ef90c41f3869cea9453c1072c8aea8c74ae0a45f60d7cc9"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J03-revision-insert-reject-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1 trusted X paste",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2 trusted X paste",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1 trusted X paste",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 exact semantic trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 revision mark trajectory",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 title roots and block IDs retained",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 card tracks revision marks",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 no overflow or errors",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2 trusted X paste",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

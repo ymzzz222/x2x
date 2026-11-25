@@ -1,0 +1,66 @@
+{
+  "session": "S02-1791940824848",
+  "segment": "creation-entries-1791952185213",
+  "normalization": "feishu -> maiya DOM identifiers only",
+  "overflow": 0,
+  "reconstruction": "Expand $dom recursively through domObjects. Set time then apply RFC 6902 baselinePatch/beforePatch.",
+  "baseline": {"blocks":[{"node":{"$dom":"d33"},"parent":{"$dom":"d20"},"parentBlock":"n19","parentBlockNode":{"$dom":"d21"}}],"compositionActive":false,"connected":true,"focus":{"$dom":"d1"},"internalScroll":[{"clientHeight":899,"node":{"$dom":"d24"},"scrollHeight":963,"scrollLeft":0,"scrollTop":0}],"lines":[{"lines":[{"leaves":[{"$dom":"d22"}],"line":"n3"}],"zone":"n2"},{"lines":[{"leaves":[{"$dom":"d34"}],"line":"n2254"}],"zone":"n2253"}],"outer":[1674,1050],"popup":[{"node":{"$dom":"d14"},"rect":{"bottom":64,"height":0,"left":0,"right":1207,"top":64,"width":1207,"x":0,"y":64},"text":""}],"root":{"$dom":"d1"},"rootParents":[{"$dom":"d15"},{"$dom":"d16"}],"saveLabels":["最近修改: 昨天 18:39分享编辑","已经保存到云端"],"selection":{"anchor":"n2256","anchorOffset":1,"collapsed":true,"focus":"n2256","focusOffset":1,"type":"Caret"},"selectionContext":{"anchorBlock":"n2250","anchorZone":"n2253","focusBlock":"n2250","focusZone":"n2253"},"time":"2026-10-14T04:29:45.213Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1207,963,1],"zones":[{"node":{"$dom":"d5"},"parents":[{"$dom":"d6"},{"$dom":"d7"}],"rect":{"bottom":167.25,"height":55.25,"left":193.5,"right":1013.5,"top":112,"width":820,"x":193.5,"y":112},"style":{"color":"rgb(31, 35, 41)","fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","whiteSpace":"break-spaces"}},{"node":{"$dom":"d28"},"parents":[{"$dom":"d29"},{"$dom":"d30"}],"rect":{"bottom":261.25,"height":26,"left":181.5,"right":1013.5,"top":235.25,"width":832,"x":181.5,"y":235.25},"style":{"color":"rgb(31, 35, 41)","fontSize":"16px","fontWeight":"400","lineHeight":"26px","whiteSpace":"break-spaces"}}]},
+  "domObjects": {
+    "d1": {"attrs":{"class":"page-block root-block","contenteditable":"true","data-content-editable-root":"true","data-slate-editor":"true","spellcheck":"false","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625;"},"ref":"n1","tag":"DIV"},
+    "d2": {"ref":"n5","text":"​"},
+    "d3": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d2"}],"ref":"n4","tag":"SPAN"},
+    "d4": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d3"}],"ref":"n3","tag":"DIV"},
+    "d5": {"attrs":{"class":"zone-container text-editor","contenteditable":"true","data-placeholder":"请输入标题","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"1"},"children":[{"$dom":"d4"}],"ref":"n2","tag":"DIV"},
+    "d6": {"attrs":{"class":"page-block-content left flash-block-content page-block-title-empty","style":"--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625; line-height: 1.625;"},"ref":"n6","tag":"H1"},
+    "d7": {"attrs":{"class":"page-block-header page-block-header__custom_icon"},"ref":"n7","tag":"DIV"},
+    "d8": {"ref":"n3397","text":"​"},
+    "d9": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d8"}],"ref":"n3396","tag":"SPAN"},
+    "d10": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d9"}],"ref":"n3395","tag":"DIV"},
+    "d11": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"276"},"children":[{"$dom":"d10"}],"ref":"n3394","tag":"DIV"},
+    "d12": {"attrs":{"class":"text-block"},"ref":"n3393","tag":"DIV"},
+    "d13": {"attrs":{"class":"text-block-wrapper"},"ref":"n3392","tag":"DIV"},
+    "d14": {"attrs":{"class":"docx-popup-container"},"ref":"n14","tag":"DIV"},
+    "d15": {"attrs":{"class":"first-line-empty","id":"placeholder-wrapper-KgIBm3t5"},"ref":"n15","tag":"DIV"},
+    "d16": {"attrs":{},"ref":"n16","tag":"DIV"},
+    "d17": {"attrs":{"class":"text-block"},"children":[{"$dom":"d11"}],"ref":"n3393","tag":"DIV"},
+    "d18": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d17"}],"ref":"n3392","tag":"DIV"},
+    "d19": {"attrs":{"class":"block docx-text-block isEmpty focused","data-block-id":"276","data-block-type":"text","data-record-id":"JSGodADoVoCv4hxQSXIcVYnDn9b"},"children":[{"$dom":"d18"}],"ref":"n3000","tag":"DIV"},
+    "d20": {"attrs":{"class":"render-unit-wrapper"},"ref":"n18","tag":"DIV"},
+    "d21": {"attrs":{"class":"block docx-page-block isEmpty","data-block-id":"1","data-block-type":"page","data-record-id":"HWqedGGcOo7LXSxpY0ncFEnAned"},"ref":"n19","tag":"DIV"},
+    "d22": {"codePoints":[8203],"enter":true,"ref":"n4","text":"​"},
+    "d23": {"codePoints":[8203],"enter":true,"ref":"n3396","text":"​"},
+    "d24": {"attrs":{"class":"bear-web-x-container docx-in-wiki width-transition","style":"overflow-anchor: none;"},"ref":"n20","tag":"DIV"},
+    "d25": {"ref":"n2256","text":"​"},
+    "d26": {"attrs":{"data-enter":"true","data-leaf":"true","data-string":"true"},"children":[{"$dom":"d25"}],"ref":"n2255","tag":"SPAN"},
+    "d27": {"attrs":{"class":"ace-line","data-node":"true"},"children":[{"$dom":"d26"}],"ref":"n2254","tag":"DIV"},
+    "d28": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-slate-editor":"true","data-zone-container":"*","data-zone-id":"214"},"children":[{"$dom":"d27"}],"ref":"n2253","tag":"DIV"},
+    "d29": {"attrs":{"class":"text-block"},"ref":"n2252","tag":"DIV"},
+    "d30": {"attrs":{"class":"text-block-wrapper"},"ref":"n2251","tag":"DIV"},
+    "d31": {"attrs":{"class":"text-block"},"children":[{"$dom":"d28"}],"ref":"n2252","tag":"DIV"},
+    "d32": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d31"}],"ref":"n2251","tag":"DIV"},
+    "d33": {"attrs":{"class":"block docx-text-block isEmpty focused","data-block-id":"214","data-block-type":"text","data-record-id":"JSGodADoVoCv4hxQSXIcVYnDn9b"},"children":[{"$dom":"d32"}],"ref":"n2250","tag":"DIV"},
+    "d34": {"codePoints":[8203],"enter":true,"ref":"n2255","text":"​"}
+  },
+  "runs": [
+    {
+      "label": "B05-shortcut-quote-R1",
+      "before": {"baselinePatch":[{"op":"remove","path":"/rootParents"},{"op":"remove","path":"/blocks"},{"op":"remove","path":"/selectionContext"},{"op":"remove","path":"/lines"},{"op":"remove","path":"/internalScroll"},{"op":"remove","path":"/compositionActive"},{"op":"replace","path":"/zones/0/rect/y","value":106},{"op":"replace","path":"/zones/0/rect/top","value":106},{"op":"replace","path":"/zones/0/rect/bottom","value":161.25},{"op":"replace","path":"/zones/1/node/ref","value":"n3394"},{"op":"replace","path":"/zones/1/node/attrs/data-zone-id","value":"276"},{"op":"replace","path":"/zones/1/node/children/0/ref","value":"n3395"},{"op":"replace","path":"/zones/1/node/children/0/children/0/ref","value":"n3396"},{"op":"replace","path":"/zones/1/node/children/0/children/0/children/0/ref","value":"n3397"},{"op":"replace","path":"/zones/1/parents/0/ref","value":"n3393"},{"op":"replace","path":"/zones/1/parents/1/ref","value":"n3392"},{"op":"replace","path":"/zones/1/rect/y","value":229.25},{"op":"replace","path":"/zones/1/rect/top","value":229.25},{"op":"replace","path":"/zones/1/rect/bottom","value":255.25},{"op":"replace","path":"/selection/anchor","value":"n3397"},{"op":"replace","path":"/selection/focus","value":"n3397"},{"op":"replace","path":"/popup/0/rect/y","value":58},{"op":"replace","path":"/popup/0/rect/top","value":58},{"op":"replace","path":"/popup/0/rect/bottom","value":58}],"time":"2026-10-14T04:56:46.254Z"},
+      "after": {"beforePatch":[{"op":"replace","path":"/zones/0/rect/x","value":66},{"op":"replace","path":"/zones/0/rect/width","value":689},{"op":"replace","path":"/zones/0/rect/right","value":755},{"op":"replace","path":"/zones/0/rect/left","value":66},{"op":"replace","path":"/zones/1/rect/x","value":54},{"op":"replace","path":"/zones/1/rect/width","value":701},{"op":"replace","path":"/zones/1/rect/right","value":755},{"op":"replace","path":"/zones/1/rect/left","value":54},{"op":"replace","path":"/viewport/0","value":821},{"op":"replace","path":"/viewport/1","value":955},{"op":"replace","path":"/popup/0/rect/width","value":821},{"op":"replace","path":"/popup/0/rect/right","value":821}],"time":"2026-10-14T04:56:56.614Z"},
+      "changes": [
+      ],
+      "events": [
+        {"isTrusted":true,"selection":{"anchor":"n3397","anchorOffset":1,"collapsed":true,"focus":"n3397","focusOffset":1,"type":"Caret"},"seq":664,"target":{"$dom":"d1"},"type":"focusin"},
+        {"isTrusted":true,"selection":{"anchor":"n3397","anchorOffset":1,"collapsed":true,"focus":"n3397","focusOffset":1,"type":"Caret"},"seq":665,"target":{"$dom":"d1"},"type":"focusout"}
+      ],
+      "errors": [],
+      "globalKeys": [
+      ],
+      "pastes": [],
+      "linebreakPastes": [],
+      "specialPastes": [],
+      "checkpoints": [{"label":"shortcut-settled","state":{"blocks":[{"node":{"$dom":"d19"},"parent":{"$dom":"d20"},"parentBlock":"n19","parentBlockNode":{"$dom":"d21"}}],"compositionActive":false,"connected":true,"focus":{"$dom":"d1"},"internalScroll":[{"clientHeight":891,"node":{"$dom":"d24"},"scrollHeight":955,"scrollLeft":0,"scrollTop":6}],"lines":[{"lines":[{"leaves":[{"$dom":"d22"}],"line":"n3"}],"zone":"n2"},{"lines":[{"leaves":[{"$dom":"d23"}],"line":"n3395"}],"zone":"n3394"}],"outer":[1674,1050],"popup":[{"node":{"$dom":"d14"},"rect":{"bottom":58,"height":0,"left":0,"right":821,"top":58,"width":821,"x":0,"y":58},"text":""}],"root":{"$dom":"d1"},"rootParents":[{"$dom":"d15"},{"$dom":"d16"}],"saveLabels":["最近修改: 昨天 18:39分享编辑","已经保存到云端"],"selection":{"anchor":"n3397","anchorOffset":1,"collapsed":true,"focus":"n3397","focusOffset":1,"type":"Caret"},"selectionContext":{"anchorBlock":"n3000","anchorZone":"n3394","focusBlock":"n3000","focusZone":"n3394"},"time":"2026-10-14T04:56:53.402Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[821,955,1],"zones":[{"node":{"$dom":"d5"},"parents":[{"$dom":"d6"},{"$dom":"d7"}],"rect":{"bottom":161.25,"height":55.25,"left":66,"right":755,"top":106,"width":689,"x":66,"y":106},"style":{"color":"rgb(31, 35, 41)","fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","whiteSpace":"break-spaces"}},{"node":{"$dom":"d11"},"parents":[{"$dom":"d12"},{"$dom":"d13"}],"rect":{"bottom":255.25,"height":26,"left":54,"right":755,"top":229.25,"width":701,"x":54,"y":229.25},"style":{"color":"rgb(31, 35, 41)","fontSize":"16px","fontWeight":"400","lineHeight":"26px","whiteSpace":"break-spaces"}}]}}],
+      "clicks": [],
+      "channelFailure": "attempt produced no page keydown; not evidence of unsupported Feishu shortcut"
+    }
+  ]
+}

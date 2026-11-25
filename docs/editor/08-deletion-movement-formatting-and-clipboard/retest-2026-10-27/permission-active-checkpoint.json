@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-27",
+  "scope": "S08 reopened tests",
+  "targetUrl": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "observations": [],
+  "transportIssues": [
+    "Two Chrome extension attachment timeouts; native UI fallback used.",
+    "Early long AX result strings were truncated or escaped; those attempts were not accepted as completed assertions.",
+    "A reused console result marker returned an earlier result once; subsequent requests use unique markers.",
+    "A geometry result arrived after three AX polls during the 3000-block undo; the matching unique result was subsequently read without repeating Undo."
+  ],
+  "payload500001": {
+    "blocks": 10,
+    "userUnits": 500001,
+    "clipboardUnits": 500010,
+    "sha": "23426e989f496deb5fad01c53ccbf401f621b81ca923a1f306b5a33bdbfeae96",
+    "generator": "Ten S08RNNN| prefixes padded with x to 50000 UTF-16 units each, LF-separated, followed by Y."
+  },
+  "blockPayloadGenerator": "B plus five-digit 1-based index, one record per LF-separated paragraph.",
+  "blockPayloads": [
+    {
+      "blocks": 1000,
+      "userUnits": 6000,
+      "clipboardUnits": 6999,
+      "sha": "ad76e14173923f4ab061827e05cb89be12c9f67fab5b571f0e24b2cab58854cf"
+    },
+    {
+      "blocks": 10000,
+      "userUnits": 60000,
+      "clipboardUnits": 69999,
+      "sha": "79a1abfe53f0a819d1d37e03979b93fc495fe7dab137cc7facc462af65ad77a0"
+    },
+    {
+      "blocks": 39998,
+      "userUnits": 239988,
+      "clipboardUnits": 279985,
+      "sha": "a16052098657fe234c7dc70a28c7359b2c7b4195545ceafac56b5ec6fd3cb9a7"
+    },
+    {
+      "blocks": 39999,
+      "userUnits": 239994,
+      "clipboardUnits": 279992,
+      "sha": "410d5280bf449256890a2cc2f70159608f8c4517bf02d37ad7cd39f240116a66"
+    },
+    {
+      "blocks": 40000,
+      "userUnits": 240000,
+      "clipboardUnits": 279999,
+      "sha": "0debeb6b2d3f9619c4451a74f9dc0fa9bcfbcc52c4cb773723bfcf961c9163d0"
+    },
+    {
+      "blocks": 40001,
+      "userUnits": 240006,
+      "clipboardUnits": 280006,
+      "sha": "f0767e82f6a9265231708e71c7736349f63e8413c1561d69c06ca320be78b5b4"
+    }
+  ],
+  "permissionException": {
+    "answer": "允许临时屏蔽，测完恢复默认",
+    "questionItemId": "[\"request_user_input_async\",\"call_598f79ac319b4183a699ebc0a13ca93f\",0]",
+    "origin": "https://research-fixture.example",
+    "originalUIValue": "询问（默认）",
+    "originalAPI": {
+      "read": "prompt",
+      "write": "granted"
+    },
+    "currentUIValue": "询问（默认）",
+    "restorationConfirmed": true,
+    "restorationUIConfirmed": true,
+    "restoredAPI": {
+      "read": "prompt",
+      "write": "granted"
+    },
+    "postReloadVerification": {
+      "p": "permission-restored-after-reload",
+      "origin": 1793085744946.2,
+      "read": "prompt",
+      "write": "granted",
+      "monitorPresent": false
+    }
+  },
+  "status": "Controlled tests complete; original clipboard UI and API states restored and verified after real reload"
+}

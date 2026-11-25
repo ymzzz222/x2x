@@ -1,0 +1,4556 @@
+{
+  "session": "S08-1792471689724",
+  "operation": {
+    "id": "H00-nested-list-outdent-fixture",
+    "start": "2026-10-20T07:04:09.898Z",
+    "before": {
+      "time": "2026-10-20T07:04:09.898Z",
+      "ms": 8185602.5,
+      "connected": true,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "viewport": {
+        "width": 1152,
+        "height": 963,
+        "scale": 1
+      },
+      "root": {
+        "r": "n1",
+        "tag": "DIV",
+        "cls": "page-block root-block",
+        "editable": "true"
+      },
+      "title": {
+        "snapshotRef": "tree1"
+      },
+      "body": {
+        "snapshotRef": "tree2"
+      },
+      "active": {
+        "r": "n1",
+        "tag": "DIV",
+        "cls": "page-block root-block"
+      },
+      "selection": {
+        "type": "Caret",
+        "collapsed": true,
+        "anchor": {
+          "r": "n12371",
+          "offset": 11,
+          "tag": "#text",
+          "text": "IndentChild",
+          "block": {
+            "r": "n12361",
+            "id": "122",
+            "cls": "block docx-ordered-block focused"
+          }
+        },
+        "focus": {
+          "r": "n12371",
+          "offset": 11,
+          "tag": "#text",
+          "text": "IndentChild",
+          "block": {
+            "r": "n12361",
+            "id": "122",
+            "cls": "block docx-ordered-block focused"
+          }
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "n12371",
+              "offset": 11,
+              "tag": "#text",
+              "text": "IndentChild",
+              "block": {
+                "r": "n12361",
+                "id": "122",
+                "cls": "block docx-ordered-block focused"
+              }
+            },
+            "end": {
+              "r": "n12371",
+              "offset": 11,
+              "tag": "#text",
+              "text": "IndentChild",
+              "block": {
+                "r": "n12361",
+                "id": "122",
+                "cls": "block docx-ordered-block focused"
+              }
+            }
+          }
+        ]
+      },
+      "menus": [],
+      "save": [
+        "已经保存到云端"
+      ]
+    },
+    "mutations": [
+      {
+        "seq": 5,
+        "time": "2026-10-20T07:04:13.476Z",
+        "type": "attributes",
+        "target": "n12361",
+        "name": "class",
+        "old": "block docx-ordered-block focused",
+        "valueAtDelivery": "block docx-ordered-block"
+      },
+      {
+        "seq": 6,
+        "time": "2026-10-20T07:04:13.476Z",
+        "type": "attributes",
+        "target": "n12368",
+        "name": "class",
+        "old": "zone-container text-editor non-empty text-editor-focused",
+        "valueAtDelivery": "zone-container text-editor non-empty"
+      },
+      {
+        "seq": 13,
+        "time": "2026-10-20T07:04:14.008Z",
+        "type": "childList",
+        "target": "n11",
+        "added": [],
+        "removed": [
+          {
+            "r": "n12361",
+            "tag": "DIV",
+            "a": {
+              "class": "block docx-ordered-block",
+              "data-block-id": "122",
+              "data-block-type": "ordered",
+              "data-record-id": "CE9ndMqT3o5mgBxWBdhcU1Cun6g"
+            },
+            "c": [
+              {
+                "r": "n12362",
+                "tag": "DIV",
+                "a": {
+                  "class": "list-wrapper ordered-list"
+                },
+                "c": [
+                  {
+                    "r": "n12363",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "list list-align-undefined"
+                    },
+                    "c": [
+                      {
+                        "r": "n12364",
+                        "tag": "BUTTON",
+                        "a": {
+                          "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                          "contenteditable": "false",
+                          "type": "button"
+                        },
+                        "c": [
+                          {
+                            "r": "n12365",
+                            "text": "a"
+                          },
+                          {
+                            "r": "n12366",
+                            "text": "."
+                          }
+                        ]
+                      },
+                      {
+                        "r": "n12367",
+                        "tag": "DIV",
+                        "a": {
+                          "class": "list-content"
+                        },
+                        "c": [
+                          {
+                            "r": "n12368",
+                            "tag": "DIV",
+                            "a": {
+                              "class": "zone-container text-editor non-empty",
+                              "data-zone-id": "122",
+                              "contenteditable": "true"
+                            },
+                            "c": [
+                              {
+                                "r": "n12369",
+                                "tag": "DIV",
+                                "a": {
+                                  "class": "ace-line"
+                                },
+                                "c": [
+                                  {
+                                    "r": "n12370",
+                                    "tag": "SPAN",
+                                    "a": {
+                                      "class": " author-7622865454574423258"
+                                    },
+                                    "c": [
+                                      {
+                                        "r": "n12371",
+                                        "text": "IndentChild"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "r": "n12372",
+                                    "tag": "SPAN",
+                                    "a": {},
+                                    "c": [
+                                      {
+                                        "r": "n12373",
+                                        "text": "​"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "previous": "n12348",
+        "next": "n1133"
+      },
+      {
+        "seq": 14,
+        "time": "2026-10-20T07:04:14.008Z",
+        "type": "childList",
+        "target": "n12349",
+        "added": [
+          {
+            "r": "n12402",
+            "tag": "DIV",
+            "a": {
+              "class": "list-children",
+              "style": "padding-left: 18px; margin-left: 7px;"
+            },
+            "c": [
+              {
+                "r": "n12403",
+                "tag": "DIV",
+                "a": {
+                  "class": "render-unit-wrapper"
+                },
+                "c": []
+              }
+            ]
+          }
+        ],
+        "removed": [],
+        "previous": "n12350",
+        "next": null
+      },
+      {
+        "seq": 15,
+        "time": "2026-10-20T07:04:14.008Z",
+        "type": "childList",
+        "target": "n12348",
+        "added": [
+          {
+            "r": "n12404",
+            "tag": "DIV",
+            "a": {
+              "class": "fold-wrapper can-fold fold-block-id-123",
+              "contenteditable": "false"
+            },
+            "c": [
+              {
+                "r": "n12405",
+                "tag": "DIV",
+                "a": {
+                  "class": "fold-wrapper can-fold fold-block-id-123 fold-handler-wrapper"
+                },
+                "c": [
+                  {
+                    "r": "n12406",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "fold-handler"
+                    },
+                    "c": [
+                      {
+                        "r": "n12407",
+                        "tag": "DIV",
+                        "a": {
+                          "class": "svg-wrapper"
+                        },
+                        "c": [
+                          {
+                            "r": "n12408",
+                            "tag": "svg",
+                            "a": {},
+                            "c": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "removed": [],
+        "previous": "n12349",
+        "next": null
+      },
+      {
+        "seq": 16,
+        "time": "2026-10-20T07:04:14.008Z",
+        "type": "attributes",
+        "target": "n12348",
+        "name": "class",
+        "old": "block docx-ordered-block",
+        "valueAtDelivery": "block docx-ordered-block"
+      },
+      {
+        "seq": 17,
+        "time": "2026-10-20T07:04:14.010Z",
+        "type": "childList",
+        "target": "n12403",
+        "added": [
+          {
+            "r": "n12361",
+            "tag": "DIV",
+            "a": {
+              "class": "block docx-ordered-block",
+              "data-block-id": "122",
+              "data-block-type": "ordered",
+              "data-record-id": "CE9ndMqT3o5mgBxWBdhcU1Cun6g"
+            },
+            "c": [
+              {
+                "r": "n12362",
+                "tag": "DIV",
+                "a": {
+                  "class": "list-wrapper ordered-list"
+                },
+                "c": [
+                  {
+                    "r": "n12363",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "list list-align-undefined"
+                    },
+                    "c": [
+                      {
+                        "r": "n12364",
+                        "tag": "BUTTON",
+                        "a": {
+                          "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                          "contenteditable": "false",
+                          "type": "button"
+                        },
+                        "c": [
+                          {
+                            "r": "n12365",
+                            "text": "a"
+                          },
+                          {
+                            "r": "n12366",
+                            "text": "."
+                          }
+                        ]
+                      },
+                      {
+                        "r": "n12367",
+                        "tag": "DIV",
+                        "a": {
+                          "class": "list-content"
+                        },
+                        "c": [
+                          {
+                            "r": "n12368",
+                            "tag": "DIV",
+                            "a": {
+                              "class": "zone-container text-editor non-empty",
+                              "data-zone-id": "122",
+                              "contenteditable": "true"
+                            },
+                            "c": [
+                              {
+                                "r": "n12369",
+                                "tag": "DIV",
+                                "a": {
+                                  "class": "ace-line"
+                                },
+                                "c": [
+                                  {
+                                    "r": "n12370",
+                                    "tag": "SPAN",
+                                    "a": {
+                                      "class": " author-7622865454574423258"
+                                    },
+                                    "c": [
+                                      {
+                                        "r": "n12371",
+                                        "text": "IndentChild"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "r": "n12372",
+                                    "tag": "SPAN",
+                                    "a": {},
+                                    "c": [
+                                      {
+                                        "r": "n12373",
+                                        "text": "​"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "removed": [],
+        "previous": null,
+        "next": null
+      },
+      {
+        "seq": 20,
+        "time": "2026-10-20T07:04:14.019Z",
+        "type": "attributes",
+        "target": "n12361",
+        "name": "class",
+        "old": "block docx-ordered-block",
+        "valueAtDelivery": "block docx-ordered-block focused"
+      },
+      {
+        "seq": 21,
+        "time": "2026-10-20T07:04:14.019Z",
+        "type": "attributes",
+        "target": "n12368",
+        "name": "class",
+        "old": "zone-container text-editor non-empty",
+        "valueAtDelivery": "zone-container text-editor non-empty text-editor-focused"
+      }
+    ],
+    "events": [
+      {
+        "seq": 1,
+        "time": "2026-10-20T07:04:13.459Z",
+        "type": "mousedown",
+        "trusted": true,
+        "target": "n5",
+        "meta": false,
+        "ctrl": false,
+        "alt": false,
+        "shift": false,
+        "detail": 1,
+        "x": 322,
+        "y": 139
+      },
+      {
+        "seq": 7,
+        "time": "2026-10-20T07:04:13.505Z",
+        "type": "mouseup",
+        "trusted": true,
+        "target": "n5",
+        "meta": false,
+        "ctrl": false,
+        "alt": false,
+        "shift": false,
+        "detail": 1,
+        "x": 322,
+        "y": 139
+      },
+      {
+        "seq": 9,
+        "time": "2026-10-20T07:04:13.509Z",
+        "type": "click",
+        "trusted": true,
+        "target": "n5",
+        "meta": false,
+        "ctrl": false,
+        "alt": false,
+        "shift": false,
+        "detail": 1,
+        "x": 322,
+        "y": 139
+      },
+      {
+        "seq": 11,
+        "time": "2026-10-20T07:04:13.993Z",
+        "type": "keydown",
+        "trusted": true,
+        "target": "n1",
+        "key": "Z",
+        "code": "KeyZ",
+        "meta": true,
+        "ctrl": false,
+        "alt": false,
+        "shift": true,
+        "repeat": false,
+        "composing": false,
+        "detail": 0
+      },
+      {
+        "seq": 18,
+        "time": "2026-10-20T07:04:14.013Z",
+        "type": "keyup",
+        "trusted": true,
+        "target": "n1",
+        "key": "Z",
+        "code": "KeyZ",
+        "meta": true,
+        "ctrl": false,
+        "alt": false,
+        "shift": true,
+        "repeat": false,
+        "composing": false,
+        "detail": 0
+      }
+    ],
+    "states": [
+      {
+        "seq": 2,
+        "phase": "before-mousedown",
+        "state": {
+          "time": "2026-10-20T07:04:13.459Z",
+          "ms": 8189162.799999952,
+          "connected": true,
+          "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+          "viewport": {
+            "width": 1152,
+            "height": 963,
+            "scale": 1
+          },
+          "root": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block",
+            "editable": "true"
+          },
+          "title": {
+            "snapshotRef": "tree1"
+          },
+          "body": {
+            "snapshotRef": "tree2"
+          },
+          "active": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block"
+          },
+          "selection": {
+            "type": "Caret",
+            "collapsed": true,
+            "anchor": {
+              "r": "n12371",
+              "offset": 11,
+              "tag": "#text",
+              "text": "IndentChild",
+              "block": {
+                "r": "n12361",
+                "id": "122",
+                "cls": "block docx-ordered-block focused"
+              }
+            },
+            "focus": {
+              "r": "n12371",
+              "offset": 11,
+              "tag": "#text",
+              "text": "IndentChild",
+              "block": {
+                "r": "n12361",
+                "id": "122",
+                "cls": "block docx-ordered-block focused"
+              }
+            },
+            "text": "",
+            "ranges": [
+              {
+                "start": {
+                  "r": "n12371",
+                  "offset": 11,
+                  "tag": "#text",
+                  "text": "IndentChild",
+                  "block": {
+                    "r": "n12361",
+                    "id": "122",
+                    "cls": "block docx-ordered-block focused"
+                  }
+                },
+                "end": {
+                  "r": "n12371",
+                  "offset": 11,
+                  "tag": "#text",
+                  "text": "IndentChild",
+                  "block": {
+                    "r": "n12361",
+                    "id": "122",
+                    "cls": "block docx-ordered-block focused"
+                  }
+                }
+              }
+            ]
+          },
+          "menus": [],
+          "save": [
+            "已经保存到云端"
+          ]
+        }
+      },
+      {
+        "seq": 3,
+        "phase": "frame-after-mousedown",
+        "state": {
+          "time": "2026-10-20T07:04:13.464Z",
+          "ms": 8189167,
+          "connected": true,
+          "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+          "viewport": {
+            "width": 1152,
+            "height": 963,
+            "scale": 1
+          },
+          "root": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block",
+            "editable": "true"
+          },
+          "title": {
+            "snapshotRef": "tree1"
+          },
+          "body": {
+            "snapshotRef": "tree2"
+          },
+          "active": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block"
+          },
+          "selection": {
+            "type": "Caret",
+            "collapsed": true,
+            "anchor": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "focus": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "text": "",
+            "ranges": [
+              {
+                "start": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                },
+                "end": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                }
+              }
+            ]
+          },
+          "menus": [],
+          "save": [
+            "已经保存到云端"
+          ]
+        }
+      },
+      {
+        "seq": 8,
+        "phase": "before-mouseup",
+        "state": {
+          "time": "2026-10-20T07:04:13.505Z",
+          "ms": 8189208.799999952,
+          "connected": true,
+          "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+          "viewport": {
+            "width": 1152,
+            "height": 963,
+            "scale": 1
+          },
+          "root": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block",
+            "editable": "true"
+          },
+          "title": {
+            "snapshotRef": "tree1"
+          },
+          "body": {
+            "snapshotRef": "tree3"
+          },
+          "active": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block"
+          },
+          "selection": {
+            "type": "Caret",
+            "collapsed": true,
+            "anchor": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "focus": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "text": "",
+            "ranges": [
+              {
+                "start": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                },
+                "end": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                }
+              }
+            ]
+          },
+          "menus": [],
+          "save": [
+            "已经保存到云端"
+          ]
+        }
+      },
+      {
+        "seq": 10,
+        "phase": "frame-after-mouseup",
+        "state": {
+          "time": "2026-10-20T07:04:13.510Z",
+          "ms": 8189213.299999952,
+          "connected": true,
+          "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+          "viewport": {
+            "width": 1152,
+            "height": 963,
+            "scale": 1
+          },
+          "root": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block",
+            "editable": "true"
+          },
+          "title": {
+            "snapshotRef": "tree1"
+          },
+          "body": {
+            "snapshotRef": "tree3"
+          },
+          "active": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block"
+          },
+          "selection": {
+            "type": "Caret",
+            "collapsed": true,
+            "anchor": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "focus": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "text": "",
+            "ranges": [
+              {
+                "start": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                },
+                "end": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                }
+              }
+            ]
+          },
+          "menus": [],
+          "save": [
+            "已经保存到云端"
+          ]
+        }
+      },
+      {
+        "seq": 12,
+        "phase": "before-keydown",
+        "state": {
+          "time": "2026-10-20T07:04:13.993Z",
+          "ms": 8189696,
+          "connected": true,
+          "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+          "viewport": {
+            "width": 1152,
+            "height": 963,
+            "scale": 1
+          },
+          "root": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block",
+            "editable": "true"
+          },
+          "title": {
+            "snapshotRef": "tree1"
+          },
+          "body": {
+            "snapshotRef": "tree3"
+          },
+          "active": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block"
+          },
+          "selection": {
+            "type": "Caret",
+            "collapsed": true,
+            "anchor": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "focus": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "text": "",
+            "ranges": [
+              {
+                "start": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                },
+                "end": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                }
+              }
+            ]
+          },
+          "menus": [],
+          "save": [
+            "已经保存到云端"
+          ]
+        }
+      },
+      {
+        "seq": 19,
+        "phase": "frame-after-keydown",
+        "state": {
+          "time": "2026-10-20T07:04:14.014Z",
+          "ms": 8189716.799999952,
+          "connected": true,
+          "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+          "viewport": {
+            "width": 1152,
+            "height": 963,
+            "scale": 1
+          },
+          "root": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block",
+            "editable": "true"
+          },
+          "title": {
+            "snapshotRef": "tree1"
+          },
+          "body": {
+            "snapshotRef": "tree4"
+          },
+          "active": {
+            "r": "n1",
+            "tag": "DIV",
+            "cls": "page-block root-block"
+          },
+          "selection": {
+            "type": "Caret",
+            "collapsed": true,
+            "anchor": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "focus": {
+              "r": "n6",
+              "offset": 1,
+              "tag": "#text",
+              "text": "Title",
+              "block": {
+                "r": "n145",
+                "id": "1",
+                "cls": "block docx-page-block"
+              }
+            },
+            "text": "",
+            "ranges": [
+              {
+                "start": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                },
+                "end": {
+                  "r": "n6",
+                  "offset": 1,
+                  "tag": "#text",
+                  "text": "Title",
+                  "block": {
+                    "r": "n145",
+                    "id": "1",
+                    "cls": "block docx-page-block"
+                  }
+                }
+              }
+            ]
+          },
+          "menus": [],
+          "save": [
+            "保存中..."
+          ]
+        }
+      }
+    ],
+    "selections": [
+      {
+        "seq": 4,
+        "time": "2026-10-20T07:04:13.466Z",
+        "selection": {
+          "type": "Caret",
+          "collapsed": true,
+          "anchor": {
+            "r": "n6",
+            "offset": 1,
+            "tag": "#text",
+            "text": "Title",
+            "block": {
+              "r": "n145",
+              "id": "1",
+              "cls": "block docx-page-block"
+            }
+          },
+          "focus": {
+            "r": "n6",
+            "offset": 1,
+            "tag": "#text",
+            "text": "Title",
+            "block": {
+              "r": "n145",
+              "id": "1",
+              "cls": "block docx-page-block"
+            }
+          },
+          "text": "",
+          "ranges": [
+            {
+              "start": {
+                "r": "n6",
+                "offset": 1,
+                "tag": "#text",
+                "text": "Title",
+                "block": {
+                  "r": "n145",
+                  "id": "1",
+                  "cls": "block docx-page-block"
+                }
+              },
+              "end": {
+                "r": "n6",
+                "offset": 1,
+                "tag": "#text",
+                "text": "Title",
+                "block": {
+                  "r": "n145",
+                  "id": "1",
+                  "cls": "block docx-page-block"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "seq": 22,
+        "time": "2026-10-20T07:04:14.021Z",
+        "selection": {
+          "type": "Caret",
+          "collapsed": true,
+          "anchor": {
+            "r": "n12371",
+            "offset": 11,
+            "tag": "#text",
+            "text": "IndentChild",
+            "block": {
+              "r": "n12361",
+              "id": "122",
+              "cls": "block docx-ordered-block focused"
+            }
+          },
+          "focus": {
+            "r": "n12371",
+            "offset": 11,
+            "tag": "#text",
+            "text": "IndentChild",
+            "block": {
+              "r": "n12361",
+              "id": "122",
+              "cls": "block docx-ordered-block focused"
+            }
+          },
+          "text": "",
+          "ranges": [
+            {
+              "start": {
+                "r": "n12371",
+                "offset": 11,
+                "tag": "#text",
+                "text": "IndentChild",
+                "block": {
+                  "r": "n12361",
+                  "id": "122",
+                  "cls": "block docx-ordered-block focused"
+                }
+              },
+              "end": {
+                "r": "n12371",
+                "offset": 11,
+                "tag": "#text",
+                "text": "IndentChild",
+                "block": {
+                  "r": "n12361",
+                  "id": "122",
+                  "cls": "block docx-ordered-block focused"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "errors": [],
+    "overflow": {},
+    "after": {
+      "time": "2026-10-20T07:04:16.058Z",
+      "ms": 8191760.6999999285,
+      "connected": true,
+      "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+      "viewport": {
+        "width": 1152,
+        "height": 963,
+        "scale": 1
+      },
+      "root": {
+        "r": "n1",
+        "tag": "DIV",
+        "cls": "page-block root-block",
+        "editable": "true"
+      },
+      "title": {
+        "snapshotRef": "tree1"
+      },
+      "body": {
+        "snapshotRef": "tree5"
+      },
+      "active": {
+        "r": "n1",
+        "tag": "DIV",
+        "cls": "page-block root-block"
+      },
+      "selection": {
+        "type": "Caret",
+        "collapsed": true,
+        "anchor": {
+          "r": "n12371",
+          "offset": 11,
+          "tag": "#text",
+          "text": "IndentChild",
+          "block": {
+            "r": "n12361",
+            "id": "122",
+            "cls": "block docx-ordered-block focused"
+          }
+        },
+        "focus": {
+          "r": "n12371",
+          "offset": 11,
+          "tag": "#text",
+          "text": "IndentChild",
+          "block": {
+            "r": "n12361",
+            "id": "122",
+            "cls": "block docx-ordered-block focused"
+          }
+        },
+        "text": "",
+        "ranges": [
+          {
+            "start": {
+              "r": "n12371",
+              "offset": 11,
+              "tag": "#text",
+              "text": "IndentChild",
+              "block": {
+                "r": "n12361",
+                "id": "122",
+                "cls": "block docx-ordered-block focused"
+              }
+            },
+            "end": {
+              "r": "n12371",
+              "offset": 11,
+              "tag": "#text",
+              "text": "IndentChild",
+              "block": {
+                "r": "n12361",
+                "id": "122",
+                "cls": "block docx-ordered-block focused"
+              }
+            }
+          }
+        ]
+      },
+      "menus": [],
+      "save": [
+        "已经保存到云端"
+      ]
+    },
+    "end": "2026-10-20T07:04:16.058Z",
+    "pasteFeedback": {
+      "alerts": [],
+      "deliveries": [],
+      "limit": 100
+    }
+  },
+  "_snapshotDictionary": {
+    "tree1": {
+      "r": "n2",
+      "tag": "H1",
+      "a": {
+        "class": "page-block-content left flash-block-content",
+        "style": "--docx-page-title-base-font-size: 34px; --docx-page-title-base-font-size-without-unit: 34; --docx-page-title-font-size: 34px; --docx-page-title-line-height: 1.625; line-height: 1.625;"
+      },
+      "c": [
+        {
+          "r": "n3",
+          "tag": "DIV",
+          "a": {
+            "class": "zone-container text-editor non-empty",
+            "data-zone-id": "1",
+            "contenteditable": "true"
+          },
+          "c": [
+            {
+              "r": "n4",
+              "tag": "DIV",
+              "a": {
+                "class": "ace-line"
+              },
+              "c": [
+                {
+                  "r": "n5",
+                  "tag": "SPAN",
+                  "a": {
+                    "class": " author-7622865454574423258"
+                  },
+                  "c": [
+                    {
+                      "r": "n6",
+                      "text": "Title"
+                    }
+                  ]
+                },
+                {
+                  "r": "n7",
+                  "tag": "SPAN",
+                  "a": {},
+                  "c": [
+                    {
+                      "r": "n8",
+                      "text": "​"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "tree2": {
+      "r": "n9",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "n10",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "n11",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "n3188",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "120",
+                    "data-block-type": "text",
+                    "data-record-id": "LtGbdewUBoWwyUxA4mpcjq53nbh"
+                  },
+                  "c": [
+                    {
+                      "r": "n3189",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n3190",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n3191",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "120",
+                                "contenteditable": "true",
+                                "style": "text-align: left;"
+                              },
+                              "c": [
+                                {
+                                  "r": "n3192",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n8350",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n8351",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n3195",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "n3196",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1107",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-heading9-block",
+                    "data-block-id": "102",
+                    "data-block-type": "heading9",
+                    "data-record-id": "Dscwd4NLaocTOHxGcXLcsrNJn4b"
+                  },
+                  "c": [
+                    {
+                      "r": "n1108",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "heading-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1109",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "heading heading-h9 heading-block-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1110",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1111",
+                                  "text": "1."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1112",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "heading-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1113",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "102",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1114",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1115",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1116",
+                                              "text": "Beta"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n1117",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1118",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1119",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "fold-wrapper can-fold fold-block-id-102",
+                        "contenteditable": "false"
+                      },
+                      "c": [
+                        {
+                          "r": "n1120",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "fold-wrapper can-fold fold-block-id-102 fold-handler-wrapper"
+                          },
+                          "c": [
+                            {
+                              "r": "n1121",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "fold-handler"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1122",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1123",
+                                      "tag": "svg",
+                                      "a": {},
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1124",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "101",
+                    "data-block-type": "text",
+                    "data-record-id": "SEi6dKmUPoxzc8xcb0LcxXVin6f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1125",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n1126",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n1127",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "101",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1128",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1129",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": "author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1130",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n1131",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": ""
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1132",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n12348",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block",
+                    "data-block-id": "123",
+                    "data-block-type": "ordered",
+                    "data-record-id": "LVWtd7zMZouEtzxIQw0c3uJln9b"
+                  },
+                  "c": [
+                    {
+                      "r": "n12349",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n12350",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-undefined"
+                          },
+                          "c": [
+                            {
+                              "r": "n12351",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12352",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n12353",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n12354",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12355",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "123",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12356",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12357",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12358",
+                                              "text": "IndentParent"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n12359",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n12360",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n12361",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block focused",
+                    "data-block-id": "122",
+                    "data-block-type": "ordered",
+                    "data-record-id": "CE9ndMqT3o5mgBxWBdhcU1Cun6g"
+                  },
+                  "c": [
+                    {
+                      "r": "n12362",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n12363",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-undefined"
+                          },
+                          "c": [
+                            {
+                              "r": "n12364",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12365",
+                                  "text": "2"
+                                },
+                                {
+                                  "r": "n12366",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n12367",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12368",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                    "data-zone-id": "122",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12369",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12370",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12371",
+                                              "text": "IndentChild"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n12372",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n12373",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1133",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-quote_container-block",
+                    "data-block-id": "99",
+                    "data-block-type": "quote_container",
+                    "data-record-id": "KXMrdc3IpoogqgxlokmctZn2nUh"
+                  },
+                  "c": [
+                    {
+                      "r": "n1134",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1135",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1136",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1137",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "quote-container-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1138",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "quote-container-block-children"
+                          },
+                          "c": [
+                            {
+                              "r": "n1139",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "render-unit-wrapper quote-container-render-unit"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1140",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "block docx-text-block quote-container-render-unit",
+                                    "data-block-id": "100",
+                                    "data-block-type": "text",
+                                    "data-record-id": "NcKOd82Reo5x0TxUV9dcMdhqntb"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1141",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "text-block-wrapper"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1142",
+                                          "tag": "DIV",
+                                          "a": {
+                                            "class": "text-block"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1143",
+                                              "tag": "DIV",
+                                              "a": {
+                                                "class": "zone-container text-editor non-empty",
+                                                "data-zone-id": "100",
+                                                "contenteditable": "true"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n1144",
+                                                  "tag": "DIV",
+                                                  "a": {
+                                                    "class": "ace-line"
+                                                  },
+                                                  "c": [
+                                                    {
+                                                      "r": "n1145",
+                                                      "tag": "SPAN",
+                                                      "a": {
+                                                        "class": "author-7622865454574423258"
+                                                      },
+                                                      "c": [
+                                                        {
+                                                          "r": "n1146",
+                                                          "text": "Quote"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "r": "n1147",
+                                                      "tag": "SPAN",
+                                                      "a": {},
+                                                      "c": [
+                                                        {
+                                                          "r": "n1148",
+                                                          "text": "​"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1149",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1150",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1151",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1215",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block isEmpty",
+                    "data-block-id": "109",
+                    "data-block-type": "ordered",
+                    "data-record-id": "CVm3dawinowOUXxD6vxcfGyyn9f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1588",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n1589",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1590",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1591",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n1592",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1593",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1594",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor",
+                                    "data-zone-id": "109",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1595",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1596",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1597",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "n77",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "tree3": {
+      "r": "n9",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "n10",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "n11",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "n3188",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "120",
+                    "data-block-type": "text",
+                    "data-record-id": "LtGbdewUBoWwyUxA4mpcjq53nbh"
+                  },
+                  "c": [
+                    {
+                      "r": "n3189",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n3190",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n3191",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "120",
+                                "contenteditable": "true",
+                                "style": "text-align: left;"
+                              },
+                              "c": [
+                                {
+                                  "r": "n3192",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n8350",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n8351",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n3195",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "n3196",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1107",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-heading9-block",
+                    "data-block-id": "102",
+                    "data-block-type": "heading9",
+                    "data-record-id": "Dscwd4NLaocTOHxGcXLcsrNJn4b"
+                  },
+                  "c": [
+                    {
+                      "r": "n1108",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "heading-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1109",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "heading heading-h9 heading-block-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1110",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1111",
+                                  "text": "1."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1112",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "heading-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1113",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "102",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1114",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1115",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1116",
+                                              "text": "Beta"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n1117",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1118",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1119",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "fold-wrapper can-fold fold-block-id-102",
+                        "contenteditable": "false"
+                      },
+                      "c": [
+                        {
+                          "r": "n1120",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "fold-wrapper can-fold fold-block-id-102 fold-handler-wrapper"
+                          },
+                          "c": [
+                            {
+                              "r": "n1121",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "fold-handler"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1122",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1123",
+                                      "tag": "svg",
+                                      "a": {},
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1124",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "101",
+                    "data-block-type": "text",
+                    "data-record-id": "SEi6dKmUPoxzc8xcb0LcxXVin6f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1125",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n1126",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n1127",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "101",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1128",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1129",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": "author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1130",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n1131",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": ""
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1132",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n12348",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block",
+                    "data-block-id": "123",
+                    "data-block-type": "ordered",
+                    "data-record-id": "LVWtd7zMZouEtzxIQw0c3uJln9b"
+                  },
+                  "c": [
+                    {
+                      "r": "n12349",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n12350",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-undefined"
+                          },
+                          "c": [
+                            {
+                              "r": "n12351",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12352",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n12353",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n12354",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12355",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "123",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12356",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12357",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12358",
+                                              "text": "IndentParent"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n12359",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n12360",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n12361",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block",
+                    "data-block-id": "122",
+                    "data-block-type": "ordered",
+                    "data-record-id": "CE9ndMqT3o5mgBxWBdhcU1Cun6g"
+                  },
+                  "c": [
+                    {
+                      "r": "n12362",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n12363",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-undefined"
+                          },
+                          "c": [
+                            {
+                              "r": "n12364",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12365",
+                                  "text": "2"
+                                },
+                                {
+                                  "r": "n12366",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n12367",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12368",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "122",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12369",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12370",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12371",
+                                              "text": "IndentChild"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n12372",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n12373",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1133",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-quote_container-block",
+                    "data-block-id": "99",
+                    "data-block-type": "quote_container",
+                    "data-record-id": "KXMrdc3IpoogqgxlokmctZn2nUh"
+                  },
+                  "c": [
+                    {
+                      "r": "n1134",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1135",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1136",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1137",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "quote-container-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1138",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "quote-container-block-children"
+                          },
+                          "c": [
+                            {
+                              "r": "n1139",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "render-unit-wrapper quote-container-render-unit"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1140",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "block docx-text-block quote-container-render-unit",
+                                    "data-block-id": "100",
+                                    "data-block-type": "text",
+                                    "data-record-id": "NcKOd82Reo5x0TxUV9dcMdhqntb"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1141",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "text-block-wrapper"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1142",
+                                          "tag": "DIV",
+                                          "a": {
+                                            "class": "text-block"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1143",
+                                              "tag": "DIV",
+                                              "a": {
+                                                "class": "zone-container text-editor non-empty",
+                                                "data-zone-id": "100",
+                                                "contenteditable": "true"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n1144",
+                                                  "tag": "DIV",
+                                                  "a": {
+                                                    "class": "ace-line"
+                                                  },
+                                                  "c": [
+                                                    {
+                                                      "r": "n1145",
+                                                      "tag": "SPAN",
+                                                      "a": {
+                                                        "class": "author-7622865454574423258"
+                                                      },
+                                                      "c": [
+                                                        {
+                                                          "r": "n1146",
+                                                          "text": "Quote"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "r": "n1147",
+                                                      "tag": "SPAN",
+                                                      "a": {},
+                                                      "c": [
+                                                        {
+                                                          "r": "n1148",
+                                                          "text": "​"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1149",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1150",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1151",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1215",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block isEmpty",
+                    "data-block-id": "109",
+                    "data-block-type": "ordered",
+                    "data-record-id": "CVm3dawinowOUXxD6vxcfGyyn9f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1588",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n1589",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1590",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1591",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n1592",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1593",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1594",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor",
+                                    "data-zone-id": "109",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1595",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1596",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1597",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "n77",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "tree4": {
+      "r": "n9",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "n10",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "n11",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "n3188",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "120",
+                    "data-block-type": "text",
+                    "data-record-id": "LtGbdewUBoWwyUxA4mpcjq53nbh"
+                  },
+                  "c": [
+                    {
+                      "r": "n3189",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n3190",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n3191",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "120",
+                                "contenteditable": "true",
+                                "style": "text-align: left;"
+                              },
+                              "c": [
+                                {
+                                  "r": "n3192",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n8350",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n8351",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n3195",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "n3196",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1107",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-heading9-block",
+                    "data-block-id": "102",
+                    "data-block-type": "heading9",
+                    "data-record-id": "Dscwd4NLaocTOHxGcXLcsrNJn4b"
+                  },
+                  "c": [
+                    {
+                      "r": "n1108",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "heading-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1109",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "heading heading-h9 heading-block-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1110",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1111",
+                                  "text": "1."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1112",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "heading-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1113",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "102",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1114",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1115",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1116",
+                                              "text": "Beta"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n1117",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1118",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1119",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "fold-wrapper can-fold fold-block-id-102",
+                        "contenteditable": "false"
+                      },
+                      "c": [
+                        {
+                          "r": "n1120",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "fold-wrapper can-fold fold-block-id-102 fold-handler-wrapper"
+                          },
+                          "c": [
+                            {
+                              "r": "n1121",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "fold-handler"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1122",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1123",
+                                      "tag": "svg",
+                                      "a": {},
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1124",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "101",
+                    "data-block-type": "text",
+                    "data-record-id": "SEi6dKmUPoxzc8xcb0LcxXVin6f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1125",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n1126",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n1127",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "101",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1128",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1129",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": "author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1130",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n1131",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": ""
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1132",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n12348",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block",
+                    "data-block-id": "123",
+                    "data-block-type": "ordered",
+                    "data-record-id": "LVWtd7zMZouEtzxIQw0c3uJln9b"
+                  },
+                  "c": [
+                    {
+                      "r": "n12349",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n12350",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-undefined"
+                          },
+                          "c": [
+                            {
+                              "r": "n12351",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12352",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n12353",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n12354",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12355",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "123",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12356",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12357",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12358",
+                                              "text": "IndentParent"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n12359",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n12360",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "r": "n12402",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list-children",
+                            "style": "padding-left: 18px; margin-left: 7px;"
+                          },
+                          "c": [
+                            {
+                              "r": "n12403",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "render-unit-wrapper"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12361",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "block docx-ordered-block",
+                                    "data-block-id": "122",
+                                    "data-block-type": "ordered",
+                                    "data-record-id": "CE9ndMqT3o5mgBxWBdhcU1Cun6g"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12362",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "list-wrapper ordered-list"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12363",
+                                          "tag": "DIV",
+                                          "a": {
+                                            "class": "list list-align-undefined"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12364",
+                                              "tag": "BUTTON",
+                                              "a": {
+                                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                                "contenteditable": "false",
+                                                "type": "button"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n12365",
+                                                  "text": "a"
+                                                },
+                                                {
+                                                  "r": "n12366",
+                                                  "text": "."
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "r": "n12367",
+                                              "tag": "DIV",
+                                              "a": {
+                                                "class": "list-content"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n12368",
+                                                  "tag": "DIV",
+                                                  "a": {
+                                                    "class": "zone-container text-editor non-empty",
+                                                    "data-zone-id": "122",
+                                                    "contenteditable": "true"
+                                                  },
+                                                  "c": [
+                                                    {
+                                                      "r": "n12369",
+                                                      "tag": "DIV",
+                                                      "a": {
+                                                        "class": "ace-line"
+                                                      },
+                                                      "c": [
+                                                        {
+                                                          "r": "n12370",
+                                                          "tag": "SPAN",
+                                                          "a": {
+                                                            "class": " author-7622865454574423258"
+                                                          },
+                                                          "c": [
+                                                            {
+                                                              "r": "n12371",
+                                                              "text": "IndentChild"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "r": "n12372",
+                                                          "tag": "SPAN",
+                                                          "a": {},
+                                                          "c": [
+                                                            {
+                                                              "r": "n12373",
+                                                              "text": "​"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n12404",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "fold-wrapper can-fold fold-block-id-123",
+                        "contenteditable": "false"
+                      },
+                      "c": [
+                        {
+                          "r": "n12405",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "fold-wrapper can-fold fold-block-id-123 fold-handler-wrapper"
+                          },
+                          "c": [
+                            {
+                              "r": "n12406",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "fold-handler"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12407",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12408",
+                                      "tag": "svg",
+                                      "a": {},
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1133",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-quote_container-block",
+                    "data-block-id": "99",
+                    "data-block-type": "quote_container",
+                    "data-record-id": "KXMrdc3IpoogqgxlokmctZn2nUh"
+                  },
+                  "c": [
+                    {
+                      "r": "n1134",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1135",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1136",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1137",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "quote-container-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1138",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "quote-container-block-children"
+                          },
+                          "c": [
+                            {
+                              "r": "n1139",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "render-unit-wrapper quote-container-render-unit"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1140",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "block docx-text-block quote-container-render-unit",
+                                    "data-block-id": "100",
+                                    "data-block-type": "text",
+                                    "data-record-id": "NcKOd82Reo5x0TxUV9dcMdhqntb"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1141",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "text-block-wrapper"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1142",
+                                          "tag": "DIV",
+                                          "a": {
+                                            "class": "text-block"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1143",
+                                              "tag": "DIV",
+                                              "a": {
+                                                "class": "zone-container text-editor non-empty",
+                                                "data-zone-id": "100",
+                                                "contenteditable": "true"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n1144",
+                                                  "tag": "DIV",
+                                                  "a": {
+                                                    "class": "ace-line"
+                                                  },
+                                                  "c": [
+                                                    {
+                                                      "r": "n1145",
+                                                      "tag": "SPAN",
+                                                      "a": {
+                                                        "class": "author-7622865454574423258"
+                                                      },
+                                                      "c": [
+                                                        {
+                                                          "r": "n1146",
+                                                          "text": "Quote"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "r": "n1147",
+                                                      "tag": "SPAN",
+                                                      "a": {},
+                                                      "c": [
+                                                        {
+                                                          "r": "n1148",
+                                                          "text": "​"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1149",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1150",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1151",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1215",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block isEmpty",
+                    "data-block-id": "109",
+                    "data-block-type": "ordered",
+                    "data-record-id": "CVm3dawinowOUXxD6vxcfGyyn9f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1588",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n1589",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1590",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1591",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n1592",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1593",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1594",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor",
+                                    "data-zone-id": "109",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1595",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1596",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1597",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "n77",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    },
+    "tree5": {
+      "r": "n9",
+      "tag": "DIV",
+      "a": {
+        "class": "page-block-children"
+      },
+      "c": [
+        {
+          "r": "n10",
+          "tag": "DIV",
+          "a": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "c": [
+            {
+              "r": "n11",
+              "tag": "DIV",
+              "a": {
+                "class": "render-unit-wrapper"
+              },
+              "c": [
+                {
+                  "r": "n3188",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "120",
+                    "data-block-type": "text",
+                    "data-record-id": "LtGbdewUBoWwyUxA4mpcjq53nbh"
+                  },
+                  "c": [
+                    {
+                      "r": "n3189",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n3190",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n3191",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "120",
+                                "contenteditable": "true",
+                                "style": "text-align: left;"
+                              },
+                              "c": [
+                                {
+                                  "r": "n3192",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n8350",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": " author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n8351",
+                                          "text": "Alpha"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n3195",
+                                      "tag": "SPAN",
+                                      "a": {},
+                                      "c": [
+                                        {
+                                          "r": "n3196",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1107",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-heading9-block",
+                    "data-block-id": "102",
+                    "data-block-type": "heading9",
+                    "data-record-id": "Dscwd4NLaocTOHxGcXLcsrNJn4b"
+                  },
+                  "c": [
+                    {
+                      "r": "n1108",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "heading-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1109",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "heading heading-h9 heading-block-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1110",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1111",
+                                  "text": "1."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1112",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "heading-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1113",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "102",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1114",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1115",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1116",
+                                              "text": "Beta"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n1117",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1118",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1119",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "fold-wrapper can-fold fold-block-id-102",
+                        "contenteditable": "false"
+                      },
+                      "c": [
+                        {
+                          "r": "n1120",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "fold-wrapper can-fold fold-block-id-102 fold-handler-wrapper"
+                          },
+                          "c": [
+                            {
+                              "r": "n1121",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "fold-handler"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1122",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1123",
+                                      "tag": "svg",
+                                      "a": {},
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1124",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-text-block",
+                    "data-block-id": "101",
+                    "data-block-type": "text",
+                    "data-record-id": "SEi6dKmUPoxzc8xcb0LcxXVin6f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1125",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "text-block-wrapper"
+                      },
+                      "c": [
+                        {
+                          "r": "n1126",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "text-block"
+                          },
+                          "c": [
+                            {
+                              "r": "n1127",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "zone-container text-editor non-empty",
+                                "data-zone-id": "101",
+                                "contenteditable": "true"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1128",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "ace-line"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1129",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": "author-7622865454574423258"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1130",
+                                          "text": "Gamma"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "r": "n1131",
+                                      "tag": "SPAN",
+                                      "a": {
+                                        "class": ""
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1132",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n12348",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block",
+                    "data-block-id": "123",
+                    "data-block-type": "ordered",
+                    "data-record-id": "LVWtd7zMZouEtzxIQw0c3uJln9b"
+                  },
+                  "c": [
+                    {
+                      "r": "n12349",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n12350",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-undefined"
+                          },
+                          "c": [
+                            {
+                              "r": "n12351",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12352",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n12353",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n12354",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12355",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "123",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12356",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12357",
+                                          "tag": "SPAN",
+                                          "a": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12358",
+                                              "text": "IndentParent"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "r": "n12359",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n12360",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "r": "n12402",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list-children",
+                            "style": "padding-left: 18px; margin-left: 7px;"
+                          },
+                          "c": [
+                            {
+                              "r": "n12403",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "render-unit-wrapper"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12361",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "block docx-ordered-block focused",
+                                    "data-block-id": "122",
+                                    "data-block-type": "ordered",
+                                    "data-record-id": "CE9ndMqT3o5mgBxWBdhcU1Cun6g"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12362",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "list-wrapper ordered-list"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n12363",
+                                          "tag": "DIV",
+                                          "a": {
+                                            "class": "list list-align-undefined"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n12364",
+                                              "tag": "BUTTON",
+                                              "a": {
+                                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                                "contenteditable": "false",
+                                                "type": "button"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n12365",
+                                                  "text": "a"
+                                                },
+                                                {
+                                                  "r": "n12366",
+                                                  "text": "."
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "r": "n12367",
+                                              "tag": "DIV",
+                                              "a": {
+                                                "class": "list-content"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n12368",
+                                                  "tag": "DIV",
+                                                  "a": {
+                                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                                    "data-zone-id": "122",
+                                                    "contenteditable": "true"
+                                                  },
+                                                  "c": [
+                                                    {
+                                                      "r": "n12369",
+                                                      "tag": "DIV",
+                                                      "a": {
+                                                        "class": "ace-line"
+                                                      },
+                                                      "c": [
+                                                        {
+                                                          "r": "n12370",
+                                                          "tag": "SPAN",
+                                                          "a": {
+                                                            "class": " author-7622865454574423258"
+                                                          },
+                                                          "c": [
+                                                            {
+                                                              "r": "n12371",
+                                                              "text": "IndentChild"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "r": "n12372",
+                                                          "tag": "SPAN",
+                                                          "a": {},
+                                                          "c": [
+                                                            {
+                                                              "r": "n12373",
+                                                              "text": "​"
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n12404",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "fold-wrapper can-fold fold-block-id-123",
+                        "contenteditable": "false"
+                      },
+                      "c": [
+                        {
+                          "r": "n12405",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "fold-wrapper can-fold fold-block-id-123 fold-handler-wrapper"
+                          },
+                          "c": [
+                            {
+                              "r": "n12406",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "fold-handler"
+                              },
+                              "c": [
+                                {
+                                  "r": "n12407",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n12408",
+                                      "tag": "svg",
+                                      "a": {},
+                                      "c": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1133",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-quote_container-block",
+                    "data-block-id": "99",
+                    "data-block-type": "quote_container",
+                    "data-record-id": "KXMrdc3IpoogqgxlokmctZn2nUh"
+                  },
+                  "c": [
+                    {
+                      "r": "n1134",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1135",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1136",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1137",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "quote-container-block"
+                      },
+                      "c": [
+                        {
+                          "r": "n1138",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "quote-container-block-children"
+                          },
+                          "c": [
+                            {
+                              "r": "n1139",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "render-unit-wrapper quote-container-render-unit"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1140",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "block docx-text-block quote-container-render-unit",
+                                    "data-block-id": "100",
+                                    "data-block-type": "text",
+                                    "data-record-id": "NcKOd82Reo5x0TxUV9dcMdhqntb"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1141",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "text-block-wrapper"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1142",
+                                          "tag": "DIV",
+                                          "a": {
+                                            "class": "text-block"
+                                          },
+                                          "c": [
+                                            {
+                                              "r": "n1143",
+                                              "tag": "DIV",
+                                              "a": {
+                                                "class": "zone-container text-editor non-empty",
+                                                "data-zone-id": "100",
+                                                "contenteditable": "true"
+                                              },
+                                              "c": [
+                                                {
+                                                  "r": "n1144",
+                                                  "tag": "DIV",
+                                                  "a": {
+                                                    "class": "ace-line"
+                                                  },
+                                                  "c": [
+                                                    {
+                                                      "r": "n1145",
+                                                      "tag": "SPAN",
+                                                      "a": {
+                                                        "class": "author-7622865454574423258"
+                                                      },
+                                                      "c": [
+                                                        {
+                                                          "r": "n1146",
+                                                          "text": "Quote"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "r": "n1147",
+                                                      "tag": "SPAN",
+                                                      "a": {},
+                                                      "c": [
+                                                        {
+                                                          "r": "n1148",
+                                                          "text": "​"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "r": "n1149",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "docx-block-zero-space"
+                      },
+                      "c": [
+                        {
+                          "r": "n1150",
+                          "tag": "SPAN",
+                          "a": {},
+                          "c": [
+                            {
+                              "r": "n1151",
+                              "text": "​"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "r": "n1215",
+                  "tag": "DIV",
+                  "a": {
+                    "class": "block docx-ordered-block isEmpty",
+                    "data-block-id": "109",
+                    "data-block-type": "ordered",
+                    "data-record-id": "CVm3dawinowOUXxD6vxcfGyyn9f"
+                  },
+                  "c": [
+                    {
+                      "r": "n1588",
+                      "tag": "DIV",
+                      "a": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "c": [
+                        {
+                          "r": "n1589",
+                          "tag": "DIV",
+                          "a": {
+                            "class": "list list-align-"
+                          },
+                          "c": [
+                            {
+                              "r": "n1590",
+                              "tag": "BUTTON",
+                              "a": {
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+                                "contenteditable": "false",
+                                "type": "button"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1591",
+                                  "text": "1"
+                                },
+                                {
+                                  "r": "n1592",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "r": "n1593",
+                              "tag": "DIV",
+                              "a": {
+                                "class": "list-content"
+                              },
+                              "c": [
+                                {
+                                  "r": "n1594",
+                                  "tag": "DIV",
+                                  "a": {
+                                    "class": "zone-container text-editor",
+                                    "data-zone-id": "109",
+                                    "contenteditable": "true"
+                                  },
+                                  "c": [
+                                    {
+                                      "r": "n1595",
+                                      "tag": "DIV",
+                                      "a": {
+                                        "class": "ace-line"
+                                      },
+                                      "c": [
+                                        {
+                                          "r": "n1596",
+                                          "tag": "SPAN",
+                                          "a": {},
+                                          "c": [
+                                            {
+                                              "r": "n1597",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "r": "n77",
+              "tag": "DIV",
+              "a": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "c": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "_snapshotEncoding": {
+    "scheme": "body-title-snapshotRef-v1",
+    "normalizedCanonicalSha256": "abe67b810f889ff2f84d8eda8d16f55d13139e053933af848be31a2c7702b77d",
+    "rawCanonicalSha256": "abe67b810f889ff2f84d8eda8d16f55d13139e053933af848be31a2c7702b77d",
+    "roundtripVerified": true
+  },
+  "_normalization": "DOM class/id/data identifiers feishu -> maiya; URL and text unchanged"
+}

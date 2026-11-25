@@ -1,0 +1,436 @@
+{
+  "case": "G03-slash-escape",
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "normalization": "DOM identifiers feishu -> maiya; URL unchanged; repeated menu structure shared; unchanged random trigger-holder and author class prefixes omitted from token deltas",
+  "environment": {
+    "browser": "Google Chrome",
+    "viewport": [
+      1152,
+      963
+    ],
+    "dpr": 1
+  },
+  "bodyInvariant": {
+    "r": "n115",
+    "type": "text",
+    "id": "5",
+    "text": "/​"
+  },
+  "focusInvariant": {
+    "r": "n6",
+    "tag": "DIV",
+    "cls": "page-block root-block"
+  },
+  "openMenu": {
+    "class": "docx-menu-wrapper docx-menu-wrapper-animation ud-scrollbar toolbox menu-align-horizontal docx-hide-doubao-extension-inject",
+    "style": "outline: transparent; max-height: 639px;",
+    "rect": {
+      "x": 166,
+      "y": 259.25,
+      "w": 232,
+      "h": 639
+    },
+    "items": [
+      {
+        "text": "文本",
+        "class": "panel-menu-item menu-item-hovered",
+        "icon": {
+          "tag": "svg",
+          "data-icon": "TextOutlined"
+        }
+      },
+      {
+        "text": "一级标题",
+        "class": "panel-menu-item",
+        "icon": {
+          "tag": "svg",
+          "data-icon": "H1Outlined"
+        }
+      },
+      {
+        "text": "有序列表",
+        "class": "panel-menu-item",
+        "icon": {
+          "tag": "svg",
+          "data-icon": "OrderListOutlined"
+        }
+      },
+      {
+        "text": "无序列表",
+        "class": "panel-menu-item",
+        "icon": {
+          "tag": "svg",
+          "data-icon": "DisorderListOutlined"
+        }
+      },
+      {
+        "text": "引用",
+        "class": "panel-menu-item",
+        "icon": {
+          "tag": "svg",
+          "data-icon": "ReferenceOutlined"
+        }
+      }
+    ]
+  },
+  "runs": [
+    {
+      "run": "R1",
+      "scope": "additional observation: menu was reopened by Backspace from double slash; not the same construction as R2",
+      "key": "Escape",
+      "repeat": false,
+      "before": {
+        "time": "2026-10-19T09:03:02.596Z",
+        "menu": "n222",
+        "itemRefs": [
+          "n310",
+          "n311",
+          "n314",
+          "n315",
+          "n317"
+        ],
+        "caret": {
+          "r": "n219",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 149,
+        "eventCount": 82,
+        "menuWindowCount": 6
+      },
+      "afterFrame": {
+        "time": "2026-10-19T09:03:02.660Z",
+        "menus": [],
+        "caret": {
+          "r": "n219",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 151,
+        "eventCount": 83,
+        "menuWindowCount": 7
+      },
+      "bodyChanges": [
+        {
+          "seq": 150,
+          "type": "attributes",
+          "r": "n218",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger-place-holder"
+          ],
+          "finalExtraTokens": []
+        },
+        {
+          "seq": 151,
+          "type": "attributes",
+          "r": "n218",
+          "attr": "class",
+          "oldExtraTokens": [],
+          "finalExtraTokens": []
+        }
+      ],
+      "menuChange": {
+        "time": 1717069.5,
+        "type": "childList",
+        "target": "n220",
+        "add": [],
+        "remove": [
+          "n221"
+        ],
+        "visibleMenus": []
+      }
+    },
+    {
+      "run": "R2",
+      "scope": "single slash pressed after empty text was confirmed",
+      "key": "Escape",
+      "repeat": false,
+      "before": {
+        "time": "2026-10-19T09:03:34.275Z",
+        "menu": "n398",
+        "itemRefs": [
+          "n400",
+          "n401",
+          "n404",
+          "n405",
+          "n407"
+        ],
+        "caret": {
+          "r": "n395",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 175,
+        "eventCount": 93,
+        "menuWindowCount": 8
+      },
+      "afterFrame": {
+        "time": "2026-10-19T09:03:34.303Z",
+        "menus": [],
+        "caret": {
+          "r": "n395",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 177,
+        "eventCount": 94,
+        "menuWindowCount": 9
+      },
+      "bodyChanges": [
+        {
+          "seq": 176,
+          "type": "attributes",
+          "r": "n394",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger-place-holder",
+            "inline-trigger"
+          ],
+          "finalExtraTokens": []
+        },
+        {
+          "seq": 177,
+          "type": "attributes",
+          "r": "n394",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger"
+          ],
+          "finalExtraTokens": []
+        }
+      ],
+      "menuChange": {
+        "time": 1748719.8999999762,
+        "type": "childList",
+        "target": "n396",
+        "add": [],
+        "remove": [
+          "n397"
+        ],
+        "visibleMenus": []
+      }
+    },
+    {
+      "run": "R3",
+      "scope": "single slash pressed after empty text was confirmed; equivalent to R2",
+      "key": "Escape",
+      "repeat": false,
+      "before": {
+        "time": "2026-10-19T09:05:27.693Z",
+        "menu": "n488",
+        "itemRefs": [
+          "n490",
+          "n491",
+          "n494",
+          "n495",
+          "n497"
+        ],
+        "caret": {
+          "r": "n485",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 201,
+        "eventCount": 110,
+        "menuWindowCount": 10
+      },
+      "afterFrame": {
+        "time": "2026-10-19T09:05:27.715Z",
+        "menus": [],
+        "caret": {
+          "r": "n485",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 203,
+        "eventCount": 111,
+        "menuWindowCount": 11
+      },
+      "bodyChanges": [
+        {
+          "seq": 202,
+          "type": "attributes",
+          "r": "n484",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger-place-holder",
+            "inline-trigger"
+          ],
+          "finalExtraTokens": []
+        },
+        {
+          "seq": 203,
+          "type": "attributes",
+          "r": "n484",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger"
+          ],
+          "finalExtraTokens": []
+        }
+      ],
+      "menuChange": {
+        "time": 1862131.5,
+        "type": "childList",
+        "target": "n486",
+        "add": [],
+        "remove": [
+          "n487"
+        ],
+        "visibleMenus": []
+      }
+    },
+    {
+      "run": "R4",
+      "scope": "same single-slash reconstruction as R3; includes separate history evidence",
+      "key": "Escape",
+      "repeat": false,
+      "before": {
+        "time": "2026-10-19T09:07:42.433Z",
+        "menu": "n580",
+        "itemRefs": [
+          "n582",
+          "n583",
+          "n586",
+          "n587",
+          "n589"
+        ],
+        "caret": {
+          "r": "n577",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 240,
+        "eventCount": 131
+      },
+      "afterFrame": {
+        "time": "2026-10-19T09:07:42.479Z",
+        "menus": [],
+        "caret": {
+          "r": "n577",
+          "o": 1,
+          "t": "/"
+        },
+        "bodySeq": 242,
+        "eventCount": 132
+      },
+      "bodyChanges": [
+        {
+          "seq": 241,
+          "type": "attributes",
+          "r": "n576",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger-place-holder",
+            "inline-trigger"
+          ],
+          "finalExtraTokens": []
+        },
+        {
+          "seq": 242,
+          "type": "attributes",
+          "r": "n576",
+          "attr": "class",
+          "oldExtraTokens": [
+            "inline-trigger"
+          ],
+          "finalExtraTokens": []
+        }
+      ],
+      "menuChange": {
+        "time": 1996888,
+        "type": "childList",
+        "target": "n578",
+        "add": [],
+        "remove": [
+          "n579"
+        ],
+        "visibleMenus": []
+      }
+    }
+  ],
+  "limitations": [
+    "Only five target menu rows exported; other menu entries are outside this local rule.",
+    "Attribute new values were read at MutationObserver delivery, not every intermediate synchronous write.",
+    "R3/R4 are the final pair with closure and real undo/redo; R2 additionally confirms closure.",
+    "No history or reload claim follows from these menu and focus observations."
+  ],
+  "stableClosePair": [
+    "R3",
+    "R4"
+  ],
+  "bodyTreeAfterR3": {
+    "r": "n115",
+    "tag": "DIV",
+    "a": {
+      "class": "block docx-text-block focused",
+      "data-block-type": "text",
+      "data-block-id": "5"
+    },
+    "c": [
+      {
+        "r": "n116",
+        "tag": "DIV",
+        "a": {
+          "class": "text-block-wrapper"
+        },
+        "c": [
+          {
+            "r": "n117",
+            "tag": "DIV",
+            "a": {
+              "class": "text-block"
+            },
+            "c": [
+              {
+                "r": "n118",
+                "tag": "DIV",
+                "a": {
+                  "class": "zone-container text-editor non-empty text-editor-focused",
+                  "contenteditable": "true"
+                },
+                "c": [
+                  {
+                    "r": "n119",
+                    "tag": "DIV",
+                    "a": {
+                      "class": "ace-line"
+                    },
+                    "c": [
+                      {
+                        "r": "n484",
+                        "tag": "SPAN",
+                        "a": {
+                          "class": "trigger-holder-97ed80d9-5328-4234-9ce3-dc7981adc536 author-7622865454574423258"
+                        },
+                        "c": [
+                          {
+                            "r": "n485",
+                            "t": "/"
+                          }
+                        ]
+                      },
+                      {
+                        "r": "n120",
+                        "tag": "SPAN",
+                        "a": {},
+                        "c": [
+                          {
+                            "r": "n121",
+                            "t": "​"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "historyEvidence": "G03-slash-escape-history.json"
+}

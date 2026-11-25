@@ -1,0 +1,655 @@
+{
+  "time": "2026-10-21T08:13:37.738Z",
+  "scope": "Actual project paste DOM event, transformPastedHTML, configured data plugins and actual useEditorChrome capture handler in inert JSDOM. Synthetic clipboard event; no OS/browser/server integration. Expected foreign annotation rejection assertions may fail.",
+  "environment": {
+    "platform": "internal",
+    "scripts": "disabled",
+    "resources": "disabled",
+    "clipboard": "simulated event data",
+    "collaboration": false,
+    "excludedPlugin": "placeholder viewport UI requires browser elementFromPoint",
+    "nodeViewDeclarations": "OutlineMetaView.vue and CharacterSectionView.vue stubs only"
+  },
+  "hashes": {
+    "registryBundle": "01a351d869ce8d11a1abd11dcc9b81590a3e3f14ecaf10fc94a1981798607941",
+    "captureSource": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c"
+  },
+  "cases": [
+    {
+      "name": "normal styled text preserves body and title",
+      "passed": true,
+      "result": {
+        "input": {
+          "html": "<p><strong>Safe</strong></p>",
+          "htmlUnits": 28,
+          "htmlHash": "5180fd32b76b4f843c1f07dac744d9cef11305955d9f08d16696b7b8005a82c2",
+          "plainUnits": 4
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 4,
+        "bodyText": "Safe",
+        "bodyHash": "4f9f0dabcd26ae53ecb47f632b5fc4d82f35d4110e2b0fb1a3bad7fce0c5a898",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"e6b0d881-df6e-4a86-8f30-0e8a3f4e952b\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\"><strong>Safe</strong></span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "7a728069-26c8-4209-bf38-16eaaefad791",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "c62856ee-21cb-4fdc-87a9-42cd47812111",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "e6b0d881-df6e-4a86-8f30-0e8a3f4e952b",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      },
+                      "content": [
+                        {
+                          "type": "text",
+                          "marks": [
+                            {
+                              "type": "bold"
+                            }
+                          ],
+                          "text": "Safe"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": false
+      }
+    },
+    {
+      "name": "script event and dangerous link removed",
+      "passed": true,
+      "result": {
+        "input": {
+          "html": "<p onclick=\"window.__s08Attack=1\">Safe<script>window.__s08Attack=1</script><a href=\"javascript:window.__s08Attack=1\">Link</a></p>",
+          "htmlUnits": 129,
+          "htmlHash": "2be591e6bd60dd37bf22fa8d1f638b0b14eb7990ac7393359b641bfc6ebb1721",
+          "plainUnits": 8
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 8,
+        "bodyText": "SafeLink",
+        "bodyHash": "657346ae08880c8cd45d7ef365b50ad3cbab4bf40d7f48a917d5605421efb5c3",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"bac93628-ec67-41e2-a7b0-bafdd7b3346b\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">SafeLink</span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "718047d9-e1c6-4ad7-8491-97bbbfd5f779",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "3d68a0f9-b056-419e-9d48-0e1685c5a43e",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "bac93628-ec67-41e2-a7b0-bafdd7b3346b",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      },
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "SafeLink"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": false
+      }
+    },
+    {
+      "name": "external legacy comment class must not restore foreign identity",
+      "passed": false,
+      "result": {
+        "input": {
+          "html": "<p><span class=\"comment-underline-S08-foreign\">External</span></p>",
+          "htmlUnits": 66,
+          "htmlHash": "9c5c707c7dc9da703d04be0b7b6940b3c3c1abad3d8f1175103ca724651bd456",
+          "plainUnits": 8
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 8,
+        "bodyText": "External",
+        "bodyHash": "68c114ea9c8c66041e9452211afd1f4fbc6e15554179f7f5f96a73219d4937a0",
+        "titleText": "",
+        "foreignAnnotationIds": [
+          "S08-foreign"
+        ],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"f2a04db8-c9ab-4e9d-a4d6-869b5e31e640\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\"><span class=\"comment-underline S08-foreign\">External</span></span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "dd961916-8986-4b5f-b984-a411632d381b",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "456e848e-7cea-4c3e-8484-cf85c58ff5e8",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "f2a04db8-c9ab-4e9d-a4d6-869b5e31e640",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      },
+                      "content": [
+                        {
+                          "type": "text",
+                          "marks": [
+                            {
+                              "type": "annotationSpan",
+                              "attrs": {
+                                "origin": "source",
+                                "layers": [
+                                  {
+                                    "id": "S08-foreign",
+                                    "kind": "comment",
+                                    "role": "range",
+                                    "state": "active",
+                                    "authorId": "",
+                                    "createdAt": "",
+                                    "payload": {}
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "External"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": false
+      }
+    },
+    {
+      "name": "external comment data attribute must not restore foreign identity",
+      "passed": true,
+      "result": {
+        "input": {
+          "html": "<p><span data-comment-id=\"S08-foreign\">External</span></p>",
+          "htmlUnits": 58,
+          "htmlHash": "25a09c35589d950a93dac01a613fece24586c3d942f5b7e6a7ec7a331e6ff656",
+          "plainUnits": 8
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 8,
+        "bodyText": "External",
+        "bodyHash": "68c114ea9c8c66041e9452211afd1f4fbc6e15554179f7f5f96a73219d4937a0",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"7ed569e7-d112-43bb-931a-56e8bb2b4ccc\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">External</span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "418e742d-df83-4078-8452-26e59b7708ef",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "eea4660c-6b6e-4a80-b84a-b0b0f0fd3c16",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "7ed569e7-d112-43bb-931a-56e8bb2b4ccc",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      },
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "External"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": false
+      }
+    },
+    {
+      "name": "external forged internal block identity is replaced",
+      "passed": true,
+      "result": {
+        "input": {
+          "html": "<p data-my-paragraph data-block-id=\"S08-foreign\">External</p>",
+          "htmlUnits": 61,
+          "htmlHash": "2eec4de406bd489a764aa0128cdf040050d6e145d06df0558b2a1029aaba2966",
+          "plainUnits": 8
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 8,
+        "bodyText": "External",
+        "bodyHash": "68c114ea9c8c66041e9452211afd1f4fbc6e15554179f7f5f96a73219d4937a0",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"efd698bf-fe54-4962-944a-4a85edec956d\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\">External</span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "817c51f8-89d2-4dac-8a22-204e601dcd4b",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "0864164b-57d6-4b3b-9fd4-56428bba0b50",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "efd698bf-fe54-4962-944a-4a85edec956d",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      },
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "External"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": false
+      }
+    },
+    {
+      "name": "plain 100001 capture rejects atomically",
+      "passed": true,
+      "result": {
+        "input": {
+          "htmlUnits": 100008,
+          "htmlHash": "8f80b57de118a986eb5af6b62b04a32276227db0f4e3024f17c2838c015dc4de",
+          "plainUnits": 100001
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 0,
+        "bodyText": "",
+        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [
+          "单次粘贴不得超过10万字，请分批粘贴。"
+        ],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"65d9fbc9-b4cd-4aad-b82d-c0b9423c3658\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\"></span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "a9822547-fa87-4cfb-88f7-e855defcc2f9",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "39108460-1d7c-498f-921b-f85da78d08e0",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "65d9fbc9-b4cd-4aad-b82d-c0b9423c3658",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": true
+      }
+    },
+    {
+      "name": "HTML-only above document limit rejects atomically",
+      "passed": true,
+      "result": {
+        "input": {
+          "htmlUnits": 460008,
+          "htmlHash": "0679e99b07cbf743af8d9b932b7304d41a812934d64b9359e937423275cef658",
+          "plainUnits": 0
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 0,
+        "bodyText": "",
+        "bodyHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [
+          "您已超出文档最大字数上限"
+        ],
+        "runtimeErrors": [],
+        "output": "<div data-data-block-id=\"d9a49c5c-41f7-49ba-9929-55c06e2239ab\" data-block-type=\"text\" class=\"block my-text-block docx-text-block\"><div class=\"text-block-wrapper\"><span data-my-paragraph=\"\" class=\"my-paragraph-block ProseMirror-my-span\"></span></div></div>",
+        "json": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "myPage",
+              "content": [
+                {
+                  "type": "myPageHeader",
+                  "content": [
+                    {
+                      "type": "myHeadingBlock",
+                      "attrs": {
+                        "data-block-id": "75552691-a705-4a4c-bcd3-2f1dfeb0404e",
+                        "textAlign": null,
+                        "level": 1,
+                        "indent": 0,
+                        "collapsed": false,
+                        "numbered": false,
+                        "numberText": ""
+                      },
+                      "content": [
+                        {
+                          "type": "myParagraphBlock",
+                          "attrs": {
+                            "data-block-id": "5a374866-a8ff-4144-aaa8-bd7d61874aee",
+                            "textAlign": null,
+                            "indent": 0,
+                            "annotationOrigin": "source",
+                            "annotationLayers": []
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "myPageChildren",
+                  "content": [
+                    {
+                      "type": "myParagraphBlock",
+                      "attrs": {
+                        "data-block-id": "d9a49c5c-41f7-49ba-9929-55c06e2239ab",
+                        "textAlign": null,
+                        "indent": 0,
+                        "annotationOrigin": "source",
+                        "annotationLayers": []
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "unchanged": true
+      }
+    }
+  ],
+  "observations": [
+    {
+      "name": "HTML-only above 100000 below document limit",
+      "kind": "current boundary, not acceptance of per-paste HTML protection",
+      "result": {
+        "input": {
+          "htmlUnits": 100008,
+          "htmlHash": "8f80b57de118a986eb5af6b62b04a32276227db0f4e3024f17c2838c015dc4de",
+          "plainUnits": 0
+        },
+        "defaultPrevented": true,
+        "bodyUnits": 100001,
+        "bodyHash": "5108afd0c5e3aa707e391d4fa1e30f110c985660740494df85552d3823be63b5",
+        "titleText": "",
+        "foreignAnnotationIds": [],
+        "foreignBlockIdRetained": false,
+        "unsafeOutput": false,
+        "warnings": [],
+        "runtimeErrors": [],
+        "unchanged": false
+      }
+    }
+  ],
+  "failures": [
+    {
+      "name": "external legacy comment class must not restore foreign identity",
+      "foreignAnnotationIds": [
+        "S08-foreign"
+      ],
+      "runtimeErrors": []
+    }
+  ]
+}

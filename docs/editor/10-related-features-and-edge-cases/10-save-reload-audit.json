@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 16,
+  "scope": "Normal H1 conversion history, Cmd+S path and actual Chrome reload; not network acknowledgement, instant reload or failure recovery",
+  "foldObservation": "R1 reload restores persisted fold; real expand restores Needle and exact semantic hash. R2 follows real manual expansion and remains expanded after reload. Different fold histories retained, not a fixed-condition fold persistence pair.",
+  "files": [
+    {
+      "file": "dom/J04-heading-save-reload-R1-operation.json",
+      "sha256": "4cd2225d4d0d72c6dec95849874d03fdad33c7f33713851dbff9eee7f09c9451"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-before.json",
+      "sha256": "b41d42e74f9a60a0f3f9f71c5c5d2a1c58c9d5bbbdb91d02b50b22dbe7f8c104"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-after.json",
+      "sha256": "5a42fd24dd72eee398f5329f69b9496518d9ade7e15a62ad053afcccb6b94a12"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-after-expanded.json",
+      "sha256": "f2d1edc1fb1b045cfb2db3eddbaa34a54354453d660508f64e690edec28d9100"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R2-operation.json",
+      "sha256": "c95435d86b80cffeda4de36adf050cdc7fecac54dc2ce67a26085c760b8fcaf8"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R2-before.json",
+      "sha256": "4d67f4f5e3d8f139e45ab570ae50a999a59f3efb53aa44e090a59f6c90499a01"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R2-after.json",
+      "sha256": "c8f844b26302d080d46b92c705bcc63acf56b82f73e8ff298c41c7bab24efcc1"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J04-heading-save-reload-R1-operation canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-before canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-after canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-after-expanded canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact conversion history",
+      "passed": true
+    },
+    {
+      "name": "R1 trusted save key",
+      "passed": true
+    },
+    {
+      "name": "R1 no error or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 actual reload distinct time origin",
+      "passed": true
+    },
+    {
+      "name": "R1 exact persisted semantic state after visibility normalization",
+      "passed": true
+    },
+    {
+      "name": "R1 server record identities retained across reload",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R2-operation canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R2-before canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R2-after canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact conversion history",
+      "passed": true
+    },
+    {
+      "name": "R2 trusted save key",
+      "passed": true
+    },
+    {
+      "name": "R2 no error or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 actual reload distinct time origin",
+      "passed": true
+    },
+    {
+      "name": "R2 exact persisted semantic state after visibility normalization",
+      "passed": true
+    },
+    {
+      "name": "R2 server record identities retained across reload",
+      "passed": true
+    },
+    {
+      "name": "paired final semantic hash",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

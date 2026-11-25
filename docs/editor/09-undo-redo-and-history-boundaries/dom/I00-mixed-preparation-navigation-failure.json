@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-26",
+  "scope": "Excluded preparation; accidentally navigated to another private document",
+  "attemptedActionsBeforeGuard": [
+    "coordinate click",
+    "Cmd+A twice",
+    "HTML paste of own mixed fixture"
+  ],
+  "readGuard": "Study URL guard: clearConsole",
+  "initialReviewRejected": true,
+  "subsequentUserAuthorization": "允许限定只读核对",
+  "limitedRead": {
+    "url": "https://research-fixture.example/docx/QAFixtureDocument04XXXXXXXX",
+    "title": "S2赛季获奖案例展示​",
+    "bodyReady": true,
+    "bodyEditable": [
+      "false"
+    ],
+    "rootEditable": "false",
+    "fixturePresent": false,
+    "fixtureWords": 0
+  },
+  "limitation": "No pre-incident full document baseline; current readonly state and missing exact research markers do not prove all historical content unchanged",
+  "validPair": false
+}

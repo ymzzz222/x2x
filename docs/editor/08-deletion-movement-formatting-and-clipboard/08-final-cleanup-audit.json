@@ -1,0 +1,183 @@
+{
+  "time": "2026-10-22T12:24:51.607Z",
+  "scope": "Final rich persistence and cleanup evidence consistency; does not override project safety failure or unavailable conditions",
+  "checks": [
+    {
+      "name": "S08-full-final-rich-Chrome-R1 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Chrome-R1 actual reload",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Chrome-R1 no monitors",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Chrome-R2 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Chrome-R2 actual reload",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Chrome-R2 no monitors",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Quark-R1 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Quark-R1 actual reload",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Quark-R1 no monitors",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Quark-R2 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Quark-R2 actual reload",
+      "passed": true
+    },
+    {
+      "name": "S08-full-final-rich-Quark-R2 no monitors",
+      "passed": true
+    },
+    {
+      "name": "Four distinct rich reload contexts",
+      "passed": true
+    },
+    {
+      "name": "Chrome rich pair exact",
+      "passed": true
+    },
+    {
+      "name": "Quark rich pair exact",
+      "passed": true
+    },
+    {
+      "name": "Rich content and formatting preserved across browsers except recorded trailing empty",
+      "passed": true
+    },
+    {
+      "name": "Later Chrome current exactly matches Quark six-row version",
+      "passed": true
+    },
+    {
+      "name": "Cleanup phases exact",
+      "passed": true
+    },
+    {
+      "name": "Clear and redo contain zero body blocks",
+      "passed": true
+    },
+    {
+      "name": "Undo restores every text type hierarchy and style",
+      "passed": true
+    },
+    {
+      "name": "Title tree unchanged through cleanup",
+      "passed": true
+    },
+    {
+      "name": "Exactly one trusted clear Undo Redo",
+      "passed": true
+    },
+    {
+      "name": "Clear uses structural carrier history uses body root",
+      "passed": true
+    },
+    {
+      "name": "No cleanup error or truncated capture",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Chrome-R1 empty semantic",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Chrome-R1 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Chrome-R1 actual reload with no monitors",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Chrome-R2 empty semantic",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Chrome-R2 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Chrome-R2 actual reload with no monitors",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Quark-R1 empty semantic",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Quark-R1 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Quark-R1 actual reload with no monitors",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Quark-R2 empty semantic",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Quark-R2 digest",
+      "passed": true
+    },
+    {
+      "name": "S08-full-empty-Quark-R2 actual reload with no monitors",
+      "passed": true
+    },
+    {
+      "name": "Four distinct empty reload contexts",
+      "passed": true
+    },
+    {
+      "name": "Four identical empty hashes",
+      "passed": true
+    },
+    {
+      "name": "Study interfaces closed and own variables removed",
+      "passed": true
+    },
+    {
+      "name": "Quark pre-existing tab restored",
+      "passed": true
+    },
+    {
+      "name": "Current project source matches isolated test snapshot",
+      "passed": true
+    },
+    {
+      "name": "Safety failure remains explicitly retained",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "projectAcceptance": {
+    "passed": false,
+    "confirmedFailures": [
+      "external legacy comment class must not restore foreign identity"
+    ],
+    "naturalFeishuClipboardDenial": "unavailable; not passed",
+    "feishuGlobalMaximum": "unknown; observed lower bound only"
+  }
+}

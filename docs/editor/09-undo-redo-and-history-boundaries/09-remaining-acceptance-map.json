@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-26",
+  "scope": "Static mapping of remaining project acceptance paths only; no runtime or Feishu behavior proof",
+  "sources": [
+    {
+      "path": "src/store/modules/wordEdit.js",
+      "sha256": "d77d55741f699ac3ec3e80acd89b162e1573f3c6036e6374cec87ce830163d0f"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/index.vue",
+      "sha256": "ee15a9a88cb3995e53c4cfbd36a4ccba2541818714983ab60b3e77768a64c188"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/composables/useEditorChrome.js",
+      "sha256": "59d5a6ad2edfbf65aefc38906407581fd594a46a9968e24cf1a88aada9897a4c"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/editor/extensions/collaboration.js",
+      "sha256": "213fe910b30e954981e3f6fd595b25364692f582204360f19ced891318eb3044"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/index/composables/useAiGuard.js",
+      "sha256": "1cffbd16db6a9997179f04e540ede5395702ec4169bc9dba97aa19cf32cdfc61"
+    },
+    {
+      "path": "src/views/aiScriptCore/wordEdit/modules/composables/useAiGeneration.js",
+      "sha256": "27f3fe51b43e2e85d18a1bb7122a280b5ae371c63efd36436f6a930c506074ee"
+    },
+    {
+      "path": "package.json",
+      "sha256": "a5d28b6693454550b624e726db8f58ed6a66681373ed153123cb793c48e4cc2d"
+    },
+    {
+      "path": "src/router/index.js",
+      "sha256": "69c2d55699db64cfa9460430eaec09eedb260ed3981f98a4420e330b935ce878"
+    }
+  ],
+  "staticChecks": [
+    {
+      "name": "Effective editability combines permission mode and both lock sources",
+      "passed": true
+    },
+    {
+      "name": "Effective editable drives editor.setEditable",
+      "passed": true
+    },
+    {
+      "name": "Beforeinput history gate is separate and based on canCtrlZ",
+      "passed": true
+    },
+    {
+      "name": "Current collaboration command body has no explicit editability/lock guard",
+      "passed": true
+    },
+    {
+      "name": "AI generation starts only after pre-generation save",
+      "passed": true
+    },
+    {
+      "name": "Local AI generation notifies collaboration",
+      "passed": true
+    },
+    {
+      "name": "Remote lock notification path identified",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "findings": [
+    {
+      "id": "P1",
+      "source": "src/store/modules/wordEdit.js:162",
+      "fact": "canEdit accepts write/manage; canWriteInCurrentMode additionally excludes read mode",
+      "runtimeUnverified": true
+    },
+    {
+      "id": "P2",
+      "source": "src/views/aiScriptCore/wordEdit/editor/extensions/collaboration.js:274",
+      "fact": "Undo/Redo command bodies check history stack and dispatch, but do not explicitly check editable/AI lock; outer event routing and framework behavior must be tested",
+      "status": "test risk, not confirmed runtime defect"
+    },
+    {
+      "id": "P3",
+      "source": "src/views/aiScriptCore/wordEdit/index/composables/useAiGuard.js:292",
+      "fact": "Real local AI start saves current document then notifies collaborators; arbitrary business documents are unsuitable as an assumed isolated fixture",
+      "runtimeUnverified": true
+    },
+    {
+      "id": "P4",
+      "source": "src/views/aiScriptCore/wordEdit/modules/composables/useAiGeneration.js:439",
+      "fact": "generationLocked/completed handlers refresh task detail and reconcile state; synthetic local flags do not validate this protocol",
+      "runtimeUnverified": true
+    }
+  ],
+  "requiredEnvironments": [
+    {
+      "id": "E1",
+      "requirements": [
+        "Explicitly disposable document and declared local/test backend",
+        "Real collaboration connection and known usable Undo/Redo history",
+        "Authorized permission owner and second test session to change true permission",
+        "Read-only transition without creating a new empty-history session"
+      ]
+    },
+    {
+      "id": "E2",
+      "requirements": [
+        "Isolated workspace with AI generation enabled and explicit test task",
+        "Known local history before AI start",
+        "Observable real task lock, completion/cancellation and target document reconnect",
+        "Authorization for the pre-generation save and collaboration notification"
+      ]
+    }
+  ],
+  "beforeinputStatus": "No genuine historyUndo/historyRedo captured in current Feishu UI; native Edit and context-menu results retained; synthetic dispatch will not count",
+  "projectRuntimeTestsExecuted": false,
+  "businessCodeChanged": false,
+  "scopeAcceptance": {
+    "date": "2026-10-26",
+    "userReply": "转交项目专项，按明确限制完成 S09",
+    "accepted": true,
+    "handoff": "S10 J06/J07/J11 and isolated project acceptance; unverified items are not passed",
+    "S10Started": false
+  }
+}

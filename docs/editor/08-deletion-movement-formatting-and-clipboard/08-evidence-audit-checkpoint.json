@@ -1,0 +1,417 @@
+{
+  "time": "2026-10-22T12:25:12.954Z",
+  "scope": "S08 reachable supplemental verification and cleanup complete; known project failure and unavailable conditions retained; not exhaustive coverage or project acceptance",
+  "jsonFiles": 571,
+  "encoded": 560,
+  "stringEncoded": 17,
+  "roundtripHashesChecked": 560,
+  "hashFailures": [],
+  "missingRefs": [],
+  "parseFailures": [],
+  "operationErrors": [],
+  "overflows": [],
+  "groupsWithR1R2": [
+    "H01-bullet-start-backspace",
+    "H01-bullet-start-delete",
+    "H01-empty-bullet-backspace",
+    "H01-empty-heading1-backspace",
+    "H01-empty-heading9-backspace",
+    "H01-empty-numbered-H1-backspace",
+    "H01-empty-numbered-H1-delete",
+    "H01-empty-numbered-H9-backspace",
+    "H01-empty-numbered-H9-delete",
+    "H01-empty-ordered-backspace",
+    "H01-empty-quote-delete-tail",
+    "H01-empty-quote-start-backspace",
+    "H01-empty-tail-backspace",
+    "H01-full-empty-bullet-delete-next-text",
+    "H01-full-empty-ordered-delete-next-text",
+    "H01-full-quote-end-delete-next-text",
+    "H01-full-text-delete-next-H1",
+    "H01-full-text-delete-next-H9",
+    "H01-full-text-delete-next-bullet",
+    "H01-full-text-delete-next-ordered",
+    "H01-heading1-start-backspace",
+    "H01-heading1-start-delete",
+    "H01-heading1-tail-backspace",
+    "H01-heading9-start-backspace",
+    "H01-heading9-start-delete",
+    "H01-heading9-tail-backspace",
+    "H01-last-empty-bullet-delete",
+    "H01-nested-ordered-child-start-backspace",
+    "H01-numbered-H1-end-delete-next-text",
+    "H01-numbered-H9-end-delete-next-text",
+    "H01-numbered-heading1-start-backspace",
+    "H01-numbered-heading1-start-delete",
+    "H01-numbered-heading9-start-backspace",
+    "H01-numbered-heading9-start-delete",
+    "H01-ordered-parent-end-delete-child",
+    "H01-ordered-start-backspace",
+    "H01-ordered-start-delete",
+    "H01-quote-first-text-backspace",
+    "H01-quote-start-delete",
+    "H01-quote-tail-backspace",
+    "H01-quote-tail-delete-next-empty-ordered",
+    "H01-supplement-bullet-tail-delete",
+    "H01-supplement-ordered-tail-delete",
+    "H01-text-end-delete-empty-next",
+    "H01-text-end-delete-merge",
+    "H01-text-end-delete-next-quote-sentinel",
+    "H01-text-middle-backspace",
+    "H01-text-middle-delete",
+    "H01-text-start-backspace-merge",
+    "H01-text-start-delete",
+    "H01-text-tail-backspace",
+    "H02-H9-nonzero-backspace",
+    "H02-H9-nonzero-delete",
+    "H02-clear-click-body-typing",
+    "H02-clear-direct-typing",
+    "H02-first-body-backspace-title-boundary",
+    "H02-forward-heading-zero-backspace",
+    "H02-forward-heading-zero-input-replace",
+    "H02-full-partial-structural-backspace",
+    "H02-full-partial-structural-delete",
+    "H02-full-partial-structural-input",
+    "H02-mixed-double-selectall-backspace",
+    "H02-reverse-heading-zero-backspace",
+    "H02-text-through-whole-quote-backspace",
+    "H02-title-body-reverse-range-settled",
+    "H02-title-end-delete-body-merge",
+    "H02-whole-selection-input-noop-sentinel",
+    "H03-Chrome-alpha-first-in-quote",
+    "H03-Chrome-quote-child-before-heading",
+    "H03-full-expanded-parent-move",
+    "H03-full-outside-navigation-clean",
+    "H03-full-self-drop",
+    "H03-full-structural-multiblock-drag",
+    "H03-manual-alpha-after-heading",
+    "H03-manual-folded-list-before-alpha",
+    "H04-alpha-bold",
+    "H04-alpha-center-align",
+    "H04-alpha-italic",
+    "H04-alpha-left-from-center",
+    "H04-alpha-recent-color-key",
+    "H04-alpha-right-align",
+    "H04-alpha-strike",
+    "H04-alpha-underline",
+    "H04-bold-text-to-H1-direct-continue",
+    "H04-color-default-keeps-bold",
+    "H04-full-clear-format-shortcut",
+    "H04-full-mixed-italic-on",
+    "H04-full-mixed-strikethrough",
+    "H04-full-mixed-to-ordered-continue",
+    "H04-full-reverse-cross-block-underline",
+    "H04-link-domain-apply-history",
+    "H04-mixed-alpha-bold-toggle",
+    "H04-ordered-child-shift-tab-outdent",
+    "H04-ordered-child-tab-indent",
+    "H04-palette-blue-text-valid",
+    "H04-palette-yellow-background",
+    "H05-commented-Alpha-copy-paste",
+    "H05-cross-document-source-copy",
+    "H05-folded-parent-through-quote-copy-plain-paste",
+    "H05-folded-through-quote-cut-valid",
+    "H05-fragment-copy-paste",
+    "H05-fragment-cut",
+    "H05-mixed-whole-cut-DOM-history",
+    "H05-whole-copy-paste-empty-bullet-focused-history",
+    "H06-Gamma-middle-range-multiline-continue",
+    "H06-cross-document-mixed",
+    "H06-empty-bullet-multiline",
+    "H06-empty-ordered-multiline",
+    "H06-external-rich-html-residue-history",
+    "H06-full-bullet-middle-range-multiline",
+    "H06-full-bullet-start-multiline",
+    "H06-full-bullet-tail-multiline",
+    "H06-full-ordered-reverse-range-multiline",
+    "H06-full-ordered-start-multiline",
+    "H06-full-ordered-tail-multiline",
+    "H06-full-plain-H1-start-multiline",
+    "H06-full-plain-H9-start-multiline",
+    "H06-full-quote-start-multiline",
+    "H06-full-text-start-multiline",
+    "H06-numbered-H1-middle-range-multiline",
+    "H06-numbered-H1-tail-multiline",
+    "H06-numbered-H9-tail-multiline",
+    "H06-ordered-middle-range-multiline",
+    "H06-quote-middle-range-multiline",
+    "H06-quote-tail-multiline",
+    "H06-text-tail-multiline-plain",
+    "H07-block-total-100000",
+    "H07-block-total-100001-focused",
+    "H07-definition-list-HTML",
+    "H07-duplicate-html-identifiers-valid",
+    "H07-empty-plaintext-paste",
+    "H07-full-CJK-block-100000",
+    "H07-full-CJK-block-100001",
+    "H07-full-combining-NFC-block-100000",
+    "H07-full-combining-NFC-block-100001",
+    "H07-full-combining-block-UTF16-100000",
+    "H07-full-document-over-460000",
+    "H07-full-emoji-block-UTF16-100000",
+    "H07-full-emoji-block-UTF16-100001",
+    "H07-full-multiblock-120000",
+    "H07-full-soft-line-innerText-100001",
+    "H07-full-soft-line-logical-100000",
+    "H07-plaintext-100001-sentinel",
+    "H07-supplement-inline-style-cleanup",
+    "H08-AX-javascript-scheme-enter",
+    "H08-full-folded-parent-escape",
+    "H08-invalid-link-text-enter",
+    "H08-link-domain-cancel",
+    "S08-full-empty-Chrome",
+    "S08-full-empty-Quark",
+    "S08-full-final-rich-Chrome",
+    "S08-full-final-rich-Quark",
+    "S08-full-mixed-Chrome",
+    "S08-full-mixed-Quark",
+    "S08-save-mixed-Chrome",
+    "S08-save-mixed-Quark"
+  ],
+  "singleRoundCandidates": [
+    {
+      "name": "H00-native-key-delivery",
+      "rounds": [
+        2
+      ]
+    },
+    {
+      "name": "H02-title-body-reverse-range-backspace-observed",
+      "rounds": [
+        1
+      ]
+    },
+    {
+      "name": "H03-Chrome-single-drag-quote-columns",
+      "rounds": [
+        1
+      ]
+    },
+    {
+      "name": "H03-manual-alpha-into-quote",
+      "rounds": [
+        1
+      ]
+    },
+    {
+      "name": "H04-all-bold-alpha-toggle-off",
+      "rounds": [
+        1,
+        3
+      ]
+    },
+    {
+      "name": "H04-alpha-blue-text",
+      "rounds": [
+        1
+      ]
+    },
+    {
+      "name": "H06-numbered-H9-middle-range-multiline",
+      "rounds": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "H07-external-duplicate-identifiers",
+      "rounds": [
+        1
+      ]
+    },
+    {
+      "name": "H08-full-single-block-escape",
+      "rounds": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "H08-link-cancel",
+      "rounds": [
+        1
+      ]
+    },
+    {
+      "name": "H08-manual-folded-drag-escape-once",
+      "rounds": [
+        1
+      ]
+    }
+  ],
+  "localLinkFailures": [],
+  "recentContractChecks": {
+    "files": 20,
+    "passed": [
+      "H01-empty-quote-delete-tail-R1.json",
+      "H01-empty-quote-delete-tail-R2.json",
+      "H01-empty-quote-start-backspace-R1.json",
+      "H01-empty-quote-start-backspace-R2.json",
+      "H01-nested-ordered-child-start-backspace-R1.json",
+      "H01-nested-ordered-child-start-backspace-R2.json",
+      "H01-numbered-H1-end-delete-next-text-R1.json",
+      "H01-numbered-H1-end-delete-next-text-R2.json",
+      "H01-numbered-H9-end-delete-next-text-R1.json",
+      "H01-numbered-H9-end-delete-next-text-R2.json",
+      "H01-ordered-parent-end-delete-child-R1.json",
+      "H01-ordered-parent-end-delete-child-R2.json",
+      "H06-numbered-H1-middle-range-multiline-R1.json",
+      "H06-numbered-H1-middle-range-multiline-R2.json",
+      "H06-numbered-H9-middle-range-multiline-R2.json",
+      "H06-numbered-H9-middle-range-multiline-R3.json",
+      "H06-ordered-middle-range-multiline-R1.json",
+      "H06-ordered-middle-range-multiline-R2.json",
+      "H06-quote-middle-range-multiline-R1.json",
+      "H06-quote-middle-range-multiline-R2.json"
+    ],
+    "failures": []
+  },
+  "commentCopyChecks": {
+    "files": 2,
+    "passed": [
+      "H05-commented-Alpha-copy-paste-R1.json",
+      "H05-commented-Alpha-copy-paste-R2.json"
+    ],
+    "failures": []
+  },
+  "singleDragChecks": {
+    "files": 2,
+    "passed": [
+      "H03-Chrome-single-drag-quote-columns-R1.json",
+      "H03-Chrome-single-drag-quote-right-column-probe.json"
+    ],
+    "failures": []
+  },
+  "quoteDragChecks": {
+    "files": 3,
+    "passed": [
+      "H03-Chrome-alpha-first-in-quote-R1.json",
+      "H03-Chrome-alpha-first-in-quote-R2.json",
+      "H03-Chrome-alpha-first-in-quote-type-icon-probe.json"
+    ],
+    "failures": []
+  },
+  "quoteExitChecks": {
+    "files": 2,
+    "passed": [
+      "H03-Chrome-quote-child-before-heading-R1.json",
+      "H03-Chrome-quote-child-before-heading-R2.json"
+    ],
+    "failures": []
+  },
+  "nativeChannelChecks": {
+    "files": 1,
+    "passed": [
+      "H03-native-filled-window-drag-channel-recheck.json"
+    ],
+    "failures": []
+  },
+  "finalCleanupChecks": {
+    "files": 1,
+    "passed": [
+      "S08-final-clear-undo-redo.json"
+    ],
+    "failures": []
+  },
+  "emptyReadChecks": {
+    "files": 3,
+    "passed": [
+      "S08-final-empty-Chrome.json",
+      "S08-final-empty-Quark-before-reload.json",
+      "S08-final-empty-Quark.json"
+    ],
+    "failures": []
+  },
+  "terminalChecks": {
+    "files": 3,
+    "passed": [
+      "S08-final-empty-Chrome-closed-menu.json",
+      "S08-final-empty-Chrome-terminal.json",
+      "S08-final-empty-Quark-terminal.json"
+    ],
+    "failures": []
+  },
+  "auxiliaryLogLimits": [
+    {
+      "name": "H03-manual-alpha-into-quote-R1.json",
+      "loc": "",
+      "events": 160,
+      "limit": 160,
+      "limitReached": null
+    }
+  ],
+  "validatedAlternativePairs": [
+    {
+      "name": "H06-numbered-H9-middle-range-multiline",
+      "rounds": [
+        2,
+        3
+      ],
+      "excludedRound": 1,
+      "reason": "R1 probe has an extra empty text block before paste; R2/R3 use the verified seven-node baseline"
+    },
+    {
+      "name": "H06-Gamma-middle-range-multiline-continue",
+      "rounds": [
+        2,
+        3
+      ],
+      "excludedRound": 1,
+      "reason": "R1 has a longer paste-to-typing interval and separate history; R2/R3 continuous runs have combined history"
+    },
+    {
+      "name": "H04-all-bold-alpha-toggle-off",
+      "rounds": [
+        1,
+        3
+      ],
+      "excludedRound": 2,
+      "reason": "R2 action captured but native coordinate failure prevented history verification"
+    },
+    {
+      "name": "H04-bold-text-to-H1-direct-continue",
+      "rounds": [
+        2,
+        3
+      ],
+      "excludedRound": 1,
+      "reason": "R1 has a 33.842-second conversion-to-typing keydown interval and separate history, while R2/R3 are continuous and combined"
+    },
+    {
+      "name": "H03-manual-alpha-after-heading",
+      "rounds": [
+        2,
+        3
+      ],
+      "excludedRound": 1,
+      "reason": "R1 includes two real drag gestures"
+    },
+    {
+      "name": "H04-alpha-center-align",
+      "rounds": [
+        2,
+        3
+      ],
+      "excludedRound": 1,
+      "reason": "R1 includes a menu-obstructed setup change from implicit start to explicit left"
+    }
+  ],
+  "persistenceChecks": {
+    "files": 11,
+    "passed": [
+      "S08-save-mixed-Quark-R1-fold-restored.json",
+      "S08-save-mixed-Quark-R1-expanded-verified.json",
+      "S08-save-mixed-Quark-R2.json",
+      "S08-save-mixed-Quark-R2-expanded.json",
+      "S08-save-mixed-Quark-R2-fold-restored.json",
+      "S08-save-mixed-Chrome-R1.json",
+      "S08-save-mixed-Chrome-R1-expanded.json",
+      "S08-save-mixed-Chrome-R1-fold-restored.json",
+      "S08-save-mixed-Chrome-R2.json",
+      "S08-save-mixed-Chrome-R2-expanded.json",
+      "S08-save-mixed-Chrome-R2-fold-restored.json"
+    ],
+    "failures": []
+  },
+  "note": "Pair existence is not semantic acceptance. Failed/misconfigured probes remain excluded in requirement docs. v1 snapshotRefs and v2 stringRefs are recursively restored before canonical hashing. Raw pre-normalization hashes cannot be reconstructed from normalized-only stored files."
+}

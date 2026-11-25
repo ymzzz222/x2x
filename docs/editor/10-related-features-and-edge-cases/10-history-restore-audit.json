@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 1,
+  "totalS10Pairs": 17,
+  "scope": "Specified historic 15:58 study version, restore, continue conversion/input/history, save and actual Chrome reload",
+  "approval": "Initial automatic review rejected specific submission; sir explicitly approved two restores before both final submissions",
+  "limits": [
+    "No assertion restoring version itself is normal document Undo",
+    "No remote concurrency or reconnect version restore coverage",
+    "R2 stopped observer variable survives SPA restore; restarted before continuation"
+  ],
+  "files": [
+    {
+      "file": "dom/J10-history-restore-R1-before.json",
+      "sha256": "da1ee6dd0700096a9e3c4796c8a85d810bf4e3dd066b13320c72227b686966ea"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-confirmation.json",
+      "sha256": "38365773203ede5dde4dee0df869528fa3c75e1059206ebe9d4eb21994a197ee"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-after.json",
+      "sha256": "cb76ba76567a65c0cee8f65b6034b8f540cad147951c9e0e80f04965550f406e"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-continue.json",
+      "sha256": "f209ace1733af13880bf3e38a5eb708655051d97c7e51b2901a30209c4b58a2b"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-reload.json",
+      "sha256": "589d9f32223037ee5eab7d9b18e5ce749623822ca5010ab818f46967fc91fdf9"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-before.json",
+      "sha256": "147f58e102954c49d73ac63426587f1d8e9f10de4dbcd87198a7cc1914f5ce27"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-confirmation.json",
+      "sha256": "38365773203ede5dde4dee0df869528fa3c75e1059206ebe9d4eb21994a197ee"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-after.json",
+      "sha256": "e79142ce75aa6b3f01e01d1ae5a1383561c65de1ed21e7984e35f6d4a3c05a3a"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-continue.json",
+      "sha256": "01e590e33636538a51956306f0cd891097dfa470d15188d80ab46648ec4680b8"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-reload.json",
+      "sha256": "093822f19c86e997a97bbfe77c951344ad160575867e053264a0c582ed07284f"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J10-history-restore-R1-before canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-confirmation canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-after canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-continue canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact editable live versus readonly preview roots",
+      "passed": true
+    },
+    {
+      "name": "R1 selected version and explicit authority",
+      "passed": true
+    },
+    {
+      "name": "R1 restore exactly matches preview semantics",
+      "passed": true
+    },
+    {
+      "name": "R1 exact continue history trajectory",
+      "passed": true
+    },
+    {
+      "name": "R1 no continuation errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 actual reload after restored workflow",
+      "passed": true
+    },
+    {
+      "name": "R1 reload exactly persists restored state",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-before canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-confirmation canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-after canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-continue canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-reload canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact editable live versus readonly preview roots",
+      "passed": true
+    },
+    {
+      "name": "R2 selected version and explicit authority",
+      "passed": true
+    },
+    {
+      "name": "R2 restore exactly matches preview semantics",
+      "passed": true
+    },
+    {
+      "name": "R2 exact continue history trajectory",
+      "passed": true
+    },
+    {
+      "name": "R2 no continuation errors or overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 actual reload after restored workflow",
+      "passed": true
+    },
+    {
+      "name": "R2 reload exactly persists restored state",
+      "passed": true
+    },
+    {
+      "name": "paired restore final hashes",
+      "passed": true
+    }
+  ],
+  "failures": []
+}

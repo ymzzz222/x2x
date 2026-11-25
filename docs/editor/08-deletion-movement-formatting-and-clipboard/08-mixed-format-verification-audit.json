@@ -1,0 +1,149 @@
+{
+  "time": "2026-10-22T12:24:51.587Z",
+  "scope": "Only actual mixed inline, reversed cross-block and conversion-continuation cases; no universal formatting/history timing inference",
+  "cases": [
+    {
+      "name": "H04-full-mixed-italic-on-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "H9 content styles identity and attributes unchanged apart from actual focus class"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-italic-on-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "H9 content styles identity and attributes unchanged apart from actual focus class"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-italic-on-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic source result and restore both rounds"
+      ]
+    },
+    {
+      "name": "H04-full-reverse-cross-block-underline-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "actual reversed Beta:2 to Alpha:0 range and untouched H9 suffix"
+      ]
+    },
+    {
+      "name": "H04-full-reverse-cross-block-underline-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "actual reversed Beta:2 to Alpha:0 range and untouched H9 suffix"
+      ]
+    },
+    {
+      "name": "H04-full-reverse-cross-block-underline-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic source result and restore both rounds"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-strikethrough-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "H9 content styles identity and attributes unchanged apart from actual focus class"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-strikethrough-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "H9 content styles identity and attributes unchanged apart from actual focus class"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-strikethrough-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic source result and restore both rounds"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-to-ordered-continue-R1.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "H9 content styles identity and attributes unchanged apart from actual focus class",
+        "one immediate trusted continuation after conversion, actual interval below one second"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-to-ordered-continue-R2.json",
+      "passed": true,
+      "assertions": [
+        "exact mixed source Al bold italic and pha underline plus H9 neighbor",
+        "exact actual trusted format or conversion key",
+        "exact applied and redone character styles and block type",
+        "exact full semantic Undo Redo Undo",
+        "title quote and other out-of-range blocks retained exactly",
+        "exact three trusted history keys",
+        "no runtime errors or capture overflow",
+        "H9 content styles identity and attributes unchanged apart from actual focus class",
+        "one immediate trusted continuation after conversion, actual interval below one second"
+      ]
+    },
+    {
+      "name": "H04-full-mixed-to-ordered-continue-pair",
+      "passed": true,
+      "assertions": [
+        "same semantic source result and restore both rounds"
+      ]
+    }
+  ],
+  "failures": []
+}

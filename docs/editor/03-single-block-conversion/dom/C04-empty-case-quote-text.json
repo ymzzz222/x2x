@@ -1,0 +1,77 @@
+{
+  "session": "S03-1792035900001",
+  "normalization": "feishu -> maiya DOM identifiers only",
+  "overflow": 0,
+  "reconstruction": "Expand $dom recursively through domObjects. Set time then apply RFC 6902 baselinePatch/beforePatch.",
+  "baseline": {"blocks":[{"children":[{"$dom":"d5"},{"$dom":"d15"},{"$dom":"d18"}],"node":{"$dom":"d2"},"parent":"n4","parentBlock":"n5"},{"children":[{"$dom":"d11"}],"node":{"$dom":"d19"},"parent":"n13941","parentBlock":"n13935"}],"connected":true,"documentFocused":true,"focus":{"$dom":"d1"},"menus":[{"items":[],"node":{"$dom":"d24"},"text":""}],"save":["最近修改: 昨天 17:48分享编辑","保存中..."],"selection":{"anchor":"n14080","anchorOffset":1,"collapsed":true,"focus":"n14080","focusOffset":1,"ranges":[{"end":"n14080","endOffset":1,"start":"n14080","startOffset":1}],"text":""},"time":"2026-10-15T06:29:54.052Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d23"},"rect":{"bottom":156.25,"height":55.25,"left":577,"right":1397,"top":101,"width":820,"x":577,"y":101},"style":{"fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","paddingLeft":"0px","textAlign":"start"}},{"node":{"$dom":"d9"},"rect":{"bottom":250.25,"height":26,"left":579,"right":1397,"top":224.25,"width":818,"x":579,"y":224.25},"style":{"fontSize":"16px","fontWeight":"400","lineHeight":"26px","paddingLeft":"12px","textAlign":"start"}}]},
+  "domObjects": {
+    "d1": {"attrs":{"class":"page-block root-block","contenteditable":"true"},"ref":"n1","tag":"DIV"},
+    "d2": {"attrs":{"class":"block docx-quote_container-block","data-block-id":"116","data-block-type":"quote_container"},"ref":"n13935","tag":"DIV"},
+    "d3": {"ref":"n13938","text":"​"},
+    "d4": {"attrs":{},"children":[{"$dom":"d3"}],"ref":"n13937","tag":"SPAN"},
+    "d5": {"attrs":{"class":"docx-block-zero-space"},"children":[{"$dom":"d4"}],"ref":"n13936","tag":"DIV"},
+    "d6": {"ref":"n14080","text":"​"},
+    "d7": {"attrs":{"data-enter":"true","data-string":"true"},"children":[{"$dom":"d6"}],"ref":"n14079","tag":"SPAN"},
+    "d8": {"attrs":{"class":"ace-line"},"children":[{"$dom":"d7"}],"ref":"n14078","tag":"DIV"},
+    "d9": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-zone-container":"*","data-zone-id":"65"},"children":[{"$dom":"d8"}],"ref":"n14077","tag":"DIV"},
+    "d10": {"attrs":{"class":"text-block"},"children":[{"$dom":"d9"}],"ref":"n14076","tag":"DIV"},
+    "d11": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d10"}],"ref":"n14075","tag":"DIV"},
+    "d12": {"attrs":{"class":"block docx-text-block quote-container-render-unit isEmpty focused","data-block-id":"65","data-block-type":"text"},"children":[{"$dom":"d11"}],"ref":"n3","tag":"DIV"},
+    "d13": {"attrs":{"class":"render-unit-wrapper quote-container-render-unit"},"children":[{"$dom":"d12"}],"ref":"n13941","tag":"DIV"},
+    "d14": {"attrs":{"class":"quote-container-block-children"},"children":[{"$dom":"d13"}],"ref":"n13940","tag":"DIV"},
+    "d15": {"attrs":{"class":"quote-container-block"},"children":[{"$dom":"d14"}],"ref":"n13939","tag":"DIV"},
+    "d16": {"ref":"n13944","text":"​"},
+    "d17": {"attrs":{},"children":[{"$dom":"d16"}],"ref":"n13943","tag":"SPAN"},
+    "d18": {"attrs":{"class":"docx-block-zero-space"},"children":[{"$dom":"d17"}],"ref":"n13942","tag":"DIV"},
+    "d19": {"attrs":{"class":"block docx-text-block quote-container-render-unit isEmpty focused","data-block-id":"65","data-block-type":"text"},"ref":"n3","tag":"DIV"},
+    "d20": {"ref":"n14","text":"​"},
+    "d21": {"attrs":{"data-enter":"true","data-string":"true"},"children":[{"$dom":"d20"}],"ref":"n13","tag":"SPAN"},
+    "d22": {"attrs":{"class":"ace-line"},"children":[{"$dom":"d21"}],"ref":"n12","tag":"DIV"},
+    "d23": {"attrs":{"class":"zone-container text-editor","contenteditable":"true","data-placeholder":"请输入标题","data-zone-container":"*","data-zone-id":"1"},"children":[{"$dom":"d22"}],"ref":"n11","tag":"DIV"},
+    "d24": {"attrs":{"class":"docx-popup-container"},"ref":"n15","tag":"DIV"},
+    "d25": {"ref":"n14216","text":"​"},
+    "d26": {"attrs":{"data-enter":"true","data-string":"true"},"children":[{"$dom":"d25"}],"ref":"n14215","tag":"SPAN"},
+    "d27": {"attrs":{"class":"ace-line"},"children":[{"$dom":"d26"}],"ref":"n14214","tag":"DIV"},
+    "d28": {"attrs":{"class":"zone-container text-editor text-editor-focused","contenteditable":"true","data-zone-container":"*","data-zone-id":"65"},"children":[{"$dom":"d27"}],"ref":"n14213","tag":"DIV"},
+    "d29": {"attrs":{"class":"text-block"},"children":[{"$dom":"d28"}],"ref":"n14212","tag":"DIV"},
+    "d30": {"attrs":{"class":"text-block-wrapper"},"children":[{"$dom":"d29"}],"ref":"n14211","tag":"DIV"},
+    "d31": {"attrs":{"class":"block docx-text-block quote-container-render-unit isEmpty focused","data-block-id":"65","data-block-type":"text"},"children":[{"$dom":"d30"}],"ref":"n3","tag":"DIV"},
+    "d32": {"attrs":{"class":"render-unit-wrapper quote-container-render-unit"},"children":[{"$dom":"d31"}],"ref":"n13941","tag":"DIV"},
+    "d33": {"attrs":{"class":"quote-container-block-children"},"children":[{"$dom":"d32"}],"ref":"n13940","tag":"DIV"},
+    "d34": {"attrs":{"class":"quote-container-block"},"children":[{"$dom":"d33"}],"ref":"n13939","tag":"DIV"}
+  },
+  "runs": [
+    {
+      "label": "C04-empty-case-quote-text-R1",
+      "derivedFrom": {"conversionOperation":"op805","group":"C04-empty-quote-R1","operationIds":["op805"]},
+      "before": {"baselinePatch":[],"time":"2026-10-15T06:29:54.052Z"},
+      "after": {"beforePatch":[],"time":"2026-10-15T06:29:54.133Z"},
+      "checkpoints": [{"label":"conversion-before","operationId":"op805","state":{"blocks":[{"children":[{"$dom":"d5"},{"$dom":"d15"},{"$dom":"d18"}],"node":{"$dom":"d2"},"parent":"n4","parentBlock":"n5"},{"children":[{"$dom":"d11"}],"node":{"$dom":"d19"},"parent":"n13941","parentBlock":"n13935"}],"connected":true,"documentFocused":true,"focus":{"$dom":"d1"},"menus":[{"items":[],"node":{"$dom":"d24"},"text":""}],"save":["最近修改: 昨天 17:48分享编辑","保存中..."],"selection":{"anchor":"n14080","anchorOffset":1,"collapsed":true,"focus":"n14080","focusOffset":1,"ranges":[{"end":"n14080","endOffset":1,"start":"n14080","startOffset":1}],"text":""},"time":"2026-10-15T06:29:54.052Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d23"},"rect":{"bottom":156.25,"height":55.25,"left":577,"right":1397,"top":101,"width":820,"x":577,"y":101},"style":{"fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","paddingLeft":"0px","textAlign":"start"}},{"node":{"$dom":"d9"},"rect":{"bottom":250.25,"height":26,"left":579,"right":1397,"top":224.25,"width":818,"x":579,"y":224.25},"style":{"fontSize":"16px","fontWeight":"400","lineHeight":"26px","paddingLeft":"12px","textAlign":"start"}}]}},{"label":"converted","operationId":"op805","state":{"blocks":[{"children":[{"$dom":"d5"},{"$dom":"d15"},{"$dom":"d18"}],"node":{"$dom":"d2"},"parent":"n4","parentBlock":"n5"},{"children":[{"$dom":"d11"}],"node":{"$dom":"d19"},"parent":"n13941","parentBlock":"n13935"}],"connected":true,"documentFocused":true,"focus":{"$dom":"d1"},"menus":[{"items":[],"node":{"$dom":"d24"},"text":""}],"save":["最近修改: 昨天 17:48分享编辑","保存中..."],"selection":{"anchor":"n14080","anchorOffset":1,"collapsed":true,"focus":"n14080","focusOffset":1,"ranges":[{"end":"n14080","endOffset":1,"start":"n14080","startOffset":1}],"text":""},"time":"2026-10-15T06:29:54.133Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d23"},"rect":{"bottom":156.25,"height":55.25,"left":577,"right":1397,"top":101,"width":820,"x":577,"y":101},"style":{"fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","paddingLeft":"0px","textAlign":"start"}},{"node":{"$dom":"d9"},"rect":{"bottom":250.25,"height":26,"left":579,"right":1397,"top":224.25,"width":818,"x":579,"y":224.25},"style":{"fontSize":"16px","fontWeight":"400","lineHeight":"26px","paddingLeft":"12px","textAlign":"start"}}]}}],
+      "operations": [{"alt":true,"code":"Digit0","event":"keydown","id":"op805","key":"º","meta":true,"shift":false,"targetText":"添加图标添加封面​合岳今天修改​​​","time":"2026-10-15T06:29:54.052Z","trusted":true}],
+      "changes": [
+      ],
+      "events": [
+        {"alt":true,"code":"Digit0","ctrl":false,"focus":{"$dom":"d1"},"isTrusted":true,"key":"º","meta":true,"selection":{"anchor":"n14080","anchorOffset":1,"collapsed":true,"focus":"n14080","focusOffset":1,"ranges":[{"end":"n14080","endOffset":1,"start":"n14080","startOffset":1}],"text":""},"seq":14801,"shift":false,"target":{"$dom":"d1"},"time":"2026-10-15T06:29:54.052Z","type":"keydown"}
+      ],
+      "errors": [],
+      "console": [],
+      "menuChanges": []
+    },
+    {
+      "label": "C04-empty-case-quote-text-R2",
+      "derivedFrom": {"conversionOperation":"op822","group":"C04-empty-quote-R2","operationIds":["op822"]},
+      "before": {"baselinePatch":[{"op":"replace","path":"/selection/anchor","value":"n14216"},{"op":"replace","path":"/selection/focus","value":"n14216"},{"op":"replace","path":"/selection/ranges/0/start","value":"n14216"},{"op":"replace","path":"/selection/ranges/0/end","value":"n14216"},{"op":"replace","path":"/blocks/0/children/1/children/0/children/0/children/0/children/0/ref","value":"n14211"},{"op":"replace","path":"/blocks/0/children/1/children/0/children/0/children/0/children/0/children/0/ref","value":"n14212"},{"op":"replace","path":"/blocks/0/children/1/children/0/children/0/children/0/children/0/children/0/children/0/ref","value":"n14213"},{"op":"replace","path":"/blocks/0/children/1/children/0/children/0/children/0/children/0/children/0/children/0/children/0/ref","value":"n14214"},{"op":"replace","path":"/blocks/0/children/1/children/0/children/0/children/0/children/0/children/0/children/0/children/0/children/0/ref","value":"n14215"},{"op":"replace","path":"/blocks/0/children/1/children/0/children/0/children/0/children/0/children/0/children/0/children/0/children/0/children/0/ref","value":"n14216"},{"op":"replace","path":"/blocks/1/children/0/ref","value":"n14211"},{"op":"replace","path":"/blocks/1/children/0/children/0/ref","value":"n14212"},{"op":"replace","path":"/blocks/1/children/0/children/0/children/0/ref","value":"n14213"},{"op":"replace","path":"/blocks/1/children/0/children/0/children/0/children/0/ref","value":"n14214"},{"op":"replace","path":"/blocks/1/children/0/children/0/children/0/children/0/children/0/ref","value":"n14215"},{"op":"replace","path":"/blocks/1/children/0/children/0/children/0/children/0/children/0/children/0/ref","value":"n14216"},{"op":"replace","path":"/zones/1/node/ref","value":"n14213"},{"op":"replace","path":"/zones/1/node/children/0/ref","value":"n14214"},{"op":"replace","path":"/zones/1/node/children/0/children/0/ref","value":"n14215"},{"op":"replace","path":"/zones/1/node/children/0/children/0/children/0/ref","value":"n14216"}],"time":"2026-10-15T06:30:25.638Z"},
+      "after": {"beforePatch":[],"time":"2026-10-15T06:30:25.720Z"},
+      "checkpoints": [{"label":"conversion-before","operationId":"op822","state":{"blocks":[{"children":[{"$dom":"d5"},{"$dom":"d34"},{"$dom":"d18"}],"node":{"$dom":"d2"},"parent":"n4","parentBlock":"n5"},{"children":[{"$dom":"d30"}],"node":{"$dom":"d19"},"parent":"n13941","parentBlock":"n13935"}],"connected":true,"documentFocused":true,"focus":{"$dom":"d1"},"menus":[{"items":[],"node":{"$dom":"d24"},"text":""}],"save":["最近修改: 昨天 17:48分享编辑","保存中..."],"selection":{"anchor":"n14216","anchorOffset":1,"collapsed":true,"focus":"n14216","focusOffset":1,"ranges":[{"end":"n14216","endOffset":1,"start":"n14216","startOffset":1}],"text":""},"time":"2026-10-15T06:30:25.638Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d23"},"rect":{"bottom":156.25,"height":55.25,"left":577,"right":1397,"top":101,"width":820,"x":577,"y":101},"style":{"fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","paddingLeft":"0px","textAlign":"start"}},{"node":{"$dom":"d28"},"rect":{"bottom":250.25,"height":26,"left":579,"right":1397,"top":224.25,"width":818,"x":579,"y":224.25},"style":{"fontSize":"16px","fontWeight":"400","lineHeight":"26px","paddingLeft":"12px","textAlign":"start"}}]}},{"label":"converted","operationId":"op822","state":{"blocks":[{"children":[{"$dom":"d5"},{"$dom":"d34"},{"$dom":"d18"}],"node":{"$dom":"d2"},"parent":"n4","parentBlock":"n5"},{"children":[{"$dom":"d30"}],"node":{"$dom":"d19"},"parent":"n13941","parentBlock":"n13935"}],"connected":true,"documentFocused":true,"focus":{"$dom":"d1"},"menus":[{"items":[],"node":{"$dom":"d24"},"text":""}],"save":["最近修改: 昨天 17:48分享编辑","保存中..."],"selection":{"anchor":"n14216","anchorOffset":1,"collapsed":true,"focus":"n14216","focusOffset":1,"ranges":[{"end":"n14216","endOffset":1,"start":"n14216","startOffset":1}],"text":""},"time":"2026-10-15T06:30:25.720Z","url":"https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX","viewport":[1674,963,1],"zones":[{"node":{"$dom":"d23"},"rect":{"bottom":156.25,"height":55.25,"left":577,"right":1397,"top":101,"width":820,"x":577,"y":101},"style":{"fontSize":"34px","fontWeight":"500","lineHeight":"55.25px","paddingLeft":"0px","textAlign":"start"}},{"node":{"$dom":"d28"},"rect":{"bottom":250.25,"height":26,"left":579,"right":1397,"top":224.25,"width":818,"x":579,"y":224.25},"style":{"fontSize":"16px","fontWeight":"400","lineHeight":"26px","paddingLeft":"12px","textAlign":"start"}}]}}],
+      "operations": [{"alt":true,"code":"Digit0","event":"keydown","id":"op822","key":"º","meta":true,"shift":false,"targetText":"添加图标添加封面​合岳今天修改​​​","time":"2026-10-15T06:30:25.638Z","trusted":true}],
+      "changes": [
+      ],
+      "events": [
+        {"alt":true,"code":"Digit0","ctrl":false,"focus":{"$dom":"d1"},"isTrusted":true,"key":"º","meta":true,"selection":{"anchor":"n14216","anchorOffset":1,"collapsed":true,"focus":"n14216","focusOffset":1,"ranges":[{"end":"n14216","endOffset":1,"start":"n14216","startOffset":1}],"text":""},"seq":15071,"shift":false,"target":{"$dom":"d1"},"time":"2026-10-15T06:30:25.638Z","type":"keydown"}
+      ],
+      "errors": [],
+      "console": [],
+      "menuChanges": []
+    }
+  ]
+}

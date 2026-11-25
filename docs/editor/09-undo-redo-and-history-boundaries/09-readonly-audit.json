@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-26",
+  "newFixedConditionPairs": 1,
+  "totalS09FixedConditionPairs": 20,
+  "scope": "Only loaded readonly page with no known usable local content history; rendered nodes only; does not prove server rejection or AI lock",
+  "checks": [
+    {
+      "name": "R1 raw canonical export hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact checkpoints",
+      "passed": true
+    },
+    {
+      "name": "R1 readonly connected throughout",
+      "passed": true
+    },
+    {
+      "name": "R1 unchanged rendered contentSha256",
+      "passed": true
+    },
+    {
+      "name": "R1 unchanged rendered structureSha256",
+      "passed": true
+    },
+    {
+      "name": "R1 unchanged rendered styleSha256",
+      "passed": true
+    },
+    {
+      "name": "R1 unchanged rendered rows",
+      "passed": true
+    },
+    {
+      "name": "R1 exact trusted document keys",
+      "passed": true
+    },
+    {
+      "name": "R1 no beforeinput or input captured",
+      "passed": true
+    },
+    {
+      "name": "R1 logs within limit",
+      "passed": true
+    },
+    {
+      "name": "R1 no plaintext export",
+      "passed": true
+    },
+    {
+      "name": "R1 no text/structure mutation captured",
+      "passed": true
+    },
+    {
+      "name": "R2 raw canonical export hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact checkpoints",
+      "passed": true
+    },
+    {
+      "name": "R2 readonly connected throughout",
+      "passed": true
+    },
+    {
+      "name": "R2 unchanged rendered contentSha256",
+      "passed": true
+    },
+    {
+      "name": "R2 unchanged rendered structureSha256",
+      "passed": true
+    },
+    {
+      "name": "R2 unchanged rendered styleSha256",
+      "passed": true
+    },
+    {
+      "name": "R2 unchanged rendered rows",
+      "passed": true
+    },
+    {
+      "name": "R2 exact trusted document keys",
+      "passed": true
+    },
+    {
+      "name": "R2 no beforeinput or input captured",
+      "passed": true
+    },
+    {
+      "name": "R2 logs within limit",
+      "passed": true
+    },
+    {
+      "name": "R2 no plaintext export",
+      "passed": true
+    },
+    {
+      "name": "R2 no text/structure mutation captured",
+      "passed": true
+    },
+    {
+      "name": "Both rounds equal fingerprints",
+      "passed": true
+    },
+    {
+      "name": "No body input and restored clean study",
+      "passed": true
+    },
+    {
+      "name": "Earlier 94 stage raw evidence unchanged",
+      "passed": true
+    },
+    {
+      "name": "09-undo-redo-and-history-boundaries.md document line budget",
+      "passed": true
+    },
+    {
+      "name": "09-history-contracts.md document line budget",
+      "passed": true
+    },
+    {
+      "name": "ym-research-task.md document line budget",
+      "passed": true
+    },
+    {
+      "name": "Delivery local links resolve",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "sources": [
+    {
+      "file": "dom/I05-readonly-history-R1.json",
+      "sha256": "8ccd342d2d8313db363e8553d40b5b9d8bb876d044d01a83f0d235a8112719c8"
+    },
+    {
+      "file": "dom/I05-readonly-history-R2.json",
+      "sha256": "71af88a0cfa72c574c515a0986a620bbe87766ec6b0f0bdf783084733a99aa14"
+    },
+    {
+      "file": "dom/I00-readonly-test-restored.json",
+      "sha256": "472eab72802945a235cb0f159141bbbedcd8113bd830b3c93294054e67a44fa0"
+    }
+  ],
+  "limitations": [
+    "No known nonempty local edit history existed on readonly page",
+    "Root contenteditable=false and absent Edit control do not independently establish server permission enforcement",
+    "Only currently rendered DOM was hashed; full document was not exported",
+    "No historyUndo/historyRedo beforeinput captured",
+    "AI lock lacks available test environment"
+  ],
+  "businessCodeChanged": false
+}

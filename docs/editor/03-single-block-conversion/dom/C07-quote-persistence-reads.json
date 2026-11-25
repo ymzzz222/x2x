@@ -1,0 +1,308 @@
+{
+  "scope": "Two actual conversion/history/save/reload cycles; DOM identities are scoped to each loading session",
+  "normalization": "DOM identifiers use maiya; real URL and text retained",
+  "target": "quote",
+  "reads": [
+    {
+      "cycle": 1,
+      "browser": "chrome",
+      "sourceSession": "S03-1792064028237",
+      "read": {
+        "time": "2026-10-15T11:35:05.226Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "quote_container",
+            "id": "2",
+            "class": "block docx-quote_container-block",
+            "parentType": "page"
+          },
+          {
+            "type": "text",
+            "id": "3",
+            "class": "block docx-text-block quote-container-render-unit",
+            "parentType": "quote_container"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "123​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      }
+    },
+    {
+      "cycle": 1,
+      "browser": "quark",
+      "sourceSession": "S03-1792064028237",
+      "read": {
+        "time": "2026-10-15T11:35:33.284Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "quote_container",
+            "id": "2",
+            "class": "block docx-quote_container-block",
+            "parentType": "page"
+          },
+          {
+            "type": "text",
+            "id": "3",
+            "class": "block docx-text-block quote-container-render-unit",
+            "parentType": "quote_container"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "123​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      }
+    },
+    {
+      "cycle": 2,
+      "browser": "chrome",
+      "sourceSession": "S03-1792064155379",
+      "read": {
+        "time": "2026-10-15T11:36:51.915Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "quote_container",
+            "id": "2",
+            "class": "block docx-quote_container-block",
+            "parentType": "page"
+          },
+          {
+            "type": "text",
+            "id": "3",
+            "class": "block docx-text-block quote-container-render-unit",
+            "parentType": "quote_container"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "123​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      }
+    },
+    {
+      "cycle": 2,
+      "browser": "quark",
+      "sourceSession": "S03-1792064155379",
+      "read": {
+        "time": "2026-10-15T11:37:18.415Z",
+        "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+        "ready": true,
+        "observerPresent": false,
+        "blocks": [
+          {
+            "type": "quote_container",
+            "id": "2",
+            "class": "block docx-quote_container-block",
+            "parentType": "page"
+          },
+          {
+            "type": "text",
+            "id": "3",
+            "class": "block docx-text-block quote-container-render-unit",
+            "parentType": "quote_container"
+          }
+        ],
+        "zones": [
+          {
+            "id": "1",
+            "text": "​",
+            "attrs": {
+              "class": "zone-container text-editor",
+              "data-zone-id": "1",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "34px",
+              "fontWeight": "500",
+              "lineHeight": "55.25px",
+              "textAlign": "start",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "id": "3",
+            "text": "123​",
+            "attrs": {
+              "class": "zone-container text-editor non-empty",
+              "data-zone-id": "3",
+              "data-zone-container": "*",
+              "contenteditable": "true"
+            },
+            "style": {
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "textAlign": "start",
+              "paddingLeft": "12px"
+            }
+          }
+        ],
+        "save": [
+          "最近修改: 刚刚分享编辑",
+          "最近修改: 刚刚"
+        ]
+      }
+    }
+  ],
+  "quarkProjectRestoredAfterEachRead": true,
+  "quarkProject": "localhost:5180/aiScript/chat",
+  "cleanupRead": {
+    "time": "2026-10-15T11:42:12.098Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "ready": true,
+    "observerPresent": false,
+    "blocks": [],
+    "zones": [
+      {
+        "id": "1",
+        "text": "​",
+        "attrs": {
+          "class": "zone-container text-editor",
+          "data-zone-id": "1",
+          "data-zone-container": "*",
+          "contenteditable": "true"
+        },
+        "style": {
+          "fontSize": "34px",
+          "fontWeight": "500",
+          "lineHeight": "55.25px",
+          "textAlign": "start",
+          "paddingLeft": "0px"
+        }
+      }
+    ],
+    "save": [
+      "最近修改: 刚刚分享编辑",
+      "最近修改: 刚刚"
+    ]
+  },
+  "shortcutControl": {
+    "source": "Native Chrome accessibility states; temporary setting tab closed after verification",
+    "extension": "ChatGPT",
+    "command": "Activate extension",
+    "originalAndRestored": "Shift+Command+Period",
+    "temporaryValue": "unset",
+    "restorationConfirmed": true,
+    "otherBindingsChanged": false
+  }
+}

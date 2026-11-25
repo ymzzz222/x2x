@@ -1,0 +1,2137 @@
+{
+  "case": "F06-RemoteNumber-R1-Quark-folded-target",
+  "source": "Quark native UI and read-only DevTools observer",
+  "normalization": "DOM identifiers feishu -> maiya; source URLs and user text unchanged",
+  "eventWindow": "keys and external events since previous export",
+  "action": "Native input paste9 > Tab > Confirm on folded BBB heading; BBB9 and TAIL10, children remain hidden",
+  "editedAX": [
+    "\t\t\t\t\t\t\t\t\t191 文本栏 (settable) 9",
+    "\t\t\t\t\t\t\t\t\t192 按钮 确定",
+    "The focused UI element is 192 按钮 确定"
+  ],
+  "session": "S06-q2_-1792395840173",
+  "state": {
+    "label": "F06-RemoteNumber-R1-Quark-folded-target",
+    "time": "2026-10-19T08:01:00.470Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "ref": "q2_3",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block-children"
+      },
+      "children": [
+        {
+          "ref": "q2_13",
+          "tag": "DIV",
+          "attrs": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "children": [
+            {
+              "ref": "q2_14",
+              "tag": "DIV",
+              "attrs": {
+                "class": "render-unit-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "q2_4",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block",
+                    "data-block-type": "ordered",
+                    "data-block-id": "2",
+                    "data-record-id": "VbfKdYmBZob7dnxFLO6cVKnenLD"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_15",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_16",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_5",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_17",
+                                  "text": "1"
+                                },
+                                {
+                                  "ref": "q2_18",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "q2_19",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_6",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "2",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "q2_20",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "q2_21",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "q2_22",
+                                              "text": "AAA"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "q2_23",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "q2_24",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_7",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-heading1-block focused",
+                    "data-block-type": "heading1",
+                    "data-block-id": "3",
+                    "data-record-id": "SRHudozDqo4A7PxHczFcmDhRnPe"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_25",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "heading-block"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_26",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "heading heading-h1 heading-block-align-"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_8",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_27",
+                                  "text": "9."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "q2_28",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "heading-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_9",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                    "data-zone-id": "3",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "q2_29",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "q2_30",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "q2_31",
+                                              "text": "BBB"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "q2_32",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "q2_33",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "q2_34",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "fold-wrapper fold-folded fold-show can-fold fold-block-id-3",
+                        "contenteditable": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_35",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "fold-wrapper fold-folded fold-show can-fold fold-block-id-3 fold-show fold-handler-wrapper"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_36",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "fold-handler"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_37",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "q2_38",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "q2_39",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_40",
+                  "tag": "DIV",
+                  "attrs": {
+                    "data-parent-id": "1",
+                    "class": "bear-virtual-renderUnit-placeholder",
+                    "style": "height: 0px; margin-top: 0px; margin-bottom: 0px; display: none;"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_41",
+                      "tag": "SPAN",
+                      "attrs": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "ref": "q2_10",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-heading1-block",
+                    "data-block-type": "heading1",
+                    "data-block-id": "6",
+                    "data-record-id": "QZIqd20RYoAEJ1xyLrVc0Xa2n3c"
+                  },
+                  "children": [
+                    {
+                      "ref": "q2_42",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "heading-block"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_43",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "heading heading-h1 heading-block-align-"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_11",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_44",
+                                  "text": "10."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "q2_45",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "heading-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_12",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "6",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "q2_46",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "q2_47",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": "author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "q2_48",
+                                              "text": "TAIL"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "q2_49",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "q2_50",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "q2_51",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "fold-wrapper can-fold fold-block-id-6",
+                        "contenteditable": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "q2_52",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "fold-wrapper can-fold fold-block-id-6 fold-handler-wrapper"
+                          },
+                          "children": [
+                            {
+                              "ref": "q2_53",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "fold-handler"
+                              },
+                              "children": [
+                                {
+                                  "ref": "q2_54",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "svg-wrapper"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "q2_55",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "q2_56",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "q2_57",
+              "tag": "DIV",
+              "attrs": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "selection": {
+      "anchor": {
+        "ref": "q2_31",
+        "offset": 3,
+        "text": "BBB"
+      },
+      "focus": {
+        "ref": "q2_31",
+        "offset": 3,
+        "text": "BBB"
+      },
+      "type": "Caret",
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "ref": "q2_31",
+            "offset": 3,
+            "text": "BBB"
+          },
+          "end": {
+            "ref": "q2_31",
+            "offset": 3,
+            "text": "BBB"
+          }
+        }
+      ],
+      "direction": "none"
+    },
+    "currentSelection": {
+      "anchor": {
+        "ref": "q2_1",
+        "offset": 43,
+        "tag": "BODY"
+      },
+      "focus": {
+        "ref": "q2_1",
+        "offset": 43,
+        "tag": "BODY"
+      },
+      "type": "Caret",
+      "text": "",
+      "ranges": [
+        {
+          "start": {
+            "ref": "q2_1",
+            "offset": 43,
+            "tag": "BODY"
+          },
+          "end": {
+            "ref": "q2_1",
+            "offset": 43,
+            "tag": "BODY"
+          }
+        }
+      ],
+      "direction": "none"
+    },
+    "seq": 292,
+    "active": {
+      "tag": "BODY",
+      "cls": "layout-column ccm-scope wiki"
+    },
+    "inputFocus": {
+      "ref": "q2_1",
+      "tag": "BODY",
+      "cls": "layout-column ccm-scope wiki"
+    },
+    "related": {
+      "outline": {
+        "ref": "q2_59",
+        "tag": "UL",
+        "attrs": {
+          "class": "catalogue__list show-full",
+          "style": "padding-bottom: 50px; cursor: pointer;"
+        },
+        "children": [
+          {
+            "ref": "q2_60",
+            "tag": "LI",
+            "attrs": {
+              "class": "fixed-size-list-placeholder",
+              "style": "height: 0px; min-width: 67.8438px;"
+            },
+            "children": []
+          },
+          {
+            "ref": "q2_61",
+            "tag": "LI",
+            "attrs": {
+              "class": "catalogue__list-item indent-level-1 heading-1 contextmenu-without-copyperm active collapsible",
+              "style": "height: 30px; padding-bottom: 8px;"
+            },
+            "children": [
+              {
+                "ref": "q2_62",
+                "tag": "A",
+                "attrs": {
+                  "class": "container catalogue__item-title"
+                },
+                "children": [
+                  {
+                    "ref": "q2_63",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "catalogue__item-collapse collapsed"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_64",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_65",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q2_66",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "text"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_67",
+                        "text": "9. BBB"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "q2_68",
+            "tag": "LI",
+            "attrs": {
+              "class": "catalogue__list-item indent-level-1 heading-1 contextmenu-without-copyperm",
+              "style": "height: 30px; padding-bottom: 8px;"
+            },
+            "children": [
+              {
+                "ref": "q2_69",
+                "tag": "A",
+                "attrs": {
+                  "class": "container catalogue__item-title"
+                },
+                "children": [
+                  {
+                    "ref": "q2_70",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "catalogue__item-collapse"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_71",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_72",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "ref": "q2_73",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "text"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_74",
+                        "text": "10. TAIL"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "q2_75",
+            "tag": "LI",
+            "attrs": {
+              "class": "fixed-size-list-placeholder",
+              "style": "height: 0px; min-width: 67.8438px;"
+            },
+            "children": []
+          }
+        ]
+      },
+      "blocks": [
+        {
+          "ref": "q2_4",
+          "id": "2",
+          "record": "VbfKdYmBZob7dnxFLO6cVKnenLD",
+          "type": "ordered",
+          "text": "AAA​",
+          "rect": {
+            "x": 357.75,
+            "y": 235.25,
+            "width": 824,
+            "height": 26,
+            "top": 235.25,
+            "right": 1181.75,
+            "bottom": 261.25,
+            "left": 357.75
+          },
+          "display": "block",
+          "marker": {
+            "ref": "q2_5",
+            "text": "1.",
+            "rect": {
+              "x": 359.75,
+              "y": 238.25,
+              "width": 18,
+              "height": 20,
+              "top": 238.25,
+              "right": 377.75,
+              "bottom": 258.25,
+              "left": 359.75
+            },
+            "style": {
+              "display": "flex",
+              "visibility": "visible",
+              "fontSize": "16px",
+              "fontFamily": "\"Helvetica Neue\", Consolas",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "width": "18px",
+              "minWidth": "18px",
+              "paddingLeft": "2px",
+              "paddingRight": "2px",
+              "marginLeft": "0px",
+              "marginRight": "6px",
+              "textAlign": "center",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          },
+          "zone": {
+            "ref": "q2_6",
+            "rect": {
+              "x": 371.75,
+              "y": 235.25,
+              "width": 808,
+              "height": 26,
+              "top": 235.25,
+              "right": 1179.75,
+              "bottom": 261.25,
+              "left": 371.75
+            },
+            "textRect": {
+              "x": 383.75,
+              "y": 235.25,
+              "width": 796,
+              "height": 26,
+              "top": 235.25,
+              "right": 1179.75,
+              "bottom": 261.25,
+              "left": 383.75
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "fontSize": "16px",
+              "fontFamily": "LarkHackSafariFont, LarkEmojiFont, LarkChineseQuote, -apple-system, \"system-ui\", \"Helvetica Neue\", Tahoma, \"PingFang SC\", \"Microsoft Yahei\", Arial, \"Hiragino Sans GB\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "fontWeight": "400",
+              "lineHeight": "26px",
+              "width": "808px",
+              "minWidth": "auto",
+              "paddingLeft": "12px",
+              "paddingRight": "0px",
+              "marginLeft": "-12px",
+              "marginRight": "0px",
+              "textAlign": "start",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          }
+        },
+        {
+          "ref": "q2_7",
+          "id": "3",
+          "record": "SRHudozDqo4A7PxHczFcmDhRnPe",
+          "type": "heading1",
+          "text": "BBB​",
+          "rect": {
+            "x": 357.75,
+            "y": 287.25,
+            "width": 824,
+            "height": 36.390625,
+            "top": 287.25,
+            "right": 1181.75,
+            "bottom": 323.640625,
+            "left": 357.75
+          },
+          "display": "block",
+          "marker": {
+            "ref": "q2_8",
+            "text": "9.",
+            "rect": {
+              "x": 359.75,
+              "y": 296.4375,
+              "width": 25.6875,
+              "height": 20,
+              "top": 296.4375,
+              "right": 385.4375,
+              "bottom": 316.4375,
+              "left": 359.75
+            },
+            "style": {
+              "display": "flex",
+              "visibility": "visible",
+              "fontSize": "26px",
+              "fontFamily": "\"Helvetica Neue\", Consolas",
+              "fontWeight": "500",
+              "lineHeight": "36.4px",
+              "width": "25.6875px",
+              "minWidth": "0px",
+              "paddingLeft": "2px",
+              "paddingRight": "2px",
+              "marginLeft": "0px",
+              "marginRight": "6px",
+              "textAlign": "center",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          },
+          "zone": {
+            "ref": "q2_9",
+            "rect": {
+              "x": 379.4375,
+              "y": 287.25,
+              "width": 800.3125,
+              "height": 36.390625,
+              "top": 287.25,
+              "right": 1179.75,
+              "bottom": 323.640625,
+              "left": 379.4375
+            },
+            "textRect": {
+              "x": 391.4375,
+              "y": 287.25,
+              "width": 788.3125,
+              "height": 36.390625,
+              "top": 287.25,
+              "right": 1179.75,
+              "bottom": 323.640625,
+              "left": 391.4375
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "fontSize": "26px",
+              "fontFamily": "LarkHackSafariFont, LarkEmojiFont, LarkChineseQuote, -apple-system, \"system-ui\", \"Helvetica Neue\", Tahoma, \"PingFang SC\", \"Microsoft Yahei\", Arial, \"Hiragino Sans GB\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "fontWeight": "500",
+              "lineHeight": "36.4px",
+              "width": "800.312px",
+              "minWidth": "auto",
+              "paddingLeft": "12px",
+              "paddingRight": "0px",
+              "marginLeft": "-12px",
+              "marginRight": "0px",
+              "textAlign": "start",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          }
+        },
+        {
+          "ref": "q2_10",
+          "id": "6",
+          "record": "QZIqd20RYoAEJ1xyLrVc0Xa2n3c",
+          "type": "heading1",
+          "text": "TAIL​",
+          "rect": {
+            "x": 357.75,
+            "y": 349.640625,
+            "width": 824,
+            "height": 36.390625,
+            "top": 349.640625,
+            "right": 1181.75,
+            "bottom": 386.03125,
+            "left": 357.75
+          },
+          "display": "block",
+          "marker": {
+            "ref": "q2_11",
+            "text": "10.",
+            "rect": {
+              "x": 359.75,
+              "y": 358.828125,
+              "width": 40.140625,
+              "height": 20,
+              "top": 358.828125,
+              "right": 399.890625,
+              "bottom": 378.828125,
+              "left": 359.75
+            },
+            "style": {
+              "display": "flex",
+              "visibility": "visible",
+              "fontSize": "26px",
+              "fontFamily": "\"Helvetica Neue\", Consolas",
+              "fontWeight": "500",
+              "lineHeight": "36.4px",
+              "width": "40.1406px",
+              "minWidth": "0px",
+              "paddingLeft": "2px",
+              "paddingRight": "2px",
+              "marginLeft": "0px",
+              "marginRight": "6px",
+              "textAlign": "center",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          },
+          "zone": {
+            "ref": "q2_12",
+            "rect": {
+              "x": 393.890625,
+              "y": 349.640625,
+              "width": 785.859375,
+              "height": 36.390625,
+              "top": 349.640625,
+              "right": 1179.75,
+              "bottom": 386.03125,
+              "left": 393.890625
+            },
+            "textRect": {
+              "x": 405.890625,
+              "y": 349.640625,
+              "width": 773.859375,
+              "height": 36.390625,
+              "top": 349.640625,
+              "right": 1179.75,
+              "bottom": 386.03125,
+              "left": 405.890625
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "fontSize": "26px",
+              "fontFamily": "LarkHackSafariFont, LarkEmojiFont, LarkChineseQuote, -apple-system, \"system-ui\", \"Helvetica Neue\", Tahoma, \"PingFang SC\", \"Microsoft Yahei\", Arial, \"Hiragino Sans GB\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"",
+              "fontWeight": "500",
+              "lineHeight": "36.4px",
+              "width": "785.859px",
+              "minWidth": "auto",
+              "paddingLeft": "12px",
+              "paddingRight": "0px",
+              "marginLeft": "-12px",
+              "marginRight": "0px",
+              "textAlign": "start",
+              "verticalAlign": "baseline",
+              "boxSizing": "border-box"
+            }
+          }
+        }
+      ],
+      "anchors": [
+        {
+          "ref": "q2_62",
+          "href": "#SRHudozDqo4A7PxHczFcmDhRnPe",
+          "text": "9. BBB",
+          "container": "catalogue__list-item indent-level-1 heading-1 contextmenu-without-copyperm active collapsible"
+        },
+        {
+          "ref": "q2_69",
+          "href": "#QZIqd20RYoAEJ1xyLrVc0Xa2n3c",
+          "text": "10. TAIL",
+          "container": "catalogue__list-item indent-level-1 heading-1 contextmenu-without-copyperm"
+        }
+      ],
+      "scroll": [
+        {
+          "ref": "q2_76",
+          "class": "bear-web-x-container catalogue-opened docx-in-wiki width-transition keyboard-mode",
+          "top": 0,
+          "height": 867
+        }
+      ]
+    },
+    "find": {
+      "dom": null,
+      "inputs": []
+    }
+  },
+  "records": [
+    {
+      "seq": 285,
+      "type": "attributes",
+      "target": "q2_8",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order hover button",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 286,
+      "type": "attributes",
+      "target": "q2_7",
+      "attribute": "class",
+      "old": "block docx-heading1-block focused",
+      "value": "block docx-heading1-block focused",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 287,
+      "type": "characterData",
+      "target": "q2_27",
+      "attribute": null,
+      "old": "1.",
+      "value": "9.",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 288,
+      "type": "attributes",
+      "target": "q2_7",
+      "attribute": "class",
+      "old": "block docx-heading1-block focused",
+      "value": "block docx-heading1-block focused",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 289,
+      "type": "characterData",
+      "target": "q2_44",
+      "attribute": null,
+      "old": "2.",
+      "value": "10.",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 290,
+      "type": "attributes",
+      "target": "q2_10",
+      "attribute": "class",
+      "old": "block docx-heading1-block",
+      "value": "block docx-heading1-block",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 291,
+      "type": "attributes",
+      "target": "q2_8",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order hover button",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg heading-order button",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    },
+    {
+      "seq": 292,
+      "type": "attributes",
+      "target": "q2_7",
+      "attribute": "class",
+      "old": "block docx-heading1-block focused",
+      "value": "block docx-heading1-block focused",
+      "added": [],
+      "removed": [],
+      "previous": null,
+      "next": null
+    }
+  ],
+  "keys": [],
+  "external": [
+    {
+      "kind": "related-mutations",
+      "time": 1792396794233,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792396794260,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792396794531,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "external-menu",
+      "time": 1792396796028,
+      "change": "added",
+      "dom": {
+        "ref": "q2_157",
+        "tag": "UL",
+        "attrs": {
+          "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical heading-modify-menu ud-scrollbar",
+          "id": "HEADING-MODIFY-MENU",
+          "role": "menu"
+        },
+        "children": [
+          {
+            "ref": "q2_158",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "q2_159",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "q2_160",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_161",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_162",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "q2_163",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "q2_164",
+                    "text": "继续标题编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "q2_165",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "q2_166",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "q2_167",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_168",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_169",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "q2_170",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "q2_171",
+                    "text": "重新开始编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "q2_172",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "false"
+            },
+            "children": [
+              {
+                "ref": "q2_173",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap"
+                },
+                "children": [
+                  {
+                    "ref": "q2_174",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_175",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_176",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "q2_177",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "q2_178",
+                    "text": "设置编号的值"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "external-menu",
+      "time": 1792396796976,
+      "change": "removed",
+      "dom": {
+        "ref": "q2_157",
+        "tag": "UL",
+        "attrs": {
+          "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical heading-modify-menu ud-scrollbar",
+          "id": "HEADING-MODIFY-MENU",
+          "role": "menu"
+        },
+        "children": [
+          {
+            "ref": "q2_158",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "q2_159",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "q2_160",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_161",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_162",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "q2_163",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "q2_164",
+                    "text": "继续标题编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "q2_165",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-disabled heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "true"
+            },
+            "children": [
+              {
+                "ref": "q2_166",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                },
+                "children": [
+                  {
+                    "ref": "q2_167",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_168",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_169",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "q2_170",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "q2_171",
+                    "text": "重新开始编号"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "ref": "q2_172",
+            "tag": "LI",
+            "attrs": {
+              "class": "ud__menu-normal-item ud__menu-normal-item-active heading-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+              "role": "menuitem",
+              "aria-disabled": "false"
+            },
+            "children": [
+              {
+                "ref": "q2_173",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-icon-wrap"
+                },
+                "children": [
+                  {
+                    "ref": "q2_174",
+                    "tag": "SPAN",
+                    "attrs": {
+                      "class": "universe-icon heading-modify-menu-icon"
+                    },
+                    "children": [
+                      {
+                        "ref": "q2_175",
+                        "tag": "svg",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "ref": "q2_176",
+                            "tag": "path",
+                            "attrs": {},
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "ref": "q2_177",
+                "tag": "DIV",
+                "attrs": {
+                  "class": "ud__menu-normal-item-title-content"
+                },
+                "children": [
+                  {
+                    "ref": "q2_178",
+                    "text": "设置编号的值"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792396856173,
+      "records": [
+        {
+          "type": "characterData",
+          "target": "q2_67",
+          "attribute": null,
+          "old": "1. BBB",
+          "value": "9. BBB",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "characterData",
+          "target": "q2_74",
+          "attribute": null,
+          "old": "2. TAIL",
+          "value": "10. TAIL",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_60",
+          "attribute": "style",
+          "old": "height: 0px; min-width: 57.8125px;",
+          "value": "height: 0px; min-width: 67.8438px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_75",
+          "attribute": "style",
+          "old": "height: 0px; min-width: 57.8125px;",
+          "value": "height: 0px; min-width: 67.8438px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792396858254,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792396858589,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    },
+    {
+      "kind": "related-mutations",
+      "time": 1792396858865,
+      "records": [
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: block;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: block;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_79",
+          "attribute": "class",
+          "old": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "value": "scrollbar-container catalogue__scroller scrollbar-container-small ps",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_77",
+          "attribute": "style",
+          "old": "left: 0px; bottom: 0px; display: none;",
+          "value": "left: 0px; bottom: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        },
+        {
+          "type": "attributes",
+          "target": "q2_78",
+          "attribute": "style",
+          "old": "top: 0px; right: 0px; display: none;",
+          "value": "top: 0px; right: 0px;",
+          "added": [],
+          "removed": [],
+          "previous": null,
+          "next": null
+        }
+      ]
+    }
+  ]
+}

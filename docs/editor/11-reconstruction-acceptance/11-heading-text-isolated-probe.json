@@ -1,0 +1,212 @@
+{
+  "date": "2026-10-27",
+  "scope": "Isolated execution of actual exported builder with real ProseMirror nodes; no editor/browser/provider/API",
+  "source": {
+    "path": "src/views/aiScriptCore/wordEdit/editor/components/common/convertHeadingText.js",
+    "sha256": "6f921e3b2d027c4c1ba8a7a91e02ca669ac9f315cb2ab33324632d01db4bc4f2"
+  },
+  "loadedWholeActualModule": true,
+  "stubbedUnusedImports": [
+    "HEADING_ALLOWED_CHILD: only used by a different uncalled export",
+    "runFocusedCommand: throws if called; no UI transaction executed"
+  ],
+  "fixtureSchema": "Subset of current block content expressions for paragraphs, headings, ordered lists and quotes; not a replacement project schema",
+  "environment": {
+    "realProseMirrorSchema": true,
+    "projectBrowserStarted": false,
+    "projectServerStarted": false,
+    "networkRequests": false,
+    "sourceFilesModified": false,
+    "uiCommandExecuted": false
+  },
+  "counts": {
+    "cases": 3,
+    "passed": 1,
+    "failed": 2
+  },
+  "cases": [
+    {
+      "id": "control-single-paragraph",
+      "purpose": "Parent text survives a leaf-only heading conversion",
+      "fixtureSchemaValid": true,
+      "beforeJson": {
+        "type": "myHeadingBlock",
+        "content": [
+          {
+            "type": "myParagraphBlock",
+            "content": [
+              {
+                "type": "text",
+                "text": "PARENT"
+              }
+            ]
+          }
+        ]
+      },
+      "beforeText": "PARENT",
+      "range": {
+        "from": 0,
+        "to": 10,
+        "originalNodeSize": 10
+      },
+      "replacementJson": {
+        "type": "myParagraphBlock",
+        "content": [
+          {
+            "type": "text",
+            "text": "PARENT"
+          }
+        ]
+      },
+      "replacementText": "PARENT",
+      "assertions": {
+        "replacementCoversWholeOriginalHeading": true,
+        "allUserTextPreserved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "nested-heading-descendants",
+      "purpose": "Changing a parent type must preserve unselected descendant text and hierarchy per S05 E05-001",
+      "fixtureSchemaValid": true,
+      "beforeJson": {
+        "type": "myHeadingBlock",
+        "content": [
+          {
+            "type": "myParagraphBlock",
+            "content": [
+              {
+                "type": "text",
+                "text": "PARENT"
+              }
+            ]
+          },
+          {
+            "type": "myHeadingBlock",
+            "content": [
+              {
+                "type": "myParagraphBlock",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "CHILD"
+                  }
+                ]
+              },
+              {
+                "type": "myParagraphBlock",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "LEAF"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "beforeText": "PARENTCHILDLEAF",
+      "range": {
+        "from": 0,
+        "to": 25,
+        "originalNodeSize": 25
+      },
+      "replacementJson": {
+        "type": "myParagraphBlock",
+        "content": [
+          {
+            "type": "text",
+            "text": "PARENT"
+          }
+        ]
+      },
+      "replacementText": "PARENT",
+      "assertions": {
+        "replacementCoversWholeOriginalHeading": true,
+        "allUserTextPreserved": false
+      },
+      "passed": false
+    },
+    {
+      "id": "nested-list-and-quote",
+      "purpose": "Changing parent type must not discard nested list or quote content per S05 E06",
+      "fixtureSchemaValid": true,
+      "beforeJson": {
+        "type": "myHeadingBlock",
+        "content": [
+          {
+            "type": "myParagraphBlock",
+            "content": [
+              {
+                "type": "text",
+                "text": "PARENT"
+              }
+            ]
+          },
+          {
+            "type": "orderedList",
+            "content": [
+              {
+                "type": "myListItem",
+                "content": [
+                  {
+                    "type": "myParagraphBlock",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "ITEM"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "blockquote",
+            "content": [
+              {
+                "type": "myParagraphBlock",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "QUOTED"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "beforeText": "PARENTITEMQUOTED",
+      "range": {
+        "from": 0,
+        "to": 30,
+        "originalNodeSize": 30
+      },
+      "replacementJson": {
+        "type": "myParagraphBlock",
+        "content": [
+          {
+            "type": "text",
+            "text": "PARENT"
+          }
+        ]
+      },
+      "replacementText": "PARENT",
+      "assertions": {
+        "replacementCoversWholeOriginalHeading": true,
+        "allUserTextPreserved": false
+      },
+      "passed": false
+    }
+  ],
+  "conclusion": "Actual builder deterministically replaces the entire heading with only its first paragraph. Nested text is omitted in both descendant fixtures; this confirms the isolated function failure, not a production/UI reproduction.",
+  "releaseGate": "BG08: parent-heading-to-text descendant preservation",
+  "limits": [
+    "Does not execute Bubble/Drag/context parsing, dispatch, collaboration or real UI selection",
+    "Fixture schema is a documented subset; UI reachability relies on source call-chain and observed S05 requirements, not this probe alone",
+    "No code repair or broad regression suite executed"
+  ]
+}

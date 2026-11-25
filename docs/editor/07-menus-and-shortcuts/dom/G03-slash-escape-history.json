@@ -1,0 +1,365 @@
+{
+  "case": "G03-slash-escape-history",
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "normalization": "DOM identifiers feishu -> maiya; same body, focus, and shared mutation shapes referenced instead of duplicated; trigger-holder tokens and author suffixes normalized without merging node references",
+  "bodyInvariant": {
+    "r": "n115",
+    "type": "text",
+    "id": "5"
+  },
+  "focusInvariant": {
+    "r": "n6",
+    "tag": "DIV",
+    "cls": "page-block root-block"
+  },
+  "allStates": {
+    "menuCount": 0,
+    "selectionType": "Caret",
+    "anchorEqualsFocus": true,
+    "offset": 1
+  },
+  "keys": {
+    "undo": {
+      "key": "z",
+      "meta": true,
+      "shift": false
+    },
+    "redo": {
+      "key": "Z",
+      "meta": true,
+      "shift": true
+    }
+  },
+  "states": [
+    {
+      "run": "R3",
+      "action": "undo",
+      "phase": "before",
+      "time": "2026-10-19T09:06:24.578Z",
+      "text": "/​",
+      "caret": {
+        "r": "n485",
+        "text": "/"
+      },
+      "seq": 203,
+      "eventCount": 116
+    },
+    {
+      "run": "R3",
+      "action": "undo",
+      "phase": "after-frame",
+      "time": "2026-10-19T09:06:24.627Z",
+      "text": "​",
+      "caret": {
+        "r": "n121",
+        "text": "​"
+      },
+      "seq": 208,
+      "eventCount": 117
+    },
+    {
+      "run": "R3",
+      "action": "redo",
+      "phase": "before",
+      "time": "2026-10-19T09:06:40.763Z",
+      "text": "​",
+      "caret": {
+        "r": "n121",
+        "text": "​"
+      },
+      "seq": 210,
+      "eventCount": 119
+    },
+    {
+      "run": "R3",
+      "action": "redo",
+      "phase": "after-frame",
+      "time": "2026-10-19T09:06:40.864Z",
+      "text": "/​",
+      "caret": {
+        "r": "n573",
+        "text": "/"
+      },
+      "seq": 214,
+      "eventCount": 120
+    },
+    {
+      "run": "R4",
+      "action": "undo",
+      "phase": "before",
+      "time": "2026-10-19T09:07:52.034Z",
+      "text": "/​",
+      "caret": {
+        "r": "n577",
+        "text": "/"
+      },
+      "seq": 242,
+      "eventCount": 133
+    },
+    {
+      "run": "R4",
+      "action": "undo",
+      "phase": "after-frame",
+      "time": "2026-10-19T09:07:52.118Z",
+      "text": "​",
+      "caret": {
+        "r": "n121",
+        "text": "​"
+      },
+      "seq": 247,
+      "eventCount": 134
+    },
+    {
+      "run": "R4",
+      "action": "redo",
+      "phase": "before",
+      "time": "2026-10-19T09:08:06.070Z",
+      "text": "​",
+      "caret": {
+        "r": "n121",
+        "text": "​"
+      },
+      "seq": 249,
+      "eventCount": 136
+    },
+    {
+      "run": "R4",
+      "action": "redo",
+      "phase": "after-frame",
+      "time": "2026-10-19T09:08:06.131Z",
+      "text": "/​",
+      "caret": {
+        "r": "n665",
+        "text": "/"
+      },
+      "seq": 253,
+      "eventCount": 137
+    }
+  ],
+  "mutations": [
+    {
+      "seq": 204,
+      "type": "childList",
+      "r": "n484",
+      "add": [],
+      "remove": [
+        {
+          "r": "n485",
+          "t": "/"
+        }
+      ]
+    },
+    {
+      "seq": 205,
+      "type": "childList",
+      "r": "n119",
+      "add": [],
+      "remove": [
+        {
+          "r": "n484",
+          "tag": "SPAN",
+          "cls": "trigger-holder-{token} author-{same}",
+          "c": []
+        }
+      ]
+    },
+    {
+      "seq": 206,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor non-empty text-editor-focused",
+      "value": "zone-container text-editor"
+    },
+    {
+      "seq": 207,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor text-editor-focused",
+      "value": "zone-container text-editor"
+    },
+    {
+      "seq": 208,
+      "type": "attributes",
+      "r": "n115",
+      "attr": "class",
+      "old": "block docx-text-block focused",
+      "value": "block docx-text-block focused isEmpty"
+    },
+    {
+      "seq": 209,
+      "type": "attributes",
+      "r": "n115",
+      "attr": "class",
+      "old": "block docx-text-block focused isEmpty",
+      "value": "block docx-text-block focused isEmpty"
+    },
+    {
+      "seq": 210,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor",
+      "value": "zone-container text-editor text-editor-focused"
+    },
+    {
+      "seq": 211,
+      "type": "childList",
+      "r": "n119",
+      "add": [
+        {
+          "r": "n572",
+          "tag": "SPAN",
+          "cls": " author-{same} trigger-holder-{token}",
+          "c": [
+            {
+              "r": "n573",
+              "t": "/"
+            }
+          ]
+        }
+      ],
+      "remove": []
+    },
+    {
+      "seq": 212,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor text-editor-focused",
+      "value": "zone-container text-editor non-empty"
+    },
+    {
+      "seq": 213,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor text-editor-focused non-empty",
+      "value": "zone-container text-editor non-empty"
+    },
+    {
+      "seq": 214,
+      "type": "attributes",
+      "r": "n115",
+      "attr": "class",
+      "old": "block docx-text-block focused isEmpty",
+      "value": "block docx-text-block focused"
+    },
+    {
+      "seq": 243,
+      "type": "childList",
+      "r": "n576",
+      "add": [],
+      "remove": [
+        {
+          "r": "n577",
+          "t": "/"
+        }
+      ]
+    },
+    {
+      "seq": 244,
+      "type": "childList",
+      "r": "n119",
+      "add": [],
+      "remove": [
+        {
+          "r": "n576",
+          "tag": "SPAN",
+          "cls": "trigger-holder-{token} author-{same}",
+          "c": []
+        }
+      ]
+    },
+    {
+      "seq": 245,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor non-empty text-editor-focused",
+      "value": "zone-container text-editor"
+    },
+    {
+      "seq": 246,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor text-editor-focused",
+      "value": "zone-container text-editor"
+    },
+    {
+      "seq": 247,
+      "type": "attributes",
+      "r": "n115",
+      "attr": "class",
+      "old": "block docx-text-block focused",
+      "value": "block docx-text-block focused isEmpty"
+    },
+    {
+      "seq": 248,
+      "type": "attributes",
+      "r": "n115",
+      "attr": "class",
+      "old": "block docx-text-block focused isEmpty",
+      "value": "block docx-text-block focused isEmpty"
+    },
+    {
+      "seq": 249,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor",
+      "value": "zone-container text-editor text-editor-focused"
+    },
+    {
+      "seq": 250,
+      "type": "childList",
+      "r": "n119",
+      "add": [
+        {
+          "r": "n664",
+          "tag": "SPAN",
+          "cls": " author-{same} trigger-holder-{token}",
+          "c": [
+            {
+              "r": "n665",
+              "t": "/"
+            }
+          ]
+        }
+      ],
+      "remove": []
+    },
+    {
+      "seq": 251,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor text-editor-focused",
+      "value": "zone-container text-editor non-empty"
+    },
+    {
+      "seq": 252,
+      "type": "attributes",
+      "r": "n118",
+      "attr": "class",
+      "old": "zone-container text-editor text-editor-focused non-empty",
+      "value": "zone-container text-editor non-empty"
+    },
+    {
+      "seq": 253,
+      "type": "attributes",
+      "r": "n115",
+      "attr": "class",
+      "old": "block docx-text-block focused isEmpty",
+      "value": "block docx-text-block focused"
+    }
+  ],
+  "limits": [
+    "No undo of menu closure was observed: the next Cmd+Z removed the preceding slash input.",
+    "The matching redo restored slash content with a new inner text node and did not reopen the slash menu.",
+    "Observed focus contract is document.activeElement; inner text-editor-focused CSS changes are recorded separately.",
+    "The later export focus failure and its undo operations are excluded from these first eight captured history states."
+  ]
+}

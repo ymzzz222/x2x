@@ -1,0 +1,2551 @@
+{
+  "case": "F01-restart-last-redo-R1",
+  "source": "Chrome native UI and read-only DevTools observer",
+  "normalization": "DOM identifiers feishu -> maiya; source URLs and user text unchanged",
+  "action": "Refocus caret after CCC, Cmd+Shift+Z.",
+  "state": {
+    "label": "F01-restart-last-redo-R1",
+    "time": "2026-10-19T03:01:54.246Z",
+    "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+    "rootConnected": true,
+    "body": {
+      "ref": "n3",
+      "tag": "DIV",
+      "attrs": {
+        "class": "page-block-children"
+      },
+      "children": [
+        {
+          "ref": "n4",
+          "tag": "DIV",
+          "attrs": {
+            "class": "root-render-unit-container",
+            "style": "position: relative;"
+          },
+          "children": [
+            {
+              "ref": "n5",
+              "tag": "DIV",
+              "attrs": {
+                "class": "render-unit-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "n17",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block",
+                    "data-block-type": "ordered",
+                    "data-block-id": "5",
+                    "data-record-id": "WQ5BdlXzQofLLexEiryclkhEnHe"
+                  },
+                  "children": [
+                    {
+                      "ref": "n59",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "n60",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "n61",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n62",
+                                  "text": "1"
+                                },
+                                {
+                                  "ref": "n63",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n64",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n65",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "5",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n66",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n67",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n68",
+                                              "text": "AAA"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n69",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n70",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n26",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block",
+                    "data-block-type": "ordered",
+                    "data-block-id": "4",
+                    "data-record-id": "KKfxd7xAzon3jPxkD3dcHaLbnWb"
+                  },
+                  "children": [
+                    {
+                      "ref": "n220",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "n221",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "n222",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n223",
+                                  "text": "2"
+                                },
+                                {
+                                  "ref": "n224",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n225",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n226",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty",
+                                    "data-zone-id": "4",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n227",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n228",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n229",
+                                              "text": "BBB"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n230",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n231",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n35",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-ordered-block focused",
+                    "data-block-type": "ordered",
+                    "data-block-id": "3",
+                    "data-record-id": "X7E8dwY7foPUwQxilOIcomyUnfh"
+                  },
+                  "children": [
+                    {
+                      "ref": "n44",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "list-wrapper ordered-list"
+                      },
+                      "children": [
+                        {
+                          "ref": "n45",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "list list-align-undefined"
+                          },
+                          "children": [
+                            {
+                              "ref": "n46",
+                              "tag": "BUTTON",
+                              "attrs": {
+                                "contenteditable": "false",
+                                "class": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n47",
+                                  "text": "1"
+                                },
+                                {
+                                  "ref": "n48",
+                                  "text": "."
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n49",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "list-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n50",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "zone-container text-editor non-empty text-editor-focused",
+                                    "data-zone-id": "3",
+                                    "data-zone-container": "*",
+                                    "contenteditable": "true"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n51",
+                                      "tag": "DIV",
+                                      "attrs": {
+                                        "class": "ace-line"
+                                      },
+                                      "children": [
+                                        {
+                                          "ref": "n52",
+                                          "tag": "SPAN",
+                                          "attrs": {
+                                            "class": " author-7622865454574423258"
+                                          },
+                                          "children": [
+                                            {
+                                              "ref": "n53",
+                                              "text": "CCC"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "ref": "n54",
+                                          "tag": "SPAN",
+                                          "attrs": {},
+                                          "children": [
+                                            {
+                                              "ref": "n55",
+                                              "text": "​"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n125",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "block docx-text-block isEmpty",
+                    "data-block-type": "text",
+                    "data-block-id": "7",
+                    "data-record-id": "VcN9db4tWo0VCFxZUxqcTitdnSg"
+                  },
+                  "children": [
+                    {
+                      "ref": "n126",
+                      "tag": "DIV",
+                      "attrs": {
+                        "class": "text-block-wrapper"
+                      },
+                      "children": [
+                        {
+                          "ref": "n127",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "text-block"
+                          },
+                          "children": [
+                            {
+                              "ref": "n128",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "zone-container text-editor",
+                                "data-zone-id": "7",
+                                "data-zone-container": "*",
+                                "contenteditable": "true"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n129",
+                                  "tag": "DIV",
+                                  "attrs": {
+                                    "class": "ace-line"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n130",
+                                      "tag": "SPAN",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n131",
+                                          "text": "​"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "ref": "n6",
+              "tag": "DIV",
+              "attrs": {
+                "class": "bear-virtual-pre-renderer",
+                "style": "display: block; position: absolute; width: 100%; top: -10000px; left: -10000px; min-height: auto; pointer-events: none;"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "selection": {
+      "anchor": {
+        "ref": "n53",
+        "offset": 0,
+        "text": "CCC"
+      },
+      "focus": {
+        "ref": "n53",
+        "offset": 0,
+        "text": "CCC"
+      },
+      "type": "Caret",
+      "text": ""
+    },
+    "active": {
+      "tag": "DIV",
+      "cls": "page-block root-block"
+    },
+    "seq": 366
+  },
+  "records": [
+    {
+      "seq": 358,
+      "type": "attributes",
+      "target": "n46",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button ud__tooltip-open"
+    },
+    {
+      "seq": 359,
+      "type": "attributes",
+      "target": "n35",
+      "attribute": "class",
+      "old": "block docx-ordered-block focused",
+      "value": "block docx-ordered-block focused"
+    },
+    {
+      "seq": 360,
+      "type": "attributes",
+      "target": "n50",
+      "attribute": "class",
+      "old": "zone-container text-editor non-empty text-editor-focused",
+      "value": "zone-container text-editor non-empty text-editor-focused"
+    },
+    {
+      "seq": 361,
+      "type": "attributes",
+      "target": "n35",
+      "attribute": "class",
+      "old": "block docx-ordered-block focused",
+      "value": "block docx-ordered-block focused"
+    },
+    {
+      "seq": 362,
+      "type": "characterData",
+      "target": "n47",
+      "attribute": null,
+      "old": "3",
+      "value": "1"
+    },
+    {
+      "seq": 363,
+      "type": "attributes",
+      "target": "n35",
+      "attribute": "class",
+      "old": "block docx-ordered-block focused",
+      "value": "block docx-ordered-block focused"
+    },
+    {
+      "seq": 364,
+      "type": "attributes",
+      "target": "n35",
+      "attribute": "class",
+      "old": "block docx-ordered-block focused",
+      "value": "block docx-ordered-block focused"
+    },
+    {
+      "seq": 365,
+      "type": "attributes",
+      "target": "n50",
+      "attribute": "class",
+      "old": "zone-container text-editor non-empty text-editor-focused",
+      "value": "zone-container text-editor non-empty text-editor-focused"
+    },
+    {
+      "seq": 366,
+      "type": "attributes",
+      "target": "n46",
+      "attribute": "class",
+      "old": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button ud__tooltip-open",
+      "value": "ud__button ud__button--text ud__button--text-primary ud__button--size-lg order button"
+    }
+  ],
+  "keys": [
+    {
+      "time": "2026-10-19T02:52:57.423Z",
+      "key": "&",
+      "code": "Digit7",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n80",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n80",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:53:38.086Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n90",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n90",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:54:00.805Z",
+      "key": "Z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n102",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n102",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:54:24.060Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n110",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n110",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:55:06.265Z",
+      "key": "&",
+      "code": "Digit7",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n122",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n122",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:55:35.673Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n137",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n137",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:55:58.824Z",
+      "key": "Z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n149",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n149",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:56:27.225Z",
+      "key": "&",
+      "code": "Digit7",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n157",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n157",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:57:04.335Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n169",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n169",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:57:20.365Z",
+      "key": "Z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n177",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n177",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:57:45.706Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n189",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n189",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:58:01.709Z",
+      "key": "&",
+      "code": "Digit7",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n197",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n197",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:58:26.896Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n209",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n209",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:58:43.466Z",
+      "key": "Z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n217",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "focus": {
+          "ref": "n217",
+          "offset": 3,
+          "text": "BBB"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T02:59:33.369Z",
+      "key": "Escape",
+      "code": "Escape",
+      "meta": false,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n53",
+          "offset": 0,
+          "text": "CCC"
+        },
+        "focus": {
+          "ref": "n53",
+          "offset": 0,
+          "text": "CCC"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T03:01:23.519Z",
+      "key": "z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": false,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n53",
+          "offset": 0,
+          "text": "CCC"
+        },
+        "focus": {
+          "ref": "n53",
+          "offset": 0,
+          "text": "CCC"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    },
+    {
+      "time": "2026-10-19T03:01:50.848Z",
+      "key": "Z",
+      "code": "KeyZ",
+      "meta": true,
+      "shift": true,
+      "alt": false,
+      "ctrl": false,
+      "trusted": true,
+      "selection": {
+        "anchor": {
+          "ref": "n53",
+          "offset": 3,
+          "text": "CCC"
+        },
+        "focus": {
+          "ref": "n53",
+          "offset": 3,
+          "text": "CCC"
+        },
+        "type": "Caret",
+        "text": ""
+      }
+    }
+  ],
+  "external": [
+    {
+      "time": "2026-10-19T03:00:09.479Z",
+      "target": {
+        "ref": "n233",
+        "tag": "BODY",
+        "cls": "layout-column ccm-scope wiki"
+      },
+      "added": [
+        {
+          "ref": "n234",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-root"
+          },
+          "children": [
+            {
+              "ref": "n235",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "n236",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "overlay-container overlay-hidden",
+                    "style": "position: fixed; z-index: 87;"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": []
+    },
+    {
+      "time": "2026-10-19T03:00:09.504Z",
+      "target": {
+        "ref": "n237",
+        "tag": "DIV",
+        "cls": "overlay-root"
+      },
+      "added": [],
+      "removed": [
+        {
+          "ref": "n238",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-wrapper"
+          },
+          "children": [
+            {
+              "ref": "n239",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-container list-modify-panel lazy-selection-node",
+                "style": "position: fixed; left: 549.5px; top: 326.25px;"
+              },
+              "children": [
+                {
+                  "ref": "n240",
+                  "tag": "UL",
+                  "attrs": {
+                    "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                    "role": "menu"
+                  },
+                  "children": [
+                    {
+                      "ref": "n241",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "n242",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                          },
+                          "children": [
+                            {
+                              "ref": "n243",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n244",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n245",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n246",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n247",
+                              "text": "继续之前的编号"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n248",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n249",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n250",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n251",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n252",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n253",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n254",
+                              "text": "开始新列表"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n255",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n256",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n257",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n258",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n259",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n260",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n261",
+                              "text": "修改编号值"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n262",
+                  "tag": "DIV",
+                  "attrs": {
+                    "aria-hidden": "true",
+                    "style": "display: none;"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "ref": "n263",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-mask"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "2026-10-19T03:00:32.265Z",
+      "target": {
+        "ref": "n233",
+        "tag": "BODY",
+        "cls": "layout-column ccm-scope wiki"
+      },
+      "added": [
+        {
+          "ref": "n264",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-root"
+          },
+          "children": [
+            {
+              "ref": "n265",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "n266",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "overlay-container list-modify-panel lazy-selection-node overlay-hidden",
+                    "style": "position: fixed;"
+                  },
+                  "children": [
+                    {
+                      "ref": "n267",
+                      "tag": "UL",
+                      "attrs": {
+                        "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                        "role": "menu"
+                      },
+                      "children": [
+                        {
+                          "ref": "n268",
+                          "tag": "LI",
+                          "attrs": {
+                            "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                            "role": "menuitem",
+                            "aria-disabled": "true"
+                          },
+                          "children": [
+                            {
+                              "ref": "n269",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n270",
+                                  "tag": "SPAN",
+                                  "attrs": {
+                                    "class": "universe-icon list-modify-menu-icon"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n271",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n272",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n273",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-item-title-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n274",
+                                  "text": "继续之前的编号"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n275",
+                          "tag": "LI",
+                          "attrs": {
+                            "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                            "role": "menuitem",
+                            "aria-disabled": "false"
+                          },
+                          "children": [
+                            {
+                              "ref": "n276",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-icon-wrap"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n277",
+                                  "tag": "SPAN",
+                                  "attrs": {
+                                    "class": "universe-icon list-modify-menu-icon"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n278",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n279",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n280",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-item-title-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n281",
+                                  "text": "开始新列表"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n282",
+                          "tag": "LI",
+                          "attrs": {
+                            "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                            "role": "menuitem",
+                            "aria-disabled": "false"
+                          },
+                          "children": [
+                            {
+                              "ref": "n283",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-icon-wrap"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n284",
+                                  "tag": "SPAN",
+                                  "attrs": {
+                                    "class": "universe-icon list-modify-menu-icon"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n285",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n286",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n287",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-item-title-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n288",
+                                  "text": "修改编号值"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n289",
+                      "tag": "DIV",
+                      "attrs": {
+                        "aria-hidden": "true",
+                        "style": "display: none;"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "ref": "n290",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "overlay-mask"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": []
+    },
+    {
+      "time": "2026-10-19T03:00:32.266Z",
+      "target": {
+        "ref": "n264",
+        "tag": "DIV",
+        "cls": "overlay-root"
+      },
+      "added": [
+        {
+          "ref": "n265",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-wrapper"
+          },
+          "children": [
+            {
+              "ref": "n266",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-container list-modify-panel lazy-selection-node overlay-hidden",
+                "style": "position: fixed;"
+              },
+              "children": [
+                {
+                  "ref": "n267",
+                  "tag": "UL",
+                  "attrs": {
+                    "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                    "role": "menu"
+                  },
+                  "children": [
+                    {
+                      "ref": "n268",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "n269",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                          },
+                          "children": [
+                            {
+                              "ref": "n270",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n271",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n272",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n273",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n274",
+                              "text": "继续之前的编号"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n275",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n276",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n277",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n278",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n279",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n280",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n281",
+                              "text": "开始新列表"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n282",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n283",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n284",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n285",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n286",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n287",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n288",
+                              "text": "修改编号值"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n289",
+                  "tag": "DIV",
+                  "attrs": {
+                    "aria-hidden": "true",
+                    "style": "display: none;"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "ref": "n290",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-mask"
+              },
+              "children": []
+            }
+          ]
+        }
+      ],
+      "removed": []
+    },
+    {
+      "time": "2026-10-19T03:00:39.818Z",
+      "target": {
+        "ref": "n233",
+        "tag": "BODY",
+        "cls": "layout-column ccm-scope wiki"
+      },
+      "added": [
+        {
+          "ref": "n291",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-root"
+          },
+          "children": [
+            {
+              "ref": "n292",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-wrapper"
+              },
+              "children": [
+                {
+                  "ref": "n293",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "overlay-container list-modify-panel lazy-selection-node overlay-hidden",
+                    "style": "position: fixed;"
+                  },
+                  "children": [
+                    {
+                      "ref": "n294",
+                      "tag": "UL",
+                      "attrs": {
+                        "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                        "role": "menu"
+                      },
+                      "children": [
+                        {
+                          "ref": "n295",
+                          "tag": "LI",
+                          "attrs": {
+                            "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                            "role": "menuitem",
+                            "aria-disabled": "false"
+                          },
+                          "children": [
+                            {
+                              "ref": "n296",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-icon-wrap"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n297",
+                                  "tag": "SPAN",
+                                  "attrs": {
+                                    "class": "universe-icon list-modify-menu-icon"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n298",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n299",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n300",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-item-title-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n301",
+                                  "text": "继续之前的编号"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n302",
+                          "tag": "LI",
+                          "attrs": {
+                            "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                            "role": "menuitem",
+                            "aria-disabled": "true"
+                          },
+                          "children": [
+                            {
+                              "ref": "n303",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n304",
+                                  "tag": "SPAN",
+                                  "attrs": {
+                                    "class": "universe-icon list-modify-menu-icon"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n305",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n306",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n307",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-item-title-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n308",
+                                  "text": "开始新列表"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n309",
+                          "tag": "LI",
+                          "attrs": {
+                            "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                            "role": "menuitem",
+                            "aria-disabled": "false"
+                          },
+                          "children": [
+                            {
+                              "ref": "n310",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-icon-wrap"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n311",
+                                  "tag": "SPAN",
+                                  "attrs": {
+                                    "class": "universe-icon list-modify-menu-icon"
+                                  },
+                                  "children": [
+                                    {
+                                      "ref": "n312",
+                                      "tag": "svg",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "ref": "n313",
+                                          "tag": "path",
+                                          "attrs": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "ref": "n314",
+                              "tag": "DIV",
+                              "attrs": {
+                                "class": "ud__menu-normal-item-title-content"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n315",
+                                  "text": "修改编号值"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n316",
+                      "tag": "DIV",
+                      "attrs": {
+                        "aria-hidden": "true",
+                        "style": "display: none;"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "ref": "n317",
+                  "tag": "DIV",
+                  "attrs": {
+                    "class": "overlay-mask"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "removed": []
+    },
+    {
+      "time": "2026-10-19T03:00:39.818Z",
+      "target": {
+        "ref": "n233",
+        "tag": "BODY",
+        "cls": "layout-column ccm-scope wiki"
+      },
+      "added": [],
+      "removed": [
+        {
+          "ref": "n264",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-root"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "time": "2026-10-19T03:00:39.818Z",
+      "target": {
+        "ref": "n264",
+        "tag": "DIV",
+        "cls": "overlay-root"
+      },
+      "added": [],
+      "removed": [
+        {
+          "ref": "n265",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-wrapper"
+          },
+          "children": [
+            {
+              "ref": "n266",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-container list-modify-panel lazy-selection-node",
+                "style": "position: fixed; left: 549.5px; top: 326.25px;"
+              },
+              "children": [
+                {
+                  "ref": "n267",
+                  "tag": "UL",
+                  "attrs": {
+                    "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                    "role": "menu"
+                  },
+                  "children": [
+                    {
+                      "ref": "n268",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "n269",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                          },
+                          "children": [
+                            {
+                              "ref": "n270",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n271",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n272",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n273",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n274",
+                              "text": "继续之前的编号"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n275",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n276",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n277",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n278",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n279",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n280",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n281",
+                              "text": "开始新列表"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n282",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n283",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n284",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n285",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n286",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n287",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n288",
+                              "text": "修改编号值"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n289",
+                  "tag": "DIV",
+                  "attrs": {
+                    "aria-hidden": "true",
+                    "style": "display: none;"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "ref": "n290",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-mask"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "time": "2026-10-19T03:00:39.818Z",
+      "target": {
+        "ref": "n291",
+        "tag": "DIV",
+        "cls": "overlay-root"
+      },
+      "added": [
+        {
+          "ref": "n292",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-wrapper"
+          },
+          "children": [
+            {
+              "ref": "n293",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-container list-modify-panel lazy-selection-node overlay-hidden",
+                "style": "position: fixed;"
+              },
+              "children": [
+                {
+                  "ref": "n294",
+                  "tag": "UL",
+                  "attrs": {
+                    "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                    "role": "menu"
+                  },
+                  "children": [
+                    {
+                      "ref": "n295",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n296",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n297",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n298",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n299",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n300",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n301",
+                              "text": "继续之前的编号"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n302",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "n303",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                          },
+                          "children": [
+                            {
+                              "ref": "n304",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n305",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n306",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n307",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n308",
+                              "text": "开始新列表"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n309",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n310",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n311",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n312",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n313",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n314",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n315",
+                              "text": "修改编号值"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n316",
+                  "tag": "DIV",
+                  "attrs": {
+                    "aria-hidden": "true",
+                    "style": "display: none;"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "ref": "n317",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-mask"
+              },
+              "children": []
+            }
+          ]
+        }
+      ],
+      "removed": []
+    },
+    {
+      "time": "2026-10-19T03:00:39.820Z",
+      "target": {
+        "ref": "n291",
+        "tag": "DIV",
+        "cls": "overlay-root"
+      },
+      "added": [],
+      "removed": [
+        {
+          "ref": "n292",
+          "tag": "DIV",
+          "attrs": {
+            "class": "overlay-wrapper"
+          },
+          "children": [
+            {
+              "ref": "n293",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-container list-modify-panel lazy-selection-node overlay-hidden",
+                "style": "position: fixed;"
+              },
+              "children": [
+                {
+                  "ref": "n294",
+                  "tag": "UL",
+                  "attrs": {
+                    "class": "ud__menu-normal ud__menu-normal-root ud__menu-normal-vertical list-modify-menu ud-scrollbar",
+                    "role": "menu"
+                  },
+                  "children": [
+                    {
+                      "ref": "n295",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n296",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n297",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n298",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n299",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n300",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n301",
+                              "text": "继续之前的编号"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n302",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item ud__menu-normal-item-disabled list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "true"
+                      },
+                      "children": [
+                        {
+                          "ref": "n303",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap ud__menu-normal-icon-wrap-disabled"
+                          },
+                          "children": [
+                            {
+                              "ref": "n304",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n305",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n306",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n307",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n308",
+                              "text": "开始新列表"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "ref": "n309",
+                      "tag": "LI",
+                      "attrs": {
+                        "class": "ud__menu-normal-item list-modify-menu-item ud__menu-normal-item--root-normal ud-typography-body-0 umt1vhq u5k1dk9 u1h2w2e3",
+                        "role": "menuitem",
+                        "aria-disabled": "false"
+                      },
+                      "children": [
+                        {
+                          "ref": "n310",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-icon-wrap"
+                          },
+                          "children": [
+                            {
+                              "ref": "n311",
+                              "tag": "SPAN",
+                              "attrs": {
+                                "class": "universe-icon list-modify-menu-icon"
+                              },
+                              "children": [
+                                {
+                                  "ref": "n312",
+                                  "tag": "svg",
+                                  "attrs": {},
+                                  "children": [
+                                    {
+                                      "ref": "n313",
+                                      "tag": "path",
+                                      "attrs": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "ref": "n314",
+                          "tag": "DIV",
+                          "attrs": {
+                            "class": "ud__menu-normal-item-title-content"
+                          },
+                          "children": [
+                            {
+                              "ref": "n315",
+                              "text": "修改编号值"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "ref": "n316",
+                  "tag": "DIV",
+                  "attrs": {
+                    "aria-hidden": "true",
+                    "style": "display: none;"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "ref": "n317",
+              "tag": "DIV",
+              "attrs": {
+                "class": "overlay-mask"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

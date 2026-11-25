@@ -1,0 +1,18 @@
+{
+  "kind": "native AX environment recovery checkpoint; not DOM or cleanup acceptance",
+  "time": "2026-10-23T14:51:14.525Z",
+  "url": "https://research-fixture.example/wiki/QAFixtureDocument02XXXXXXXX",
+  "actualReloadClicked": true,
+  "alphaStillObserved": true,
+  "devtoolsClosed": true,
+  "newResearchTabCreated": false,
+  "readOnlyBackgroundAttempts": [
+    "original tab claimed successfully after connection recovery",
+    "DOM snapshot timed out",
+    "CDP read-only Runtime.evaluate timed out",
+    "Playwright evaluate still timed out after actual reload and DevTools close"
+  ],
+  "nativeCoordinateInput": "noWindowsAvailable after reload",
+  "pending": "Explicit permission for temporary foreground activation, or user positions research window on current desktop",
+  "bodyEditingDuringRecovery": false
+}

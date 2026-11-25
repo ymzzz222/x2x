@@ -1,0 +1,45 @@
+{
+  "kind": "tool transport diagnostics; not feature pass evidence",
+  "date": "2026-10-20 Asia/Shanghai",
+  "entries": [
+    {
+      "files": [
+        "G00-F-native-pointer-delivery-probe.json"
+      ],
+      "result": "Old local block ID 5 missing after document navigation; no input events."
+    },
+    {
+      "files": [
+        "G00-F-native-pointer-delivery-probe-R2.json",
+        "G00-F-native-pointer-delivery-probe-R3.json",
+        "G09-F-bubble-tab-R1.json"
+      ],
+      "result": "Frontmost-app guard stopped before key or mouse delivery; no feature conclusion."
+    },
+    {
+      "files": [
+        "G00-F-native-pointer-delivery-probe-R4.json"
+      ],
+      "result": "Process-directed pointer attempt did not deliver page pointer events or Alpha selection; excluded."
+    },
+    {
+      "source": "CUA child-process full JXA driver attempt",
+      "result": "Apple-event service connection invalid; missing parameter -1701. No case output was written."
+    },
+    {
+      "source": "CUA child-process native mouse move only",
+      "result": "Post call returned; no usable block menu appeared. Does not prove a successful hover case."
+    },
+    {
+      "files": [
+        "G05-F-persistence-edit-R1.json",
+        "G05-F-Chrome-before-reload-R1.json"
+      ],
+      "result": "Native post-action AX observation raised ScreenCaptureKit -3811; trusted Cmd+B and bold DOM independently confirmed delivery."
+    },
+    {
+      "source": "CDP reconnect permission form",
+      "result": "Chrome asked for full-session remote control; Cancel selected. No new remote-debug grant or setting change."
+    }
+  ]
+}

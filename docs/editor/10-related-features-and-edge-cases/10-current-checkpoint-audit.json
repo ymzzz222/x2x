@@ -1,0 +1,1273 @@
+{
+  "date": "2026-10-26",
+  "status": "blocked on reliable Chrome input or explicit S10 foreground exception; not final delivery",
+  "effectivePairs": 21,
+  "domJsonFiles": 103,
+  "encodedSnapshotFiles": 92,
+  "files": [
+    {
+      "file": "dom/J00-Alpha-Alpha-fixture.json",
+      "sha256": "513c308dc8c8e37a38cb7e2c9aa85d66a7f67d95768b32cd0065a84252c900ba"
+    },
+    {
+      "file": "dom/J00-before-fresh-repeat-empty-reload.json",
+      "sha256": "5e0b912aebef88acb86eef4414cc35928f10e079ba28210664e6d843c6e047e8"
+    },
+    {
+      "file": "dom/J00-comment-R2-clean-anchor.json",
+      "sha256": "47336587df98426c3ee436e9565c44ac7c45bff6deed12a816a972e95897dc8b"
+    },
+    {
+      "file": "dom/J00-crossline-allselect-probe.json",
+      "sha256": "29ef4668d65113be067954bcdaab290660909708f1477e64d71becb2ad173d63"
+    },
+    {
+      "file": "dom/J00-crossline-search-fixture-v2.json",
+      "sha256": "0eeb920d749d1587d85203f4522983459a5da6beea11984460fc58e0f715997c"
+    },
+    {
+      "file": "dom/J00-current-all-before-R2-reload.json",
+      "sha256": "bf0d87001c6b3d368ab9f2aede89acaf1c794e7384f71c9dce8577546818a814"
+    },
+    {
+      "file": "dom/J00-folded-search-fixture.json",
+      "sha256": "5a444416c19d00592d1cb4e7cc9cee37487760497227c4bc5b7f0d3ad822efdb"
+    },
+    {
+      "file": "dom/J00-history-restore-R2-heading-fixture.json",
+      "sha256": "c474119e40a8531db1f5be82b7733839aa6ce223c91e5c4943e869cd79372b42"
+    },
+    {
+      "file": "dom/J00-initial-empty-baseline.json",
+      "sha256": "0572c00c5267bb8506480a2abe7f3f19658be5ac47a33d5d4a3166a5a67ac9e1"
+    },
+    {
+      "file": "dom/J00-long-clear-history.json",
+      "sha256": "633c4f94691da8ce1987e64458ae10b327eefa6a607f3c323d0f54a5c0d6659d"
+    },
+    {
+      "file": "dom/J00-long-clear-undo-download.json",
+      "sha256": "954c9c09df7b332e92baeb4d42f5b1410335134270cca2cc0aed7fd3362cbbee"
+    },
+    {
+      "file": "dom/J00-long-fixture.json",
+      "sha256": "b3d2c9c87104a0a7917b1212b2005fb4389809a8246c95dd32e4ef84a2040d40"
+    },
+    {
+      "file": "dom/J00-mixed-case-fixture.json",
+      "sha256": "98d7b145a17999da172972d187ac5cd6d380b27c98630a5e557921d1d5fb4ee2"
+    },
+    {
+      "file": "dom/J00-offline-R2-reset.json",
+      "sha256": "ea21eb0a20c4e1611ad4b219cb4f33f2c0f5aac7405196568853bbb350f4b942"
+    },
+    {
+      "file": "dom/J00-quark-original-tab.json",
+      "sha256": "ff1882b20668f1e42d4458f5dc0ed8afadb98bd3f3f9a8abf4767d0ae67f4120"
+    },
+    {
+      "file": "dom/J00-quark-retake-original-tab.json",
+      "sha256": "93649cb31a79081a7142e745d96c28b09082d03eca9647371631087665aad109"
+    },
+    {
+      "file": "dom/J00-save-reload-R2-reset-text.json",
+      "sha256": "ed9ede34b313c807b547436447921846f58f20758152ec1ccac15af9996edb2b"
+    },
+    {
+      "file": "dom/J00-startup-final-empty-reload.json",
+      "sha256": "a27a8739f35ec37b036ad0d3405cbaeda0c3c80f37ed365d8c492c76bdcbf58a"
+    },
+    {
+      "file": "dom/J00-startup-interface-restored.json",
+      "sha256": "663ef58f0c054e79f5b0564ce35c9280d0bbd73b9cfa846b0540f455cbcb27c9"
+    },
+    {
+      "file": "dom/J00-startup-observer-stopped.json",
+      "sha256": "35d680276e51dd7e880bec2aa86c4e27432e42ffae5f508290c9f488785e3c28"
+    },
+    {
+      "file": "dom/J01-current-all-history-R1.json",
+      "sha256": "7f64cb0855b2172871866ae8714c693103986d6eb1e33bd21e6611a3a7a03a60"
+    },
+    {
+      "file": "dom/J01-current-all-history-R2.json",
+      "sha256": "60fe957e852854318f9691e233d1e33e35361110ce3392bf68ed59867f997875"
+    },
+    {
+      "file": "dom/J01-empty-no-match-R1.json",
+      "sha256": "5ea928487fdd173310d8a0f45cf0c35da5d7861ed159230865806ec8aa5fd701"
+    },
+    {
+      "file": "dom/J01-empty-no-match-R2-paste-no-insertion.json",
+      "sha256": "4d81e059782a72bb4c0c306f108c5ee8eed7bdd4f375b2cc006f0cc37060c014"
+    },
+    {
+      "file": "dom/J01-empty-no-match-R3.json",
+      "sha256": "2439f5ec13304e29d6d60353e80685892e680c1596e6936cbd7f53a91124e7b1"
+    },
+    {
+      "file": "dom/J01-fast-type-stale-match-probe.json",
+      "sha256": "627e2802f83b4a3ac509f9d3ef208ce1483fb539cee33203c1827a1f6927d678"
+    },
+    {
+      "file": "dom/J01-folded-descendant-find-R1.json",
+      "sha256": "d4d8c9ef4010739bfdfc1504e84860a0198606b43d1f5c35941891188ff24aeb"
+    },
+    {
+      "file": "dom/J01-folded-descendant-find-R2.json",
+      "sha256": "1e57e97a380e3502d632f2ec22cc7e95945b6dbdf5c48bcf1de272207ee6b036"
+    },
+    {
+      "file": "dom/J01-heading-default-case-R1.json",
+      "sha256": "73d53d42ed24d76a4fbc13fdea257e8dca5e43767ac018a95a6fff09d9a23d2b"
+    },
+    {
+      "file": "dom/J01-heading-default-case-R2.json",
+      "sha256": "cee89f5e56bac830d3b023e73988c8cb7d004f632f04251dc451323a05cf12a2"
+    },
+    {
+      "file": "dom/J01-more-availability-inspection.json",
+      "sha256": "eab563e42ac9c4e4f0c70385896a245c275a404b3ba7585af2161aceb623e768"
+    },
+    {
+      "file": "dom/J01-reopen-retained-fields-observation.json",
+      "sha256": "90f237e13ddd48b38a0d565ca43ec8494076db1715fe9a6ec38ea9dd3c23f06b"
+    },
+    {
+      "file": "dom/J01-soft-crossblock-paste-no-insertion-probe.json",
+      "sha256": "71c67bbc2be4f73eb400d7ed70222737c92ca534ae5e769ae034795eb0cee8a1"
+    },
+    {
+      "file": "dom/J01-soft-crossblock-physical-R1.json",
+      "sha256": "b39661afc637bd1ad8964ba1ad4f2b19bdc072fcad7042ebca9883764b9d4bc7"
+    },
+    {
+      "file": "dom/J01-soft-crossblock-physical-R2.json",
+      "sha256": "40ad54a7d182effbc81a56a15551859f028b4cb76f42822c96dba6bf7477a258"
+    },
+    {
+      "file": "dom/J01-startup-find-focus-probe.json",
+      "sha256": "4dc7e5421c862248465895017429814e171ff184bd1aa5f61903c1c111cfdb18"
+    },
+    {
+      "file": "dom/J02-comment-draft-prepared.json",
+      "sha256": "305f9de18de26d0556d87e4975643f9eae4a18e66ef8294318d7ff080d849a84"
+    },
+    {
+      "file": "dom/J02-local-anchor-workflow-R1.json",
+      "sha256": "d067382a6aad4abfbb22dd5ad5d2066ba3230f51a37f26294b035b82945db6c8"
+    },
+    {
+      "file": "dom/J02-local-anchor-workflow-R2.json",
+      "sha256": "52268e127082c6058669c0972f97e1fe0b9ab9adb0528179795ea7661111505a"
+    },
+    {
+      "file": "dom/J03-return-edit-mode-R1.json",
+      "sha256": "ae2e032feeb1e6d1e790b83bf549aaf6ac983e41bbe365699889af29d947ff72"
+    },
+    {
+      "file": "dom/J03-return-edit-mode-R2.json",
+      "sha256": "acbfe981f413055ba9df55196c6b60f846bd4047623deec0c5bcd056291998d5"
+    },
+    {
+      "file": "dom/J03-revision-bold-R1.json",
+      "sha256": "ab7ba6acbd8b8596d383d9747335b755fa807e3fa0b1a3f1a499601e6cb520bb"
+    },
+    {
+      "file": "dom/J03-revision-bold-R2.json",
+      "sha256": "7bb1ee7fc0fda927b8c7794ac9a0fcf04e178f52f10b277afd907222e9f744ea"
+    },
+    {
+      "file": "dom/J03-revision-convert-heading-R1.json",
+      "sha256": "9440e28739b194224fc41818494af4fcb8eff3fbe3fe5c76b720c8ba95199f05"
+    },
+    {
+      "file": "dom/J03-revision-convert-heading-R2.json",
+      "sha256": "b5c4322c0108e9815ed443798451754cc3a5a57aaa262c4542781251294f3e52"
+    },
+    {
+      "file": "dom/J03-revision-delete-R1.json",
+      "sha256": "05e9b1033b484e9fcdfd8923277c1b9b07d38e1b516bf46361939cfeed549e8c"
+    },
+    {
+      "file": "dom/J03-revision-delete-R2.json",
+      "sha256": "67c05ab881a0d0657d66b3128d41119dae501204d6bca6845024cf458bf788a1"
+    },
+    {
+      "file": "dom/J03-revision-insert-accept-R1.json",
+      "sha256": "d04bc76d8744f3511e1812f94f2794d4259f3a36e08a2956042ff453d83a9a1c"
+    },
+    {
+      "file": "dom/J03-revision-insert-accept-R2.json",
+      "sha256": "9d444a01c203d5f03ef90c41f3869cea9453c1072c8aea8c74ae0a45f60d7cc9"
+    },
+    {
+      "file": "dom/J03-revision-insert-reject-R1.json",
+      "sha256": "ae5a613a77e876561e24fb028e40ae61de73c104fa3c6a0ce76c8cf8f782160a"
+    },
+    {
+      "file": "dom/J03-revision-insert-reject-R2.json",
+      "sha256": "f9285e0b7bac3c7bed3d65e4af6fcfa1ba31fe56314554104fb353b9122b84eb"
+    },
+    {
+      "file": "dom/J03-revision-ordered-R1.json",
+      "sha256": "b537ab18c29f5a3bd7fb6bffe2a9cdec8bc96b8ffc2ff35f48acd00c62b52806"
+    },
+    {
+      "file": "dom/J03-revision-ordered-R2.json",
+      "sha256": "f3d0bcca39dbe825c051cb468bf8f5a7acdc052b3329db0a4e589a9a1c2a57ef"
+    },
+    {
+      "file": "dom/J03-revision-paragraph-break-R1.json",
+      "sha256": "a56c925f52ef8a246c3be1d2e786a7e80f8fe7f48ed5725f230cc0d9617209c2"
+    },
+    {
+      "file": "dom/J03-revision-paragraph-break-R2.json",
+      "sha256": "1381ccfaf78bce8be3d6988bc4c1557afd6f9e31160de3149b675e4ef8085dc0"
+    },
+    {
+      "file": "dom/J03-revision-soft-break-R1.json",
+      "sha256": "c320f9314db73eb1e131d6e62db38ebcb85f66c98cfbc71ad279087bd5793c27"
+    },
+    {
+      "file": "dom/J03-revision-soft-break-R2.json",
+      "sha256": "e8fac50b04fa5b2f8d350c086c73693561ccdd0722edd659c8f35a8308c3156e"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-after-expanded.json",
+      "sha256": "f2d1edc1fb1b045cfb2db3eddbaa34a54354453d660508f64e690edec28d9100"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-after.json",
+      "sha256": "5a42fd24dd72eee398f5329f69b9496518d9ade7e15a62ad053afcccb6b94a12"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-before.json",
+      "sha256": "b41d42e74f9a60a0f3f9f71c5c5d2a1c58c9d5bbbdb91d02b50b22dbe7f8c104"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R1-operation.json",
+      "sha256": "4cd2225d4d0d72c6dec95849874d03fdad33c7f33713851dbff9eee7f09c9451"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R2-after.json",
+      "sha256": "c8f844b26302d080d46b92c705bcc63acf56b82f73e8ff298c41c7bab24efcc1"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R2-before.json",
+      "sha256": "4d67f4f5e3d8f139e45ab570ae50a999a59f3efb53aa44e090a59f6c90499a01"
+    },
+    {
+      "file": "dom/J04-heading-save-reload-R2-operation.json",
+      "sha256": "c95435d86b80cffeda4de36adf050cdc7fecac54dc2ce67a26085c760b8fcaf8"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R1-Chrome.json",
+      "sha256": "443217689fbec38849e752f1490ab3fdfa1765d4040e9d2219164852a4442f20"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R1-Quark.json",
+      "sha256": "276fe693650fbe686117548e7a6b5b4f83dc4121d0cf5d483156ef83aa15b29c"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R2-Chrome.json",
+      "sha256": "43fc26ee92e8b025148ba698aa63f10e50e7ace9a8eac260221702752271ab3c"
+    },
+    {
+      "file": "dom/J05-local-remote-history-R2-Quark.json",
+      "sha256": "b53bacf9dccd7a12ba0c8ffcf03a42a21f4ba367060161feacc1361065436e7a"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R1-online-reload.json",
+      "sha256": "8d2e6f7b3b9ac71fb3daf122dd558e0ce103953562848372f7959ea802a08417"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R1-operation.json",
+      "sha256": "d5549dd38a84c101f6b193bc3034adf39225c6154d3ea4034119099f0a01ff89"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R2-Quark-independent.json",
+      "sha256": "242fadb6ec26b52640e1248939dc3026318213534be0c73fdbfc6ac967663f7e"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R2-online-reload.json",
+      "sha256": "fc1feae6168c0cacf3681f8617d789fdbcf64d99cb9da38690e49f230835a267"
+    },
+    {
+      "file": "dom/J06-offline-reconnect-R2-operation.json",
+      "sha256": "5d63b5002b7a910e783ae36d8ddb3fffd839dd0b955356bd446aae98adee15f5"
+    },
+    {
+      "file": "dom/J06-offline-refresh-R1-after.json",
+      "sha256": "5db116080ad9788953cef44cc04952521915587f9fd593363151e247dfe4bd0d"
+    },
+    {
+      "file": "dom/J06-offline-refresh-R2-after.json",
+      "sha256": "cef499c40124a6d82cd1886c661e0c5495184193bd593b7795778d7ba9e7951a"
+    },
+    {
+      "file": "dom/J06-offline-refresh-R2-confirmed-native.json",
+      "sha256": "44677ccb5549519ceb80a9e73bc682f77e56ff055ee7b48cfbcd4300d529f412"
+    },
+    {
+      "file": "dom/J08-R1-redo-beta-download.json",
+      "sha256": "f3c07adc69220edbb5f14035a6362207cad05c1caf98583301266d5ab9dc7051"
+    },
+    {
+      "file": "dom/J08-R1-undo-alpha-download.json",
+      "sha256": "7d04ff4212026b3e0994fc57e212f693b7c8b4ee331bfce0960fafe4577ad482"
+    },
+    {
+      "file": "dom/J08-R2-redo-beta-download.json",
+      "sha256": "445bfedf2beba412751c42ab19e965864bdba0b517371a79bc75b0de275233fd"
+    },
+    {
+      "file": "dom/J08-R2-undo-alpha-download.json",
+      "sha256": "3154c83fc460924f15d15242c672e020a18c714b711e88c558629f8249ab9d9c"
+    },
+    {
+      "file": "dom/J08-long-R2-session-metadata.json",
+      "sha256": "7fabcb2ebd3ac04c92496d24c9636a4213bb1eabc40145e5258358e4d8d33781"
+    },
+    {
+      "file": "dom/J08-long-find-replace-history-R1.json",
+      "sha256": "0099e029e4311be8a2cf68dd5d2f1a918b89b0f31bbfc71b2e10a6862116b331"
+    },
+    {
+      "file": "dom/J08-long-find-replace-history-R2.json",
+      "sha256": "35cdfbcf2bcbe2e949b6b6151e582236393278f75bf687b4f4400a657c5a02fb"
+    },
+    {
+      "file": "dom/J08-narrow-emulation-R1.json",
+      "sha256": "30bff95c41f9b7e01d0a843ec8739eb134dc89259f5cbe19ccfcc8b243b6b347"
+    },
+    {
+      "file": "dom/J09-markdown-export-R1.json",
+      "sha256": "7b0715b4e8b831dc0653ae1e21b4afe7ef6c220aa3ca9a44954dda05f215416f"
+    },
+    {
+      "file": "dom/J09-markdown-export-R2.json",
+      "sha256": "412baee09587599ec9bcb26dc8bd2d7fd29896d3aaf318b433b6b319ebc5e9eb"
+    },
+    {
+      "file": "dom/J09-markdown-export-R3.json",
+      "sha256": "dced656a75995e8c644cef1c8e917973629087c4737266e5a8587738eddd0a1b"
+    },
+    {
+      "file": "dom/J09-markdown-export-R4.json",
+      "sha256": "08c3144d93adadce843796cc9e7272c5f476e02bbba61f4bb95e69060ac7a4cf"
+    },
+    {
+      "file": "dom/J09-mixed-pdf-R1-download.json",
+      "sha256": "ebe8ccdf7d265c8c96bee9c80545d79d127a356819761316d6be25724d50a6f5"
+    },
+    {
+      "file": "dom/J09-mixed-word-R1-download.json",
+      "sha256": "7c94399951e0d805b8f853ce73be91863eae3689e352a01f28d23521e55e5418"
+    },
+    {
+      "file": "dom/J09-mixed-word-R1-settings.json",
+      "sha256": "ec020a4e8914243b158ab0726769d7621015736bfddbb59d68ce5991fa938cdd"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-after.json",
+      "sha256": "cb76ba76567a65c0cee8f65b6034b8f540cad147951c9e0e80f04965550f406e"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-before.json",
+      "sha256": "da1ee6dd0700096a9e3c4796c8a85d810bf4e3dd066b13320c72227b686966ea"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-confirmation.json",
+      "sha256": "38365773203ede5dde4dee0df869528fa3c75e1059206ebe9d4eb21994a197ee"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-continue.json",
+      "sha256": "f209ace1733af13880bf3e38a5eb708655051d97c7e51b2901a30209c4b58a2b"
+    },
+    {
+      "file": "dom/J10-history-restore-R1-reload.json",
+      "sha256": "589d9f32223037ee5eab7d9b18e5ce749623822ca5010ab818f46967fc91fdf9"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-after.json",
+      "sha256": "e79142ce75aa6b3f01e01d1ae5a1383561c65de1ed21e7984e35f6d4a3c05a3a"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-before.json",
+      "sha256": "147f58e102954c49d73ac63426587f1d8e9f10de4dbcd87198a7cc1914f5ce27"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-confirmation.json",
+      "sha256": "38365773203ede5dde4dee0df869528fa3c75e1059206ebe9d4eb21994a197ee"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-continue.json",
+      "sha256": "01e590e33636538a51956306f0cd891097dfa470d15188d80ab46648ec4680b8"
+    },
+    {
+      "file": "dom/J10-history-restore-R2-reload.json",
+      "sha256": "093822f19c86e997a97bbfe77c951344ad160575867e053264a0c582ed07284f"
+    },
+    {
+      "file": "dom/J24-R1-reload.json",
+      "sha256": "8c29c6b13699402e6b4a8dcdb463fbf8fde933c86d3a9981c1e5a6716db44548"
+    },
+    {
+      "file": "dom/J24-workflow-R1-before-reload.json",
+      "sha256": "5e88d2b89de856806ca2935823cb99b5508297ce4d6bb9543aedbf2847e39ca0"
+    },
+    {
+      "file": "10-acceptance-and-gaps.md",
+      "sha256": "a6cc3cbce8cf27410294339400887bf0c41ef8b1e84e381500fac123faf6d756"
+    },
+    {
+      "file": "10-related-features-and-edge-cases.md",
+      "sha256": "9130c142269bdf8799dd9efa0f790b03db43b0449931d218464b2676dd2659be"
+    }
+  ],
+  "sources": [
+    {
+      "file": "src/views/aiScriptCore/wordEdit/editor/composables/useAutoSave.js",
+      "sha256": "b4acfc979a95eb8bed2a806648cb65696d31efd0e1efaaae9e9767f90bccbb76",
+      "scope": "Static ranges listed in 10-acceptance-and-gaps.md; not runtime proof"
+    },
+    {
+      "file": "src/views/aiScriptCore/wordEdit/editor/composables/useCollaboration.js",
+      "sha256": "53a1d9e04cf29ab9958e201d5055ea24fb73b14976cd77a986956e00fe585572",
+      "scope": "Static ranges listed in 10-acceptance-and-gaps.md; not runtime proof"
+    },
+    {
+      "file": "src/views/aiScriptCore/wordEdit/editor/index.vue",
+      "sha256": "ee15a9a88cb3995e53c4cfbd36a4ccba2541818714983ab60b3e77768a64c188",
+      "scope": "Static ranges listed in 10-acceptance-and-gaps.md; not runtime proof"
+    },
+    {
+      "file": "src/views/aiScriptCore/wordEdit/utils/exportDocument.js",
+      "sha256": "b9d9d594d96cb159113d2dc31f00fa0f0f3f7b208fa01d0c3d9c9943d663bf8c",
+      "scope": "Static ranges listed in 10-acceptance-and-gaps.md; not runtime proof"
+    },
+    {
+      "file": "src/views/aiScriptCore/wordEdit/editor/utils/config.js",
+      "sha256": "c695e79d06e9afd04d89113e71e0fc09483abee91401f2f5b6081e3e7641bdf8",
+      "scope": "Static ranges listed in 10-acceptance-and-gaps.md; not runtime proof"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J00-Alpha-Alpha-fixture.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-before-fresh-repeat-empty-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-comment-R2-clean-anchor.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-crossline-allselect-probe.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-crossline-search-fixture-v2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-current-all-before-R2-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-folded-search-fixture.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-history-restore-R2-heading-fixture.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-initial-empty-baseline.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-long-clear-history.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-long-fixture.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-mixed-case-fixture.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-offline-R2-reset.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-save-reload-R2-reset-text.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-startup-final-empty-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J00-startup-observer-stopped.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-history-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-current-all-history-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-empty-no-match-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-empty-no-match-R2-paste-no-insertion.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-empty-no-match-R3.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-fast-type-stale-match-probe.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-folded-descendant-find-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-folded-descendant-find-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-case-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-heading-default-case-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-more-availability-inspection.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-reopen-retained-fields-observation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-soft-crossblock-paste-no-insertion-probe.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-soft-crossblock-physical-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-soft-crossblock-physical-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J01-startup-find-focus-probe.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J02-comment-draft-prepared.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J02-local-anchor-workflow-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J02-local-anchor-workflow-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-return-edit-mode-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-return-edit-mode-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-bold-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-convert-heading-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-delete-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-accept-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-insert-reject-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-ordered-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-paragraph-break-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J03-revision-soft-break-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-after-expanded.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-after.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-before.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R1-operation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R2-after.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R2-before.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J04-heading-save-reload-R2-operation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Chrome.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R1-Quark.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Chrome.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J05-local-remote-history-R2-Quark.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R1-online-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R1-operation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R2-Quark-independent.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R2-online-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-reconnect-R2-operation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-refresh-R1-after.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J06-offline-refresh-R2-after.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J08-long-R2-session-metadata.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J08-long-find-replace-history-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J08-long-find-replace-history-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J08-narrow-emulation-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J09-markdown-export-R1.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J09-markdown-export-R2.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J09-markdown-export-R3.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J09-markdown-export-R4.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J09-mixed-word-R1-settings.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-after.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-before.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-confirmation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-continue.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R1-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-after.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-before.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-confirmation.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-continue.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J10-history-restore-R2-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J24-R1-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "J24-workflow-R1-before-reload.json canonical hash",
+      "passed": true
+    },
+    {
+      "name": "10-acceptance-and-gaps.md at most 500 lines",
+      "passed": true
+    },
+    {
+      "name": "10-acceptance-and-gaps.md link ./10-related-features-and-edge-cases.md",
+      "passed": true
+    },
+    {
+      "name": "10-acceptance-and-gaps.md link ../ym-research-task.md",
+      "passed": true
+    },
+    {
+      "name": "10-acceptance-and-gaps.md link ../09-undo-redo-and-history-boundaries/09-remaining-acceptance-map.json",
+      "passed": true
+    },
+    {
+      "name": "10-acceptance-and-gaps.md link ../09-undo-redo-and-history-boundaries/09-remaining-acceptance-map.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md at most 500 lines",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ../ym-research-task.md",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ../09-undo-redo-and-history-boundaries/09-final-delivery-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ../09-undo-redo-and-history-boundaries/09-history-contracts.md",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ../09-undo-redo-and-history-boundaries/09-remaining-acceptance-map.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-initial-empty-baseline.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-empty-no-match-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-empty-no-match-R3.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-before-fresh-repeat-empty-reload.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-startup-find-focus-probe.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-reopen-retained-fields-observation.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-empty-no-match-R2-paste-no-insertion.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-startup-observer-stopped.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-startup-final-empty-reload.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-startup-interface-restored.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-startup-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-current-all-history-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-current-all-history-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-find-workflow-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-Alpha-Alpha-fixture.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-current-all-before-R2-reload.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-heading-default-case-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-heading-default-case-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-mixed-case-fixture.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-more-availability-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-folded-descendant-find-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-folded-descendant-find-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-folded-find-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-folded-search-fixture.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-insert-reject-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-insert-reject-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-insert-accept-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-insert-accept-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-revision-insert-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-convert-heading-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-convert-heading-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-revision-structure-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-delete-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-delete-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-bold-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-bold-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-revision-format-break-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-paragraph-break-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-paragraph-break-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-soft-break-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-soft-break-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-revision-soft-ordered-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-ordered-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-revision-ordered-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-return-edit-mode-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J03-return-edit-mode-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J02-local-anchor-workflow-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J02-local-anchor-workflow-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-comment-R2-clean-anchor.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-markdown-export-R3.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-markdown-export-R4.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-comment-export-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./J09-downloaded-markdown-complete-pair.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-markdown-export-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-markdown-export-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J04-heading-save-reload-R1-operation.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J04-heading-save-reload-R2-operation.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-save-reload-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J04-heading-save-reload-R1-after-expanded.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-history-restore-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J06-offline-reconnect-R1-operation.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J06-offline-reconnect-R2-operation.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-offline-reconnect-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J06-offline-refresh-R2-confirmed-native.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J06-offline-reconnect-R2-Quark-independent.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-collaboration-history-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-soft-crossblock-physical-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-soft-crossblock-physical-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-crossline-highlight-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-crossline-search-fixture-v2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-soft-crossblock-paste-no-insertion-probe.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-fast-type-stale-match-probe.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J01-fast-type-visible-mismatch.png",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-crossline-allselect-probe.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-long-find-replace-history-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-long-find-replace-history-R2.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-long-virtualization-audit.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./J08-long-fixture-source.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-long-fixture.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-R1-undo-alpha-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-R1-redo-beta-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-R2-undo-alpha-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-R2-redo-beta-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J08-narrow-emulation-R1.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-long-clear-history.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J00-long-clear-undo-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J24-workflow-R1-before-reload.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J24-R1-reload.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-mixed-word-R1-settings.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-mixed-word-R1-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./exports/J09-mixed-R1.docx",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./dom/J09-mixed-pdf-R1-download.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./exports/J09-mixed-R1.pdf",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-export-first-round-inspection.json",
+      "passed": true
+    },
+    {
+      "name": "10-related-features-and-edge-cases.md link ./10-acceptance-and-gaps.md",
+      "passed": true
+    },
+    {
+      "name": "word actual downloaded artifact hash",
+      "passed": true
+    },
+    {
+      "name": "word download is from this request",
+      "passed": true
+    },
+    {
+      "name": "pdf actual downloaded artifact hash",
+      "passed": true
+    },
+    {
+      "name": "pdf download is from this request",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "pending": [
+    "S10 foreground exception awaiting explicit human answer",
+    "Mixed workflow second round and post-reload continuation",
+    "Word/PDF second round; full PDF setting evidence still in browser variable",
+    "Final empty cleanup and Chrome/Quark two independent reload reads",
+    "J01-J24 limits remain unaccepted; no overall completion marks"
+  ],
+  "currentRemoteFixture": "9 mixed target blocks with H1/H9, nested ordered, bullet, quote and trailing empty paragraph; empty page title",
+  "projectRuntimeExecuted": false,
+  "businessCodeChanged": false
+}

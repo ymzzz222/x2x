@@ -1,0 +1,184 @@
+{
+  "date": "2026-10-26",
+  "newPairs": 3,
+  "totalS10Pairs": 15,
+  "scope": "Return to ordinary editing; local comment anchor workflow; plain Markdown export only, not reimport",
+  "files": [
+    {
+      "file": "dom/J03-return-edit-mode-R1.json",
+      "sha256": "ae2e032feeb1e6d1e790b83bf549aaf6ac983e41bbe365699889af29d947ff72"
+    },
+    {
+      "file": "dom/J03-return-edit-mode-R2.json",
+      "sha256": "acbfe981f413055ba9df55196c6b60f846bd4047623deec0c5bcd056291998d5"
+    },
+    {
+      "file": "dom/J02-local-anchor-workflow-R1.json",
+      "sha256": "d067382a6aad4abfbb22dd5ad5d2066ba3230f51a37f26294b035b82945db6c8"
+    },
+    {
+      "file": "dom/J02-local-anchor-workflow-R2.json",
+      "sha256": "52268e127082c6058669c0972f97e1fe0b9ab9adb0528179795ea7661111505a"
+    },
+    {
+      "file": "dom/J09-markdown-export-R3.json",
+      "sha256": "dced656a75995e8c644cef1c8e917973629087c4737266e5a8587738eddd0a1b"
+    },
+    {
+      "file": "dom/J09-markdown-export-R4.json",
+      "sha256": "08c3144d93adadce843796cc9e7272c5f476e02bbba61f4bb95e69060ac7a4cf"
+    }
+  ],
+  "checks": [
+    {
+      "name": "J03-return-edit-mode-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 return edit exact words",
+      "passed": true
+    },
+    {
+      "name": "R1 no revision marker ordinary edits",
+      "passed": true
+    },
+    {
+      "name": "R1 roots empty title no errors",
+      "passed": true
+    },
+    {
+      "name": "J03-return-edit-mode-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 return edit exact words",
+      "passed": true
+    },
+    {
+      "name": "R2 no revision marker ordinary edits",
+      "passed": true
+    },
+    {
+      "name": "R2 roots empty title no errors",
+      "passed": true
+    },
+    {
+      "name": "J02-local-anchor-workflow-R1 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R1 exact comment workflow semantics",
+      "passed": true
+    },
+    {
+      "name": "R1 anchor text trajectory",
+      "passed": true
+    },
+    {
+      "name": "R1 current card visibility",
+      "passed": true
+    },
+    {
+      "name": "R1 same comment identity across transitions",
+      "passed": true
+    },
+    {
+      "name": "R1 protected title roots and original blocks",
+      "passed": true
+    },
+    {
+      "name": "R1 no overflow",
+      "passed": true
+    },
+    {
+      "name": "R1 tool errors identified separately",
+      "passed": true
+    },
+    {
+      "name": "J02-local-anchor-workflow-R2 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R2 exact comment workflow semantics",
+      "passed": true
+    },
+    {
+      "name": "R2 anchor text trajectory",
+      "passed": true
+    },
+    {
+      "name": "R2 current card visibility",
+      "passed": true
+    },
+    {
+      "name": "R2 same comment identity across transitions",
+      "passed": true
+    },
+    {
+      "name": "R2 protected title roots and original blocks",
+      "passed": true
+    },
+    {
+      "name": "R2 no overflow",
+      "passed": true
+    },
+    {
+      "name": "R2 tool errors identified separately",
+      "passed": true
+    },
+    {
+      "name": "comment paired semantic trajectories",
+      "passed": true
+    },
+    {
+      "name": "J09-markdown-export-R3 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R3 export body title identity unchanged",
+      "passed": true
+    },
+    {
+      "name": "R3 settings default text only",
+      "passed": true
+    },
+    {
+      "name": "R3 browser completed file",
+      "passed": true
+    },
+    {
+      "name": "R3 export no overflow",
+      "passed": true
+    },
+    {
+      "name": "J09-markdown-export-R4 canonical hash",
+      "passed": true
+    },
+    {
+      "name": "R4 export body title identity unchanged",
+      "passed": true
+    },
+    {
+      "name": "R4 settings default text only",
+      "passed": true
+    },
+    {
+      "name": "R4 browser completed file",
+      "passed": true
+    },
+    {
+      "name": "R4 export no overflow",
+      "passed": true
+    },
+    {
+      "name": "two actual distinct downloaded files exact bytes",
+      "passed": true
+    },
+    {
+      "name": "markdown hierarchy and empty title syntax",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "incidents": "R1 comment span focus probe and early R1 export locator error and R1/R2 incomplete setting DOM retained separately; effective export R3/R4; no duplicate input/export or comment send"
+}
