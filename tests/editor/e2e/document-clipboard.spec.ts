@@ -1,5 +1,6 @@
 import { expect, test, type Locator, type Page } from "@playwright/test";
 import { copyClipboard, cutClipboard, pasteClipboard } from "./editor-clipboard";
+import { seedBlank, block, handle, activate } from "./editor-page";
 import { createDocument } from "../../../src/features/document-editor/model/document-model";
 
 const origin = process.env.EDITOR_TEST_URL ?? "http://127.0.0.1:3100";
@@ -20,6 +21,79 @@ function count(page: Page) {
 async function paste(target: Locator, text: string, html = "") {
   await pasteClipboard(target, { text, html: html || undefined });
 }
+
+test("ED-25 a denied system clipboard write leaves the cut block intact", async ({ page }) => {
+  await page.addInitScript(() => {
+    const deny = () => Promise.reject(new DOMException("QA denied write", "NotAllowedError"));
+    Object.defineProperties(navigator.clipboard, { write: { value: deny }, writeText: { value: deny } });
+  });
+  const surface = await seedBlank(page, "<p>Keep this block</p><p>Keep its neighbor</p>");
+  await handle(page, 0).click({ force: true });
+  await page.getByRole("button", { name: "剪切块", exact: true }).click();
+  await expect(page.getByText("无法写入剪贴板", { exact: true })).toBeVisible();
+  await expect(surface.locator("[data-block-index]")).toHaveCount(2);
+  await expect(block(page, 0)).toContainText("Keep this block");
+  await expect(block(page, 1)).toContainText("Keep its neighbor");
+});
+
+test("ED-26 foreign HTML preserves supported marks without importing annotation identity", async ({ page }) => {
+  const surface = await seedBlank(page, "<p>Before</p>");
+  const editor = surface.locator(".tiptap");
+  await editor.press("End");
+  await pasteClipboard(editor, { html: '<p><mark data-comment-id="foreign-note"><strong>批注文字</strong></mark></p><p><em>第二段</em></p>' });
+  await expect(surface.locator("strong")).toHaveText("批注文字");
+  await expect(surface.locator("em")).toHaveText("第二段");
+  await expect(surface.locator("[data-comment-id]")).toHaveCount(0);
+  await surface.press("ControlOrMeta+a");
+  await surface.press("ControlOrMeta+a");
+  const copied = await copyClipboard(surface);
+  expect(copied.text).toBe("Before\n批注文字\n第二段");
+  expect(copied.html).not.toContain("foreign-note");
+});
+
+for (const length of [99_999, 100_000, 100_001]) {
+  test(`ED-27 pastes ${length} characters without truncation and restores the whole operation`, async ({ page }) => {
+    const surface = await seedBlank(page, "<p>边界</p>");
+    const title = await page.getByRole("heading").first().textContent();
+    const editor = surface.locator(".tiptap");
+    await editor.press("ControlOrMeta+a");
+    const payload = "a".repeat(length - 1) + "z";
+    await pasteClipboard(editor, { text: payload });
+    await expect.poll(() => block(page, 0).evaluate((row) => {
+      const text = row.querySelector(".tiptap, [data-block-text]")?.textContent ?? "";
+      return [text.length, text.at(-1)];
+    })).toEqual([length, "z"]);
+    await surface.press("ControlOrMeta+z");
+    await expect(block(page, 0)).toContainText("边界");
+    await surface.press("ControlOrMeta+Shift+z");
+    await expect.poll(() => block(page, 0).evaluate((row) =>
+      row.querySelector(".tiptap, [data-block-text]")?.textContent?.length)).toBe(length);
+    await expect(page.getByRole("heading").first()).toHaveText(title!);
+  });
+}
+
+test("ED-29 plain clipboard normalizes Unicode, keeps graphemes and rejects full-width Markdown", async ({ page }) => {
+  await page.goto(origin + "/editor?new=1");
+  const surface = body(page);
+  await surface.press("Enter");
+  const editor = surface.locator(".tiptap");
+  await expect(editor).toBeFocused();
+  await pasteClipboard(editor, { text: "中文e\u0301\t零\u200B宽\u200D😀" });
+  await expect(block(page, 0)).toContainText("零宽😀");
+  await surface.press("ControlOrMeta+a");
+  expect((await copyClipboard(surface)).text).toBe("中文é        零宽😀");
+  const active = await activate(page, 0);
+  await active.press("End");
+  await page.keyboard.press("Backspace");
+  await expect(active).toHaveText("中文é 零宽", { useInnerText: true });
+  await page.keyboard.press("Enter");
+  await expect(block(page, 1).locator(".tiptap")).toBeFocused();
+  await page.keyboard.insertText("＃");
+  await page.keyboard.press("Space");
+  await page.keyboard.insertText("中文");
+  await expect(block(page, 1)).toContainText("＃ 中文");
+  await expect(block(page, 1).locator("[data-heading-level]")).toHaveCount(0);
+});
 
 test("native cut and paste restore all 50万字 from virtual rows and undo each operation once", async ({ page, context }) => {
   test.setTimeout(60_000);

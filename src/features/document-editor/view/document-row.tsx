@@ -31,16 +31,16 @@ type RowProps = {
   session: DocumentSession;
   peers?: readonly OnlineCollaborator[];
   activeEditor?: RefObject<ActiveBlockHandle | null>;
-  children?: ReactNode;
+  renderEditor?: (preview: ReactNode) => ReactNode;
 };
 
 export function DocumentRow({ item, block, documentIndex, tools, editable, onClick, measure, section, branch, collapsed, onToggle,
-  selection, matches, currentMatch, showEmptyHint, session, peers, activeEditor, children }: RowProps) {
+  selection, matches, currentMatch, showEmptyHint, session, peers, activeEditor, renderEditor }: RowProps) {
   const cursors = useMemo(() => peers?.filter((peer) => peer.cursor?.blockId === block.id), [block.id, peers]);
   const fold = section && section.end > section.index + 1 ? section : undefined;
   const showHandles = editable && !tools.textSelected;
   const number = section?.numbering?.label;
-  const content = children || <div className={styles.preview}>
+  const preview = <div className={styles.preview}>
     {showEmptyHint && <span className={styles.emptyParagraphHint} aria-hidden="true">输入正文…</span>}
     <PreviewText block={block} selection={selection} matches={matches} current={currentMatch} />
   </div>;
@@ -66,7 +66,7 @@ export function DocumentRow({ item, block, documentIndex, tools, editable, onCli
           event.stopPropagation();
           tools.open(block.id, "heading-number", event.currentTarget, event.detail === 0 ? "keyboard" : "pointer");
         }}>{number}</button> : <span className={styles.headingNumber} data-heading-number={number}>{number}</span>)}
-    {content}
+    {renderEditor ? renderEditor(preview) : preview}
     {cursors?.length ? <CollaboratorCursors block={block} session={session} peers={cursors} activeEditor={activeEditor} /> : null}
   </div>;
 }

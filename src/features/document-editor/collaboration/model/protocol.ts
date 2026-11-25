@@ -20,6 +20,7 @@ export function collaboratorColor(id: string) {
 
 export const sharedSchemaVersion = 1;
 export const maximumUpdateBytes = 2_200_000;
+export const maximumRealtimeUpdateChars = 65_536;
 
 export type DocumentRole = "view" | "edit" | "manage";
 
@@ -34,6 +35,7 @@ export type DocumentPage = { items: DocumentSummary[]; nextCursor: string | null
 export type DocumentCreateInput = { title: string; sample?: SampleSize | "empty"; workspace?: string };
 
 export type CommittedUpdate = { seq: number; data: string };
+export type DocumentUpdateNotice = { cursor: number; generation: number; schema: number; data: string };
 export type DocumentRead = DocumentSummary & {
   owner: boolean;
   generation: number;

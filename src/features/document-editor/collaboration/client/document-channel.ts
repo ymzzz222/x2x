@@ -4,6 +4,7 @@ import type { DocumentRead } from "../model/protocol";
 type Options = {
   client: SupabaseClient;
   refresh: () => void;
+  receiveUpdate?: (payload: unknown) => boolean;
   presence?: {
     sync: (channel: RealtimeChannel) => void;
     cursor: (payload: unknown) => void;
@@ -57,7 +58,7 @@ export class DocumentChannel {
   private join() {
     const meta = this.meta;
     if (!meta || this.channel || !navigator.onLine) return;
-    const { client, presence, refresh } = this.options;
+    const { client, presence, refresh, receiveUpdate } = this.options;
     const topic = "x2x-doc:" + meta.id + ":" + meta.accessVersion;
     if (client.getChannels().some((channel) => channel.topic === "realtime:" + topic)) {
       this.scheduleFallback();
@@ -65,7 +66,9 @@ export class DocumentChannel {
     }
     const channel = client.channel(topic, { config: { private: true } });
     this.channel = channel;
-    channel.on("broadcast", { event: "saved" }, () => { if (this.channel === channel) refresh(); })
+    channel.on("broadcast", { event: "saved" }, ({ payload }) => {
+      if (this.channel === channel && !receiveUpdate?.(payload)) refresh();
+    })
       .on("broadcast", { event: "access" }, () => {
         if (this.channel !== channel) return;
         this.closeChannel();

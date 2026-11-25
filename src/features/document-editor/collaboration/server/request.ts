@@ -94,7 +94,11 @@ export async function documentResponse(request: Request, action: (actor: ActorCo
   const headers = { "Cache-Control": "private, no-store", Vary: "Authorization", "X-Request-Id": requestId };
   try {
     const context = await authenticate(request, requestId);
-    return Response.json(await action(context), { status, headers });
+    const authenticatedAt = performance.now();
+    const data = await action(context);
+    const authMs = Math.round(authenticatedAt - start);
+    const handlerMs = Math.round(performance.now() - authenticatedAt);
+    return Response.json(data, { status, headers: { ...headers, "Server-Timing": `auth;dur=${authMs}, handler;dur=${handlerMs}` } });
   } catch (error) {
     if (!(error instanceof DocumentRequestError)) console.error("Document request failed", { requestId, type: error instanceof Error ? error.name : "unknown" });
     const failure = error instanceof DocumentRequestError ? error : new DocumentRequestError(500, "REQUEST_FAILED");

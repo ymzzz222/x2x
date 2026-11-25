@@ -2,7 +2,7 @@
 
 import { ySyncPlugin, yXmlFragmentToProseMirrorRootNode } from "@tiptap/y-tiptap";
 import { EditorContent, Extension, useEditor, type Editor, type JSONContent } from "@tiptap/react";
-import { useEffect, useImperativeHandle, useMemo, useRef, useState, type Ref } from "react";
+import { useEffect, useImperativeHandle, useMemo, useRef, useState, type ReactNode, type Ref } from "react";
 import * as Y from "yjs";
 import { normalizePastedText } from "../model/document-clipboard";
 import { documentExtensions, documentSchema, offsetAt, positionAtOffset } from "../model/document-editor-schema";
@@ -35,6 +35,7 @@ export type ActiveBlockHandle = {
 type ActiveBlockProps = {
   blockId: string;
   fragment: Y.XmlFragment;
+  preview: ReactNode;
   composing: boolean;
   onCompositionChange: (composing: boolean) => void;
   onCursor: (anchor: number, focus: number, composing: boolean, slash: SlashInput | null) => void;
@@ -59,7 +60,7 @@ function focusEditorAt(editor: Editor, { offset, scrollIntoView, columnX }: Focu
   if (scrollIntoView) editor.commands.scrollIntoView();
 }
 
-export function ActiveBlockEditor({ blockId, fragment, composing, onCompositionChange, onCursor, onBlur, ref }: ActiveBlockProps) {
+export function ActiveBlockEditor({ blockId, fragment, preview, composing, onCompositionChange, onCursor, onBlur, ref }: ActiveBlockProps) {
   const local = fragment.doc!;
   const peerRef = useRef<Y.Doc | null>(null);
   const [converged, setConverged] = useState(true);
@@ -151,8 +152,10 @@ export function ActiveBlockEditor({ blockId, fragment, composing, onCompositionC
     },
     focusAt(offset, scrollIntoView = false, columnX) {
       const request = { offset, scrollIntoView, columnX };
-      if (editor?.view.dom.isConnected) focusEditorAt(editor, request);
-      else pendingFocus.current = request;
+      if (editor?.view.dom.isConnected) {
+        pendingFocus.current = null;
+        focusEditorAt(editor, request);
+      } else pendingFocus.current = request;
     },
     coordsAt(offset) {
       if (!editor || editor.isDestroyed || !editor.view.dom.isConnected) return null;
@@ -248,6 +251,8 @@ export function ActiveBlockEditor({ blockId, fragment, composing, onCompositionC
     if (settleTimer.current !== null) window.clearTimeout(settleTimer.current);
     settleTimer.current = window.setTimeout(settle, COMPOSITION_SETTLE_DELAY);
   }
+
+  if (!editor) return preview;
 
   return (
     <div

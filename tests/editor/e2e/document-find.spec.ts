@@ -76,6 +76,9 @@ test("search expands folded headings and cycles through unmounted matches in a 5
   await page.mouse.wheel(0, 400);
   await expect.poll(() => body(page).evaluate((element) => element.scrollTop)).toBeGreaterThan(scrollTop);
   await expect(dialog).toBeVisible();
+  await query.fill("不存在的回归测试查询");
+  await expect(findCount(page)).toHaveText("0 / 0");
+  await expect(body(page).locator("[data-find-match]")).toHaveCount(0);
   await query.press("Escape");
   await expect(query).toHaveCount(0);
   await expect(body(page)).toBeFocused();

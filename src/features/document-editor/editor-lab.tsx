@@ -5,6 +5,8 @@ import { defaultRangeExtractor, useVirtualizer } from "@tanstack/react-virtual";
 import dynamic from "next/dynamic";
 import {
   Fragment,
+  Suspense,
+  lazy,
   useCallback,
   useEffect,
   useEffectEvent,
@@ -45,9 +47,8 @@ import styles from "./editor.module.css";
 import { useDocumentBlocks } from "./editing/use-document-blocks";
 import { positionFromPoint, selectedRowRange, useDocumentSelection } from "./editing/use-document-selection";
 
-const ActiveBlockEditor = dynamic(
-  () => import("./editing/active-block-editor").then((module) => module.ActiveBlockEditor),
-  { ssr: false },
+const ActiveBlockEditor = lazy(
+  () => import("./editing/active-block-editor").then((module) => ({ default: module.ActiveBlockEditor })),
 );
 const EditorBaseline = dynamic(
   () => import("./editing/active-block-editor").then((module) => module.EditorBaseline),
@@ -469,18 +470,21 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
                       matches={find.byBlock.get(block.id)}
                       currentMatch={find.activeMatch?.blockId === block.id ? find.activeMatch : undefined}
                       showEmptyHint={editable && !shared && !size && !block.text && !block.structure}
-                      session={session} peers={shared?.collaborators} activeEditor={active ? activeEditor : undefined}>
-                      {active && <ActiveBlockEditor key={block.id} ref={attachEditor} blockId={block.id} fragment={active}
-                        composing={composing} onCompositionChange={setComposing}
-                        onBlur={() => shared?.onCursor?.(null)} onCursor={(anchor, offset, composing, slash) => {
-                          const position = { blockId: block.id, offset };
-                          blockTools.observeSlash(block.id, slash);
-                          session.setLocation({ position, editing: true });
-                          if (!composing) shared?.onCursor?.(position);
-                          setSelection((current) => anchor === offset && current?.anchor.offset === current?.focus.offset
-                            ? current : { anchor: { blockId: block.id, offset: anchor }, focus: position });
-                        }} />}
-                    </DocumentRow>
+                      session={session} peers={shared?.collaborators} activeEditor={active ? activeEditor : undefined}
+                      renderEditor={active ? (preview) => (
+                        <Suspense fallback={preview}>
+                          <ActiveBlockEditor key={block.id} ref={attachEditor} blockId={block.id} fragment={active}
+                            preview={preview} composing={composing} onCompositionChange={setComposing}
+                            onBlur={() => shared?.onCursor?.(null)} onCursor={(anchor, offset, composing, slash) => {
+                              const position = { blockId: block.id, offset };
+                              blockTools.observeSlash(block.id, slash);
+                              session.setLocation({ position, editing: true });
+                              if (!composing) shared?.onCursor?.(position);
+                              setSelection((current) => anchor === offset && current?.anchor.offset === current?.focus.offset
+                                ? current : { anchor: { blockId: block.id, offset: anchor }, focus: position });
+                            }} />
+                        </Suspense>
+                      ) : undefined} />
                   ) };
                 })} />
             ) : (
