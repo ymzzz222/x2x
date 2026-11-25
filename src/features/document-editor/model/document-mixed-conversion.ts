@@ -99,9 +99,12 @@ export function convertMixedHierarchy(affected: readonly DocumentBlock[], target
   toggleSameType: boolean;
 }) {
   const singleRow = affected.length === 1;
-  if (!affected.length || (singleRow && (startOffset === endOffset || target.type === "blockquote")) ||
+  const structure = affected[0]?.structure;
+  const quote = structure?.childCount === 1 ? structure.firstChild : null;
+  const quoteWithMultipleBlocks = singleRow && quote?.type.name === "blockquote" && quote.childCount > 1;
+  if (!affected.length || (singleRow && (startOffset === endOffset || (target.type === "blockquote" && !quoteWithMultipleBlocks))) ||
     !["paragraph", "heading", "orderedList", "bulletList", "blockquote"].includes(target.type) ||
-    !affected.some((block) => typeof block.parentId === "string" || hasNestedContent(block))) return;
+    (!quoteWithMultipleBlocks && !affected.some((block) => typeof block.parentId === "string" || hasNestedContent(block)))) return;
 
   const bySource = new Map<string, Leaf[]>();
   const leaves = affected.flatMap((block, index) => {
@@ -114,7 +117,8 @@ export function convertMixedHierarchy(affected: readonly DocumentBlock[], target
     return current;
   });
   if (singleRow && leaves.filter((leaf) => leaf.selected).length < 2) return;
-  let changed = leaves.length !== affected.length;
+  // An input quote can contain several text blocks in one row. Only split it when the command changes its content.
+  let changed = !quoteWithMultipleBlocks && leaves.length !== affected.length;
   if (target.type === "blockquote") {
     const quoted = editQuoteGroups(leaves, toggleSameType, nextId);
     changed = quoted;

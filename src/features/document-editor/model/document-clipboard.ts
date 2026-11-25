@@ -222,9 +222,13 @@ export function planRangeEdit(first: Node, last: Node, from: number, to: number,
 
   if (edit === "split") {
     const firstAfter = right.firstChild;
-    const continuation = firstAfter?.type === schema.nodes.heading
-      ? schema.nodes.paragraph.create(null, firstAfter.content)
-      : firstAfter ?? schema.nodes.paragraph.create();
+    let continuation = firstAfter ?? schema.nodes.paragraph.create();
+    if (firstAfter?.type === schema.nodes.heading) {
+      const insideHeading = first === last && first.childCount === 1 && from > 0 && after.length > 0;
+      continuation = insideHeading
+        ? firstAfter.type.create({ ...firstAfter.attrs, numberStart: firstAfter.attrs.numberStart === null ? null : 0 }, firstAfter.content)
+        : schema.nodes.paragraph.create(null, firstAfter.content);
+    }
     return { nodes: [...left.content, continuation, ...right.content.slice(1)], caret: left.childCount, offset: 0 };
   }
 

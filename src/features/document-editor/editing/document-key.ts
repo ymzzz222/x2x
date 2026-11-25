@@ -72,12 +72,18 @@ export function documentKey(event: KeyboardEvent<HTMLDivElement>, {
     const editor = readEditor();
     const caret = editor?.selection();
     if (!caret) return;
+    const current = blocks[activeIndex];
+    const following = blocks[activeIndex + 1];
     const anchor = { blockId: activeId, offset: caret.anchor };
     const focus = { blockId: activeId, offset: caret.focus };
-    if (blocks[activeIndex].structure && (key === "backspace" || key === "enter")) return;
+    if (current.structure && (key === "backspace" || key === "enter")) return;
     if (key === "backspace" && !event.shiftKey && !caret.anchor && !caret.focus && activeIndex > 0) {
       const previous = blocks[activeIndex - 1];
       replaceRange({ anchor: { blockId: previous.id, offset: previous.text.length }, focus }, "delete");
+    } else if (key === "delete" && !event.shiftKey && caret.anchor === caret.focus && caret.focus === current.text.length &&
+      current.kind === "paragraph" && !current.structure && following?.kind === "paragraph" && !following.structure &&
+      current.quoteGroup === following.quoteGroup && current.parentId === following.parentId) {
+      replaceRange({ anchor, focus: { blockId: following.id, offset: 0 } }, "delete");
     } else if (key === "enter" && !event.shiftKey) {
       replaceRange({ anchor, focus }, "split");
     } else if (key === "arrowleft" || key === "arrowright" || key === "arrowup" || key === "arrowdown") {

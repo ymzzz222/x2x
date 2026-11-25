@@ -1,4 +1,4 @@
-import { Extension, getSchema, Mark } from "@tiptap/core";
+import { Extension, getSchema, InputRule, Mark, markInputRule } from "@tiptap/core";
 import Heading, { type Level } from "@tiptap/extension-heading";
 import type { Node, Schema } from "@tiptap/pm/model";
 import StarterKit from "@tiptap/starter-kit";
@@ -84,9 +84,52 @@ const paragraphAttributes = Extension.create({
   },
 });
 
+const spaceTerminatedMarkdown = new Map([
+  ["bold", "**text**"],
+  ["italic", "*text*"],
+  ["strike", "~~text~~"],
+]);
+
+function preserveMarkdownSpace(rule: InputRule, find: RegExp) {
+  return new InputRule({
+    find,
+    undoable: rule.undoable,
+    handler: (params) => {
+      const { range, state } = params;
+      const { tr } = state;
+      const spaceMarks = tr.doc.resolve(range.to).nodeBefore?.marks;
+      const result = rule.handler(params);
+      if (tr.docChanged) tr.insert(tr.mapping.map(range.to), state.schema.text(" ", spaceMarks));
+      return result;
+    },
+  });
+}
+
+const DocumentStarterKit = StarterKit.extend({
+  addExtensions() {
+    return (this.parent?.() ?? []).map((extension) => {
+      const example = spaceTerminatedMarkdown.get(extension.name);
+      if (!example && extension.name !== "underline") return extension;
+      return extension.extend({
+        addInputRules() {
+          if (this.name === "underline") {
+            const find = /(?:^|\s)~([^~\s](?:[^~\n]*[^~\s])?)~ (?![\s\S])/;
+            return [preserveMarkdownSpace(markInputRule({ find, type: this.editor.schema.marks.underline }), find)];
+          }
+          return (this.parent?.() ?? []).map((rule) => {
+            const { find } = rule;
+            if (!(find instanceof RegExp) || !example || !find.test(example)) return rule;
+            return preserveMarkdownSpace(rule, new RegExp(find.source.replace(/\$$/, " (?![\\s\\S])"), find.flags));
+          });
+        },
+      });
+    });
+  },
+});
+
 export function documentExtensions(undoRedo: boolean) {
   return [
-    StarterKit.configure({ undoRedo: undoRedo ? {} : false, heading: false, trailingNode: false, link: { openOnClick: false, defaultProtocol: "https" } }),
+    DocumentStarterKit.configure({ undoRedo: undoRedo ? {} : false, heading: false, trailingNode: false, link: { openOnClick: false, defaultProtocol: "https" } }),
     DocumentHeading,
     DocumentCallout, DocumentColumns, DocumentColumn, DocumentBulletStyle,
     paragraphAttributes,
