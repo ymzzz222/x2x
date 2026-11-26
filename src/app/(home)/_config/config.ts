@@ -1,7 +1,9 @@
 import {
   ClockIcon,
+  EditorIcon,
   FolderIcon,
   GithubIcon,
+  HistoryIcon,
   ReceiveIcon,
   SendIcon,
   TextIcon,
@@ -11,10 +13,12 @@ import {
 export const navItems = [
   { id: "file", label: "文件", icon: FolderIcon },
   { id: "text", label: "文本", icon: TextIcon },
-  { id: "github", label: "GitHub", icon: GithubIcon, link: "https://github.com/ymzzz222/x2x" },
+  { id: "history", label: "历史", icon: HistoryIcon, link: "/history" },
+  { id: "editor", label: "文档编辑器", icon: EditorIcon, link: "/editor" },
+  { id: "github", label: "GitHub", icon: GithubIcon, link: "https://github.com/ymzzz222/x2x", external: true },
 ] as const;
 
-export type NavTab = (typeof navItems)[number]["id"];
+export type NavTab = Exclude<(typeof navItems)[number], { link: string }>["id"];
 
 export const roleItems = [
   {
@@ -75,7 +79,7 @@ export const styles = {
   container: "mx-auto flex w-full max-w-[1180px] gap-4",
 
   mobileBar:
-    "fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between px-4 md:hidden",
+    "fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between px-2 min-[360px]:px-4 md:hidden",
   mobileBarBack:
     "flex h-9 w-9 items-center justify-center rounded-xl border border-transparent text-white/50 transition-all active:scale-95 active:bg-white/[0.06]",
   mobileBarTitle: "text-sm font-medium text-white/70 tracking-wide",
@@ -85,7 +89,7 @@ export const styles = {
   nav: "flex flex-1 flex-col items-center justify-center gap-1.5",
   navItem: "group relative",
   navButton: {
-    base: "relative flex h-[44px] w-[44px] items-center justify-center rounded-[14px] border transition-all duration-300 ease-out hover:scale-105",
+    base: "relative flex h-[44px] w-[44px] items-center justify-center rounded-[14px] border transition-all duration-300 ease-out hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/80",
     active:
       "border-white/20 bg-white/[0.12] text-white shadow-[0_0_20px_rgba(255,255,255,0.06)]",
     inactive:
@@ -95,7 +99,7 @@ export const styles = {
   activeDot:
     "pointer-events-none absolute -right-px top-1/2 h-[7px] w-[7px] -translate-y-1/2 translate-x-[2px] rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.5)]",
   tooltip:
-    "pointer-events-none absolute left-full top-1/2 z-50 ml-3 -translate-y-1/2 whitespace-nowrap rounded-lg border border-white/10 bg-neutral-900/95 px-3 py-1.5 text-xs font-medium text-white/80 opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100 translate-x-[-4px]",
+    "pointer-events-none absolute left-1/2 top-full z-50 mt-1 -translate-x-1/2 whitespace-nowrap rounded-lg border border-white/10 bg-neutral-900/95 px-3 py-1.5 text-xs font-medium text-white/80 opacity-0 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out group-hover:opacity-100 group-focus-within:opacity-100 md:left-full md:top-1/2 md:mt-0 md:ml-3 md:-translate-x-1 md:-translate-y-1/2 md:group-hover:translate-x-0 md:group-focus-within:translate-x-0",
   aboutWrap: "pb-3",
   aboutLink:
     "flex h-[44px] w-[44px] items-center justify-center rounded-[14px] border border-transparent text-white/35 transition-all duration-300 ease-out hover:scale-105 hover:border-white/[0.1] hover:bg-white/[0.06] hover:text-white/65",

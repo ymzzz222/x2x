@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { navItems, styles, type NavTab } from "../_config/config";
 import { BackIcon, AboutIcon } from "../_config/icons";
 
@@ -12,6 +13,7 @@ export function Sidebar({ showBack, onBack, activeTab, onTabChange }: SidebarPro
   const renderNavItem = (item: (typeof navItems)[number], compact = false) => {
     const Icon = item.icon;
     const isActive = activeTab === item.id;
+    const isExternal = "external" in item;
 
     const className = [
       styles.navButton.base,
@@ -25,23 +27,31 @@ export function Sidebar({ showBack, onBack, activeTab, onTabChange }: SidebarPro
       </>
     );
 
-    if ("link" in item) {
-      return (
-        <div key={item.label} className={styles.navItem}>
-          <a href={item.link} target="_blank" rel="noopener noreferrer" className={className}>
-            {inner}
-          </a>
-          <span className={styles.tooltip}>{item.label}</span>
-        </div>
-      );
-    }
-
     return (
-      <div key={item.label} className={styles.navItem}>
-        <button type="button" onClick={() => onTabChange(item.id)} className={className}>
-          {inner}
-        </button>
-        <span className={styles.tooltip}>{item.label}</span>
+      <div key={item.id} className={styles.navItem}>
+        {"link" in item ? (
+          <Link
+            href={item.link}
+            prefetch={false}
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            className={className}
+            aria-label={item.label}
+          >
+            {inner}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            onClick={() => onTabChange(item.id)}
+            className={className}
+            aria-label={item.label}
+            aria-pressed={isActive}
+          >
+            {inner}
+          </button>
+        )}
+        <span className={styles.tooltip} aria-hidden="true">{item.label}</span>
       </div>
     );
   };
@@ -50,13 +60,13 @@ export function Sidebar({ showBack, onBack, activeTab, onTabChange }: SidebarPro
     <>
       {/* Mobile top bar */}
       <div className={styles.mobileBar}>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center min-[360px]:gap-2">
           {showBack && (
             <button type="button" onClick={onBack} className={styles.mobileBarBack}>
               <BackIcon />
             </button>
           )}
-          <nav className="flex items-center gap-1">
+          <nav aria-label="首页入口" className="flex items-center min-[360px]:gap-1">
             {navItems.map((item) => renderNavItem(item, true))}
           </nav>
         </div>
@@ -78,7 +88,7 @@ export function Sidebar({ showBack, onBack, activeTab, onTabChange }: SidebarPro
           </div>
         )}
 
-        <nav className={styles.nav}>
+        <nav aria-label="首页入口" className={styles.nav}>
           {navItems.map((item) => renderNavItem(item))}
         </nav>
 

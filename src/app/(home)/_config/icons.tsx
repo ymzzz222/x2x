@@ -34,6 +34,36 @@ export function TextIcon() {
   );
 }
 
+export function HistoryIcon() {
+  return (
+    <BaseIcon
+      viewBox="0 0 24 24"
+      className="h-[18px] w-[18px]"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 6.5c-2-1.5-4.75-2-8-1.25v12.5c3.25-.75 6-.25 8 1.25 2-1.5 4.75-2 8-1.25V5.25c-3.25-.75-6-.25-8 1.25Z" />
+      <path d="M12 6.5V19" />
+    </BaseIcon>
+  );
+}
+
+export function EditorIcon() {
+  return (
+    <BaseIcon
+      viewBox="0 0 24 24"
+      className="h-[18px] w-[18px]"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M11.5 5.25H6.75a1.5 1.5 0 0 0-1.5 1.5v10.5a1.5 1.5 0 0 0 1.5 1.5h10.5a1.5 1.5 0 0 0 1.5-1.5V12.5" />
+      <path d="M10 14l3-.75L20.25 6A1.59 1.59 0 0 0 18 3.75L10.75 11 10 14Zm7-9.25L19.25 7" />
+    </BaseIcon>
+  );
+}
+
 export function GithubIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px]" fill="currentColor">
