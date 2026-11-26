@@ -87,6 +87,41 @@ describe("grouped structural history", () => {
       document.destroy();
     }
   });
+
+  it("keeps callout children, numbering, and row identity together in a replicated undoable conversion", () => {
+    const schema = documentSchema();
+    const paragraph = (text: string) => schema.nodes.paragraph.create(null, schema.text(text));
+    const ordered = schema.nodes.orderedList.create({ start: 7 }, ["second", "third"].map((text) =>
+      schema.nodes.listItem.create(null, paragraph(text))));
+    const session = new DocumentSession([
+      { id: "first", text: "first", kind: "paragraph" },
+      { id: "list", text: "second\nthird", kind: "paragraph", structure: schema.topNodeType.create(null, ordered) },
+      { id: "guard", text: "guard", kind: "paragraph" },
+    ], true);
+    const reader = DocumentSession.fromUpdates([session.encodeSnapshot()]);
+    const disconnect = session.onLocalUpdate((update) => reader.applySharedUpdates([update]));
+    function assertGroup() {
+      const saved = reader.getBlocks();
+      expect(saved.map(({ text }) => text)).toEqual(["first", "second", "third", "guard"]);
+      expect(saved.map(({ id }) => id).filter((id) => ["first", "list", "guard"].includes(id))).toEqual(["first", "list", "guard"]);
+      expect(saved[0].calloutGroup).toBeTruthy();
+      expect(saved.map(({ calloutGroup }) => calloutGroup)).toEqual([saved[0].calloutGroup, saved[0].calloutGroup, saved[0].calloutGroup, undefined]);
+      expect(saved.slice(1, 3).map(({ structure }) => structure?.firstChild?.attrs.start)).toEqual([1, 2]);
+    }
+    try {
+      session.editBlockType({ anchor: { blockId: "first", offset: 1 }, focus: { blockId: "list", offset: 10 } }, { type: "callout" });
+      assertGroup();
+      session.undo(false);
+      expect(reader.getBlocks().map(({ calloutGroup }) => calloutGroup)).toEqual([undefined, undefined, undefined]);
+      expect(reader.getBlocks()[1].structure?.firstChild?.attrs.start).toBe(7);
+      session.undo(true);
+      assertGroup();
+    } finally {
+      disconnect();
+      reader.destroy();
+      session.destroy();
+    }
+  });
 });
 
 describe("single block type toggles", () => {

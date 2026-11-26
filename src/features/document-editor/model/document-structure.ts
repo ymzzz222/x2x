@@ -163,7 +163,8 @@ export function convertBlocks(affected: readonly DocumentBlock[], target: BlockK
   const toggleLists = toggleSameType && (target.type === "orderedList" || target.type === "bulletList") &&
     (!single || wholeRows) && affected.every((block) => simpleListBlock(block, target.type, wholeRows));
   const numberHeadings = target.type === "heading" && (!single || wholeRows) &&
-    affected.every((block) => simpleListBlock(block, "orderedList", wholeRows));
+    (wholeRows ? affected.some((block) => simpleListBlock(block, "orderedList", true)) :
+      affected.every((block) => simpleListBlock(block, "orderedList", false)));
   const replacement: { id: string; node: PMNode; quoteGroup: string | null }[] = [];
   const splitRows = new Map<string, { id: string; node: PMNode }[]>();
   let changed = !affected.length;
@@ -173,7 +174,7 @@ export function convertBlocks(affected: readonly DocumentBlock[], target: BlockK
     let nodes: readonly PMNode[];
     if (block && toggleLists) {
       nodes = unwrap(doc.firstChild!);
-    } else if (block && numberHeadings) {
+    } else if (block && numberHeadings && simpleListBlock(block, "orderedList", wholeRows)) {
       const type = doc.type.schema.nodes.heading;
       nodes = unwrap(doc.firstChild!).map((node) =>
         type.create({ ...node.attrs, level: target.level ?? 1, numberStart: target.numberStart ?? 0 }, node.content));

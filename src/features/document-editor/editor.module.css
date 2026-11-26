@@ -322,7 +322,16 @@
   position: relative;
 }
 
-.quoteWindow, .branchWindow { display: contents; }
+.quoteWindow, .calloutWindow, .branchWindow { display: contents; }
+
+.calloutWindow .row {
+  border-inline: 1px solid var(--line);
+  background: var(--canvas);
+  padding-inline: .85rem;
+}
+
+.calloutWindow > :first-child > .row { border-block-start: 1px solid var(--line); }
+.calloutWindow > :last-child > .row { border-block-end: 1px solid var(--line); }
 
 .quoteWindow .row {
   border-inline-start: .2rem solid var(--line);

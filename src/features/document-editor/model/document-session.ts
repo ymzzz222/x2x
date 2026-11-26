@@ -8,13 +8,14 @@ import type { FormatMark, MarkValue } from "./document-format";
 import { DocumentHistory, type DocumentLocation as Location } from "./document-history";
 import { getSelectionRange, type DocumentBlock, type DocumentMatch, type DocumentPosition, type DocumentSelection } from "./document-model";
 import { currentAlignment, selectedParagraphs, type ParagraphCommand, type ParagraphLayout } from "./document-paragraph";
-import { documentParents, headingNumbers, projectBlock, quoteGroups, readBlock, refreshOrderedListStarts, replaceInlineText, withHeadingNumber, writeBlockContent, writeInitialBlock, type TextSpan } from "./document-projection";
+import { calloutGroups, documentParents, headingNumbers, projectBlock, quoteGroups, readBlock, refreshOrderedListStarts, replaceInlineText, withHeadingNumber, writeBlockContent, writeInitialBlock, type TextSpan } from "./document-projection";
 import { getDocumentHierarchy, indentationParent, mergedDescendantParents, preserveHeadingHierarchy } from "./document-outline";
 import { convertMixedHierarchy } from "./document-mixed-conversion";
 import { changeListType, convertBlocks, convertNestedText, isList, listSettings, listTransaction, listWindows, listWindowSize, visibleText, type BlockKind, type ListCommand, type ListKey } from "./document-structure";
 
 type ParagraphElement = Y.XmlElement<ParagraphLayout>;
 type BlockKey = Pick<DocumentBlock, "id" | "kind" | "level">;
+type ReplacementBlock = { id: string; node: Node; quoteGroup?: string | null; calloutGroup?: string | null; parentId?: string | null };
 
 const structuralEdit = Symbol("Edit document structure");
 const incomingUpdate = Symbol("Apply shared document update");
@@ -30,6 +31,7 @@ export class DocumentSession {
   private paragraphs = this.doc.getMap<Y.XmlFragment>("paragraphs");
   private headingNumbers = headingNumbers(this.doc);
   private quoteGroups = quoteGroups(this.doc);
+  private calloutGroups = calloutGroups(this.doc);
   private parents = documentParents(this.doc);
   private fragmentIds = new WeakMap<object, string>();
   private history?: DocumentHistory;
@@ -85,10 +87,11 @@ export class DocumentSession {
         this.fragmentIds.set(fragment, block.id);
         writeInitialBlock(fragment, block);
         if (block.quoteGroup) this.quoteGroups.set(block.id, block.quoteGroup);
+        if (block.calloutGroup) this.calloutGroups.set(block.id, block.calloutGroup);
         if (block.parentId !== undefined) this.parents.set(block.id, block.parentId);
       }
     });
-    this.history = new DocumentHistory(new Y.UndoManager([this.order, this.paragraphs, this.headingNumbers, this.quoteGroups, this.parents], {
+    this.history = new DocumentHistory(new Y.UndoManager([this.order, this.paragraphs, this.headingNumbers, this.quoteGroups, this.calloutGroups, this.parents], {
       trackedOrigins: new Set([ySyncPluginKey, structuralEdit]),
     }), ySyncPluginKey);
     this.doc.on("afterTransaction", this.updateBlocks);
@@ -128,7 +131,7 @@ export class DocumentSession {
       const location = { position: range.focus, editing: true };
       this.splice(startIndex, 0, [{
         id: this.nextBlockId(), node: documentSchema().nodes.paragraph.create(), quoteGroup: first.quoteGroup,
-        parentId: first.parentId,
+        calloutGroup: first.calloutGroup, parentId: first.parentId,
       }], location, location);
       return location;
     }
@@ -153,7 +156,7 @@ export class DocumentSession {
     return after;
   }
 
-  private splice(index: number, count: number, replacement: { id: string; node: Node; quoteGroup?: string | null; parentId?: string | null }[],
+  private splice(index: number, count: number, replacement: ReplacementBlock[],
     before: Location, after: Location, parentChanges?: ReadonlyMap<string, string | null>, historyGroup?: string) {
     this.prepare();
     const schema = documentSchema();
@@ -173,9 +176,10 @@ export class DocumentSession {
         this.paragraphs.delete(block.id);
         if (this.headingNumbers.has(block.id)) this.headingNumbers.delete(block.id);
         if (this.quoteGroups.has(block.id)) this.quoteGroups.delete(block.id);
+        if (this.calloutGroups.has(block.id)) this.calloutGroups.delete(block.id);
         if (this.parents.has(block.id)) this.parents.delete(block.id);
       }
-      for (const { id, node, quoteGroup, parentId } of replacement) {
+      for (const { id, node, quoteGroup, calloutGroup, parentId } of replacement) {
         let fragment = this.paragraphs.get(id);
         if (!fragment) {
           fragment = new Y.XmlFragment();
@@ -183,12 +187,16 @@ export class DocumentSession {
           this.fragmentIds.set(fragment, id);
           const group = quoteGroup === undefined && count ? previous?.quoteGroup : quoteGroup;
           if (group) this.quoteGroups.set(id, group);
+          const callout = calloutGroup === undefined && count ? previous?.calloutGroup : calloutGroup;
+          if (callout) this.calloutGroups.set(id, callout);
           const parent = parentId === undefined && count ? previous?.parentId : parentId;
           if (parent !== undefined) this.parents.set(id, parent);
         } else {
           if (parentId !== undefined && this.parents.get(id) !== parentId) this.parents.set(id, parentId);
           if (quoteGroup === null) this.quoteGroups.delete(id);
           else if (quoteGroup && this.quoteGroups.get(id) !== quoteGroup) this.quoteGroups.set(id, quoteGroup);
+          if (calloutGroup === null) this.calloutGroups.delete(id);
+          else if (calloutGroup && this.calloutGroups.get(id) !== calloutGroup) this.calloutGroups.set(id, calloutGroup);
         }
         writeBlockContent(id, fragment, schema.topNodeType.create(null, node));
       }
@@ -372,7 +380,7 @@ export class DocumentSession {
   }
 
   private refreshOrderedLists(following?: string) {
-    refreshOrderedListStarts(this.order.toArray(), this.paragraphs, following);
+    refreshOrderedListStarts(this.order.toArray(), this.paragraphs, this.quoteGroups, this.calloutGroups, following);
   }
 
   setListOptions(position: DocumentPosition, command: ListCommand, nativeHead?: number) {
@@ -532,7 +540,7 @@ export class DocumentSession {
     let structureChanged = transaction.changed.has(this.order);
     for (const [type, keys] of transaction.changed) {
       if (Object.is(type, this.paragraphs)) structureChanged = true;
-      if (Object.is(type, this.headingNumbers) || Object.is(type, this.quoteGroups) || Object.is(type, this.parents)) {
+      if (Object.is(type, this.headingNumbers) || Object.is(type, this.quoteGroups) || Object.is(type, this.calloutGroups) || Object.is(type, this.parents)) {
         for (const id of keys) if (id !== null) changed.add(id);
       }
     }

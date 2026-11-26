@@ -18,14 +18,25 @@ export function quoteGroups(doc: Y.Doc) {
   return doc.getMap<string>("quoteGroups");
 }
 
+export function calloutGroups(doc: Y.Doc) {
+  return doc.getMap<string>("calloutGroups");
+}
+
 export function documentParents(doc: Y.Doc) {
   return doc.getMap<string | null>("documentParents");
 }
 
-export function refreshOrderedListStarts(order: readonly { id: string }[], paragraphs: Y.Map<Y.XmlFragment>, following?: string) {
+export function refreshOrderedListStarts(order: readonly { id: string }[], paragraphs: Y.Map<Y.XmlFragment>, quote: Y.Map<string>, callout: Y.Map<string>, following?: string) {
   let next = 1;
   let last = 1;
+  let quoteGroup: string | undefined;
+  let calloutGroup: string | undefined;
   for (const { id } of order) {
+    const currentQuote = quote.get(id);
+    const currentCallout = callout.get(id);
+    if (currentQuote !== quoteGroup || currentCallout !== calloutGroup) next = last = 1;
+    quoteGroup = currentQuote;
+    calloutGroup = currentCallout;
     const roots = paragraphs.get(id)?.toArray() ?? [];
     for (const [index, root] of roots.entries()) {
       if (!(root instanceof Y.XmlElement) || root.nodeName !== "orderedList") {
@@ -179,8 +190,10 @@ export function projectBlock(id: string, fragment: Y.XmlFragment): DocumentBlock
   const structure = layout === null || fragment.length > 1
     ? yXmlFragmentToProseMirrorRootNode(fragment, documentSchema()) : undefined;
   const quoteGroup = fragment.doc && quoteGroups(fragment.doc).get(id);
+  const calloutGroup = fragment.doc && calloutGroups(fragment.doc).get(id);
   const parentId = fragment.doc ? documentParents(fragment.doc).get(id) : undefined;
   const content = { id, text, ...(typeof quoteGroup === "string" && quoteGroup ? { quoteGroup } : {}),
+    ...(typeof calloutGroup === "string" && calloutGroup ? { calloutGroup } : {}),
     ...(parentId === null || typeof parentId === "string" ? { parentId } : {}),
     ...(structure ? { structure } : {}), ...(inline.length ? { inline } : {}), ...(layout === undefined ? {} : { layout }) };
   if (primary instanceof Y.XmlElement && primary.nodeName === "heading") {

@@ -3,14 +3,53 @@ import { execFile } from "node:child_process";
 import { readFile } from "node:fs/promises";
 import { promisify } from "node:util";
 import { test, sharedAvailable, origin, login, create, grant, activate, firstBlock, body, saved, documentAction } from "./shared-document-fixture";
-import { pasteClipboard } from "./editor-clipboard";
-import { activate as activateRow, caret } from "./editor-page";
+import { copyClipboard, pasteClipboard } from "./editor-clipboard";
+import { activate as activateRow, caret, seedBlank } from "./editor-page";
 import { createDocument } from "../../../src/features/document-editor/model/document-model";
 import { documentPlainText } from "../../../src/features/document-editor/model/document-clipboard";
 import { getDocumentOutline } from "../../../src/features/document-editor/model/document-outline";
 
 test.use({ channel: "chrome", viewport: { width: 1440, height: 900 } });
 test.skip(!sharedAvailable, "Run against an isolated local preview and Supabase stack.");
+
+test("S12 keeps a grouped callout through cloud save, read-only open and rich copy", async ({ provision }) => {
+  const owner = await provision("s12-callout-owner");
+  const reader = await provision("s12-callout-reader");
+  const page = owner.page;
+  await login(page, owner.email);
+  const path = await create(page, "S12 高亮组合");
+  await grant(page, reader.email, "view");
+  await activate(page);
+  const editor = body(page).locator(".tiptap");
+  await pasteClipboard(editor, { html: '<h2 data-heading-level="1"><strong>标题</strong></h2><ol start="7"><li><p>甲</p></li><li><p>乙</p></li></ol>' });
+  await expect(saved(page)).toBeVisible();
+  await page.keyboard.press("ControlOrMeta+a");
+  await page.keyboard.press("ControlOrMeta+a");
+  await page.getByRole("toolbar", { name: "选区工具栏" }).getByRole("button", { name: "块类型", exact: true }).click();
+  await page.getByRole("button", { name: "高亮块", exact: true }).click();
+
+  async function assertCallout(container: ReturnType<typeof body>) {
+    const callout = container.locator("aside[data-callout]");
+    await expect(callout).toHaveCount(1);
+    await expect(callout.locator('[data-heading-level="1"] strong')).toHaveText("标题");
+    await expect(callout.locator('[data-block-type="ordered-list"][data-list-start]')).toHaveCount(2);
+    await expect(callout.locator('[data-list-start="1"]')).toHaveText("甲");
+    await expect(callout.locator('[data-list-start="2"]')).toHaveText("乙");
+  }
+
+  await assertCallout(body(page));
+  await expect(saved(page)).toBeVisible();
+  await login(reader.page, reader.email, path);
+  await assertCallout(body(reader.page));
+  await page.reload();
+  await assertCallout(body(page));
+  await body(page).focus();
+  await page.keyboard.press("ControlOrMeta+a");
+  const copied = await copyClipboard(body(page));
+  expect(copied.html).toContain("<aside data-callout");
+  const scratch = await owner.context.newPage();
+  await assertCallout(await seedBlank(scratch, copied.html));
+});
 
 const run = promisify(execFile);
 const pdfEnds = `function run(argv) {

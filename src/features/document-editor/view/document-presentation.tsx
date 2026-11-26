@@ -39,25 +39,33 @@ export function DocumentPrintView({ title, blocks, sections }: {
   }, []);
   if (!printing) return null;
 
-  const rows: ReactNode[] = [];
-  for (let index = 0; index < blocks.length;) {
-    const first = blocks[index];
-    const group = first.quoteGroup;
-    const content: ReactNode[] = [];
-    do {
-      const block = blocks[index++];
-      const number = sections.get(block.id)?.numbering?.label;
-      content.push(<div key={block.id} data-row-heading={block.level} className={number ? styles.numberedHeading : undefined}>
-        {number && <span className={styles.headingNumber}>{number}</span>}
-        <div className={styles.preview}><PreviewText block={block} selection={null} /></div>
-      </div>);
-    } while (group && blocks[index]?.quoteGroup === group);
-    if (group) rows.push(<blockquote key={first.id} data-block-type="quote">{content}</blockquote>);
-    else rows.push(content[0]);
+  function renderRows(start: number, end: number, groupedCallout = false) {
+    const rows: ReactNode[] = [];
+    for (let index = start; index < end;) {
+      const first = blocks[index];
+      if (!groupedCallout && first.calloutGroup) {
+        let next = index + 1;
+        while (next < end && blocks[next].calloutGroup === first.calloutGroup) next++;
+        rows.push(<aside key={first.id} data-callout="">{renderRows(index, next, true)}</aside>);
+        index = next;
+        continue;
+      }
+      const content: ReactNode[] = [];
+      do {
+        const block = blocks[index++];
+        const number = sections.get(block.id)?.numbering?.label;
+        content.push(<div key={block.id} data-row-heading={block.level} className={number ? styles.numberedHeading : undefined}>
+          {number && <span className={styles.headingNumber}>{number}</span>}
+          <div className={styles.preview}><PreviewText block={block} selection={null} /></div>
+        </div>);
+      } while (index < end && first.quoteGroup && blocks[index].quoteGroup === first.quoteGroup && blocks[index].calloutGroup === first.calloutGroup);
+      rows.push(first.quoteGroup ? <blockquote key={first.id} data-block-type="quote">{content}</blockquote> : content[0]);
+    }
+    return rows;
   }
   return <article className={styles.printDocument + " " + styles.paper + " " + structureStyles.content}>
     <h1>{title}</h1>
-    {rows}
+    {renderRows(0, blocks.length)}
   </article>;
 }
 

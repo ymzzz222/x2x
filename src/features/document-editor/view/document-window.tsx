@@ -5,7 +5,7 @@ import type { DocumentBranch } from "../model/document-outline";
 import styles from "../editor.module.css";
 
 type Row = { block: DocumentBlock; content: ReactNode };
-type Container = { key: string; quote?: string; parentId?: string };
+type Container = { key: string; quote?: string; callout?: string; parentId?: string };
 
 function containsOffset(node: Node, offset: number) {
   return offset <= (node instanceof CharacterData ? node.length : node.childNodes.length);
@@ -36,17 +36,24 @@ export function DocumentWindow({ blocks, branches, rows, height }: {
     const branchIds = new Set([...branches.values()].flatMap(({ explicitParent }) => explicitParent ? [explicitParent] : []));
     let previous: string | undefined;
     let quoteStart = "";
-    for (const { id, quoteGroup } of blocks) {
+    let previousCallout: string | undefined;
+    let calloutStart = "";
+    for (const { id, quoteGroup, calloutGroup } of blocks) {
       if (quoteGroup !== previous) quoteStart = id;
+      if (calloutGroup !== previousCallout) calloutStart = id;
       const parent = branches.get(id)?.explicitParent;
       const inherited = parent && branchIds.has(parent) ? paths.get(parent) ?? [] : [];
       const path = [...inherited];
+      if (calloutGroup && !path.some(({ callout }) => callout === calloutGroup)) {
+        path.push({ key: (path.at(-1)?.key ?? "") + "/callout:" + calloutStart, callout: calloutGroup });
+      }
       if (quoteGroup && !path.some(({ quote }) => quote === quoteGroup)) {
         path.push({ key: (path.at(-1)?.key ?? "") + "/quote:" + quoteStart, quote: quoteGroup });
       }
       if (branchIds.has(id)) path.push({ key: "branch:" + id, parentId: id });
       if (path.length) paths.set(id, path);
       previous = quoteGroup;
+      previousCallout = calloutGroup;
     }
     return paths;
   }, [blocks, branches]);
@@ -74,12 +81,13 @@ export function DocumentWindow({ blocks, branches, rows, height }: {
         changed = true;
       }
       let parent = track as HTMLElement;
-      for (const { key, quote, parentId } of containers.get(block.id) ?? []) {
+      for (const { key, quote, callout, parentId } of containers.get(block.id) ?? []) {
         let group = groups.get(key);
         if (!group) {
-          group = document.createElement(quote ? "blockquote" : "div");
-          group.className = quote ? styles.quoteWindow : styles.branchWindow;
+          group = document.createElement(quote ? "blockquote" : callout ? "aside" : "div");
+          group.className = quote ? styles.quoteWindow : callout ? styles.calloutWindow : styles.branchWindow;
           if (parentId) group.dataset.blockBranch = parentId;
+          if (callout) group.dataset.callout = "";
           groups.set(key, group);
         }
         if (quote) group.dataset.quoteGroup = quote;

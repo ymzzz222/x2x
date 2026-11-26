@@ -1,5 +1,27 @@
 import { useEffect, useRef, type MouseEvent, type PointerEvent } from "react";
-import type { DocumentPosition, DocumentSelection, getSelectionRange } from "../model/document-model";
+import type { DocumentBlock, DocumentPosition, DocumentSelection, getSelectionRange } from "../model/document-model";
+
+export function expandQuoteSelection(selection: DocumentSelection, blocks: readonly DocumentBlock[], indexes: ReadonlyMap<string, number>): DocumentSelection {
+  const { anchor, focus } = selection;
+  if (anchor.blockId === focus.blockId) return selection;
+  const start = indexes.get(anchor.blockId);
+  const end = indexes.get(focus.blockId);
+  if (start === undefined || end === undefined) return selection;
+  if (blocks[start].quoteGroup && blocks[start].quoteGroup === blocks[end].quoteGroup) return selection;
+  function edge(index: number, position: DocumentPosition, forward: boolean) {
+    const block = blocks[index];
+    const group = block.quoteGroup;
+    const step = forward ? 1 : -1;
+    let boundary = index;
+    while (group && blocks[boundary + step]?.quoteGroup === group) boundary += step;
+    const quote = block.structure?.firstChild;
+    if (boundary === index && !(group && blocks[index - step]?.quoteGroup === group) &&
+      !(quote?.type.name === "blockquote" && quote.childCount > 1)) return position;
+    const target = blocks[boundary];
+    return { blockId: target.id, offset: forward ? target.text.length : 0 };
+  }
+  return { ...selection, anchor: edge(start, anchor, start > end), focus: edge(end, focus, end > start) };
+}
 
 function offsetFromDOM(container: HTMLElement, node: Node, offset: number) {
   const range = document.createRange();

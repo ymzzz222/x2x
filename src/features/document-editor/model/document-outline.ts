@@ -127,7 +127,7 @@ export function getDocumentOutline(blocks: readonly DocumentBlock[]) {
     }
     const section: DocumentSection = { id: block.id, text: block.text, level, index, end: branch.end, children: [] };
     if (block.numberStart !== undefined) {
-      const parent = ancestors.find((ancestor) => ancestor.numbering);
+      const parent = ancestors.find((ancestor) => ancestor.level < level && ancestor.numbering);
       const previous = lastNumbers.get(parent?.id);
       const value = block.numberStart || (previous ?? 0) + 1;
       lastNumbers.set(parent?.id, value);

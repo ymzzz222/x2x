@@ -1,0 +1,245 @@
+轮次,脚本,行号,用例,执行序号,实际结果,耗时毫秒
+全量,tests/editor/e2e/document-appearance.spec.ts,6,"document title, icon, cover and info visibility persist per sample",1,通过,991
+全量,tests/editor/e2e/document-appearance.spec.ts,25,RV-08 title bounds and restoring appearance leave the sample body unchanged,1,通过,490
+全量,tests/editor/e2e/document-block-commands.spec.ts,6,the add button inserts in the same paragraph when it contains only whitespace,1,通过,482
+全量,tests/editor/e2e/document-block-commands.spec.ts,24,"slash filtering, ordered list keyboard nesting and numbering share one history",1,通过,615
+全量,tests/editor/e2e/document-block-commands.spec.ts,70,insert commands stay within a narrow viewport and return keyboard focus to their block,1,通过,359
+全量,tests/editor/e2e/document-block-commands.spec.ts,111,"opening another block menu preserves the live caret, and converts only its source block",1,通过,488
+全量,tests/editor/e2e/document-block-commands.spec.ts,140,"selection tools and block handles are exclusive, hover submenus preserve the range on return",1,通过,720
+全量,tests/editor/e2e/document-block-commands.spec.ts,176,empty-line add and slash have distinct insertion and history paths,1,通过,837
+全量,tests/editor/e2e/document-block-commands.spec.ts,231,Escape closes the only blank block's add menu and keeps the original focus,1,通过,1140
+全量,tests/editor/e2e/document-block-commands.spec.ts,250,reading selection offers edit without exposing mutating commands,1,通过,364
+全量,tests/editor/e2e/document-clipboard.spec.ts,25,ED-25 a denied system clipboard write leaves the cut block intact,1,通过,258
+全量,tests/editor/e2e/document-clipboard.spec.ts,39,ED-26 foreign HTML preserves supported marks without importing annotation identity,1,通过,1066
+全量,tests/editor/e2e/document-clipboard.spec.ts,55,ED-27 pastes 99999 characters without truncation and restores the whole operation,1,通过,1083
+全量,tests/editor/e2e/document-clipboard.spec.ts,55,ED-27 pastes 100000 characters without truncation and restores the whole operation,1,通过,289
+全量,tests/editor/e2e/document-clipboard.spec.ts,55,ED-27 pastes 100001 characters without truncation and restores the whole operation,1,通过,1077
+全量,tests/editor/e2e/document-clipboard.spec.ts,75,"ED-29 plain clipboard normalizes Unicode, keeps graphemes and rejects full-width Markdown",1,通过,1343
+全量,tests/editor/e2e/document-clipboard.spec.ts,98,native cut and paste restore all 50万字 from virtual rows and undo each operation once,1,通过,1741
+全量,tests/editor/e2e/document-clipboard.spec.ts,136,selects the current paragraph before extending to the document,1,通过,342
+全量,tests/editor/e2e/document-clipboard.spec.ts,152,multiline replacement preserves the boundary text and moves the caret to the pasted text,1,通过,1173
+全量,tests/editor/e2e/document-clipboard.spec.ts,184,cross-block clipboard keeps supported HTML and read mode allows copying only,1,通过,467
+全量,tests/editor/e2e/document-collaboration.spec.ts,10,"two accounts merge changes, retry a dropped receipt under the same batch ID, and read back after reload",1,通过,3392
+全量,tests/editor/e2e/document-collaboration.spec.ts,121,a collaborator caret follows IME commits and arrow keys without becoming part of the document,1,通过,2375
+全量,tests/editor/e2e/document-collaboration.spec.ts,166,a revoked offline editor retains the outbox but cannot upload changes through the old session,1,通过,2241
+全量,tests/editor/e2e/document-collaboration.spec.ts,202,SY-02 concurrent heading conversion and paragraph edits survive a third independent session,1,通过,4153
+全量,tests/editor/e2e/document-collaboration.spec.ts,234,SY-03 and SY-04 a private channel delivers updates and a disconnected client catches up over HTTP,1,通过,4536
+全量,tests/editor/e2e/document-collaboration.spec.ts,293,DOM-08 a real above-viewport remote insert does not replace a composing editor while scrolling,1,通过,4244
+全量,tests/editor/e2e/document-compatibility.spec.ts,48,DOM-09 compatible older data stays editable and newer data stays read-only across document switches,1,通过,2978
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 paragraph to paragraph affects the single target and preserves the surrounding text,1,通过,334
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 paragraph to H1 affects the single target and preserves the surrounding text,1,通过,366
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 paragraph to H9 affects the single target and preserves the surrounding text,1,通过,367
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 paragraph to ordered affects the single target and preserves the surrounding text,1,通过,1318
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 paragraph to bullet affects the single target and preserves the surrounding text,1,通过,522
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 paragraph to quote affects the single target and preserves the surrounding text,1,通过,512
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H1 to paragraph affects the single target and preserves the surrounding text,1,通过,399
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H1 to H1 affects the single target and preserves the surrounding text,1,通过,1166
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H1 to H9 affects the single target and preserves the surrounding text,1,通过,770
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H1 to ordered affects the single target and preserves the surrounding text,1,通过,679
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H1 to bullet affects the single target and preserves the surrounding text,1,通过,1222
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H1 to quote affects the single target and preserves the surrounding text,1,通过,1161
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H9 to paragraph affects the single target and preserves the surrounding text,1,通过,370
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H9 to H1 affects the single target and preserves the surrounding text,1,通过,383
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H9 to H9 affects the single target and preserves the surrounding text,1,通过,1273
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H9 to ordered affects the single target and preserves the surrounding text,1,通过,1260
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H9 to bullet affects the single target and preserves the surrounding text,1,通过,453
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 H9 to quote affects the single target and preserves the surrounding text,1,通过,1181
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 ordered to paragraph affects the single target and preserves the surrounding text,1,通过,1182
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 ordered to H1 affects the single target and preserves the surrounding text,1,通过,1176
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 ordered to H9 affects the single target and preserves the surrounding text,1,通过,1225
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 ordered to ordered affects the single target and preserves the surrounding text,1,通过,1183
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 ordered to bullet affects the single target and preserves the surrounding text,1,通过,378
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 ordered to quote affects the single target and preserves the surrounding text,1,通过,1176
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 bullet to paragraph affects the single target and preserves the surrounding text,1,通过,1188
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 bullet to H1 affects the single target and preserves the surrounding text,1,通过,430
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 bullet to H9 affects the single target and preserves the surrounding text,1,通过,385
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 bullet to ordered affects the single target and preserves the surrounding text,1,通过,1159
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 bullet to bullet affects the single target and preserves the surrounding text,1,通过,411
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 bullet to quote affects the single target and preserves the surrounding text,1,通过,413
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 quote to paragraph affects the single target and preserves the surrounding text,1,通过,1188
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 quote to H1 affects the single target and preserves the surrounding text,1,通过,1204
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 quote to H9 affects the single target and preserves the surrounding text,1,通过,1194
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 quote to ordered affects the single target and preserves the surrounding text,1,通过,1296
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 quote to bullet affects the single target and preserves the surrounding text,1,通过,1172
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,104,ED-20 quote to quote affects the single target and preserves the surrounding text,1,通过,1170
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 paragraph to paragraph converts the whole range and retains the shared quote boundary,1,通过,293
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 paragraph to H1 converts the whole range and retains the shared quote boundary,1,通过,1096
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 paragraph to H9 converts the whole range and retains the shared quote boundary,1,通过,315
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 paragraph to ordered converts the whole range and retains the shared quote boundary,1,通过,1083
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 paragraph to bullet converts the whole range and retains the shared quote boundary,1,通过,1107
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 paragraph to quote converts the whole range and retains the shared quote boundary,1,通过,1063
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H1 to paragraph converts the whole range and retains the shared quote boundary,1,通过,1145
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H1 to H1 converts the whole range and retains the shared quote boundary,1,通过,325
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H1 to H9 converts the whole range and retains the shared quote boundary,1,通过,1083
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H1 to ordered converts the whole range and retains the shared quote boundary,1,通过,1093
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H1 to bullet converts the whole range and retains the shared quote boundary,1,通过,1096
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H1 to quote converts the whole range and retains the shared quote boundary,1,通过,1152
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H9 to paragraph converts the whole range and retains the shared quote boundary,1,通过,1116
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H9 to H1 converts the whole range and retains the shared quote boundary,1,通过,1122
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H9 to H9 converts the whole range and retains the shared quote boundary,1,通过,303
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H9 to ordered converts the whole range and retains the shared quote boundary,1,通过,1098
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H9 to bullet converts the whole range and retains the shared quote boundary,1,通过,1105
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 H9 to quote converts the whole range and retains the shared quote boundary,1,通过,344
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 ordered to paragraph converts the whole range and retains the shared quote boundary,1,通过,271
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 ordered to H1 converts the whole range and retains the shared quote boundary,1,通过,288
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 ordered to H9 converts the whole range and retains the shared quote boundary,1,通过,1057
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 ordered to ordered converts the whole range and retains the shared quote boundary,1,通过,1096
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 ordered to bullet converts the whole range and retains the shared quote boundary,1,通过,392
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 ordered to quote converts the whole range and retains the shared quote boundary,1,通过,324
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 bullet to paragraph converts the whole range and retains the shared quote boundary,1,通过,1080
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 bullet to H1 converts the whole range and retains the shared quote boundary,1,通过,1113
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 bullet to H9 converts the whole range and retains the shared quote boundary,1,通过,291
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 bullet to ordered converts the whole range and retains the shared quote boundary,1,通过,416
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 bullet to bullet converts the whole range and retains the shared quote boundary,1,通过,311
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 bullet to quote converts the whole range and retains the shared quote boundary,1,通过,1106
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 quote to paragraph converts the whole range and retains the shared quote boundary,1,通过,454
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 quote to H1 converts the whole range and retains the shared quote boundary,1,通过,476
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 quote to H9 converts the whole range and retains the shared quote boundary,1,通过,1393
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 quote to ordered converts the whole range and retains the shared quote boundary,1,通过,1371
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 quote to bullet converts the whole range and retains the shared quote boundary,1,通过,461
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 quote to quote converts the whole range and retains the shared quote boundary,1,通过,537
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 mixed to paragraph converts the whole range and retains the shared quote boundary,1,通过,473
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 mixed to H1 converts the whole range and retains the shared quote boundary,1,通过,1287
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 mixed to H9 converts the whole range and retains the shared quote boundary,1,通过,1120
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 mixed to ordered converts the whole range and retains the shared quote boundary,1,通过,1159
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 mixed to bullet converts the whole range and retains the shared quote boundary,1,通过,527
+全量,tests/editor/e2e/document-conversion-matrix.spec.ts,126,ED-21 mixed to quote converts the whole range and retains the shared quote boundary,1,通过,1233
+全量,tests/editor/e2e/document-discussion.spec.ts,10,"CO-01 and CO-03 document comments, block anchors and selection threads have independent lifecycles",1,通过,4642
+全量,tests/editor/e2e/document-discussion.spec.ts,64,CO-04 likes are reversible and unfollowing suppresses later save notifications,1,通过,3064
+全量,tests/editor/e2e/document-discussion.spec.ts,103,private anchored comments stay visible to their recipient only and can be resolved without changing the document,1,通过,4181
+全量,tests/editor/e2e/document-discussion.spec.ts,153,CO-05 a body reference never grants access to the referenced document,1,通过,4791
+全量,tests/editor/e2e/document-discussion.spec.ts,186,a saved body mention notifies an authorized member and opens its referenced block,1,通过,3164
+全量,tests/editor/e2e/document-find.spec.ts,42,"search expands folded headings and cycles through unmounted matches in a 500,000 character document",1,通过,735
+全量,tests/editor/e2e/document-find.spec.ts,88,"replaces current and all matches in separate undo steps across the 500,000 character document",1,通过,1058
+全量,tests/editor/e2e/document-format.spec.ts,46,"mixed bold, toggles and colors preserve selection history and render in reading, find and presentation",1,通过,1195
+全量,tests/editor/e2e/document-format.spec.ts,105,cross-window formatting reaches unmounted paragraphs and is undone as one document action,1,通过,1126
+全量,tests/editor/e2e/document-format.spec.ts,131,"toolbar keyboard navigation, link validation, and inline code work with a native selection",1,通过,835
+全量,tests/editor/e2e/document-heading-numbering.spec.ts,19,H1 numbering toggles outside the editable text and shares its history,1,通过,1127
+全量,tests/editor/e2e/document-heading-numbering.spec.ts,43,the middle ordered item becomes a numbered H1 without changing adjacent content,1,通过,364
+全量,tests/editor/e2e/document-heading-numbering.spec.ts,19,H9 numbering toggles outside the editable text and shares its history,1,通过,620
+全量,tests/editor/e2e/document-heading-numbering.spec.ts,43,the middle ordered item becomes a numbered H9 without changing adjacent content,1,通过,409
+全量,tests/editor/e2e/document-heading-numbering.spec.ts,63,"heading numbers skip unused levels and can restart, resume, and cross two digits",1,通过,614
+全量,tests/editor/e2e/document-heading-numbering.spec.ts,93,"copies visible and folded numbering for whole-document and block copy, with plain partial text",1,失败,5262
+全量,tests/editor/e2e/document-heading-persistence.spec.ts,7,ED-05 ED-06 persists all nine keyboard-created heading levels and the page title,1,通过,2585
+全量,tests/editor/e2e/document-list.spec.ts,17,a lost create response can be recovered after reload without creating a second document,1,通过,1964
+全量,tests/editor/e2e/document-list.spec.ts,77,public visitors have independent sessions and manage the same script,1,通过,2194
+全量,tests/editor/e2e/document-loading.spec.ts,7,"EN-01 validates the login form, recovers from wrong credentials and signs out across a reload",1,通过,751
+全量,tests/editor/e2e/document-loading.spec.ts,33,EN-02 retries the unavailable list request and restores both saved documents,1,通过,756
+全量,tests/editor/e2e/document-loading.spec.ts,33,EN-02 retries the timeout list request and restores both saved documents,1,通过,791
+全量,tests/editor/e2e/document-loading.spec.ts,69,DOM-01 DOM-02 withholds the first response and mounts the saved body without exposing an editable shell,1,通过,4256
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-05 uses a separate Space key to create H1 and keep the caret in the heading,1,通过,1110
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H2 uses a separate Space key to create H2 and keep the caret in the heading,1,通过,1098
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H3 uses a separate Space key to create H3 and keep the caret in the heading,1,通过,1136
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H4 uses a separate Space key to create H4 and keep the caret in the heading,1,通过,1101
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H5 uses a separate Space key to create H5 and keep the caret in the heading,1,通过,1113
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H6 uses a separate Space key to create H6 and keep the caret in the heading,1,通过,1118
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H7 uses a separate Space key to create H7 and keep the caret in the heading,1,通过,1115
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H8 uses a separate Space key to create H8 and keep the caret in the heading,1,通过,1154
+全量,tests/editor/e2e/document-markdown.spec.ts,31,ED-06-H9 uses a separate Space key to create H9 and keep the caret in the heading,1,通过,1102
+全量,tests/editor/e2e/document-markdown.spec.ts,49,ED-05-非行首 preserves a hash and a space while typing within a paragraph,1,通过,1134
+全量,tests/editor/e2e/document-markdown.spec.ts,67,"ED-07-无序减号 enters, continues and exits a list through the real keys",1,通过,1288
+全量,tests/editor/e2e/document-markdown.spec.ts,67,"ED-07-无序星号 enters, continues and exits a list through the real keys",1,通过,627
+全量,tests/editor/e2e/document-markdown.spec.ts,67,"ED-07-有序 enters, continues and exits a list through the real keys",1,通过,1134
+全量,tests/editor/e2e/document-markdown.spec.ts,94,ED-07-引用 keeps the quoted text when a second Enter exits the empty child,1,通过,1106
+全量,tests/editor/e2e/document-markdown.spec.ts,137,ED-08-粗体 checks the mark on both sides of the Space key,1,通过,1104
+全量,tests/editor/e2e/document-markdown.spec.ts,137,ED-08-斜体 checks the mark on both sides of the Space key,1,通过,1126
+全量,tests/editor/e2e/document-markdown.spec.ts,137,ED-08-删除线 checks the mark on both sides of the Space key,1,通过,1176
+全量,tests/editor/e2e/document-markdown.spec.ts,137,ED-08-下划线 checks the mark on both sides of the Space key,1,通过,1225
+全量,tests/editor/e2e/document-markdown.spec.ts,137,ED-08-行内代码 checks the mark on both sides of the Space key,1,通过,1141
+全量,tests/editor/e2e/document-meeting.spec.ts,8,"a meeting attendee can follow, browse freely, rejoin a deep anchor and send a live annotation",1,通过,9277
+全量,tests/editor/e2e/document-multiblock.spec.ts,31,moves a selected paragraph and its native bold node into the quote,1,通过,1206
+全量,tests/editor/e2e/document-multiblock.spec.ts,54,includes the final empty row when whole-document selection wraps all six blocks,1,通过,1052
+全量,tests/editor/e2e/document-multiblock.spec.ts,70,"wraps the same DOM rows in one quote, keeps their marks and selection, and unwraps with history",1,通过,711
+全量,tests/editor/e2e/document-multiblock.spec.ts,107,"normalizes a mixed selection to H1, then toggles all its headings in one undo step",1,通过,344
+全量,tests/editor/e2e/document-multiblock.spec.ts,107,"normalizes a mixed selection to H9, then toggles all its headings in one undo step",1,通过,1107
+全量,tests/editor/e2e/document-multiblock.spec.ts,125,quotes a folded heading and its hidden descendants without including the next heading at offset zero,1,通过,622
+全量,tests/editor/e2e/document-multiblock.spec.ts,154,toggles three ol items to text in 1 rendering rows and restores the range on undo,1,通过,1123
+全量,tests/editor/e2e/document-multiblock.spec.ts,154,toggles three ul items to text in 1 rendering rows and restores the range on undo,1,通过,332
+全量,tests/editor/e2e/document-multiblock.spec.ts,176,turns three ordered items in 1 rendering rows into one numbered heading sequence,1,通过,282
+全量,tests/editor/e2e/document-multiblock.spec.ts,154,toggles three ol items to text in 3 rendering rows and restores the range on undo,1,通过,1085
+全量,tests/editor/e2e/document-multiblock.spec.ts,154,toggles three ul items to text in 3 rendering rows and restores the range on undo,1,通过,344
+全量,tests/editor/e2e/document-multiblock.spec.ts,176,turns three ordered items in 3 rendering rows into one numbered heading sequence,1,通过,1098
+全量,tests/editor/e2e/document-multiblock.spec.ts,197,converts a list parent without converting its child or the next sibling,1,通过,1314
+全量,tests/editor/e2e/document-multiblock.spec.ts,214,continues an existing ordered sequence across a converted paragraph and respects an explicit restart,1,通过,1459
+全量,tests/editor/e2e/document-multiblock.spec.ts,243,undoes a fold before the preceding body edit and preserves the local action order on redo,1,通过,304
+全量,tests/editor/e2e/document-multiblock.spec.ts,261,undoes a folded heading conversion expanded and restores a deleted section folded,1,通过,1258
+全量,tests/editor/e2e/document-multiblock.spec.ts,283,replaces a whole-document selection with a typed character in one undo step,1,通过,372
+全量,tests/editor/e2e/document-multiblock.spec.ts,298,typing over a reverse range keeps the unselected formatting on both sides,1,通过,484
+全量,tests/editor/e2e/document-multiblock.spec.ts,319,keeps the viewport window bounded when thousands of quoted rows share one container,1,通过,971
+全量,tests/editor/e2e/document-navigation.spec.ts,9,RV-03 and RV-05 outline levels and copied anchors stay distinct after text edits and above-target insertion,1,通过,4674
+全量,tests/editor/e2e/document-output.spec.ts,34,RV-09 and CO-11 document metrics fit both roles while audit entries stay manager-only,1,通过,3384
+全量,tests/editor/e2e/document-output.spec.ts,83,RV-11 the downloaded TXT and native PDF include folded and offscreen content,1,通过,4558
+全量,tests/editor/e2e/document-output.spec.ts,132,RV-12 a duplicate keeps rich body content and has an independent sharing and edit history,1,通过,3678
+全量,tests/editor/e2e/document-paragraph.spec.ts,25,the selected paragraph supports alignment and the caret keeps the indentation shortcut,1,通过,1165
+全量,tests/editor/e2e/document-paragraph.spec.ts,77,one alignment transaction reaches unmounted paragraphs and excludes the untouched end paragraph,1,通过,1193
+全量,tests/editor/e2e/document-paragraph.spec.ts,101,the quote shortcut wraps formatted text and heading conversion stays inside the quote,1,通过,1107
+全量,tests/editor/e2e/document-paragraph.spec.ts,129,HTML block paste and copy retain supported layout and keep indentation out of headings,1,通过,1157
+全量,tests/editor/e2e/document-performance.spec.ts,88,"QA-04 50万字 first paint, scrolling, typing and outline jumps meet the fixed P95 limits",1,失败,16884
+全量,tests/editor/e2e/document-permissions.spec.ts,10,"password-protected links enforce viewer access, and disabling a link revokes its redeemed access",1,通过,1749
+全量,tests/editor/e2e/document-permissions.spec.ts,48,x2x workspace departments inherit parent group rights and revoke them when membership is removed,1,通过,2535
+全量,tests/editor/e2e/document-permissions.spec.ts,98,"data protection gates viewer actions, adds a watermark, and requires approval to lower classification",1,通过,2069
+全量,tests/editor/e2e/document-permissions.spec.ts,139,"SH-01 and SH-05 viewers, editors and managers get distinct rights and a live downgrade blocks writes",1,通过,3757
+全量,tests/editor/e2e/document-permissions.spec.ts,183,SH-02 replacing an edit link revokes its grants and the new link grants only view,1,通过,2714
+全量,tests/editor/e2e/document-permissions.spec.ts,213,SH-04 and SH-07 an approved request receives reader access and only the owner can transfer ownership,1,通过,2175
+全量,tests/editor/e2e/document-permissions.spec.ts,250,SH-08 defaults apply only to new workspace documents and screening is owner scoped,1,通过,1627
+全量,tests/editor/e2e/document-permissions.spec.ts,296,SH-09 view restrictions independently gate all five protected actions,1,通过,4082
+全量,tests/editor/e2e/document-permissions.spec.ts,296,SH-09 edit restrictions independently gate all five protected actions,1,通过,4100
+全量,tests/editor/e2e/document-presentation.spec.ts,10,presentation opens the entire live document while preserving the editor position on exit,1,通过,1116
+全量,tests/editor/e2e/document-presentation.spec.ts,59,paging includes the middle of an oversized paragraph and that position survives reload,1,通过,922
+全量,tests/editor/e2e/document-review.spec.ts,8,restoring a named version starts a new generation and keeps an older offline draft out of the restored document,1,通过,5271
+全量,tests/editor/e2e/document-review.spec.ts,48,a viewer proposes a replacement and an editor applies it once to the anchored content,1,通过,3189
+全量,tests/editor/e2e/document-review.spec.ts,75,"CO-07 rejecting, revising, replying to and withdrawing suggestions leaves the proposed text unchanged",1,通过,5118
+全量,tests/editor/e2e/document-review.spec.ts,135,CO-08 a reader can compare and open snapshots but cannot create or restore versions,1,通过,3959
+全量,tests/editor/e2e/document-saving.spec.ts,13,SY-01 and SY-06 a save 503 preserves editing and retries the same batch before readback,1,通过,3082
+全量,tests/editor/e2e/document-saving.spec.ts,48,SY-07 a saved local outbox survives closing the offline tab and uploads after re-opening,1,通过,1697
+全量,tests/editor/e2e/document-saving.spec.ts,76,SY-08 a delayed receipt is scoped to its document during a switch,1,通过,3410
+全量,tests/editor/e2e/document-saving.spec.ts,119,SY-10 an unavailable outbox opens existing cloud content as read-only,1,通过,2547
+全量,tests/editor/e2e/document-structure.spec.ts,7,ED-16 fifteen ordered nesting depths retain their item identities and marker cycle,1,通过,1123
+全量,tests/editor/e2e/document-structure.spec.ts,22,continuation numbers follow their ordered group after a move and restart on demand,1,超时,30055
+全量,tests/editor/e2e/document-structure.spec.ts,41,supplementary paragraphs stay inside the item and Enter on an empty item exits the list,1,通过,589
+全量,tests/editor/e2e/document-structure.spec.ts,64,"block insertion, heading conversion, Markdown, and column and callout structure are visible in read mode",1,通过,820
+全量,tests/editor/e2e/document-structure.spec.ts,98,the block menu and drag move a collapsed section as a unit and undo restores its ID,1,通过,672
+全量,tests/editor/e2e/document-text-editing.spec.ts,8,focusing a trailing soft break does not move the next block in a paragraph,1,通过,487
+全量,tests/editor/e2e/document-text-editing.spec.ts,8,focusing a trailing soft break does not move the next block in a quote,1,失败,5296
+全量,tests/editor/e2e/document-text-editing.spec.ts,45,floating selection formats and whole-block cut and copy use the normal clipboard,1,通过,712
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 paragraph at 0 distinguishes Enter and Shift+Enter,1,通过,1320
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 paragraph at 1 distinguishes Enter and Shift+Enter,1,通过,2086
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 paragraph at 3 distinguishes Enter and Shift+Enter,1,通过,2099
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 H1 at 0 distinguishes Enter and Shift+Enter,1,通过,1363
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 H1 at 1 distinguishes Enter and Shift+Enter,1,通过,1335
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 H1 at 3 distinguishes Enter and Shift+Enter,1,通过,2110
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 H9 at 0 distinguishes Enter and Shift+Enter,1,通过,1352
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 H9 at 1 distinguishes Enter and Shift+Enter,1,通过,1341
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 H9 at 3 distinguishes Enter and Shift+Enter,1,通过,1331
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 ordered at 0 distinguishes Enter and Shift+Enter,1,通过,1275
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 ordered at 1 distinguishes Enter and Shift+Enter,1,通过,610
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 ordered at 3 distinguishes Enter and Shift+Enter,1,通过,1279
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 bullet at 0 distinguishes Enter and Shift+Enter,1,通过,1323
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 bullet at 1 distinguishes Enter and Shift+Enter,1,通过,2066
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 bullet at 3 distinguishes Enter and Shift+Enter,1,通过,1359
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 quote at 0 distinguishes Enter and Shift+Enter,1,通过,1312
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 quote at 1 distinguishes Enter and Shift+Enter,1,通过,513
+全量,tests/editor/e2e/document-text-editing.spec.ts,96,ED-02 quote at 3 distinguishes Enter and Shift+Enter,1,通过,525
+全量,tests/editor/e2e/document-text-editing.spec.ts,142,ED-03 Backspace joins adjacent paragraphs without losing bold or caret position,1,通过,346
+全量,tests/editor/e2e/document-text-editing.spec.ts,142,ED-03 Delete joins adjacent paragraphs without losing bold or caret position,1,通过,354
+全量,tests/editor/e2e/document-view.spec.ts,22,"reading mode preserves edits, blocks document mutations and keeps copying and finding available",1,通过,922
+全量,tests/editor/e2e/document-view.spec.ts,74,three page widths preserve a deep reading position and stay scoped to this sample,1,通过,654
+全量,tests/editor/e2e/document-view.spec.ts,104,preview tools stay behind settings and jumping returns the viewport to the document,1,通过,374
+全量,tests/editor/e2e/document-view.spec.ts,127,landscape keeps a long paragraph readable and offscreen paragraphs unmounted,1,通过,405
+全量,tests/editor/e2e/long-document.spec.ts,60,unmounts offscreen nodes and preserves the paragraph anchor on resize,1,通过,1028
+全量,tests/editor/e2e/long-document.spec.ts,97,mirrors body folding into the outline while outline disclosure stays local,1,通过,1065
+全量,tests/editor/e2e/long-document.spec.ts,173,copies a stable chapter link and reopens it from a narrow viewport,1,通过,1261
+全量,tests/editor/e2e/long-document.spec.ts,220,"copies, deletes, and undoes a selection with endpoints in different viewport windows",1,通过,1513
+全量,tests/editor/e2e/long-document.spec.ts,251,joins the previous paragraph from the start and restores both paragraphs on undo,1,通过,821
+全量,tests/editor/e2e/long-document.spec.ts,292,moves the caret across paragraphs and keeps editing history when focus moves,1,通过,897
+全量,tests/editor/e2e/long-document.spec.ts,343,retains a mouse-drag selection after its starting paragraph unmounts,1,通过,722
+全量,tests/editor/e2e/long-document.spec.ts,374,keeps the composing editor mounted and merges a peer edit exactly once,1,通过,996
+定向双轮,tests/editor/e2e/document-heading-numbering.spec.ts,93,"copies visible and folded numbering for whole-document and block copy, with plain partial text",1,通过,1278
+定向双轮,tests/editor/e2e/document-heading-numbering.spec.ts,93,"copies visible and folded numbering for whole-document and block copy, with plain partial text",2,通过,888
+定向双轮,tests/editor/e2e/document-structure.spec.ts,22,continuation numbers follow their ordered group after a move and restart on demand,1,通过,562
+定向双轮,tests/editor/e2e/document-structure.spec.ts,22,continuation numbers follow their ordered group after a move and restart on demand,2,通过,506
+定向双轮,tests/editor/e2e/document-text-editing.spec.ts,8,focusing a trailing soft break does not move the next block in a paragraph,1,通过,700
+定向双轮,tests/editor/e2e/document-text-editing.spec.ts,8,focusing a trailing soft break does not move the next block in a paragraph,2,通过,612
+定向双轮,tests/editor/e2e/document-text-editing.spec.ts,8,focusing a trailing soft break does not move the next block in a quote,1,通过,556
+定向双轮,tests/editor/e2e/document-text-editing.spec.ts,8,focusing a trailing soft break does not move the next block in a quote,2,通过,542
+性能独立复测,tests/editor/e2e/document-performance.spec.ts,88,"QA-04 50万字 first paint, scrolling, typing and outline jumps meet the fixed P95 limits",1,失败,16510

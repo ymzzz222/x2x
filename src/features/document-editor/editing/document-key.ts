@@ -2,6 +2,7 @@ import { useEffect, useEffectEvent, type KeyboardEvent } from "react";
 import type { ActiveBlockHandle } from "./active-block-editor";
 import { plainTextContent, type RangeEdit } from "../model/document-clipboard";
 import { selectDocument, type DocumentBlock, type DocumentPosition, type DocumentSelection, type getSelectionRange } from "../model/document-model";
+import { positionFromPoint } from "./use-document-selection";
 
 type Options = {
   windowed: boolean;
@@ -47,6 +48,20 @@ export function useNativeHistory(viewport: Options["viewport"], windowed: boolea
   }, [viewport, windowed]);
 }
 
+function verticalEndpoint(block: DocumentBlock, upward: boolean, column?: number): DocumentPosition {
+  const fallback = { blockId: block.id, offset: upward ? block.text.length : 0 };
+  if (column === undefined || !block.text) return fallback;
+  const row = document.getElementById(block.id);
+  const leaves = row?.querySelectorAll<HTMLElement>("[data-block-text]");
+  const leaf = leaves?.[upward ? leaves.length - 1 : 0];
+  if (!row || !leaf) return fallback;
+  const range = document.createRange();
+  range.selectNodeContents(leaf);
+  const rects = Array.from(range.getClientRects()).filter((rect) => rect.height > 0);
+  const rect = (upward ? rects.at(-1) : rects[0]) ?? leaf.getBoundingClientRect();
+  return positionFromPoint(row, column, rect.top + rect.height / 2);
+}
+
 export function documentKey(event: KeyboardEvent<HTMLDivElement>, {
   windowed, editable, blocks, activeId, activeIndex, selection, selectionRange, hasSelection, blockIndexes, firstVisibleIndex,
   viewport, readEditor, isComposing, blockShortcut, formatShortcut, selectRange, changeHistory, resetBlockTools, activate, replaceRange, jumpTo,
@@ -82,7 +97,7 @@ export function documentKey(event: KeyboardEvent<HTMLDivElement>, {
       replaceRange({ anchor: { blockId: previous.id, offset: previous.text.length }, focus }, "delete");
     } else if (key === "delete" && !event.shiftKey && caret.anchor === caret.focus && caret.focus === current.text.length &&
       current.kind === "paragraph" && !current.structure && following?.kind === "paragraph" && !following.structure &&
-      current.quoteGroup === following.quoteGroup && current.parentId === following.parentId) {
+      current.quoteGroup === following.quoteGroup && current.calloutGroup === following.calloutGroup && current.parentId === following.parentId) {
       replaceRange({ anchor, focus: { blockId: following.id, offset: 0 } }, "delete");
     } else if (key === "enter" && !event.shiftKey) {
       replaceRange({ anchor, focus }, "split");
@@ -94,13 +109,19 @@ export function documentKey(event: KeyboardEvent<HTMLDivElement>, {
       const neighbor = blocks[activeIndex + (backward ? -1 : 1)];
       if (!edge || !neighbor) return;
       const next = { blockId: neighbor.id, offset: backward ? neighbor.text.length : 0 };
-      if (event.shiftKey) selectRange({ anchor, focus: next });
+      if (event.shiftKey) selectRange({ anchor, focus: verticalEndpoint(neighbor, backward, edge.columnX), verticalColumn: edge.columnX });
       else activate(next, true, edge.columnX);
     } else {
       return;
     }
   } else if (selection && hasSelection && (key === "delete" || key === "backspace" || key === "enter")) {
     replaceRange(selection, key === "enter" ? "split" : "delete");
+  } else if (selection && event.shiftKey && (key === "arrowup" || key === "arrowdown")) {
+    const current = blockIndexes.get(selection.focus.blockId);
+    const upward = key === "arrowup";
+    const neighbor = current === undefined ? undefined : blocks[current + (upward ? -1 : 1)];
+    if (!neighbor) return;
+    selectRange({ anchor: selection.anchor, focus: verticalEndpoint(neighbor, upward, selection.verticalColumn), verticalColumn: selection.verticalColumn });
   } else if (selection && hasSelection && !event.shiftKey && (key === "arrowleft" || key === "arrowright")) {
     const bounds = selectionRange!;
     const index = key === "arrowleft" ? bounds.startIndex : bounds.endIndex;

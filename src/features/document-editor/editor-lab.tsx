@@ -45,7 +45,7 @@ import { DocumentAction, DocumentActions, DocumentEditorHeader } from "./view/do
 import structureStyles from "./view/document-structure.module.css";
 import styles from "./editor.module.css";
 import { useDocumentBlocks } from "./editing/use-document-blocks";
-import { positionFromPoint, selectedRowRange, useDocumentSelection } from "./editing/use-document-selection";
+import { expandQuoteSelection, positionFromPoint, selectedRowRange, useDocumentSelection } from "./editing/use-document-selection";
 
 const ActiveBlockEditor = lazy(
   () => import("./editing/active-block-editor").then((module) => ({ default: module.ActiveBlockEditor })),
@@ -290,7 +290,7 @@ export default function EditorLab({ mode, size, shared }: { mode: Mode; size?: S
       pendingJump.current = { blockId: position.blockId };
     },
   });
-  const selectionHandlers = useDocumentSelection(selectRange, isComposing);
+  const selectionHandlers = useDocumentSelection((range) => selectRange(expandQuoteSelection(range, blocks, blockIndexes)), isComposing);
   function handleRowClick(event: MouseEvent<HTMLDivElement>) {
     if ((event.target as Element).closest("button")) return;
     blockTools.reset();

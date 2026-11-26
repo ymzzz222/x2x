@@ -6,22 +6,33 @@ import type { DocumentSection } from "./document-outline";
 
 type ReadContent = (block: DocumentBlock) => Node;
 type Outline = ReadonlyMap<string, DocumentSection>;
-type ClipboardRelation = { parent?: number | null; quote?: number };
+type ClipboardRelation = { parent?: number | null; quote?: number; callout?: number };
 type PastedContent = { nodes: readonly Node[]; inline: boolean; relations?: readonly ClipboardRelation[] };
-type ClipboardPart = Pick<DocumentBlock, "id" | "parentId" | "quoteGroup"> & { content: Fragment };
+type ClipboardPart = Pick<DocumentBlock, "id" | "parentId" | "quoteGroup" | "calloutGroup"> & { content: Fragment };
 export type RangeEdit = "delete" | "split" | PastedContent;
 
 function writeClipboardHtml(data: DataTransfer, parts: readonly ClipboardPart[]) {
   const serializer = DOMSerializer.fromSchema(documentSchema());
   const holder = document.createElement("div");
-  const structured = parts.some((part) => part.parentId !== undefined);
+  const structured = parts.some((part) => part.parentId !== undefined || part.calloutGroup);
   const rows = structured ? new Map(parts.map(({ id }, index) => [id, index])) : null;
   let previous: string | undefined;
+  let previousCallout: string | undefined;
+  let container: HTMLElement = holder;
   let parent: HTMLElement = holder;
-  for (const { content, quoteGroup, parentId } of parts) {
+  for (const { content, quoteGroup, calloutGroup, parentId } of parts) {
+    if (calloutGroup !== previousCallout) {
+      container = calloutGroup ? document.createElement("aside") : holder;
+      if (calloutGroup) {
+        container.dataset.callout = "";
+        holder.append(container);
+      }
+      parent = container;
+      previous = undefined;
+    }
     if (quoteGroup !== previous) {
-      parent = quoteGroup ? document.createElement("blockquote") : holder;
-      if (quoteGroup) holder.append(parent);
+      parent = quoteGroup ? document.createElement("blockquote") : container;
+      if (quoteGroup) container.append(parent);
     }
     let target = parent;
     if (rows) {
@@ -35,6 +46,7 @@ function writeClipboardHtml(data: DataTransfer, parts: readonly ClipboardPart[])
     }
     serializer.serializeFragment(content, { document }, target);
     previous = quoteGroup;
+    previousCallout = calloutGroup;
   }
   data.setData("text/html", holder.innerHTML);
 }
@@ -46,43 +58,53 @@ function readStructuredClipboard(fragment: DocumentFragment, parser: DOMParser):
   const relations: ClipboardRelation[] = [];
   const rows: number[] = [];
 
-  for (const element of fragment.children) {
-    if (element.tagName === "META" && element.hasAttribute("charset")) continue;
-    const group = element.tagName === "BLOCKQUOTE" ? [...element.children] : [element];
-    if (!group.length || !group.every(isRow)) return;
-    const quote = element.tagName === "BLOCKQUOTE" ? nodes.length : undefined;
-    for (const row of group) {
+  function readRows(elements: HTMLCollection, quote?: number, callout?: number): boolean {
+    for (const row of elements) {
+      if (row.tagName === "META" && row.hasAttribute("charset")) continue;
+      if (row.tagName === "BLOCKQUOTE" && quote === undefined) {
+        if (!row.children.length || !readRows(row.children, nodes.length, callout)) return false;
+        continue;
+      }
+      if (row.matches("aside[data-callout]") && quote === undefined && callout === undefined) {
+        if (!row.children.length || !readRows(row.children, undefined, nodes.length)) return false;
+        continue;
+      }
+      if (!isRow(row)) return false;
       const offset = nodes.length;
       let parent: number | null | undefined;
       const hint = row.dataset.x2xClipboardParent;
       if (hint === "root") parent = null;
       else if (hint !== undefined) {
-        if (!/^\d+$/.test(hint) || rows[Number(hint)] === undefined) return;
+        if (!/^\d+$/.test(hint) || rows[Number(hint)] === undefined) return false;
         parent = rows[Number(hint)];
       }
       rows.push(offset);
       const content = parser.parse(row, { preserveWhitespace: true }).content.content.flatMap(listWindows);
-      if (!content.length) return;
+      if (!content.length) return false;
       nodes.push(...content);
-      relations.push(...content.map(() => ({ parent, quote })));
+      relations.push(...content.map(() => ({ parent, quote, callout })));
     }
+    return true;
   }
 
-  if (nodes.length) return { nodes, relations, inline: false };
+  if (readRows(fragment.children) && nodes.length) return { nodes, relations, inline: false };
 }
 
 export function applyClipboardRelations(replacement: { id: string; node: Node }[], start: number,
   relations: readonly ClipboardRelation[], nextId: () => string) {
   const quotes = new Map<number, string>();
+  const callouts = new Map<number, string>();
   return replacement.map((part, index) => {
     const relation = relations[index - start];
     if (!relation) return part;
-    const { parent, quote } = relation;
+    const { parent, quote, callout } = relation;
     if (quote !== undefined && !quotes.has(quote)) quotes.set(quote, nextId());
+    if (callout !== undefined && !callouts.has(callout)) callouts.set(callout, nextId());
     return {
       ...part,
       parentId: typeof parent === "number" ? replacement[start + parent]?.id : parent,
       quoteGroup: quote === undefined ? null : quotes.get(quote),
+      calloutGroup: callout === undefined ? null : callouts.get(callout),
     };
   });
 }
@@ -153,8 +175,8 @@ export function writeClipboard(
     const to = index === endIndex && endOffset < blocks[index].text.length
       ? positionAtOffset(content, endOffset)
       : content.content.size;
-    const { id, parentId, quoteGroup } = blocks[index];
-    parts.push({ id, content: content.cut(from, to).content, parentId, quoteGroup });
+    const { id, parentId, quoteGroup, calloutGroup } = blocks[index];
+    parts.push({ id, content: content.cut(from, to).content, parentId, quoteGroup, calloutGroup });
   }
 
   const wholeDocument = startIndex === 0 && startOffset === 0 &&
@@ -167,7 +189,7 @@ export function writeClipboard(
 export function writeWholeBlocks(data: DataTransfer, blocks: readonly DocumentBlock[], readContent: ReadContent, outline: Outline) {
   data.setData("text/plain", documentPlainText(blocks, outline));
   writeClipboardHtml(data, blocks.map((block) => ({
-    id: block.id, parentId: block.parentId, quoteGroup: block.quoteGroup, content: readContent(block).content,
+    id: block.id, parentId: block.parentId, quoteGroup: block.quoteGroup, calloutGroup: block.calloutGroup, content: readContent(block).content,
   })));
 }
 

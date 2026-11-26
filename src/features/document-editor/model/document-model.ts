@@ -28,6 +28,7 @@ export type DocumentBlock = {
   level?: HeadingLevel;
   numberStart?: number;
   quoteGroup?: string;
+  calloutGroup?: string;
   parentId?: string | null;
   inline?: readonly InlineRun[];
   layout?: ParagraphLayout | null;
@@ -59,11 +60,11 @@ export function documentTextCounts(blocks: readonly DocumentBlock[]): TextCounts
 }
 
 export function isBlankParagraph(block: DocumentBlock) {
-  return block.kind === "paragraph" && !block.structure && !block.quoteGroup && !block.text.trim();
+  return block.kind === "paragraph" && !block.structure && !block.quoteGroup && !block.calloutGroup && !block.text.trim();
 }
 
 export type DocumentPosition = { blockId: string; offset: number };
-export type DocumentSelection = { anchor: DocumentPosition; focus: DocumentPosition; wholeBlocks?: boolean };
+export type DocumentSelection = { anchor: DocumentPosition; focus: DocumentPosition; wholeBlocks?: boolean; verticalColumn?: number };
 
 type SelectionRange = {
   startIndex: number;
