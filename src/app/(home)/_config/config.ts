@@ -32,6 +32,9 @@ export const roleItems = [
 ] as const;
 
 export const grainientConfig = {
+  color1: "#f4b7ff",
+  color2: "#6047ff",
+  color3: "#9d88da",
   timeSpeed: 0.16,
   grainAnimated: true,
   grainAmount: 0.06,
